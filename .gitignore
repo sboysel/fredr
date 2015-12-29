@@ -1,0 +1,11 @@
+examples/
+notes/
+packrat/
+.Rprofile
+.Rproj.user
+.Rhistory
+.RData
+.Renviron
+*.swp
+packrat/lib*/
+packrat/src/

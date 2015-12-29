@@ -1,0 +1,122 @@
+# fredr
+```{r setup, include=FALSE}
+packrat::with_extlib("knitr",
+                     opts_chunk$set(fig.width = 7,
+                                    fig.height = 5,
+                                    collapse = TRUE,
+                                    comment = "#>"))
+devtools::load_all()
+options(digits = 4)
+```
+[![Travis
+branch](https://img.shields.io/travis/sboysel/fredr/master.svg?style=flat-square)](https://travis-ci.org/sboysel/fredr)
+[![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg?style=flat-square)](https://codecov.io/github/sboysel/fredr)
+[![GitHub
+release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-square)](https://github.com/sboysel/fredr/releases)
+[![GitHub
+license](https://img.shields.io/github/license/sboysel/fredr.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
+`fredr` seamlessly interacts with the RESTful API for [Federal Reserve Economic
+Data (FRED)](https://research.stlouisfed.org/fred2/), provided by the Federal
+Reserve Bank of St. Louis.  Essentially a simple wrapper of
+[`httr`](https://github.com/hadley/httr),
+[`dplyr`](https://github.com/hadley/dplyr), and the FRED API itself, `fredr` is
+designed with simplicity and flexibility in mind.  In addition a generic query
+function `fredr` to return any query as a `tbl_df`, the package also provides
+convenience functions `fredr_search` and `fredr_series` to simplify the process
+to finding and importing FRED series as `R` objects.  Nearly all optional
+parameters supplied to these functions are relayed verbatim to the API.
+Therefore, the user is strongly encouraged to read the full [FRED
+API](https://research.stlouisfed.org/docs/api/fred/) to leverage the full power
+of the FRED API and `fredr` The convenience function `api_docs` quickly brings
+up the web documentation. See the [section below](#api_docs) for usage
+examples.
+## Installation
+```{r installation, eval=FALSE}
+devtools::install_github("sboysel/fredr")
+```
+## Quickstart
+Load `fredr`
+```{r load_libi, eval=FALSE}
+library(fredr)
+```
+Set FRED API key in working directory.  You must first [obtain a FRED API
+key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
+recommended to reveiw the [FRED API Terms of
+Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
+```{r set_api_key, eval=FALSE}
+set_api_key("abcdefghijklmnopqrstuvwxyz123456")
+```
+Search for FRED series
+```{r fredr_search, message=FALSE, warning=FALSE}
+fredr_search(search_text = "housing")
+```
+Get a FRED series.  Returns a `ts` object.
+```{r fredr_series1, message=FALSE, warning=FALSE}
+fredr_series(series_id = "HOUST",
+             observation_start = "1990-01-01",
+             observation_end = "1995-01-01")
+```
+Leverage the native features of the FRED API
+```{r fredr_series2, message=FALSE, warning=FALSE}
+fredr_series(series_id = "UNRATE",
+             observation_start = "1990-01-01",
+             frequency = "q",
+             units = "chg")
+```
+Combine with other packages for a slick workflow
+```{r fredr_series3, message=FALSE, warning=FALSE}
+library(dplyr)
+library(ggfortify)
+fredr_series(series_id = "GNPCA",
+             units = "log") %>%
+  autoplot()
+```
+```{r fredr_series4, message=FALSE, warning=FALSE}
+fredr_series(series_id = "GNPCA",
+             units = "log") %>%
+  diff() %>%
+  autoplot()
+```
+```{r fredr_series5, message=FALSE, warning=FALSE}
+fredr_series(series_id = "GNPCA",
+             units = "log") %>%
+  diff() %>%
+  StructTS() %>%
+  residuals() %>%
+  acf(., main = "ACF for First Differenced real US GNP, log")
+```
+```{r fredr_series6, message=FALSE, warning=FALSE}
+fredr_search(search_text = "federal funds",
+             order_by = "popularity") %>%
+  slice(1) %>%
+  fredr_series(series_id = .$id) %>%
+  window(., start = 2000, end = c(2000, 120))
+```
+
+Quickly access the FRED API web documentation for any endpoint
+```{r api_docs, message=FALSE, warning=FALSE, eval=FALSE}
+api_docs(endpoint = "series/observations")
+```
+You may also use the `params` option for `api_docs` to go straight to the
+endpoint's Parameters section.
+```{r api_docs2, message=FALSE, warning=FALSE, eval=FALSE}
+api_docs(endpoint = "category/related_tags", params = TRUE)
+```
+You can also use the backbone function `fredr` to run more general queries
+against *any* [FRED API
+endpoint](https://research.stlouisfed.org/docs/api/fred/) (e.g. Categories,
+Series, Sources, Releases, Tags).  This is also useful to return any arbitrary
+information as a `tbl_df` object.
+```{r fredr_general}
+fredr(endpoint = "tags/series", tag_names = "population;south africa")
+```
+## See Also
+The primary goal in creating `fredr` was educational.  I also suggest you check
+out several other `R` packages designed for the FRED API:
+
+* [jcizel/FredR](https://github.com/jcizel/FredR)
+* [johnlaing/rfred](https://github.com/johnlaing/rfred)
+* [jdvermeire/rfred](https://github.com/jdvermeire/rfred)
+
+

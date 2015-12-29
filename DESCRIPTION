@@ -1,0 +1,19 @@
+Package: fredr
+Title: Interact with the FRED API in the R workspace
+Version: 0.1.0.0
+Authors@R: person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre"))
+Description: Wrap the FRED API with httr and dplyr to quickly bring data from
+	     FRED into the R workspace.
+URL: https://github.com/sboysel/fredr
+BugReports: http://github.com/sboysel/fredr/issues
+Depends: 
+  R (>= 3.2.2)
+Imports: 
+  httr,
+  dplyr
+Suggests:
+  ggfortify,
+  testthat
+License: MIT + file LICENSE 
+LazyData: true
+RoxygenNote: 5.0.1
