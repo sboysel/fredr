@@ -16,11 +16,11 @@ Reserve Bank of St. Louis.  Essentially a simple wrapper of
 designed with simplicity and flexibility in mind.  In addition a generic query
 function `fredr` to return any query as a `tbl_df`, the package also provides
 convenience functions `fredr_search` and `fredr_series` to simplify the process
-to finding and importing FRED series as `R` objects.  Nearly all optional
-parameters supplied to these functions are relayed verbatim to the API.
-Therefore, the user is strongly encouraged to read the full [FRED
+to finding and importing FRED series as `R` objects.  As nearly all optional
+parameters supplied to these functions are relayed verbatim to the API, the 
+user is strongly encouraged to read the full [FRED
 API](https://research.stlouisfed.org/docs/api/fred/) to leverage the full power
-of the FRED API and `fredr` The convenience function `api_docs` quickly brings
+of the FRED API and `fredr`. The convenience function `api_docs` quickly brings
 up the web documentation. See the [section below](#api_docs) for usage
 examples.
 ## Installation
