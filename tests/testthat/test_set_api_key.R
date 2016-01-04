@@ -24,7 +24,6 @@ test_that("set_api_key throws an error if .Renviron is present.", {
   # Cleanup
   Sys.setenv(FRED_API_KEY = env_key)
   if (file.exists(paste0(renv, ".bak"))) {
-    file.remove(renv)
     file.rename(paste0(renv, ".bak"), renv)
   }
 })
