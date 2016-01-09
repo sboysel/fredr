@@ -1,11 +1,58 @@
-language: r
-warnings_are_errors: true
-sudo: required
+# .travis.yml using container-based infrastructure
+# use c as a catch all language
+language: c
+# use containers
+sudo: false
+# environment variables
 env:
   matrix:
     secure: fygiZB0giuJUpmsLxZvlSEdvkUkd9w/vs631fclI5us7SKpYqNnutofZu0uZVnyXnXjkDsGVLNmLAyU/ChBJH32qKX7G1cyD06e0Vl8+UyaIg8BpahTMlM9cTbqxpb8jukOB2BTue1HvhaqCcR1TuXyaFWq6X4R5KtMWXm9Uhq8Mvc5cPkmchWmJtQIEvheaPzg0pqfBBPl/3gwUZSHpARu71qBaBvQ4sjAsUqNpLxa+uTPicf2LrbmyOZLaNkjYI9C7RmTxJhhLjLR13MOr8Sql5/rojJiriHVELSpCxzp2Yn/06reAqk95ILVZwj6GQstIDrPz5+SXq2rntpe7c7AJxurVjFIroMEe8J9eRqNr73XjugXUoD59S92/bihFY6RsrR32PlMaWGDgys9f3u4/puJ8V8S6sjl7INV6Wuyt6Biklf9G8V3C5MYFV4L3IZrFw/ai+2q1EnrcfnK59r2e4ylkdL/zZMk8IR+yZx0aK/Euu20CqNME/ziKKLA989IQBoKu0c7DOuquPe9B7MRCwKvP65DZ14jhs3vpUlzEmreP2KF1jmzvYHnNdVLb2NRRKCRj/szoKtYSwx1DjtWCoiEmoqQdrni5iabAKB3xhFuUF7pEF3jowb6ibc8vv4sqM2cTg8dXZikByupULpKwyVFDK8V91Qr0IHe9dwE=
-r_packages:
-- covr
+# only run for pushes to master branch
+branches:
+  only:
+   - master
+# install R: use r-packages-precise (https://cran.r-project.org/bin/linux/ubuntu/precise/) 
+# as source which is white listed (https://github.com/travis-ci/apt-source-whitelist/)
+addons:
+  apt:
+    sources:
+    - r-packages-precise
+    packages:
+    - r-base-dev	
+    - r-recommended
+    - pandoc
+# cache local R libraries directory:
+cache:
+  directories:
+    - ~/Rlib
+# install the package and dependencies:
+# - create directory for R libraries (if not already exists)
+# - create .Renviron with location of R libraries
+# - define R repository in .Rprofile
+# - add .travis.yml to .Rbuildignore
+# - install devtools if not already installed
+# - install covr if not already installed
+# - update all installed packages
+# - install package with dependencies
+install:
+  - mkdir -p ~/Rlib
+  - echo 'R_LIBS=~/Rlib' > .Renviron
+  - echo 'options(repos = "http://cran.rstudio.com")' > .Rprofile
+  - echo '.travis.yml' > .Rbuildignore
+  - Rscript -e 'if(!"devtools" %in% rownames(installed.packages())) { install.packages("devtools", dependencies = TRUE) }'
+  - Rscript -e 'if(!"covr" %in% rownames(installed.packages())) { install.packages("covr", dependencies = TRUE) }'
+  - Rscript -e 'update.packages(ask = FALSE, instlib = "~/Rlib")'
+  - Rscript -e 'devtools::install_deps(pkg = ".", dependencies = TRUE)'
+# Build and check package
+script:
+  - R CMD build . --no-build-vignettes --no-manual
+  - PKG_FILE_NAME=$(ls -1t *.tar.gz | head -n 1)
+  - R CMD check "${PKG_FILE_NAME}" --no-build-vignettes --no-manual --as-cran 
+# report coverage rate to coveralls
 after_success:
-- Rscript -e 'covr::codecov()'
-
+  - Rscript -e 'covr::codecov()'
+# send e-mails if stuff changes
+notifications:
+  email:
+    on_success: change
+    on_failure: change
