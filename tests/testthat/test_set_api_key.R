@@ -4,7 +4,7 @@ context("set_api_key is either set of throws an error")
 test_that("set_api_key throws an error if .Renviron is present.", {
   # Backup
   env_key <- Sys.getenv("FRED_API_KEY")
-  renv <- file.path(normalizePath("~"), ".Renviron")
+  renv <- file.path(getwd(), ".Renviron")
   if (file.exists(renv)) {
     file.rename(renv, paste0(renv, ".bak"))
   }

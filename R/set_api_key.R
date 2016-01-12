@@ -10,9 +10,9 @@ set_api_key <- function(api_key) {
   if (!identical(Sys.getenv("FRED_API_KEY"), "")) {
     message("FRED API key set as environment variable.")
   } else {
-    renv <- file.path(normalizePath("~"), ".Renviron")
+    renv <- file.path(getwd(), ".Renviron")
     if (file.exists(renv)) {
-      stop(paste(".Renviron file exists in", normalizePath("~")))
+      stop(paste(".Renviron file exists in directory"))
     }
     renv_conn <- file(renv)
     writeLines(c(paste0("FRED_API_KEY=", api_key), ""), renv_conn)
