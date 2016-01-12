@@ -1,5 +1,5 @@
 library(fredr)
-context("fredr-based functions throw errors.")
+context("fredr-based functions")
 
 test_that("fredr throws errors for bad requests", {
   expect_error(fredr())

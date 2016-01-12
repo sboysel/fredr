@@ -1,5 +1,5 @@
 library(fredr)
-context("api_docs functions properly")
+context("api_docs")
 
 test_that("api_docs throws errors on invalid endpoints", {
   expect_error(api_docs(endpoint = "foo", debug = TRUE))

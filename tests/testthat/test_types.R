@@ -1,5 +1,5 @@
 library(fredr)
-context("Check returns for appropriate object types")
+context("Correct objects returned")
 
 a <- fredr(endpoint = "series/observations",
            series_id = "GNPCA")

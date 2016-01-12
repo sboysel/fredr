@@ -1,5 +1,5 @@
 library(fredr)
-context("set_api_key is either set of throws an error")
+context("set_api_key")
 
 test_that("set_api_key throws an error if .Renviron is present.", {
   # Backup

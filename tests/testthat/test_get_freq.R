@@ -1,5 +1,5 @@
 library(fredr)
-context("Check get_freq")
+context("get_freq")
 
 test_that("get_freq functions properly", {
   expect_error(get_freq())
