@@ -26,6 +26,7 @@ examples.
 ## Installation
 
 ```r
+# install.packages("devtools")
 devtools::install_github("sboysel/fredr")
 ```
 ## Quickstart
@@ -50,16 +51,16 @@ fredr_search(search_text = "housing")
 #> 
 #>             id realtime_start realtime_end
 #>          (chr)          (chr)        (chr)
-#> 1        HOUST     2015-12-28   2015-12-28
-#> 2     HOUSTNSA     2015-12-28   2015-12-28
-#> 3      USSTHPI     2015-12-28   2015-12-28
-#> 4  HPIPONM226S     2015-12-28   2015-12-28
-#> 5  HPIPONM226N     2015-12-28   2015-12-28
-#> 6  PONHPIM226S     2015-12-28   2015-12-28
-#> 7  PONHPIM226N     2015-12-28   2015-12-28
-#> 8      CASTHPI     2015-12-28   2015-12-28
-#> 9      NYSTHPI     2015-12-28   2015-12-28
-#> 10     FLSTHPI     2015-12-28   2015-12-28
+#> 1        HOUST     2016-01-12   2016-01-12
+#> 2     HOUSTNSA     2016-01-12   2016-01-12
+#> 3      USSTHPI     2016-01-12   2016-01-12
+#> 4  HPIPONM226S     2016-01-12   2016-01-12
+#> 5  HPIPONM226N     2016-01-12   2016-01-12
+#> 6  PONHPIM226S     2016-01-12   2016-01-12
+#> 7  PONHPIM226N     2016-01-12   2016-01-12
+#> 8      CASTHPI     2016-01-12   2016-01-12
+#> 9      FLSTHPI     2016-01-12   2016-01-12
+#> 10     NJSTHPI     2016-01-12   2016-01-12
 #> ..         ...            ...          ...
 #> Variables not shown: title (chr), observation_start (chr), observation_end
 #>   (chr), frequency (chr), frequency_short (chr), units (chr), units_short
@@ -109,11 +110,11 @@ fredr_series(series_id = "UNRATE",
 #> 2008  0.2  0.3  0.7  0.9
 #> 2009  1.4  1.0  0.3  0.3
 #> 2010 -0.1 -0.2 -0.1  0.0
-#> 2011 -0.4  0.0 -0.1 -0.4
+#> 2011 -0.5  0.1 -0.1 -0.4
 #> 2012 -0.3 -0.1 -0.2 -0.2
-#> 2013 -0.1 -0.2 -0.3 -0.2
-#> 2014 -0.4 -0.4 -0.1 -0.4
-#> 2015 -0.1 -0.2 -0.2   NA
+#> 2013 -0.1 -0.2 -0.2 -0.4
+#> 2014 -0.2 -0.5 -0.1 -0.4
+#> 2015 -0.1 -0.2 -0.2 -0.2
 ```
 Combine with other packages for a slick workflow
 
@@ -189,16 +190,16 @@ fredr(endpoint = "tags/series", tag_names = "population;south africa")
 #> 
 #>                 id realtime_start realtime_end
 #>              (chr)          (chr)        (chr)
-#> 1  LFWA24TTZAA647N     2015-12-28   2015-12-28
-#> 2  LFWA24TTZAA647S     2015-12-28   2015-12-28
-#> 3  LFWA24TTZAQ647N     2015-12-28   2015-12-28
-#> 4  LFWA24TTZAQ647S     2015-12-28   2015-12-28
-#> 5  LFWA25TTZAA647N     2015-12-28   2015-12-28
-#> 6  LFWA25TTZAA647S     2015-12-28   2015-12-28
-#> 7  LFWA25TTZAQ647N     2015-12-28   2015-12-28
-#> 8  LFWA25TTZAQ647S     2015-12-28   2015-12-28
-#> 9  LFWA55TTZAA647N     2015-12-28   2015-12-28
-#> 10 LFWA55TTZAA647S     2015-12-28   2015-12-28
+#> 1  LFWA24TTZAA647N     2016-01-12   2016-01-12
+#> 2  LFWA24TTZAA647S     2016-01-12   2016-01-12
+#> 3  LFWA24TTZAQ647N     2016-01-12   2016-01-12
+#> 4  LFWA24TTZAQ647S     2016-01-12   2016-01-12
+#> 5  LFWA25TTZAA647N     2016-01-12   2016-01-12
+#> 6  LFWA25TTZAA647S     2016-01-12   2016-01-12
+#> 7  LFWA25TTZAQ647N     2016-01-12   2016-01-12
+#> 8  LFWA25TTZAQ647S     2016-01-12   2016-01-12
+#> 9  LFWA55TTZAA647N     2016-01-12   2016-01-12
+#> 10 LFWA55TTZAA647S     2016-01-12   2016-01-12
 #> ..             ...            ...          ...
 #> Variables not shown: title (chr), observation_start (chr), observation_end
 #>   (chr), frequency (chr), frequency_short (chr), units (chr), units_short

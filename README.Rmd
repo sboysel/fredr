@@ -33,6 +33,7 @@ up the web documentation. See the [section below](#api_docs) for usage
 examples.
 ## Installation
 ```{r installation, eval=FALSE}
+# install.packages("devtools")
 devtools::install_github("sboysel/fredr")
 ```
 ## Quickstart
