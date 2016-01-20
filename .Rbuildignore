@@ -3,3 +3,6 @@
 ^packrat/
 ^\.Rprofile$
 ^\.travis\.yml$
+^Makefile
+^README.Rmd
+^figure/
