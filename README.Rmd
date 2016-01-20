@@ -1,10 +1,10 @@
 # fredr
 ```{r setup, include=FALSE}
-packrat::with_extlib("knitr",
-                     opts_chunk$set(fig.width = 7,
-                                    fig.height = 5,
-                                    collapse = TRUE,
-                                    comment = "#>"))
+library(knitr)
+opts_chunk$set(fig.width = 7,
+               fig.height = 5,
+               collapse = TRUE,
+               comment = "#>")
 devtools::load_all()
 options(digits = 4)
 ```
@@ -28,8 +28,8 @@ to finding and importing FRED series as `R` objects.  As nearly all optional
 parameters supplied to these functions are relayed verbatim to the API, the 
 user is strongly encouraged to read the full [FRED
 API](https://research.stlouisfed.org/docs/api/fred/) to leverage the full power
-of the FRED API and `fredr`. The convenience function `api_docs` quickly brings
-up the web documentation. See the [section below](#api_docs) for usage
+of the FRED API and `fredr`. The convenience function `fredr_docs` quickly brings
+up the web documentation. See the [section below](#fredr_docs) for usage
 examples.
 ## Installation
 ```{r installation, eval=FALSE}
@@ -45,8 +45,8 @@ Set FRED API key in working directory.  You must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
 recommended to reveiw the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
-```{r set_api_key, eval=FALSE}
-set_api_key("abcdefghijklmnopqrstuvwxyz123456")
+```{r fredr_key, eval=FALSE}
+fredr_key("abcdefghijklmnopqrstuvwxyz123456")
 ```
 Search for FRED series
 ```{r fredr_search, message=FALSE, warning=FALSE}
@@ -96,13 +96,13 @@ fredr_search(search_text = "federal funds",
 ```
 
 Quickly access the FRED API web documentation for any endpoint
-```{r api_docs, message=FALSE, warning=FALSE, eval=FALSE}
-api_docs(endpoint = "series/observations")
+```{r fredr_docs, message=FALSE, warning=FALSE, eval=FALSE}
+fredr_docs(endpoint = "series/observations")
 ```
-You may also use the `params` option for `api_docs` to go straight to the
+You may also use the `params` option for `fredr_docs` to go straight to the
 endpoint's Parameters section.
-```{r api_docs2, message=FALSE, warning=FALSE, eval=FALSE}
-api_docs(endpoint = "category/related_tags", params = TRUE)
+```{r fredr_docs2, message=FALSE, warning=FALSE, eval=FALSE}
+fredr_docs(endpoint = "category/related_tags", params = TRUE)
 ```
 You can also use the backbone function `fredr` to run more general queries
 against *any* [FRED API

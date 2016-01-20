@@ -1,6 +1,3 @@
-# -----------------------------------------------------------------------------
-# Search for a FRED series.
-# -----------------------------------------------------------------------------
 #' Search for a FRED series.
 #'
 #' @param ... A series of paramters to be used in the query.  Of the form 

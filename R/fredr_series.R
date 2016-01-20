@@ -1,6 +1,3 @@
-# -----------------------------------------------------------------------------
-# Return a FRED dataset as a time series object.
-# -----------------------------------------------------------------------------
 #' Return a FRED dataset as a time series object.
 #'
 #' @param ... A series of paramters to be used in the query.  Of the form

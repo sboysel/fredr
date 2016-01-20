@@ -20,8 +20,8 @@ to finding and importing FRED series as `R` objects.  As nearly all optional
 parameters supplied to these functions are relayed verbatim to the API, the 
 user is strongly encouraged to read the full [FRED
 API](https://research.stlouisfed.org/docs/api/fred/) to leverage the full power
-of the FRED API and `fredr`. The convenience function `api_docs` quickly brings
-up the web documentation. See the [section below](#api_docs) for usage
+of the FRED API and `fredr`. The convenience function `fredr_docs` quickly brings
+up the web documentation. See the [section below](#fredr_docs) for usage
 examples.
 ## Installation
 
@@ -41,7 +41,7 @@ recommended to reveiw the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
 
 ```r
-set_api_key("abcdefghijklmnopqrstuvwxyz123456")
+fredr_key("abcdefghijklmnopqrstuvwxyz123456")
 ```
 Search for FRED series
 
@@ -51,16 +51,16 @@ fredr_search(search_text = "housing")
 #> 
 #>             id realtime_start realtime_end
 #>          (chr)          (chr)        (chr)
-#> 1        HOUST     2016-01-12   2016-01-12
-#> 2     HOUSTNSA     2016-01-12   2016-01-12
-#> 3      USSTHPI     2016-01-12   2016-01-12
-#> 4  HPIPONM226S     2016-01-12   2016-01-12
-#> 5  HPIPONM226N     2016-01-12   2016-01-12
-#> 6  PONHPIM226S     2016-01-12   2016-01-12
-#> 7  PONHPIM226N     2016-01-12   2016-01-12
-#> 8      CASTHPI     2016-01-12   2016-01-12
-#> 9      FLSTHPI     2016-01-12   2016-01-12
-#> 10     NJSTHPI     2016-01-12   2016-01-12
+#> 1        HOUST     2016-01-20   2016-01-20
+#> 2     HOUSTNSA     2016-01-20   2016-01-20
+#> 3      USSTHPI     2016-01-20   2016-01-20
+#> 4  HPIPONM226S     2016-01-20   2016-01-20
+#> 5  HPIPONM226N     2016-01-20   2016-01-20
+#> 6  PONHPIM226S     2016-01-20   2016-01-20
+#> 7  PONHPIM226N     2016-01-20   2016-01-20
+#> 8      CASTHPI     2016-01-20   2016-01-20
+#> 9      FLSTHPI     2016-01-20   2016-01-20
+#> 10     NJSTHPI     2016-01-20   2016-01-20
 #> ..         ...            ...          ...
 #> Variables not shown: title (chr), observation_start (chr), observation_end
 #>   (chr), frequency (chr), frequency_short (chr), units (chr), units_short
@@ -170,13 +170,13 @@ fredr_search(search_text = "federal funds",
 Quickly access the FRED API web documentation for any endpoint
 
 ```r
-api_docs(endpoint = "series/observations")
+fredr_docs(endpoint = "series/observations")
 ```
-You may also use the `params` option for `api_docs` to go straight to the
+You may also use the `params` option for `fredr_docs` to go straight to the
 endpoint's Parameters section.
 
 ```r
-api_docs(endpoint = "category/related_tags", params = TRUE)
+fredr_docs(endpoint = "category/related_tags", params = TRUE)
 ```
 You can also use the backbone function `fredr` to run more general queries
 against *any* [FRED API
@@ -190,16 +190,16 @@ fredr(endpoint = "tags/series", tag_names = "population;south africa")
 #> 
 #>                 id realtime_start realtime_end
 #>              (chr)          (chr)        (chr)
-#> 1  LFWA24TTZAA647N     2016-01-12   2016-01-12
-#> 2  LFWA24TTZAA647S     2016-01-12   2016-01-12
-#> 3  LFWA24TTZAQ647N     2016-01-12   2016-01-12
-#> 4  LFWA24TTZAQ647S     2016-01-12   2016-01-12
-#> 5  LFWA25TTZAA647N     2016-01-12   2016-01-12
-#> 6  LFWA25TTZAA647S     2016-01-12   2016-01-12
-#> 7  LFWA25TTZAQ647N     2016-01-12   2016-01-12
-#> 8  LFWA25TTZAQ647S     2016-01-12   2016-01-12
-#> 9  LFWA55TTZAA647N     2016-01-12   2016-01-12
-#> 10 LFWA55TTZAA647S     2016-01-12   2016-01-12
+#> 1  LFWA24TTZAA647N     2016-01-20   2016-01-20
+#> 2  LFWA24TTZAA647S     2016-01-20   2016-01-20
+#> 3  LFWA24TTZAQ647N     2016-01-20   2016-01-20
+#> 4  LFWA24TTZAQ647S     2016-01-20   2016-01-20
+#> 5  LFWA25TTZAA647N     2016-01-20   2016-01-20
+#> 6  LFWA25TTZAA647S     2016-01-20   2016-01-20
+#> 7  LFWA25TTZAQ647N     2016-01-20   2016-01-20
+#> 8  LFWA25TTZAQ647S     2016-01-20   2016-01-20
+#> 9  LFWA55TTZAA647N     2016-01-20   2016-01-20
+#> 10 LFWA55TTZAA647S     2016-01-20   2016-01-20
 #> ..             ...            ...          ...
 #> Variables not shown: title (chr), observation_start (chr), observation_end
 #>   (chr), frequency (chr), frequency_short (chr), units (chr), units_short

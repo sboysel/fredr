@@ -1,8 +1,3 @@
-# -----------------------------------------------------------------------------
-# Interact with the FRED API from within the R workspace.
-# https://api.stlouisfed.org/docs/fred/
-# https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
-# -----------------------------------------------------------------------------
 #' Send a request to the FRED API server
 #'
 #' @param endpoint A string representing the FRED API path of interest. See
@@ -25,7 +20,7 @@
 fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
   params <- list(...)
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
-    stop("FRED API key must be set.  Use set_api_key(<my_api_key>)")
+    stop("FRED API key must be set.  Use fredr_key()")
   }
   params$api_key <- Sys.getenv("FRED_API_KEY")
   params$file_type <- "json"

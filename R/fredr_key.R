@@ -1,12 +1,9 @@
-# ------------------------------------------------------------------------------
-# Sets the FRED API key to .Renviron file in working directory.
-# ------------------------------------------------------------------------------
 #' Sets the FRED API key to .Renviron file in working directory.
 #'
 #' @param api_key A FRED API key as a string.  Obtain one at 
 #'				https://api.stlouisfed.org/api_key.html.
 #' @export
-set_api_key <- function(api_key) {
+fredr_key <- function(api_key) {
   if (!identical(Sys.getenv("FRED_API_KEY"), "")) {
     message("FRED API key set as environment variable.")
   } else {

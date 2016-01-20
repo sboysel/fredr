@@ -1,7 +1,3 @@
-# ------------------------------------------------------------------------------
-# Open the web documentation for a certain FRED API topic.
-# https://api.stlouisfed.org/docs/fred/
-# ------------------------------------------------------------------------------
 #' Open the web documentation for a certain FRED API topic.
 #'
 #' @param endpoint A string representing the desired documentation for the exact 
@@ -12,12 +8,12 @@
 #' @param debug A boolean value.  If TRUE, the documentation is not opened in a
 #'        browser.  Default is FALSE.
 #' @examples 
-#' api_docs()
-#' api_docs('category')
-#' api_docs('series/observations')
-#' api_docs('series/observations', params = TRUE)
+#' fredr_docs()
+#' fredr_docs('category')
+#' fredr_docs('series/observations')
+#' fredr_docs('series/observations', params = TRUE)
 #' @export
-api_docs <- function(endpoint = "base", params = FALSE, debug = FALSE) {
+fredr_docs <- function(endpoint = "base", params = FALSE, debug = FALSE) {
   base <- "https://api.stlouisfed.org/docs/fred/"
   doc <- switch(endpoint,
             "base" = base,

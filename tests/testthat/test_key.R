@@ -1,7 +1,7 @@
 library(fredr)
-context("set_api_key")
+context("fredr_key")
 
-test_that("set_api_key throws an error if .Renviron is present.", {
+test_that("fredr_key throws an error if .Renviron is present.", {
   # Backup
   env_key <- Sys.getenv("FRED_API_KEY")
   renv <- file.path(getwd(), ".Renviron")
@@ -10,15 +10,15 @@ test_that("set_api_key throws an error if .Renviron is present.", {
   }
   # Tests
   Sys.setenv(FRED_API_KEY = "")
-  expect_message(set_api_key(env_key),
+  expect_message(fredr_key(env_key),
                  "FRED API key successfully set.")
   expect_true(file.remove(renv))
   Sys.setenv(FRED_API_KEY = env_key)
-  expect_message(set_api_key(),
+  expect_message(fredr_key(),
                  "FRED API key set as environment variable.")
   expect_false(file.exists(renv))
   file.create(renv)
-  expect_message(set_api_key(),
+  expect_message(fredr_key(),
                  "FRED API key set as environment variable.")
   file.remove(renv)
   # Cleanup
