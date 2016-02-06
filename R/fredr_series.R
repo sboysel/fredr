@@ -42,6 +42,7 @@ fredr_series <- function(...) {
                    "Annual" = 1)
   }
   frame <- fredr::fredr(endpoint = "series/observations", ...)
+  frame$value[frame$value == "."] <- NA
   frame$value <- as.numeric(frame$value)
   frame$date <- as.Date(frame$date, "%Y-%m-%d")
   y <- as.numeric(format(frame$date[1], "%Y"))
