@@ -1,6 +1,6 @@
 Package: fredr
 Title: Interact with the FRED API in the R workspace
-Version: 0.1.0.0
+Version: 0.2.0.0
 Authors@R: person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre"))
 Description: Wrap the FRED API with httr and dplyr to quickly bring data from
 	     FRED into the R workspace.
