@@ -51,16 +51,16 @@ fredr_search(search_text = "housing")
 #> 
 #>             id realtime_start realtime_end
 #>          (chr)          (chr)        (chr)
-#> 1        HOUST     2016-01-20   2016-01-20
-#> 2     HOUSTNSA     2016-01-20   2016-01-20
-#> 3      USSTHPI     2016-01-20   2016-01-20
-#> 4  HPIPONM226S     2016-01-20   2016-01-20
-#> 5  HPIPONM226N     2016-01-20   2016-01-20
-#> 6  PONHPIM226S     2016-01-20   2016-01-20
-#> 7  PONHPIM226N     2016-01-20   2016-01-20
-#> 8      CASTHPI     2016-01-20   2016-01-20
-#> 9      FLSTHPI     2016-01-20   2016-01-20
-#> 10     NJSTHPI     2016-01-20   2016-01-20
+#> 1        HOUST     2016-02-05   2016-02-05
+#> 2     HOUSTNSA     2016-02-05   2016-02-05
+#> 3      USSTHPI     2016-02-05   2016-02-05
+#> 4  HPIPONM226S     2016-02-05   2016-02-05
+#> 5  HPIPONM226N     2016-02-05   2016-02-05
+#> 6  PONHPIM226S     2016-02-05   2016-02-05
+#> 7  PONHPIM226N     2016-02-05   2016-02-05
+#> 8      CASTHPI     2016-02-05   2016-02-05
+#> 9      FLSTHPI     2016-02-05   2016-02-05
+#> 10     NYSTHPI     2016-02-05   2016-02-05
 #> ..         ...            ...          ...
 #> Variables not shown: title (chr), observation_start (chr), observation_end
 #>   (chr), frequency (chr), frequency_short (chr), units (chr), units_short
@@ -115,6 +115,7 @@ fredr_series(series_id = "UNRATE",
 #> 2013 -0.1 -0.2 -0.2 -0.4
 #> 2014 -0.2 -0.5 -0.1 -0.4
 #> 2015 -0.1 -0.2 -0.2 -0.2
+#> 2016   NA
 ```
 Combine with other packages for a slick workflow
 
@@ -186,20 +187,20 @@ information as a `tbl_df` object.
 
 ```r
 fredr(endpoint = "tags/series", tag_names = "population;south africa")
-#> Source: local data frame [32 x 15]
+#> Source: local data frame [35 x 15]
 #> 
 #>                 id realtime_start realtime_end
 #>              (chr)          (chr)        (chr)
-#> 1  LFWA24TTZAA647N     2016-01-20   2016-01-20
-#> 2  LFWA24TTZAA647S     2016-01-20   2016-01-20
-#> 3  LFWA24TTZAQ647N     2016-01-20   2016-01-20
-#> 4  LFWA24TTZAQ647S     2016-01-20   2016-01-20
-#> 5  LFWA25TTZAA647N     2016-01-20   2016-01-20
-#> 6  LFWA25TTZAA647S     2016-01-20   2016-01-20
-#> 7  LFWA25TTZAQ647N     2016-01-20   2016-01-20
-#> 8  LFWA25TTZAQ647S     2016-01-20   2016-01-20
-#> 9  LFWA55TTZAA647N     2016-01-20   2016-01-20
-#> 10 LFWA55TTZAA647S     2016-01-20   2016-01-20
+#> 1  LFWA24TTZAA647N     2016-02-05   2016-02-05
+#> 2  LFWA24TTZAA647S     2016-02-05   2016-02-05
+#> 3  LFWA24TTZAQ647N     2016-02-05   2016-02-05
+#> 4  LFWA24TTZAQ647S     2016-02-05   2016-02-05
+#> 5  LFWA25TTZAA647N     2016-02-05   2016-02-05
+#> 6  LFWA25TTZAA647S     2016-02-05   2016-02-05
+#> 7  LFWA25TTZAQ647N     2016-02-05   2016-02-05
+#> 8  LFWA25TTZAQ647S     2016-02-05   2016-02-05
+#> 9  LFWA55TTZAA647N     2016-02-05   2016-02-05
+#> 10 LFWA55TTZAA647S     2016-02-05   2016-02-05
 #> ..             ...            ...          ...
 #> Variables not shown: title (chr), observation_start (chr), observation_end
 #>   (chr), frequency (chr), frequency_short (chr), units (chr), units_short
@@ -211,6 +212,8 @@ The primary goal in creating `fredr` was educational.  I also suggest you check
 out several other `R` packages designed for the FRED API:
 
 * [jcizel/FredR](https://github.com/jcizel/FredR)
+* [joshuaulrich/quantmod](https://github.com/joshuaulrich/quantmod)
+* [quandl/quandl-r](https://github.com/quandl/quandl-r)
 * [johnlaing/rfred](https://github.com/johnlaing/rfred)
 * [jdvermeire/rfred](https://github.com/jdvermeire/rfred)
 

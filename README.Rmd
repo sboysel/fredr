@@ -117,6 +117,8 @@ The primary goal in creating `fredr` was educational.  I also suggest you check
 out several other `R` packages designed for the FRED API:
 
 * [jcizel/FredR](https://github.com/jcizel/FredR)
+* [joshuaulrich/quantmod](https://github.com/joshuaulrich/quantmod)
+* [quandl/quandl-r](https://github.com/quandl/quandl-r)
 * [johnlaing/rfred](https://github.com/johnlaing/rfred)
 * [jdvermeire/rfred](https://github.com/jdvermeire/rfred)
 
