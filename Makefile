@@ -1,4 +1,4 @@
-R=/usr/bin/R
+R=/usr/local/bin/R
 
 all: knit
 

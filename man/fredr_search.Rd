@@ -7,17 +7,17 @@
 fredr_search(search_field = "series", ...)
 }
 \arguments{
-\item{search_field}{A string indicating to search for a series, series tags, 
+\item{search_field}{A string indicating to search for a series, series tags,
 or related series tags.  Default is "series" to search for a series.  Use
 "tags" to search tags and "related_tags" to search related tags.}
 
-\item{...}{A series of paramters to be used in the query.  Of the form 
-param_key = 'param_value'.  The parameter \code{search_text} is required for 
-\code{series/search} and \code{series_search_text} is required for 
+\item{...}{A series of paramters to be used in the query.  Of the form
+param_key = 'param_value'.  The parameter \code{search_text} is required for
+\code{series/search} and \code{series_search_text} is required for
 \code{series/search/tags} or \code{series/search/related_tags}.}
 }
 \value{
-A \code{ts} object.
+A \code{data.frame} object.
 }
 \description{
 Search for a FRED series.
@@ -25,4 +25,3 @@ Search for a FRED series.
 \examples{
 fredr_search(search_text = "oil", order_by = "popularity")
 }
-

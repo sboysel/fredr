@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_series.R
 \name{fredr_series}
 \alias{fredr_series}
-\title{Return a FRED dataset as a time series object.}
+\title{Return a FRED dataset as an \code{xts} object.}
 \usage{
 fredr_series(...)
 }
@@ -12,10 +12,10 @@ param_key = 'param_value'.  The parameter \code{series_id} is
 required.}
 }
 \value{
-A \code{ts} object.
+An \code{xts} object.
 }
 \description{
-Return a FRED dataset as a time series object.
+Return a FRED dataset as an \code{xts} object.
 }
 \examples{
 fredr_series(series_id = "UNRATE",
@@ -27,4 +27,3 @@ fredr_series(series_id = "OILPRICE",
              aggregation_method = "avg",
              unit = "log")
 }
-

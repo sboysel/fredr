@@ -1,13 +1,13 @@
 #' Open the web documentation for a certain FRED API topic.
 #'
-#' @param endpoint A string representing the desired documentation for the exact 
+#' @param endpoint A string representing the desired documentation for the exact
 #'				FRED API endpoint.  Default is 'base' and will open a link to
 #'				https://api.stlouisfed.org/docs/fred/.
 #' @param params A boolean value.  If TRUE, the documentation will be opened at
 #'        the 'Paramters' section.  Default is FALSE.
 #' @param debug A boolean value.  If TRUE, the documentation is not opened in a
 #'        browser.  Default is FALSE.
-#' @examples 
+#' @examples
 #' fredr_docs()
 #' fredr_docs('category')
 #' fredr_docs('series/observations')
@@ -54,6 +54,6 @@ fredr_docs <- function(endpoint = "base", params = FALSE, debug = FALSE) {
     doc <- paste0(doc, "#Parameters")
   }
   if (!debug) {
-    browseURL(url = doc)
+    utils::browseURL(url = doc)
   }
 }

@@ -7,7 +7,7 @@
 fredr_docs(endpoint = "base", params = FALSE, debug = FALSE)
 }
 \arguments{
-\item{endpoint}{A string representing the desired documentation for the exact 
+\item{endpoint}{A string representing the desired documentation for the exact
 FRED API endpoint.  Default is 'base' and will open a link to
 https://api.stlouisfed.org/docs/fred/.}
 
@@ -26,4 +26,3 @@ fredr_docs('category')
 fredr_docs('series/observations')
 fredr_docs('series/observations', params = TRUE)
 }
-

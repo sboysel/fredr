@@ -20,8 +20,7 @@ test_that("fredr_series throws errors", {
   expect_error(fredr_series())
   expect_error(fredr_series(series_id = "FOOBAR"))
   expect_error(fredr_series(endpoint = "bad_endpoint", series_id = "FOOBAR"))
-  expect_error(fredr_series(series_id = "GNPCA", frequency = "foo"),
-               "Invalid 'frequency' value supplied.")
+  expect_error(fredr_series(series_id = "GNPCA", frequency = "foo"))
 })
 
 test_that("fredr_search throws errors with incompatible options", {

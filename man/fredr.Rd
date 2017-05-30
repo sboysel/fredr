@@ -21,7 +21,7 @@ should be parsed and formatted as a tbl_df.  Default is TRUE.}
 should be printed as well.  Useful for debugging.}
 }
 \value{
-A tbl_df.  If to_frame is TRUE, return is a reponse object from 
+A tbl_df.  If to_frame is TRUE, return is a reponse object from
        httr::GET().
 }
 \description{
@@ -33,4 +33,3 @@ Send a request to the FRED API server
        observation_start = "1990-01-01",
        observation_end = "2000-01-01")
 }
-

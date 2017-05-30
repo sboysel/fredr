@@ -9,7 +9,7 @@
 #'        should be parsed and formatted as a tbl_df.  Default is TRUE.
 #' @param print_req A boolean value indicating whether or not the request
 #'        should be printed as well.  Useful for debugging.
-#' @return A tbl_df.  If to_frame is TRUE, return is a reponse object from 
+#' @return A tbl_df.  If to_frame is TRUE, return is a reponse object from
 #'        httr::GET().
 #' @examples
 #'  fredr("series/observations",
@@ -18,23 +18,29 @@
 #'        observation_end = "2000-01-01")
 #' @export
 fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
-  params <- list(...)
+
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
     stop("FRED API key must be set.  Use fredr_key()")
   }
+
+  params <- list(...)
   params$api_key <- Sys.getenv("FRED_API_KEY")
   params$file_type <- "json"
+
   resp <- httr::GET(url = "https://api.stlouisfed.org/",
                     path = paste0("fred/", endpoint),
                     query = params)
-  if (print_req == TRUE) {
+
+  if (print_req) {
     message(resp$url)
   }
+
   if (resp$status_code != 200) {
     err <- httr::content(resp)
     stop(paste0(err$error_code, ": ", err$error_message))
   }
-  if (to_frame == TRUE) {
+
+  if (to_frame) {
     parsed <- httr::content(resp)
     if (endpoint %in% c("category",
                         "category/children",

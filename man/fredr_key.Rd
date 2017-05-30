@@ -13,4 +13,3 @@ https://api.stlouisfed.org/api_key.html.}
 \description{
 Sets the FRED API key to .Renviron file in working directory.
 }
-

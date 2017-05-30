@@ -11,7 +11,7 @@ d <- fredr(endpoint = "series/observations",
 
 test_that("fredr, fredr_series, and fredr_search return appropriate objects", {
   expect_is(a, c("tbl_df", "tbl", "data.frame"))
-  expect_is(b, "ts")
+  expect_is(b, "xts")
   expect_is(c, c("tbl_df", "tbl", "data.frame"))
   expect_is(d, "response")
 })
