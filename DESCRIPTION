@@ -13,7 +13,6 @@ Imports:
   dplyr,
   xts
 Suggests:
-  ggfortify,
   testthat,
   zoo
 License: MIT + file LICENSE 
