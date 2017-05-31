@@ -4,11 +4,13 @@
 \alias{fredr_series}
 \title{Return a FRED dataset as an \code{xts} object.}
 \usage{
-fredr_series(...)
+fredr_series(series_id, ...)
 }
 \arguments{
-\item{...}{A series of paramters to be used in the query.  Of the form
-param_key = 'param_value'.  The parameter \code{series_id} is
+\item{series_id}{A string ID for the FRED series}
+
+\item{...}{Additional parameters passed directly to API.  Must be of the
+form \code{param_key = 'param_value'}.
 required.}
 }
 \value{

@@ -18,6 +18,7 @@ test_that("fredr throws errors if API key is not set", {
 
 test_that("fredr_series throws errors", {
   expect_error(fredr_series())
+  expect_error(fredr_series(series_id = 1))
   expect_error(fredr_series(series_id = "FOOBAR"))
   expect_error(fredr_series(endpoint = "bad_endpoint", series_id = "FOOBAR"))
   expect_error(fredr_series(series_id = "GNPCA", frequency = "foo"))

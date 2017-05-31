@@ -1,7 +1,8 @@
 #' Return a FRED dataset as an \code{xts} object.
 #'
-#' @param ... A series of paramters to be used in the query.  Of the form
-#'        param_key = 'param_value'.  The parameter \code{series_id} is
+#' @param series_id A string ID for the FRED series
+#' @param ... Additional parameters passed directly to API.  Must be of the
+#'        form \code{param_key = 'param_value'}.
 #'        required.
 #' @return An \code{xts} object.
 #' @examples
@@ -14,15 +15,11 @@
 #'              aggregation_method = "avg",
 #'              unit = "log")
 #' @export
-fredr_series <- function(...) {
+fredr_series <- function(series_id, ...) {
 
-  params <- list(...)
+  stopifnot(is.character(series_id), length(series_id) == 1)
 
-  if (!("series_id" %in% names(params))) {
-    stop("Missing 'series_id' parameter.")
-  }
-
-  frame <- fredr::fredr(endpoint = "series/observations", ...)
+  frame <- fredr::fredr(endpoint = "series/observations", series_id = series_id, ...)
 
   frame$value[frame$value == "."] <- NA
   frame$value <- as.numeric(frame$value)
@@ -35,7 +32,7 @@ fredr_series <- function(...) {
     order.by = frame$date
   )
 
-  names(series) <- params[["series_id"]]
+  names(series) <- series_id
 
   return(series)
 }
