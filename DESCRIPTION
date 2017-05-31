@@ -2,8 +2,8 @@ Package: fredr
 Title: Interact with the FRED API in the R workspace
 Version: 0.3.0.0
 Authors@R: person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre"))
-Description: Wrap the FRED API with httr and dplyr to quickly bring data from
-	     FRED into the R workspace.
+Description: Interact with the Federal Reserve Economic Data (FRED) API. Includes tools 
+  to query the database and read series into R.
 URL: https://github.com/sboysel/fredr
 BugReports: http://github.com/sboysel/fredr/issues
 Depends: 

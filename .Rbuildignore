@@ -6,3 +6,4 @@
 ^Makefile
 ^README.Rmd
 ^figure/
+^docs$

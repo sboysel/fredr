@@ -31,26 +31,28 @@ API](https://research.stlouisfed.org/docs/api/fred/) to leverage the full power
 of the FRED API and `fredr`. The convenience function `fredr_docs` quickly brings
 up the web documentation. See the [section below](#fredr_docs) for usage
 examples.
+
 ## Installation
+
 ```{r installation, eval=FALSE}
 # install.packages("devtools")
 devtools::install_github("sboysel/fredr")
 ```
+
 ## Usage
-Load `fredr`
-```{r load_libi, eval=FALSE}
-library(fredr)
-```
-Set FRED API key in working directory.  You must first [obtain a FRED API
+
+Load `fredr` and set FRED API key in working directory.  You must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
 recommended to reveiw the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
 ```{r fredr_key, eval=FALSE}
+library(fredr)
 fredr_key("abcdefghijklmnopqrstuvwxyz123456")
 ```
+
 Search for FRED series
 ```{r fredr_search, message=FALSE, warning=FALSE}
-fredr_search(search_text = "housing")
+fredr_search(search_text = "unemployment")
 ```
 Get a FRED series.  Returns an `xts` object.
 ```{r fredr_series1, message=FALSE, warning=FALSE}

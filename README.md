@@ -30,36 +30,32 @@ examples.
 devtools::install_github("sboysel/fredr")
 ```
 ## Usage
-Load `fredr`
-
-```r
-library(fredr)
-```
-Set FRED API key in working directory.  You must first [obtain a FRED API
+Load `fredr` and set FRED API key in working directory.  You must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
 recommended to reveiw the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
 
 ```r
+library(fredr)
 fredr_key("abcdefghijklmnopqrstuvwxyz123456")
 ```
 Search for FRED series
 
 ```r
-fredr_search(search_text = "housing")
+fredr_search(search_text = "unemployment")
 #> # A tibble: 1,000 x 15
-#>            id realtime_start realtime_end
-#>         <chr>          <chr>        <chr>
-#>  1      HOUST     2017-05-30   2017-05-30
-#>  2   HOUSTNSA     2017-05-30   2017-05-30
-#>  3   MSPNHSUS     2017-05-30   2017-05-30
-#>  4    USSTHPI     2017-05-30   2017-05-30
-#>  5  SPCS20RSA     2017-05-30   2017-05-30
-#>  6 CSUSHPINSA     2017-05-30   2017-05-30
-#>  7  CSUSHPISA     2017-05-30   2017-05-30
-#>  8 SPCS20RNSA     2017-05-30   2017-05-30
-#>  9     MSACSR     2017-05-30   2017-05-30
-#> 10  MSACSRNSA     2017-05-30   2017-05-30
+#>                  id realtime_start realtime_end
+#>               <chr>          <chr>        <chr>
+#>  1           UNRATE     2017-05-30   2017-05-30
+#>  2        UNRATENSA     2017-05-30   2017-05-30
+#>  3             NROU     2017-05-30   2017-05-30
+#>  4 M0892AUSM156SNBR     2017-05-30   2017-05-30
+#>  5 Q0892BUSQ156SNBR     2017-05-30   2017-05-30
+#>  6 M0892BUSM156SNBR     2017-05-30   2017-05-30
+#>  7 M0892CUSM156NNBR     2017-05-30   2017-05-30
+#>  8         UNEMPLOY     2017-05-30   2017-05-30
+#>  9           U6RATE     2017-05-30   2017-05-30
+#> 10        U6RATENSA     2017-05-30   2017-05-30
 #> # ... with 990 more rows, and 12 more variables: title <chr>,
 #> #   observation_start <chr>, observation_end <chr>, frequency <chr>,
 #> #   frequency_short <chr>, units <chr>, units_short <chr>,
