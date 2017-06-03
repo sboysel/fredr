@@ -41,6 +41,6 @@ identical(key, "abcdefghijklmnopqrstuvwxyz123456")
 See \url{https://api.stlouisfed.org/api_key.html} to obtain an API key.
 }
 \seealso{
-Note that by using a FRED API key, you agree to the FRED® API Terms of Use.
+Note that by using a FRED API key, you agree to the FRED API Terms of Use.
 See \url{https://research.stlouisfed.org/docs/api/terms_of_use.html}.
 }
