@@ -1,10 +1,12 @@
 #' Search for a FRED series.
 #'
-#' @param search_text A character vector of length 1.
-#' @param series_search_text A character vector of length 1.
-#' @param tag_names A character vector of length 1.  Note that this value must be
-#' a valid FRED series tag (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).
-#' @param ... A series of additional paramters to be used in the query.  Of the form
+#' Search FRED for a series (by either text of the series or by ID), tags, or related tags.
+#'
+#' @param search_text A string.
+#' @param series_search_text A string.
+#' @param tag_names A string.  Note that this value must be a valid FRED series tag
+#' (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).
+#' @param ... A series of additional parameters to be used in the query.  Of the form
 #' \code{param_key = 'param_value'}.  See \code{fredr_docs("series/search")},
 #' \code{fredr_docs("series/search/tags")}, or
 #' \code{fredr_docs("series/search/related_tags")} for further details.

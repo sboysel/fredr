@@ -1,17 +1,20 @@
 #' Send a request to the FRED API
 #'
-#' @param endpoint A character vector of length 1 representing the FRED API path of interest. See
-#'        https://api.stlouisfed.org/docs/fred/ for a list of endpoint possible values.
-#' @param ... A series of paramters to be used in the query.  Of the form
+#' @param endpoint A string representing the FRED API path of interest. See
+#'        \code{fredr_docs()} for a list of endpoint possible values.
+#' @param ... A series of paramters to be used in the query.  Must be of the form
 #'        \code{param_key = 'param_value'}.  Acceptable parameters are specific to
-#'        the API path.  See https://api.stlouisfed.org/docs/fred/ for a list of
-#'        recognized parameters for each endpoint.
+#'        the API path.  See \code{fredr_docs(endpoint)} for a list of
+#'        recognized parameters for \code{endpoint}.
 #' @param to_frame A boolean value indicating whether or not the response
 #'        should be parsed and formatted as a \code{data.frame}.  Default is \code{TRUE}.
 #' @param print_req A boolean value indicating whether or not the request
 #'        should be printed as well.  Useful for debugging.  Default is \code{FALSE}.
 #' @return If \code{to_frame = TRUE}, a \code{data.frame} containing the parsed response.
 #'         If \code{to_frame = FALSE}, an object returned directly from \code{httr::GET()}.
+#'
+#' @references See \url{https://api.stlouisfed.org/docs/fred/}.
+#'
 #' @examples
 #'  fredr(endpoint = "series/observations",
 #'        series_id = "GNPCA",
@@ -34,7 +37,7 @@
 fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
 
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
-    stop("FRED API key must be set.  Use fredr_key().")
+    stop("FRED API key must be set. Use fredr_key().")
   }
 
   params <- list(...)

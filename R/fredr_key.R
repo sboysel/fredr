@@ -12,10 +12,11 @@
 #' @details \code{fredr_key} determines if the environment variable \code{FRED_API_KEY}
 #' is set.  If it is, \code{fredr_key()} gives a message and invisibly returns the key.
 #' If \code{FRED_API_KEY} is not set, writes \code{api_key} to the file \code{.Renviron},
-#' if it does not exist.  If \code{.Renviron} exists in the directory, it is advised
-#' to manually add an entry \code{FRED_API_KEY=api_key} and restart the session.  Once
-#' \code{api_key} has been saved as an environment variable in \code{.Renviron},
-#' you can use \code{fredr} in subsequent sessions without calling \code{fredr_key}.
+#' if it does not exist.  If \code{.Renviron} exists in the directory, \code{fredr_key}
+#' throws an error. In this case, it is advised to manually add an entry
+#' \code{FRED_API_KEY=api_key} to \code{.Renviron} and restart the session.  Once
+#' \code{FRED_API_KEY} has been properly set as an environment variable in \code{.Renviron},
+#' you can use \code{fredr} in subsequent sessions without calling \code{fredr_key} each time.
 #'
 #' @references See \url{https://api.stlouisfed.org/api_key.html} to obtain an API key.
 #' @seealso Note that by using a FRED API key, you agree to the FRED API Terms of Use.

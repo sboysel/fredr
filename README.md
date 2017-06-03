@@ -21,7 +21,7 @@ parameters supplied to these functions are relayed verbatim to the API, the
 user is strongly encouraged to read the full [FRED
 API](https://research.stlouisfed.org/docs/api/fred/) to leverage the full power
 of the FRED API and `fredr`. The convenience function `fredr_docs` quickly brings
-up the web documentation. See the [section below](#fredr_docs) for usage
+up the web documentation. See the [section below](#usage) for usage
 examples.
 
 ## Installation
@@ -144,7 +144,7 @@ You can also use the backbone function `fredr` to run more general queries
 against *any* [FRED API
 endpoint](https://research.stlouisfed.org/docs/api/fred/) (e.g. Categories,
 Series, Sources, Releases, Tags).  This is also useful to return any arbitrary
-information as a `tbl_df` object.
+information as a `data.frame`.
 
 ```r
 fredr(endpoint = "tags/series", tag_names = "population;south africa")
