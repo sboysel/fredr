@@ -24,24 +24,16 @@ test_that("fredr_series throws errors", {
   expect_error(fredr_series(series_id = "GNPCA", frequency = "foo"))
 })
 
-test_that("fredr_search throws errors with incompatible options", {
-  expect_error(fredr_search(search_field = "foo"))
-  expect_error(fredr_search(search_field = "series"))
-  expect_error(fredr_search(search_field = "tags"))
-  expect_error(fredr_search(search_field = "related_tags"))
-  expect_error(fredr_search(search_field = "series",
-                            series_search_text = "housing"))
-  expect_error(fredr_search(search_field = "tags",
-                            search_text = "housing"))
-  expect_error(fredr_search(search_field = "related_tags",
-                            search_text = "housing"))
-  expect_silent(fredr_search(search_field = "series",
-                             search_text = "housing"))
-  expect_silent(fredr_search(search_field = "tags",
-                             series_search_text = "housing"))
-  expect_silent(fredr_search(search_field = "related_tags",
-                             series_search_text = "housing",
-                             tag_names = "usa;monthly"))
+test_that("fredr_search* take distinct parameters", {
+  expect_error(fredr_search(text = "foo"))
+  expect_error(fredr_search_id(id = "foo"))
+  expect_error(fredr_search_tags(search_text = "foo"))
+  expect_error(fredr_search_rel_tags(search_txt = "foo", tag = "bar"))
+  expect_silent(fredr_search(search_text = "foo", order_by = "popularity"))
+  expect_silent(fredr_search_id(search_text = "foo", order_by = "popularity"))
+  expect_silent(fredr_search_tags(series_search_text = "foo", order_by = "popularity"))
+  expect_silent(fredr_search_rel_tags(series_search_text = "foo", tag_names = "30-year", order_by = "popularity"))
+  expect_error(fredr_search_rel_tags(series_search_text = "foo", tag_names = "bar", order_by = "popularity"))
 })
 
 test_that("fredr with print_req returns the correct message", {
