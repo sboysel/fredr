@@ -87,19 +87,19 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>series_id</th>
-      <td><p>A string ID for the FRED series</p></td>
+      <td><p>A string ID for the FRED series.  Use <code><a href='fredr_search.html'>fredr_search</a></code>
+to search for <code>series_id</code> of a series.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Additional parameters passed directly to API.  Must be of the
-form <code>param_key = 'param_value'</code>.
-required.</p></td>
+      <td><p>Additional parameters passed directly to FRED API.  Must be of the
+form <code>param_key = 'param_value'</code>.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>An <code>xts</code> object.</p>
+    <p>An <code>xts</code> object with observation dates in the index and parsed numeric values.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>

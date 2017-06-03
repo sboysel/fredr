@@ -80,50 +80,67 @@
     <p>Search for a FRED series.</p>
     
 
-    <pre class="usage"><span class='fu'>fredr_search</span>(<span class='kw'>search_field</span> <span class='kw'>=</span> <span class='st'>"series"</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>fredr_search</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)
+
+<span class='fu'>fredr_search_id</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)
+
+<span class='fu'>fredr_search_tags</span>(<span class='kw'>series_search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)
+
+<span class='fu'>fredr_search_rel_tags</span>(<span class='kw'>series_search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>search_field</th>
-      <td><p>A string indicating to search for a series, series tags,
-or related series tags.  Default is "series" to search for a series.  Use
-"tags" to search tags and "related_tags" to search related tags.</p></td>
+      <th>search_text</th>
+      <td><p>A character vector of length 1.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>A series of paramters to be used in the query.  Of the form
-param_key = 'param_value'.  The parameter <code>search_text</code> is required for
-<code>series/search</code> and <code>series_search_text</code> is required for
-<code>series/search/tags</code> or <code>series/search/related_tags</code>.</p></td>
+      <td><p>A series of additional paramters to be used in the query.  Of the form
+param_key = 'param_value'.  See <code>fredr_docs("series/search")</code>,
+<code>fredr_docs("series/search"/tags)</code>, or
+<code>fredr_docs("series/search/related_tags")</code> for further details.</p></td>
+    </tr>
+    <tr>
+      <th>series_search_text</th>
+      <td><p>A character vector of length 1.</p></td>
+    </tr>
+    <tr>
+      <th>tag_names</th>
+      <td><p>A character vector of length 1.  Note that this value must be a valid FRED series tag (e.g. <code>30-year</code>,
+<code>usa</code>, <code>quarterly</code>, etc.)</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>data.frame</code> object.</p>
+    <p>A <code>data.frame</code>.</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <ul>
+<li><p><code>fredr_search</code>Get economic data series that match search text (by full text of series).</p></li>
+<li><p><code>fredr_search_id</code>Get economic data series that match search text (by series ID).</p></li>
+<li><p><code>fredr_search_tags</code>Get the FRED tags for a series search.</p></li>
+<li><p><code>fredr_search_rel_tags</code>Get the related FRED tags for one or more FRED tags matching a series search.</p></li>
+</ul><p>From the FRED API documentation on <code>series/search/related_tags</code>: FRED tags are
+attributes assigned to series. For this request, related FRED tags are the tags assigned
+to series that match all tags in the <code>tag_names</code> parameter, no tags in the <code>exclude_tag_names</code>
+parameter, and the search words set by the <code>series_search_text</code> parameter.</p>
+    
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>See <a href = 'https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html'>https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html</a>.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>fredr_search</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"oil"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)</div><div class='output co'>#&gt; # A tibble: 1,000 x 15
-#&gt;                   id realtime_start realtime_end
-#&gt;                &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;
-#&gt;  1          CPIAUCSL     2017-05-30   2017-05-30
-#&gt;  2        DCOILWTICO     2017-05-30   2017-05-30
-#&gt;  3      DCOILBRENTEU     2017-05-30   2017-05-30
-#&gt;  4        MCOILWTICO     2017-05-30   2017-05-30
-#&gt;  5           WTISPLC     2017-05-30   2017-05-30
-#&gt;  6       POILWTIUSDM     2017-05-30   2017-05-30
-#&gt;  7       POILBREUSDM     2017-05-30   2017-05-30
-#&gt;  8 PCU21311121311101     2017-05-30   2017-05-30
-#&gt;  9      MCOILBRENTEU     2017-05-30   2017-05-30
-#&gt; 10       IPG211111CN     2017-05-30   2017-05-30
-#&gt; # ... with 990 more rows, and 12 more variables: title &lt;chr&gt;,
-#&gt; #   observation_start &lt;chr&gt;, observation_end &lt;chr&gt;, frequency &lt;chr&gt;,
-#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,
-#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,
-#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, notes &lt;chr&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>not_run</span>({
+  <span class='fu'>fredr_search</span>(<span class='st'>"oil"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)
+  <span class='fu'>fredr_search</span>(<span class='st'>"UNRATE"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)
+  <span class='fu'>fredr_search_tags</span>(<span class='st'>"gnp"</span>)
+  <span class='fu'>fredr_search_rel_tags</span>(<span class='st'>"gnp"</span>, <span class='st'>"usa"</span>)
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -131,6 +148,10 @@ param_key = 'param_value'.  The parameter <code>search_text</code> is required f
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
+
+      <li><a href="#references">References</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

@@ -1,7 +1,7 @@
 #' Search for a FRED series.
 #'
 #' @param ... A series of paramters to be used in the query.  Of the form
-#' param_key = 'param_value'.  The parameter \code{search_text} is required for
+#' param_key = 'param_value'. The parameter \code{search_text} is required for
 #' \code{series/search} and \code{series_search_text} is required for
 #' \code{series/search/tags} or \code{series/search/related_tags}.
 #' @param search_field A string indicating to search for a series, series tags,

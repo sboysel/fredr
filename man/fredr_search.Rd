@@ -2,26 +2,58 @@
 % Please edit documentation in R/fredr_search.R
 \name{fredr_search}
 \alias{fredr_search}
+\alias{fredr_search_id}
+\alias{fredr_search_tags}
+\alias{fredr_search_rel_tags}
 \title{Search for a FRED series.}
 \usage{
-fredr_search(search_field = "series", ...)
+fredr_search(search_text = NULL, ...)
+
+fredr_search_id(search_text = NULL, ...)
+
+fredr_search_tags(series_search_text = NULL, ...)
+
+fredr_search_rel_tags(series_search_text = NULL, tag_names = NULL, ...)
 }
 \arguments{
-\item{search_field}{A string indicating to search for a series, series tags,
-or related series tags.  Default is "series" to search for a series.  Use
-"tags" to search tags and "related_tags" to search related tags.}
+\item{search_text}{A character vector of length 1.}
 
-\item{...}{A series of paramters to be used in the query.  Of the form
-param_key = 'param_value'.  The parameter \code{search_text} is required for
-\code{series/search} and \code{series_search_text} is required for
-\code{series/search/tags} or \code{series/search/related_tags}.}
+\item{...}{A series of additional paramters to be used in the query.  Of the form
+param_key = 'param_value'.  See \code{fredr_docs("series/search")},
+\code{fredr_docs("series/search"/tags)}, or
+\code{fredr_docs("series/search/related_tags")} for further details.}
+
+\item{series_search_text}{A character vector of length 1.}
+
+\item{tag_names}{A character vector of length 1.  Note that this value must be a valid FRED series tag (e.g. \code{30-year},
+\code{usa}, \code{quarterly}, etc.)}
 }
 \value{
-A \code{data.frame} object.
+A \code{data.frame}.
 }
 \description{
 Search for a FRED series.
 }
+\details{
+\itemize{
+  \item{\code{fredr_search}}{Get economic data series that match search text (by full text of series).}
+  \item{\code{fredr_search_id}}{Get economic data series that match search text (by series ID).}
+  \item{\code{fredr_search_tags}}{Get the FRED tags for a series search.}
+  \item{\code{fredr_search_rel_tags}}{Get the related FRED tags for one or more FRED tags matching a series search.}
+}
+From the FRED API documentation on \code{series/search/related_tags}: FRED tags are
+attributes assigned to series. For this request, related FRED tags are the tags assigned
+to series that match all tags in the \code{tag_names} parameter, no tags in the \code{exclude_tag_names}
+parameter, and the search words set by the \code{series_search_text} parameter.
+}
 \examples{
-fredr_search(search_text = "oil", order_by = "popularity")
+\dontrun{
+fredr_search("oil", order_by = "popularity")
+fredr_search("UNRATE", order_by = "popularity")
+fredr_search_tags("gnp")
+fredr_search_rel_tags("gnp", "usa")
+}
+}
+\references{
+See \url{https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html}.
 }

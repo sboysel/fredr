@@ -21,8 +21,10 @@ browser.  Default is FALSE.}
 Open the web documentation for a certain FRED API topic.
 }
 \examples{
+\dontrun{
 fredr_docs()
 fredr_docs('category')
 fredr_docs('series/observations')
 fredr_docs('series/observations', params = TRUE)
+}
 }

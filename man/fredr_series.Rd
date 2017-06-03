@@ -7,14 +7,14 @@
 fredr_series(series_id, ...)
 }
 \arguments{
-\item{series_id}{A string ID for the FRED series}
+\item{series_id}{A string ID for the FRED series.  Use \code{\link{fredr_search}}
+to search for \code{series_id} of a series.}
 
-\item{...}{Additional parameters passed directly to API.  Must be of the
-form \code{param_key = 'param_value'}.
-required.}
+\item{...}{Additional parameters passed directly to FRED API.  Must be of the
+form \code{param_key = 'param_value'}.}
 }
 \value{
-An \code{xts} object.
+An \code{xts} object with observation dates in the index and parsed numeric values.
 }
 \description{
 Return a FRED dataset as an \code{xts} object.

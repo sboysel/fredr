@@ -8,10 +8,12 @@
 #' @param debug A boolean value.  If TRUE, the documentation is not opened in a
 #'        browser.  Default is FALSE.
 #' @examples
+#' \dontrun{
 #' fredr_docs()
 #' fredr_docs('category')
 #' fredr_docs('series/observations')
 #' fredr_docs('series/observations', params = TRUE)
+#' }
 #' @export
 fredr_docs <- function(endpoint = "base", params = FALSE, debug = FALSE) {
   base <- "https://api.stlouisfed.org/docs/fred/"

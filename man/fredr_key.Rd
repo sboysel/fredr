@@ -7,9 +7,17 @@
 fredr_key(api_key)
 }
 \arguments{
-\item{api_key}{A FRED API key as a string.  Obtain one at 
+\item{api_key}{A FRED API key as character vector of length 1.  Obtain one at
 https://api.stlouisfed.org/api_key.html.}
 }
 \description{
 Sets the FRED API key to .Renviron file in working directory.
+}
+\examples{
+
+\dontrun{
+library(fredr)
+fredr_key("abcdefghijklmnopqrstuvwxyz123456")
+}
+
 }

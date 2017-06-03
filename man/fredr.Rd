@@ -2,34 +2,48 @@
 % Please edit documentation in R/fredr.R
 \name{fredr}
 \alias{fredr}
-\title{Send a request to the FRED API server}
+\title{Send a request to the FRED API}
 \usage{
 fredr(endpoint, ..., to_frame = TRUE, print_req = FALSE)
 }
 \arguments{
 \item{endpoint}{A string representing the FRED API path of interest. See
-https://api.stlouisfed.org/docs/fred/.}
+https://api.stlouisfed.org/docs/fred/ for a list of endpoint possible values.}
 
 \item{...}{A series of paramters to be used in the query.  Of the form
-param_key = 'param_value'.  Acceptable parameters are specific to
-the API path.  See https://api.stlouisfed.org/docs/fred/.}
+\code{param_key = 'param_value'}.  Acceptable parameters are specific to
+the API path.  See https://api.stlouisfed.org/docs/fred/ for a list of
+recognized parameters for each endpoint.}
 
 \item{to_frame}{A boolean value indicating whether or not the response
-should be parsed and formatted as a tbl_df.  Default is TRUE.}
+should be parsed and formatted as a \code{data.frame}.  Default is \code{TRUE}.}
 
 \item{print_req}{A boolean value indicating whether or not the request
-should be printed as well.  Useful for debugging.}
+should be printed as well.  Useful for debugging.  Default is \code{FALSE}.}
 }
 \value{
-A tbl_df.  If to_frame is TRUE, return is a reponse object from
-       httr::GET().
+If \code{to_frame = TRUE}, a \code{data.frame} containing the parsed response.
+        If \code{to_frame = FALSE}, an object directly from \code{httr::GET()}.
 }
 \description{
-Send a request to the FRED API server
+Send a request to the FRED API
 }
 \examples{
- fredr("series/observations",
+ fredr(endpoint = "series/observations",
        series_id = "GNPCA",
        observation_start = "1990-01-01",
        observation_end = "2000-01-01")
+ \dontrun{
+ library(httr)
+ library(tidyverse)
+ resp <- fredr(endpoint = "series/observations",
+               series_id = "GNPCA",
+               observation_start = "1990-01-01",
+               observation_end = "2000-01-01",
+               to_frame = FALSE)
+ data <- resp \%>\%
+   httr::content() \%>\%
+   .$observations \%>\%
+   purrr::map_df(.f = function(x) tibble::as_tibble(x = x))
+}
 }

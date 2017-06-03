@@ -23,13 +23,17 @@ API](https://research.stlouisfed.org/docs/api/fred/) to leverage the full power
 of the FRED API and `fredr`. The convenience function `fredr_docs` quickly brings
 up the web documentation. See the [section below](#fredr_docs) for usage
 examples.
+
 ## Installation
+
 
 ```r
 # install.packages("devtools")
 devtools::install_github("sboysel/fredr")
 ```
+
 ## Usage
+
 Load `fredr` and set FRED API key in working directory.  You must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
 recommended to reveiw the [FRED API Terms of
@@ -39,6 +43,7 @@ Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
 library(fredr)
 fredr_key("abcdefghijklmnopqrstuvwxyz123456")
 ```
+
 Search for FRED series
 
 ```r
@@ -46,16 +51,16 @@ fredr_search(search_text = "unemployment")
 #> # A tibble: 1,000 x 15
 #>                  id realtime_start realtime_end
 #>               <chr>          <chr>        <chr>
-#>  1           UNRATE     2017-05-30   2017-05-30
-#>  2        UNRATENSA     2017-05-30   2017-05-30
-#>  3             NROU     2017-05-30   2017-05-30
-#>  4 M0892AUSM156SNBR     2017-05-30   2017-05-30
-#>  5 Q0892BUSQ156SNBR     2017-05-30   2017-05-30
-#>  6 M0892BUSM156SNBR     2017-05-30   2017-05-30
-#>  7 M0892CUSM156NNBR     2017-05-30   2017-05-30
-#>  8         UNEMPLOY     2017-05-30   2017-05-30
-#>  9           U6RATE     2017-05-30   2017-05-30
-#> 10        U6RATENSA     2017-05-30   2017-05-30
+#>  1           UNRATE     2017-06-02   2017-06-02
+#>  2        UNRATENSA     2017-06-02   2017-06-02
+#>  3             NROU     2017-06-02   2017-06-02
+#>  4 M0892AUSM156SNBR     2017-06-02   2017-06-02
+#>  5 Q0892BUSQ156SNBR     2017-06-02   2017-06-02
+#>  6 M0892BUSM156SNBR     2017-06-02   2017-06-02
+#>  7 M0892CUSM156NNBR     2017-06-02   2017-06-02
+#>  8         UNEMPLOY     2017-06-02   2017-06-02
+#>  9           U6RATE     2017-06-02   2017-06-02
+#> 10        U6RATENSA     2017-06-02   2017-06-02
 #> # ... with 990 more rows, and 12 more variables: title <chr>,
 #> #   observation_start <chr>, observation_end <chr>, frequency <chr>,
 #> #   frequency_short <chr>, units <chr>, units_short <chr>,
@@ -146,16 +151,16 @@ fredr(endpoint = "tags/series", tag_names = "population;south africa")
 #> # A tibble: 59 x 15
 #>                 id realtime_start realtime_end
 #>              <chr>          <chr>        <chr>
-#>  1 LFWA24TTZAA647N     2017-05-30   2017-05-30
-#>  2 LFWA24TTZAA647S     2017-05-30   2017-05-30
-#>  3 LFWA24TTZAQ647N     2017-05-30   2017-05-30
-#>  4 LFWA24TTZAQ647S     2017-05-30   2017-05-30
-#>  5 LFWA25TTZAA647N     2017-05-30   2017-05-30
-#>  6 LFWA25TTZAA647S     2017-05-30   2017-05-30
-#>  7 LFWA25TTZAQ647N     2017-05-30   2017-05-30
-#>  8 LFWA25TTZAQ647S     2017-05-30   2017-05-30
-#>  9 LFWA55TTZAA647N     2017-05-30   2017-05-30
-#> 10 LFWA55TTZAA647S     2017-05-30   2017-05-30
+#>  1 LFWA24TTZAA647N     2017-06-02   2017-06-02
+#>  2 LFWA24TTZAA647S     2017-06-02   2017-06-02
+#>  3 LFWA24TTZAQ647N     2017-06-02   2017-06-02
+#>  4 LFWA24TTZAQ647S     2017-06-02   2017-06-02
+#>  5 LFWA25TTZAA647N     2017-06-02   2017-06-02
+#>  6 LFWA25TTZAA647S     2017-06-02   2017-06-02
+#>  7 LFWA25TTZAQ647N     2017-06-02   2017-06-02
+#>  8 LFWA25TTZAQ647S     2017-06-02   2017-06-02
+#>  9 LFWA55TTZAA647N     2017-06-02   2017-06-02
+#> 10 LFWA55TTZAA647S     2017-06-02   2017-06-02
 #> # ... with 49 more rows, and 12 more variables: title <chr>,
 #> #   observation_start <chr>, observation_end <chr>, frequency <chr>,
 #> #   frequency_short <chr>, units <chr>, units_short <chr>,

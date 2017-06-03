@@ -1,10 +1,10 @@
 #' Return a FRED dataset as an \code{xts} object.
 #'
-#' @param series_id A string ID for the FRED series
-#' @param ... Additional parameters passed directly to API.  Must be of the
+#' @param series_id A string ID for the FRED series.  Use \code{\link{fredr_search}}
+#'        to search for \code{series_id} of a series.
+#' @param ... Additional parameters passed directly to FRED API.  Must be of the
 #'        form \code{param_key = 'param_value'}.
-#'        required.
-#' @return An \code{xts} object.
+#' @return An \code{xts} object with observation dates in the index and parsed numeric values.
 #' @examples
 #' fredr_series(series_id = "UNRATE",
 #'              observation_start = "1980-01-01",
