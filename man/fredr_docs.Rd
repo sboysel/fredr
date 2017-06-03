@@ -8,11 +8,11 @@ fredr_docs(endpoint = "base", params = FALSE, debug = FALSE)
 }
 \arguments{
 \item{endpoint}{A string representing the desired documentation for the exact
-FRED API endpoint.  Default is 'base' and will open a link to
+FRED API endpoint.  Default is \code{"base"}, which will open a link to
 \url{https://api.stlouisfed.org/docs/fred/}.}
 
 \item{params}{A boolean value.  If \code{TRUE}, the documentation will be opened at
-the 'Paramters' section.  Default is \code{FALSE}.}
+the 'Parameters' section.  Default is \code{FALSE}.}
 
 \item{debug}{A boolean value.  If \code{TRUE}, the documentation is not opened in a
 browser.  Default is \code{FALSE}.}
