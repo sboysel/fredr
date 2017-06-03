@@ -5,7 +5,7 @@ Authors@R: person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", 
 Description: Interact with the Federal Reserve Economic Data (FRED) API. Includes tools 
   to query the database and read series into R.
 URL: https://github.com/sboysel/fredr
-BugReports: http://github.com/sboysel/fredr/issues
+BugReports: https://github.com/sboysel/fredr/issues
 Depends: 
   R (>= 3.2.2)
 Imports: 
