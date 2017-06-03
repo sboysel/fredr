@@ -13,6 +13,13 @@ https://api.stlouisfed.org/api_key.html.}
 \description{
 Sets the FRED API key to .Renviron file in working directory.
 }
+\details{
+\code{fredr_key} writes \code{api_key} to the file \code{.Renviron},
+if it does not exist.  If \code{.Renviron} exists in the directory, it is advised
+to manually add \code{FRED_API_KEY=api_key} and restart the session.  Once
+\code{api_key} has been saved as an environment variable in \code{.Renviron},
+you can use \code{fredr} in subsequent sessions without calling \code{fredr_key}.
+}
 \examples{
 
 \dontrun{
@@ -20,4 +27,7 @@ library(fredr)
 fredr_key("abcdefghijklmnopqrstuvwxyz123456")
 }
 
+}
+\references{
+See \url{https://api.stlouisfed.org/api_key.html}
 }

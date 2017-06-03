@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_series.R
 \name{fredr_series}
 \alias{fredr_series}
-\title{Return a FRED dataset as an \code{xts} object.}
+\title{Return a FRED series as an \code{xts} object.}
 \usage{
 fredr_series(series_id, ...)
 }
@@ -17,7 +17,7 @@ form \code{param_key = 'param_value'}.}
 An \code{xts} object with observation dates in the index and parsed numeric values.
 }
 \description{
-Return a FRED dataset as an \code{xts} object.
+Return a FRED series as an \code{xts} object.
 }
 \examples{
 fredr_series(series_id = "UNRATE",

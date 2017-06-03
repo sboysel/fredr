@@ -1,6 +1,6 @@
 #' Send a request to the FRED API
 #'
-#' @param endpoint A string representing the FRED API path of interest. See
+#' @param endpoint A character vector of length 1 representing the FRED API path of interest. See
 #'        https://api.stlouisfed.org/docs/fred/ for a list of endpoint possible values.
 #' @param ... A series of paramters to be used in the query.  Of the form
 #'        \code{param_key = 'param_value'}.  Acceptable parameters are specific to
@@ -11,7 +11,7 @@
 #' @param print_req A boolean value indicating whether or not the request
 #'        should be printed as well.  Useful for debugging.  Default is \code{FALSE}.
 #' @return If \code{to_frame = TRUE}, a \code{data.frame} containing the parsed response.
-#'         If \code{to_frame = FALSE}, an object directly from \code{httr::GET()}.
+#'         If \code{to_frame = FALSE}, an object returned directly from \code{httr::GET()}.
 #' @examples
 #'  fredr(endpoint = "series/observations",
 #'        series_id = "GNPCA",
@@ -34,16 +34,18 @@
 fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
 
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
-    stop("FRED API key must be set.  Use fredr_key()")
+    stop("FRED API key must be set.  Use fredr_key().")
   }
 
   params <- list(...)
   params$api_key <- Sys.getenv("FRED_API_KEY")
   params$file_type <- "json"
 
-  resp <- httr::GET(url = "https://api.stlouisfed.org/",
-                    path = paste0("fred/", endpoint),
-                    query = params)
+  resp <- httr::GET(
+    url = "https://api.stlouisfed.org/",
+    path = paste0("fred/", endpoint),
+    query = params
+  )
 
   if (print_req) {
     message(resp$url)

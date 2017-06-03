@@ -3,6 +3,14 @@
 #' @param api_key A FRED API key as character vector of length 1.  Obtain one at
 #'				https://api.stlouisfed.org/api_key.html.
 #'
+#' @details \code{fredr_key} writes \code{api_key} to the file \code{.Renviron},
+#' if it does not exist.  If \code{.Renviron} exists in the directory, it is advised
+#' to manually add \code{FRED_API_KEY=api_key} and restart the session.  Once
+#' \code{api_key} has been saved as an environment variable in \code{.Renviron},
+#' you can use \code{fredr} in subsequent sessions without calling \code{fredr_key}.
+#'
+#' @references See \url{https://api.stlouisfed.org/api_key.html}
+#'
 #' @examples
 #'
 #' \dontrun{

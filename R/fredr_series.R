@@ -1,4 +1,4 @@
-#' Return a FRED dataset as an \code{xts} object.
+#' Return a FRED series as an \code{xts} object.
 #'
 #' @param series_id A string ID for the FRED series.  Use \code{\link{fredr_search}}
 #'        to search for \code{series_id} of a series.

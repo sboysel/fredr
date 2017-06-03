@@ -51,16 +51,16 @@ fredr_search(search_text = "unemployment")
 #> # A tibble: 1,000 x 15
 #>                  id realtime_start realtime_end
 #>               <chr>          <chr>        <chr>
-#>  1           UNRATE     2017-06-02   2017-06-02
-#>  2        UNRATENSA     2017-06-02   2017-06-02
-#>  3             NROU     2017-06-02   2017-06-02
-#>  4 M0892AUSM156SNBR     2017-06-02   2017-06-02
-#>  5 Q0892BUSQ156SNBR     2017-06-02   2017-06-02
-#>  6 M0892BUSM156SNBR     2017-06-02   2017-06-02
-#>  7 M0892CUSM156NNBR     2017-06-02   2017-06-02
-#>  8         UNEMPLOY     2017-06-02   2017-06-02
-#>  9           U6RATE     2017-06-02   2017-06-02
-#> 10        U6RATENSA     2017-06-02   2017-06-02
+#>  1           UNRATE     2017-06-03   2017-06-03
+#>  2        UNRATENSA     2017-06-03   2017-06-03
+#>  3             NROU     2017-06-03   2017-06-03
+#>  4 M0892AUSM156SNBR     2017-06-03   2017-06-03
+#>  5 Q0892BUSQ156SNBR     2017-06-03   2017-06-03
+#>  6 M0892BUSM156SNBR     2017-06-03   2017-06-03
+#>  7           U6RATE     2017-06-03   2017-06-03
+#>  8 M0892CUSM156NNBR     2017-06-03   2017-06-03
+#>  9         UNEMPLOY     2017-06-03   2017-06-03
+#> 10        U6RATENSA     2017-06-03   2017-06-03
 #> # ... with 990 more rows, and 12 more variables: title <chr>,
 #> #   observation_start <chr>, observation_end <chr>, frequency <chr>,
 #> #   frequency_short <chr>, units <chr>, units_short <chr>,
@@ -151,16 +151,16 @@ fredr(endpoint = "tags/series", tag_names = "population;south africa")
 #> # A tibble: 59 x 15
 #>                 id realtime_start realtime_end
 #>              <chr>          <chr>        <chr>
-#>  1 LFWA24TTZAA647N     2017-06-02   2017-06-02
-#>  2 LFWA24TTZAA647S     2017-06-02   2017-06-02
-#>  3 LFWA24TTZAQ647N     2017-06-02   2017-06-02
-#>  4 LFWA24TTZAQ647S     2017-06-02   2017-06-02
-#>  5 LFWA25TTZAA647N     2017-06-02   2017-06-02
-#>  6 LFWA25TTZAA647S     2017-06-02   2017-06-02
-#>  7 LFWA25TTZAQ647N     2017-06-02   2017-06-02
-#>  8 LFWA25TTZAQ647S     2017-06-02   2017-06-02
-#>  9 LFWA55TTZAA647N     2017-06-02   2017-06-02
-#> 10 LFWA55TTZAA647S     2017-06-02   2017-06-02
+#>  1 LFWA24TTZAA647N     2017-06-03   2017-06-03
+#>  2 LFWA24TTZAA647S     2017-06-03   2017-06-03
+#>  3 LFWA24TTZAQ647N     2017-06-03   2017-06-03
+#>  4 LFWA24TTZAQ647S     2017-06-03   2017-06-03
+#>  5 LFWA25TTZAA647N     2017-06-03   2017-06-03
+#>  6 LFWA25TTZAA647S     2017-06-03   2017-06-03
+#>  7 LFWA25TTZAQ647N     2017-06-03   2017-06-03
+#>  8 LFWA25TTZAQ647S     2017-06-03   2017-06-03
+#>  9 LFWA55TTZAA647N     2017-06-03   2017-06-03
+#> 10 LFWA55TTZAA647S     2017-06-03   2017-06-03
 #> # ... with 49 more rows, and 12 more variables: title <chr>,
 #> #   observation_start <chr>, observation_end <chr>, frequency <chr>,
 #> #   frequency_short <chr>, units <chr>, units_short <chr>,

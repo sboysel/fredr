@@ -9,16 +9,16 @@ fredr_docs(endpoint = "base", params = FALSE, debug = FALSE)
 \arguments{
 \item{endpoint}{A string representing the desired documentation for the exact
 FRED API endpoint.  Default is 'base' and will open a link to
-https://api.stlouisfed.org/docs/fred/.}
+\url{https://api.stlouisfed.org/docs/fred/}.}
 
-\item{params}{A boolean value.  If TRUE, the documentation will be opened at
-the 'Paramters' section.  Default is FALSE.}
+\item{params}{A boolean value.  If \code{TRUE}, the documentation will be opened at
+the 'Paramters' section.  Default is \code{FALSE}.}
 
-\item{debug}{A boolean value.  If TRUE, the documentation is not opened in a
-browser.  Default is FALSE.}
+\item{debug}{A boolean value.  If \code{TRUE}, the documentation is not opened in a
+browser.  Default is \code{FALSE}.}
 }
 \description{
-Open the web documentation for a certain FRED API topic.
+Opens FRED API web documentation in a new browser tab.
 }
 \examples{
 \dontrun{
@@ -27,4 +27,7 @@ fredr_docs('category')
 fredr_docs('series/observations')
 fredr_docs('series/observations', params = TRUE)
 }
+}
+\references{
+See \url{https://api.stlouisfed.org/docs/fred/}.
 }
