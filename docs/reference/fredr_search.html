@@ -98,8 +98,8 @@
     <tr>
       <th>...</th>
       <td><p>A series of additional paramters to be used in the query.  Of the form
-param_key = 'param_value'.  See <code>fredr_docs("series/search")</code>,
-<code>fredr_docs("series/search"/tags)</code>, or
+<code>param_key = 'param_value'</code>.  See <code>fredr_docs("series/search")</code>,
+<code>fredr_docs("series/search/tags")</code>, or
 <code>fredr_docs("series/search/related_tags")</code> for further details.</p></td>
     </tr>
     <tr>
@@ -108,8 +108,8 @@ param_key = 'param_value'.  See <code>fredr_docs("series/search")</code>,
     </tr>
     <tr>
       <th>tag_names</th>
-      <td><p>A character vector of length 1.  Note that this value must be a valid FRED series tag (e.g. <code>30-year</code>,
-<code>usa</code>, <code>quarterly</code>, etc.)</p></td>
+      <td><p>A character vector of length 1.  Note that this value must be
+a valid FRED series tag (e.g. <code>30-year</code>, <code>usa</code>, <code>quarterly</code>, etc.).</p></td>
     </tr>
     </table>
     
@@ -123,7 +123,8 @@ param_key = 'param_value'.  See <code>fredr_docs("series/search")</code>,
 <li><p><code>fredr_search</code>Get economic data series that match search text (by full text of series).</p></li>
 <li><p><code>fredr_search_id</code>Get economic data series that match search text (by series ID).</p></li>
 <li><p><code>fredr_search_tags</code>Get the FRED tags for a series search.</p></li>
-<li><p><code>fredr_search_rel_tags</code>Get the related FRED tags for one or more FRED tags matching a series search.</p></li>
+<li><p><code>fredr_search_rel_tags</code>Get the related FRED tags for one or more FRED tags matching a series search.
+  See below for more information about searching for related tags.</p></li>
 </ul><p>From the FRED API documentation on <code>series/search/related_tags</code>: FRED tags are
 attributes assigned to series. For this request, related FRED tags are the tags assigned
 to series that match all tags in the <code>tag_names</code> parameter, no tags in the <code>exclude_tag_names</code>

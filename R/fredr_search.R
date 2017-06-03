@@ -2,12 +2,12 @@
 #'
 #' @param search_text A character vector of length 1.
 #' @param series_search_text A character vector of length 1.
-#' @param tag_names A character vector of length 1.  Note that this value must be a valid FRED series tag (e.g. \code{30-year},
-#'        \code{usa}, \code{quarterly}, etc.)
+#' @param tag_names A character vector of length 1.  Note that this value must be
+#' a valid FRED series tag (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).
 #' @param ... A series of additional paramters to be used in the query.  Of the form
-#'        param_key = 'param_value'.  See \code{fredr_docs("series/search")},
-#'        \code{fredr_docs("series/search"/tags)}, or
-#'        \code{fredr_docs("series/search/related_tags")} for further details.
+#' \code{param_key = 'param_value'}.  See \code{fredr_docs("series/search")},
+#' \code{fredr_docs("series/search/tags")}, or
+#' \code{fredr_docs("series/search/related_tags")} for further details.
 #'
 #' @return A \code{data.frame}.
 #'
@@ -15,7 +15,8 @@
 #'   \item{\code{fredr_search}}{Get economic data series that match search text (by full text of series).}
 #'   \item{\code{fredr_search_id}}{Get economic data series that match search text (by series ID).}
 #'   \item{\code{fredr_search_tags}}{Get the FRED tags for a series search.}
-#'   \item{\code{fredr_search_rel_tags}}{Get the related FRED tags for one or more FRED tags matching a series search.}
+#'   \item{\code{fredr_search_rel_tags}}{Get the related FRED tags for one or more FRED tags matching a series search.
+#'   See below for more information about searching for related tags.}
 #' }
 #' From the FRED API documentation on \code{series/search/related_tags}: FRED tags are
 #' attributes assigned to series. For this request, related FRED tags are the tags assigned
