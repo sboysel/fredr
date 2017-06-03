@@ -1,6 +1,6 @@
 Package: fredr
 Title: Interact with the FRED API in the R workspace
-Version: 0.3.0.0
+Version: 0.3.0.9000
 Authors@R: person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre"))
 Description: Interact with the Federal Reserve Economic Data (FRED) API. Includes tools 
   to query the database and read series into R.
