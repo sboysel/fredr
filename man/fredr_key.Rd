@@ -2,21 +2,28 @@
 % Please edit documentation in R/fredr_key.R
 \name{fredr_key}
 \alias{fredr_key}
-\title{Sets the FRED API key to .Renviron file in working directory.}
+\title{Set the FRED API key}
 \usage{
 fredr_key(api_key)
 }
 \arguments{
-\item{api_key}{A FRED API key as character vector of length 1.  Obtain one at
-https://api.stlouisfed.org/api_key.html.}
+\item{api_key}{A FRED API key as a string.  Obtain one at
+\url{https://api.stlouisfed.org/api_key.html}.}
+}
+\value{
+invisibly returns the value of the set API key as a string.
 }
 \description{
-Sets the FRED API key to .Renviron file in working directory.
+Set the FRED API key for use with \code{fredr}.  The key is cached in an
+\code{.Renviron} in the directory.  The function gives a message and invisibly
+returns the key when it is already set.
 }
 \details{
-\code{fredr_key} writes \code{api_key} to the file \code{.Renviron},
+\code{fredr_key} determines if the environment variable \code{FRED_API_KEY}
+is set.  If it is, \code{fredr_key()} gives a message and invisibly returns the key.
+If \code{FRED_API_KEY} is not set, writes \code{api_key} to the file \code{.Renviron},
 if it does not exist.  If \code{.Renviron} exists in the directory, it is advised
-to manually add \code{FRED_API_KEY=api_key} and restart the session.  Once
+to manually add an entry \code{FRED_API_KEY=api_key} and restart the session.  Once
 \code{api_key} has been saved as an environment variable in \code{.Renviron},
 you can use \code{fredr} in subsequent sessions without calling \code{fredr_key}.
 }
@@ -25,9 +32,15 @@ you can use \code{fredr} in subsequent sessions without calling \code{fredr_key}
 \dontrun{
 library(fredr)
 fredr_key("abcdefghijklmnopqrstuvwxyz123456")
+key <- fredr_key()
+identical(key, "abcdefghijklmnopqrstuvwxyz123456")
 }
 
 }
 \references{
-See \url{https://api.stlouisfed.org/api_key.html}
+See \url{https://api.stlouisfed.org/api_key.html} to obtain an API key.
+}
+\seealso{
+Note that by using a FRED API key, you agree to the FRED® API Terms of Use.
+See \url{https://research.stlouisfed.org/docs/api/terms_of_use.html}.
 }

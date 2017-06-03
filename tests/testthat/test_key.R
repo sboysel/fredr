@@ -12,14 +12,17 @@ test_that("fredr_key throws an error if .Renviron is present.", {
   Sys.setenv(FRED_API_KEY = "")
   expect_message(fredr_key(env_key),
                  "FRED API key successfully set.")
+  # expect_error(fredr_key(env_key))
   expect_true(file.remove(renv))
   Sys.setenv(FRED_API_KEY = env_key)
-  expect_message(fredr_key(),
+  expect_message(key <- fredr_key(env_key),
                  "FRED API key set as environment variable.")
+  expect_identical(key, env_key)
   expect_false(file.exists(renv))
+  Sys.setenv(FRED_API_KEY = "")
   file.create(renv)
-  expect_message(fredr_key(),
-                 "FRED API key set as environment variable.")
+  expect_error(fredr_key(env_key),
+               ".Renviron file exists in directory")
   file.remove(renv)
   # Cleanup
   Sys.setenv(FRED_API_KEY = env_key)
