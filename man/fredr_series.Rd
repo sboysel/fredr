@@ -8,16 +8,19 @@ fredr_series(series_id, ...)
 }
 \arguments{
 \item{series_id}{A string ID for the FRED series.  Use \code{\link{fredr_search}}
-to search for \code{series_id} of a series.}
+to find the \code{series_id} of a series.}
 
-\item{...}{Additional parameters passed directly to FRED API.  Must be of the
-form \code{param_key = 'param_value'}.}
+\item{...}{A series of named parameters to be used in the query.  Must be of the form
+\code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
+See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
+access to the endpoint web documentation.}
 }
 \value{
-An \code{xts} object with observation dates in the index and parsed numeric values.
+An \code{xts} object with observation dates in the index corresponding to
+parsed numeric observations as values.
 }
 \description{
-Return a FRED series as an \code{xts} object.
+Given a series ID, return observations of that series as an \code{xts} object.
 }
 \examples{
 fredr_series(series_id = "UNRATE",

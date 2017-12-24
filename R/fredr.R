@@ -1,19 +1,21 @@
 #' Send a request to the FRED API
 #'
 #' @param endpoint A string representing the FRED API path of interest. See
-#'        \code{fredr_docs()} for a list of endpoint possible values.
-#' @param ... A series of paramters to be used in the query.  Must be of the form
-#'        \code{param_key = 'param_value'}.  Acceptable parameters are specific to
-#'        the API path.  See \code{fredr_docs(endpoint)} for a list of
-#'        recognized parameters for \code{endpoint}.
+#'        \code{fredr_endpoints} for a list of endpoint possible values.
+#' @param ... A series of named parameters to be used in the query.  Must be of the form
+#'        \code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
+#'        See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
+#'        access to the endpoint web documentation.
 #' @param to_frame A boolean value indicating whether or not the response
-#'        should be parsed and formatted as a \code{data.frame}.  Default is \code{TRUE}.
+#'        should be parsed and formatted as a data frame.  If \code{FALSE},
+#'        a \code{response} object is returned and further processing can be done with
+#'        \code{\link[httr]{content}}.  Default is \code{TRUE}.
 #' @param print_req A boolean value indicating whether or not the request
 #'        should be printed as well.  Useful for debugging.  Default is \code{FALSE}.
-#' @return If \code{to_frame = TRUE}, a \code{data.frame} containing the parsed response.
-#'         If \code{to_frame = FALSE}, an object returned directly from \code{httr::GET()}.
+#' @return If \code{to_frame = TRUE}, a data frame containing the parsed response.
+#'         If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{GET}}.
 #'
-#' @references See \url{https://api.stlouisfed.org/docs/fred/}.
+#' @references \url{https://api.stlouisfed.org/docs/fred/}.
 #'
 #' @examples
 #'  fredr(endpoint = "series/observations",

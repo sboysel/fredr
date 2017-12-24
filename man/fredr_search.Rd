@@ -16,23 +16,23 @@ fredr_search_tags(series_search_text = NULL, ...)
 fredr_search_rel_tags(series_search_text = NULL, tag_names = NULL, ...)
 }
 \arguments{
-\item{search_text}{A character vector of length 1.}
+\item{search_text}{A string.}
 
-\item{...}{A series of additional paramters to be used in the query.  Of the form
-\code{param_key = 'param_value'}.  See \code{fredr_docs("series/search")},
-\code{fredr_docs("series/search/tags")}, or
-\code{fredr_docs("series/search/related_tags")} for further details.}
+\item{...}{A series of named parameters to be used in the query.  Must be of the form
+\code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
+See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
+access to the endpoint web documentation.}
 
-\item{series_search_text}{A character vector of length 1.}
+\item{series_search_text}{A string.}
 
-\item{tag_names}{A character vector of length 1.  Note that this value must be
-a valid FRED series tag (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).}
+\item{tag_names}{A string.  Note that this value must be a valid FRED series tag
+(e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).}
 }
 \value{
 A \code{data.frame}.
 }
 \description{
-Search for a FRED series.
+Search FRED for a series (by either text of the series or by ID), tags, or related tags.
 }
 \details{
 \itemize{

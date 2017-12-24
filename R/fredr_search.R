@@ -5,11 +5,11 @@
 #' @param search_text A string.
 #' @param series_search_text A string.
 #' @param tag_names A string.  Note that this value must be a valid FRED series tag
-#' (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).
-#' @param ... A series of additional parameters to be used in the query.  Of the form
-#' \code{param_key = 'param_value'}.  See \code{fredr_docs("series/search")},
-#' \code{fredr_docs("series/search/tags")}, or
-#' \code{fredr_docs("series/search/related_tags")} for further details.
+#'        (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).
+#' @param ... A series of named parameters to be used in the query.  Must be of the form
+#'        \code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
+#'        See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
+#'        access to the endpoint web documentation.
 #'
 #' @return A \code{data.frame}.
 #'
