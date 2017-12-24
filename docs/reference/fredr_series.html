@@ -23,7 +23,8 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -51,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="../index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -77,7 +84,7 @@
     </div>
 
     
-    <p>Return a FRED series as an <code>xts</code> object.</p>
+    <p>Given a series ID, return observations of that series as an <code>xts</code> object.</p>
     
 
     <pre class="usage"><span class='fu'>fredr_series</span>(<span class='no'>series_id</span>, <span class='no'>...</span>)</pre>
@@ -88,18 +95,21 @@
     <tr>
       <th>series_id</th>
       <td><p>A string ID for the FRED series.  Use <code><a href='fredr_search.html'>fredr_search</a></code>
-to search for <code>series_id</code> of a series.</p></td>
+to find the <code>series_id</code> of a series.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Additional parameters passed directly to FRED API.  Must be of the
-form <code>param_key = 'param_value'</code>.</p></td>
+      <td><p>A series of named parameters to be used in the query.  Must be of the form
+<code>param_key = "param_value"</code>.  Acceptable parameters are endpoint-specific.
+See  <code><a href='fredr_endpoints.html'>fredr_endpoints</a></code> for a list of endpoints and <code><a href='fredr_docs.html'>fredr_docs</a></code>
+access to the endpoint web documentation.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>An <code>xts</code> object with observation dates in the index and parsed numeric values.</p>
+    <p>An <code>xts</code> object with observation dates in the index corresponding to
+parsed numeric observations as values.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>

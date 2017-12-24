@@ -14,18 +14,20 @@ fredr_key(api_key)
 invisibly returns the value of the set API key as a string.
 }
 \description{
-Set the FRED API key for use with \code{fredr}.  The key is cached in an
-\code{.Renviron} in the directory.  The function gives a message and invisibly
-returns the key when it is already set.
+Users \code{fredr} package must authenticate with the FRED API by use of an API key.
+The function \code{fredr_key} sets the FRED API key for use with the service.  The key is cached in an
+\code{.Renviron} in the current working directory.  The function gives a message and invisibly
+returns the key when it is already set.  See Details section for more information.
 }
 \details{
 \code{fredr_key} determines if the environment variable \code{FRED_API_KEY}
 is set.  If it is, \code{fredr_key()} gives a message and invisibly returns the key.
 If \code{FRED_API_KEY} is not set, writes \code{api_key} to the file \code{.Renviron},
-if it does not exist.  If \code{.Renviron} exists in the directory, it is advised
-to manually add an entry \code{FRED_API_KEY=api_key} and restart the session.  Once
-\code{api_key} has been saved as an environment variable in \code{.Renviron},
-you can use \code{fredr} in subsequent sessions without calling \code{fredr_key}.
+if it does not exist.  If \code{.Renviron} exists in the directory, \code{fredr_key}
+throws an error. In this case, it is advised to manually add an entry
+\code{FRED_API_KEY=api_key} to \code{.Renviron} and restart the session.  Once
+\code{FRED_API_KEY} has been properly set as an environment variable in \code{.Renviron},
+you can use \code{fredr} in subsequent sessions without calling \code{fredr_key} each time.
 }
 \examples{
 
@@ -38,9 +40,9 @@ identical(key, "abcdefghijklmnopqrstuvwxyz123456")
 
 }
 \references{
-See \url{https://api.stlouisfed.org/api_key.html} to obtain an API key.
+See St. Louis Fed Web Services \href{https://api.stlouisfed.org/api_key.html}{API Keys} to obtain an API key.
 }
 \seealso{
-Note that by using a FRED API key, you agree to the FRED API Terms of Use.
-See \url{https://research.stlouisfed.org/docs/api/terms_of_use.html}.
+Note that by using a FRED API key, you agree to the FRED API
+\href{https://research.stlouisfed.org/docs/api/terms_of_use.html}{Terms of Use}.
 }

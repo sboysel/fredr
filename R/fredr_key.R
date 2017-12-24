@@ -1,8 +1,9 @@
 #' Set the FRED API key
 #'
-#' Set the FRED API key for use with \code{fredr}.  The key is cached in an
-#' \code{.Renviron} in the directory.  The function gives a message and invisibly
-#' returns the key when it is already set.
+#' Users \code{fredr} package must authenticate with the FRED API by use of an API key.
+#' The function \code{fredr_key} sets the FRED API key for use with the service.  The key is cached in an
+#' \code{.Renviron} in the current working directory.  The function gives a message and invisibly
+#' returns the key when it is already set.  See Details section for more information.
 #'
 #' @param api_key A FRED API key as a string.  Obtain one at
 #'				\url{https://api.stlouisfed.org/api_key.html}.
@@ -18,9 +19,9 @@
 #' \code{FRED_API_KEY} has been properly set as an environment variable in \code{.Renviron},
 #' you can use \code{fredr} in subsequent sessions without calling \code{fredr_key} each time.
 #'
-#' @references See \url{https://api.stlouisfed.org/api_key.html} to obtain an API key.
-#' @seealso Note that by using a FRED API key, you agree to the FRED API Terms of Use.
-#' See \url{https://research.stlouisfed.org/docs/api/terms_of_use.html}.
+#' @references See St. Louis Fed Web Services \href{https://api.stlouisfed.org/api_key.html}{API Keys} to obtain an API key.
+#' @seealso Note that by using a FRED API key, you agree to the FRED API
+#' \href{https://research.stlouisfed.org/docs/api/terms_of_use.html}{Terms of Use}.
 #'
 #' @examples
 #'
