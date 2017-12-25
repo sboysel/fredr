@@ -26,7 +26,12 @@ fredr_series <- function(series_id, ...) {
 
   stopifnot(is.character(series_id), length(series_id) == 1)
 
-  frame <- fredr::fredr(endpoint = "series/observations", series_id = series_id, ...)
+  frame <- fredr::fredr(
+    endpoint = "series/observations",
+    series_id = series_id,
+    to_frame = TRUE,
+    ...
+  )
 
   frame$value[frame$value == "."] <- NA
   frame$value <- as.numeric(frame$value)
