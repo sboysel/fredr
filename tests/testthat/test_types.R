@@ -11,6 +11,7 @@ c4 <- fredr_search_rel_tags(search = "GDP", tag_names = "GNP")
 d <- fredr(endpoint = "series/observations",
            series_id = "GNPCA",
            to_frame = FALSE)
+e <- fredr_tags(tag_names = "gdp;oecd")
 
 test_that("fredr, fredr_series, and fredr_search return appropriate objects", {
   expect_is(a, c("tbl_df", "tbl", "data.frame"))
@@ -20,4 +21,5 @@ test_that("fredr, fredr_series, and fredr_search return appropriate objects", {
   expect_is(c3, c("tbl_df", "tbl", "data.frame"))
   expect_is(c4, c("tbl_df", "tbl", "data.frame"))
   expect_is(d, "response")
+  expect_is(e, c("tbl_df", "tbl", "data.frame"))
 })
