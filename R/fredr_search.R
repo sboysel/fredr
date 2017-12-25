@@ -1,6 +1,8 @@
 #' Search for a FRED series.
 #'
-#' Search FRED for a series (by either text of the series or by ID), tags, or related tags.
+#' Search FRED for a series.  Searches can be performed by the text of the series
+#' (\code{fredr_search}), by series ID (\code{fredr_search_id}), by series tags
+#' (\code{fredr_search_tags}), or related tags (\code{fredr_search_rel_tags}).
 #'
 #' @param search_text A string.
 #' @param series_search_text A string.
@@ -11,9 +13,10 @@
 #'        See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
 #'        access to the endpoint web documentation.
 #'
-#' @return A \code{data.frame}.
+#' @return A data frame.
 #'
-#' @details \itemize{
+#' @details Search by various series characteristics:
+#' \itemize{
 #'   \item{\code{fredr_search}}{Get economic data series that match search text (by full text of series).}
 #'   \item{\code{fredr_search_id}}{Get economic data series that match search text (by series ID).}
 #'   \item{\code{fredr_search_tags}}{Get the FRED tags for a series search.}
@@ -25,12 +28,14 @@
 #' to series that match all tags in the \code{tag_names} parameter, no tags in the \code{exclude_tag_names}
 #' parameter, and the search words set by the \code{series_search_text} parameter.
 #'
-#' @references See \url{https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html}.
+#' @references See FRED API documentation on
+#' \href{https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html}{searching related tags}.
 #'
 #' @examples
 #' \dontrun{
+#' library(fredr)
 #' fredr_search("oil", order_by = "popularity")
-#' fredr_search("UNRATE", order_by = "popularity")
+#' fredr_search_id("UNRATE", order_by = "popularity")
 #' fredr_search_tags("gnp")
 #' fredr_search_rel_tags("gnp", "usa")
 #' }

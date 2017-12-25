@@ -1,6 +1,8 @@
 #' Send a request to the FRED API
 #'
-#' @param endpoint A string representing the FRED API path of interest. See
+#' \code{\link[fredr]{fredr}} forms and submits a request to a specified endpoint of the FRED API.
+#'
+#' @param endpoint A string representing the FRED API endpoint of interest. See
 #'        \code{fredr_endpoints} for a list of endpoint possible values.
 #' @param ... A series of named parameters to be used in the query.  Must be of the form
 #'        \code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
@@ -16,24 +18,30 @@
 #'         If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{GET}}.
 #'
 #' @references \url{https://api.stlouisfed.org/docs/fred/}.
+#' @seealso \code{\link[fredr]{fredr_docs}}, \code{\link[fredr]{fredr_search}}, \code{\link[fredr]{fredr_series}}
 #'
 #' @examples
-#'  fredr(endpoint = "series/observations",
-#'        series_id = "GNPCA",
-#'        observation_start = "1990-01-01",
-#'        observation_end = "2000-01-01")
-#'  \dontrun{
-#'  library(httr)
-#'  library(tidyverse)
-#'  resp <- fredr(endpoint = "series/observations",
-#'                series_id = "GNPCA",
-#'                observation_start = "1990-01-01",
-#'                observation_end = "2000-01-01",
-#'                to_frame = FALSE)
-#'  data <- resp %>%
-#'    httr::content() %>%
-#'    .$observations %>%
-#'    purrr::map_df(.f = function(x) tibble::as_tibble(x = x))
+#' fredr(
+#'   endpoint = "series/observations",
+#'   series_id = "GNPCA",
+#'   observation_start = "1990-01-01",
+#'   observation_end = "2000-01-01"
+#' )
+#' \dontrun{
+#' # Compare with to_frame = TRUE
+#' library(httr)
+#' library(tidyverse)
+#' resp <- fredr(
+#'   endpoint = "series/observations",
+#'   series_id = "GNPCA",
+#'   observation_start = "1990-01-01",
+#'   observation_end = "2000-01-01",
+#'   to_frame = FALSE
+#' )
+#' data <- resp %>%
+#' httr::content() %>%
+#'   .$observations %>%
+#'   purrr::map_df(.f = function(x) tibble::as_tibble(x = x))
 #' }
 #' @export
 fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {

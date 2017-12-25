@@ -29,12 +29,15 @@ access to the endpoint web documentation.}
 (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).}
 }
 \value{
-A \code{data.frame}.
+A data frame.
 }
 \description{
-Search FRED for a series (by either text of the series or by ID), tags, or related tags.
+Search FRED for a series.  Searches can be performed by the text of the series
+(\code{fredr_search}), by series ID (\code{fredr_search_id}), by series tags
+(\code{fredr_search_tags}), or related tags (\code{fredr_search_rel_tags}).
 }
 \details{
+Search by various series characteristics:
 \itemize{
   \item{\code{fredr_search}}{Get economic data series that match search text (by full text of series).}
   \item{\code{fredr_search_id}}{Get economic data series that match search text (by series ID).}
@@ -49,12 +52,14 @@ parameter, and the search words set by the \code{series_search_text} parameter.
 }
 \examples{
 \dontrun{
+library(fredr)
 fredr_search("oil", order_by = "popularity")
-fredr_search("UNRATE", order_by = "popularity")
+fredr_search_id("UNRATE", order_by = "popularity")
 fredr_search_tags("gnp")
 fredr_search_rel_tags("gnp", "usa")
 }
 }
 \references{
-See \url{https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html}.
+See FRED API documentation on
+\href{https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html}{searching related tags}.
 }

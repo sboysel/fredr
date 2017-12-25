@@ -23,12 +23,17 @@ parsed numeric observations as values.
 Given a series ID, return observations of that series as an \code{xts} object.
 }
 \examples{
-fredr_series(series_id = "UNRATE",
-             observation_start = "1980-01-01",
-             observation_end = "2000-01-01",
-             unit = "chg")
-fredr_series(series_id = "OILPRICE",
-             frequency = "q",
-             aggregation_method = "avg",
-             unit = "log")
+fredr_series(
+  series_id = "UNRATE",
+  observation_start = "1980-01-01",
+  observation_end = "2000-01-01",
+  unit = "chg"
+)
+
+fredr_series(
+  series_id = "OILPRICE",
+  frequency = "q",
+  aggregation_method = "avg",
+  unit = "log"
+)
 }
