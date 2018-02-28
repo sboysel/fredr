@@ -45,5 +45,6 @@ artifacts:
     name: Bits
 
 environment:
-  my_variable:
-    secure: 2dgEfhK4oKYPi3p49MzleJByrGeBQ9nThfoFMwgvTw9Yf7BP4FkH6UOtRxYc1QGF
+  FRED_API_KEY:
+    secure: HGoW3cpYFk3UdvY8NE1hhulqgCIAF+EFkWMxdacBqoRa9y9cwKTh3tbZaCV+T+pS
+
