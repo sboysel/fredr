@@ -2,6 +2,7 @@
 
 [![Travis
 branch](https://img.shields.io/travis/sboysel/fredr/master.svg?style=flat-square)](https://travis-ci.org/sboysel/fredr)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/sboysel/fredr?branch=master&svg=true)](https://ci.appveyor.com/project/sboysel/fredr)
 [![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg?style=flat-square)](https://codecov.io/github/sboysel/fredr)
 [![GitHub
 release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-square)](https://github.com/sboysel/fredr/releases)
@@ -52,25 +53,7 @@ Search for FRED series
 
 ```r
 fredr_search(search_text = "unemployment")
-#> # A tibble: 1,000 x 16
-#>                  id realtime_start realtime_end
-#>               <chr>          <chr>        <chr>
-#>  1           UNRATE     2017-12-23   2017-12-23
-#>  2        UNRATENSA     2017-12-23   2017-12-23
-#>  3             NROU     2017-12-23   2017-12-23
-#>  4 M0892AUSM156SNBR     2017-12-23   2017-12-23
-#>  5 Q0892BUSQ156SNBR     2017-12-23   2017-12-23
-#>  6 M0892BUSM156SNBR     2017-12-23   2017-12-23
-#>  7         UNEMPLOY     2017-12-23   2017-12-23
-#>  8 M0892CUSM156NNBR     2017-12-23   2017-12-23
-#>  9           U6RATE     2017-12-23   2017-12-23
-#> 10        U6RATENSA     2017-12-23   2017-12-23
-#> # ... with 990 more rows, and 13 more variables: title <chr>,
-#> #   observation_start <chr>, observation_end <chr>, frequency <chr>,
-#> #   frequency_short <chr>, units <chr>, units_short <chr>,
-#> #   seasonal_adjustment <chr>, seasonal_adjustment_short <chr>,
-#> #   last_updated <chr>, popularity <int>, group_popularity <int>,
-#> #   notes <chr>
+#> Error: !is.null(search) is not TRUE
 ```
 
 ## Retrieve a FRED series
@@ -135,9 +118,8 @@ fredr_search(search_text = "federal funds",
              limit = 1)$id %>%
   fredr_series(series_id = .) %>%
   plot(., main = "Federal Funds Rate")
+#> Error: !is.null(search) is not TRUE
 ```
-
-![plot of chunk fredr_series4](figure/fredr_series4-1.png)
 
 ### Access API documentation
 
@@ -159,19 +141,19 @@ A list of possible endpoints is contained in the data frame `fredr_endpoints`
 ```r
 fredr_endpoints
 #> # A tibble: 31 x 3
-#>                      endpoint       type
-#>                         <chr>      <chr>
-#>  1              fred/category Categories
-#>  2     fred/category/children Categories
-#>  3      fred/category/related Categories
-#>  4       fred/category/series Categories
-#>  5         fred/category/tags Categories
-#>  6 fred/category/related_tags Categories
-#>  7              fred/releases   Releases
-#>  8        fred/releases/dates   Releases
-#>  9               fred/release   Releases
-#> 10         fred/release/dates   Releases
-#> # ... with 21 more rows, and 1 more variables: note <chr>
+#>    endpoint                   type       note                             
+#>    <chr>                      <chr>      <chr>                            
+#>  1 fred/category              Categories Get a category                   
+#>  2 fred/category/children     Categories Get the child categories for a s…
+#>  3 fred/category/related      Categories Get the related categories for a…
+#>  4 fred/category/series       Categories Get the series in a category     
+#>  5 fred/category/tags         Categories Get the tags for a category      
+#>  6 fred/category/related_tags Categories Get the related tags for a categ…
+#>  7 fred/releases              Releases   Get all releases of economic data
+#>  8 fred/releases/dates        Releases   Get release dates for all releas…
+#>  9 fred/release               Releases   Get a release of economic data   
+#> 10 fred/release/dates         Releases   Get release dates for a release …
+#> # ... with 21 more rows
 ```
 
 ### General queries
@@ -185,24 +167,23 @@ information as a `data.frame`.
 ```r
 fredr(endpoint = "tags/series", tag_names = "population;south africa")
 #> # A tibble: 59 x 16
-#>                 id realtime_start realtime_end
-#>              <chr>          <chr>        <chr>
-#>  1 LFWA24TTZAA647N     2017-12-23   2017-12-23
-#>  2 LFWA24TTZAA647S     2017-12-23   2017-12-23
-#>  3 LFWA24TTZAQ647N     2017-12-23   2017-12-23
-#>  4 LFWA24TTZAQ647S     2017-12-23   2017-12-23
-#>  5 LFWA25TTZAA647N     2017-12-23   2017-12-23
-#>  6 LFWA25TTZAA647S     2017-12-23   2017-12-23
-#>  7 LFWA25TTZAQ647N     2017-12-23   2017-12-23
-#>  8 LFWA25TTZAQ647S     2017-12-23   2017-12-23
-#>  9 LFWA55TTZAA647N     2017-12-23   2017-12-23
-#> 10 LFWA55TTZAA647S     2017-12-23   2017-12-23
-#> # ... with 49 more rows, and 13 more variables: title <chr>,
-#> #   observation_start <chr>, observation_end <chr>, frequency <chr>,
-#> #   frequency_short <chr>, units <chr>, units_short <chr>,
-#> #   seasonal_adjustment <chr>, seasonal_adjustment_short <chr>,
-#> #   last_updated <chr>, popularity <int>, group_popularity <int>,
-#> #   notes <chr>
+#>    id       realtime_start realtime_end title             observation_sta…
+#>    <chr>    <chr>          <chr>        <chr>             <chr>           
+#>  1 LFWA24T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  2 LFWA24T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  3 LFWA24T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  4 LFWA24T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  5 LFWA25T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  6 LFWA25T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  7 LFWA25T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  8 LFWA25T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  9 LFWA55T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#> 10 LFWA55T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#> # ... with 49 more rows, and 11 more variables: observation_end <chr>,
+#> #   frequency <chr>, frequency_short <chr>, units <chr>,
+#> #   units_short <chr>, seasonal_adjustment <chr>,
+#> #   seasonal_adjustment_short <chr>, last_updated <chr>, popularity <int>,
+#> #   group_popularity <int>, notes <chr>
 ```
 
 Set `to_frame` to `FALSE` to return a generic `response` object from a `httr::GET` request that can be further parsed with `httr::content`
@@ -212,10 +193,10 @@ library(httr)
 resp <- fredr::fredr(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
 resp
 #> Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=d3ef3490ef7270cf903d07141e9e7db7&file_type=json]
-#>   Date: 2017-12-24 02:40
+#>   Date: 2018-02-28 02:47
 #>   Status: 200
 #>   Content-Type: application/json; charset=UTF-8
-#>   Size: 79.2 kB
+#>   Size: 79.3 kB
 ```
 
 ## See Also
