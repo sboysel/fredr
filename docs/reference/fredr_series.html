@@ -113,10 +113,12 @@ parsed numeric observations as values.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>fredr_series</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>,
-             <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='st'>"1980-01-01"</span>,
-             <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='st'>"2000-01-01"</span>,
-             <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"chg"</span>)</div><div class='output co'>#&gt;            UNRATE
+    <pre class="examples"><div class='input'><span class='fu'>fredr_series</span>(
+  <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>,
+  <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='st'>"1980-01-01"</span>,
+  <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='st'>"2000-01-01"</span>,
+  <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"chg"</span>
+)</div><div class='output co'>#&gt;            UNRATE
 #&gt; 1980-01-01    6.3
 #&gt; 1980-02-01    6.3
 #&gt; 1980-03-01    6.3
@@ -357,10 +359,13 @@ parsed numeric observations as values.</p>
 #&gt; 1999-10-01    4.1
 #&gt; 1999-11-01    4.1
 #&gt; 1999-12-01    4.0
-#&gt; 2000-01-01    4.0</div><div class='input'><span class='fu'>fredr_series</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"OILPRICE"</span>,
-             <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='st'>"q"</span>,
-             <span class='kw'>aggregation_method</span> <span class='kw'>=</span> <span class='st'>"avg"</span>,
-             <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"log"</span>)</div><div class='output co'>#&gt;            OILPRICE
+#&gt; 2000-01-01    4.0</div><div class='input'>
+<span class='fu'>fredr_series</span>(
+  <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"OILPRICE"</span>,
+  <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='st'>"q"</span>,
+  <span class='kw'>aggregation_method</span> <span class='kw'>=</span> <span class='st'>"avg"</span>,
+  <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"log"</span>
+)</div><div class='output co'>#&gt;            OILPRICE
 #&gt; 1946-01-01    1.170
 #&gt; 1946-04-01    1.270
 #&gt; 1946-07-01    1.437
