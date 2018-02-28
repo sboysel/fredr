@@ -35,7 +35,7 @@ devtools::install_github("sboysel/fredr")
 
 ## Usage
 
-### Settining the FRED API key
+### Setting the FRED API key
 
 Load `fredr` and set FRED API key in working directory.  You must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
@@ -53,7 +53,24 @@ Search for FRED series
 
 ```r
 fredr_search(search_text = "unemployment")
-#> Error: !is.null(search) is not TRUE
+#> # A tibble: 1,000 x 16
+#>    id      realtime_start realtime_end title              observation_sta…
+#>    <chr>   <chr>          <chr>        <chr>              <chr>           
+#>  1 UNRATE  2018-02-27     2018-02-27   Civilian Unemploy… 1948-01-01      
+#>  2 UNRATE… 2018-02-27     2018-02-27   Civilian Unemploy… 1948-01-01      
+#>  3 NROU    2018-02-27     2018-02-27   Natural Rate of U… 1949-01-01      
+#>  4 UNEMPL… 2018-02-27     2018-02-27   Unemployment Level 1948-01-01      
+#>  5 M0892A… 2018-02-27     2018-02-27   Unemployment Rate… 1929-04-01      
+#>  6 Q0892B… 2018-02-27     2018-02-27   Unemployment Rate… 1940-04-01      
+#>  7 M0892B… 2018-02-27     2018-02-27   Unemployment Rate… 1940-01-01      
+#>  8 M0892C… 2018-02-27     2018-02-27   Unemployment Rate… 1947-01-01      
+#>  9 NROUST  2018-02-27     2018-02-27   Natural Rate of U… 1949-01-01      
+#> 10 U6RATE  2018-02-27     2018-02-27   Total unemployed,… 1994-01-01      
+#> # ... with 990 more rows, and 11 more variables: observation_end <chr>,
+#> #   frequency <chr>, frequency_short <chr>, units <chr>,
+#> #   units_short <chr>, seasonal_adjustment <chr>,
+#> #   seasonal_adjustment_short <chr>, last_updated <chr>, popularity <int>,
+#> #   group_popularity <int>, notes <chr>
 ```
 
 ## Retrieve a FRED series
@@ -118,8 +135,9 @@ fredr_search(search_text = "federal funds",
              limit = 1)$id %>%
   fredr_series(series_id = .) %>%
   plot(., main = "Federal Funds Rate")
-#> Error: !is.null(search) is not TRUE
 ```
+
+![plot of chunk fredr_series4](figure/fredr_series4-1.png)
 
 ### Access API documentation
 
@@ -193,7 +211,7 @@ library(httr)
 resp <- fredr::fredr(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
 resp
 #> Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=d3ef3490ef7270cf903d07141e9e7db7&file_type=json]
-#>   Date: 2018-02-28 02:47
+#>   Date: 2018-02-28 04:10
 #>   Status: 200
 #>   Content-Type: application/json; charset=UTF-8
 #>   Size: 79.3 kB

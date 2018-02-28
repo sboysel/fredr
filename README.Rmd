@@ -42,7 +42,7 @@ devtools::install_github("sboysel/fredr")
 
 ## Usage
 
-### Settining the FRED API key
+### Setting the FRED API key
 
 Load `fredr` and set FRED API key in working directory.  You must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
