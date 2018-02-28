@@ -7,24 +7,25 @@
 \alias{fredr_search_rel_tags}
 \title{Search for a FRED series.}
 \usage{
-fredr_search(search = NULL, ...)
+fredr_search(search_text = NULL, ...)
 
-fredr_search_id(search = NULL, ...)
+fredr_search_id(search_text = NULL, ...)
 
-fredr_search_tags(search = NULL, ...)
+fredr_search_tags(series_search_text = NULL, ...)
 
-fredr_search_rel_tags(search = NULL, tag_names = NULL, ...)
+fredr_search_rel_tags(series_search_text = NULL, tag_names = NULL, ...)
 }
 \arguments{
-\item{search}{A string containing the search text.  Searches are performed against series
-attributes (\code{\link{fredr_search}}, \code{\link{fredr_search_tags}}, and
-\code{\link{fredr_search_rel_tags}}) or series ID
-(\code{\link{fredr_search_id}}).  See Details for more information.}
+\item{search_text}{A string containing the search text.  For use with \code{\link{fredr_search}} and
+\code{\link{fredr_search_id}}.  See Details for more information.}
 
 \item{...}{A series of named parameters to be used in the query.  Must be of the form
 \code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
 See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
 access to the endpoint web documentation.}
+
+\item{series_search_text}{A string containing the search text.  For use with \code{\link{fredr_search_tags}}
+and \code{\link{fredr_search_rel_tags}}.  See Details for more information.}
 
 \item{tag_names}{A string.  Note that this value must be a valid FRED series tag
 (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).}
@@ -49,7 +50,7 @@ Search by various series characteristics:
 From the FRED API documentation on \code{series/search/related_tags}: FRED tags are
 attributes assigned to series. For this request, related FRED tags are the tags assigned
 to series that match all tags in the \code{tag_names} parameter, no tags in the \code{exclude_tag_names}
-parameter, and the search words set by the \code{search} parameter.
+parameter, and the search words set by the \code{series_search_text} parameter.
 }
 \examples{
 \dontrun{
@@ -63,4 +64,7 @@ fredr_search_rel_tags("gnp", "usa")
 \references{
 See FRED API documentation on
 \href{https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html}{searching related tags}.
+}
+\seealso{
+\code{\link{fredr_tags}}
 }
