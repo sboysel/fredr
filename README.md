@@ -2,7 +2,7 @@
 
 [![Travis
 branch](https://img.shields.io/travis/sboysel/fredr/master.svg?style=flat-square)](https://travis-ci.org/sboysel/fredr)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/sboysel/fredr?branch=master&svg=true)](https://ci.appveyor.com/project/sboysel/fredr)
+[![AppVeyor Build Status](https://img.shields.io/appveyor/ci/sboysel/fredr/master.svg?style=flat-square)](https://ci.appveyor.com/project/sboysel/fredr)
 [![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg?style=flat-square)](https://codecov.io/github/sboysel/fredr)
 [![GitHub
 release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-square)](https://github.com/sboysel/fredr/releases)
@@ -56,16 +56,16 @@ fredr_search(search_text = "unemployment")
 #> # A tibble: 1,000 x 16
 #>    id      realtime_start realtime_end title              observation_sta…
 #>    <chr>   <chr>          <chr>        <chr>              <chr>           
-#>  1 UNRATE  2018-02-27     2018-02-27   Civilian Unemploy… 1948-01-01      
-#>  2 UNRATE… 2018-02-27     2018-02-27   Civilian Unemploy… 1948-01-01      
-#>  3 NROU    2018-02-27     2018-02-27   Natural Rate of U… 1949-01-01      
-#>  4 UNEMPL… 2018-02-27     2018-02-27   Unemployment Level 1948-01-01      
-#>  5 M0892A… 2018-02-27     2018-02-27   Unemployment Rate… 1929-04-01      
-#>  6 Q0892B… 2018-02-27     2018-02-27   Unemployment Rate… 1940-04-01      
-#>  7 M0892B… 2018-02-27     2018-02-27   Unemployment Rate… 1940-01-01      
-#>  8 M0892C… 2018-02-27     2018-02-27   Unemployment Rate… 1947-01-01      
-#>  9 NROUST  2018-02-27     2018-02-27   Natural Rate of U… 1949-01-01      
-#> 10 U6RATE  2018-02-27     2018-02-27   Total unemployed,… 1994-01-01      
+#>  1 UNRATE  2018-03-02     2018-03-02   Civilian Unemploy… 1948-01-01      
+#>  2 UNRATE… 2018-03-02     2018-03-02   Civilian Unemploy… 1948-01-01      
+#>  3 NROU    2018-03-02     2018-03-02   Natural Rate of U… 1949-01-01      
+#>  4 UNEMPL… 2018-03-02     2018-03-02   Unemployment Level 1948-01-01      
+#>  5 M0892A… 2018-03-02     2018-03-02   Unemployment Rate… 1929-04-01      
+#>  6 Q0892B… 2018-03-02     2018-03-02   Unemployment Rate… 1940-04-01      
+#>  7 M0892B… 2018-03-02     2018-03-02   Unemployment Rate… 1940-01-01      
+#>  8 M0892C… 2018-03-02     2018-03-02   Unemployment Rate… 1947-01-01      
+#>  9 NROUST  2018-03-02     2018-03-02   Natural Rate of U… 1949-01-01      
+#> 10 U6RATE  2018-03-02     2018-03-02   Total unemployed,… 1994-01-01      
 #> # ... with 990 more rows, and 11 more variables: observation_end <chr>,
 #> #   frequency <chr>, frequency_short <chr>, units <chr>,
 #> #   units_short <chr>, seasonal_adjustment <chr>,
@@ -187,16 +187,16 @@ fredr(endpoint = "tags/series", tag_names = "population;south africa")
 #> # A tibble: 59 x 16
 #>    id       realtime_start realtime_end title             observation_sta…
 #>    <chr>    <chr>          <chr>        <chr>             <chr>           
-#>  1 LFWA24T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#>  2 LFWA24T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#>  3 LFWA24T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#>  4 LFWA24T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#>  5 LFWA25T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#>  6 LFWA25T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#>  7 LFWA25T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#>  8 LFWA25T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#>  9 LFWA55T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
-#> 10 LFWA55T… 2018-02-27     2018-02-27   Working Age Popu… 2008-01-01      
+#>  1 LFWA24T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  2 LFWA24T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  3 LFWA24T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  4 LFWA24T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  5 LFWA25T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  6 LFWA25T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  7 LFWA25T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  8 LFWA25T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  9 LFWA55T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#> 10 LFWA55T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
 #> # ... with 49 more rows, and 11 more variables: observation_end <chr>,
 #> #   frequency <chr>, frequency_short <chr>, units <chr>,
 #> #   units_short <chr>, seasonal_adjustment <chr>,
@@ -211,7 +211,7 @@ library(httr)
 resp <- fredr::fredr(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
 resp
 #> Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=d3ef3490ef7270cf903d07141e9e7db7&file_type=json]
-#>   Date: 2018-02-28 04:10
+#>   Date: 2018-03-03 00:59
 #>   Status: 200
 #>   Content-Type: application/json; charset=UTF-8
 #>   Size: 79.3 kB
