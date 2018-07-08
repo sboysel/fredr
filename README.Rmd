@@ -50,7 +50,7 @@ recommended to reveiw the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
 ```{r fredr_key, eval=FALSE}
 library(fredr)
-fredr_key("abcdefghijklmnopqrstuvwxyz123456")
+fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
 ```
 
 ### Search for FRED data objects
