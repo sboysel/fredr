@@ -1,0 +1,11 @@
+reference:
+  - title: All functions
+    desc: ~
+    contents:
+      - '`fredr`'
+      - '`fredr_docs`'
+      - '`fredr_endpoints`'
+      - '`fredr_search`'
+      - '`fredr_series`'
+      - '`fredr_set_key`'
+      - '`fredr_tags`'
