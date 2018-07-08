@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • fredr</title>
+<title>Set the FRED API key — fredr_set_key • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,7 +30,12 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Set the FRED API key — fredr_set_key" />
+
+<meta property="og:description" content="Users fredr package must authenticate with the FRED API by use of an API key.
+The function fredr_key sets the FRED API key as an environment variable for
+use with the service." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -46,7 +51,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -92,78 +97,75 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Set the FRED API key</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_set_key.R'><code>R/fredr_set_key.R</code></a></small>
+    <div class="hidden name"><code>fredr_set_key.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Users <code>fredr</code> package must authenticate with the FRED API by use of an API key.
+The function <code>fredr_key</code> sets the FRED API key as an environment variable for
+use with the service.</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="fredr.html">fredr()</a></code> </p>
-        </td>
-        <td><p>Send a request to the FRED API</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="fredr_docs.html">fredr_docs()</a></code> </p>
-        </td>
-        <td><p>Open the web documentation for a certain FRED API topic.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="fredr_endpoints.html">fredr_endpoints</a></code> </p>
-        </td>
-        <td><p>List of available FRED API endpoints.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="fredr_search.html">fredr_search()</a></code> <code><a href="fredr_search.html">fredr_search_id()</a></code> <code><a href="fredr_search.html">fredr_search_tags()</a></code> <code><a href="fredr_search.html">fredr_search_rel_tags()</a></code> </p>
-        </td>
-        <td><p>Search for a FRED series.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="fredr_series.html">fredr_series()</a></code> </p>
-        </td>
-        <td><p>Fetch a FRED series</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="fredr_set_key.html">fredr_set_key()</a></code> </p>
-        </td>
-        <td><p>Set the FRED API key</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="fredr_tags.html">fredr_tags()</a></code> </p>
-        </td>
-        <td><p>Get FRED series tags</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>fredr_set_key</span>(<span class='no'>key</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>key</th>
+      <td><p>A FRED API key as a string.  Obtain one at
+<a href='https://api.stlouisfed.org/api_key.html'>https://api.stlouisfed.org/api_key.html</a>.</p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p><code>fredr_set_key</code> sets a key as an environment variable for use with
+the <code>fredr</code> package in the current session.  The key can also be set in the
+<code>.Renviron</code> file in the working directory.  You can edit the file manually by
+appending the line <code>FRED_API_KEY = my_api_ky</code>, where <code>my_api_key</code> is your
+actual key.  The function `usethis::edit_r_environ()` does this safely.  Run
+<code>readRenviron(".Renviron")</code> to set the key in the current session; the
+variable will be set in subsequent sessions started in the working directory.</p>
+    
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>See St. Louis Fed Web Services <a href='https://api.stlouisfed.org/api_key.html'>API Keys</a> to obtain an API key.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Note that by using a FRED API key, you agree to the FRED API
+<a href='https://research.stlouisfed.org/docs/api/terms_of_use.html'>Terms of Use</a>.</p></div>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+</div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>fredr</span>)
+<span class='fu'><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_set_key'>fredr_set_key</a></span>(<span class='st'>"abcdefghijklmnopqrstuvwxyz123456"</span>)
+<span class='co'># }</span><div class='input'>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#details">Details</a></li>
+
+      <li><a href="#references">References</a></li>
+
+      <li><a href="#see-also">See also</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
