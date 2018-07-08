@@ -17,21 +17,21 @@ release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-squa
 [![GitHub
 license](https://img.shields.io/github/license/sboysel/fredr.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-`fredr` seamlessly interacts with the RESTful API for [Federal Reserve Economic
-Data (FRED)](https://research.stlouisfed.org/fred2/), provided by the Federal
+`fredr` interacts with the [Federal Reserve Economic
+Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API, provided by the Federal
 Reserve Bank of St. Louis.  Essentially a simple wrapper of
-[`httr`](https://github.com/hadley/httr),
-[`dplyr`](https://github.com/hadley/dplyr), and the FRED API itself, `fredr` is
-designed with simplicity and flexibility in mind.  In addition a generic query
-function `fredr` to return any query as a `data.frame`, the package also provides
-convenience functions `fredr_search` and `fredr_series` to simplify the process
-to finding and importing FRED data series as `R` objects.  As nearly all optional
+[`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
+designed with simplicity and flexibility in mind.  The core functions are
+
+- `fredr_series` - Fetch a FRED series.
+- `fredr_search` - Search for a FRED series.
+- `fredr` - Send a general request to the FRED API.
+
+All objects are returned as `tibbles`.  As nearly all optional
 parameters supplied to these functions are relayed verbatim to the API, the 
 user is strongly encouraged to read the full [FRED
 API](https://research.stlouisfed.org/docs/api/fred/) documentation to leverage the full power
-of the FRED API and `fredr`. The convenience function `fredr_docs` quickly brings
-up the web documentation. See the [section below](#usage) for usage
-examples.
+of the FRED API and `fredr`.
 
 ## Installation
 
@@ -44,7 +44,7 @@ devtools::install_github("sboysel/fredr")
 
 ### Setting the FRED API key
 
-Load `fredr` and set FRED API key in working directory.  You must first [obtain a FRED API
+Load `fredr` and set a FRED API key in the working directory.  You must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
 recommended to reveiw the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
@@ -60,31 +60,39 @@ Search for FRED series
 fredr_search(search_text = "unemployment")
 ```
 
-## Retrieve a FRED series
+### Retrieve a FRED series
 
-Get a FRED series.  Returns an `xts` object.
+Fetch a FRED series.  Returns an `xts` object.
 ```{r fredr_series, message=FALSE, warning=FALSE}
-library(dplyr)
-library(xts)
-fredr_series(series_id = "UNRATE",
-             observation_start = "1990-01-01") %>%
-    window(., start = "1990-01-01", end = "1991-01-01")
+fredr_series(
+  series_id = "UNRATE",
+  observation_start = "1990-01-01"
+)
 ```
 
 Leverage the native features of the FRED API:
 ```{r fredr_series2, message=FALSE, warning=FALSE}
-fredr_series(series_id = "UNRATE",
-             observation_start = "1990-01-01",
-             frequency = "q",
-             units = "chg") %>%
-    window(., start = "1990-01-01", end = "1991-01-01")
+fredr_series(
+  series_id = "UNRATE",
+  observation_start = "1990-01-01",
+  frequency = "q",
+  units = "chg"
+)
 ```
 
 ```{r fredr_series3, message=FALSE, warning=FALSE}
-fredr_series(series_id = "GNPCA",
-             units = "log") %>%
-  diff() %>%
-  na.omit() %>%
+library(tidyverse)
+library(xts)
+gnpca <- fredr_series(series_id = "GNPCA", units = "log") %>%
+  dplyr::mutate(GNPCA = GNPCA - lag(GNPCA)) %>%
+  dplyr::filter(!is.na(GNPCA))
+
+gnpca_xts <- xts::xts(
+  x = gnpca$GNPCA,
+  order.by = gnpca$date
+)
+
+gnpca_xts %>%
   StructTS() %>%
   residuals() %>%
   acf(., main = "ACF for First Differenced real US GNP, log")
@@ -95,7 +103,8 @@ fredr_search(search_text = "federal funds",
              order_by = "popularity",
              limit = 1)$id %>%
   fredr_series(series_id = .) %>%
-  plot(., main = "Federal Funds Rate")
+  ggplot(data = ., mapping = aes(x = date, y = FEDFUNDS)) +
+    geom_line()
 ```
 
 ### Access API documentation

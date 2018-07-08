@@ -9,21 +9,21 @@ release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-squa
 [![GitHub
 license](https://img.shields.io/github/license/sboysel/fredr.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-`fredr` seamlessly interacts with the RESTful API for [Federal Reserve Economic
-Data (FRED)](https://research.stlouisfed.org/fred2/), provided by the Federal
+`fredr` interacts with the [Federal Reserve Economic
+Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API, provided by the Federal
 Reserve Bank of St. Louis.  Essentially a simple wrapper of
-[`httr`](https://github.com/hadley/httr),
-[`dplyr`](https://github.com/hadley/dplyr), and the FRED API itself, `fredr` is
-designed with simplicity and flexibility in mind.  In addition a generic query
-function `fredr` to return any query as a `data.frame`, the package also provides
-convenience functions `fredr_search` and `fredr_series` to simplify the process
-to finding and importing FRED data series as `R` objects.  As nearly all optional
+[`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
+designed with simplicity and flexibility in mind.  The core functions are
+
+- `fredr_series` - Fetch a FRED series.
+- `fredr_search` - Search for a FRED series.
+- `fredr` - Send a general request to the FRED API.
+
+All objects are returned as `tibbles`.  As nearly all optional
 parameters supplied to these functions are relayed verbatim to the API, the 
 user is strongly encouraged to read the full [FRED
 API](https://research.stlouisfed.org/docs/api/fred/) documentation to leverage the full power
-of the FRED API and `fredr`. The convenience function `fredr_docs` quickly brings
-up the web documentation. See the [section below](#usage) for usage
-examples.
+of the FRED API and `fredr`.
 
 ## Installation
 
@@ -37,7 +37,7 @@ devtools::install_github("sboysel/fredr")
 
 ### Setting the FRED API key
 
-Load `fredr` and set FRED API key in working directory.  You must first [obtain a FRED API
+Load `fredr` and set a FRED API key in the working directory.  You must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
 recommended to reveiw the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
@@ -54,18 +54,18 @@ Search for FRED series
 ```r
 fredr_search(search_text = "unemployment")
 #> # A tibble: 1,000 x 16
-#>    id      realtime_start realtime_end title              observation_sta…
-#>    <chr>   <chr>          <chr>        <chr>              <chr>           
-#>  1 UNRATE  2018-03-02     2018-03-02   Civilian Unemploy… 1948-01-01      
-#>  2 UNRATE… 2018-03-02     2018-03-02   Civilian Unemploy… 1948-01-01      
-#>  3 NROU    2018-03-02     2018-03-02   Natural Rate of U… 1949-01-01      
-#>  4 UNEMPL… 2018-03-02     2018-03-02   Unemployment Level 1948-01-01      
-#>  5 M0892A… 2018-03-02     2018-03-02   Unemployment Rate… 1929-04-01      
-#>  6 Q0892B… 2018-03-02     2018-03-02   Unemployment Rate… 1940-04-01      
-#>  7 M0892B… 2018-03-02     2018-03-02   Unemployment Rate… 1940-01-01      
-#>  8 M0892C… 2018-03-02     2018-03-02   Unemployment Rate… 1947-01-01      
-#>  9 NROUST  2018-03-02     2018-03-02   Natural Rate of U… 1949-01-01      
-#> 10 U6RATE  2018-03-02     2018-03-02   Total unemployed,… 1994-01-01      
+#>    id        realtime_start realtime_end title            observation_sta…
+#>  * <chr>     <chr>          <chr>        <chr>            <chr>           
+#>  1 UNRATE    2018-07-08     2018-07-08   Civilian Unempl… 1948-01-01      
+#>  2 UNRATENSA 2018-07-08     2018-07-08   Civilian Unempl… 1948-01-01      
+#>  3 NROU      2018-07-08     2018-07-08   Natural Rate of… 1949-01-01      
+#>  4 UNEMPLOY  2018-07-08     2018-07-08   Unemployment Le… 1948-01-01      
+#>  5 M0892AUS… 2018-07-08     2018-07-08   Unemployment Ra… 1929-04-01      
+#>  6 Q0892BUS… 2018-07-08     2018-07-08   Unemployment Ra… 1940-04-01      
+#>  7 LNS14000… 2018-07-08     2018-07-08   Unemployment Ra… 1948-01-01      
+#>  8 M0892BUS… 2018-07-08     2018-07-08   Unemployment Ra… 1940-01-01      
+#>  9 M0892CUS… 2018-07-08     2018-07-08   Unemployment Ra… 1947-01-01      
+#> 10 LNU04000… 2018-07-08     2018-07-08   Unemployment Ra… 1948-01-01      
 #> # ... with 990 more rows, and 11 more variables: observation_end <chr>,
 #> #   frequency <chr>, frequency_short <chr>, units <chr>,
 #> #   units_short <chr>, seasonal_adjustment <chr>,
@@ -73,54 +73,70 @@ fredr_search(search_text = "unemployment")
 #> #   group_popularity <int>, notes <chr>
 ```
 
-## Retrieve a FRED series
+### Retrieve a FRED series
 
-Get a FRED series.  Returns an `xts` object.
+Fetch a FRED series.  Returns an `xts` object.
 
 ```r
-library(dplyr)
-library(xts)
-fredr_series(series_id = "UNRATE",
-             observation_start = "1990-01-01") %>%
-    window(., start = "1990-01-01", end = "1991-01-01")
-#>            UNRATE
-#> 1990-01-01    5.4
-#> 1990-02-01    5.3
-#> 1990-03-01    5.2
-#> 1990-04-01    5.4
-#> 1990-05-01    5.4
-#> 1990-06-01    5.2
-#> 1990-07-01    5.5
-#> 1990-08-01    5.7
-#> 1990-09-01    5.9
-#> 1990-10-01    5.9
-#> 1990-11-01    6.2
-#> 1990-12-01    6.3
-#> 1991-01-01    6.4
+fredr_series(
+  series_id = "UNRATE",
+  observation_start = "1990-01-01"
+)
+#> # A tibble: 342 x 2
+#>    date       UNRATE
+#>    <date>      <dbl>
+#>  1 1990-01-01    5.4
+#>  2 1990-02-01    5.3
+#>  3 1990-03-01    5.2
+#>  4 1990-04-01    5.4
+#>  5 1990-05-01    5.4
+#>  6 1990-06-01    5.2
+#>  7 1990-07-01    5.5
+#>  8 1990-08-01    5.7
+#>  9 1990-09-01    5.9
+#> 10 1990-10-01    5.9
+#> # ... with 332 more rows
 ```
 
 Leverage the native features of the FRED API:
 
 ```r
-fredr_series(series_id = "UNRATE",
-             observation_start = "1990-01-01",
-             frequency = "q",
-             units = "chg") %>%
-    window(., start = "1990-01-01", end = "1991-01-01")
-#>            UNRATE
-#> 1990-01-01   -0.1
-#> 1990-04-01    0.0
-#> 1990-07-01    0.4
-#> 1990-10-01    0.4
-#> 1991-01-01    0.5
+fredr_series(
+  series_id = "UNRATE",
+  observation_start = "1990-01-01",
+  frequency = "q",
+  units = "chg"
+)
+#> # A tibble: 114 x 2
+#>    date        UNRATE
+#>    <date>       <dbl>
+#>  1 1990-01-01 -0.0667
+#>  2 1990-04-01  0.0333
+#>  3 1990-07-01  0.367 
+#>  4 1990-10-01  0.433 
+#>  5 1991-01-01  0.467 
+#>  6 1991-04-01  0.233 
+#>  7 1991-07-01  0.0333
+#>  8 1991-10-01  0.233 
+#>  9 1992-01-01  0.267 
+#> 10 1992-04-01  0.233 
+#> # ... with 104 more rows
 ```
 
 
 ```r
-fredr_series(series_id = "GNPCA",
-             units = "log") %>%
-  diff() %>%
-  na.omit() %>%
+library(tidyverse)
+library(xts)
+gnpca <- fredr_series(series_id = "GNPCA", units = "log") %>%
+  dplyr::mutate(GNPCA = GNPCA - lag(GNPCA)) %>%
+  dplyr::filter(!is.na(GNPCA))
+
+gnpca_xts <- xts::xts(
+  x = gnpca$GNPCA,
+  order.by = gnpca$date
+)
+
+gnpca_xts %>%
   StructTS() %>%
   residuals() %>%
   acf(., main = "ACF for First Differenced real US GNP, log")
@@ -134,7 +150,8 @@ fredr_search(search_text = "federal funds",
              order_by = "popularity",
              limit = 1)$id %>%
   fredr_series(series_id = .) %>%
-  plot(., main = "Federal Funds Rate")
+  ggplot(data = ., mapping = aes(x = date, y = FEDFUNDS)) +
+    geom_line()
 ```
 
 ![plot of chunk fredr_series4](figure/fredr_series4-1.png)
@@ -186,17 +203,17 @@ information as a `data.frame`.
 fredr(endpoint = "tags/series", tag_names = "population;south africa")
 #> # A tibble: 59 x 16
 #>    id       realtime_start realtime_end title             observation_sta…
-#>    <chr>    <chr>          <chr>        <chr>             <chr>           
-#>  1 LFWA24T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#>  2 LFWA24T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#>  3 LFWA24T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#>  4 LFWA24T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#>  5 LFWA25T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#>  6 LFWA25T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#>  7 LFWA25T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#>  8 LFWA25T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#>  9 LFWA55T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
-#> 10 LFWA55T… 2018-03-02     2018-03-02   Working Age Popu… 2008-01-01      
+#>  * <chr>    <chr>          <chr>        <chr>             <chr>           
+#>  1 LFWA24T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#>  2 LFWA24T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#>  3 LFWA24T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#>  4 LFWA24T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#>  5 LFWA25T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#>  6 LFWA25T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#>  7 LFWA25T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#>  8 LFWA25T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#>  9 LFWA55T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
+#> 10 LFWA55T… 2018-07-08     2018-07-08   Working Age Popu… 2008-01-01      
 #> # ... with 49 more rows, and 11 more variables: observation_end <chr>,
 #> #   frequency <chr>, frequency_short <chr>, units <chr>,
 #> #   units_short <chr>, seasonal_adjustment <chr>,
@@ -211,10 +228,10 @@ library(httr)
 resp <- fredr::fredr(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
 resp
 #> Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=d3ef3490ef7270cf903d07141e9e7db7&file_type=json]
-#>   Date: 2018-03-03 00:59
+#>   Date: 2018-07-08 18:07
 #>   Status: 200
 #>   Content-Type: application/json; charset=UTF-8
-#>   Size: 79.3 kB
+#>   Size: 79.8 kB
 ```
 
 ## See Also

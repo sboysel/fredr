@@ -10,11 +10,13 @@ Depends:
   R (>= 3.2.2)
 Imports: 
   httr,
-  dplyr,
-  xts
+  jsonlite,
+  tibble
 Suggests:
   testthat,
-  zoo
+  tidyverse,
+  zoo,
+  xts
 License: MIT + file LICENSE 
 LazyData: true
 RoxygenNote: 6.0.1

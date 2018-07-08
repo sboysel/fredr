@@ -1,6 +1,6 @@
-#' Return a FRED series as an \code{xts} object.
+#' Fetch a FRED series
 #'
-#' Given a series ID, return observations of that series as an \code{xts} object.
+#' Given a series ID, return observations of that series as \code{tibble} object.
 #'
 #' @param series_id A string ID for the FRED series.  Use \code{\link{fredr_search}}
 #'        to find the \code{series_id} of a series.
@@ -9,8 +9,7 @@
 #'        See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
 #'        access to the endpoint web documentation.
 #'
-#' @return An \code{xts} object with observation dates in the index corresponding to
-#' parsed numeric observations as values.
+#' @return A \code{tibble} object with observation dates and values.
 #'
 #' @examples
 #' fredr_series(
@@ -42,14 +41,9 @@ fredr_series <- function(series_id, ...) {
   frame$value <- as.numeric(frame$value)
   frame$date <- as.Date(frame$date, "%Y-%m-%d")
 
-  frame <- frame[order(frame$date), ]
+  frame <- frame[order(frame$date), c("date", "value")]
 
-  series <- xts::xts(
-    x = frame$value,
-    order.by = frame$date
-  )
+  names(frame) <- c("date", series_id)
 
-  names(series) <- series_id
-
-  return(series)
+  return(frame)
 }

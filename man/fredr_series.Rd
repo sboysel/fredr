@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_series.R
 \name{fredr_series}
 \alias{fredr_series}
-\title{Return a FRED series as an \code{xts} object.}
+\title{Fetch a FRED series}
 \usage{
 fredr_series(series_id, ...)
 }
@@ -16,11 +16,10 @@ See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr
 access to the endpoint web documentation.}
 }
 \value{
-An \code{xts} object with observation dates in the index corresponding to
-parsed numeric observations as values.
+A \code{tibble} object with observation dates and values.
 }
 \description{
-Given a series ID, return observations of that series as an \code{xts} object.
+Given a series ID, return observations of that series as \code{tibble} object.
 }
 \examples{
 fredr_series(

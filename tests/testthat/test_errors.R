@@ -1,12 +1,11 @@
 library(fredr)
-context("fredr-based functions")
+context("Errors")
 
 test_that("fredr throws errors for bad requests", {
   expect_error(fredr())
   expect_error(fredr(endpoint = "series/observations", series_id = "FOOBAR"))
   expect_error(fredr(endpoint = "bad_endpoint", series_id = "GNPCA"))
   expect_error(fredr(endpoint = "series/observations", bad_parameter = "foo"))
-
 })
 
 test_that("fredr throws errors if API key is not set", {

@@ -1,5 +1,5 @@
 library(fredr)
-context("fredr_key")
+context("API Key")
 
 test_that("fredr_key throws an error if .Renviron is present.", {
   # Backup
