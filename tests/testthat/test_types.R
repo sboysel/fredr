@@ -1,5 +1,5 @@
 library(fredr)
-context("Correct objects returned")
+context("Object types")
 
 a <- fredr(endpoint = "series/observations",
            series_id = "GNPCA")
@@ -15,7 +15,7 @@ e <- fredr_tags(tag_names = "gdp;oecd")
 
 test_that("fredr, fredr_series, and fredr_search return appropriate objects", {
   expect_is(a, c("tbl_df", "tbl", "data.frame"))
-  expect_is(b, "xts")
+  expect_is(b, c("tbl_df", "tbl", "data.frame"))
   expect_is(c1, c("tbl_df", "tbl", "data.frame"))
   expect_is(c2, c("tbl_df", "tbl", "data.frame"))
   expect_is(c3, c("tbl_df", "tbl", "data.frame"))

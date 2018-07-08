@@ -1,5 +1,5 @@
 library(fredr)
-context("fredr_docs")
+context("Documentation")
 
 test_that("fredr_docs throws errors on invalid endpoints", {
   expect_error(fredr_docs(endpoint = 1, debug = TRUE))
