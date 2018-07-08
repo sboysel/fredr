@@ -2,7 +2,7 @@
 
 export(fredr)
 export(fredr_docs)
-export(fredr_key)
 export(fredr_search)
 export(fredr_series)
+export(fredr_set_key)
 export(fredr_tags)

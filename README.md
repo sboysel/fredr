@@ -44,7 +44,7 @@ Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
 
 ```r
 library(fredr)
-fredr_key("abcdefghijklmnopqrstuvwxyz123456")
+fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
 ```
 
 ### Search for FRED data objects
@@ -228,7 +228,7 @@ library(httr)
 resp <- fredr::fredr(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
 resp
 #> Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=d3ef3490ef7270cf903d07141e9e7db7&file_type=json]
-#>   Date: 2018-07-08 18:07
+#>   Date: 2018-07-08 21:13
 #>   Status: 200
 #>   Content-Type: application/json; charset=UTF-8
 #>   Size: 79.8 kB

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Return a FRED series as an <code>xts</code> object. — fredr_series • fredr</title>
+<title>Fetch a FRED series — fredr_series • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -18,13 +18,25 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Fetch a FRED series — fredr_series" />
+
+<meta property="og:description" content="Given a series ID, return observations of that series as tibble object." />
+<meta name="twitter:card" content="summary" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -47,8 +59,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">fredr</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">fredr</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.3.0.9000</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -70,6 +86,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -77,39 +94,42 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Return a FRED series as an <code>xts</code> object.</h1>
+    <h1>Fetch a FRED series</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_series.R'><code>R/fredr_series.R</code></a></small>
+    <div class="hidden name"><code>fredr_series.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
-    <p>Given a series ID, return observations of that series as an <code>xts</code> object.</p>
+    <p>Given a series ID, return observations of that series as <code>tibble</code> object.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>fredr_series</span>(<span class='no'>series_id</span>, <span class='no'>...</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>series_id</th>
-      <td><p>A string ID for the FRED series.  Use <code><a href='fredr_search.html'>fredr_search</a></code>
+      <td><p>A string ID for the FRED series.  Use <code>fredr_search</code>
 to find the <code>series_id</code> of a series.</p></td>
     </tr>
     <tr>
       <th>...</th>
       <td><p>A series of named parameters to be used in the query.  Must be of the form
 <code>param_key = "param_value"</code>.  Acceptable parameters are endpoint-specific.
-See  <code><a href='fredr_endpoints.html'>fredr_endpoints</a></code> for a list of endpoints and <code><a href='fredr_docs.html'>fredr_docs</a></code>
+See  <code>fredr_endpoints</code> for a list of endpoints and <code>fredr_docs</code>
 access to the endpoint web documentation.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>An <code>xts</code> object with observation dates in the index corresponding to
-parsed numeric observations as values.</p>
+    <p>A <code>tibble</code> object with observation dates and values.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -118,525 +138,39 @@ parsed numeric observations as values.</p>
   <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='st'>"1980-01-01"</span>,
   <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='st'>"2000-01-01"</span>,
   <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"chg"</span>
-)</div><div class='output co'>#&gt;            UNRATE
-#&gt; 1980-01-01    6.3
-#&gt; 1980-02-01    6.3
-#&gt; 1980-03-01    6.3
-#&gt; 1980-04-01    6.9
-#&gt; 1980-05-01    7.5
-#&gt; 1980-06-01    7.6
-#&gt; 1980-07-01    7.8
-#&gt; 1980-08-01    7.7
-#&gt; 1980-09-01    7.5
-#&gt; 1980-10-01    7.5
-#&gt; 1980-11-01    7.5
-#&gt; 1980-12-01    7.2
-#&gt; 1981-01-01    7.5
-#&gt; 1981-02-01    7.4
-#&gt; 1981-03-01    7.4
-#&gt; 1981-04-01    7.2
-#&gt; 1981-05-01    7.5
-#&gt; 1981-06-01    7.5
-#&gt; 1981-07-01    7.2
-#&gt; 1981-08-01    7.4
-#&gt; 1981-09-01    7.6
-#&gt; 1981-10-01    7.9
-#&gt; 1981-11-01    8.3
-#&gt; 1981-12-01    8.5
-#&gt; 1982-01-01    8.6
-#&gt; 1982-02-01    8.9
-#&gt; 1982-03-01    9.0
-#&gt; 1982-04-01    9.3
-#&gt; 1982-05-01    9.4
-#&gt; 1982-06-01    9.6
-#&gt; 1982-07-01    9.8
-#&gt; 1982-08-01    9.8
-#&gt; 1982-09-01   10.1
-#&gt; 1982-10-01   10.4
-#&gt; 1982-11-01   10.8
-#&gt; 1982-12-01   10.8
-#&gt; 1983-01-01   10.4
-#&gt; 1983-02-01   10.4
-#&gt; 1983-03-01   10.3
-#&gt; 1983-04-01   10.2
-#&gt; 1983-05-01   10.1
-#&gt; 1983-06-01   10.1
-#&gt; 1983-07-01    9.4
-#&gt; 1983-08-01    9.5
-#&gt; 1983-09-01    9.2
-#&gt; 1983-10-01    8.8
-#&gt; 1983-11-01    8.5
-#&gt; 1983-12-01    8.3
-#&gt; 1984-01-01    8.0
-#&gt; 1984-02-01    7.8
-#&gt; 1984-03-01    7.8
-#&gt; 1984-04-01    7.7
-#&gt; 1984-05-01    7.4
-#&gt; 1984-06-01    7.2
-#&gt; 1984-07-01    7.5
-#&gt; 1984-08-01    7.5
-#&gt; 1984-09-01    7.3
-#&gt; 1984-10-01    7.4
-#&gt; 1984-11-01    7.2
-#&gt; 1984-12-01    7.3
-#&gt; 1985-01-01    7.3
-#&gt; 1985-02-01    7.2
-#&gt; 1985-03-01    7.2
-#&gt; 1985-04-01    7.3
-#&gt; 1985-05-01    7.2
-#&gt; 1985-06-01    7.4
-#&gt; 1985-07-01    7.4
-#&gt; 1985-08-01    7.1
-#&gt; 1985-09-01    7.1
-#&gt; 1985-10-01    7.1
-#&gt; 1985-11-01    7.0
-#&gt; 1985-12-01    7.0
-#&gt; 1986-01-01    6.7
-#&gt; 1986-02-01    7.2
-#&gt; 1986-03-01    7.2
-#&gt; 1986-04-01    7.1
-#&gt; 1986-05-01    7.2
-#&gt; 1986-06-01    7.2
-#&gt; 1986-07-01    7.0
-#&gt; 1986-08-01    6.9
-#&gt; 1986-09-01    7.0
-#&gt; 1986-10-01    7.0
-#&gt; 1986-11-01    6.9
-#&gt; 1986-12-01    6.6
-#&gt; 1987-01-01    6.6
-#&gt; 1987-02-01    6.6
-#&gt; 1987-03-01    6.6
-#&gt; 1987-04-01    6.3
-#&gt; 1987-05-01    6.3
-#&gt; 1987-06-01    6.2
-#&gt; 1987-07-01    6.1
-#&gt; 1987-08-01    6.0
-#&gt; 1987-09-01    5.9
-#&gt; 1987-10-01    6.0
-#&gt; 1987-11-01    5.8
-#&gt; 1987-12-01    5.7
-#&gt; 1988-01-01    5.7
-#&gt; 1988-02-01    5.7
-#&gt; 1988-03-01    5.7
-#&gt; 1988-04-01    5.4
-#&gt; 1988-05-01    5.6
-#&gt; 1988-06-01    5.4
-#&gt; 1988-07-01    5.4
-#&gt; 1988-08-01    5.6
-#&gt; 1988-09-01    5.4
-#&gt; 1988-10-01    5.4
-#&gt; 1988-11-01    5.3
-#&gt; 1988-12-01    5.3
-#&gt; 1989-01-01    5.4
-#&gt; 1989-02-01    5.2
-#&gt; 1989-03-01    5.0
-#&gt; 1989-04-01    5.2
-#&gt; 1989-05-01    5.2
-#&gt; 1989-06-01    5.3
-#&gt; 1989-07-01    5.2
-#&gt; 1989-08-01    5.2
-#&gt; 1989-09-01    5.3
-#&gt; 1989-10-01    5.3
-#&gt; 1989-11-01    5.4
-#&gt; 1989-12-01    5.4
-#&gt; 1990-01-01    5.4
-#&gt; 1990-02-01    5.3
-#&gt; 1990-03-01    5.2
-#&gt; 1990-04-01    5.4
-#&gt; 1990-05-01    5.4
-#&gt; 1990-06-01    5.2
-#&gt; 1990-07-01    5.5
-#&gt; 1990-08-01    5.7
-#&gt; 1990-09-01    5.9
-#&gt; 1990-10-01    5.9
-#&gt; 1990-11-01    6.2
-#&gt; 1990-12-01    6.3
-#&gt; 1991-01-01    6.4
-#&gt; 1991-02-01    6.6
-#&gt; 1991-03-01    6.8
-#&gt; 1991-04-01    6.7
-#&gt; 1991-05-01    6.9
-#&gt; 1991-06-01    6.9
-#&gt; 1991-07-01    6.8
-#&gt; 1991-08-01    6.9
-#&gt; 1991-09-01    6.9
-#&gt; 1991-10-01    7.0
-#&gt; 1991-11-01    7.0
-#&gt; 1991-12-01    7.3
-#&gt; 1992-01-01    7.3
-#&gt; 1992-02-01    7.4
-#&gt; 1992-03-01    7.4
-#&gt; 1992-04-01    7.4
-#&gt; 1992-05-01    7.6
-#&gt; 1992-06-01    7.8
-#&gt; 1992-07-01    7.7
-#&gt; 1992-08-01    7.6
-#&gt; 1992-09-01    7.6
-#&gt; 1992-10-01    7.3
-#&gt; 1992-11-01    7.4
-#&gt; 1992-12-01    7.4
-#&gt; 1993-01-01    7.3
-#&gt; 1993-02-01    7.1
-#&gt; 1993-03-01    7.0
-#&gt; 1993-04-01    7.1
-#&gt; 1993-05-01    7.1
-#&gt; 1993-06-01    7.0
-#&gt; 1993-07-01    6.9
-#&gt; 1993-08-01    6.8
-#&gt; 1993-09-01    6.7
-#&gt; 1993-10-01    6.8
-#&gt; 1993-11-01    6.6
-#&gt; 1993-12-01    6.5
-#&gt; 1994-01-01    6.6
-#&gt; 1994-02-01    6.6
-#&gt; 1994-03-01    6.5
-#&gt; 1994-04-01    6.4
-#&gt; 1994-05-01    6.1
-#&gt; 1994-06-01    6.1
-#&gt; 1994-07-01    6.1
-#&gt; 1994-08-01    6.0
-#&gt; 1994-09-01    5.9
-#&gt; 1994-10-01    5.8
-#&gt; 1994-11-01    5.6
-#&gt; 1994-12-01    5.5
-#&gt; 1995-01-01    5.6
-#&gt; 1995-02-01    5.4
-#&gt; 1995-03-01    5.4
-#&gt; 1995-04-01    5.8
-#&gt; 1995-05-01    5.6
-#&gt; 1995-06-01    5.6
-#&gt; 1995-07-01    5.7
-#&gt; 1995-08-01    5.7
-#&gt; 1995-09-01    5.6
-#&gt; 1995-10-01    5.5
-#&gt; 1995-11-01    5.6
-#&gt; 1995-12-01    5.6
-#&gt; 1996-01-01    5.6
-#&gt; 1996-02-01    5.5
-#&gt; 1996-03-01    5.5
-#&gt; 1996-04-01    5.6
-#&gt; 1996-05-01    5.6
-#&gt; 1996-06-01    5.3
-#&gt; 1996-07-01    5.5
-#&gt; 1996-08-01    5.1
-#&gt; 1996-09-01    5.2
-#&gt; 1996-10-01    5.2
-#&gt; 1996-11-01    5.4
-#&gt; 1996-12-01    5.4
-#&gt; 1997-01-01    5.3
-#&gt; 1997-02-01    5.2
-#&gt; 1997-03-01    5.2
-#&gt; 1997-04-01    5.1
-#&gt; 1997-05-01    4.9
-#&gt; 1997-06-01    5.0
-#&gt; 1997-07-01    4.9
-#&gt; 1997-08-01    4.8
-#&gt; 1997-09-01    4.9
-#&gt; 1997-10-01    4.7
-#&gt; 1997-11-01    4.6
-#&gt; 1997-12-01    4.7
-#&gt; 1998-01-01    4.6
-#&gt; 1998-02-01    4.6
-#&gt; 1998-03-01    4.7
-#&gt; 1998-04-01    4.3
-#&gt; 1998-05-01    4.4
-#&gt; 1998-06-01    4.5
-#&gt; 1998-07-01    4.5
-#&gt; 1998-08-01    4.5
-#&gt; 1998-09-01    4.6
-#&gt; 1998-10-01    4.5
-#&gt; 1998-11-01    4.4
-#&gt; 1998-12-01    4.4
-#&gt; 1999-01-01    4.3
-#&gt; 1999-02-01    4.4
-#&gt; 1999-03-01    4.2
-#&gt; 1999-04-01    4.3
-#&gt; 1999-05-01    4.2
-#&gt; 1999-06-01    4.3
-#&gt; 1999-07-01    4.3
-#&gt; 1999-08-01    4.2
-#&gt; 1999-09-01    4.2
-#&gt; 1999-10-01    4.1
-#&gt; 1999-11-01    4.1
-#&gt; 1999-12-01    4.0
-#&gt; 2000-01-01    4.0</div><div class='input'>
+)</div><div class='output co'>#&gt; # A tibble: 241 x 2
+#&gt;    date       UNRATE
+#&gt;    &lt;date&gt;      &lt;dbl&gt;
+#&gt;  1 1980-01-01    6.3
+#&gt;  2 1980-02-01    6.3
+#&gt;  3 1980-03-01    6.3
+#&gt;  4 1980-04-01    6.9
+#&gt;  5 1980-05-01    7.5
+#&gt;  6 1980-06-01    7.6
+#&gt;  7 1980-07-01    7.8
+#&gt;  8 1980-08-01    7.7
+#&gt;  9 1980-09-01    7.5
+#&gt; 10 1980-10-01    7.5
+#&gt; # ... with 231 more rows</div><div class='input'>
 <span class='fu'>fredr_series</span>(
   <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"OILPRICE"</span>,
   <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='st'>"q"</span>,
   <span class='kw'>aggregation_method</span> <span class='kw'>=</span> <span class='st'>"avg"</span>,
   <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"log"</span>
-)</div><div class='output co'>#&gt;            OILPRICE
-#&gt; 1946-01-01    1.170
-#&gt; 1946-04-01    1.270
-#&gt; 1946-07-01    1.437
-#&gt; 1946-10-01    1.553
-#&gt; 1947-01-01    1.620
-#&gt; 1947-04-01    1.870
-#&gt; 1947-07-01    1.870
-#&gt; 1947-10-01    2.003
-#&gt; 1948-01-01    2.570
-#&gt; 1948-04-01    2.570
-#&gt; 1948-07-01    2.570
-#&gt; 1948-10-01    2.570
-#&gt; 1949-01-01    2.570
-#&gt; 1949-04-01    2.570
-#&gt; 1949-07-01    2.570
-#&gt; 1949-10-01    2.570
-#&gt; 1950-01-01    2.570
-#&gt; 1950-04-01    2.570
-#&gt; 1950-07-01    2.570
-#&gt; 1950-10-01    2.570
-#&gt; 1951-01-01    2.570
-#&gt; 1951-04-01    2.570
-#&gt; 1951-07-01    2.570
-#&gt; 1951-10-01    2.570
-#&gt; 1952-01-01    2.570
-#&gt; 1952-04-01    2.570
-#&gt; 1952-07-01    2.570
-#&gt; 1952-10-01    2.570
-#&gt; 1953-01-01    2.570
-#&gt; 1953-04-01    2.653
-#&gt; 1953-07-01    2.820
-#&gt; 1953-10-01    2.820
-#&gt; 1954-01-01    2.820
-#&gt; 1954-04-01    2.820
-#&gt; 1954-07-01    2.820
-#&gt; 1954-10-01    2.820
-#&gt; 1955-01-01    2.820
-#&gt; 1955-04-01    2.820
-#&gt; 1955-07-01    2.820
-#&gt; 1955-10-01    2.820
-#&gt; 1956-01-01    2.820
-#&gt; 1956-04-01    2.820
-#&gt; 1956-07-01    2.820
-#&gt; 1956-10-01    2.820
-#&gt; 1957-01-01    2.987
-#&gt; 1957-04-01    3.070
-#&gt; 1957-07-01    3.070
-#&gt; 1957-10-01    3.047
-#&gt; 1958-01-01    3.070
-#&gt; 1958-04-01    3.070
-#&gt; 1958-07-01    3.070
-#&gt; 1958-10-01    3.023
-#&gt; 1959-01-01    2.990
-#&gt; 1959-04-01    2.970
-#&gt; 1959-07-01    2.970
-#&gt; 1959-10-01    2.970
-#&gt; 1960-01-01    2.970
-#&gt; 1960-04-01    2.970
-#&gt; 1960-07-01    2.970
-#&gt; 1960-10-01    2.970
-#&gt; 1961-01-01    2.970
-#&gt; 1961-04-01    2.970
-#&gt; 1961-07-01    2.970
-#&gt; 1961-10-01    2.970
-#&gt; 1962-01-01    2.970
-#&gt; 1962-04-01    2.970
-#&gt; 1962-07-01    2.970
-#&gt; 1962-10-01    2.970
-#&gt; 1963-01-01    2.970
-#&gt; 1963-04-01    2.970
-#&gt; 1963-07-01    2.970
-#&gt; 1963-10-01    2.970
-#&gt; 1964-01-01    2.970
-#&gt; 1964-04-01    2.970
-#&gt; 1964-07-01    2.920
-#&gt; 1964-10-01    2.920
-#&gt; 1965-01-01    2.920
-#&gt; 1965-04-01    2.920
-#&gt; 1965-07-01    2.920
-#&gt; 1965-10-01    2.920
-#&gt; 1966-01-01    2.920
-#&gt; 1966-04-01    2.920
-#&gt; 1966-07-01    2.937
-#&gt; 1966-10-01    2.970
-#&gt; 1967-01-01    2.990
-#&gt; 1967-04-01    3.000
-#&gt; 1967-07-01    3.047
-#&gt; 1967-10-01    3.070
-#&gt; 1968-01-01    3.070
-#&gt; 1968-04-01    3.070
-#&gt; 1968-07-01    3.070
-#&gt; 1968-10-01    3.070
-#&gt; 1969-01-01    3.130
-#&gt; 1969-04-01    3.350
-#&gt; 1969-07-01    3.350
-#&gt; 1969-10-01    3.350
-#&gt; 1970-01-01    3.350
-#&gt; 1970-04-01    3.350
-#&gt; 1970-07-01    3.310
-#&gt; 1970-10-01    3.393
-#&gt; 1971-01-01    3.560
-#&gt; 1971-04-01    3.560
-#&gt; 1971-07-01    3.560
-#&gt; 1971-10-01    3.560
-#&gt; 1972-01-01    3.560
-#&gt; 1972-04-01    3.560
-#&gt; 1972-07-01    3.560
-#&gt; 1972-10-01    3.560
-#&gt; 1973-01-01    3.560
-#&gt; 1973-04-01    3.560
-#&gt; 1973-07-01    4.060
-#&gt; 1973-10-01    4.310
-#&gt; 1974-01-01   10.110
-#&gt; 1974-04-01   10.110
-#&gt; 1974-07-01   10.110
-#&gt; 1974-10-01   11.160
-#&gt; 1975-01-01   11.160
-#&gt; 1975-04-01   11.160
-#&gt; 1975-07-01   11.160
-#&gt; 1975-10-01   11.160
-#&gt; 1976-01-01   11.763
-#&gt; 1976-04-01   12.170
-#&gt; 1976-07-01   12.747
-#&gt; 1976-10-01   13.900
-#&gt; 1977-01-01   13.900
-#&gt; 1977-04-01   13.900
-#&gt; 1977-07-01   14.533
-#&gt; 1977-10-01   14.850
-#&gt; 1978-01-01   14.850
-#&gt; 1978-04-01   14.850
-#&gt; 1978-07-01   14.850
-#&gt; 1978-10-01   14.850
-#&gt; 1979-01-01   15.517
-#&gt; 1979-04-01   17.683
-#&gt; 1979-07-01   25.583
-#&gt; 1979-10-01   30.833
-#&gt; 1980-01-01   35.833
-#&gt; 1980-04-01   39.500
-#&gt; 1980-07-01   37.833
-#&gt; 1980-10-01   36.333
-#&gt; 1981-01-01   38.000
-#&gt; 1981-04-01   37.333
-#&gt; 1981-07-01   36.000
-#&gt; 1981-10-01   35.333
-#&gt; 1982-01-01   31.297
-#&gt; 1982-04-01   34.817
-#&gt; 1982-07-01   34.580
-#&gt; 1982-10-01   33.850
-#&gt; 1983-01-01   29.653
-#&gt; 1983-04-01   30.537
-#&gt; 1983-07-01   31.560
-#&gt; 1983-10-01   29.830
-#&gt; 1984-01-01   30.199
-#&gt; 1984-04-01   30.368
-#&gt; 1984-07-01   29.104
-#&gt; 1984-10-01   27.431
-#&gt; 1985-01-01   27.050
-#&gt; 1985-04-01   27.857
-#&gt; 1985-07-01   27.791
-#&gt; 1985-10-01   29.193
-#&gt; 1986-01-01   17.002
-#&gt; 1986-04-01   13.920
-#&gt; 1986-07-01   13.860
-#&gt; 1986-10-01   15.378
-#&gt; 1987-01-01   18.229
-#&gt; 1987-04-01   19.364
-#&gt; 1987-07-01   20.385
-#&gt; 1987-10-01   18.670
-#&gt; 1988-01-01   16.714
-#&gt; 1988-04-01   17.281
-#&gt; 1988-07-01   15.163
-#&gt; 1988-10-01   14.680
-#&gt; 1989-01-01   18.418
-#&gt; 1989-04-01   20.359
-#&gt; 1989-07-01   19.253
-#&gt; 1989-10-01   20.333
-#&gt; 1990-01-01   21.722
-#&gt; 1990-04-01   17.897
-#&gt; 1990-07-01   26.500
-#&gt; 1990-10-01   31.853
-#&gt; 1991-01-01   21.781
-#&gt; 1991-04-01   20.753
-#&gt; 1991-07-01   21.655
-#&gt; 1991-10-01   21.737
-#&gt; 1992-01-01   18.910
-#&gt; 1992-04-01   21.186
-#&gt; 1992-07-01   21.670
-#&gt; 1992-10-01   20.479
-#&gt; 1993-01-01   19.825
-#&gt; 1993-04-01   19.760
-#&gt; 1993-07-01   17.796
-#&gt; 1993-10-01   16.451
-#&gt; 1994-01-01   14.813
-#&gt; 1994-04-01   17.777
-#&gt; 1994-07-01   18.497
-#&gt; 1994-10-01   17.657
-#&gt; 1995-01-01   18.357
-#&gt; 1995-04-01   19.343
-#&gt; 1995-07-01   17.853
-#&gt; 1995-10-01   18.157
-#&gt; 1996-01-01   19.770
-#&gt; 1996-04-01   21.757
-#&gt; 1996-07-01   22.423
-#&gt; 1996-10-01   24.667
-#&gt; 1997-01-01   22.790
-#&gt; 1997-04-01   19.907
-#&gt; 1997-07-01   19.783
-#&gt; 1997-10-01   19.917
-#&gt; 1998-01-01   15.930
-#&gt; 1998-04-01   14.653
-#&gt; 1998-07-01   14.130
-#&gt; 1998-10-01   12.840
-#&gt; 1999-01-01   13.047
-#&gt; 1999-04-01   17.660
-#&gt; 1999-07-01   21.737
-#&gt; 1999-10-01   24.563
-#&gt; 2000-01-01   28.807
-#&gt; 2000-04-01   28.783
-#&gt; 2000-07-01   31.623
-#&gt; 2000-10-01   31.980
-#&gt; 2001-01-01   28.810
-#&gt; 2001-04-01   27.883
-#&gt; 2001-07-01   26.600
-#&gt; 2001-10-01   20.403
-#&gt; 2002-01-01   21.610
-#&gt; 2002-04-01   26.270
-#&gt; 2002-07-01   28.330
-#&gt; 2002-10-01   28.180
-#&gt; 2003-01-01   34.120
-#&gt; 2003-04-01   29.037
-#&gt; 2003-07-01   30.213
-#&gt; 2003-10-01   31.190
-#&gt; 2004-01-01   35.257
-#&gt; 2004-04-01   38.330
-#&gt; 2004-07-01   43.860
-#&gt; 2004-10-01   48.307
-#&gt; 2005-01-01   49.707
-#&gt; 2005-04-01   53.043
-#&gt; 2005-07-01   63.080
-#&gt; 2005-10-01   60.033
-#&gt; 2006-01-01   63.347
-#&gt; 2006-04-01   70.530
-#&gt; 2006-07-01   70.443
-#&gt; 2006-10-01   60.093
-#&gt; 2007-01-01   58.130
-#&gt; 2007-04-01   64.970
-#&gt; 2007-07-01   75.500
-#&gt; 2007-10-01   90.850
-#&gt; 2008-01-01   97.953
-#&gt; 2008-04-01  123.963
-#&gt; 2008-07-01  117.983
-#&gt; 2008-10-01   58.370
-#&gt; 2009-01-01   42.960
-#&gt; 2009-04-01   59.543
-#&gt; 2009-07-01   68.203
-#&gt; 2009-10-01   76.067
-#&gt; 2010-01-01   78.627
-#&gt; 2010-04-01   77.890
-#&gt; 2010-07-01   76.167
-#&gt; 2010-10-01   85.027
-#&gt; 2011-01-01   93.980
-#&gt; 2011-04-01  102.553
-#&gt; 2011-07-01   89.710
-#&gt; 2011-10-01   94.063
-#&gt; 2012-01-01  102.893
-#&gt; 2012-04-01   93.480
-#&gt; 2012-07-01   92.270
-#&gt; 2012-10-01   88.160
-#&gt; 2013-01-01   94.353
-#&gt; 2013-04-01   94.223
-#&gt; 2013-07-01       NA</div></pre>
+)</div><div class='output co'>#&gt; # A tibble: 271 x 2
+#&gt;    date       OILPRICE
+#&gt;    &lt;date&gt;        &lt;dbl&gt;
+#&gt;  1 1946-01-01     1.17
+#&gt;  2 1946-04-01     1.27
+#&gt;  3 1946-07-01     1.44
+#&gt;  4 1946-10-01     1.55
+#&gt;  5 1947-01-01     1.62
+#&gt;  6 1947-04-01     1.87
+#&gt;  7 1947-07-01     1.87
+#&gt;  8 1947-10-01     2.00
+#&gt;  9 1948-01-01     2.57
+#&gt; 10 1948-04-01     2.57
+#&gt; # ... with 261 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -657,11 +191,14 @@ parsed numeric observations as values.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+
