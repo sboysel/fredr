@@ -8,3 +8,4 @@
 ^figure/
 ^docs$
 ^appveyor\.yml$
+^_pkgdown\.yml$

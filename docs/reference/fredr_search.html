@@ -76,7 +76,13 @@
   </a>
 </li>
 <li>
+  <a href="../articles/fredr.html">Get started</a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -132,7 +138,7 @@
       <th>...</th>
       <td><p>A series of named parameters to be used in the query.  Must be of the form
 <code>param_key = "param_value"</code>.  Acceptable parameters are endpoint-specific.
-See  <code>fredr_endpoints</code> for a list of endpoints and <code>fredr_docs</code>
+See  <code><a href='fredr_endpoints.html'>fredr_endpoints</a></code> for a list of endpoints and <code><a href='fredr_docs.html'>fredr_docs</a></code>
 access to the endpoint web documentation.</p></td>
     </tr>
     <tr>
@@ -154,10 +160,10 @@ and <code>fredr_search_rel_tags</code>.  See Details for more information.</p></
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Search by various series characteristics:</p><ul>
-<li><p><code><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_search'>fredr_search</a></code>Get economic data series that match search text (by full text of series).</p></li>
-<li><p><code><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_search'>fredr_search_id</a></code>Get economic data series that match search text (by series ID).</p></li>
-<li><p><code><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_search'>fredr_search_tags</a></code>Get the FRED tags for a series search.</p></li>
-<li><p><code><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_search'>fredr_search_rel_tags</a></code>Get the related FRED tags for one or more FRED tags matching a series search.
+<li><p><code>fredr_search</code>Get economic data series that match search text (by full text of series).</p></li>
+<li><p><code>fredr_search_id</code>Get economic data series that match search text (by series ID).</p></li>
+<li><p><code>fredr_search_tags</code>Get the FRED tags for a series search.</p></li>
+<li><p><code>fredr_search_rel_tags</code>Get the related FRED tags for one or more FRED tags matching a series search.
   See below for more information about searching for related tags.</p></li>
 </ul><p>From the FRED API documentation on <code>series/search/related_tags</code>: FRED tags are
 attributes assigned to series. For this request, related FRED tags are the tags assigned
@@ -171,16 +177,16 @@ parameter, and the search words set by the <code>series_search_text</code> param
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_tags'>fredr_tags</a></code></p></div>
+    <div class='dont-index'><p><code><a href='fredr_tags.html'>fredr_tags</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>fredr</span>)
-<span class='fu'><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_search'>fredr_search</a></span>(<span class='st'>"oil"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)
-<span class='fu'><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_search'>fredr_search_id</a></span>(<span class='st'>"UNRATE"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)
-<span class='fu'><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_search'>fredr_search_tags</a></span>(<span class='st'>"gnp"</span>)
-<span class='fu'><a href='http://www.rdocumentation.org/packages/fredr/topics/fredr_search'>fredr_search_rel_tags</a></span>(<span class='st'>"gnp"</span>, <span class='st'>"usa"</span>)
+<span class='fu'>fredr_search</span>(<span class='st'>"oil"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)
+<span class='fu'>fredr_search_id</span>(<span class='st'>"UNRATE"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)
+<span class='fu'>fredr_search_tags</span>(<span class='st'>"gnp"</span>)
+<span class='fu'>fredr_search_rel_tags</span>(<span class='st'>"gnp"</span>, <span class='st'>"usa"</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

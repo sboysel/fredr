@@ -6,9 +6,9 @@ Description: Interact with the Federal Reserve Economic Data (FRED) API. Include
   to query the database and read series into R.
 URL: https://github.com/sboysel/fredr
 BugReports: https://github.com/sboysel/fredr/issues
-Depends: 
+Depends:
   R (>= 3.2.2)
-Imports: 
+Imports:
   httr,
   jsonlite,
   tibble
@@ -16,7 +16,10 @@ Suggests:
   testthat,
   tidyverse,
   zoo,
-  xts
+  xts,
+    knitr,
+    rmarkdown
 License: MIT + file LICENSE 
 LazyData: true
 RoxygenNote: 6.0.1
+VignetteBuilder: knitr

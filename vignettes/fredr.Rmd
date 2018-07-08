@@ -1,0 +1,148 @@
+---
+title: "Usage"
+author: "Sam Boysel"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Usage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  fig.width = 7,
+  fig.height = 5,
+  collapse = TRUE,
+  comment = "#>"
+)
+library(fredr)
+options(digits = 4)
+```
+
+`fredr` interacts with the [Federal Reserve Economic
+Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API, provided by the Federal
+Reserve Bank of St. Louis.  Essentially a simple wrapper of
+[`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
+designed with simplicity and flexibility in mind.  The core functions are
+
+- `fredr_series` - Fetch a FRED series.
+- `fredr_search` - Search for a FRED series.
+- `fredr` - Send a general request to the FRED API.
+
+All objects are returned as `tibbles`.  As nearly all optional
+parameters supplied to these functions are relayed verbatim to the API, the 
+user is strongly encouraged to read the full [FRED
+API](https://research.stlouisfed.org/docs/api/fred/) documentation to leverage the full power
+of the FRED API and `fredr`.
+
+## Installation
+
+```{r installation, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("sboysel/fredr")
+```
+
+## Usage
+
+### Setting the FRED API key
+
+Load `fredr` and set a FRED API key in the working directory.  You must first [obtain a FRED API
+key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
+recommended to reveiw the [FRED API Terms of
+Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
+```{r fredr_key, eval=FALSE}
+library(fredr)
+fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
+```
+
+### Search for FRED data objects
+
+Search for FRED series
+```{r fredr_search, message=FALSE, warning=FALSE}
+fredr_search(search_text = "unemployment")
+```
+
+### Retrieve a FRED series
+
+Fetch a FRED series.  Returns an `xts` object.
+```{r fredr_series, message=FALSE, warning=FALSE}
+fredr_series(
+  series_id = "UNRATE",
+  observation_start = "1990-01-01"
+)
+```
+
+Leverage the native features of the FRED API:
+```{r fredr_series2, message=FALSE, warning=FALSE}
+fredr_series(
+  series_id = "UNRATE",
+  observation_start = "1990-01-01",
+  frequency = "q",
+  units = "chg"
+)
+```
+
+```{r fredr_series3, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(xts)
+gnpca <- fredr_series(series_id = "GNPCA", units = "log") %>%
+  mutate(GNPCA = GNPCA - lag(GNPCA)) %>%
+  filter(!is.na(GNPCA))
+
+gnpca_xts <- xts::xts(
+  x = gnpca$GNPCA,
+  order.by = gnpca$date
+)
+
+gnpca_xts %>%
+  StructTS() %>%
+  residuals() %>%
+  acf(., main = "ACF for First Differenced real US GNP, log")
+```
+
+```{r fredr_series4, message=FALSE, warning=FALSE}
+fredr_search(search_text = "federal funds",
+             order_by = "popularity",
+             limit = 1)$id %>%
+  fredr_series(series_id = .) %>%
+  ggplot(data = ., mapping = aes(x = date, y = FEDFUNDS)) +
+    geom_line()
+```
+
+### Access API documentation
+
+Quickly access the FRED API web documentation for any endpoint
+```{r fredr_docs, message=FALSE, warning=FALSE, eval=FALSE}
+fredr_docs(endpoint = "series/observations")
+```
+
+You may also use the `params` option for `fredr_docs` to go straight to the
+endpoint's Parameters section.
+```{r fredr_docs2, message=FALSE, warning=FALSE, eval=FALSE}
+fredr_docs(endpoint = "category/related_tags", params = TRUE)
+```
+
+A list of possible endpoints is contained in the data frame `fredr_endpoints`
+```{r fredr_docs3, message=FALSE, warning=FALSE, width = 180}
+fredr_endpoints
+```
+
+### General queries
+
+You can also use the backbone function `fredr` to run more general queries
+against *any* [FRED API
+endpoint](https://research.stlouisfed.org/docs/api/fred/) (e.g. Categories,
+Series, Sources, Releases, Tags).  This is also useful to return any arbitrary
+information as a `data.frame`.
+```{r fredr_general}
+fredr(endpoint = "tags/series", tag_names = "population;south africa")
+```
+
+Set `to_frame` to `FALSE` to return a generic `response` object from a `httr::GET` request that can be further parsed with `httr::content`
+```{r fredr_general2}
+library(httr)
+resp <- fredr::fredr(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
+resp
+```
+
