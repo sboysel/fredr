@@ -51,15 +51,13 @@ Currently, `fredr` is only available from GithHub.  You can install using `devto
 devtools::install_github("sboysel/fredr")
 ```
 
-## Usage
-
 Load package
 
 ```{r fredr_load, eval=FALSE}
 library(fredr)
 ```
 
-### Authentication
+## Authentication
 
 To use `fredr` and the FRED API in general, you must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
@@ -72,7 +70,7 @@ fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
 
 where "abcdefghijklmnopqrstuvwxyz123456" is replaced with the actual key you obtain from FRED.  This will set the key for the current session.  You can persistently set the key by appending the line `FRED_API_KEY=abcdefghijklmnopqrstuvwxyz123456` to an `.Renviron` file in the working directory.  This can be done using a text editor or by running `usethis::edit_r_environ`.  If you edit the `.Renviron` file, remember to either restart the session or run `readRenviron(".Renviron")` for the changes to take effect. 
 
-### Retrieve series
+## Retrieve series
 
 `fredr_series` retrieves series observations (i.e. the actual time series data) for a specified FRED series ID.  The function returns a `tibble` with 2 columns (observation date and value).
 
@@ -126,7 +124,7 @@ gnpca_xts %>%
   acf(., main = "ACF for First Differenced real US GNP, log")
 ```
 
-### Search
+## Search
 
 Search for FRED series.
 
@@ -149,7 +147,7 @@ Search for FRED series.
     
 See `help(fredr_search)` for more details.
 
-### Tags
+## Tags
 
 Series tags can be listed or searched for using `fredr_tags`.  For tags matched by the specific request, returned objects will include information such as tag description, popularity, and the number of associated series.  The following examples show how to use the various parameters of `fredr_tags` to 
 
@@ -170,7 +168,7 @@ Series tags can be listed or searched for using `fredr_tags`.  For tags matched 
     fredr_tags(search_text = "unemployment")
     ```
 
-### View FRED API documentation
+## View FRED API documentation
 
 To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://research.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation for any endpoint with the convenience function `fredr_docs`.  The following example will open a web browser to the FRED API documentation page on `series/observation` endpoint.
 ```{r fredr_docs, message=FALSE, warning=FALSE, eval=FALSE}
@@ -188,9 +186,9 @@ fredr_docs(endpoint = "category/related_tags", params = TRUE)
 fredr_endpoints
 ```
 
-### General queries
+## General queries
 
-You can also use the backbone function `fredr` to run more general queries
+You can also use the low-level function `fredr` to run more general queries
 against *any* [FRED API
 endpoint](https://research.stlouisfed.org/docs/api/fred/) (e.g. Categories,
 Series, Sources, Releases, Tags).  This is also useful to run complex queries or .
