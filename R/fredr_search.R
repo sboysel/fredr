@@ -55,6 +55,7 @@ fredr_search <- function(search_text = NULL, ...) {
 }
 
 #' @rdname fredr_search
+#' @export
 fredr_search_id <- function(search_text = NULL, ...) {
   stopifnot(!is.null(search_text))
   fredr::fredr(
@@ -66,6 +67,7 @@ fredr_search_id <- function(search_text = NULL, ...) {
 }
 
 #' @rdname fredr_search
+#' @export
 fredr_search_tags <- function(series_search_text = NULL, ...) {
   stopifnot(!is.null(series_search_text))
   fredr::fredr(
@@ -76,6 +78,7 @@ fredr_search_tags <- function(series_search_text = NULL, ...) {
 }
 
 #' @rdname fredr_search
+#' @export
 fredr_search_rel_tags <- function(series_search_text = NULL, tag_names = NULL, ...) {
   stopifnot(!is.null(series_search_text), !is.null(tag_names))
   fredr::fredr(
