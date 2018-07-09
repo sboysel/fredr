@@ -9,3 +9,5 @@
 ^docs$
 ^appveyor\.yml$
 ^_pkgdown\.yml$
+^vignettes/fredr_cache/$
+^vignettes/fredr_files/$

@@ -10,3 +10,5 @@ packrat/
 packrat/lib*/
 packrat/src/
 inst/doc
+vignettes/fredr_cache/
+vignettes/fredr_files/
