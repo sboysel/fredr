@@ -11,3 +11,4 @@
 ^_pkgdown\.yml$
 ^vignettes/fredr_cache/$
 ^vignettes/fredr_files/$
+^cran-comments\.md$
