@@ -7,9 +7,9 @@ README.md: README.Rmd
 	$(R) -e "devtools::document()"
 	$(R) -e "pkgdown::build_site()"
 	$(R) -e "pkgdown::build_reference(lazy = FALSE)"
-	rm README.html
+	rm -f README.html
 
 check:
-	$(R) -e "devtools::check()"
+	$(R) -e "devtools::check(build_args = c('--no-build-vignettes'))"
 
 
