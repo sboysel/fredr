@@ -12,6 +12,7 @@
   
 ## New features
 
+- `fredr_tags` function to list and or search for series tags
 - Include brief endpoint descriptions in data frame `fredr_endpoints`
 - Added a `NEWS.md` file to track changes to the package.
 - Added a usage vignette (#11).
