@@ -9,7 +9,7 @@ fredr_tags(...)
 \arguments{
 \item{...}{A series of named parameters to be used in the query.  Must be of the form
 \code{param_key = "param_value"}.  See the \href{https://research.stlouisfed.org/docs/api/fred/tags.html}{Tags}
- documentation for a list of accepted parameters.}
+documentation for a list of accepted parameters.}
 }
 \value{
 a data frame.

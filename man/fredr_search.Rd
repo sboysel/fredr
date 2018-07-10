@@ -7,7 +7,9 @@
 \alias{fredr_search_rel_tags}
 \title{Search for a FRED series.}
 \usage{
-fredr_search(search_text = NULL, ...)
+fredr_search(search_text = NULL, limit = 100000L, offset = 0,
+  order_by = NULL, sort_order = "asc", filter_variable = NULL,
+  filter_value = NULL, realtime_start = NULL, realtime_end = NULL)
 
 fredr_search_id(search_text = NULL, ...)
 
@@ -16,19 +18,65 @@ fredr_search_tags(series_search_text = NULL, ...)
 fredr_search_rel_tags(series_search_text = NULL, tag_names = NULL, ...)
 }
 \arguments{
-\item{search_text}{A string containing the search text.  For use with \code{\link{fredr_search}} and
-\code{\link{fredr_search_id}}.  See Details for more information.}
+\item{search_text}{A string containing the words to match against economic
+data series. For use with \code{\link{fredr_search}} and
+\code{\link{fredr_search_id}}. See Details for more information.}
 
-\item{...}{A series of named parameters to be used in the query.  Must be of the form
-\code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
-See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
-access to the endpoint web documentation.}
+\item{limit}{An integer limit on the maximum number of results to return.
+Defaults to \code{100000}, the maximum.}
+
+\item{offset}{An integer used in conjunction with \code{limit} for long series.
+This mimics the idea of \emph{pagination} to retrieve large amounts of data over
+multiple calls. Defaults to \code{0}.}
+
+\item{order_by}{A string indicating the attribute to order results by.
+Defaults to \code{"search_rank"} if \code{search_type = "full_text"} and \code{"series_id"}
+if \code{search_type = "series_id"}. Possible values are:
+\itemize{
+\item \code{"search_rank"}
+\item \code{"series_id"}
+\item \code{"title"}
+\item \code{"units"}
+\item \code{"frequency"}
+\item \code{"seasonal_adjustment"}
+\item \code{"realtime_start"}
+\item \code{"realtime_end"}
+\item \code{"last_updated"}
+\item \code{"observation_start"}
+\item \code{"observation_end"}
+\item \code{"popularity"}
+\item \code{"group_popularity"}
+}}
+
+\item{sort_order}{A string representing the order of the resulting series.
+Possible values are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"desc"} if
+\code{order_by = "search_rank"}, otherwise, \code{"asc"}.}
+
+\item{filter_variable}{A string indicating the attribute to filter results
+by. Possible values are: \code{"frequency"}, \code{"units"}, \code{"seasonal_adjustment"}.
+Defaults to no filter.}
+
+\item{filter_value}{The value of the \code{filter_variable} attribute to filter
+by. Possible values depend on the value of \code{filter_variable}. Defaults to
+no filter.}
+
+\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+
+\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{series_search_text}{A string containing the search text.  For use with \code{\link{fredr_search_tags}}
 and \code{\link{fredr_search_rel_tags}}.  See Details for more information.}
 
-\item{tag_names}{A string.  Note that this value must be a valid FRED series tag
+\item{tag_names}{A semicolon delimited string of tag names that
+series match \emph{all} of. Note that this value must be a valid FRED series tag
 (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).}
+
+\item{exclude_tag_names}{A semicolon delimited string of tag names that
+series match \emph{none} of.}
 }
 \value{
 A data frame.
@@ -40,12 +88,13 @@ Search FRED for a series.  Searches can be performed by the text of the series
 }
 \details{
 Search by various series characteristics:
+
 \itemize{
-  \item{\code{\link{fredr_search}}}{Get economic data series that match search text (by full text of series).}
-  \item{\code{\link{fredr_search_id}}}{Get economic data series that match search text (by series ID).}
-  \item{\code{\link{fredr_search_tags}}}{Get the FRED tags for a series search.}
-  \item{\code{\link{fredr_search_rel_tags}}}{Get the related FRED tags for one or more FRED tags matching a series search.
-  See below for more information about searching for related tags.}
+\item{\code{\link{fredr_search}}}{Get economic data series that match search text (by full text of series).}
+\item{\code{\link{fredr_search_id}}}{Get economic data series that match search text (by series ID).}
+\item{\code{\link{fredr_search_tags}}}{Get the FRED tags for a series search.}
+\item{\code{\link{fredr_search_rel_tags}}}{Get the related FRED tags for one or more FRED tags matching a series search.
+See below for more information about searching for related tags.}
 }
 From the FRED API documentation on \code{series/search/related_tags}: FRED tags are
 attributes assigned to series. For this request, related FRED tags are the tags assigned

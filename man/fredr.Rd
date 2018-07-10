@@ -25,7 +25,7 @@ should be printed as well.  Useful for debugging.  Default is \code{FALSE}.}
 }
 \value{
 If \code{to_frame = TRUE}, a data frame containing the parsed response.
-        If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{GET}}.
+If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{GET}}.
 }
 \description{
 \code{\link[fredr]{fredr}} forms and submits a request to a specified endpoint of the FRED API.

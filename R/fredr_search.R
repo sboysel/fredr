@@ -4,20 +4,56 @@
 #' (\code{fredr_search}), by series ID (\code{fredr_search_id}), by series tags
 #' (\code{fredr_search_tags}), or related tags (\code{fredr_search_rel_tags}).
 #'
-#' @param search_text A string containing the search text.  For use with \code{\link{fredr_search}} and
-#' \code{\link{fredr_search_id}}.  See Details for more information.
+#' @inheritParams fredr_series
+#'
+#' @param search_text A string containing the words to match against economic
+#' data series. For use with \code{\link{fredr_search}} and
+#' \code{\link{fredr_search_id}}. See Details for more information.
+#'
 #' @param series_search_text A string containing the search text.  For use with \code{\link{fredr_search_tags}}
 #' and \code{\link{fredr_search_rel_tags}}.  See Details for more information.
-#' @param tag_names A string.  Note that this value must be a valid FRED series tag
-#'        (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).
-#' @param ... A series of named parameters to be used in the query.  Must be of the form
-#'        \code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
-#'        See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
-#'        access to the endpoint web documentation.
+#'
+#' @param order_by A string indicating the attribute to order results by.
+#' Defaults to `"search_rank"` if `search_type = "full_text"` and `"series_id"`
+#' if `search_type = "series_id"`. Possible values are:
+#'
+#' * `"search_rank"`
+#' * `"series_id"`
+#' * `"title"`
+#' * `"units"`
+#' * `"frequency"`
+#' * `"seasonal_adjustment"`
+#' * `"realtime_start"`
+#' * `"realtime_end"`
+#' * `"last_updated"`
+#' * `"observation_start"`
+#' * `"observation_end"`
+#' * `"popularity"`
+#' * `"group_popularity"`
+#'
+#' @param sort_order A string representing the order of the resulting series.
+#' Possible values are: `"asc"`, and `"desc"`. Defaults to `"desc"` if
+#' `order_by = "search_rank"`, otherwise, `"asc"`.
+#'
+#' @param filter_variable A string indicating the attribute to filter results
+#' by. Possible values are: `"frequency"`, `"units"`, `"seasonal_adjustment"`.
+#' Defaults to no filter.
+#'
+#' @param filter_value The value of the `filter_variable` attribute to filter
+#' by. Possible values depend on the value of `filter_variable`. Defaults to
+#' no filter.
+#'
+#' @param tag_names A semicolon delimited string of tag names that
+#' series match _all_ of. Note that this value must be a valid FRED series tag
+#' (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).
+#'
+#' @param exclude_tag_names A semicolon delimited string of tag names that
+#' series match _none_ of.
 #'
 #' @return A data frame.
 #'
 #' @details Search by various series characteristics:
+#'
 #' \itemize{
 #'   \item{\code{\link{fredr_search}}}{Get economic data series that match search text (by full text of series).}
 #'   \item{\code{\link{fredr_search_id}}}{Get economic data series that match search text (by series ID).}
@@ -44,14 +80,35 @@
 #' }
 #' @name fredr_search
 #' @export
-fredr_search <- function(search_text = NULL, ...) {
-  stopifnot(!is.null(search_text))
-  fredr::fredr(
-    endpoint = "series/search",
+fredr_search <- function(search_text = NULL,
+                         limit = 100000L,
+                         offset = 0,
+                         order_by = NULL,
+                         sort_order = "asc",
+                         filter_variable = NULL,
+                         filter_value = NULL,
+                         realtime_start = NULL,
+                         realtime_end = NULL) {
+
+  args <- capture_fred_args(
     search_text = search_text,
-    search_type = "full_text",
-    ...
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order,
+    filter_variable = filter_variable,
+    filter_value = filter_value,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
+
+  if(is.null(search_text)) {
+    stop("Argument `search_text` must be supplied.", call. = FALSE)
+  }
+
+  fredr_args <- list(endpoint = "series/search", search_type = "full_text")
+
+  do.call(fredr, c(fredr_args, args))
 }
 
 #' @rdname fredr_search

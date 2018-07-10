@@ -4,16 +4,97 @@
 \alias{fredr_series}
 \title{Fetch a FRED series}
 \usage{
-fredr_series(series_id, ...)
+fredr_series(series_id, observation_start = NULL, observation_end = NULL,
+  frequency = NULL, aggregation_method = "avg", limit = 100000L,
+  offset = 0, sort_order = "asc", units = "lin", realtime_start = NULL,
+  realtime_end = NULL, vintage_dates = NULL, output_type = 1)
 }
 \arguments{
 \item{series_id}{A string ID for the FRED series.  Use \code{\link{fredr_search}}
 to find the \code{series_id} of a series.}
 
-\item{...}{A series of named parameters to be used in the query.  Must be of the form
-\code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
-See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
-access to the endpoint web documentation.}
+\item{observation_start}{A \code{Date} indicating the start of the observation period.
+Defaults to \code{1776-07-04}, the earliest available date.}
+
+\item{observation_end}{A \code{Date} indicating the end of the observation period.
+Defaults to \code{9999-12-31}, the latest available date.}
+
+\item{frequency}{A string representing a lower frequency to aggregate to.
+Defaults to no frequency aggregation. Possible values are:
+\itemize{
+\item \code{"d"} - Daily
+\item \code{"w"} - Weekly
+\item \code{"bw"} - Biweekly
+\item \code{"m"} - Monthly
+\item \code{"q"} - Quarterly
+\item \code{"sa"} - Semiannual
+\item \code{"a"} - Annual
+\item \code{"wem"} - Weekly, ending Monday
+\item \code{"wetu"} - Weekly, ending Tuesday
+\item \code{"wew"} - Weekly, ending Wednesday
+\item \code{"weth"} - Weekly, ending Thursday
+\item \code{"wef"} - Weekly, ending Friday
+\item \code{"wesa"} - Weekly, ending Saturday
+\item \code{"wesu"} - Weekly, ending Sunday
+\item \code{"bwew"} - Biweekly, ending Wednesday
+\item \code{"bwem"} - Biweekly, ending Monday
+}}
+
+\item{aggregation_method}{A string representing the aggregation method
+used for frequency aggregation. This parameter has no affect is \code{frequency}
+is not set. Possible values are:
+\itemize{
+\item \code{"avg"} for average
+\item \code{"sum"} for sum
+\item \code{"eop"} for end of period value
+}}
+
+\item{limit}{An integer limit on the maximum number of results to return.
+Defaults to \code{100000}, the maximum.}
+
+\item{offset}{An integer used in conjunction with \code{limit} for long series.
+This mimics the idea of \emph{pagination} to retrieve large amounts of data over
+multiple calls. Defaults to \code{0}.}
+
+\item{sort_order}{A string representing the order of the resulting series.
+Possible values are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+
+\item{units}{A string indicating the data value transformation.
+Defaults to \code{lin}. Possible values are:
+\itemize{
+\item \code{"lin"} - Levels (No transformation)
+\item \code{"chg"} - Change
+\item \code{"ch1"} - Change from 1 year ago
+\item \code{"pch"} - Percent change
+\item \code{"pc1"} - Percent change from 1 year ago
+\item \code{"pca"} - Counpounded annual rate of change
+\item \code{"cch"} - Continuously compounded rate of change
+\item \code{"cca"} - Continuously compounded annual rate of change
+\item \code{"log"} - Natural log
+}}
+
+\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+
+\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+
+\item{vintage_dates}{A vector of \code{Date} objects to download data for.
+Vintage dates are used to download data as it existed on these specified
+dates in history. They can be specified instead of a real-time period using
+\code{realtime_start} and \code{realtime_end}. Defaults to no vintage dates.}
+
+\item{output_type}{An integer indicating the output type. Defaults to \code{1}
+but is not used unless \code{realtime_start} is used. Possible values
+are:
+\itemize{
+\item \code{1} for Observations by Real-Time Period
+\item \code{2} for Observations by Vintage Date, All Observations
+\item \code{3} for Observations by Vintage Date, New and Revised Observations Only
+\item \code{4} for Observations, Initial Release Only.
+}}
 }
 \value{
 A \code{tibble} object with observation dates and values.
@@ -21,6 +102,12 @@ A \code{tibble} object with observation dates and values.
 \description{
 Given a series ID, return observations of that series as \code{tibble} object.
 }
+\section{API Docs}{
+
+
+\href{https://research.stlouisfed.org/docs/api/fred/series_observations.html}{fred/series/observations}
+}
+
 \examples{
 fredr_series(
   series_id = "UNRATE",
