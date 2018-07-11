@@ -15,7 +15,8 @@ FRED API endpoint.  Default is \code{"base"}, which will open a link to
 the 'Parameters' section.  Default is \code{FALSE}.}
 
 \item{debug}{A boolean value.  If \code{TRUE}, the documentation is not opened in a
-browser.  Default is \code{FALSE}.}
+browser and the documentation URL is returned.  If \code{FALSE}, documentation
+is opened in a browser and nothing is returned.  Default is \code{FALSE}.}
 }
 \description{
 Opens FRED API web documentation in a new browser tab.
