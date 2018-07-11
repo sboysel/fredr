@@ -13,12 +13,15 @@ Imports:
   jsonlite,
   tibble
 Suggests:
+  covr,
+  knitr,
+  rmarkdown,
   testthat,
   tidyverse,
   zoo,
-  xts,
-    knitr,
-    rmarkdown
+  xts
+Remotes:
+  r-lib/covr
 License: MIT + file LICENSE 
 LazyData: true
 RoxygenNote: 6.0.1
