@@ -70,15 +70,15 @@ fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
   }
 
   if (to_frame) {
-    parsed <- httr::content(resp, "text")
+    parsed <- jsonlite::fromJSON(httr::content(resp, "text"))
     if (endpoint %in% c("category",
                         "category/children",
                         "category/related",
                         "series/categories")) {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$categories)
+      frame <- tibble::as_tibble(parsed$categories)
     }
     if (endpoint == "category/series") {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$series)
+      frame <- tibble::as_tibble(parsed$series)
     }
     if (endpoint %in% c("category/tags",
                         "category/related_tags",
@@ -89,37 +89,37 @@ fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
                         "series/tags",
                         "tags",
                         "related_tags")) {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$tags)
+      frame <- tibble::as_tibble(parsed$tags)
     }
     if (endpoint %in% c("releases",
                         "release",
                         "series/release",
                         "source/releases")) {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$releases)
+      frame <- tibble::as_tibble(parsed$releases)
     }
     if (endpoint %in% c("releases/dates",
                         "release/dates")) {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$release_dates)
+      frame <- tibble::as_tibble(parsed$release_dates)
     }
     if (endpoint %in% c("release/series",
                         "series",
                         "series/search",
                         "series/updates",
                         "tags/series")) {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$seriess)
+      frame <- tibble::as_tibble(parsed$seriess)
     }
     if (endpoint == "release/sources") {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$sources)
+      frame <- tibble::as_tibble(parsed$sources)
     }
     if (endpoint == "series/observations") {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$observations)
+      frame <- tibble::as_tibble(parsed$observations)
     }
     if (endpoint == "series/vintagedates") {
-      frame <- unlist(parsed$vintage_dates)
+      frame <- tibble::tibble(vintage_dates = parsed$vintage_dates)
     }
     if (endpoint %in% c("source",
                         "sources")) {
-      frame <- tibble::as_tibble(jsonlite::fromJSON(parsed)$sources)
+      frame <- tibble::as_tibble(parsed$sources)
     }
     return(frame)
   } else {
