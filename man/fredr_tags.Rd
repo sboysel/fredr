@@ -4,31 +4,49 @@
 \alias{fredr_tags}
 \title{Get FRED series tags}
 \usage{
-fredr_tags(...)
+fredr_tags(options = fredr_options())
 }
 \arguments{
-\item{...}{A series of named parameters to be used in the query.  Must be of the form
-\code{param_key = "param_value"}.  See the \href{https://research.stlouisfed.org/docs/api/fred/tags.html}{Tags}
-documentation for a list of accepted parameters.}
+\item{options}{Extra options defined by \code{\link[=fredr_options]{fredr_options()}}.}
 }
 \value{
-a data frame.
+A data frame containing tags and their descriptions.
 }
 \description{
-List or search (by series text, tag names, or by tag group id) FRED series tags.
+Get FRED tags. Optionally, filter results by tag name, tag group, or
+search text. FRED tags are attributes assigned to series. By default,
+all tags are returned, unfiltered, up to the \code{limit}, which is \code{1000}.
 }
+\section{Optional Parameters}{
+
+\itemize{
+\item \code{realtime_start}
+\item \code{realtime_end}
+\item \code{tag_names}
+\item \code{tag_group_id}
+\item \code{search_text}
+\item \code{limit}
+\item \code{offset}
+\item \code{order_by}
+\item \code{sort_order}
+}
+}
+
+\section{API Documentation}{
+
+
+\href{https://research.stlouisfed.org/docs/api/fred/tags.html}{fred/tags}
+}
+
 \examples{
 \dontrun{
 library(tidyverse)
 fredr_tags()
-fredr_tags(tag_names = "gdp;oecd")
-fredr_tags(tag_group_id = "geo")
-fredr_tags(search_text = "unemployment")
+fredr_tags(fredr_options(tag_names = "gdp;oecd"))
+fredr_tags(fredr_options(tag_group_id = "geo"))
+fredr_tags(fredr_options(search_text = "unemployment"))
 }
-}
-\references{
-\url{https://research.stlouisfed.org/docs/api/fred/tags.html}.
 }
 \seealso{
-\code{\link[fredr]{fredr_docs}}, \code{\link[fredr]{fredr_search}}, \code{\link[fredr]{fredr_series}}
+\code{\link[=fredr_docs]{fredr_docs()}}, \code{\link[=fredr_search]{fredr_search()}}, \code{\link[=fredr_series]{fredr_series()}}
 }

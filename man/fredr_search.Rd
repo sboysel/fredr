@@ -22,13 +22,6 @@ fredr_search_rel_tags(series_search_text = NULL, tag_names = NULL, ...)
 data series. For use with \code{\link{fredr_search}} and
 \code{\link{fredr_search_id}}. See Details for more information.}
 
-\item{limit}{An integer limit on the maximum number of results to return.
-Defaults to \code{100000}, the maximum.}
-
-\item{offset}{An integer used in conjunction with \code{limit} for long series.
-This mimics the idea of \emph{pagination} to retrieve large amounts of data over
-multiple calls. Defaults to \code{0}.}
-
 \item{order_by}{A string indicating the attribute to order results by.
 Defaults to \code{"search_rank"} if \code{search_type = "full_text"} and \code{"series_id"}
 if \code{search_type = "series_id"}. Possible values are:
@@ -48,10 +41,6 @@ if \code{search_type = "series_id"}. Possible values are:
 \item \code{"group_popularity"}
 }}
 
-\item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"desc"} if
-\code{order_by = "search_rank"}, otherwise, \code{"asc"}.}
-
 \item{filter_variable}{A string indicating the attribute to filter results
 by. Possible values are: \code{"frequency"}, \code{"units"}, \code{"seasonal_adjustment"}.
 Defaults to no filter.}
@@ -60,20 +49,8 @@ Defaults to no filter.}
 by. Possible values depend on the value of \code{filter_variable}. Defaults to
 no filter.}
 
-\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
-
-\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
-
 \item{series_search_text}{A string containing the search text.  For use with \code{\link{fredr_search_tags}}
 and \code{\link{fredr_search_rel_tags}}.  See Details for more information.}
-
-\item{tag_names}{A semicolon delimited string of tag names that
-series match \emph{all} of. Note that this value must be a valid FRED series tag
-(e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).}
 
 \item{exclude_tag_names}{A semicolon delimited string of tag names that
 series match \emph{none} of.}

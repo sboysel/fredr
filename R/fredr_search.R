@@ -31,10 +31,6 @@
 #' * `"popularity"`
 #' * `"group_popularity"`
 #'
-#' @param sort_order A string representing the order of the resulting series.
-#' Possible values are: `"asc"`, and `"desc"`. Defaults to `"desc"` if
-#' `order_by = "search_rank"`, otherwise, `"asc"`.
-#'
 #' @param filter_variable A string indicating the attribute to filter results
 #' by. Possible values are: `"frequency"`, `"units"`, `"seasonal_adjustment"`.
 #' Defaults to no filter.
@@ -42,10 +38,6 @@
 #' @param filter_value The value of the `filter_variable` attribute to filter
 #' by. Possible values depend on the value of `filter_variable`. Defaults to
 #' no filter.
-#'
-#' @param tag_names A semicolon delimited string of tag names that
-#' series match _all_ of. Note that this value must be a valid FRED series tag
-#' (e.g. \code{30-year}, \code{usa}, \code{quarterly}, etc.).
 #'
 #' @param exclude_tag_names A semicolon delimited string of tag names that
 #' series match _none_ of.
