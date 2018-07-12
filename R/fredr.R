@@ -65,7 +65,7 @@ fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
   }
 
   if (resp$status_code != 200) {
-    err <- httr::content(resp, "text")
+    err <- httr::content(resp)
     stop(paste0(err$error_code, ": ", err$error_message))
   }
 
