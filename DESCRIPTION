@@ -11,14 +11,15 @@ Depends:
 Imports:
   httr,
   jsonlite,
-  tibble
+  tibble,
+  rlang
 Suggests:
   testthat,
   tidyverse,
   zoo,
   xts,
-    knitr,
-    rmarkdown
+  knitr,
+  rmarkdown
 License: MIT + file LICENSE 
 LazyData: true
 Roxygen: list(markdown = TRUE)

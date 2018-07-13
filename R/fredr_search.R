@@ -4,7 +4,7 @@
 #' (\code{fredr_search}), by series ID (\code{fredr_search_id}), by series tags
 #' (\code{fredr_search_tags}), or related tags (\code{fredr_search_rel_tags}).
 #'
-#' @inheritParams fredr_series
+#' @inheritParams fredr_series_observations
 #'
 #' @param search_text A string containing the words to match against economic
 #' data series. For use with \code{\link{fredr_search}} and
