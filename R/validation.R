@@ -51,11 +51,33 @@ validate_is_class <- function(x, x_nm, x_class) {
 validate_limit <- function(x) {
   if(is.null(x)) return(x)
 
-  validate_is_class(x, "limit", "numeric")
+  validate_is_class(x, "limit", c("integer", "numeric"))
+
+  if (!length(x) == 1) {
+    stop("`limit` must be of length 1.", call. = FALSE)
+  }
 
   if(x <= 0) {
     stop("`limit` must be a non-negative integer.", call. = FALSE)
   }
+}
+
+validate_required_string_param <- function(x) {
+
+  x_nm <- deparse(substitute(x))
+
+  if(is.null(x)) {
+    msg <- paste0("Argument `", x_nm, "` must be supplied.")
+    stop(msg, call. = FALSE)
+  }
+
+  validate_is_class(x, x_nm, "character")
+
+  if(! (length(x) == 1) ) {
+    msg <- paste0("Argument `", x_nm, "` must be of length 1.")
+    stop(msg, call. = FALSE)
+  }
+
 }
 
 # ------------------------------------------------------------------------------

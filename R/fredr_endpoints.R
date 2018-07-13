@@ -10,5 +10,5 @@
 #' }
 #'
 #' @source \url{https://api.stlouisfed.org/docs/fred/}.
-#' @seealso \code{\link[fredr]{fredr_docs}}
+#' @seealso [fredr]
 "fredr_endpoints"

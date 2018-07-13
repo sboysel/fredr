@@ -57,6 +57,3 @@ httr::content() \%>\%
 \references{
 \url{https://api.stlouisfed.org/docs/fred/}.
 }
-\seealso{
-\code{\link[fredr]{fredr_docs}}, \code{\link[fredr]{fredr_search}}, \code{\link[fredr]{fredr_series}}
-}

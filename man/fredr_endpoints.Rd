@@ -22,6 +22,6 @@ fredr_endpoints
 List of available FRED API endpoints.
 }
 \seealso{
-\code{\link[fredr]{fredr_docs}}
+\link{fredr}
 }
 \keyword{datasets}

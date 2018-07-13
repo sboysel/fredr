@@ -45,7 +45,8 @@
 #'
 #' [fred/tags](https://research.stlouisfed.org/docs/api/fred/tags.html)
 #'
-#' @seealso [fredr_docs()], [fredr_search()], [fredr_series()]
+#' @seealso [fredr_docs()], [fredr_series_search_tags()], [fredr_series_search_related_tags()],
+#' [fredr_series_observations()]
 #'
 #' @examples
 #' \dontrun{
@@ -64,8 +65,7 @@ fredr_tags <- function(realtime_start = NULL,
                        limit = NULL,
                        offset = NULL,
                        order_by = NULL,
-                       sort_order = NULL
-                      ) {
+                       sort_order = NULL) {
 
   user_args <- capture_args(
     realtime_start,

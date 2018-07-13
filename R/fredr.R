@@ -18,7 +18,6 @@
 #'         If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{GET}}.
 #'
 #' @references \url{https://api.stlouisfed.org/docs/fred/}.
-#' @seealso \code{\link[fredr]{fredr_docs}}, \code{\link[fredr]{fredr_search}}, \code{\link[fredr]{fredr_series}}
 #'
 #' @examples
 #' fredr(

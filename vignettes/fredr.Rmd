@@ -32,7 +32,7 @@ Reserve Bank of St. Louis.  Essentially a simple wrapper of
 [`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
 designed with simplicity and flexibility in mind.  The core functions are
 
-- `fredr_series` - Fetch a FRED series.
+- `fredr_series_observations` - Fetch a FRED series.
 - `fredr_search` - Search for a FRED series.
 - `fredr` - Send a general request to the FRED API.
 
@@ -72,21 +72,21 @@ where "abcdefghijklmnopqrstuvwxyz123456" is replaced with the actual key you obt
 
 ## Retrieve series
 
-`fredr_series` retrieves series observations (i.e. the actual time series data) for a specified FRED series ID.  The function returns a `tibble` with 2 columns (observation date and value).
+`fredr_series_observations` retrieves series observations (i.e. the actual time series data) for a specified FRED series ID.  The function returns a `tibble` with 2 columns (observation date and value).
 
-```{r fredr_series, message=FALSE, warning=FALSE}
-fredr_series(
+```{r fredr_series_observations, message=FALSE, warning=FALSE}
+fredr_series_observations(
   series_id = "UNRATE",
-  observation_start = "1990-01-01"
+  observation_start = as.Date("1990-01-01")
 )
 ```
 
 Leverage the native features of the FRED API by passing additional parameters:
 
-```{r fredr_series2, message=FALSE, warning=FALSE}
-fredr_series(
+```{r fredr_series_observations2, message=FALSE, warning=FALSE}
+fredr_series_observations(
   series_id = "UNRATE",
-  observation_start = "1990-01-01",
+  observation_start = as.Date("1990-01-01"),
   frequency = "q",
   units = "chg"
 )
@@ -94,22 +94,24 @@ fredr_series(
 
 `fredr` plays nicely with the [tidyverse](https://www.tidyverse.org/):
 
-```{r fredr_series3, message=FALSE, warning=FALSE}
+```{r fredr_series_observations3, message=FALSE, warning=FALSE}
 library(tidyverse)
-fredr_search(search_text = "federal funds",
-             order_by = "popularity",
-             limit = 1) %>%
+fredr_series_search_text(
+  search_text = "federal funds",
+  order_by = "popularity",
+  sort_order = "desc",
+  limit = 1) %>%
   pull(id) %>%
-  fredr_series(series_id = .) %>%
+  fredr_series_observations(series_id = .) %>%
   ggplot(data = ., mapping = aes(x = date, y = FEDFUNDS)) +
     geom_line()
 ```
 
 It is relatively straightforward to convert `tibbles` returned by `fredr` into other time series objects.  For example,
 
-```{r fredr_series4, message=FALSE, warning=FALSE}
+```{r fredr_series_observations4, message=FALSE, warning=FALSE}
 library(xts)
-gnpca <- fredr_series(series_id = "GNPCA", units = "log") %>%
+gnpca <- fredr_series_observations(series_id = "GNPCA", units = "log") %>%
   mutate(GNPCA = GNPCA - lag(GNPCA)) %>%
   filter(!is.na(GNPCA))
 
@@ -130,19 +132,19 @@ Search for FRED series.
 
 - Use `fredr_search` to search for a series by text in the series description
     ```{r fredr_search, message=FALSE, warning=FALSE}
-    fredr_search("unemployment")
+    fredr_series_search_text("unemployment")
     ```
 - Use `fredr_search_id` to search for a series by the ID of the series
     ```{r fredr_search_id, message=FALSE, warning=FALSE}
-    fredr_search_id("UNRATE")
+    fredr_series_search_id("UNRATE")
     ```
 - Use `fredr_search_tags` to search for series tags
     ```{r fredr_search_tags, message=FALSE, warning=FALSE}
-    fredr_search_tags("unemployment")
+    fredr_series_search_tags("unemployment")
     ```
 - Use `fredr_search_rel_tags` to search for series tags related to a given tag.  For example, to search for tags related to the tag "usa" in which the series text matches "gnp", use the following:
     ```{r fredr_search_rel_tags, message=FALSE, warning=FALSE}
-    fredr_search_rel_tags("gnp", "usa")
+    fredr_series_search_related_tags("gnp", "usa")
     ```
     
 See `help(fredr_search)` for more details.

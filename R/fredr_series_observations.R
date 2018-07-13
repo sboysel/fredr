@@ -1,9 +1,8 @@
-#' Fetch a FRED series
+#' Fetch observations of a FRED series
 #'
 #' Given a series ID, return observations of that series as a `tibble` object.
 #'
-#' @param series_id A string ID for the FRED series. Use [fredr_search()]
-#' to find the `series_id` of a series.
+#' @param series_id A string ID for the FRED series.
 #'
 #' @param observation_start A `Date` indicating the start of the observation period.
 #' Defaults to `1776-07-04`, the earliest available date.
@@ -106,8 +105,7 @@
 #' )
 #'
 #' @export
-#'
-fredr_series_observations <- function(series_id,
+fredr_series_observations <- function(series_id = NULL,
                                       observation_start = NULL,
                                       observation_end = NULL,
                                       frequency = NULL,
@@ -119,8 +117,7 @@ fredr_series_observations <- function(series_id,
                                       realtime_start = NULL,
                                       realtime_end = NULL,
                                       vintage_dates = NULL,
-                                      output_type = NULL
-                                      ) {
+                                      output_type = NULL) {
 
   validate_series_id(series_id)
 
@@ -156,7 +153,6 @@ fredr_series_observations <- function(series_id,
 
   return(frame)
 }
-
 
 validate_series_id <- function(x) {
   if(is.null(x)) {
