@@ -4,31 +4,81 @@
 \alias{fredr_tags}
 \title{Get FRED series tags}
 \usage{
-fredr_tags(...)
+fredr_tags(realtime_start = NULL, realtime_end = NULL, tag_names = NULL,
+  tag_group_id = NULL, search_text = NULL, limit = NULL, offset = NULL,
+  order_by = NULL, sort_order = NULL)
 }
 \arguments{
-\item{...}{A series of named parameters to be used in the query.  Must be of the form
-\code{param_key = "param_value"}.  See the \href{https://research.stlouisfed.org/docs/api/fred/tags.html}{Tags}
- documentation for a list of accepted parameters.}
+\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+
+\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+
+\item{tag_names}{A semicolon delimited string of tag names to only
+include in the response. No filtering by tag names by default.}
+
+\item{tag_group_id}{A string tag group id to filter tags by type. No filtering
+by tag group by default. Possible values are:
+\itemize{
+\item \code{"freq"} = Frequency
+\item \code{"gen"} = General or Concept
+\item \code{"geo"} = Geography
+\item \code{"geot"} = Geography Type
+\item \code{"rls"} = Release
+\item \code{"seas"} = Seasonal Adjustment
+\item \code{"src"} = Source
+}}
+
+\item{search_text}{A string indicating the words to find matching tags with.
+No filtering by search words by default.}
+
+\item{limit}{An integer limit on the maximum number of results to return.
+Defaults to \code{1000}, the maximum.}
+
+\item{offset}{An integer used in conjunction with \code{limit} for long series.
+This mimics the idea of \emph{pagination} to retrieve large amounts of data over
+multiple calls. Defaults to \code{0}.}
+
+\item{order_by}{Order results by values of the specified attribute. Default
+ordering is by \code{series_count}. Possible values are:
+\itemize{
+\item \code{"series_count"}
+\item \code{"popularity"}
+\item \code{"created"}
+\item \code{"name"}
+\item \code{"group_id"}
+}}
+
+\item{sort_order}{A string representing the order of the resulting series,
+sorted by the attribute values specified by \code{order_by}. Possible values
+are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
 }
 \value{
-a data frame.
+A data frame containing tags and their descriptions.
 }
 \description{
-List or search (by series text, tag names, or by tag group id) FRED series tags.
+Get FRED tags. Optionally, filter results by tag name, tag group, or
+search text. FRED tags are attributes assigned to a series. By default,
+all tags are returned, unfiltered, up to the \code{limit}.
 }
+\section{API Documentation}{
+
+
+\href{https://research.stlouisfed.org/docs/api/fred/tags.html}{fred/tags}
+}
+
 \examples{
 \dontrun{
-library(tidyverse)
 fredr_tags()
 fredr_tags(tag_names = "gdp;oecd")
 fredr_tags(tag_group_id = "geo")
 fredr_tags(search_text = "unemployment")
 }
 }
-\references{
-\url{https://research.stlouisfed.org/docs/api/fred/tags.html}.
-}
 \seealso{
-\code{\link[fredr]{fredr_docs}}, \code{\link[fredr]{fredr_search}}, \code{\link[fredr]{fredr_series}}
+\code{\link[=fredr_docs]{fredr_docs()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
+\code{\link[=fredr_series_observations]{fredr_series_observations()}}
 }

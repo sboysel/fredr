@@ -20,7 +20,7 @@ use with the service.
 the \code{fredr} package in the current session.  The key can also be set in the
 \code{.Renviron} file in the working directory.  You can edit the file manually by
 appending the line \code{FRED_API_KEY = my_api_ky}, where \code{my_api_key} is your
-actual key.  The function `usethis::edit_r_environ()` does this safely.  Run
+actual key.  The function \code{usethis::edit_r_environ()} does this safely.  Run
 \code{readRenviron(".Renviron")} to set the key in the current session; the
 variable will be set in subsequent sessions started in the working directory.
 }
