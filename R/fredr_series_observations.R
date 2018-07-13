@@ -90,20 +90,20 @@
 #' [fred/series/observations](https://research.stlouisfed.org/docs/api/fred/series_observations.html)
 #'
 #' @examples
+#' \dontrun{
 #' fredr_series_observations(
 #'   series_id = "UNRATE",
 #'   observation_start = as.Date("1980-01-01"),
 #'   observation_end = as.Date("2000-01-01"),
 #'   unit = "chg"
 #' )
-#'
 #' fredr_series_observations(
 #'   series_id = "OILPRICE",
 #'   frequency = "q",
 #'   aggregation_method = "avg",
 #'   unit = "log"
 #' )
-#'
+#' }
 #' @export
 fredr_series_observations <- function(series_id = NULL,
                                       observation_start = NULL,

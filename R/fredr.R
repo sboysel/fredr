@@ -20,13 +20,13 @@
 #' @references \url{https://api.stlouisfed.org/docs/fred/}.
 #'
 #' @examples
+#' \dontrun{
 #' fredr(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
 #'   observation_start = "1990-01-01",
 #'   observation_end = "2000-01-01"
 #' )
-#' \dontrun{
 #' # Compare with to_frame = TRUE
 #' library(httr)
 #' library(tidyverse)
@@ -46,7 +46,7 @@
 fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
 
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
-    stop("FRED API key must be set. Use fredr_key().")
+    stop("FRED API key must be set. Use fredr_set_key().")
   }
 
   params <- list(...)

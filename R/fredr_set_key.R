@@ -20,7 +20,6 @@
 #' \href{https://research.stlouisfed.org/docs/api/terms_of_use.html}{Terms of Use}.
 #'
 #' @examples
-#'
 #' \dontrun{
 #' library(fredr)
 #' fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
