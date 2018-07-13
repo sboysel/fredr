@@ -8,7 +8,8 @@
 #' @param params A boolean value.  If \code{TRUE}, the documentation will be opened at
 #'        the 'Parameters' section.  Default is \code{FALSE}.
 #' @param debug A boolean value.  If \code{TRUE}, the documentation is not opened in a
-#'        browser.  Default is \code{FALSE}.
+#'        browser and the documentation URL is returned.  If \code{FALSE}, documentation
+#'        is opened in a browser and nothing is returned.  Default is \code{FALSE}.
 #'
 #' @references See \url{https://api.stlouisfed.org/docs/fred/}.
 #'
@@ -24,24 +25,30 @@ fredr_docs <- function(endpoint = "base", params = FALSE, debug = FALSE) {
 
   stopifnot(length(endpoint) == 1, is.character(endpoint))
 
-  base <- "https://api.stlouisfed.org/docs/fred/"
+  if (identical(endpoint, "base") & params) {
+    stop("params cannot be set to TRUE with the 'base' endpoint")
+  }
 
-  if (endpoint == "base" & !debug) {
-    utils::browseURL(url = doc)
+  url <- "https://api.stlouisfed.org/docs/fred/"
+
+  if (!identical(endpoint, "base")) {
+    url <- paste0(url, gsub("/", "_", endpoint), ".html")
+  }
+
+  if (params) {
+    url <- paste0(url, "#Parameters")
+  }
+
+  if (debug) {
+    url
   } else {
 
-    doc <- paste0(base, gsub("/", "_", endpoint), ".html")
+    resp <- httr::status_code(httr::GET(url = url))
 
-    if (!identical(httr::status_code(httr::GET(url = doc)), 200L)) {
-      stop(paste("Bad endpoint:", doc))
-    }
-
-    if (params) {
-      doc <- paste0(doc, "#Parameters")
-    }
-
-    if (!debug) {
-      utils::browseURL(url = doc)
+    if (!identical(resp, 200L)) {
+      stop(paste("Bad endpoint:", url))
+    } else {
+      utils::browseURL(url = url)
     }
 
   }

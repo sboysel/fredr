@@ -14,12 +14,15 @@ Imports:
   tibble,
   rlang
 Suggests:
+  covr,
+  knitr,
+  rmarkdown,
   testthat,
   tidyverse,
   zoo,
-  xts,
-  knitr,
-  rmarkdown
+  xts
+Remotes:
+  r-lib/covr
 License: MIT + file LICENSE 
 LazyData: true
 Roxygen: list(markdown = TRUE)
