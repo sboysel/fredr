@@ -33,7 +33,7 @@ Defaults to \code{"series_count"}. Possible values are:
 }}
 
 \item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+Possible values are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{exclude_tag_names}{A semicolon delimited string of tag names that
 series match \emph{none} of.  Defaults to no tag filtering.}

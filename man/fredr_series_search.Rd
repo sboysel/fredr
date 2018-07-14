@@ -49,7 +49,7 @@ for \code{\link[=fredr_series_search_id]{fredr_series_search_id()}}. Possible va
 }}
 
 \item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+Possible values are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{filter_variable}{A string indicating the attribute to filter results
 by. Possible values are: \code{"frequency"}, \code{"units"}, \code{"seasonal_adjustment"}.

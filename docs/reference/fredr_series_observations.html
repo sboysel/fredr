@@ -183,7 +183,7 @@ multiple calls. Defaults to <code>0</code>.</p></td>
     <tr>
       <th>sort_order</th>
       <td><p>A string representing the order of the resulting series.
-Possible values are: <code>"asc"</code>, and <code>"desc"</code>. Defaults to <code>"asc"</code>.</p></td>
+Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
     </tr>
     <tr>
       <th>units</th>
@@ -221,10 +221,9 @@ dates in history. They can be specified instead of a real-time period using
     </tr>
     <tr>
       <th>output_type</th>
-      <td><p>An integer indicating the output type. Defaults to <code>1</code>
-but is not used unless <code>realtime_start</code> is used. Possible values
-are:</p><ul>
-<li><p><code>1</code> for Observations by Real-Time Period</p></li>
+      <td><p>An integer indicating the output type. Not used unless
+<code>realtime_start</code> is used. Possible values are:</p><ul>
+<li><p><code>1</code> for Observations by Real-Time Period (default)</p></li>
 <li><p><code>2</code> for Observations by Vintage Date, All Observations</p></li>
 <li><p><code>3</code> for Observations by Vintage Date, New and Revised Observations Only</p></li>
 <li><p><code>4</code> for Observations, Initial Release Only.</p></li>
@@ -240,6 +239,11 @@ are:</p><ul>
 
     
     <p><a href='https://research.stlouisfed.org/docs/api/fred/series_observations.html'>fred/series/observations</a></p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>, <code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>,
+<code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>, <a href='fred_series.html'>fredr_series</a>.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -266,6 +270,8 @@ are:</p><ul>
       <li><a href="#value">Value</a></li>
 
       <li><a href="#api-documentation">API Documentation</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

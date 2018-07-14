@@ -1,6 +1,6 @@
 R=/usr/local/bin/R
 
-all: README.md vignettes check
+all: README.md vignettes check docs
 
 README.md: README.Rmd
 	$(R) -e "knitr::knit('README.Rmd')"
@@ -9,10 +9,11 @@ README.md: README.Rmd
 vignettes: vignettes/fredr.Rmd
 	$(R) -e "devtools::build_vignettes()"
 
-check: R/*.R tests/testthat/*.R
+docs: R/*.R tests/testthat/*.R _pkgdown.yml
 	$(R) -e "devtools::document()"
 	$(R) -e "pkgdown::build_site()"
 	$(R) -e "pkgdown::build_reference(lazy = FALSE)"
-	$(R) -e "devtools::check()"
 
+check: R/*.R tests/testthat/*.R _pkgdown.yml
+	$(R) -e "devtools::check()"
 

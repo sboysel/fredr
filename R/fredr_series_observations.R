@@ -46,7 +46,7 @@
 #' multiple calls. Defaults to `0`.
 #'
 #' @param sort_order A string representing the order of the resulting series.
-#' Possible values are: `"asc"`, and `"desc"`. Defaults to `"asc"`.
+#' Possible values are: `"asc"` (default), and `"desc"`.
 #'
 #' @param units A string indicating the data value transformation.
 #' Defaults to `"lin"`. Possible values are:
@@ -74,11 +74,10 @@
 #' dates in history. They can be specified instead of a real-time period using
 #' `realtime_start` and `realtime_end`. Defaults to no vintage dates.
 #'
-#' @param output_type An integer indicating the output type. Defaults to `1`
-#' but is not used unless `realtime_start` is used. Possible values
-#' are:
+#' @param output_type An integer indicating the output type. Not used unless
+#' `realtime_start` is used. Possible values are:
 #'
-#' * `1` for Observations by Real-Time Period
+#' * `1` for Observations by Real-Time Period (default)
 #' * `2` for Observations by Vintage Date, All Observations
 #' * `3` for Observations by Vintage Date, New and Revised Observations Only
 #' * `4` for Observations, Initial Release Only.
@@ -88,6 +87,9 @@
 #' @section API Documentation:
 #'
 #' [fred/series/observations](https://research.stlouisfed.org/docs/api/fred/series_observations.html)
+#'
+#' @seealso [fredr_series_search_text()], [fredr_series_search_id()],
+#' [fredr_series_search_tags()], [fredr_series_search_related_tags()], [fredr_series].
 #'
 #' @examples
 #' \dontrun{
