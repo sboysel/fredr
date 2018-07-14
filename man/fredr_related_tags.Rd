@@ -22,7 +22,7 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{exclude_tag_names}{A semicolon delimted string of tag names that series
-match none of. No exclusions are done by default.}
+match \emph{none} of. No exclusions are done by default.}
 
 \item{tag_group_id}{A string tag group id to filter tags by type. No filtering
 by tag group by default. Possible values are:
@@ -70,6 +70,12 @@ search text. Related FRED tags are the tags assigned to series that match
 all tags in the \code{tag_names} parameter and no tags in the
 \code{exclude_tag_names} parameter.
 }
+\section{API Documentation}{
+
+
+\href{https://research.stlouisfed.org/docs/api/fred/related_tags.html}{fred/related_tags}
+}
+
 \examples{
 
 \dontrun{
@@ -83,4 +89,8 @@ fredr_related_tags(
 
  }
 
+}
+\seealso{
+\code{\link[=fredr_docs]{fredr_docs()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
+\code{\link[=fredr_tags_series]{fredr_tags_series()}}, \code{\link[=fredr_tags]{fredr_tags()}}
 }

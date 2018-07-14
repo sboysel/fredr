@@ -80,5 +80,5 @@ fredr_tags(search_text = "unemployment")
 }
 \seealso{
 \code{\link[=fredr_docs]{fredr_docs()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
-\code{\link[=fredr_series_observations]{fredr_series_observations()}}
+\code{\link[=fredr_related_tags]{fredr_related_tags()}}, \code{\link[=fredr_tags_series]{fredr_tags_series()}}
 }

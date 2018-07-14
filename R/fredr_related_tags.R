@@ -11,10 +11,17 @@
 #' _Required parameter._
 #'
 #' @param exclude_tag_names A semicolon delimted string of tag names that series
-#' match none of. No exclusions are done by default.
+#' match _none_ of. No exclusions are done by default.
 #'
 #' @return A data frame containing tags related to `tag_names` and their
 #' descriptions.
+#'
+#' @section API Documentation:
+#'
+#' [fred/related_tags](https://research.stlouisfed.org/docs/api/fred/related_tags.html)
+#'
+#' @seealso [fredr_docs()], [fredr_series_search_tags()], [fredr_series_search_related_tags()],
+#' [fredr_tags_series()], [fredr_tags()]
 #'
 #' @export
 #'

@@ -13,7 +13,7 @@ fredr_tags_series(tag_names = NULL, exclude_tag_names = NULL,
 find series using. \emph{Required parameter.}}
 
 \item{exclude_tag_names}{A semicolon delimted string of tag names that series
-match none of. No exclusions are done by default.}
+match \emph{none} of. No exclusions are done by default.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
@@ -52,6 +52,12 @@ descriptions.
 Get the series matching the \code{tag_names} parameter. Exclude tags in the
 \code{exclude_tag_names} parameter.
 }
+\section{API Documentation}{
+
+
+\href{https://research.stlouisfed.org/docs/api/fred/tags_series.html}{fred/tags/series}
+}
+
 \examples{
 
 \dontrun{
@@ -71,4 +77,8 @@ fredr_tags_series(
 
 }
 
+}
+\seealso{
+\code{\link[=fredr_docs]{fredr_docs()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
+\code{\link[=fredr_related_tags]{fredr_related_tags()}}, \code{\link[=fredr_tags]{fredr_tags()}}
 }

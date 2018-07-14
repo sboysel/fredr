@@ -11,6 +11,13 @@
 #' @return A data frame containing tags related to `tag_names` and their
 #' descriptions.
 #'
+#' @section API Documentation:
+#'
+#' [fred/tags/series](https://research.stlouisfed.org/docs/api/fred/tags_series.html)
+#'
+#' @seealso [fredr_docs()], [fredr_series_search_tags()], [fredr_series_search_related_tags()],
+#' [fredr_related_tags()], [fredr_tags()]
+#'
 #' @export
 #'
 #' @examples
