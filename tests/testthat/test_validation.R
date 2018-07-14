@@ -40,6 +40,19 @@ test_that("capture_args() validation: dates", {
   expect_error(capture_args(vintage_dates = "2000-01-01"))
 })
 
+test_that("capture_args() validation: time", {
+  # Date objects pass
+  expect_silent(good_args <- capture_args(
+    start_time = Sys.time() - (7 * 24 * 60 * 60),
+    end_time = Sys.time()
+  ))
+  # format_date returns a character date
+  expect_true(all(sapply(good_args, is.character)))
+  # non-Date objects throw errors
+  expect_error(capture_args(start_time = "a"))
+  expect_error(capture_args(start_time = 1))
+})
+
 test_that("validate_required_string_param()", {
   good <- "good"
   bad <- NULL

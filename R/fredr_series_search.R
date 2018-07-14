@@ -6,7 +6,7 @@
 #'
 #' @param search_text A string containing the words to match against economic
 #' data series. For use with \code{\link{fredr_series_search_text}} and
-#' \code{\link{fredr_series_search_id}}.
+#' \code{\link{fredr_series_search_id}}.  _Required parameter._
 #'
 #' @param limit An integer limit on the maximum number of results to return.
 #' Defaults to `1000`, the maximum.

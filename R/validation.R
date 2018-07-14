@@ -25,12 +25,30 @@ capture_args <- function(...) {
 
   mapply(validate_is_class, date_lst, date_nms, MoreArgs = list(x_class = "Date"))
 
+  # Validation - times
+  time_lst <- list(
+    args$start_time,
+    args$end_time
+  )
+
+  time_nms <- list("start_time", "end_time")
+
+  mapply(
+    validate_is_class,
+    time_lst, time_nms,
+    MoreArgs = list(x_class = c("POSIXct", "POSIXlt", "POSIXt"))
+  )
+
   # Date formatting
   args$observation_start <- format_fred_date(args$observation_start)
   args$observation_end   <- format_fred_date(args$observation_end)
   args$realtime_start    <- format_fred_date(args$realtime_start)
   args$realtime_end      <- format_fred_date(args$realtime_end)
   args$vintage_dates     <- format_fred_date(args$vintage_dates)
+
+  # Time formatting
+  args$start_time <- format_fred_time(args$start_time)
+  args$end_time   <- format_fred_time(args$end_time)
 
   # Return list for use in API call
   args
@@ -59,6 +77,18 @@ validate_limit <- function(x) {
 
   if(x <= 0) {
     stop("`limit` must be a non-negative integer.", call. = FALSE)
+  }
+}
+
+validate_series_id <- function(x) {
+  if(is.null(x)) {
+    stop("Argument `series_id` must be supplied.", call. = FALSE)
+  }
+
+  validate_is_class(x, "series_id", "character")
+
+  if(! (length(x) == 1) ) {
+    stop("Argument `series_id` must be of length 1.", call. = FALSE)
   }
 }
 
@@ -102,6 +132,12 @@ format_fred_date <- function(x) {
   if(is.null(x)) return(x)
 
   format(x, "%Y-%m-%d")
+}
+
+format_fred_time <- function(x) {
+  if(is.null(x)) return(x)
+
+  format(x, "%Y%m%d%H%M%S")
 }
 
 list_named <- function(...) {

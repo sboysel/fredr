@@ -1,13 +1,19 @@
 reference:
-- title: All functions
+- title: Authentication
+  desc: ~
+  contents:
+  - '`fredr_set_key`'
+- title: Series
+  desc: ~
+  contents:
+  - starts_with("fredr_series")
+- title: Tags
+  desc: ~
+  contents:
+  - '`fredr_tags`'
+- title: Miscellania
   desc: ~
   contents:
   - '`fredr`'
   - '`fredr_docs`'
   - '`fredr_endpoints`'
-  - '`fredr_series_observations`'
-  - '`fredr_series_search`'
-  - '`fredr_series_search_related_tags`'
-  - '`fredr_series_search_tags`'
-  - '`fredr_set_key`'
-  - '`fredr_tags`'

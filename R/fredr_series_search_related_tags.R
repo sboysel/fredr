@@ -9,9 +9,10 @@
 #' @inheritParams fredr_series_observations
 #'
 #' @param series_search_text A string containing the series search text.
+#' _Required parameter._
 #'
 #' @param tag_names A semicolon delimited string of tag names to return.  Defaults
-#' no filtering by tag names.
+#' no filtering by tag names.  _Required parameter._
 #'
 #' @param limit An integer limit on the maximum number of results to return.
 #' Defaults to `1000`, the maximum.

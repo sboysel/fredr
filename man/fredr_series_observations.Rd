@@ -11,7 +11,7 @@ fredr_series_observations(series_id = NULL, observation_start = NULL,
   output_type = NULL)
 }
 \arguments{
-\item{series_id}{A string ID for the FRED series.}
+\item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}
 
 \item{observation_start}{A \code{Date} indicating the start of the observation period.
 Defaults to \code{1776-07-04}, the earliest available date.}
@@ -57,7 +57,7 @@ This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
 \item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+Possible values are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{units}{A string indicating the data value transformation.
 Defaults to \code{"lin"}. Possible values are:
@@ -86,11 +86,10 @@ Vintage dates are used to download data as it existed on these specified
 dates in history. They can be specified instead of a real-time period using
 \code{realtime_start} and \code{realtime_end}. Defaults to no vintage dates.}
 
-\item{output_type}{An integer indicating the output type. Defaults to \code{1}
-but is not used unless \code{realtime_start} is used. Possible values
-are:
+\item{output_type}{An integer indicating the output type. Not used unless
+\code{realtime_start} is used. Possible values are:
 \itemize{
-\item \code{1} for Observations by Real-Time Period
+\item \code{1} for Observations by Real-Time Period (default)
 \item \code{2} for Observations by Vintage Date, All Observations
 \item \code{3} for Observations by Vintage Date, New and Revised Observations Only
 \item \code{4} for Observations, Initial Release Only.
@@ -123,4 +122,8 @@ fredr_series_observations(
   unit = "log"
 )
 }
+}
+\seealso{
+\code{\link[=fredr_series_search_text]{fredr_series_search_text()}}, \code{\link[=fredr_series_search_id]{fredr_series_search_id()}},
+\code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}}, \link{fredr_series}.
 }

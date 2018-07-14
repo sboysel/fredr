@@ -20,7 +20,7 @@ fredr_series_search_id(search_text = NULL, limit = 1000L, offset = 0,
 \arguments{
 \item{search_text}{A string containing the words to match against economic
 data series. For use with \code{\link{fredr_series_search_text}} and
-\code{\link{fredr_series_search_id}}.}
+\code{\link{fredr_series_search_id}}.  \emph{Required parameter.}}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}
@@ -49,7 +49,7 @@ for \code{\link[=fredr_series_search_id]{fredr_series_search_id()}}. Possible va
 }}
 
 \item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+Possible values are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{filter_variable}{A string indicating the attribute to filter results
 by. Possible values are: \code{"frequency"}, \code{"units"}, \code{"seasonal_adjustment"}.
