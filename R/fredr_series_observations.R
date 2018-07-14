@@ -153,15 +153,3 @@ fredr_series_observations <- function(series_id = NULL,
 
   return(frame)
 }
-
-validate_series_id <- function(x) {
-  if(is.null(x)) {
-    stop("Argument `series_id` must be supplied.", call. = FALSE)
-  }
-
-  validate_is_class(x, "series_id", "character")
-
-  if(! (length(x) == 1) ) {
-    stop("Argument `series_id` must be of length 1.", call. = FALSE)
-  }
-}

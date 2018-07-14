@@ -62,6 +62,18 @@ validate_limit <- function(x) {
   }
 }
 
+validate_series_id <- function(x) {
+  if(is.null(x)) {
+    stop("Argument `series_id` must be supplied.", call. = FALSE)
+  }
+
+  validate_is_class(x, "series_id", "character")
+
+  if(! (length(x) == 1) ) {
+    stop("Argument `series_id` must be of length 1.", call. = FALSE)
+  }
+}
+
 validate_required_string_param <- function(x) {
 
   x_nm <- deparse(substitute(x))
