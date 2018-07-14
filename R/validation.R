@@ -80,6 +80,21 @@ validate_required_string_param <- function(x) {
 
 }
 
+validate_endpoint <- function(x) {
+
+  validate_is_class(x, "endpoint", "character")
+
+  if (!is_endpoint(x)) {
+    msg <- paste0(
+      "`", x,
+      "` is not a valid endpoint.  See ",
+      "https://research.stlouisfed.org/docs/api/fred/"
+    )
+    stop(msg,  call. = FALSE)
+  }
+
+}
+
 # ------------------------------------------------------------------------------
 # Extra helpers
 
@@ -101,4 +116,40 @@ force_integer <- function(x) {
   } else {
     as.integer(x)
   }
+}
+
+is_endpoint <- function(x) {
+  x %in% c(
+    "category",
+    "category/children",
+    "category/related",
+    "category/series",
+    "category/tags",
+    "category/related_tags",
+    "series",
+    "series/search",
+    "series/updates",
+    "series/categories",
+    "series/search/tags",
+    "series/search/related_tags",
+    "series/release",
+    "series/observations",
+    "series/vintagedates",
+    "series/tags",
+    "release",
+    "releases",
+    "releases/dates",
+    "release/dates",
+    "release/series",
+    "release/sources",
+    "release/tags",
+    "release/related_tags",
+    "release/tables",
+    "source",
+    "sources",
+    "source/releases",
+    "tags",
+    "related_tags",
+    "tags/series"
+  )
 }

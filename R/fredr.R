@@ -49,6 +49,8 @@ fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
     stop("FRED API key must be set. Use fredr_set_key().")
   }
 
+  validate_endpoint(endpoint)
+
   params <- list(...)
   params$api_key <- Sys.getenv("FRED_API_KEY")
   params$file_type <- "json"
