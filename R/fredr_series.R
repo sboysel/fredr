@@ -87,7 +87,7 @@ fredr_series <- function(series_id = NULL,
 
 }
 
-#' @name fred_series
+#' @rdname fred_series
 #' @export
 fredr_series_categories <- function(series_id = NULL,
                                     realtime_start = NULL,
@@ -109,7 +109,7 @@ fredr_series_categories <- function(series_id = NULL,
 
 }
 
-#' @name fred_series
+#' @rdname fred_series
 #' @export
 fredr_series_release <- function(series_id = NULL,
                                  realtime_start = NULL,
@@ -131,7 +131,7 @@ fredr_series_release <- function(series_id = NULL,
 
 }
 
-#' @name fred_series
+#' @rdname fred_series
 #' @export
 fredr_series_tags <- function(series_id = NULL,
                               order_by = NULL,
@@ -157,7 +157,7 @@ fredr_series_tags <- function(series_id = NULL,
 
 }
 
-#' @name fred_series
+#' @rdname fred_series
 #' @export
 fredr_series_updates <- function(limit = NULL,
                                  offset = NULL,
@@ -185,7 +185,7 @@ fredr_series_updates <- function(limit = NULL,
 
 }
 
-#' @name fred_series
+#' @rdname fred_series
 #' @export
 fredr_series_vintagedates <- function(series_id = NULL,
                                       limit = NULL,

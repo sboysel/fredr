@@ -58,7 +58,7 @@
 #' fredr_series_search_text("oil", filter_variable = "frequency", filter_value = "q")
 #' fredr_series_search_id("UNRATE", order_by = "observation_start")
 #' }
-#' @name fredr_series_search
+#' @rdname fredr_series_search
 #' @export
 fredr_series_search_text <- function(search_text = NULL,
                                      limit = 1000L,
@@ -93,7 +93,7 @@ fredr_series_search_text <- function(search_text = NULL,
   do.call(fredr, c(fredr_args, args))
 }
 
-#' @name fredr_series_search
+#' @rdname fredr_series_search
 #' @export
 fredr_series_search_id <- function(search_text = NULL,
                                    limit = 1000L,
