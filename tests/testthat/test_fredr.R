@@ -11,9 +11,17 @@ test_that("fredr() throws proper errors and messages", {
   expect_error(fredr(endpoint = "series"))
   fredr_set_key(key_backup)
   # print HTTP request
-  expect_message(fredr(endpoint = "series", series_id = "GNPCA", print_req = TRUE), regexp = "GNPCA")
+  expect_message(
+    fredr(endpoint = "series", series_id = "GNPCA", print_req = TRUE),
+    regexp = "GNPCA"
+  )
   # bad endpoint
   expect_error(fredr(endpoint = "foo"))
+  # bad request
+  expect_error(
+    fredr(endpoint = "series/observations", series_id = "bad_series_id"),
+    regexp = "400: Bad Request"
+  )
 })
 
 test_that("fredr() returns proper objects", {
