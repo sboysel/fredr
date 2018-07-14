@@ -21,9 +21,9 @@ Reserve Bank of St. Louis.  Essentially a simple wrapper of
 [`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
 designed with simplicity and flexibility in mind.  The core functions are
 
-- `fredr_series` - Fetch a FRED series.
-- `fredr_search` - Search for a FRED series.
-- `fredr` - Send a general request to the FRED API.
+- `fredr_series_observations()` - Fetch a FRED series.
+- `fredr_series_search_text()` - Search for a FRED series by text.
+- `fredr()` - Send a general request to the FRED API.
 
 All objects are returned as `tibbles`.  As nearly all optional
 parameters supplied to these functions are relayed verbatim to the API, the 

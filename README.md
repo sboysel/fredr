@@ -2,7 +2,7 @@
 
 [![Travis
 branch](https://img.shields.io/travis/sboysel/fredr/master.svg?style=flat-square)](https://travis-ci.org/sboysel/fredr)
-[![Build status](https://ci.appveyor.com/api/projects/status/4xmeb4kmcperby4f/branch/master?svg=true)](https://ci.appveyor.com/project/sboysel/fredr/branch/master)
+[![AppVeyor Build Status](https://ci.appveyor.com/project/sboysel/fredr/branch/master)](https://ci.appveyor.com/project/sboysel/fredr/branch/master)
 [![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg?style=flat-square)](https://codecov.io/github/sboysel/fredr)
 [![GitHub
 release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-square)](https://github.com/sboysel/fredr/releases)
@@ -15,9 +15,9 @@ Reserve Bank of St. Louis.  Essentially a simple wrapper of
 [`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
 designed with simplicity and flexibility in mind.  The core functions are
 
-- `fredr_series` - Fetch a FRED series.
-- `fredr_search` - Search for a FRED series.
-- `fredr` - Send a general request to the FRED API.
+- `fredr_series_observations()` - Fetch a FRED series.
+- `fredr_series_search_text()` - Search for a FRED series by text.
+- `fredr()` - Send a general request to the FRED API.
 
 All objects are returned as `tibbles`.  As nearly all optional
 parameters supplied to these functions are relayed verbatim to the API, the 
@@ -27,6 +27,7 @@ of the FRED API and `fredr`.
 
 ## Installation
 
+
 ```r
 # install.packages("devtools")
 devtools::install_github("sboysel/fredr")
@@ -34,7 +35,7 @@ devtools::install_github("sboysel/fredr")
 
 ## Usage
 
-See the [Get started](http://sboysel.github.io/fredr/articles/fredr.html) article.
+See the [Getting started](http://sboysel.github.io/fredr/articles/fredr.html) article.
 
 ## See Also
 The primary goal in creating `fredr` was educational.  I also suggest you check

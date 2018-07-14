@@ -81,11 +81,11 @@
 <p><code>fredr</code> interacts with the <a href="https://research.stlouisfed.org/fred2/">Federal Reserve Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. Essentially a simple wrapper of <a href="https://github.com/r-lib/httr"><code>httr</code></a> and the FRED API itself, <code>fredr</code> is designed with simplicity and flexibility in mind. The core functions are</p>
 <ul>
 <li>
-<code>fredr_series</code> - Fetch a FRED series.</li>
+<code><a href="reference/fredr_series_observations.html">fredr_series_observations()</a></code> - Fetch a FRED series.</li>
 <li>
-<code>fredr_search</code> - Search for a FRED series.</li>
+<code><a href="reference/fredr_series_search.html">fredr_series_search_text()</a></code> - Search for a FRED series by text.</li>
 <li>
-<code>fredr</code> - Send a general request to the FRED API.</li>
+<code><a href="reference/fredr.html">fredr()</a></code> - Send a general request to the FRED API.</li>
 </ul>
 <p>All objects are returned as <code>tibbles</code>. As nearly all optional parameters supplied to these functions are relayed verbatim to the API, the user is strongly encouraged to read the full <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API</a> documentation to leverage the full power of the FRED API and <code>fredr</code>.</p>
 <div id="installation" class="section level2">
