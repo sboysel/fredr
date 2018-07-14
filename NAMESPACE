@@ -2,6 +2,7 @@
 
 export(fredr)
 export(fredr_docs)
+export(fredr_related_tags)
 export(fredr_series_observations)
 export(fredr_series_search_id)
 export(fredr_series_search_related_tags)
