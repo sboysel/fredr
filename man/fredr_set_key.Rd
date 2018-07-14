@@ -25,7 +25,6 @@ actual key.  The function \code{usethis::edit_r_environ()} does this safely.  Ru
 variable will be set in subsequent sessions started in the working directory.
 }
 \examples{
-
 \dontrun{
 library(fredr)
 fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")

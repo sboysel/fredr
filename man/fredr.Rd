@@ -31,13 +31,13 @@ If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{G
 \code{\link[fredr]{fredr}} forms and submits a request to a specified endpoint of the FRED API.
 }
 \examples{
+\dontrun{
 fredr(
   endpoint = "series/observations",
   series_id = "GNPCA",
   observation_start = "1990-01-01",
   observation_end = "2000-01-01"
 )
-\dontrun{
 # Compare with to_frame = TRUE
 library(httr)
 library(tidyverse)

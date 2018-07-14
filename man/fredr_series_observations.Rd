@@ -109,18 +109,18 @@ Given a series ID, return observations of that series as a \code{tibble} object.
 }
 
 \examples{
+\dontrun{
 fredr_series_observations(
   series_id = "UNRATE",
   observation_start = as.Date("1980-01-01"),
   observation_end = as.Date("2000-01-01"),
   unit = "chg"
 )
-
 fredr_series_observations(
   series_id = "OILPRICE",
   frequency = "q",
   aggregation_method = "avg",
   unit = "log"
 )
-
+}
 }
