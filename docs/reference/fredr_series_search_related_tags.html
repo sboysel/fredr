@@ -124,12 +124,13 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>series_search_text</th>
-      <td><p>A string containing the series search text.</p></td>
+      <td><p>A string containing the series search text.
+<em>Required parameter.</em></p></td>
     </tr>
     <tr>
       <th>tag_names</th>
       <td><p>A semicolon delimited string of tag names to return.  Defaults
-no filtering by tag names.</p></td>
+no filtering by tag names.  <em>Required parameter.</em></p></td>
     </tr>
     <tr>
       <th>limit</th>
@@ -156,7 +157,7 @@ Defaults to <code>"series_count"</code>. Possible values are:</p><ul>
     <tr>
       <th>sort_order</th>
       <td><p>A string representing the order of the resulting series.
-Possible values are: <code>"asc"</code>, and <code>"desc"</code>. Defaults to <code>"asc"</code>.</p></td>
+Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
     </tr>
     <tr>
       <th>exclude_tag_names</th>
