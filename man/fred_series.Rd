@@ -2,15 +2,10 @@
 % Please edit documentation in R/fredr_series.R
 \name{fredr_series}
 \alias{fredr_series}
-\alias{fred_series}
 \alias{fredr_series_categories}
-\alias{fred_series}
 \alias{fredr_series_release}
-\alias{fred_series}
 \alias{fredr_series_tags}
-\alias{fred_series}
 \alias{fredr_series_updates}
-\alias{fred_series}
 \alias{fredr_series_vintagedates}
 \title{Get information about a FRED series}
 \usage{

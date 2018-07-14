@@ -57,7 +57,7 @@
 #' library(fredr)
 #' fredr_series_search_related_tags("oil", "usa")
 #' }
-#' @name fredr_series_search_related_tags
+#' @rdname fredr_series_search_related_tags
 #' @export
 fredr_series_search_related_tags <- function(series_search_text = NULL,
                                              tag_names = NULL,
