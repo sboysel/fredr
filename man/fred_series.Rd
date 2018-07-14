@@ -33,7 +33,7 @@ fredr_series_vintagedates(series_id = NULL, limit = NULL, offset = NULL,
   sort_order = NULL, realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
-\item{series_id}{A string ID for the FRED series.}
+\item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see

@@ -10,10 +10,11 @@ fredr_series_search_related_tags(series_search_text = NULL,
   tag_search_text = NULL, realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
-\item{series_search_text}{A string containing the series search text.}
+\item{series_search_text}{A string containing the series search text.
+\emph{Required parameter.}}
 
 \item{tag_names}{A semicolon delimited string of tag names to return.  Defaults
-no filtering by tag names.}
+no filtering by tag names.  \emph{Required parameter.}}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}

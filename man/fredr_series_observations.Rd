@@ -11,7 +11,7 @@ fredr_series_observations(series_id = NULL, observation_start = NULL,
   output_type = NULL)
 }
 \arguments{
-\item{series_id}{A string ID for the FRED series.}
+\item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}
 
 \item{observation_start}{A \code{Date} indicating the start of the observation period.
 Defaults to \code{1776-07-04}, the earliest available date.}

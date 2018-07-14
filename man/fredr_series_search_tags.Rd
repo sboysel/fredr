@@ -10,7 +10,8 @@ fredr_series_search_tags(series_search_text = NULL, limit = 1000L,
   realtime_end = NULL)
 }
 \arguments{
-\item{series_search_text}{A string containing the series search text.}
+\item{series_search_text}{A string containing the series search text.
+\emph{Required parameter.}}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}
