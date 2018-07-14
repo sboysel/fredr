@@ -18,16 +18,15 @@
 #'         If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{GET}}.
 #'
 #' @references \url{https://api.stlouisfed.org/docs/fred/}.
-#' @seealso \code{\link[fredr]{fredr_docs}}, \code{\link[fredr]{fredr_search}}, \code{\link[fredr]{fredr_series}}
 #'
 #' @examples
+#' \dontrun{
 #' fredr(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
 #'   observation_start = "1990-01-01",
 #'   observation_end = "2000-01-01"
 #' )
-#' \dontrun{
 #' # Compare with to_frame = TRUE
 #' library(httr)
 #' library(tidyverse)
@@ -47,7 +46,7 @@
 fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
 
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
-    stop("FRED API key must be set. Use fredr_key().")
+    stop("FRED API key must be set. Use fredr_set_key().")
   }
 
   params <- list(...)
