@@ -4,6 +4,7 @@ context("Core functions")
 tbl_class <- c("tbl_df", "tbl", "data.frame")
 
 test_that("fredr() throws proper errors and messages", {
+  skip_if_no_key()
   # unset API key
   key_backup <- Sys.getenv("FRED_API_KEY")
   fredr_set_key("")
@@ -16,6 +17,7 @@ test_that("fredr() throws proper errors and messages", {
 })
 
 test_that("fredr() returns proper objects", {
+  skip_if_no_key()
   expect_silent(resp <- fredr(endpoint = "series", series_id = "GNPCA", to_frame = FALSE))
   expect_silent(frame <- fredr(endpoint = "series", series_id = "GNPCA"))
   expect_s3_class(resp, "response")
@@ -23,6 +25,7 @@ test_that("fredr() returns proper objects", {
 })
 
 test_that("fredr() endpoints", {
+  skip_if_no_key()
   # categories
   expect_s3_class(fredr(endpoint = "category"), tbl_class)
   expect_s3_class(fredr(endpoint = "category/children"), tbl_class)

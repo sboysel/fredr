@@ -2,6 +2,7 @@ library(fredr)
 context("Endpoint functions: Series (search functions)")
 
 test_that("fredr_series_search_text()", {
+  skip_if_no_key()
   expect_silent(search <- fredr_series_search_text(search_text = "oil", limit = 20L))
   expect_s3_class(search, c("tbl_df", "tbl", "data.frame"))
   expect_error(fredr_series_search_text())
@@ -13,6 +14,7 @@ test_that("fredr_series_search_text()", {
 })
 
 test_that("fredr_series_search_id()", {
+  skip_if_no_key()
   expect_silent(search <- fredr_series_search_id(search_text = "GNPCA", limit = 20L))
   expect_s3_class(search, c("tbl_df", "tbl", "data.frame"))
   expect_error(fredr_series_search_id())
@@ -24,6 +26,7 @@ test_that("fredr_series_search_id()", {
 })
 
 test_that("fredr_series_search_tags()", {
+  skip_if_no_key()
   expect_silent(search <- fredr_series_search_tags(series_search_text = "oil", limit = 20L))
   expect_s3_class(search, c("tbl_df", "tbl", "data.frame"))
   expect_error(fredr_series_search_tags())
@@ -35,6 +38,7 @@ test_that("fredr_series_search_tags()", {
 })
 
 test_that("fredr_series_search_related_tags()", {
+  skip_if_no_key()
   expect_silent(search <- fredr_series_search_related_tags(
     series_search_text = "oil",
     tag_names = "usa",
