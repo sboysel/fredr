@@ -8,15 +8,19 @@
 #' @inheritParams fredr_tags
 #'
 #' @param tag_names A semicolon delimited string of tag names to be related to.
+#' _Required parameter._
 #'
 #' @param exclude_tag_names A semicolon delimted string of tag names that series
 #' match none of. No exclusions are done by default.
 #'
 #' @return A data frame containing tags related to `tag_names` and their
 #' descriptions.
+#'
 #' @export
 #'
 #' @examples
+#'
+#' \dontrun{
 #'
 #' fredr_related_tags(tag_names = "monetary aggregates;weekly")
 #'
@@ -24,6 +28,8 @@
 #'    tag_names = "monetary aggregates;weekly",
 #'    tag_group_id = "gen"
 #'  )
+#'
+#'  }
 #'
 fredr_related_tags <- function(tag_names = NULL,
                                realtime_start = NULL,
