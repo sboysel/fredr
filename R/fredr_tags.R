@@ -46,7 +46,7 @@
 #' [fred/tags](https://research.stlouisfed.org/docs/api/fred/tags.html)
 #'
 #' @seealso [fredr_docs()], [fredr_series_search_tags()], [fredr_series_search_related_tags()],
-#' [fredr_series_observations()]
+#' [fredr_related_tags()], [fredr_tags_series()]
 #'
 #' @examples
 #' \dontrun{

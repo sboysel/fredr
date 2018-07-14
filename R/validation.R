@@ -39,14 +39,18 @@ capture_args <- function(...) {
     MoreArgs = list(x_class = c("POSIXct", "POSIXlt", "POSIXt"))
   )
 
-  # Date formatting
+  # Formatting - dates
   args$observation_start <- format_fred_date(args$observation_start)
   args$observation_end   <- format_fred_date(args$observation_end)
   args$realtime_start    <- format_fred_date(args$realtime_start)
   args$realtime_end      <- format_fred_date(args$realtime_end)
   args$vintage_dates     <- format_fred_date(args$vintage_dates)
 
-  # Time formatting
+  # Formatting - tags
+  args$tag_names         <- format_tag_names(args$tag_names)
+  args$exclude_tag_names <- format_tag_names(args$exclude_tag_names)
+
+  # Formatting - time
   args$start_time <- format_fred_time(args$start_time)
   args$end_time   <- format_fred_time(args$end_time)
 
@@ -132,6 +136,12 @@ format_fred_date <- function(x) {
   if(is.null(x)) return(x)
 
   format(x, "%Y-%m-%d")
+}
+
+format_tag_names <- function(x) {
+  if(is.null(x)) return(x)
+
+  gsub("\\+", " ", x)
 }
 
 format_fred_time <- function(x) {

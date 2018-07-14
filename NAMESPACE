@@ -2,6 +2,7 @@
 
 export(fredr)
 export(fredr_docs)
+export(fredr_related_tags)
 export(fredr_series)
 export(fredr_series_categories)
 export(fredr_series_observations)
@@ -15,3 +16,4 @@ export(fredr_series_updates)
 export(fredr_series_vintagedates)
 export(fredr_set_key)
 export(fredr_tags)
+export(fredr_tags_series)
