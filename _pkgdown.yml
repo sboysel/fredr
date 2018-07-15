@@ -3,6 +3,10 @@ reference:
   desc: ~
   contents:
   - '`fredr_set_key`'
+- title: Releases
+  desc: ~
+  contents:
+  - starts_with("fredr_release")
 - title: Series
   desc: ~
   contents:

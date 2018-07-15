@@ -33,15 +33,14 @@ Reserve Bank of St. Louis.  Essentially a simple wrapper of
 [`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
 designed with simplicity and flexibility in mind.  The core functions are
 
-- `fredr_series_observations` - Fetch a FRED series.
-- `fredr_search` - Search for a FRED series.
-- `fredr` - Send a general request to the FRED API.
+- `fredr_set_key()` - Set the required FRED API key for the session.
+- `fredr_series_observations()` - Fetch a FRED series.
+- `fredr_series_search_text()` - Search for a FRED series by text.
+- `fredr()` - Send a general request to the FRED API.
 
-All objects are returned as `tibbles`.  As nearly all optional
-parameters supplied to these functions are relayed verbatim to the API, the 
-user is strongly encouraged to read the full [FRED
-API](https://research.stlouisfed.org/docs/api/fred/) documentation to leverage the full power
-of the FRED API and `fredr`.
+Objects are returned as `tibbles`.  The user is strongly encouraged to read the 
+full [FRED API](https://research.stlouisfed.org/docs/api/fred/) documentation to 
+leverage the full power of `fredr` and the FRED API.
 
 ## Installation
 
@@ -71,7 +70,9 @@ fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
 
 where "abcdefghijklmnopqrstuvwxyz123456" is replaced with the actual key you obtain from FRED.  This will set the key for the current session.  You can persistently set the key by appending the line `FRED_API_KEY=abcdefghijklmnopqrstuvwxyz123456` to an `.Renviron` file in the working directory.  This can be done using a text editor or by running `usethis::edit_r_environ`.  If you edit the `.Renviron` file, remember to either restart the session or run `readRenviron(".Renviron")` for the changes to take effect. 
 
-## Retrieve series
+## Series
+
+### Retrieve series
 
 `fredr_series_observations` retrieves series observations (i.e. the actual time series data) for a specified FRED series ID.  The function returns a `tibble` with 2 columns (observation date and value).
 
@@ -127,7 +128,7 @@ gnpca_xts %>%
   acf(., main = "ACF for First Differenced real US GNP, log")
 ```
 
-## Search
+### Search for a series
 
 Search for FRED series.
 

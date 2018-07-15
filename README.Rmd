@@ -21,15 +21,14 @@ Reserve Bank of St. Louis.  Essentially a simple wrapper of
 [`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
 designed with simplicity and flexibility in mind.  The core functions are
 
+- `fredr_set_key()` - Set the required FRED API key for the session.
 - `fredr_series_observations()` - Fetch a FRED series.
 - `fredr_series_search_text()` - Search for a FRED series by text.
 - `fredr()` - Send a general request to the FRED API.
 
-All objects are returned as `tibbles`.  As nearly all optional
-parameters supplied to these functions are relayed verbatim to the API, the 
-user is strongly encouraged to read the full [FRED
-API](https://research.stlouisfed.org/docs/api/fred/) documentation to leverage the full power
-of the FRED API and `fredr`.
+Objects are returned as `tibbles`.  The user is strongly encouraged to read the 
+full [FRED API](https://research.stlouisfed.org/docs/api/fred/) documentation to 
+leverage the full power of `fredr` and the FRED API.
 
 ## Installation
 
@@ -40,7 +39,7 @@ devtools::install_github("sboysel/fredr")
 
 ## Usage
 
-See the [Getting started](http://sboysel.github.io/fredr/articles/fredr.html) article.
+See the [Get started](http://sboysel.github.io/fredr/articles/fredr.html) article.
 
 ## See Also
 The primary goal in creating `fredr` was educational.  I also suggest you check

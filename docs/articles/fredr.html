@@ -73,7 +73,7 @@
       <h1>Using fredr</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2018-07-14</h4>
+            <h4 class="date">2018-07-15</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr.Rmd"><code>vignettes/fredr.Rmd</code></a></small>
       <div class="hidden name"><code>fredr.Rmd</code></div>
@@ -88,13 +88,15 @@
 <p><code>fredr</code> interacts with the <a href="https://research.stlouisfed.org/fred2/">Federal Reserve Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. Essentially a simple wrapper of <a href="https://github.com/r-lib/httr"><code>httr</code></a> and the FRED API itself, <code>fredr</code> is designed with simplicity and flexibility in mind. The core functions are</p>
 <ul>
 <li>
-<code>fredr_series_observations</code> - Fetch a FRED series.</li>
+<code><a href="../reference/fredr_set_key.html">fredr_set_key()</a></code> - Set the required FRED API key for the session.</li>
 <li>
-<code>fredr_search</code> - Search for a FRED series.</li>
+<code><a href="../reference/fredr_series_observations.html">fredr_series_observations()</a></code> - Fetch a FRED series.</li>
 <li>
-<code>fredr</code> - Send a general request to the FRED API.</li>
+<code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code> - Search for a FRED series by text.</li>
+<li>
+<code><a href="../reference/fredr.html">fredr()</a></code> - Send a general request to the FRED API.</li>
 </ul>
-<p>All objects are returned as <code>tibbles</code>. As nearly all optional parameters supplied to these functions are relayed verbatim to the API, the user is strongly encouraged to read the full <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API</a> documentation to leverage the full power of the FRED API and <code>fredr</code>.</p>
+<p>Objects are returned as <code>tibbles</code>. The user is strongly encouraged to read the full <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API</a> documentation to leverage the full power of <code>fredr</code> and the FRED API.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -111,9 +113,12 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_set_key.html">fredr_set_key</a></span>(<span class="st">"abcdefghijklmnopqrstuvwxyz123456"</span>)</a></code></pre></div>
 <p>where “abcdefghijklmnopqrstuvwxyz123456” is replaced with the actual key you obtain from FRED. This will set the key for the current session. You can persistently set the key by appending the line <code>FRED_API_KEY=abcdefghijklmnopqrstuvwxyz123456</code> to an <code>.Renviron</code> file in the working directory. This can be done using a text editor or by running <code><a href="http://www.rdocumentation.org/packages/usethis/topics/edit">usethis::edit_r_environ</a></code>. If you edit the <code>.Renviron</code> file, remember to either restart the session or run <code>readRenviron(".Renviron")</code> for the changes to take effect.</p>
 </div>
-<div id="retrieve-series" class="section level2">
+<div id="series" class="section level2">
 <h2 class="hasAnchor">
-<a href="#retrieve-series" class="anchor"></a>Retrieve series</h2>
+<a href="#series" class="anchor"></a>Series</h2>
+<div id="retrieve-series" class="section level3">
+<h3 class="hasAnchor">
+<a href="#retrieve-series" class="anchor"></a>Retrieve series</h3>
 <p><code>fredr_series_observations</code> retrieves series observations (i.e. the actual time series data) for a specified FRED series ID. The function returns a <code>tibble</code> with 2 columns (observation date and value).</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_observations.html">fredr_series_observations</a></span>(</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span>,</a>
@@ -183,9 +188,9 @@
 <a class="sourceLine" id="cb7-14" data-line-number="14"><span class="st">  </span><span class="kw">acf</span>(., <span class="dt">main =</span> <span class="st">"ACF for First Differenced real US GNP, log"</span>)</a></code></pre></div>
 <p><img src="fredr_files/figure-html/fredr_series_observations4-1.png" width="672"></p>
 </div>
-<div id="search" class="section level2">
-<h2 class="hasAnchor">
-<a href="#search" class="anchor"></a>Search</h2>
+<div id="search-for-a-series" class="section level3">
+<h3 class="hasAnchor">
+<a href="#search-for-a-series" class="anchor"></a>Search for a series</h3>
 <p>Search for FRED series.</p>
 <ul>
 <li>
@@ -276,6 +281,7 @@
 </li>
 </ul>
 <p>See <code>help(fredr_search)</code> for more details.</p>
+</div>
 </div>
 <div id="tags" class="section level2">
 <h2 class="hasAnchor">
@@ -407,8 +413,7 @@
 <a href="#introduction">Introduction</a><ul class="nav nav-pills nav-stacked">
 <li><a href="#installation">Installation</a></li>
       <li><a href="#authentication">Authentication</a></li>
-      <li><a href="#retrieve-series">Retrieve series</a></li>
-      <li><a href="#search">Search</a></li>
+      <li><a href="#series">Series</a></li>
       <li><a href="#tags">Tags</a></li>
       <li><a href="#view-fred-api-documentation">View FRED API documentation</a></li>
       <li><a href="#general-queries">General queries</a></li>

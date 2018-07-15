@@ -81,13 +81,15 @@
 <p><code>fredr</code> interacts with the <a href="https://research.stlouisfed.org/fred2/">Federal Reserve Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. Essentially a simple wrapper of <a href="https://github.com/r-lib/httr"><code>httr</code></a> and the FRED API itself, <code>fredr</code> is designed with simplicity and flexibility in mind. The core functions are</p>
 <ul>
 <li>
+<code><a href="reference/fredr_set_key.html">fredr_set_key()</a></code> - Set the required FRED API key for the session.</li>
+<li>
 <code><a href="reference/fredr_series_observations.html">fredr_series_observations()</a></code> - Fetch a FRED series.</li>
 <li>
 <code><a href="reference/fredr_series_search.html">fredr_series_search_text()</a></code> - Search for a FRED series by text.</li>
 <li>
 <code><a href="reference/fredr.html">fredr()</a></code> - Send a general request to the FRED API.</li>
 </ul>
-<p>All objects are returned as <code>tibbles</code>. As nearly all optional parameters supplied to these functions are relayed verbatim to the API, the user is strongly encouraged to read the full <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API</a> documentation to leverage the full power of the FRED API and <code>fredr</code>.</p>
+<p>Objects are returned as <code>tibbles</code>. The user is strongly encouraged to read the full <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API</a> documentation to leverage the full power of <code>fredr</code> and the FRED API.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -97,7 +99,7 @@
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p>See the <a href="http://sboysel.github.io/fredr/articles/fredr.html">Getting started</a> article.</p>
+<p>See the <a href="http://sboysel.github.io/fredr/articles/fredr.html">Get started</a> article.</p>
 </div>
 <div id="see-also" class="section level2">
 <h2 class="hasAnchor">
