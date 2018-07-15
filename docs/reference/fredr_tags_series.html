@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get FRED series tags — fredr_tags • fredr</title>
+<title>Find FRED series matching tag names — fredr_tags_series • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,11 +30,10 @@
 
 
 
-<meta property="og:title" content="Get FRED series tags — fredr_tags" />
+<meta property="og:title" content="Find FRED series matching tag names — fredr_tags_series" />
 
-<meta property="og:description" content="Get FRED tags. Optionally, filter results by tag name, tag group, or
-search text. FRED tags are attributes assigned to a series. By default,
-all tags are returned, unfiltered, up to the limit." />
+<meta property="og:description" content="Get the series matching the tag_names parameter. Exclude tags in the
+exclude_tag_names parameter." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -105,26 +104,35 @@ all tags are returned, unfiltered, up to the limit." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get FRED series tags</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_tags.R'><code>R/fredr_tags.R</code></a></small>
-    <div class="hidden name"><code>fredr_tags.Rd</code></div>
+    <h1>Find FRED series matching tag names</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_tags_series.R'><code>R/fredr_tags_series.R</code></a></small>
+    <div class="hidden name"><code>fredr_tags_series.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get FRED tags. Optionally, filter results by tag name, tag group, or
-search text. FRED tags are attributes assigned to a series. By default,
-all tags are returned, unfiltered, up to the <code>limit</code>.</p>
+    <p>Get the series matching the <code>tag_names</code> parameter. Exclude tags in the
+<code>exclude_tag_names</code> parameter.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_tags</span>(<span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>fredr_tags_series</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>tag_names</th>
+      <td><p>A semicolon delimited string of tag names to
+find series using. <em>Required parameter.</em></p></td>
+    </tr>
+    <tr>
+      <th>exclude_tag_names</th>
+      <td><p>A semicolon delimted string of tag names that series
+match <em>none</em> of. No exclusions are done by default.</p></td>
+    </tr>
     <tr>
       <th>realtime_start</th>
       <td><p>A <code>Date</code> indicating the start of the real-time period.
@@ -136,29 +144,6 @@ Defaults to today's date. For more information, see
       <td><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
-    </tr>
-    <tr>
-      <th>tag_names</th>
-      <td><p>A semicolon delimited string of tag names to only
-include in the response. No filtering by tag names by default.</p></td>
-    </tr>
-    <tr>
-      <th>tag_group_id</th>
-      <td><p>A string tag group id to filter tags by type. No filtering
-by tag group by default. Possible values are:</p><ul>
-<li><p><code>"freq"</code> = Frequency</p></li>
-<li><p><code>"gen"</code> = General or Concept</p></li>
-<li><p><code>"geo"</code> = Geography</p></li>
-<li><p><code>"geot"</code> = Geography Type</p></li>
-<li><p><code>"rls"</code> = Release</p></li>
-<li><p><code>"seas"</code> = Seasonal Adjustment</p></li>
-<li><p><code>"src"</code> = Source</p></li>
-</ul></td>
-    </tr>
-    <tr>
-      <th>search_text</th>
-      <td><p>A string indicating the words to find matching tags with.
-No filtering by search words by default.</p></td>
     </tr>
     <tr>
       <th>limit</th>
@@ -192,26 +177,38 @@ are: <code>"asc"</code>, and <code>"desc"</code>. Defaults to <code>"asc"</code>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A data frame containing tags and their descriptions.</p>
+    <p>A data frame containing tags related to <code>tag_names</code> and their
+descriptions.</p>
     
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
     
-    <p><a href='https://research.stlouisfed.org/docs/api/fred/tags.html'>fred/tags</a></p>
+    <p><a href='https://research.stlouisfed.org/docs/api/fred/tags_series.html'>fred/tags/series</a></p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='fredr_docs.html'>fredr_docs()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>,
-<code><a href='fredr_related_tags.html'>fredr_related_tags()</a></code>, <code><a href='fredr_tags_series.html'>fredr_tags_series()</a></code></p></div>
+<code><a href='fredr_related_tags.html'>fredr_related_tags()</a></code>, <code><a href='fredr_tags.html'>fredr_tags()</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_tags</span>()
-<span class='fu'>fredr_tags</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"gdp;oecd"</span>)
-<span class='fu'>fredr_tags</span>(<span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='st'>"geo"</span>)
-<span class='fu'>fredr_tags</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"unemployment"</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'>
+</div><span class='co'># NOT RUN {</span>
+<span class='fu'>fredr_tags_series</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"gdp"</span>)
+
+<span class='fu'>fredr_tags_series</span>(
+   <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"gdp"</span>,
+   <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='st'>"quarterly"</span>
+ )
+
+<span class='fu'>fredr_tags_series</span>(
+   <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"gdp"</span>,
+   <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='st'>"quarterly"</span>,
+   <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>
+)
+
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

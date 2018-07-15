@@ -151,6 +151,10 @@ validate_endpoint <- function(x) {
 
   validate_is_class(x, "endpoint", "character")
 
+  if(! (length(x) == 1) ) {
+    stop("x must be of length 1.", call. = FALSE)
+  }
+
   if (!is_endpoint(x)) {
     msg <- paste0(
       "`", x,
