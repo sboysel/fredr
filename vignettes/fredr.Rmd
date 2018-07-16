@@ -134,19 +134,19 @@ Search for FRED series.
 
 - Use `fredr_search` to search for a series by text in the series description
     ```{r fredr_search, message=FALSE, warning=FALSE}
-    fredr_series_search_text("unemployment")
+    fredr_series_search_text("unemployment", limit = 100L)
     ```
 - Use `fredr_search_id` to search for a series by the ID of the series
     ```{r fredr_search_id, message=FALSE, warning=FALSE}
-    fredr_series_search_id("UNRATE")
+    fredr_series_search_id("UNRATE", limit = 100L)
     ```
 - Use `fredr_search_tags` to search for series tags
     ```{r fredr_search_tags, message=FALSE, warning=FALSE}
-    fredr_series_search_tags("unemployment")
+    fredr_series_search_tags("unemployment", limit = 100L)
     ```
 - Use `fredr_search_rel_tags` to search for series tags related to a given tag.  For example, to search for tags related to the tag "usa" in which the series text matches "gnp", use the following:
     ```{r fredr_search_rel_tags, message=FALSE, warning=FALSE}
-    fredr_series_search_related_tags("gnp", "usa")
+    fredr_series_search_related_tags("gnp", "usa", limit = 30L)
     ```
     
 See `help(fredr_search)` for more details.
@@ -165,7 +165,7 @@ Series tags can be listed or searched for using `fredr_tags`.  For tags matched 
     ```
 - Return tags for a given group ID
     ```{r fredr_tags3, message=FALSE, warning=FALSE}
-    fredr_tags(tag_group_id = "geo")
+    fredr_tags(tag_group_id = "geo", limit = 50L)
     ```
 - Search for tags by text
     ```{r fredr_tags4, message=FALSE, warning=FALSE}

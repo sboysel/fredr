@@ -146,12 +146,13 @@ fredr_series_observations <- function(series_id = NULL,
   frame <- do.call(fredr, c(fredr_args, user_args))
 
   frame$value[frame$value == "."] <- NA
-  frame$value <- as.numeric(frame$value)
-  frame$date <- as.Date(frame$date, "%Y-%m-%d")
 
-  frame <- frame[order(frame$date), c("date", "value")]
+  obs <- tibble::tibble(
+    date = as.Date(frame$date, "%Y-%m-%d"),
+    value = as.numeric(frame$value)
+  )
 
-  names(frame) <- c("date", series_id)
+  names(obs) <- c("date", series_id)
 
-  return(frame)
+  return(obs)
 }
