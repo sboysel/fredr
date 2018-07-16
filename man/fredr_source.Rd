@@ -35,5 +35,5 @@ fredr_source(source_id = 1L)
 }
 }
 \seealso{
-\code{\link[=fredr_sources]{fredr_sources()}}, \code{\link[=fredr_source]{fredr_source()}}, \code{\link[=fredr_source_releases]{fredr_source_releases()}}
+\code{\link[=fredr_sources]{fredr_sources()}}, \code{\link[=fredr_source_releases]{fredr_source_releases()}}
 }

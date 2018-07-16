@@ -29,7 +29,7 @@
 #'
 #' [fred/source/releases](https://research.stlouisfed.org/docs/api/fred/source_releases.html)
 #'
-#' @seealso [fredr_sources()], [fredr_source()], [fredr_source_releases()]
+#' @seealso [fredr_sources()], [fredr_source()]
 #'
 #' @examples
 #' \dontrun{
