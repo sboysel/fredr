@@ -64,4 +64,50 @@ test_that("validate_required_string_param()", {
   expect_error(validate_required_string_param(length2))
 })
 
+test_that("validate_endpoint()", {
+  expect_silent(validate_endpoint("series/observations"))
+  expect_error(validate_endpoint("bad"))
+  expect_error(validate_endpoint(1))
+  expect_error(validate_endpoint(c("series/observations", "series/observations")))
+})
+
+test_that("validate_series_id()", {
+  good <- "my_series_id"
+  numeric <- 1
+  length2 <- 1:2
+  expect_silent(validate_series_id(good))
+  expect_error(validate_series_id(numeric))
+  expect_error(validate_series_id(length2))
+})
+
+test_that("validate_release_id()", {
+  good <- 1
+  char <- "bad"
+  length2 <- 1:2
+  expect_silent(validate_release_id(good))
+  expect_error(validate_release_id(char))
+  expect_error(validate_release_id(length2))
+})
+
+test_that("validate_boolean()", {
+  good <- TRUE
+  numeric <- 1
+  length2 <- c("a", "b")
+  expect_silent(validate_boolean(good))
+  expect_error(validate_boolean(numeric))
+  expect_error(validate_boolean(length2))
+})
+
+test_that("format_boolean()", {
+  expect_silent(format_boolean(TRUE))
+  expect_silent(format_boolean(FALSE))
+  expect_silent(format_boolean(1L))
+  expect_silent(format_boolean(0L))
+  expect_identical(format_boolean(TRUE), "true")
+  expect_identical(format_boolean(FALSE), "false")
+  expect_identical(format_boolean(1L), "true")
+  expect_identical(format_boolean(0L), "false")
+  expect_null(format_boolean(NULL))
+})
+
 

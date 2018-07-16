@@ -7,6 +7,7 @@ README.md: README.Rmd
 	rm -f README.html
 
 vignettes: vignettes/fredr.Rmd
+	$(R) -e "devtools::install()"
 	$(R) -e "devtools::build_vignettes()"
 
 docs: R/*.R tests/testthat/*.R _pkgdown.yml

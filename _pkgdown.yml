@@ -3,6 +3,10 @@ reference:
   desc: ~
   contents:
   - '`fredr_set_key`'
+- title: Releases
+  desc: ~
+  contents:
+  - starts_with("fredr_release")
 - title: Series
   desc: ~
   contents:
@@ -11,6 +15,8 @@ reference:
   desc: ~
   contents:
   - '`fredr_tags`'
+  - '`fredr_related_tags`'
+  - '`fredr_tags_series`'
 - title: Miscellania
   desc: ~
   contents:

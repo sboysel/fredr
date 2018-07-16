@@ -9,7 +9,6 @@ capture_args <- function(...) {
 
   # Validation - limit
   validate_limit(args$limit)
-  args$limit <- force_integer(args$limit)
 
   # Validation - dates
   date_lst <- list(
@@ -39,6 +38,13 @@ capture_args <- function(...) {
     MoreArgs = list(x_class = c("POSIXct", "POSIXlt", "POSIXt"))
   )
 
+  # Validation - boolean values
+  validate_boolean(args$include_release_dates_with_no_data)
+  validate_boolean(args$include_observation_values)
+
+  # Limit formatting
+  args$limit <- force_integer(args$limit)
+
   # Formatting - dates
   args$observation_start <- format_fred_date(args$observation_start)
   args$observation_end   <- format_fred_date(args$observation_end)
@@ -53,6 +59,14 @@ capture_args <- function(...) {
   # Formatting - time
   args$start_time <- format_fred_time(args$start_time)
   args$end_time   <- format_fred_time(args$end_time)
+
+  # Boolean formatting
+  args$include_release_dates_with_no_data <- format_boolean(
+    args$include_release_dates_with_no_data
+  )
+  args$include_observation_values <- format_boolean(
+    args$include_observation_values
+  )
 
   # Return list for use in API call
   args
@@ -96,6 +110,18 @@ validate_series_id <- function(x) {
   }
 }
 
+validate_release_id <- function(x) {
+  if(is.null(x)) {
+    stop("Argument `release_id` must be supplied.", call. = FALSE)
+  }
+
+  validate_is_class(x, "release_id", c("integer", "numeric"))
+
+  if(! (length(x) == 1) ) {
+    stop("Argument `release_id` must be of length 1.", call. = FALSE)
+  }
+}
+
 validate_required_string_param <- function(x) {
 
   x_nm <- deparse(substitute(x))
@@ -114,9 +140,20 @@ validate_required_string_param <- function(x) {
 
 }
 
+validate_boolean <- function(x) {
+  if(is.null(x)) return(x)
+
+  validate_is_class(x, "include_release_dates_with_no_data", "logical")
+
+}
+
 validate_endpoint <- function(x) {
 
   validate_is_class(x, "endpoint", "character")
+
+  if(! (length(x) == 1) ) {
+    stop("x must be of length 1.", call. = FALSE)
+  }
 
   if (!is_endpoint(x)) {
     msg <- paste0(
@@ -148,6 +185,13 @@ format_fred_time <- function(x) {
   if(is.null(x)) return(x)
 
   format(x, "%Y%m%d%H%M%S")
+}
+
+format_boolean <- function(x) {
+  if(is.null(x)) return(x)
+
+  ifelse(x, "true", "false")
+
 }
 
 list_named <- function(...) {

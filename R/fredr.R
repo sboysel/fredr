@@ -122,6 +122,9 @@ fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
                         "sources")) {
       frame <- tibble::as_tibble(parsed$sources)
     }
+    if (endpoint == "release/tables") {
+      frame <- parsed
+    }
     return(frame)
   } else {
     return(resp)
