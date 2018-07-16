@@ -11,6 +11,10 @@ reference:
   desc: ~
   contents:
   - starts_with("fredr_series")
+- title: Sources
+  desc: ~
+  contents:
+  - starts_with("fredr_source")
 - title: Tags
   desc: ~
   contents:
