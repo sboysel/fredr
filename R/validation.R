@@ -137,6 +137,15 @@ validate_source_id <- function(x) {
   }
 }
 
+validate_category_id <- function(x) {
+
+  validate_is_class(x, "category_id", c("integer", "numeric"))
+
+  if(! (length(x) == 1) ) {
+    stop("Argument `category_id` must be of length 1.", call. = FALSE)
+  }
+}
+
 validate_required_string_param <- function(x) {
 
   x_nm <- deparse(substitute(x))
