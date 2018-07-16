@@ -149,8 +149,6 @@ fredr_series_observations <- function(series_id = NULL,
   frame$value <- as.numeric(frame$value)
   frame$date <- as.Date(frame$date, "%Y-%m-%d")
 
-  frame <- frame[order(frame$date), c("date", "value")]
-
   names(frame) <- c("date", series_id)
 
   return(frame)
