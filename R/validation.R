@@ -7,8 +7,12 @@ capture_args <- function(...) {
 
   args <- list_named(...)
 
-  # Validation - limit
+  # Validation - integer values
   validate_limit(args$limit)
+
+  # Validation - boolean values
+  validate_boolean(args$include_release_dates_with_no_data)
+  validate_boolean(args$include_observation_values)
 
   # Validation - dates
   date_lst <- list(
@@ -38,12 +42,19 @@ capture_args <- function(...) {
     MoreArgs = list(x_class = c("POSIXct", "POSIXlt", "POSIXt"))
   )
 
-  # Validation - boolean values
-  validate_boolean(args$include_release_dates_with_no_data)
-  validate_boolean(args$include_observation_values)
+  # Formatting - integer values
+  args$limit      <- force_integer(args$limit)
+  args$release_id <- force_integer(args$release_id)
+  args$source_id  <- force_integer(args$source_id)
+  args$element_id <- force_integer(args$element_id)
 
-  # Limit formatting
-  args$limit <- force_integer(args$limit)
+  # Formatting - boolean values
+  args$include_release_dates_with_no_data <- format_boolean(
+    args$include_release_dates_with_no_data
+  )
+  args$include_observation_values <- format_boolean(
+    args$include_observation_values
+  )
 
   # Formatting - dates
   args$observation_start <- format_fred_date(args$observation_start)
@@ -52,21 +63,13 @@ capture_args <- function(...) {
   args$realtime_end      <- format_fred_date(args$realtime_end)
   args$vintage_dates     <- format_fred_date(args$vintage_dates)
 
-  # Formatting - tags
-  args$tag_names         <- format_tag_names(args$tag_names)
-  args$exclude_tag_names <- format_tag_names(args$exclude_tag_names)
-
   # Formatting - time
   args$start_time <- format_fred_time(args$start_time)
   args$end_time   <- format_fred_time(args$end_time)
 
-  # Boolean formatting
-  args$include_release_dates_with_no_data <- format_boolean(
-    args$include_release_dates_with_no_data
-  )
-  args$include_observation_values <- format_boolean(
-    args$include_observation_values
-  )
+  # Formatting - tags
+  args$tag_names         <- format_tag_names(args$tag_names)
+  args$exclude_tag_names <- format_tag_names(args$exclude_tag_names)
 
   # Return list for use in API call
   args
@@ -119,6 +122,18 @@ validate_release_id <- function(x) {
 
   if(! (length(x) == 1) ) {
     stop("Argument `release_id` must be of length 1.", call. = FALSE)
+  }
+}
+
+validate_source_id <- function(x) {
+  if(is.null(x)) {
+    stop("Argument `source_id` must be supplied.", call. = FALSE)
+  }
+
+  validate_is_class(x, "source_id", c("integer", "numeric"))
+
+  if(! (length(x) == 1) ) {
+    stop("Argument `source_id` must be of length 1.", call. = FALSE)
   }
 }
 
