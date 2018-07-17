@@ -13,8 +13,9 @@ fredr_category_series(category_id = 0L, limit = NULL, offset = NULL,
 \item{category_id}{An integer ID for the category.  Default is \code{0} for the
 root category. \emph{Required parameter.}}
 
-\item{limit}{An positive integer indicating maximum number of results to return.  Possible
-values are any integer between \code{1} and \code{1000} (default), inclusive.}
+\item{limit}{An positive integer indicating maximum number of results to
+return.  Possible values are any integer between \code{1} and \code{1000} (default),
+inclusive.}
 
 \item{offset}{An non-negative integer used in conjunction with \code{limit} for
 long series.  This mimics the idea of \emph{pagination} to retrieve large amounts
@@ -64,7 +65,8 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object.
+A \code{tibble} object with information for series matching the request for
+the category specified in \code{category_id}.
 }
 \description{
 Get the series in a category

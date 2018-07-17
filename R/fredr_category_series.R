@@ -3,8 +3,9 @@
 #' @param category_id An integer ID for the category.  Default is `0` for the
 #' root category. _Required parameter._
 #'
-#' @param limit An positive integer indicating maximum number of results to return.  Possible
-#' values are any integer between `1` and `1000` (default), inclusive.
+#' @param limit An positive integer indicating maximum number of results to
+#' return.  Possible values are any integer between `1` and `1000` (default),
+#' inclusive.
 #'
 #' @param offset An non-negative integer used in conjunction with `limit` for
 #' long series.  This mimics the idea of _pagination_ to retrieve large amounts
@@ -52,7 +53,8 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
-#' @return A `tibble` object.
+#' @return A `tibble` object with information for series matching the request for
+#' the category specified in `category_id`.
 #'
 #' @section API Documentation:
 #'

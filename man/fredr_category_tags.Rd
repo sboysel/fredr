@@ -52,9 +52,9 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object information on tags matching the request.
-Data include tag name, group ID, popularity, series count, tag creation date,
-and additional notes.
+A \code{tibble} object information on tags matching the request and their
+descriptions.  Data include tag name, group ID, popularity, series count, tag
+creation date, and additional notes.
 }
 \description{
 Get the FRED tags for a category. Optionally, filter results by tag name,
