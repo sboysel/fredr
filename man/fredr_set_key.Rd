@@ -7,8 +7,8 @@
 fredr_set_key(key)
 }
 \arguments{
-\item{key}{A valid FRED API key as a string.  Obtain one at
-\link{https://api.stlouisfed.org/api_key.html}.}
+\item{key}{A valid FRED API key as a string.  Obtain one at the
+\href{https://api.stlouisfed.org/api_key.html}{API Keys} page.}
 }
 \description{
 Users of the \code{fredr`` package must authenticate with the FRED API by use of an API key. The function}fredr_set_key()` sets the FRED API key as an

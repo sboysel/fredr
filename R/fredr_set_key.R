@@ -5,8 +5,8 @@
 #' environment variable for use with the service.  For persistence across sessions,
 #' see Details section.
 #'
-#' @param key A valid FRED API key as a string.  Obtain one at
-#'				[https://api.stlouisfed.org/api_key.html].
+#' @param key A valid FRED API key as a string.  Obtain one at the
+#'				[API Keys](https://api.stlouisfed.org/api_key.html) page.
 #'
 #' @details `fredr_set_key()` sets a key as an environment variable for use with
 #' the `fredr`` package in the current session.  The key can also be set in the
