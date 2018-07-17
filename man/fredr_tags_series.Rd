@@ -5,8 +5,8 @@
 \title{Find FRED series matching tag names}
 \usage{
 fredr_tags_series(tag_names = NULL, exclude_tag_names = NULL,
-  realtime_start = NULL, realtime_end = NULL, limit = NULL,
-  offset = NULL, order_by = NULL, sort_order = NULL)
+  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
+  realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
 \item{tag_names}{A semicolon delimited string of tag names to
@@ -15,14 +15,6 @@ find series using. \emph{Required parameter.}}
 \item{exclude_tag_names}{A semicolon delimted string of tag names that series
 match \emph{none} of. No exclusions are done by default.}
 
-\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
-
-\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
-
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}
 
@@ -30,26 +22,41 @@ Defaults to \code{1000}, the maximum.}
 This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
-\item{order_by}{Order results by values of the specified attribute. Default
-ordering is by \code{series_count}. Possible values are:
+\item{order_by}{A string indicating which attribute by which to order the
+results of the query.  Possible values include:
 \itemize{
-\item \code{"series_count"}
+\item \code{"series_id"} (default)
+\item \code{"title"}
+\item \code{"units"}
+\item \code{"frequency"}
+\item \code{"seasonal_adjustment"}
+\item \code{"realtime_start"}
+\item \code{"realtime_end"}
+\item \code{"last_updated"}
+\item \code{"observation_start"}
+\item \code{"observation_end"}
 \item \code{"popularity"}
-\item \code{"created"}
-\item \code{"name"}
-\item \code{"group_id"}
+\item \code{"group_popularity"}
 }}
 
 \item{sort_order}{A string representing the order of the resulting series,
 sorted by the attribute values specified by \code{order_by}. Possible values
-are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+are: \code{"asc"} (default), and \code{"desc"}.}
+
+\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+
+\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A data frame containing tags related to \code{tag_names} and their
-descriptions.
+A \code{tibble} object containing FRED series with tags matching \code{tag_names}
+and their descriptions.
 }
 \description{
-Get the series matching the \code{tag_names} parameter. Exclude tags in the
+Get the series matching tags in the \code{tag_names} parameter. Exclude tags in the
 \code{exclude_tag_names} parameter.
 }
 \section{API Documentation}{
@@ -61,24 +68,24 @@ Get the series matching the \code{tag_names} parameter. Exclude tags in the
 \examples{
 
 \dontrun{
-
+# All series tagged with "gdp"
 fredr_tags_series(tag_names = "gdp")
-
+# All series tagged with "gdp" and not tagged with "quarterly"
 fredr_tags_series(
    tag_names = "gdp",
    exclude_tag_names = "quarterly"
  )
-
+# Top 100 most popular non-quarterly series matching GDP
 fredr_tags_series(
    tag_names = "gdp",
    exclude_tag_names = "quarterly",
    order_by = "popularity"
 )
-
 }
-
 }
 \seealso{
-\code{\link[=fredr_docs]{fredr_docs()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
-\code{\link[=fredr_related_tags]{fredr_related_tags()}}, \code{\link[=fredr_tags]{fredr_tags()}}
+\code{\link[=fredr_category_tags]{fredr_category_tags()}}, \code{\link[=fredr_category_related_tags]{fredr_category_related_tags()}}, \code{\link[=fredr_docs]{fredr_docs()}},
+\code{\link[=fredr_release_tags]{fredr_release_tags()}}, \code{\link[=fredr_release_related_tags]{fredr_release_related_tags()}},
+\code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
+\code{\link[=fredr_tags]{fredr_tags()}}, \code{\link[=fredr_related_tags]{fredr_related_tags()}}
 }

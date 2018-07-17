@@ -47,9 +47,9 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
-#' @return A `tibble` object information on tags matching the request.
-#' Data include tag name, group ID, popularity, series count, tag creation date,
-#' and additional notes.
+#' @return A `tibble` object information on tags matching the request and their
+#' descriptions.  Data include tag name, group ID, popularity, series count, tag
+#' creation date, and additional notes.
 #'
 #' @section API Documentation:
 #'
