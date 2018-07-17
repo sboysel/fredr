@@ -1,10 +1,9 @@
 #' Get the related FRED tags for one or more FRED tags matching a series search
 #'
-#' Return the _related_ FRED tags for a search: tags assigned to series that
-#'
-#' * match all tags in the \code{tag_names} parameter (required)
-#' * no tags in the \code{exclude_tag_names} (optional)
-#' * the search words set by the \code{series_search_text} parameter (optional)
+#' FRED tags are attributes assigned to series.  Return the _related_ FRED tags
+#' for a search: tags assigned to series that match _all_ tags in the `tag_names`
+#' parameter (required), _no_ tags in the `exclude_tag_names` (optional) and the
+#' search words set by the `series_search_text` parameter (optional).
 #'
 #' @inheritParams fredr_series_observations
 #'
@@ -26,7 +25,6 @@
 #' * `"name"`
 #' * `"group_id"`
 #'
-#'
 #' @param exclude_tag_names A semicolon delimited string of tag names that
 #' series match _none_ of.  Defaults to no tag filtering.
 #'
@@ -44,27 +42,43 @@
 #' @param tag_search_text A string to match tag names.  Defaults to no filtering
 #' by tag name matching.
 #'
-#' @return A \code{tibble} object.
+#' @return A `tibble` object.
 #'
 #' @references API Documentation:
 #'
 #' [series/search/related_tags](https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html)
 #'
-#' @seealso [fredr_series_search_text()], [fredr_series_search_id()], [fredr_series_search_tags()], [fredr_tags()]
+#' @seealso [fredr_series_observations()], [fredr_series_search_text()],
+#' [fredr_series_search_id()], [fredr_series_search_tags()],
+#' [fredr_series()], [fredr_series_categories()],
+#' [fredr_series_release()], [fredr_series_tags()], [fredr_series_updates()],
+#' [fredr_series_vintagedates()].
 #'
 #' @examples
 #' \dontrun{
-#' library(fredr)
-#' fredr_series_search_related_tags("oil", "usa")
+#' # Search for all tags matching the series text "oil" and the tag "usa".
+#' fredr_series_search_related_tags(
+#'   series_search_text = "oil",
+#'   tag_names = "usa"
+#' )
+#' # Search for tags matching the series text "oil", the tag text "usa", and
+#' # are related to the tag "usa".  Return only results in the "src" (Source)
+#' # group.
+#' fredr_series_search_related_tags(
+#'   series_search_text = "oil",
+#'   tag_names = "usa"
+#'   tag_search_text = "usa",
+#'   tag_group_id = "src"
+#' )
 #' }
 #' @rdname fredr_series_search_related_tags
 #' @export
 fredr_series_search_related_tags <- function(series_search_text = NULL,
                                              tag_names = NULL,
-                                             limit = 1000L,
-                                             offset = 0,
+                                             limit = NULL,
+                                             offset = NULL,
                                              order_by = NULL,
-                                             sort_order = "asc",
+                                             sort_order = NULL,
                                              exclude_tag_names = NULL,
                                              tag_group_id = NULL,
                                              tag_search_text = NULL,

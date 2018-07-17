@@ -36,7 +36,9 @@
 #' @param tag_search_text A string to match tag names.  Defaults to no filtering
 #' by tag name matching.
 #'
-#' @return A \code{tibble} object.
+#' @return A `tibble` object where each row represents a series tag matching the
+#' query.  Data include the tag name, group ID, tag creation date, popularity,
+#' series count, and additional notes.
 #'
 #' @references API Documentation:
 #'
@@ -46,16 +48,28 @@
 #'
 #' @examples
 #' \dontrun{
-#' library(fredr)
+#' # Search for tags matching the series text "gnp"
 #' fredr_series_search_tags("gnp")
+#' # Search for tags matching the series text "oil" and the tag text "usa"
+#' fredr_series_search_tags(
+#'   series_search_text = "oil",
+#'   tag_search_text = "usa"
+#' )
+#' # Search for tags matching the series text "oil" and the tag text "usa".
+#' # Return only results in the "geo" (Geography) group
+#' fredr_series_search_tags(
+#'   series_search_text = "oil",
+#'   tag_search_text = "usa",
+#'   tag_group_id = "geo"
+#' )
 #' }
 #' @name fredr_series_search_tags
 #' @export
 fredr_series_search_tags <- function(series_search_text = NULL,
-                                     limit = 1000L,
-                                     offset = 0,
+                                     limit = NULL,
+                                     offset = NULL,
                                      order_by = NULL,
-                                     sort_order = "asc",
+                                     sort_order = NULL,
                                      tag_names = NULL,
                                      tag_group_id = NULL,
                                      tag_search_text = NULL,

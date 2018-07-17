@@ -4,8 +4,8 @@
 \alias{fredr_series_search_tags}
 \title{Get the FRED tags for a series search.}
 \usage{
-fredr_series_search_tags(series_search_text = NULL, limit = 1000L,
-  offset = 0, order_by = NULL, sort_order = "asc", tag_names = NULL,
+fredr_series_search_tags(series_search_text = NULL, limit = NULL,
+  offset = NULL, order_by = NULL, sort_order = NULL, tag_names = NULL,
   tag_group_id = NULL, tag_search_text = NULL, realtime_start = NULL,
   realtime_end = NULL)
 }
@@ -60,15 +60,29 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object.
+A \code{tibble} object where each row represents a series tag matching the
+query.  Data include the tag name, group ID, tag creation date, popularity,
+series count, and additional notes.
 }
 \description{
 Return the FRED tags by searching for matches in series text.
 }
 \examples{
 \dontrun{
-library(fredr)
+# Search for tags matching the series text "gnp"
 fredr_series_search_tags("gnp")
+# Search for tags matching the series text "oil" and the tag text "usa"
+fredr_series_search_tags(
+  series_search_text = "oil",
+  tag_search_text = "usa"
+)
+# Search for tags matching the series text "oil" and the tag text "usa".
+# Return only results in the "geo" (Geography) group
+fredr_series_search_tags(
+  series_search_text = "oil",
+  tag_search_text = "usa",
+  tag_group_id = "geo"
+)
 }
 }
 \references{
