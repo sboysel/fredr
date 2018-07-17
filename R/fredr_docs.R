@@ -3,22 +3,25 @@
 #' Opens FRED API web documentation in a new browser tab.
 #'
 #' @param endpoint A string representing the desired documentation for the exact
-#'				FRED API endpoint.  Default is \code{"base"}, which will open a link to
+#'				FRED API endpoint.  Default is `"base"`, which will open a link to
 #'				\url{https://api.stlouisfed.org/docs/fred/}.
-#' @param params A boolean value.  If \code{TRUE}, the documentation will be opened at
-#'        the 'Parameters' section.  Default is \code{FALSE}.
-#' @param debug A boolean value.  If \code{TRUE}, the documentation is not opened in a
-#'        browser and the documentation URL is returned.  If \code{FALSE}, documentation
-#'        is opened in a browser and nothing is returned.  Default is \code{FALSE}.
+#' @param params A boolean value.  If `TRUE`, the documentation will be opened at
+#'        the "Parameters" section.  Default is `FALSE`.
+#' @param debug A boolean value.  If `TRUE`, the documentation is not opened in a
+#'        browser and the documentation URL is returned as a string.  If `FALSE`,
+#'        documentation is opened in a browser and nothing is returned.  Default
+#'        is `FALSE`.
 #'
-#' @references See \url{https://api.stlouisfed.org/docs/fred/}.
+#' @section API Documentation:
+#'
+#' [FRED API](https://api.stlouisfed.org/docs/fred/)
 #'
 #' @examples
 #' \dontrun{
 #' fredr_docs()
-#' fredr_docs('category')
-#' fredr_docs('series/observations')
-#' fredr_docs('series/observations', params = TRUE)
+#' fredr_docs(endpoint = "category")
+#' fredr_docs(endpoint = "series/observations")
+#' fredr_docs(endpoint = "series/observations", params = TRUE)
 #' }
 #' @export
 fredr_docs <- function(endpoint = "base", params = FALSE, debug = FALSE) {
