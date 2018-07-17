@@ -7,21 +7,17 @@
 fredr_set_key(key)
 }
 \arguments{
-\item{key}{A FRED API key as a string.  Obtain one at
-\url{https://api.stlouisfed.org/api_key.html}.}
+\item{key}{A valid FRED API key as a string.  Obtain one at
+\link{https://api.stlouisfed.org/api_key.html}.}
 }
 \description{
-Users \code{fredr} package must authenticate with the FRED API by use of an API key.
-The function \code{fredr_key} sets the FRED API key as an environment variable for
-use with the service.
+Users of the \code{fredr`` package must authenticate with the FRED API by use of an API key. The function}fredr_set_key()` sets the FRED API key as an
+environment variable for use with the service.  For persistence across sessions,
+see Details section.
 }
 \details{
-\code{fredr_set_key} sets a key as an environment variable for use with
-the \code{fredr} package in the current session.  The key can also be set in the
-\code{.Renviron} file in the working directory.  You can edit the file manually by
-appending the line \code{FRED_API_KEY = my_api_ky}, where \code{my_api_key} is your
-actual key.  The function \code{usethis::edit_r_environ()} does this safely.  Run
-\code{readRenviron(".Renviron")} to set the key in the current session; the
+\code{fredr_set_key()} sets a key as an environment variable for use with
+the \code{fredr`` package in the current session. The key can also be set in the}.Renviron\code{file in the working directory. You can edit the file manually by appending the line}FRED_API_KEY = my_api_ky\code{, where}my_api_key\code{is your actual key. The function}usethis::edit_r_environ()\code{does this safely. Run}base::readRenviron(".Renviron")` to set the key in the current session; the
 variable will be set in subsequent sessions started in the working directory.
 }
 \examples{
@@ -32,7 +28,8 @@ fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
 
 }
 \references{
-See St. Louis Fed Web Services \href{https://api.stlouisfed.org/api_key.html}{API Keys} to obtain an API key.
+See St. Louis Fed Web Services \href{https://api.stlouisfed.org/api_key.html}{API Keys}
+to obtain an API key.
 }
 \seealso{
 Note that by using a FRED API key, you agree to the FRED API

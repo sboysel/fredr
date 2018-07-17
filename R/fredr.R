@@ -52,7 +52,7 @@
 fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
 
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
-    stop("FRED API key must be set. Use fredr_set_key().")
+    stop("FRED API key must be set. See `?fredr_set_key`.")
   }
 
   validate_endpoint(endpoint)

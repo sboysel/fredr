@@ -32,9 +32,9 @@
 
 <meta property="og:title" content="Set the FRED API key — fredr_set_key" />
 
-<meta property="og:description" content="Users fredr package must authenticate with the FRED API by use of an API key.
-The function fredr_key sets the FRED API key as an environment variable for
-use with the service." />
+<meta property="og:description" content="Users of the fredr`` package must authenticate with the FRED API by use of an API key. The functionfredr_set_key()` sets the FRED API key as an
+environment variable for use with the service.  For persistence across sessions,
+see Details section." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -112,9 +112,9 @@ use with the service." />
 
     <div class="ref-description">
     
-    <p>Users <code>fredr</code> package must authenticate with the FRED API by use of an API key.
-The function <code>fredr_key</code> sets the FRED API key as an environment variable for
-use with the service.</p>
+    <p>Users of the <code>fredr`` package must authenticate with the FRED API by use of an API key. The function</code>fredr_set_key()` sets the FRED API key as an
+environment variable for use with the service.  For persistence across sessions,
+see Details section.</p>
     
     </div>
 
@@ -125,24 +125,21 @@ use with the service.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>key</th>
-      <td><p>A FRED API key as a string.  Obtain one at
-<a href='https://api.stlouisfed.org/api_key.html'>https://api.stlouisfed.org/api_key.html</a>.</p></td>
+      <td><p>A valid FRED API key as a string.  Obtain one at
+https://api.stlouisfed.org/api_key.html.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p><code>fredr_set_key</code> sets a key as an environment variable for use with
-the <code>fredr</code> package in the current session.  The key can also be set in the
-<code>.Renviron</code> file in the working directory.  You can edit the file manually by
-appending the line <code>FRED_API_KEY = my_api_ky</code>, where <code>my_api_key</code> is your
-actual key.  The function <code><a href='http://www.rdocumentation.org/packages/usethis/topics/edit'>usethis::edit_r_environ()</a></code> does this safely.  Run
-<code>readRenviron(".Renviron")</code> to set the key in the current session; the
+    <p><code>fredr_set_key()</code> sets a key as an environment variable for use with
+the <code>fredr`` package in the current session. The key can also be set in the</code>.Renviron<code>file in the working directory. You can edit the file manually by appending the line</code>FRED_API_KEY = my_api_ky<code>, where</code>my_api_key<code>is your actual key. The function</code>usethis::edit_r_environ()<code>does this safely. Run</code>base::readRenviron(".Renviron")` to set the key in the current session; the
 variable will be set in subsequent sessions started in the working directory.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p>See St. Louis Fed Web Services <a href='https://api.stlouisfed.org/api_key.html'>API Keys</a> to obtain an API key.</p>
+    <p>See St. Louis Fed Web Services <a href='https://api.stlouisfed.org/api_key.html'>API Keys</a>
+to obtain an API key.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
