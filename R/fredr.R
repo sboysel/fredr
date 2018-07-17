@@ -1,23 +1,29 @@
 #' Send a request to the FRED API
 #'
-#' \code{\link[fredr]{fredr}} forms and submits a request to a specified endpoint of the FRED API.
+#' Send a general request to the FRED API by specifying an endpoint and a sequence
+#' of parameters.  The `fredr()` function forms and submits a request to a specified
+#' endpoint of the FRED API.  The return is either the `response` object from
+#' \code{\link[httr]{GET}} or the response parsed as a `tibble`.
 #'
 #' @param endpoint A string representing the FRED API endpoint of interest. See
-#'        \code{fredr_endpoints} for a list of endpoint possible values.
+#'        [fredr_endpoints] for a list of endpoint possible values. _Required parameter._
 #' @param ... A series of named parameters to be used in the query.  Must be of the form
-#'        \code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
-#'        See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
-#'        access to the endpoint web documentation.
+#'        `param_key = "param_value"`.  Acceptable parameters are endpoint-specific.
+#'        See the [fredr_endpoints] data frame for a list of endpoints and [fredr_docs()]
+#'        access to the web documentation for each endpoint function.
 #' @param to_frame A boolean value indicating whether or not the response
-#'        should be parsed and formatted as a data frame.  If \code{FALSE},
-#'        a \code{response} object is returned and further processing can be done with
-#'        \code{\link[httr]{content}}.  Default is \code{TRUE}.
+#'        should be parsed and formatted as a data frame.  If `FALSE`,
+#'        a `response` object is returned and further processing can be done with
+#'        \code{\link[httr]{content}}.  Default is `TRUE`.
 #' @param print_req A boolean value indicating whether or not the request
-#'        should be printed as well.  Useful for debugging.  Default is \code{FALSE}.
-#' @return If \code{to_frame = TRUE}, a data frame containing the parsed response.
-#'         If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{GET}}.
+#'        should be printed as well.  Useful for debugging.  Default is `FALSE`.
+#' @return If `to_frame = TRUE`, a `tibble` containing the parsed response.
+#'         If `to_frame = FALSE`, a `response` object returned directly from
+#'         \code{\link[httr]{GET}}.
 #'
-#' @references \url{https://api.stlouisfed.org/docs/fred/}.
+#' @section API Documentation:
+#'
+#' [FRED API](https://api.stlouisfed.org/docs/fred/)
 #'
 #' @examples
 #' \dontrun{
