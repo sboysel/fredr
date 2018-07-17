@@ -1,8 +1,4 @@
-#' Get the related categories for a category.
-#'
-#' From the FRED API documentation: "A related category is a one-way relation
-#' between 2 categories that is not part of a parent-child category hierarchy.
-#' Most categories do not have related categories."
+#' Get the related categories for a FRED category.
 #'
 #' @param category_id An integer ID for the category.  Default is `0` for the
 #' root category. _Required parameter._
@@ -15,7 +11,13 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
-#' @return A `tibble` object.
+#' @return A `tibble` object containing the name and parent ID for categories
+#' related to the category indicated by `category_id`.
+#'
+#' @details From the [FRED API documentation](https://research.stlouisfed.org/docs/api/fred/category_related.html):
+#' "A related category is a one-way relation between 2 categories that is not
+#' part of a parent-child category hierarchy. Most categories do not have related
+#' categories."
 #'
 #' @section API Documentation:
 #'
@@ -26,7 +28,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' fredr_category_related()
+#' # Categories related to the "Employment Cost Index" category
+#' fredr_category_related(category_id = 4L)
 #' }
 #' @export
 fredr_category_related <- function(category_id = 0L,

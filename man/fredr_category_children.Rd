@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_category_children.R
 \name{fredr_category_children}
 \alias{fredr_category_children}
-\title{Get the child categories for a specified parent category}
+\title{Get the child categories for a specified FRED parent category}
 \usage{
 fredr_category_children(category_id = 0L, realtime_start = NULL,
   realtime_end = NULL)
@@ -20,10 +20,11 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object.
+A \code{tibble} object containing the name and ID for the children categories
+of the parent category indicated by \code{category_id}.
 }
 \description{
-Get the child categories for a specified parent category
+Get the child categories for a specified FRED parent category
 }
 \section{API Documentation}{
 
@@ -33,7 +34,10 @@ Get the child categories for a specified parent category
 
 \examples{
 \dontrun{
-fredr_category_children()
+# Children of the root category
+fredr_category_children(category_id = 0L)
+# Children of the "Production & Business Activity" category
+fredr_category_children(category_id = 1L)
 }
 }
 \seealso{

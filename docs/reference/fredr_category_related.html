@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get the related categories for a category. — fredr_category_related • fredr</title>
+<title>Get the related categories for a FRED category. — fredr_category_related • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,11 +30,9 @@
 
 
 
-<meta property="og:title" content="Get the related categories for a category. — fredr_category_related" />
+<meta property="og:title" content="Get the related categories for a FRED category. — fredr_category_related" />
 
-<meta property="og:description" content="From the FRED API documentation: &quot;A related category is a one-way relation
-between 2 categories that is not part of a parent-child category hierarchy.
-Most categories do not have related categories.&quot;" />
+<meta property="og:description" content="Get the related categories for a FRED category." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -105,16 +103,14 @@ Most categories do not have related categories.&quot;" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get the related categories for a category.</h1>
+    <h1>Get the related categories for a FRED category.</h1>
     <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_category_related.R'><code>R/fredr_category_related.R</code></a></small>
     <div class="hidden name"><code>fredr_category_related.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>From the FRED API documentation: "A related category is a one-way relation
-between 2 categories that is not part of a parent-child category hierarchy.
-Most categories do not have related categories."</p>
+    <p>Get the related categories for a FRED category.</p>
     
     </div>
 
@@ -145,7 +141,15 @@ Defaults to today's date. For more information, see
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>tibble</code> object.</p>
+    <p>A <code>tibble</code> object containing the name and parent ID for categories
+related to the category indicated by <code>category_id</code>.</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>From the <a href='https://research.stlouisfed.org/docs/api/fred/category_related.html'>FRED API documentation</a>:
+"A related category is a one-way relation between 2 categories that is not
+part of a parent-child category hierarchy. Most categories do not have related
+categories."</p>
     
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
@@ -160,7 +164,8 @@ Defaults to today's date. For more information, see
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_category_related</span>()
+<span class='co'># Categories related to the "Employment Cost Index" category</span>
+<span class='fu'>fredr_category_related</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>4L</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -169,6 +174,8 @@ Defaults to today's date. For more information, see
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
 
       <li><a href="#api-documentation">API Documentation</a></li>
 

@@ -1,21 +1,13 @@
 #' Get the FRED tags for a category
 #'
+#' Get the FRED tags for a category. Optionally, filter results by tag name,
+#' tag group, or search. Series are assigned tags and categories. Alternatively,
+#' it is possible to get the tags for a category through a call to a function in
+#' the `fredr/series` endpoint.  See [fredr_series]. No tags exist for a category
+#' that does not have series.
+#'
 #' @param category_id An integer ID for the category.  Default is `0` for the
 #' root category. _Required parameter._
-#'
-#' @param limit An positive integer indicating maximum number of results to return.  Possible
-#' values are any integer between `1` and `1000` (default), inclusive.
-#'
-#' @param offset An non-negative integer used in conjunction with `limit` for
-#' long series.  This mimics the idea of _pagination_ to retrieve large amounts
-#' of data over multiple calls. Defaults to `0`.
-#'
-#' @param order_by Order results by values of the specified attribute.
-#' Possible values include: `"series_count"` (default), `"popularity"``,
-#' `"created"`, `"name"`, `"group_id"`.
-#'
-#' @param sort_order A string representing the order of the resulting series.
-#' Possible values are: `"asc"` (default), and `"desc"`.
 #'
 #' @param tag_names A string indicating which series tags to match.  Multiple
 #' tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).
@@ -33,6 +25,20 @@
 #'
 #' @param search_text A string to match text of tags.  No matching by default.
 #'
+#' @param limit An positive integer indicating maximum number of results to return.  Possible
+#' values are any integer between `1` and `1000` (default), inclusive.
+#'
+#' @param offset An non-negative integer used in conjunction with `limit` for
+#' long series.  This mimics the idea of _pagination_ to retrieve large amounts
+#' of data over multiple calls. Defaults to `0`.
+#'
+#' @param order_by Order results by values of the specified attribute.
+#' Possible values include: `"series_count"` (default), `"popularity"``,
+#' `"created"`, `"name"`, `"group_id"`.
+#'
+#' @param sort_order A string representing the order of the resulting series.
+#' Possible values are: `"asc"` (default), and `"desc"`.
+#'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
@@ -41,7 +47,9 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
-#' @return A `tibble` object.
+#' @return A `tibble` object information on tags matching the request.
+#' Data include tag name, group ID, popularity, series count, tag creation date,
+#' and additional notes.
 #'
 #' @section API Documentation:
 #'
@@ -52,7 +60,10 @@
 #'
 #' @examples
 #' \dontrun{
-#' fredr_category_tags(category = 1L, tag_names = "gnp")
+#' # Tags assigned to series in the "Production & Business Activity" category
+#' fredr_category_tags(category = 1L)
+#' # Select the "nation" and "monthly" tags in the "Production & Business Activity" category
+#' fredr_category_tags(category = 3L, tag_names = "nation;monthly", order_by = "popularity")
 #' }
 #' @export
 fredr_category_tags <- function(category_id = 0L,

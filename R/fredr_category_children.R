@@ -1,4 +1,4 @@
-#' Get the child categories for a specified parent category
+#' Get the child categories for a specified FRED parent category
 #'
 #' @param category_id An integer ID for the category.  Default is `0` for the
 #' root category. _Required parameter._
@@ -11,7 +11,8 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
-#' @return A `tibble` object.
+#' @return A `tibble` object containing the name and ID for the children categories
+#' of the parent category indicated by `category_id`.
 #'
 #' @section API Documentation:
 #'
@@ -22,7 +23,10 @@
 #'
 #' @examples
 #' \dontrun{
-#' fredr_category_children()
+#' # Children of the root category
+#' fredr_category_children(category_id = 0L)
+#' # Children of the "Production & Business Activity" category
+#' fredr_category_children(category_id = 1L)
 #' }
 #' @export
 fredr_category_children <- function(category_id = 0L,
