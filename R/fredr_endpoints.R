@@ -1,6 +1,6 @@
 #' List of available FRED API endpoints.
 #'
-#' @format A data frame with 31 rows and 3 variables:
+#' @format A `tibble` with 31 rows and 3 variables:
 #' \describe{
 #'   \item{type}{endpoint type (e.g. "Categories", "Releases", "Series", "Sources", and "Tags".)}
 #'   \item{endpoint}{endpoint name (e.g. "fred/category", "fredr/series/observations", "fredr/tags").
@@ -9,6 +9,8 @@
 #'   \item{note}{endpoint details}
 #' }
 #'
-#' @source \url{https://api.stlouisfed.org/docs/fred/}.
-#' @seealso [fredr]
+#' @section API Documentation:
+#'
+#' [FRED API](https://api.stlouisfed.org/docs/fred/)
+#' @seealso [fredr()], [fredr_docs()]
 "fredr_endpoints"
