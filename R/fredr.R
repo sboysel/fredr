@@ -129,7 +129,7 @@ fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
       frame <- tibble::as_tibble(parsed$sources)
     }
     if (endpoint == "release/tables") {
-      frame <- parsed
+      frame <- tibble::enframe(parsed$elements)
     }
     return(frame)
   } else {

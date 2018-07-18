@@ -20,10 +20,12 @@ for a series type element.  Default is \code{FALSE}.}
 with the release table.  Default is \code{9999-12-31} (latest date available).}
 }
 \value{
-A \code{list} object.
+A \code{tibble} object with nested results.
 }
 \description{
-Get release table trees for a given release
+You can go directly to the tree structure by passing the appropriate
+\code{element_id}. You may also use a drill-down approach to start at the root
+(top most) element by leaving the \code{element_id} off.
 }
 \section{API Documentation}{
 
@@ -34,6 +36,9 @@ Get release table trees for a given release
 \examples{
 \dontrun{
 fredr_release_tables(release_id = 10L)
+
+# Digging further into a release element
+fredr_release_tables(release_id = 53L, element_id = 12886)
 }
 }
 \seealso{

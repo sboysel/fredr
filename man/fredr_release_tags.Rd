@@ -12,22 +12,24 @@ fredr_release_tags(release_id = NULL, tag_names = NULL,
 \arguments{
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}
 
-\item{tag_names}{A string of tags to include in the response.  Multiple tags
-can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).}
+\item{tag_names}{A semicolon delimited string of tag names to only
+include in the response. No filtering by tag names by default (i.e. \emph{all}
+FRED tags returned).}
 
-\item{tag_group_id}{A string representing the tag group id to filter tags by
-type.  No filtering by default.  Possible values include:
+\item{tag_group_id}{A string tag group id to filter tags by type. No filtering
+by tag group by default. Possible values are:
 \itemize{
-\item \code{"freq"} - Frequency
-\item \code{"gen"} - General or Concept
-\item \code{"geo"} - Geography
-\item \code{"geot"} - Geography Type
-\item \code{"rls"} - Release
-\item \code{"seas"} - Seasonal Adjustment
-\item \code{"src"} - Source
+\item \code{"freq"} = Frequency
+\item \code{"gen"} = General or Concept
+\item \code{"geo"} = Geography
+\item \code{"geot"} = Geography Type
+\item \code{"rls"} = Release
+\item \code{"seas"} = Seasonal Adjustment
+\item \code{"src"} = Source
 }}
 
-\item{search_text}{A string to match text of tags.  No matching by default.}
+\item{search_text}{A string indicating the words to find matching tags with.
+No filtering by search words by default.}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}
@@ -36,11 +38,19 @@ Defaults to \code{1000}, the maximum.}
 This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
-\item{order_by}{Order results by values of the specified attribute.
-Possible values include: \code{"series_count"} (default), \code{"popularity"``,}"created"\code{,}"name"\code{,}"group_id"`.}
+\item{order_by}{Order results by values of the specified attribute. Possible
+values are:
+\itemize{
+\item \code{"series_count"} (default)
+\item \code{"popularity"}
+\item \code{"created"}
+\item \code{"name"}
+\item \code{"group_id"}
+}}
 
-\item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"} (default), and \code{"desc"}.}
+\item{sort_order}{A string representing the order of the resulting series,
+sorted by the attribute values specified by \code{order_by}. Possible values
+are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
@@ -54,12 +64,13 @@ Defaults to today's date. For more information, see
 A \code{tibble} object.
 }
 \description{
-Get the FRED tags for a release
+Get the FRED tags for a release. Optionally, filter results by tag name,
+tag group, or search text.
 }
 \section{API Documentation}{
 
 
-\href{https://research.stlouisfed.org/docs/api/fred/release_related_tags.html}{fred/release/related_tags}
+\href{https://research.stlouisfed.org/docs/api/fred/release_tags.html}{fred/release/tags}
 }
 
 \examples{

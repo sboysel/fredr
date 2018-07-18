@@ -12,24 +12,25 @@ fredr_release_dates(release_id = NULL, limit = NULL, offset = NULL,
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}
 
 \item{limit}{An integer limit on the maximum number of results to return.
-Defaults to \code{1000}, the maximum.}
+Defaults to \code{10000}, the maximum.}
 
 \item{offset}{An integer used in conjunction with \code{limit} for long series.
 This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
-\item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"} (default), and \code{"desc"}.}
+\item{sort_order}{A string representing the order of the resulting release
+dates. Possible values are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{include_release_dates_with_no_data}{A boolean value indicating if the
-results with no data available should be returned as well.  Default is \code{FALSE}.}
+results with no data available should be returned as well.
+Default is \code{FALSE}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
-Defaults to today's date. For more information, see
+Defaults to \code{1776-07-04} (earliest available). For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
-Defaults to today's date. For more information, see
+Defaults to \code{9999-12-31} (latest available). For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
@@ -47,6 +48,9 @@ Get release dates for a single release of economic data
 \examples{
 \dontrun{
 fredr_release_dates(release_id = 20L)
+
+# Call the function with an "as of" Date of 1997-03-14
+fredr_release_dates(release_id = 20L, realtime_end = as.Date("1997-03-14"))
 }
 }
 \seealso{
