@@ -93,5 +93,5 @@ fredr_series_search_tags <- function(series_search_text = NULL,
 
   fredr_args <- list(endpoint = "series/search/tags")
 
-  do.call(fredr, c(fredr_args, args))
+  do.call(fredr_request, c(fredr_args, args))
 }

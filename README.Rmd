@@ -22,9 +22,9 @@ for and fetch time series observations and associated metadata within the FRED
 database.  The core functions are
 
 - `fredr_set_key()` - Set the required FRED API key for the session.
-- `fredr_series_observations()` - Fetch a FRED series.
+- `fredr()` or `fredr_series_observations()` - Fetch a FRED series.
 - `fredr_series_search_text()` - Search for a FRED series by text.
-- `fredr()` - Send a general request to the FRED API.
+- `fredr_request()` - Send a general request to the FRED API.
 
 Objects are returned as `tibbles`.  The user is strongly encouraged to read the 
 full [FRED API](https://research.stlouisfed.org/docs/api/fred/) documentation to 

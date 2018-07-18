@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Send a request to the FRED API — fredr • fredr</title>
+<title>Fetch observations of a FRED series — fredr_series_observations • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,12 +30,10 @@
 
 
 
-<meta property="og:title" content="Send a request to the FRED API — fredr" />
+<meta property="og:title" content="Fetch observations of a FRED series — fredr_series_observations" />
 
-<meta property="og:description" content="Send a general request to the FRED API by specifying an endpoint and a sequence
-of parameters.  The fredr() function forms and submits a request to a specified
-endpoint of the FRED API.  The return is either the response object from
-GET or the response parsed as a tibble." />
+<meta property="og:description" content="Given a series ID, return observations of that series as a tibble object.
+fredr() is an alias for fredr_series_observations()." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -106,86 +104,179 @@ GET or the response parsed as a tibble." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Send a request to the FRED API</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr.R'><code>R/fredr.R</code></a></small>
+    <h1>Fetch observations of a FRED series</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_series_observations.R'><code>R/fredr_series_observations.R</code></a></small>
     <div class="hidden name"><code>fredr.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Send a general request to the FRED API by specifying an endpoint and a sequence
-of parameters.  The <code>fredr()</code> function forms and submits a request to a specified
-endpoint of the FRED API.  The return is either the <code>response</code> object from
-<code><a href='http://www.rdocumentation.org/packages/httr/topics/GET'>GET</a></code> or the response parsed as a <code>tibble</code>.</p>
+    <p>Given a series ID, return observations of that series as a <code>tibble</code> object.
+<code>fredr()</code> is an alias for <code>fredr_series_observations()</code>.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr</span>(<span class='no'>endpoint</span>, <span class='no'>...</span>, <span class='kw'>to_frame</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>print_req</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>fredr_series_observations</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>aggregation_method</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>units</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>vintage_dates</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>output_type</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+
+<span class='fu'>fredr</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>aggregation_method</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>units</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>vintage_dates</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>output_type</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>endpoint</th>
-      <td><p>A string representing the FRED API endpoint of interest. See
-<a href='fredr_endpoints.html'>fredr_endpoints</a> for a list of endpoint possible values. <em>Required parameter.</em></p></td>
+      <th>series_id</th>
+      <td><p>A string ID for the FRED series. <em>Required parameter.</em></p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>A series of named parameters to be used in the query.  Must be of the form
-<code>param_key = "param_value"</code>.  Acceptable parameters are endpoint-specific.
-See the <a href='fredr_endpoints.html'>fredr_endpoints</a> data frame for a list of endpoints and <code><a href='fredr_docs.html'>fredr_docs()</a></code>
-access to the web documentation for each endpoint function.</p></td>
+      <th>observation_start</th>
+      <td><p>A <code>Date</code> indicating the start of the observation period.
+Defaults to <code>1776-07-04</code>, the earliest available date.</p></td>
     </tr>
     <tr>
-      <th>to_frame</th>
-      <td><p>A boolean value indicating whether or not the response
-should be parsed and formatted as a data frame.  If <code>FALSE</code>,
-a <code>response</code> object is returned and further processing can be done with
-<code><a href='http://www.rdocumentation.org/packages/httr/topics/content'>content</a></code>.  Default is <code>TRUE</code>.</p></td>
+      <th>observation_end</th>
+      <td><p>A <code>Date</code> indicating the end of the observation period.
+Defaults to <code>9999-12-31</code>, the latest available date.</p></td>
     </tr>
     <tr>
-      <th>print_req</th>
-      <td><p>A boolean value indicating whether or not the request
-should be printed as well.  Useful for debugging.  Default is <code>FALSE</code>.</p></td>
+      <th>frequency</th>
+      <td><p>A string representing a lower frequency to aggregate to.
+Defaults to no frequency aggregation. Possible values are:</p><ul>
+<li><p><code>"d"</code> - Daily</p></li>
+<li><p><code>"w"</code> - Weekly</p></li>
+<li><p><code>"bw"</code> - Biweekly</p></li>
+<li><p><code>"m"</code> - Monthly</p></li>
+<li><p><code>"q"</code> - Quarterly</p></li>
+<li><p><code>"sa"</code> - Semiannual</p></li>
+<li><p><code>"a"</code> - Annual</p></li>
+<li><p><code>"wem"</code> - Weekly, ending Monday</p></li>
+<li><p><code>"wetu"</code> - Weekly, ending Tuesday</p></li>
+<li><p><code>"wew"</code> - Weekly, ending Wednesday</p></li>
+<li><p><code>"weth"</code> - Weekly, ending Thursday</p></li>
+<li><p><code>"wef"</code> - Weekly, ending Friday</p></li>
+<li><p><code>"wesa"</code> - Weekly, ending Saturday</p></li>
+<li><p><code>"wesu"</code> - Weekly, ending Sunday</p></li>
+<li><p><code>"bwew"</code> - Biweekly, ending Wednesday</p></li>
+<li><p><code>"bwem"</code> - Biweekly, ending Monday</p></li>
+</ul></td>
+    </tr>
+    <tr>
+      <th>aggregation_method</th>
+      <td><p>A string representing the aggregation method
+used for frequency aggregation. This parameter has no affect is <code>frequency</code>
+is not set. Possible values are:</p><ul>
+<li><p><code>"avg"</code> for average</p></li>
+<li><p><code>"sum"</code> for sum</p></li>
+<li><p><code>"eop"</code> for end of period value</p></li>
+</ul></td>
+    </tr>
+    <tr>
+      <th>limit</th>
+      <td><p>An integer limit on the maximum number of results to return.
+Defaults to <code>100000</code>, the maximum.</p></td>
+    </tr>
+    <tr>
+      <th>offset</th>
+      <td><p>An integer used in conjunction with <code>limit</code> for long series.
+This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
+multiple calls. Defaults to <code>0</code>.</p></td>
+    </tr>
+    <tr>
+      <th>sort_order</th>
+      <td><p>A string representing the order of the resulting series.
+Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
+    </tr>
+    <tr>
+      <th>units</th>
+      <td><p>A string indicating the data value transformation.
+Defaults to <code>"lin"</code>. Possible values are:</p><ul>
+<li><p><code>"lin"</code> - Levels (No transformation)</p></li>
+<li><p><code>"chg"</code> - Change</p></li>
+<li><p><code>"ch1"</code> - Change from 1 year ago</p></li>
+<li><p><code>"pch"</code> - Percent change</p></li>
+<li><p><code>"pc1"</code> - Percent change from 1 year ago</p></li>
+<li><p><code>"pca"</code> - Counpounded annual rate of change</p></li>
+<li><p><code>"cch"</code> - Continuously compounded rate of change</p></li>
+<li><p><code>"cca"</code> - Continuously compounded annual rate of change</p></li>
+<li><p><code>"log"</code> - Natural log</p></li>
+</ul></td>
+    </tr>
+    <tr>
+      <th>realtime_start</th>
+      <td><p>A <code>Date</code> indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
+    </tr>
+    <tr>
+      <th>realtime_end</th>
+      <td><p>A <code>Date</code> indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
+    </tr>
+    <tr>
+      <th>vintage_dates</th>
+      <td><p>A vector of <code>Date</code> objects to download data for.
+Vintage dates are used to download data as it existed on these specified
+dates in history. They can be specified instead of a real-time period using
+<code>realtime_start</code> and <code>realtime_end</code>. Defaults to no vintage dates.</p></td>
+    </tr>
+    <tr>
+      <th>output_type</th>
+      <td><p>An integer indicating the output type. Not used unless
+<code>realtime_start</code> is used. Possible values are:</p><ul>
+<li><p><code>1</code> for Observations by Real-Time Period (default)</p></li>
+<li><p><code>2</code> for Observations by Vintage Date, All Observations</p></li>
+<li><p><code>3</code> for Observations by Vintage Date, New and Revised Observations Only</p></li>
+<li><p><code>4</code> for Observations, Initial Release Only.</p></li>
+</ul></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>If <code>to_frame = TRUE</code>, a <code>tibble</code> containing the parsed response.
-If <code>to_frame = FALSE</code>, a <code>response</code> object returned directly from
-<code><a href='http://www.rdocumentation.org/packages/httr/topics/GET'>GET</a></code>.</p>
+    <p>A <code>tibble</code> object with observation dates and values.</p>
     
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
     
-    <p><a href='https://api.stlouisfed.org/docs/fred/'>FRED API</a></p>
+    <p><a href='https://research.stlouisfed.org/docs/api/fred/series_observations.html'>fred/series/observations</a></p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>,
+<code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>,
+<code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>, <code><a href='fredr_series.html'>fredr_series()</a></code>, <code><a href='fredr_series_categories.html'>fredr_series_categories()</a></code>,
+<code><a href='fredr_series_release.html'>fredr_series_release()</a></code>, <code><a href='fredr_series_tags.html'>fredr_series_tags()</a></code>, <code><a href='fredr_series_updates.html'>fredr_series_updates()</a></code>,
+<code><a href='fredr_series_vintagedates.html'>fredr_series_vintagedates()</a></code>.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr</span>(
-  <span class='kw'>endpoint</span> <span class='kw'>=</span> <span class='st'>"series/observations"</span>,
-  <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"GNPCA"</span>,
-  <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='st'>"1990-01-01"</span>,
-  <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='st'>"2000-01-01"</span>
+    <pre class="examples"># NOT RUN {
+# Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
+of change from pervious observation.
+fredr_series_observations(
+  series_id = "UNRATE",
+  observation_start = as.Date("1980-01-01"),
+  observation_end = as.Date("2000-01-01"),
+  unit = "chg"
 )
-<span class='co'># Compare with to_frame = TRUE</span>
-<span class='fu'>library</span>(<span class='no'>httr</span>)
-<span class='fu'>library</span>(<span class='no'>tidyverse</span>)
-<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'>fredr</span>(
-  <span class='kw'>endpoint</span> <span class='kw'>=</span> <span class='st'>"series/observations"</span>,
-  <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"GNPCA"</span>,
-  <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='st'>"1990-01-01"</span>,
-  <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='st'>"2000-01-01"</span>,
-  <span class='kw'>to_frame</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+# All observations for "OILPRICE" series.  The data is first aggregated by
+# quarter by taking the average of all observations in the quarter then
+# transformed by taking the natural logarithm.
+fredr_series_observations(
+  series_id = "OILPRICE",
+  frequency = "q",
+  aggregation_method = "avg",
+  unit = "log"
 )
-<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='no'>resp</span> <span class='kw'>%&gt;%</span>
-<span class='kw pkg'>httr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/httr/topics/content'>content</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='no'>.</span>$<span class='no'>observations</span> <span class='kw'>%&gt;%</span>
-  <span class='kw pkg'>purrr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/purrr/topics/map'>map_df</a></span>(<span class='kw'>.f</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='kw pkg'>tibble</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/tibble/topics/as_tibble'>as_tibble</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>x</span>))
-<span class='co'># }</span></pre>
+# }
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -195,6 +286,8 @@ If <code>to_frame = FALSE</code>, a <code>response</code> object returned direct
       <li><a href="#value">Value</a></li>
 
       <li><a href="#api-documentation">API Documentation</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

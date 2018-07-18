@@ -96,6 +96,6 @@ fredr_category_tags <- function(category_id = 0L,
     endpoint = "category/tags"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

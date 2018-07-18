@@ -115,7 +115,7 @@ fredr_series_search_text <- function(search_text = NULL,
 
   fredr_args <- list(endpoint = "series/search", search_type = "full_text")
 
-  do.call(fredr, c(fredr_args, args))
+  do.call(fredr_request, c(fredr_args, args))
 }
 
 #' @rdname fredr_series_search
@@ -153,5 +153,5 @@ fredr_series_search_id <- function(search_text = NULL,
     search_type = "series_id"
   )
 
-  do.call(fredr, c(fredr_args, args))
+  do.call(fredr_request, c(fredr_args, args))
 }

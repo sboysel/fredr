@@ -78,6 +78,6 @@ fredr_tags_series <- function(tag_names = NULL,
     endpoint = "tags/series"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

@@ -197,13 +197,13 @@ against *any* [FRED API
 endpoint](https://research.stlouisfed.org/docs/api/fred/) (e.g. Categories,
 Series, Sources, Releases, Tags).  This is also useful to run complex queries or .
 ```{r fredr_general}
-fredr(endpoint = "tags/series", tag_names = "population;south africa")
+fredr_request(endpoint = "tags/series", tag_names = "population;south africa")
 ```
 
 By default, `fredr` (and therefore all `fredr_*` functions) return a `tibble`.  Set `to_frame` to `FALSE` to return a generic `response` object from a `httr::GET` request that can be further parsed with `httr::content`
 ```{r fredr_general2}
 library(httr)
-resp <- fredr::fredr(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
+resp <- fredr_request(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
 resp
 ```
 

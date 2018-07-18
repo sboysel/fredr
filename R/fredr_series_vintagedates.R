@@ -50,7 +50,7 @@ fredr_series_vintagedates <- function(series_id = NULL,
     endpoint = "series/vintagedates"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }
 

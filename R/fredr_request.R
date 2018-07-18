@@ -1,9 +1,9 @@
 #' Send a request to the FRED API
 #'
 #' Send a general request to the FRED API by specifying an endpoint and a sequence
-#' of parameters.  The `fredr()` function forms and submits a request to a specified
-#' endpoint of the FRED API.  The return is either the `response` object from
-#' \code{\link[httr]{GET}} or the response parsed as a `tibble`.
+#' of parameters.  The `fredr_request()` function forms and submits a request to
+#' a specified endpoint of the FRED API.  The return is either the `response`
+#' object from \code{\link[httr]{GET}} or the response parsed as a `tibble`.
 #'
 #' @param endpoint A string representing the FRED API endpoint of interest. See
 #'        [fredr_endpoints] for a list of endpoint possible values. _Required parameter._
@@ -27,7 +27,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' fredr(
+#' fredr_request(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
 #'   observation_start = "1990-01-01",
@@ -36,7 +36,7 @@
 #' # Compare with to_frame = TRUE
 #' library(httr)
 #' library(tidyverse)
-#' resp <- fredr(
+#' resp <- fredr_request(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
 #'   observation_start = "1990-01-01",
@@ -49,7 +49,7 @@
 #'   purrr::map_df(.f = function(x) tibble::as_tibble(x = x))
 #' }
 #' @export
-fredr <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
+fredr_request <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
 
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
     stop("FRED API key must be set. See `?fredr_set_key`.")

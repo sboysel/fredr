@@ -28,6 +28,6 @@ reference:
 - title: Miscellania
   desc: ~
   contents:
-  - '`fredr`'
+  - '`fredr_request`'
   - '`fredr_docs`'
   - '`fredr_endpoints`'

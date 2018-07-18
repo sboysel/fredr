@@ -32,7 +32,9 @@
 
 <meta property="og:title" content="Get release table trees for a given release — fredr_release_tables" />
 
-<meta property="og:description" content="Get release table trees for a given release" />
+<meta property="og:description" content="You can go directly to the tree structure by passing the appropriate
+element_id. You may also use a drill-down approach to start at the root
+(top most) element by leaving the element_id off." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -110,7 +112,9 @@
 
     <div class="ref-description">
     
-    <p>Get release table trees for a given release</p>
+    <p>You can go directly to the tree structure by passing the appropriate
+<code>element_id</code>. You may also use a drill-down approach to start at the root
+(top most) element by leaving the <code>element_id</code> off.</p>
     
     </div>
 
@@ -143,7 +147,7 @@ with the release table.  Default is <code>9999-12-31</code> (latest date availab
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>list</code> object.</p>
+    <p>A <code>tibble</code> object with nested results.</p>
     
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
@@ -160,6 +164,9 @@ with the release table.  Default is <code>9999-12-31</code> (latest date availab
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
 <span class='fu'>fredr_release_tables</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
+
+<span class='co'># Digging further into a release element</span>
+<span class='fu'>fredr_release_tables</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>53L</span>, <span class='kw'>element_id</span> <span class='kw'>=</span> <span class='fl'>12886</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

@@ -70,6 +70,6 @@ fredr_source_releases <- function(source_id = NULL,
     endpoint = "source/releases"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

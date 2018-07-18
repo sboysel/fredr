@@ -26,6 +26,6 @@ List of available FRED API endpoints.
 }
 
 \seealso{
-\code{\link[=fredr]{fredr()}}, \code{\link[=fredr_docs]{fredr_docs()}}
+\code{\link[=fredr_request]{fredr_request()}}, \code{\link[=fredr_docs]{fredr_docs()}}
 }
 \keyword{datasets}
