@@ -114,8 +114,8 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_series_search_text</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>1000L</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='st'>"asc"</span>, <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>fredr_series_search_text</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
@@ -206,7 +206,7 @@ series match <em>none</em> of.  Defaults to no tag filtering.</p></td>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>tibble</code> object.</p>
+    <p>A <code>tibble</code> object where each row represents a series matching the query.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -215,16 +215,41 @@ series match <em>none</em> of.  Defaults to no tag filtering.</p></td>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>, <a href='fredr_tags.html'>fredr_tags</a></p></div>
+    <div class='dont-index'><p><code><a href='fredr_series_observations.html'>fredr_series_observations()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>,
+<code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>, <code><a href='fredr_series.html'>fredr_series()</a></code>, <code><a href='fredr_series_categories.html'>fredr_series_categories()</a></code>,
+<code><a href='fredr_series_release.html'>fredr_series_release()</a></code>, <code><a href='fredr_series_tags.html'>fredr_series_tags()</a></code>, <code><a href='fredr_series_updates.html'>fredr_series_updates()</a></code>,
+<code><a href='fredr_series_vintagedates.html'>fredr_series_vintagedates()</a></code>.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>fredr</span>)
-<span class='fu'>fredr_series_search_text</span>(<span class='st'>"oil"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>)
-<span class='fu'>fredr_series_search_text</span>(<span class='st'>"oil"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"search_rank"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"usa"</span>)
-<span class='fu'>fredr_series_search_text</span>(<span class='st'>"oil"</span>, <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='st'>"frequency"</span>, <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='st'>"q"</span>)
-<span class='fu'>fredr_series_search_id</span>(<span class='st'>"UNRATE"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"observation_start"</span>)
+<span class='co'># search for series with text matching "oil" and return the top 10 most popular</span>
+<span class='co'># series</span>
+<span class='fu'>fredr_series_search_text</span>(
+  <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"oil"</span>,
+  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>,
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>
+)
+<span class='co'># search for series with text matching "oil" with the tag "usa" and return the</span>
+<span class='co'># top 10 search results</span>
+<span class='fu'>fredr_series_search_text</span>(
+  <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"oil"</span>,
+  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"search_rank"</span>,
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
+  <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"usa"</span>
+)
+<span class='co'># search for series with text matching "unemployment" and return only series</span>
+<span class='co'># with monthly frequency</span>
+<span class='fu'>fredr_series_search_text</span>(
+  <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"unemployment"</span>,
+  <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='st'>"frequency"</span>,
+  <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='st'>"Monthly"</span>
+)
+<span class='co'># search for series ID matching "UNRATE" and return oldest series first</span>
+<span class='fu'>fredr_series_search_id</span>(
+  <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>,
+  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"observation_start"</span>
+)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

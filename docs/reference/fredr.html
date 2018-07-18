@@ -32,7 +32,10 @@
 
 <meta property="og:title" content="Send a request to the FRED API — fredr" />
 
-<meta property="og:description" content="fredr forms and submits a request to a specified endpoint of the FRED API." />
+<meta property="og:description" content="Send a general request to the FRED API by specifying an endpoint and a sequence
+of parameters.  The fredr() function forms and submits a request to a specified
+endpoint of the FRED API.  The return is either the response object from
+GET or the response parsed as a tibble." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -110,7 +113,10 @@
 
     <div class="ref-description">
     
-    <p><code>fredr</code> forms and submits a request to a specified endpoint of the FRED API.</p>
+    <p>Send a general request to the FRED API by specifying an endpoint and a sequence
+of parameters.  The <code>fredr()</code> function forms and submits a request to a specified
+endpoint of the FRED API.  The return is either the <code>response</code> object from
+<code><a href='http://www.rdocumentation.org/packages/httr/topics/GET'>GET</a></code> or the response parsed as a <code>tibble</code>.</p>
     
     </div>
 
@@ -122,14 +128,14 @@
     <tr>
       <th>endpoint</th>
       <td><p>A string representing the FRED API endpoint of interest. See
-<code>fredr_endpoints</code> for a list of endpoint possible values.</p></td>
+<a href='fredr_endpoints.html'>fredr_endpoints</a> for a list of endpoint possible values. <em>Required parameter.</em></p></td>
     </tr>
     <tr>
       <th>...</th>
       <td><p>A series of named parameters to be used in the query.  Must be of the form
 <code>param_key = "param_value"</code>.  Acceptable parameters are endpoint-specific.
-See  <code><a href='fredr_endpoints.html'>fredr_endpoints</a></code> for a list of endpoints and <code><a href='fredr_docs.html'>fredr_docs</a></code>
-access to the endpoint web documentation.</p></td>
+See the <a href='fredr_endpoints.html'>fredr_endpoints</a> data frame for a list of endpoints and <code><a href='fredr_docs.html'>fredr_docs()</a></code>
+access to the web documentation for each endpoint function.</p></td>
     </tr>
     <tr>
       <th>to_frame</th>
@@ -147,12 +153,14 @@ should be printed as well.  Useful for debugging.  Default is <code>FALSE</code>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>If <code>to_frame = TRUE</code>, a data frame containing the parsed response.
-If <code>to_frame = FALSE</code>, an object returned directly from <code><a href='http://www.rdocumentation.org/packages/httr/topics/GET'>GET</a></code>.</p>
+    <p>If <code>to_frame = TRUE</code>, a <code>tibble</code> containing the parsed response.
+If <code>to_frame = FALSE</code>, a <code>response</code> object returned directly from
+<code><a href='http://www.rdocumentation.org/packages/httr/topics/GET'>GET</a></code>.</p>
     
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
-    <p><a href='https://api.stlouisfed.org/docs/fred/'>https://api.stlouisfed.org/docs/fred/</a>.</p>
+    
+    <p><a href='https://api.stlouisfed.org/docs/fred/'>FRED API</a></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -186,7 +194,7 @@ If <code>to_frame = FALSE</code>, an object returned directly from <code><a href
       
       <li><a href="#value">Value</a></li>
 
-      <li><a href="#references">References</a></li>
+      <li><a href="#api-documentation">API Documentation</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

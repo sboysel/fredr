@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get the FRED tags for a category — fredr_category_tags • fredr</title>
+<title>Return a set of recently updated FRED series — fredr_series_updates • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,13 +30,9 @@
 
 
 
-<meta property="og:title" content="Get the FRED tags for a category — fredr_category_tags" />
+<meta property="og:title" content="Return a set of recently updated FRED series — fredr_series_updates" />
 
-<meta property="og:description" content="Get the FRED tags for a category. Optionally, filter results by tag name,
-tag group, or search. Series are assigned tags and categories. Alternatively,
-it is possible to get the tags for a category through a call to a function in
-the fredr/series endpoint.  See fredr_series. No tags exist for a category
-that does not have series." />
+<meta property="og:description" content="Returns information on the recently updated series on the FRED server." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -107,76 +103,54 @@ that does not have series." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get the FRED tags for a category</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_category_tags.R'><code>R/fredr_category_tags.R</code></a></small>
-    <div class="hidden name"><code>fredr_category_tags.Rd</code></div>
+    <h1>Return a set of recently updated FRED series</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_series_updates.R'><code>R/fredr_series_updates.R</code></a></small>
+    <div class="hidden name"><code>fredr_series_updates.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get the FRED tags for a category. Optionally, filter results by tag name,
-tag group, or search. Series are assigned tags and categories. Alternatively,
-it is possible to get the tags for a category through a call to a function in
-the <code>fredr/series</code> endpoint.  See <a href='fredr_series.html'>fredr_series</a>. No tags exist for a category
-that does not have series.</p>
+    <p>Returns information on the recently updated series on the FRED server.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_category_tags</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>0L</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>fredr_series_updates</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>start_time</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>end_time</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>category_id</th>
-      <td><p>An integer ID for the category.  Default is <code>0</code> for the
-root category. <em>Required parameter.</em></p></td>
-    </tr>
-    <tr>
       <th>limit</th>
-      <td><p>An positive integer indicating maximum number of results to return.  Possible
-values are any integer between <code>1</code> and <code>1000</code> (default), inclusive.</p></td>
+      <td><p>An integer limit on the maximum number of results to return.
+Defaults to <code>1000</code>, the maximum.</p></td>
     </tr>
     <tr>
       <th>offset</th>
-      <td><p>An non-negative integer used in conjunction with <code>limit</code> for
-long series.  This mimics the idea of <em>pagination</em> to retrieve large amounts
-of data over multiple calls. Defaults to <code>0</code>.</p></td>
+      <td><p>An integer used in conjunction with <code>limit</code> for long series.
+This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
+multiple calls. Defaults to <code>0</code>.</p></td>
     </tr>
     <tr>
-      <th>order_by</th>
-      <td><p>Order results by values of the specified attribute.
-Possible values include: <code>"series_count"</code> (default), <code>"popularity"``,</code>"created"<code>,</code>"name"<code>,</code>"group_id"`.</p></td>
-    </tr>
-    <tr>
-      <th>sort_order</th>
-      <td><p>A string representing the order of the resulting series.
-Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>search_text</th>
-      <td><p>A string to match text of tags.  No matching by default.</p></td>
-    </tr>
-    <tr>
-      <th>tag_names</th>
-      <td><p>A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
-    </tr>
-    <tr>
-      <th>tag_group_id</th>
-      <td><p>A string representing the tag group id to filter tags by
-type.  No filtering by default.  Possible values include:</p><ul>
-<li><p><code>"freq"</code> - Frequency</p></li>
-<li><p><code>"gen"</code> - General or Concept</p></li>
-<li><p><code>"geo"</code> - Geography</p></li>
-<li><p><code>"geot"</code> - Geography Type</p></li>
-<li><p><code>"rls"</code> - Release</p></li>
-<li><p><code>"seas"</code> - Seasonal Adjustment</p></li>
-<li><p><code>"src"</code> - Source</p></li>
+      <th>filter_value</th>
+      <td><p>Filter results by type of geographic region of economic
+the data series.  Possible values include</p><ul>
+<li><p><code>"all"</code> (default) - no filtering</p></li>
+<li><p><code>"macro"</code> - filters results macroeconomic regions (e.g. entire countries)</p></li>
+<li><p><code>"regional"</code> - filters results to series for regions of the United States
+such as states, counties, and Metropolitan Statistical Areas (MSA).</p></li>
 </ul></td>
+    </tr>
+    <tr>
+      <th>start_time</th>
+      <td><p>A datetime object indicating the start time to filter series
+updates results.</p></td>
+    </tr>
+    <tr>
+      <th>end_time</th>
+      <td><p>A datetime object indicating the start time to filter series
+updates results.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>
@@ -194,27 +168,30 @@ Defaults to today's date. For more information, see
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>tibble</code> object information on tags matching the request and their
-descriptions.  Data include tag name, group ID, popularity, series count, tag
-creation date, and additional notes.</p>
+    <p>A <code>tibble</code> object where each row represents a series. Rows are sorted
+with most recently updated series appearing first.</p>
     
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
     
-    <p><a href='https://research.stlouisfed.org/docs/api/fred/category_tags.html'>fred/category/tags</a></p>
+    <p><a href='https://research.stlouisfed.org/docs/api/fred/series_updates.html'>fred/series/updates</a></p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_category.html'>fredr_category()</a></code>, <code><a href='fredr_category_children.html'>fredr_category_children()</a></code>, <code><a href='fredr_category_related.html'>fredr_category_related()</a></code>,
-<code><a href='fredr_category_series.html'>fredr_category_series()</a></code>, <code><a href='fredr_category_related_tags.html'>fredr_category_related_tags()</a></code></p></div>
+    <div class='dont-index'><p><code><a href='fredr_series_observations.html'>fredr_series_observations()</a></code>, <code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>,
+<code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>,
+<code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>, <code><a href='fredr_series.html'>fredr_series()</a></code>,
+<code><a href='fredr_series_release.html'>fredr_series_release()</a></code>, <code><a href='fredr_series_tags.html'>fredr_series_tags()</a></code>, <code><a href='fredr_series_categories.html'>fredr_series_categories()</a></code>,
+<code><a href='fredr_series_vintagedates.html'>fredr_series_vintagedates()</a></code>.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Tags assigned to series in the "Production &amp; Business Activity" category</span>
-<span class='fu'>fredr_category_tags</span>(<span class='kw'>category</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
-<span class='co'># Select the "nation" and "monthly" tags in the "Production &amp; Business Activity" category</span>
-<span class='fu'>fredr_category_tags</span>(<span class='kw'>category</span> <span class='kw'>=</span> <span class='fl'>3L</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"nation;monthly"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)
+<span class='co'># Get all recently updated "regional" series</span>
+<span class='fu'>fredr_series_updates</span>(<span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='st'>"regional"</span>)
+<span class='co'># Most recently udpated series are returned first</span>
+<span class='no'>updates</span> <span class='kw'>&lt;-</span> <span class='fu'>fredr_series_updates</span>(<span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='st'>"regional"</span>)$<span class='no'>last_updated</span>
+<span class='fu'>is.unsorted</span>(<span class='fu'>rev</span>(<span class='fu'>as.POSIXct</span>(<span class='no'>updates</span>)))
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

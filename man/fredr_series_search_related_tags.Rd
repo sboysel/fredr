@@ -5,8 +5,8 @@
 \title{Get the related FRED tags for one or more FRED tags matching a series search}
 \usage{
 fredr_series_search_related_tags(series_search_text = NULL,
-  tag_names = NULL, limit = 1000L, offset = 0, order_by = NULL,
-  sort_order = "asc", exclude_tag_names = NULL, tag_group_id = NULL,
+  tag_names = NULL, limit = NULL, offset = NULL, order_by = NULL,
+  sort_order = NULL, exclude_tag_names = NULL, tag_group_id = NULL,
   tag_search_text = NULL, realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
@@ -66,19 +66,27 @@ Defaults to today's date. For more information, see
 A \code{tibble} object.
 }
 \description{
-Return the \emph{related} FRED tags for a search: tags assigned to series that
-}
-\details{
-\itemize{
-\item match all tags in the \code{tag_names} parameter (required)
-\item no tags in the \code{exclude_tag_names} (optional)
-\item the search words set by the \code{series_search_text} parameter (optional)
-}
+FRED tags are attributes assigned to series.  Return the \emph{related} FRED tags
+for a search: tags assigned to series that match \emph{all} tags in the \code{tag_names}
+parameter (required), \emph{no} tags in the \code{exclude_tag_names} (optional) and the
+search words set by the \code{series_search_text} parameter (optional).
 }
 \examples{
 \dontrun{
-library(fredr)
-fredr_series_search_related_tags("oil", "usa")
+# Search for all tags matching the series text "oil" and the tag "usa".
+fredr_series_search_related_tags(
+  series_search_text = "oil",
+  tag_names = "usa"
+)
+# Search for tags matching the series text "oil", the tag text "usa", and
+# are related to the tag "usa".  Return only results in the "src" (Source)
+# group.
+fredr_series_search_related_tags(
+  series_search_text = "oil",
+  tag_names = "usa"
+  tag_search_text = "usa",
+  tag_group_id = "src"
+)
 }
 }
 \references{
@@ -87,5 +95,9 @@ API Documentation:
 \href{https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html}{series/search/related_tags}
 }
 \seealso{
-\code{\link[=fredr_series_search_text]{fredr_series_search_text()}}, \code{\link[=fredr_series_search_id]{fredr_series_search_id()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_tags]{fredr_tags()}}
+\code{\link[=fredr_series_observations]{fredr_series_observations()}}, \code{\link[=fredr_series_search_text]{fredr_series_search_text()}},
+\code{\link[=fredr_series_search_id]{fredr_series_search_id()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}},
+\code{\link[=fredr_series]{fredr_series()}}, \code{\link[=fredr_series_categories]{fredr_series_categories()}},
+\code{\link[=fredr_series_release]{fredr_series_release()}}, \code{\link[=fredr_series_tags]{fredr_series_tags()}}, \code{\link[=fredr_series_updates]{fredr_series_updates()}},
+\code{\link[=fredr_series_vintagedates]{fredr_series_vintagedates()}}.
 }

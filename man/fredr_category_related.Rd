@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_category_related.R
 \name{fredr_category_related}
 \alias{fredr_category_related}
-\title{Get the related categories for a category.}
+\title{Get the related categories for a FRED category.}
 \usage{
 fredr_category_related(category_id = 0L, realtime_start = NULL,
   realtime_end = NULL)
@@ -20,12 +20,17 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object.
+A \code{tibble} object containing the name and parent ID for categories
+related to the category indicated by \code{category_id}.
 }
 \description{
-From the FRED API documentation: "A related category is a one-way relation
-between 2 categories that is not part of a parent-child category hierarchy.
-Most categories do not have related categories."
+Get the related categories for a FRED category.
+}
+\details{
+From the \href{https://research.stlouisfed.org/docs/api/fred/category_related.html}{FRED API documentation}:
+"A related category is a one-way relation between 2 categories that is not
+part of a parent-child category hierarchy. Most categories do not have related
+categories."
 }
 \section{API Documentation}{
 
@@ -35,7 +40,8 @@ Most categories do not have related categories."
 
 \examples{
 \dontrun{
-fredr_category_related()
+# Categories related to the "Employment Cost Index" category
+fredr_category_related(category_id = 4L)
 }
 }
 \seealso{

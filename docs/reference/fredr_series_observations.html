@@ -242,25 +242,34 @@ dates in history. They can be specified instead of a real-time period using
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>, <code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>,
-<code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>, <a href='fred_series.html'>fredr_series</a>.</p></div>
+    <div class='dont-index'><p><code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>,
+<code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>,
+<code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>, <code><a href='fredr_series.html'>fredr_series()</a></code>, <code><a href='fredr_series_categories.html'>fredr_series_categories()</a></code>,
+<code><a href='fredr_series_release.html'>fredr_series_release()</a></code>, <code><a href='fredr_series_tags.html'>fredr_series_tags()</a></code>, <code><a href='fredr_series_updates.html'>fredr_series_updates()</a></code>,
+<code><a href='fredr_series_vintagedates.html'>fredr_series_vintagedates()</a></code>.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_series_observations</span>(
-  <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>,
-  <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"1980-01-01"</span>),
-  <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"2000-01-01"</span>),
-  <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"chg"</span>
+    <pre class="examples"># NOT RUN {
+# Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
+of change from pervious observation.
+fredr_series_observations(
+  series_id = "UNRATE",
+  observation_start = as.Date("1980-01-01"),
+  observation_end = as.Date("2000-01-01"),
+  unit = "chg"
 )
-<span class='fu'>fredr_series_observations</span>(
-  <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"OILPRICE"</span>,
-  <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='st'>"q"</span>,
-  <span class='kw'>aggregation_method</span> <span class='kw'>=</span> <span class='st'>"avg"</span>,
-  <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"log"</span>
+# All observations for "OILPRICE" series.  The data is first aggregated by
+# quarter by taking the average of all observations in the quarter then
+# transformed by taking the natural logarithm.
+fredr_series_observations(
+  series_id = "OILPRICE",
+  frequency = "q",
+  aggregation_method = "avg",
+  unit = "log"
 )
-<span class='co'># }</span></pre>
+# }
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

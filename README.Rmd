@@ -15,11 +15,11 @@ release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-squa
 [![GitHub
 license](https://img.shields.io/github/license/sboysel/fredr.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-`fredr` interacts with the [Federal Reserve Economic
-Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API, provided by the Federal
-Reserve Bank of St. Louis.  Essentially a simple wrapper of
-[`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
-designed with simplicity and flexibility in mind.  The core functions are
+`fredr` provides a complete set of `R` bindings to the [Federal Reserve Economic
+Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API for, provided by 
+the Federal Reserve Bank of St. Louis.  The functions allow the user to search 
+for and fetch time series observations and associated metadata within the FRED 
+database.  The core functions are
 
 - `fredr_set_key()` - Set the required FRED API key for the session.
 - `fredr_series_observations()` - Fetch a FRED series.
@@ -42,8 +42,8 @@ devtools::install_github("sboysel/fredr")
 See the [Get started](http://sboysel.github.io/fredr/articles/fredr.html) article.
 
 ## See Also
-The primary goal in creating `fredr` was educational.  I also suggest you check
-out several other `R` packages designed for the FRED API:
+
+There are several existing `R` packages designed for the FRED API:
 
 * [business-science/tidyquant](https://github.com/business-science/tidyquant)
 * [jcizel/FredR](https://github.com/jcizel/FredR)

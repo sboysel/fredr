@@ -115,15 +115,15 @@ exclude_tag_names parameter." />
     
     <p>Get related FRED tags. Optionally, filter results by tag group, or
 search text. Related FRED tags are the tags assigned to series that match
-all tags in the <code>tag_names</code> parameter and no tags in the
+<em>all</em> tags in the <code>tag_names</code> parameter and <em>no</em> tags in the
 <code>exclude_tag_names</code> parameter.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_related_tags</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>fredr_related_tags</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -132,18 +132,6 @@ all tags in the <code>tag_names</code> parameter and no tags in the
       <th>tag_names</th>
       <td><p>A semicolon delimited string of tag names to be related to.
 <em>Required parameter.</em></p></td>
-    </tr>
-    <tr>
-      <th>realtime_start</th>
-      <td><p>A <code>Date</code> indicating the start of the real-time period.
-Defaults to today's date. For more information, see
-<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
-    </tr>
-    <tr>
-      <th>realtime_end</th>
-      <td><p>A <code>Date</code> indicating the end of the real-time period.
-Defaults to today's date. For more information, see
-<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     <tr>
       <th>exclude_tag_names</th>
@@ -181,9 +169,9 @@ multiple calls. Defaults to <code>0</code>.</p></td>
     </tr>
     <tr>
       <th>order_by</th>
-      <td><p>Order results by values of the specified attribute. Default
-ordering is by <code>series_count</code>. Possible values are:</p><ul>
-<li><p><code>"series_count"</code></p></li>
+      <td><p>Order results by values of the specified attribute. Possible
+values are:</p><ul>
+<li><p><code>"series_count"</code> (default)</p></li>
 <li><p><code>"popularity"</code></p></li>
 <li><p><code>"created"</code></p></li>
 <li><p><code>"name"</code></p></li>
@@ -194,14 +182,27 @@ ordering is by <code>series_count</code>. Possible values are:</p><ul>
       <th>sort_order</th>
       <td><p>A string representing the order of the resulting series,
 sorted by the attribute values specified by <code>order_by</code>. Possible values
-are: <code>"asc"</code>, and <code>"desc"</code>. Defaults to <code>"asc"</code>.</p></td>
+are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
+    </tr>
+    <tr>
+      <th>realtime_start</th>
+      <td><p>A <code>Date</code> indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
+    </tr>
+    <tr>
+      <th>realtime_end</th>
+      <td><p>A <code>Date</code> indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A data frame containing tags related to <code>tag_names</code> and their
-descriptions.</p>
+    <p>A <code>tibble</code> containing tags related to <code>tag_names</code> and their
+descriptions.  Data include tag name, group ID, popularity, series count, tag
+creation date, and additional notes.</p>
     
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
@@ -210,7 +211,9 @@ descriptions.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_docs.html'>fredr_docs()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>,
+    <div class='dont-index'><p><code><a href='fredr_category_tags.html'>fredr_category_tags()</a></code>, <code><a href='fredr_category_related_tags.html'>fredr_category_related_tags()</a></code>, <code><a href='fredr_docs.html'>fredr_docs()</a></code>,
+<code><a href='fredr_release_tags.html'>fredr_release_tags()</a></code>, <code><a href='fredr_release_related_tags.html'>fredr_release_related_tags()</a></code>,
+<code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>,
 <code><a href='fredr_tags_series.html'>fredr_tags_series()</a></code>, <code><a href='fredr_tags.html'>fredr_tags()</a></code></p></div>
     
 
@@ -225,8 +228,7 @@ descriptions.</p>
  )
 
 
-<span class='co'># }</span><div class='input'>
-</div></pre>
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

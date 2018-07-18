@@ -4,21 +4,14 @@
 \alias{fredr_tags}
 \title{Get FRED series tags}
 \usage{
-fredr_tags(realtime_start = NULL, realtime_end = NULL, tag_names = NULL,
-  tag_group_id = NULL, search_text = NULL, limit = NULL, offset = NULL,
-  order_by = NULL, sort_order = NULL)
+fredr_tags(tag_names = NULL, tag_group_id = NULL, search_text = NULL,
+  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
+  realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
-\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
-
-\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
-
 \item{tag_names}{A semicolon delimited string of tag names to only
-include in the response. No filtering by tag names by default.}
+include in the response. No filtering by tag names by default (i.e. \emph{all}
+FRED tags returned).}
 
 \item{tag_group_id}{A string tag group id to filter tags by type. No filtering
 by tag group by default. Possible values are:
@@ -42,10 +35,10 @@ Defaults to \code{1000}, the maximum.}
 This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
-\item{order_by}{Order results by values of the specified attribute. Default
-ordering is by \code{series_count}. Possible values are:
+\item{order_by}{Order results by values of the specified attribute. Possible
+values are:
 \itemize{
-\item \code{"series_count"}
+\item \code{"series_count"} (default)
 \item \code{"popularity"}
 \item \code{"created"}
 \item \code{"name"}
@@ -54,10 +47,20 @@ ordering is by \code{series_count}. Possible values are:
 
 \item{sort_order}{A string representing the order of the resulting series,
 sorted by the attribute values specified by \code{order_by}. Possible values
-are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+are: \code{"asc"} (default), and \code{"desc"}.}
+
+\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+
+\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A data frame containing tags and their descriptions.
+A \code{tibble} containing tags and their descriptions.  Data include tag
+name, group ID, popularity, series count, tag creation date, and additional
+notes.
 }
 \description{
 Get FRED tags. Optionally, filter results by tag name, tag group, or
@@ -72,13 +75,19 @@ all tags are returned, unfiltered, up to the \code{limit}.
 
 \examples{
 \dontrun{
+# Information for all tags
 fredr_tags()
+# Information for just the "gdp" and "oecd" tags
 fredr_tags(tag_names = "gdp;oecd")
+# Information for all tags in the "geo" group
 fredr_tags(tag_group_id = "geo")
+# Information for tags matching the text "unemployment"
 fredr_tags(search_text = "unemployment")
 }
 }
 \seealso{
-\code{\link[=fredr_docs]{fredr_docs()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
-\code{\link[=fredr_related_tags]{fredr_related_tags()}}, \code{\link[=fredr_tags_series]{fredr_tags_series()}}
+\code{\link[=fredr_category_tags]{fredr_category_tags()}}, \code{\link[=fredr_category_related_tags]{fredr_category_related_tags()}}, \code{\link[=fredr_docs]{fredr_docs()}},
+\code{\link[=fredr_release_tags]{fredr_release_tags()}}, \code{\link[=fredr_release_related_tags]{fredr_release_related_tags()}},
+\code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
+\code{\link[=fredr_tags_series]{fredr_tags_series()}}, \code{\link[=fredr_related_tags]{fredr_related_tags()}}
 }

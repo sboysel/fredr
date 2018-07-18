@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Set the FRED API key — fredr_set_key • fredr</title>
+<title>Return the categories for a FRED series — fredr_series_categories • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,11 +30,10 @@
 
 
 
-<meta property="og:title" content="Set the FRED API key — fredr_set_key" />
+<meta property="og:title" content="Return the categories for a FRED series — fredr_series_categories" />
 
-<meta property="og:description" content="Users of the fredr`` package must authenticate with the FRED API by use of an API key. The functionfredr_set_key()` sets the FRED API key as an
-environment variable for use with the service.  For persistence across sessions,
-see Details section." />
+<meta property="og:description" content="Given a series ID, return information on the categories to which a series belongs
+as a tibble object." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -105,63 +104,76 @@ see Details section." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Set the FRED API key</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_set_key.R'><code>R/fredr_set_key.R</code></a></small>
-    <div class="hidden name"><code>fredr_set_key.Rd</code></div>
+    <h1>Return the categories for a FRED series</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_series_categories.R'><code>R/fredr_series_categories.R</code></a></small>
+    <div class="hidden name"><code>fredr_series_categories.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Users of the <code>fredr`` package must authenticate with the FRED API by use of an API key. The function</code>fredr_set_key()` sets the FRED API key as an
-environment variable for use with the service.  For persistence across sessions,
-see Details section.</p>
+    <p>Given a series ID, return information on the categories to which a series belongs
+as a <code>tibble</code> object.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_set_key</span>(<span class='no'>key</span>)</pre>
+    <pre class="usage"><span class='fu'>fredr_series_categories</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>key</th>
-      <td><p>A valid FRED API key as a string.  Obtain one at the
-<a href='https://api.stlouisfed.org/api_key.html'>API Keys</a> page.</p></td>
+      <th>series_id</th>
+      <td><p>A string ID for the FRED series. <em>Required parameter.</em></p></td>
+    </tr>
+    <tr>
+      <th>realtime_start</th>
+      <td><p>A <code>Date</code> indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
+    </tr>
+    <tr>
+      <th>realtime_end</th>
+      <td><p>A <code>Date</code> indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>fredr_set_key()</code> sets a key as an environment variable for use with
-the <code>fredr`` package in the current session. The key can also be set in the</code>.Renviron<code>file in the working directory. You can edit the file manually by appending the line</code>FRED_API_KEY = my_api_ky<code>, where</code>my_api_key<code>is your actual key. The function</code>usethis::edit_r_environ()<code>does this safely. Run</code>base::readRenviron(".Renviron")` to set the key in the current session; the
-variable will be set in subsequent sessions started in the working directory.</p>
+    <p>A <code>tibble</code> object with information on the categories to
+which the series specified by <code>series_id</code> belongs.  Data include category ID,
+name, parent category ID, and notes.</p>
     
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
-    <p>See St. Louis Fed Web Services <a href='https://api.stlouisfed.org/api_key.html'>API Keys</a>
-to obtain an API key.</p>
+    
+    <p><a href='https://research.stlouisfed.org/docs/api/fred/series_categories.html'>fred/series/categories</a></p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Note that by using a FRED API key, you agree to the FRED API
-<a href='https://research.stlouisfed.org/docs/api/terms_of_use.html'>Terms of Use</a>.</p></div>
+    <div class='dont-index'><p><code><a href='fredr_series_observations.html'>fredr_series_observations()</a></code>, <code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>,
+<code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>,
+<code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>, <code><a href='fredr_series.html'>fredr_series()</a></code>,
+<code><a href='fredr_series_release.html'>fredr_series_release()</a></code>, <code><a href='fredr_series_tags.html'>fredr_series_tags()</a></code>, <code><a href='fredr_series_updates.html'>fredr_series_updates()</a></code>,
+<code><a href='fredr_series_vintagedates.html'>fredr_series_vintagedates()</a></code>.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>fredr</span>)
-<span class='fu'>fredr_set_key</span>(<span class='st'>"abcdefghijklmnopqrstuvwxyz123456"</span>)
-<span class='co'># }</span><div class='input'>
-</div></pre>
+<span class='co'># Return the categories to which the "UNRATE" series belongs</span>
+<span class='fu'>fredr_series_categories</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#details">Details</a></li>
+      <li><a href="#value">Value</a></li>
 
-      <li><a href="#references">References</a></li>
+      <li><a href="#api-documentation">API Documentation</a></li>
 
       <li><a href="#see-also">See also</a></li>
       

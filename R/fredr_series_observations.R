@@ -82,23 +82,31 @@
 #' * `3` for Observations by Vintage Date, New and Revised Observations Only
 #' * `4` for Observations, Initial Release Only.
 #'
-#' @return A \code{tibble} object with observation dates and values.
+#' @return A `tibble` object with observation dates and values.
 #'
 #' @section API Documentation:
 #'
 #' [fred/series/observations](https://research.stlouisfed.org/docs/api/fred/series_observations.html)
 #'
-#' @seealso [fredr_series_search_text()], [fredr_series_search_id()],
-#' [fredr_series_search_tags()], [fredr_series_search_related_tags()], [fredr_series].
+#' @seealso [fredr_series_search_text()],
+#' [fredr_series_search_id()], [fredr_series_search_tags()],
+#' [fredr_series_search_related_tags()], [fredr_series()], [fredr_series_categories()],
+#' [fredr_series_release()], [fredr_series_tags()], [fredr_series_updates()],
+#' [fredr_series_vintagedates()].
 #'
 #' @examples
 #' \dontrun{
+#' # Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
+#' of change from pervious observation.
 #' fredr_series_observations(
 #'   series_id = "UNRATE",
 #'   observation_start = as.Date("1980-01-01"),
 #'   observation_end = as.Date("2000-01-01"),
 #'   unit = "chg"
 #' )
+#' # All observations for "OILPRICE" series.  The data is first aggregated by
+#' # quarter by taking the average of all observations in the quarter then
+#' # transformed by taking the natural logarithm.
 #' fredr_series_observations(
 #'   series_id = "OILPRICE",
 #'   frequency = "q",

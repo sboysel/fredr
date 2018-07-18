@@ -128,27 +128,29 @@ FRED API endpoint.  Default is <code>"base"</code>, which will open a link to
     <tr>
       <th>params</th>
       <td><p>A boolean value.  If <code>TRUE</code>, the documentation will be opened at
-the 'Parameters' section.  Default is <code>FALSE</code>.</p></td>
+the "Parameters" section.  Default is <code>FALSE</code>.</p></td>
     </tr>
     <tr>
       <th>debug</th>
       <td><p>A boolean value.  If <code>TRUE</code>, the documentation is not opened in a
-browser and the documentation URL is returned.  If <code>FALSE</code>, documentation
-is opened in a browser and nothing is returned.  Default is <code>FALSE</code>.</p></td>
+browser and the documentation URL is returned as a string.  If <code>FALSE</code>,
+documentation is opened in a browser and nothing is returned.  Default
+is <code>FALSE</code>.</p></td>
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
-    <p>See <a href='https://api.stlouisfed.org/docs/fred/'>https://api.stlouisfed.org/docs/fred/</a>.</p>
+    
+    <p><a href='https://api.stlouisfed.org/docs/fred/'>FRED API</a></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
 <span class='fu'>fredr_docs</span>()
-<span class='fu'>fredr_docs</span>(<span class='st'>'category'</span>)
-<span class='fu'>fredr_docs</span>(<span class='st'>'series/observations'</span>)
-<span class='fu'>fredr_docs</span>(<span class='st'>'series/observations'</span>, <span class='kw'>params</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='fu'>fredr_docs</span>(<span class='kw'>endpoint</span> <span class='kw'>=</span> <span class='st'>"category"</span>)
+<span class='fu'>fredr_docs</span>(<span class='kw'>endpoint</span> <span class='kw'>=</span> <span class='st'>"series/observations"</span>)
+<span class='fu'>fredr_docs</span>(<span class='kw'>endpoint</span> <span class='kw'>=</span> <span class='st'>"series/observations"</span>, <span class='kw'>params</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -156,7 +158,7 @@ is opened in a browser and nothing is returned.  Default is <code>FALSE</code>.<
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#references">References</a></li>
+      <li><a href="#api-documentation">API Documentation</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

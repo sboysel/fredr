@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_category_related_tags.R
 \name{fredr_category_related_tags}
 \alias{fredr_category_related_tags}
-\title{Get the related FRED tags for one or more FRED tags within a category}
+\title{Get the related FRED tags within a category}
 \usage{
 fredr_category_related_tags(category_id = 0L, tag_names = NULL,
   exclude_tag_names = NULL, tag_group_id = NULL, search_text = NULL,
@@ -14,7 +14,8 @@ fredr_category_related_tags(category_id = 0L, tag_names = NULL,
 root category. \emph{Required parameter.}}
 
 \item{tag_names}{A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).}
+tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).
+\emph{Required parameter.}}
 
 \item{exclude_tag_names}{A string indicating which series tags should \emph{not}
 be matched.  Multiple tags can be delimited by a semicolon in a single string
@@ -34,8 +35,8 @@ type.  No filtering by default.  Possible values include:
 
 \item{search_text}{A string to match text of tags.  No matching by default.}
 
-\item{limit}{An positive integer indicating maximum number of results to return.  Possible
-values are any integer between \code{1} and \code{1000} (default), inclusive.}
+\item{limit}{An positive integer indicating maximum number of results to return.
+Possible values are any integer between \code{1} and \code{1000} (default), inclusive.}
 
 \item{offset}{An non-negative integer used in conjunction with \code{limit} for
 long series.  This mimics the idea of \emph{pagination} to retrieve large amounts
@@ -56,10 +57,19 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object.
+A \code{tibble} object information on related tags matching the request.
+Data include tag name, group ID, popularity, series count, tag creation date,
+and additional notes.
 }
 \description{
-Get the related FRED tags for one or more FRED tags within a category
+Get the related FRED tags for one or more FRED tags within a category.
+Optionally, filter results by tag group or search.  FRED tags are attributes
+assigned to series. Related FRED tags are the tags assigned to series that
+match \emph{all} tags in the \emph{tag_names} parameter, \emph{no} tags in the
+\emph{exclude_tag_names} parameter, and the category set by the \emph{category_id}
+parameter.  Series are assigned tags and categories. Indirectly through series,
+it is possible to get the tags for a category. No tags exist for a category
+that does not have series.
 }
 \section{API Documentation}{
 
@@ -69,7 +79,11 @@ Get the related FRED tags for one or more FRED tags within a category
 
 \examples{
 \dontrun{
-fredr_category_related_tags(category_id = 1L)
+# First, get the tags for the "Production & Business Activity" category
+fredr_category_tags(1L)
+# Then, get the tags related to "business" and "monthly" for the
+# "Production & Business Activity" category
+fredr_category_related_tags(category_id = 1L, tag_names = "business;monthly")
 }
 }
 \seealso{

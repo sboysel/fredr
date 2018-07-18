@@ -109,12 +109,17 @@ Given a series ID, return observations of that series as a \code{tibble} object.
 
 \examples{
 \dontrun{
+# Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
+of change from pervious observation.
 fredr_series_observations(
   series_id = "UNRATE",
   observation_start = as.Date("1980-01-01"),
   observation_end = as.Date("2000-01-01"),
   unit = "chg"
 )
+# All observations for "OILPRICE" series.  The data is first aggregated by
+# quarter by taking the average of all observations in the quarter then
+# transformed by taking the natural logarithm.
 fredr_series_observations(
   series_id = "OILPRICE",
   frequency = "q",
@@ -124,6 +129,9 @@ fredr_series_observations(
 }
 }
 \seealso{
-\code{\link[=fredr_series_search_text]{fredr_series_search_text()}}, \code{\link[=fredr_series_search_id]{fredr_series_search_id()}},
-\code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}}, \link{fredr_series}.
+\code{\link[=fredr_series_search_text]{fredr_series_search_text()}},
+\code{\link[=fredr_series_search_id]{fredr_series_search_id()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}},
+\code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}}, \code{\link[=fredr_series]{fredr_series()}}, \code{\link[=fredr_series_categories]{fredr_series_categories()}},
+\code{\link[=fredr_series_release]{fredr_series_release()}}, \code{\link[=fredr_series_tags]{fredr_series_tags()}}, \code{\link[=fredr_series_updates]{fredr_series_updates()}},
+\code{\link[=fredr_series_vintagedates]{fredr_series_vintagedates()}}.
 }
