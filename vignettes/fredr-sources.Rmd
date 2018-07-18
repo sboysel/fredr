@@ -1,0 +1,75 @@
+---
+title: "FRED Sources"
+author: "Sam Boysel"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+vignette: >
+  %\VignetteIndexEntry{FRED Sources}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  fig.width = 7,
+  fig.height = 5,
+  eval = !(Sys.getenv("FRED_API_KEY") == ""),
+  cache = TRUE,
+  collapse = TRUE,
+  comment = "#>"
+)
+library(fredr)
+options(digits = 4)
+```
+
+# Introduction
+
+This vignette is intended to introduce the user to `fredr` functions for the [Sources
+endpoint](https://research.stlouisfed.org/docs/api/fred/#Sources) of the FRED API.
+
+FRED series are derived from a specific data source, each with an associated integer identifier.  For example:
+
+## Get FRED sources
+
+The function `fredr_sources()` returns a list of FRED data sources with information for each source (source ID, source name, real time periods, a link to the source, and additional notes).  For example, running`fredr_sources()` without any arguments returns the first 1000 (`limit` default) sources ordered by ascending source ID:
+
+```{r fredr_sources1}
+fredr_sources()
+```
+
+See `fredr_sources()` for additional details.
+
+## Get a single FRED source
+
+The function `fredr_source()` returns information for a _single_ source indicated by `source_id`.  For example, the Federal Financial Institutions Examination Council source ID is `6`:
+
+```{r fredr_source1}
+fredr_source(
+  source_id = 6L
+)
+```
+
+See `fredr_source()` for additional details.
+
+## Get FRED releases for a source
+
+The function `fredr_source_releases()` returns FRED release information for the source indicated by `source_id`.  As with the functions for the [Releases endpoint](http://sboysel.github.io/fredr/reference/index.html#Releases), release information includes release ID, name, real time periods, a link to the press release if available, and additional notes.  For example, to get the first 10 releases from the Federal Reserve Board of Governors, ordered by ascending release ID:
+
+```{r fredr_source_releases1}
+fredr_source_releases(
+  source_id = 1L,
+  limit = 10L
+)
+```
+
+To get University of Michigan releases since 1950:
+
+```{r fredr_source_releases2}
+fredr_source_releases(
+  source_id = 14L,
+  realtime_start = as.Date("1950-01-01")
+)
+```

@@ -1,0 +1,67 @@
+---
+title: "FRED Releases"
+author: "Sam Boysel"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+vignette: >
+  %\VignetteIndexEntry{FRED Releases}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  fig.width = 7,
+  fig.height = 5,
+  eval = !(Sys.getenv("FRED_API_KEY") == ""),
+  cache = TRUE,
+  collapse = TRUE,
+  comment = "#>"
+)
+library(fredr)
+options(digits = 4)
+```
+
+# Introduction
+
+This vignette is intended to introduce the user to `fredr` functions for the [Releases
+endpoint](https://research.stlouisfed.org/docs/api/fred/#Releases) of the FRED API.
+
+## Get a release of economic data
+
+See `fredr_release()` for additional details.
+
+## Get release dates for a single release of economic data
+
+See `fredr_release_dates()` for additional details.
+
+## Get the related FRED tags for one or more FRED tags within a release
+
+See `fredr_release_related_tags()` for additional details.
+
+## Get the series on a release of economic data
+
+See `fredr_release_series()` for additional details.
+
+## Get the sources for a release of economic data
+
+See `fredr_release_sources()` for additional details.
+
+## Get release table trees for a given release
+
+See `fredr_release_tables()` for additional details.
+
+## Get the FRED tags for a release
+
+See `fredr_release_tags()` for additional details
+
+## Get all releases of economic data
+
+See `fredr_releases()` for additional details.
+
+## Get release dates for all releases of economic data.
+
+See `fredr_releases_dates()` for additional details.

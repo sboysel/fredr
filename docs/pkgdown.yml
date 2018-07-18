@@ -2,5 +2,10 @@ pandoc: 2.2.1
 pkgdown: 1.1.0
 pkgdown_sha: ~
 articles:
+  fredr-categories: fredr-categories.html
+  fredr-releases: fredr-releases.html
+  fredr-series: fredr-series.html
+  fredr-sources: fredr-sources.html
+  fredr-tags: fredr-tags.html
   fredr: fredr.html
 

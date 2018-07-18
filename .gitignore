@@ -1,14 +1,9 @@
-examples/
-notes/
-packrat/
 .Rprofile
 .Rproj.user
 .Rhistory
 .RData
 .Renviron
 *.swp
-packrat/lib*/
-packrat/src/
 inst/doc
-vignettes/fredr_cache/
-vignettes/fredr_files/
+vignettes/fredr*_cache/
+vignettes/fredr*_files/

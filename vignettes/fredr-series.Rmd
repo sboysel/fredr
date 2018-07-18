@@ -1,0 +1,111 @@
+---
+title: "FRED Series"
+author: "Sam Boysel"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+vignette: >
+  %\VignetteIndexEntry{FRED Series}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  fig.width = 7,
+  fig.height = 5,
+  eval = !(Sys.getenv("FRED_API_KEY") == ""),
+  cache = TRUE,
+  collapse = TRUE,
+  comment = "#>"
+)
+library(fredr)
+options(digits = 4)
+```
+
+# Introduction
+
+This vignette is intended to introduce the user to `fredr` functions for the [Series
+endpoint](https://research.stlouisfed.org/docs/api/fred/#Series) of the FRED API.
+
+FRED series are the primary data objects in the FRED database, each with string identifier.  For example:
+
+- Civilian Unemployment Rate (`series_id = "UNRATE"`)
+- Real Gross National Product (`series_id = "GNPCA"`)
+- Effective Federal Funds Rate (`series_id = "FEDFUNDS"`)
+
+FRED series are assigned categories and tags attributes for organization and classification.  The following examples illustrate the Series endpoint functions implements in `fredr`.
+
+## Retrieve observations
+
+The function `fredr()`, an alias for `fredr_series_observations()`, is the core function in `fredr` for fetching FRED data series.  See the [Get started](http://sboysel.github.io/fredr/articles/fredr.html) article and `fredr()` for usage examples.
+
+## Search for FRED series
+
+Use `fredr_series_search_text()` to search for a series _by text_ in the series description.  For example:
+
+```{r fredr_series_search_text1}
+fredr_series_search_text(
+  search_text = "unemployment",
+  limit = 100L
+)
+```
+
+Use `fredr_series_search_id()` to search for a series _by integer ID_ of the series.  For example:
+
+```{r fredr_search_id1}
+fredr_series_search_id(
+  search_text = "UNRATE",
+  limit = 100L
+)
+```
+
+## Search for FRED series by tags
+
+Use `fredr_series_search_tags()` to search for series tags
+
+```{r fredr_series_search_tags, message=FALSE, warning=FALSE}
+fredr_series_search_tags(
+  series_search_text = "unemployment",
+  limit = 100L
+)
+```
+
+## Search for FRED series by related tags
+
+Use `fredr_search_related_tags()` to search for series tags related to a given tag.  For example, to search for tags related to the tag "usa" in which the series text matches "gnp", use the following:
+
+```{r fredr_search_related_tags1}
+fredr_series_search_related_tags(
+  series_search_text = "gnp",
+  tag_names = "usa",
+  limit = 30L
+)
+```
+
+## Return basic information for a FRED series
+
+See `fredr_series()` for additional details.
+
+## Return the categories for a FRED series
+
+See `fredr_series_categories()` for additional details.
+
+## Return the release for a FRED series
+
+See `fredr_series_release()` for additional details.
+
+## Return the tags for a FRED series
+
+See `fredr_series_tags()` for additional details
+
+## Return a set of recently updated FRED series
+
+See `fredr_series_updates()` for additional details.
+
+## Get the data vintage dates for a FRED series
+
+See `fredr_series_vintagedates()` for additiional details
+

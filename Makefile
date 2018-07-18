@@ -13,7 +13,6 @@ vignettes: vignettes/fredr.Rmd
 docs: R/*.R tests/testthat/*.R _pkgdown.yml
 	$(R) -e "devtools::document()"
 	$(R) -e "pkgdown::build_site()"
-	$(R) -e "pkgdown::build_reference(lazy = FALSE)"
 
 check: R/*.R tests/testthat/*.R _pkgdown.yml
 	$(R) -e "devtools::check()"

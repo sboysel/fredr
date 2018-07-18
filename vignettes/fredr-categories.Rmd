@@ -30,7 +30,7 @@ options(digits = 4)
 This vignette is intended to introduce the user to `fredr` functions for the [Categories
 endpoint](https://research.stlouisfed.org/docs/api/fred/#Categories) of the FRED API.
 
-FRED series are assigned categories with integer identifiers.  For example:
+FRED series are assigned categories, each with an associated integer identifier.  For example:
 
 - "Population, Employment, & Labor Markets" (`category_id = 10`)
 - "National Accounts" (`category_id = 32992`)
