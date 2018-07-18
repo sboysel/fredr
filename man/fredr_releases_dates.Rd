@@ -17,28 +17,30 @@ This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
 \item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"} (default), and \code{"desc"}.}
+Possible values are: \code{"asc"} and \code{"desc"} (default).}
 
 \item{order_by}{Order results by values of the specified attribute.
-Possible values include: \code{'release_id'} (default), \code{'name'}, \code{'press_release'},
-\code{'realtime_start'}, \code{'realtime_end'}.}
+Possible values include: \code{'release_date'} (default), \code{'release_id'},
+\code{'release_name'}.}
 
 \item{include_release_dates_with_no_data}{A boolean value indicating if the
 results with no data available should be returned as well.  Default is \code{FALSE}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
-Defaults to today's date. For more information, see
+Defaults to the first day of the current year. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
-Defaults to today's date. For more information, see
+Defaults to \code{9999-12-31} (latest available). For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
 A \code{tibble} object.
 }
 \description{
-Get release dates for \emph{all} releases of economic data.
+Get release dates for \emph{all} releases of economic data. Note that release
+dates are published by data sources and do not necessarily represent when
+data will be available on the FRED or ALFRED websites.
 }
 \section{API Documentation}{
 
@@ -48,7 +50,7 @@ Get release dates for \emph{all} releases of economic data.
 
 \examples{
 \dontrun{
-fredr_release_dates(limit = 20L)
+fredr_releases_dates(limit = 20L)
 }
 }
 \seealso{

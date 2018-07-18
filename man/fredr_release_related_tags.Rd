@@ -12,25 +12,26 @@ fredr_release_related_tags(release_id = NULL, tag_names = NULL,
 \arguments{
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}
 
-\item{tag_names}{A string of tags to include in the response.  Multiple tags
-can be delimited by a semicolon in a single string. \emph{Required parameter.}}
+\item{tag_names}{A semicolon delimited string of tag names to be related to.
+\emph{Required parameter.}}
 
-\item{exclude_tag_names}{A string of tags to \emph{not} include in the response.
-Multiple tags can be delimited by a semicolon in a single string.}
+\item{exclude_tag_names}{A semicolon delimted string of tag names that series
+match \emph{none} of. No exclusions are done by default.}
 
-\item{tag_group_id}{A string representing the tag group id to filter tags by
-type.  No filtering by default.  Possible values include:
+\item{tag_group_id}{A string tag group id to filter tags by type. No filtering
+by tag group by default. Possible values are:
 \itemize{
-\item \code{"freq"} - Frequency
-\item \code{"gen"} - General or Concept
-\item \code{"geo"} - Geography
-\item \code{"geot"} - Geography Type
-\item \code{"rls"} - Release
-\item \code{"seas"} - Seasonal Adjustment
-\item \code{"src"} - Source
+\item \code{"freq"} = Frequency
+\item \code{"gen"} = General or Concept
+\item \code{"geo"} = Geography
+\item \code{"geot"} = Geography Type
+\item \code{"rls"} = Release
+\item \code{"seas"} = Seasonal Adjustment
+\item \code{"src"} = Source
 }}
 
-\item{search_text}{A string to match text of tags.  No matching by default.}
+\item{search_text}{A string indicating the words to find matching tags with.
+No filtering by search words by default.}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}
@@ -39,11 +40,19 @@ Defaults to \code{1000}, the maximum.}
 This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
-\item{order_by}{Order results by values of the specified attribute.
-Possible values include: \code{"series_count"} (default), \code{"popularity"``,}"created"\code{,}"name"\code{,}"group_id"`.}
+\item{order_by}{Order results by values of the specified attribute. Default
+ordering is by \code{series_count}. Possible values are:
+\itemize{
+\item \code{"series_count"}
+\item \code{"popularity"}
+\item \code{"created"}
+\item \code{"name"}
+\item \code{"group_id"}
+}}
 
-\item{sort_order}{A string representing the order of the resulting series.
-Possible values are: \code{"asc"} (default), and \code{"desc"}.}
+\item{sort_order}{A string representing the order of the resulting series,
+sorted by the attribute values specified by \code{order_by}. Possible values
+are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
@@ -57,7 +66,10 @@ Defaults to today's date. For more information, see
 A \code{tibble} object.
 }
 \description{
-Get the related FRED tags for one or more FRED tags within a release
+FRED tags are attributes assigned to series. For this request, related FRED
+tags are the tags assigned to series that match all tags in the \code{tag_names}
+parameter, no tags in the \code{exclude_tag_names} parameter, and the
+release set by the \code{release_id} parameter.
 }
 \section{API Documentation}{
 
@@ -67,7 +79,7 @@ Get the related FRED tags for one or more FRED tags within a release
 
 \examples{
 \dontrun{
-fredr_release_related_tags(release_id = 10L, tag_names = "gnp")
+fredr_release_related_tags(10, tag_names = "cpi")
 }
 }
 \seealso{

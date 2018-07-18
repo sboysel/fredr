@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_release_sources.R
 \name{fredr_release_sources}
 \alias{fredr_release_sources}
-\title{Get release dates for \emph{all} releases of economic data.}
+\title{Get the sources for a release of economic data}
 \usage{
 fredr_release_sources(release_id = NULL, realtime_start = NULL,
   realtime_end = NULL)
@@ -22,7 +22,7 @@ Defaults to today's date. For more information, see
 A \code{tibble} object.
 }
 \description{
-Get release dates for \emph{all} releases of economic data.
+Get the sources for a release of economic data
 }
 \section{API Documentation}{
 
@@ -32,6 +32,7 @@ Get release dates for \emph{all} releases of economic data.
 
 \examples{
 \dontrun{
+# Where does the data for ID 10 come from?
 fredr_release_sources(release_id = 10L)
 }
 }

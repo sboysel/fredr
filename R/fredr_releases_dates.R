@@ -1,11 +1,15 @@
 #' Get release dates for _all_ releases of economic data.
 #'
+#' Get release dates for _all_ releases of economic data. Note that release
+#' dates are published by data sources and do not necessarily represent when
+#' data will be available on the FRED or ALFRED websites.
+#'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
-#' Defaults to today's date. For more information, see
+#' Defaults to the first day of the current year. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param realtime_end A `Date` indicating the end of the real-time period.
-#' Defaults to today's date. For more information, see
+#' Defaults to `9999-12-31` (latest available). For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param limit An integer limit on the maximum number of results to return.
@@ -16,11 +20,11 @@
 #' multiple calls. Defaults to `0`.
 #'
 #' @param sort_order A string representing the order of the resulting series.
-#' Possible values are: `"asc"` (default), and `"desc"`.
+#' Possible values are: `"asc"` and `"desc"` (default).
 #'
 #' @param order_by Order results by values of the specified attribute.
-#' Possible values include: `'release_id'` (default), `'name'`, `'press_release'`,
-#' `'realtime_start'`, `'realtime_end'`.
+#' Possible values include: `'release_date'` (default), `'release_id'`,
+#' `'release_name'`.
 #'
 #' @param include_release_dates_with_no_data A boolean value indicating if the
 #' results with no data available should be returned as well.  Default is `FALSE`.
@@ -37,7 +41,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' fredr_release_dates(limit = 20L)
+#' fredr_releases_dates(limit = 20L)
 #' }
 #' @export
 fredr_releases_dates <- function(limit = NULL,

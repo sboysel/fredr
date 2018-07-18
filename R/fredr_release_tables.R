@@ -1,5 +1,9 @@
 #' Get release table trees for a given release
 #'
+#' You can go directly to the tree structure by passing the appropriate
+#' `element_id`. You may also use a drill-down approach to start at the root
+#' (top most) element by leaving the `element_id` off.
+#'
 #' @param release_id An integer ID of the release. _Required parameter._
 #'
 #' @param element_id An integer ID for the desired release table element.
@@ -25,6 +29,9 @@
 #' @examples
 #' \dontrun{
 #' fredr_release_tables(release_id = 10L)
+#'
+#' # Digging further into a release element
+#' fredr_release_tables(release_id = 53L, element_id = 12886)
 #' }
 #' @export
 fredr_release_tables <- function(release_id = NULL,

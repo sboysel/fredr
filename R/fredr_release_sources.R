@@ -1,4 +1,4 @@
-#' Get release dates for _all_ releases of economic data.
+#' Get the sources for a release of economic data
 #'
 #' @param release_id An integer ID of the release. _Required parameter._
 #'
@@ -22,6 +22,7 @@
 #'
 #' @examples
 #' \dontrun{
+#' # Where does the data for ID 10 come from?
 #' fredr_release_sources(release_id = 10L)
 #' }
 #' @export

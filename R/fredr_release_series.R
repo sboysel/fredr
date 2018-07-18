@@ -63,7 +63,16 @@
 #'
 #' @examples
 #' \dontrun{
-#' fredr_release_dates(limit = 20L)
+#' fredr_release_series(release_id = 20L)
+#'
+#' fredr_release_series(release_id = 20L, order_by = "popularity")
+#'
+#' # Extract the "catalog" of series from a release on a certain date
+#' fredr_release_series(
+#'    release_id = 20L,
+#'    realtime_end = as.Date("2018-07-13"),
+#'    order_by = "popularity"
+#' )
 #' }
 #' @export
 fredr_release_series <- function(release_id = NULL,
