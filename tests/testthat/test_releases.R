@@ -90,7 +90,7 @@ test_that("fredr_release_sources()", {
 test_that("fredr_release_tables()", {
   skip_if_no_key()
   expect_silent(release <- fredr_release_tables(release_id = 10L))
-  expect_type(release, "list")
+  expect_s3_class(release, c("tbl_df", "tbl", "data.frame"))
   # errors
   expect_error(fredr_release_tables())
   expect_error(fredr_release_tables(release_id = 10L, include_observation_values = 1))
