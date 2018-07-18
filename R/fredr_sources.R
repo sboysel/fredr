@@ -1,4 +1,4 @@
-#' Get all sources of economic data
+#' Get _all_ sources of economic data
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
@@ -8,11 +8,12 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
-#' @param limit An positive integer indicating maximum number of results to return.  Possible
-#' values are any integer between `1` and `1000` (default), inclusive.
+#' @param limit An integer limit on the maximum number of results to return.
+#' Defaults to `1000`, the maximum.
 #'
-#' @param offset An non-negative integer indicating how many records to offset
-#' the returned results.  Default is `0`.
+#' @param offset An integer used in conjunction with limit for long series.
+#' This mimics the idea of _pagination_ to retrieve large amounts of data over
+#' multiple calls. Defaults to `0`.
 #'
 #' @param order_by A string indicating which attribute should be used to order
 #' the results.  Possible values: `"source_id"` (default), `"name"`,
@@ -42,12 +43,12 @@ fredr_sources <- function(limit = NULL,
                           realtime_end = NULL) {
 
   user_args <- capture_args(
-    realtime_start,
-    realtime_end,
     limit,
     offset,
     order_by,
-    sort_order
+    sort_order,
+    realtime_start,
+    realtime_end
   )
 
   fredr_args <- list(

@@ -11,15 +11,22 @@ fredr_source_releases(source_id = NULL, limit = NULL, offset = NULL,
 \arguments{
 \item{source_id}{An integer ID for the data source.  \emph{Required parameter}.}
 
-\item{limit}{An positive integer indicating maximum number of results to return.  Possible
-values are any integer between \code{1} and \code{1000} (default), inclusive.}
+\item{limit}{An integer limit on the maximum number of results to return.
+Defaults to \code{1000}, the maximum.}
 
-\item{offset}{An non-negative integer indicating how many records to offset
-the returned results.  Default is \code{0}.}
+\item{offset}{An integer used in conjunction with limit for long series.
+This mimics the idea of \emph{pagination} to retrieve large amounts of data over
+multiple calls. Defaults to \code{0}.}
 
 \item{order_by}{A string indicating which attribute should be used to order
-the results.  Possible values: \code{"release_id"} (default), \code{"name"},
-\code{"press_release"}, \code{"realtime_start"}, \code{"realtime_end"}.}
+the results.  Possible values:
+\itemize{
+\item \code{"release_id"} (default)
+\item \code{"name"}
+\item \code{"press_release"}
+\item \code{"realtime_start"}
+\item \code{"realtime_end"}
+}}
 
 \item{sort_order}{A string representing the order of the resulting series.
 Possible values are: \code{"asc"} (default), and \code{"desc"}.}
@@ -46,7 +53,11 @@ Get the releases for a source
 
 \examples{
 \dontrun{
+# Board of Governors
 fredr_source_releases(source_id = 1L)
+
+# University of Michigan
+fredr_source_releases(source_id = 14L, realtime_start = as.Date("1950-01-01"))
 }
 }
 \seealso{
