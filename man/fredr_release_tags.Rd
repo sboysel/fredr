@@ -13,7 +13,8 @@ fredr_release_tags(release_id = NULL, tag_names = NULL,
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}
 
 \item{tag_names}{A semicolon delimited string of tag names to only
-include in the response. No filtering by tag names by default.}
+include in the response. No filtering by tag names by default (i.e. \emph{all}
+FRED tags returned).}
 
 \item{tag_group_id}{A string tag group id to filter tags by type. No filtering
 by tag group by default. Possible values are:
@@ -37,10 +38,10 @@ Defaults to \code{1000}, the maximum.}
 This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
-\item{order_by}{Order results by values of the specified attribute. Default
-ordering is by \code{series_count}. Possible values are:
+\item{order_by}{Order results by values of the specified attribute. Possible
+values are:
 \itemize{
-\item \code{"series_count"}
+\item \code{"series_count"} (default)
 \item \code{"popularity"}
 \item \code{"created"}
 \item \code{"name"}
@@ -49,7 +50,7 @@ ordering is by \code{series_count}. Possible values are:
 
 \item{sort_order}{A string representing the order of the resulting series,
 sorted by the attribute values specified by \code{order_by}. Possible values
-are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
