@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get the related FRED tags for one or more FRED tags within a category — fredr_category_related_tags • fredr</title>
+<title>Get the related FRED tags within a category — fredr_category_related_tags • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,16 @@
 
 
 
-<meta property="og:title" content="Get the related FRED tags for one or more FRED tags within a category — fredr_category_related_tags" />
+<meta property="og:title" content="Get the related FRED tags within a category — fredr_category_related_tags" />
 
-<meta property="og:description" content="Get the related FRED tags for one or more FRED tags within a category" />
+<meta property="og:description" content="Get the related FRED tags for one or more FRED tags within a category.
+Optionally, filter results by tag group or search.  FRED tags are attributes
+assigned to series. Related FRED tags are the tags assigned to series that
+match all tags in the tag_names parameter, no tags in the
+exclude_tag_names parameter, and the category set by the category_id
+parameter.  Series are assigned tags and categories. Indirectly through series,
+it is possible to get the tags for a category. No tags exist for a category
+that does not have series." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,14 +110,21 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get the related FRED tags for one or more FRED tags within a category</h1>
+    <h1>Get the related FRED tags within a category</h1>
     <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_category_related_tags.R'><code>R/fredr_category_related_tags.R</code></a></small>
     <div class="hidden name"><code>fredr_category_related_tags.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get the related FRED tags for one or more FRED tags within a category</p>
+    <p>Get the related FRED tags for one or more FRED tags within a category.
+Optionally, filter results by tag group or search.  FRED tags are attributes
+assigned to series. Related FRED tags are the tags assigned to series that
+match <em>all</em> tags in the <em>tag_names</em> parameter, <em>no</em> tags in the
+<em>exclude_tag_names</em> parameter, and the category set by the <em>category_id</em>
+parameter.  Series are assigned tags and categories. Indirectly through series,
+it is possible to get the tags for a category. No tags exist for a category
+that does not have series.</p>
     
     </div>
 
@@ -130,7 +144,8 @@ root category. <em>Required parameter.</em></p></td>
     <tr>
       <th>tag_names</th>
       <td><p>A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
+tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).
+<em>Required parameter.</em></p></td>
     </tr>
     <tr>
       <th>exclude_tag_names</th>
@@ -157,8 +172,8 @@ type.  No filtering by default.  Possible values include:</p><ul>
     </tr>
     <tr>
       <th>limit</th>
-      <td><p>An positive integer indicating maximum number of results to return.  Possible
-values are any integer between <code>1</code> and <code>1000</code> (default), inclusive.</p></td>
+      <td><p>An positive integer indicating maximum number of results to return.
+Possible values are any integer between <code>1</code> and <code>1000</code> (default), inclusive.</p></td>
     </tr>
     <tr>
       <th>offset</th>
@@ -192,7 +207,9 @@ Defaults to today's date. For more information, see
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>tibble</code> object.</p>
+    <p>A <code>tibble</code> object information on related tags matching the request.
+Data include tag name, group ID, popularity, series count, tag creation date,
+and additional notes.</p>
     
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
@@ -207,7 +224,11 @@ Defaults to today's date. For more information, see
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_category_related_tags</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
+<span class='co'># First, get the tags for the "Production &amp; Business Activity" category</span>
+<span class='fu'><a href='fredr_category_tags.html'>fredr_category_tags</a></span>(<span class='fl'>1L</span>)
+<span class='co'># Then, get the tags related to "business" and "monthly" for the</span>
+<span class='co'># "Production &amp; Business Activity" category</span>
+<span class='fu'>fredr_category_related_tags</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"business;monthly"</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

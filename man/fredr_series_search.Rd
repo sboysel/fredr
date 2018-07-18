@@ -5,8 +5,8 @@
 \alias{fredr_series_search_id}
 \title{Search for a FRED series.}
 \usage{
-fredr_series_search_text(search_text = NULL, limit = 1000L, offset = 0,
-  order_by = NULL, sort_order = "asc", filter_variable = NULL,
+fredr_series_search_text(search_text = NULL, limit = NULL, offset = NULL,
+  order_by = NULL, sort_order = NULL, filter_variable = NULL,
   filter_value = NULL, realtime_start = NULL, realtime_end = NULL,
   tag_names = NULL, exclude_tag_names = NULL)
 
@@ -71,18 +71,40 @@ Defaults to today's date. For more information, see
 series match \emph{none} of.  Defaults to no tag filtering.}
 }
 \value{
-A \code{tibble} object.
+A \code{tibble} object where each row represents a series matching the query.
 }
 \description{
 Search FRED for a series by full text of series or by series ID.
 }
 \examples{
 \dontrun{
-library(fredr)
-fredr_series_search_text("oil", order_by = "popularity", limit = 10)
-fredr_series_search_text("oil", order_by = "search_rank", limit = 10, tag_names = "usa")
-fredr_series_search_text("oil", filter_variable = "frequency", filter_value = "q")
-fredr_series_search_id("UNRATE", order_by = "observation_start")
+# search for series with text matching "oil" and return the top 10 most popular
+# series
+fredr_series_search_text(
+  search_text = "oil",
+  order_by = "popularity",
+  limit = 10
+)
+# search for series with text matching "oil" with the tag "usa" and return the
+# top 10 search results
+fredr_series_search_text(
+  search_text = "oil",
+  order_by = "search_rank",
+  limit = 10,
+  tag_names = "usa"
+)
+# search for series with text matching "unemployment" and return only series
+# with monthly frequency
+fredr_series_search_text(
+  search_text = "unemployment",
+  filter_variable = "frequency",
+  filter_value = "Monthly"
+)
+# search for series ID matching "UNRATE" and return oldest series first
+fredr_series_search_id(
+  search_text = "UNRATE",
+  order_by = "observation_start"
+)
 }
 }
 \references{
@@ -91,5 +113,8 @@ API Documentation:
 \href{https://research.stlouisfed.org/docs/api/fred/series_search.html}{series/search}
 }
 \seealso{
-\code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}}, \link{fredr_tags}
+\code{\link[=fredr_series_observations]{fredr_series_observations()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}},
+\code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}}, \code{\link[=fredr_series]{fredr_series()}}, \code{\link[=fredr_series_categories]{fredr_series_categories()}},
+\code{\link[=fredr_series_release]{fredr_series_release()}}, \code{\link[=fredr_series_tags]{fredr_series_tags()}}, \code{\link[=fredr_series_updates]{fredr_series_updates()}},
+\code{\link[=fredr_series_vintagedates]{fredr_series_vintagedates()}}.
 }

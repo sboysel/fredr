@@ -4,22 +4,14 @@
 \alias{fredr_related_tags}
 \title{Get related FRED tags given one or more tags}
 \usage{
-fredr_related_tags(tag_names = NULL, realtime_start = NULL,
-  realtime_end = NULL, exclude_tag_names = NULL, tag_group_id = NULL,
-  search_text = NULL, limit = NULL, offset = NULL, order_by = NULL,
-  sort_order = NULL)
+fredr_related_tags(tag_names = NULL, exclude_tag_names = NULL,
+  tag_group_id = NULL, search_text = NULL, limit = NULL, offset = NULL,
+  order_by = NULL, sort_order = NULL, realtime_start = NULL,
+  realtime_end = NULL)
 }
 \arguments{
 \item{tag_names}{A semicolon delimited string of tag names to be related to.
 \emph{Required parameter.}}
-
-\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
-
-\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{exclude_tag_names}{A semicolon delimted string of tag names that series
 match \emph{none} of. No exclusions are done by default.}
@@ -46,10 +38,10 @@ Defaults to \code{1000}, the maximum.}
 This mimics the idea of \emph{pagination} to retrieve large amounts of data over
 multiple calls. Defaults to \code{0}.}
 
-\item{order_by}{Order results by values of the specified attribute. Default
-ordering is by \code{series_count}. Possible values are:
+\item{order_by}{Order results by values of the specified attribute. Possible
+values are:
 \itemize{
-\item \code{"series_count"}
+\item \code{"series_count"} (default)
 \item \code{"popularity"}
 \item \code{"created"}
 \item \code{"name"}
@@ -58,16 +50,25 @@ ordering is by \code{series_count}. Possible values are:
 
 \item{sort_order}{A string representing the order of the resulting series,
 sorted by the attribute values specified by \code{order_by}. Possible values
-are: \code{"asc"}, and \code{"desc"}. Defaults to \code{"asc"}.}
+are: \code{"asc"} (default), and \code{"desc"}.}
+
+\item{realtime_start}{A \code{Date} indicating the start of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+
+\item{realtime_end}{A \code{Date} indicating the end of the real-time period.
+Defaults to today's date. For more information, see
+\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A data frame containing tags related to \code{tag_names} and their
-descriptions.
+A \code{tibble} containing tags related to \code{tag_names} and their
+descriptions.  Data include tag name, group ID, popularity, series count, tag
+creation date, and additional notes.
 }
 \description{
 Get related FRED tags. Optionally, filter results by tag group, or
 search text. Related FRED tags are the tags assigned to series that match
-all tags in the \code{tag_names} parameter and no tags in the
+\emph{all} tags in the \code{tag_names} parameter and \emph{no} tags in the
 \code{exclude_tag_names} parameter.
 }
 \section{API Documentation}{
@@ -88,9 +89,10 @@ fredr_related_tags(
  )
 
  }
-
 }
 \seealso{
-\code{\link[=fredr_docs]{fredr_docs()}}, \code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
+\code{\link[=fredr_category_tags]{fredr_category_tags()}}, \code{\link[=fredr_category_related_tags]{fredr_category_related_tags()}}, \code{\link[=fredr_docs]{fredr_docs()}},
+\code{\link[=fredr_release_tags]{fredr_release_tags()}}, \code{\link[=fredr_release_related_tags]{fredr_release_related_tags()}},
+\code{\link[=fredr_series_search_tags]{fredr_series_search_tags()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}},
 \code{\link[=fredr_tags_series]{fredr_tags_series()}}, \code{\link[=fredr_tags]{fredr_tags()}}
 }

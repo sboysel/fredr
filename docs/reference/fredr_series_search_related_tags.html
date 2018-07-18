@@ -32,7 +32,10 @@
 
 <meta property="og:title" content="Get the related FRED tags for one or more FRED tags matching a series search — fredr_series_search_related_tags" />
 
-<meta property="og:description" content="Return the related FRED tags for a search: tags assigned to series that" />
+<meta property="og:description" content="FRED tags are attributes assigned to series.  Return the related FRED tags
+for a search: tags assigned to series that match all tags in the tag_names
+parameter (required), no tags in the exclude_tag_names (optional) and the
+search words set by the series_search_text parameter (optional)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -110,13 +113,16 @@
 
     <div class="ref-description">
     
-    <p>Return the <em>related</em> FRED tags for a search: tags assigned to series that</p>
+    <p>FRED tags are attributes assigned to series.  Return the <em>related</em> FRED tags
+for a search: tags assigned to series that match <em>all</em> tags in the <code>tag_names</code>
+parameter (required), <em>no</em> tags in the <code>exclude_tag_names</code> (optional) and the
+search words set by the <code>series_search_text</code> parameter (optional).</p>
     
     </div>
 
     <pre class="usage"><span class='fu'>fredr_series_search_related_tags</span>(<span class='kw'>series_search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>1000L</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='st'>"asc"</span>, <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>tag_search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -200,14 +206,6 @@ Defaults to today's date. For more information, see
 
     <p>A <code>tibble</code> object.</p>
     
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <ul>
-<li><p>match all tags in the <code>tag_names</code> parameter (required)</p></li>
-<li><p>no tags in the <code>exclude_tag_names</code> (optional)</p></li>
-<li><p>the search words set by the <code>series_search_text</code> parameter (optional)</p></li>
-</ul>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>API Documentation:</p>
@@ -215,14 +213,31 @@ Defaults to today's date. For more information, see
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>, <code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_tags.html'>fredr_tags()</a></code></p></div>
+    <div class='dont-index'><p><code><a href='fredr_series_observations.html'>fredr_series_observations()</a></code>, <code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>,
+<code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>,
+<code><a href='fredr_series.html'>fredr_series()</a></code>, <code><a href='fredr_series_categories.html'>fredr_series_categories()</a></code>,
+<code><a href='fredr_series_release.html'>fredr_series_release()</a></code>, <code><a href='fredr_series_tags.html'>fredr_series_tags()</a></code>, <code><a href='fredr_series_updates.html'>fredr_series_updates()</a></code>,
+<code><a href='fredr_series_vintagedates.html'>fredr_series_vintagedates()</a></code>.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>fredr</span>)
-<span class='fu'>fredr_series_search_related_tags</span>(<span class='st'>"oil"</span>, <span class='st'>"usa"</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"># NOT RUN {
+# Search for all tags matching the series text "oil" and the tag "usa".
+fredr_series_search_related_tags(
+  series_search_text = "oil",
+  tag_names = "usa"
+)
+# Search for tags matching the series text "oil", the tag text "usa", and
+# are related to the tag "usa".  Return only results in the "src" (Source)
+# group.
+fredr_series_search_related_tags(
+  series_search_text = "oil",
+  tag_names = "usa"
+  tag_search_text = "usa",
+  tag_group_id = "src"
+)
+# }
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -230,8 +245,6 @@ Defaults to today's date. For more information, see
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
 
       <li><a href="#references">References</a></li>
 

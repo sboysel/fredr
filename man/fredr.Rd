@@ -8,12 +8,12 @@ fredr(endpoint, ..., to_frame = TRUE, print_req = FALSE)
 }
 \arguments{
 \item{endpoint}{A string representing the FRED API endpoint of interest. See
-\code{fredr_endpoints} for a list of endpoint possible values.}
+\link{fredr_endpoints} for a list of endpoint possible values. \emph{Required parameter.}}
 
 \item{...}{A series of named parameters to be used in the query.  Must be of the form
 \code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
-See  \code{\link{fredr_endpoints}} for a list of endpoints and \code{\link{fredr_docs}}
-access to the endpoint web documentation.}
+See the \link{fredr_endpoints} data frame for a list of endpoints and \code{\link[=fredr_docs]{fredr_docs()}}
+access to the web documentation for each endpoint function.}
 
 \item{to_frame}{A boolean value indicating whether or not the response
 should be parsed and formatted as a data frame.  If \code{FALSE},
@@ -24,12 +24,22 @@ a \code{response} object is returned and further processing can be done with
 should be printed as well.  Useful for debugging.  Default is \code{FALSE}.}
 }
 \value{
-If \code{to_frame = TRUE}, a data frame containing the parsed response.
-If \code{to_frame = FALSE}, an object returned directly from \code{\link[httr]{GET}}.
+If \code{to_frame = TRUE}, a \code{tibble} containing the parsed response.
+If \code{to_frame = FALSE}, a \code{response} object returned directly from
+\code{\link[httr]{GET}}.
 }
 \description{
-\code{\link[fredr]{fredr}} forms and submits a request to a specified endpoint of the FRED API.
+Send a general request to the FRED API by specifying an endpoint and a sequence
+of parameters.  The \code{fredr()} function forms and submits a request to a specified
+endpoint of the FRED API.  The return is either the \code{response} object from
+\code{\link[httr]{GET}} or the response parsed as a \code{tibble}.
 }
+\section{API Documentation}{
+
+
+\href{https://api.stlouisfed.org/docs/fred/}{FRED API}
+}
+
 \examples{
 \dontrun{
 fredr(
@@ -53,7 +63,4 @@ httr::content() \%>\%
   .$observations \%>\%
   purrr::map_df(.f = function(x) tibble::as_tibble(x = x))
 }
-}
-\references{
-\url{https://api.stlouisfed.org/docs/fred/}.
 }

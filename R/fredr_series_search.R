@@ -42,29 +42,54 @@
 #' @param exclude_tag_names A semicolon delimited string of tag names that
 #' series match _none_ of.  Defaults to no tag filtering.
 #'
-#' @return A \code{tibble} object.
+#' @return A `tibble` object where each row represents a series matching the query.
 #'
 #' @references API Documentation:
 #'
 #' [series/search](https://research.stlouisfed.org/docs/api/fred/series_search.html)
 #'
-#' @seealso [fredr_series_search_tags()], [fredr_series_search_related_tags()], [fredr_tags]
+#' @seealso [fredr_series_observations()], [fredr_series_search_tags()],
+#' [fredr_series_search_related_tags()], [fredr_series()], [fredr_series_categories()],
+#' [fredr_series_release()], [fredr_series_tags()], [fredr_series_updates()],
+#' [fredr_series_vintagedates()].
 #'
 #' @examples
 #' \dontrun{
-#' library(fredr)
-#' fredr_series_search_text("oil", order_by = "popularity", limit = 10)
-#' fredr_series_search_text("oil", order_by = "search_rank", limit = 10, tag_names = "usa")
-#' fredr_series_search_text("oil", filter_variable = "frequency", filter_value = "q")
-#' fredr_series_search_id("UNRATE", order_by = "observation_start")
+#' # search for series with text matching "oil" and return the top 10 most popular
+#' # series
+#' fredr_series_search_text(
+#'   search_text = "oil",
+#'   order_by = "popularity",
+#'   limit = 10
+#' )
+#' # search for series with text matching "oil" with the tag "usa" and return the
+#' # top 10 search results
+#' fredr_series_search_text(
+#'   search_text = "oil",
+#'   order_by = "search_rank",
+#'   limit = 10,
+#'   tag_names = "usa"
+#' )
+#' # search for series with text matching "unemployment" and return only series
+#' # with monthly frequency
+#' fredr_series_search_text(
+#'   search_text = "unemployment",
+#'   filter_variable = "frequency",
+#'   filter_value = "Monthly"
+#' )
+#' # search for series ID matching "UNRATE" and return oldest series first
+#' fredr_series_search_id(
+#'   search_text = "UNRATE",
+#'   order_by = "observation_start"
+#' )
 #' }
 #' @rdname fredr_series_search
 #' @export
 fredr_series_search_text <- function(search_text = NULL,
-                                     limit = 1000L,
-                                     offset = 0,
+                                     limit = NULL,
+                                     offset = NULL,
                                      order_by = NULL,
-                                     sort_order = "asc",
+                                     sort_order = NULL,
                                      filter_variable = NULL,
                                      filter_value = NULL,
                                      realtime_start = NULL,

@@ -1,9 +1,10 @@
-#' Get a category
+#' Get a FRED category
 #'
 #' @param category_id An integer ID for the category.  Default is `0` for the
 #' root category. _Required parameter._
 #'
-#' @return A `tibble` object.
+#' @return A `tibble` object containing the name and parent ID for the category
+#' indicated by `category_id`.
 #'
 #' @section API Documentation:
 #'
@@ -14,7 +15,10 @@
 #'
 #' @examples
 #' \dontrun{
+#' # Root category
 #' fredr_category()
+#' # "Production & Business Activity" category
+#' fredr_category(category_id = 1L)
 #' }
 #' @export
 fredr_category <- function(category_id = 0L) {

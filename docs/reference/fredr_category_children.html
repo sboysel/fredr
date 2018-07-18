@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get the child categories for a specified parent category — fredr_category_children • fredr</title>
+<title>Get the child categories for a specified FRED parent category — fredr_category_children • fredr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Get the child categories for a specified parent category — fredr_category_children" />
+<meta property="og:title" content="Get the child categories for a specified FRED parent category — fredr_category_children" />
 
-<meta property="og:description" content="Get the child categories for a specified parent category" />
+<meta property="og:description" content="Get the child categories for a specified FRED parent category" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,14 +103,14 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get the child categories for a specified parent category</h1>
+    <h1>Get the child categories for a specified FRED parent category</h1>
     <small class="dont-index">Source: <a href='https://github.com/sboysel/fredr/blob/master/R/fredr_category_children.R'><code>R/fredr_category_children.R</code></a></small>
     <div class="hidden name"><code>fredr_category_children.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get the child categories for a specified parent category</p>
+    <p>Get the child categories for a specified FRED parent category</p>
     
     </div>
 
@@ -141,7 +141,8 @@ Defaults to today's date. For more information, see
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>tibble</code> object.</p>
+    <p>A <code>tibble</code> object containing the name and ID for the children categories
+of the parent category indicated by <code>category_id</code>.</p>
     
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
@@ -156,7 +157,10 @@ Defaults to today's date. For more information, see
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_category_children</span>()
+<span class='co'># Children of the root category</span>
+<span class='fu'>fredr_category_children</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>0L</span>)
+<span class='co'># Children of the "Production &amp; Business Activity" category</span>
+<span class='fu'>fredr_category_children</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

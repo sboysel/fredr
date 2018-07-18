@@ -52,10 +52,16 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object.
+A \code{tibble} object information on tags matching the request and their
+descriptions.  Data include tag name, group ID, popularity, series count, tag
+creation date, and additional notes.
 }
 \description{
-Get the FRED tags for a category
+Get the FRED tags for a category. Optionally, filter results by tag name,
+tag group, or search. Series are assigned tags and categories. Alternatively,
+it is possible to get the tags for a category through a call to a function in
+the \code{fredr/series} endpoint.  See \link{fredr_series}. No tags exist for a category
+that does not have series.
 }
 \section{API Documentation}{
 
@@ -65,7 +71,10 @@ Get the FRED tags for a category
 
 \examples{
 \dontrun{
-fredr_category_tags(category = 1L, tag_names = "gnp")
+# Tags assigned to series in the "Production & Business Activity" category
+fredr_category_tags(category = 1L)
+# Select the "nation" and "monthly" tags in the "Production & Business Activity" category
+fredr_category_tags(category = 3L, tag_names = "nation;monthly", order_by = "popularity")
 }
 }
 \seealso{

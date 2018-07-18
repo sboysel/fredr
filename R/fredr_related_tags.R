@@ -2,7 +2,7 @@
 #'
 #' Get related FRED tags. Optionally, filter results by tag group, or
 #' search text. Related FRED tags are the tags assigned to series that match
-#' all tags in the `tag_names` parameter and no tags in the
+#' _all_ tags in the `tag_names` parameter and _no_ tags in the
 #' `exclude_tag_names` parameter.
 #'
 #' @inheritParams fredr_tags
@@ -13,17 +13,18 @@
 #' @param exclude_tag_names A semicolon delimted string of tag names that series
 #' match _none_ of. No exclusions are done by default.
 #'
-#' @return A data frame containing tags related to `tag_names` and their
-#' descriptions.
+#' @return A `tibble` containing tags related to `tag_names` and their
+#' descriptions.  Data include tag name, group ID, popularity, series count, tag
+#' creation date, and additional notes.
 #'
 #' @section API Documentation:
 #'
 #' [fred/related_tags](https://research.stlouisfed.org/docs/api/fred/related_tags.html)
 #'
-#' @seealso [fredr_docs()], [fredr_series_search_tags()], [fredr_series_search_related_tags()],
+#' @seealso [fredr_category_tags()], [fredr_category_related_tags()], [fredr_docs()],
+#' [fredr_release_tags()], [fredr_release_related_tags()],
+#' [fredr_series_search_tags()], [fredr_series_search_related_tags()],
 #' [fredr_tags_series()], [fredr_tags()]
-#'
-#' @export
 #'
 #' @examples
 #'
@@ -37,17 +38,17 @@
 #'  )
 #'
 #'  }
-#'
+#' @export
 fredr_related_tags <- function(tag_names = NULL,
-                               realtime_start = NULL,
-                               realtime_end = NULL,
                                exclude_tag_names = NULL,
                                tag_group_id = NULL,
                                search_text = NULL,
                                limit = NULL,
                                offset = NULL,
                                order_by = NULL,
-                               sort_order = NULL) {
+                               sort_order = NULL,
+                               realtime_start = NULL,
+                               realtime_end = NULL) {
 
   validate_required_string_param(tag_names)
 
@@ -68,7 +69,6 @@ fredr_related_tags <- function(tag_names = NULL,
     endpoint = "related_tags"
   )
 
-  frame <- do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr, c(fredr_args, user_args))
 
-  frame
 }

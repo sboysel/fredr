@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_category.R
 \name{fredr_category}
 \alias{fredr_category}
-\title{Get a category}
+\title{Get a FRED category}
 \usage{
 fredr_category(category_id = 0L)
 }
@@ -11,10 +11,11 @@ fredr_category(category_id = 0L)
 root category. \emph{Required parameter.}}
 }
 \value{
-A \code{tibble} object.
+A \code{tibble} object containing the name and parent ID for the category
+indicated by \code{category_id}.
 }
 \description{
-Get a category
+Get a FRED category
 }
 \section{API Documentation}{
 
@@ -24,7 +25,10 @@ Get a category
 
 \examples{
 \dontrun{
+# Root category
 fredr_category()
+# "Production & Business Activity" category
+fredr_category(category_id = 1L)
 }
 }
 \seealso{
