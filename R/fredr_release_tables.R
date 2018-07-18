@@ -15,7 +15,7 @@
 #' @param observation_date A `Date` indicating which observation date to include
 #' with the release table.  Default is `9999-12-31` (latest date available).
 #'
-#' @return A `list` object.
+#' @return A `tibble` object with nested results.
 #'
 #' @section API Documentation:
 #'

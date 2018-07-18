@@ -20,7 +20,7 @@ for a series type element.  Default is \code{FALSE}.}
 with the release table.  Default is \code{9999-12-31} (latest date available).}
 }
 \value{
-A \code{list} object.
+A \code{tibble} object with nested results.
 }
 \description{
 You can go directly to the tree structure by passing the appropriate
