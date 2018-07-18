@@ -50,7 +50,8 @@
 #' fredr_tags_series(
 #'    tag_names = "gdp",
 #'    exclude_tag_names = "quarterly",
-#'    order_by = "popularity"
+#'    order_by = "popularity",
+#'    limit = 100L
 #' )
 #' }
 #' @export
