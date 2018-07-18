@@ -2,17 +2,18 @@
 % Please edit documentation in R/fredr_sources.R
 \name{fredr_sources}
 \alias{fredr_sources}
-\title{Get all sources of economic data}
+\title{Get \emph{all} sources of economic data}
 \usage{
 fredr_sources(limit = NULL, offset = NULL, order_by = NULL,
   sort_order = NULL, realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
-\item{limit}{An positive integer indicating maximum number of results to return.  Possible
-values are any integer between \code{1} and \code{1000} (default), inclusive.}
+\item{limit}{An integer limit on the maximum number of results to return.
+Defaults to \code{1000}, the maximum.}
 
-\item{offset}{An non-negative integer indicating how many records to offset
-the returned results.  Default is \code{0}.}
+\item{offset}{An integer used in conjunction with limit for long series.
+This mimics the idea of \emph{pagination} to retrieve large amounts of data over
+multiple calls. Defaults to \code{0}.}
 
 \item{order_by}{A string indicating which attribute should be used to order
 the results.  Possible values: \code{"source_id"} (default), \code{"name"},
@@ -33,7 +34,7 @@ Defaults to today's date. For more information, see
 A \code{tibble} object.
 }
 \description{
-Get all sources of economic data
+Get \emph{all} sources of economic data
 }
 \section{API Documentation}{
 
