@@ -14,5 +14,5 @@
 #'
 #' [FRED API](https://api.stlouisfed.org/docs/fred/)
 #'
-#' @seealso [fredr()], [fredr_docs()]
+#' @seealso [fredr_request()], [fredr_docs()]
 "fredr_endpoints"

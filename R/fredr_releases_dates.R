@@ -66,6 +66,6 @@ fredr_releases_dates <- function(limit = NULL,
     endpoint = "releases/dates"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

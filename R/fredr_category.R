@@ -33,6 +33,6 @@ fredr_category <- function(category_id = 0L) {
     endpoint = "category"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

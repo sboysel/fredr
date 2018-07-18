@@ -39,6 +39,6 @@ fredr_source <- function(source_id = NULL,
     endpoint = "source"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

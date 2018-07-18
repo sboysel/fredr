@@ -40,6 +40,6 @@ fredr_series_release <- function(series_id = NULL,
     endpoint = "series/release"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

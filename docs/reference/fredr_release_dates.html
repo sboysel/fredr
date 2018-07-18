@@ -128,7 +128,7 @@
     <tr>
       <th>limit</th>
       <td><p>An integer limit on the maximum number of results to return.
-Defaults to <code>1000</code>, the maximum.</p></td>
+Defaults to <code>10000</code>, the maximum.</p></td>
     </tr>
     <tr>
       <th>offset</th>
@@ -138,24 +138,25 @@ multiple calls. Defaults to <code>0</code>.</p></td>
     </tr>
     <tr>
       <th>sort_order</th>
-      <td><p>A string representing the order of the resulting series.
-Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
+      <td><p>A string representing the order of the resulting release
+dates. Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
     </tr>
     <tr>
       <th>include_release_dates_with_no_data</th>
       <td><p>A boolean value indicating if the
-results with no data available should be returned as well.  Default is <code>FALSE</code>.</p></td>
+results with no data available should be returned as well.
+Default is <code>FALSE</code>.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>
       <td><p>A <code>Date</code> indicating the start of the real-time period.
-Defaults to today's date. For more information, see
+Defaults to <code>1776-07-04</code> (earliest available). For more information, see
 <a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     <tr>
       <th>realtime_end</th>
       <td><p>A <code>Date</code> indicating the end of the real-time period.
-Defaults to today's date. For more information, see
+Defaults to <code>9999-12-31</code> (latest available). For more information, see
 <a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     </table>
@@ -179,6 +180,9 @@ Defaults to today's date. For more information, see
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
 <span class='fu'>fredr_release_dates</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>20L</span>)
+
+<span class='co'># Call the function with an "as of" Date of 1997-03-14</span>
+<span class='fu'>fredr_release_dates</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>20L</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"1997-03-14"</span>))
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

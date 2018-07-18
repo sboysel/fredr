@@ -69,6 +69,6 @@ fredr_related_tags <- function(tag_names = NULL,
     endpoint = "related_tags"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

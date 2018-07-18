@@ -65,6 +65,6 @@ fredr_series_updates <- function(limit = NULL,
     endpoint = "series/updates"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }
