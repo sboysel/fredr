@@ -36,6 +36,10 @@ devtools::install_github("sboysel/fredr")
 
 See the [Get started](http://sboysel.github.io/fredr/articles/fredr.html) article.
 
+## Documentation
+
+See the [documentation site](http://sboysel.github.io/fredr/).
+
 ## See Also
 
 There are several existing `R` packages designed for the FRED API:
