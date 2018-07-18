@@ -58,6 +58,6 @@ fredr_release_related_tags <- function(release_id = NULL,
     endpoint = "release/related_tags"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

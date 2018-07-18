@@ -41,6 +41,6 @@ fredr_series_categories <- function(series_id = NULL,
     endpoint = "series/categories"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

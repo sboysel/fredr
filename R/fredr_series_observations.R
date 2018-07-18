@@ -1,6 +1,7 @@
 #' Fetch observations of a FRED series
 #'
 #' Given a series ID, return observations of that series as a `tibble` object.
+#' `fredr()` is an alias for `fredr_series_observations()`.
 #'
 #' @param series_id A string ID for the FRED series. _Required parameter._
 #'
@@ -114,6 +115,7 @@
 #'   unit = "log"
 #' )
 #' }
+#' @rdname fredr
 #' @export
 fredr_series_observations <- function(series_id = NULL,
                                       observation_start = NULL,
@@ -151,7 +153,7 @@ fredr_series_observations <- function(series_id = NULL,
     endpoint = "series/observations"
   )
 
-  frame <- do.call(fredr, c(fredr_args, user_args))
+  frame <- do.call(fredr_request, c(fredr_args, user_args))
 
   frame$value[frame$value == "."] <- NA
 
@@ -164,3 +166,8 @@ fredr_series_observations <- function(series_id = NULL,
 
   return(obs)
 }
+
+#' @rdname fredr
+#' @export
+fredr <- fredr_series_observations
+

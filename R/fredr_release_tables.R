@@ -52,6 +52,6 @@ fredr_release_tables <- function(release_id = NULL,
     endpoint = "release/tables"
   )
 
-  do.call(fredr, c(fredr_args, user_args))
+  do.call(fredr_request, c(fredr_args, user_args))
 
 }

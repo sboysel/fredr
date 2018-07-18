@@ -32,7 +32,8 @@
 
 <meta property="og:title" content="Get the FRED tags for a release — fredr_release_tags" />
 
-<meta property="og:description" content="Get the FRED tags for a release" />
+<meta property="og:description" content="Get the FRED tags for a release. Optionally, filter results by tag name,
+tag group, or search text." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -110,7 +111,8 @@
 
     <div class="ref-description">
     
-    <p>Get the FRED tags for a release</p>
+    <p>Get the FRED tags for a release. Optionally, filter results by tag name,
+tag group, or search text.</p>
     
     </div>
 
@@ -128,25 +130,27 @@
     </tr>
     <tr>
       <th>tag_names</th>
-      <td><p>A string of tags to include in the response.  Multiple tags
-can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
+      <td><p>A semicolon delimited string of tag names to only
+include in the response. No filtering by tag names by default (i.e. <em>all</em>
+FRED tags returned).</p></td>
     </tr>
     <tr>
       <th>tag_group_id</th>
-      <td><p>A string representing the tag group id to filter tags by
-type.  No filtering by default.  Possible values include:</p><ul>
-<li><p><code>"freq"</code> - Frequency</p></li>
-<li><p><code>"gen"</code> - General or Concept</p></li>
-<li><p><code>"geo"</code> - Geography</p></li>
-<li><p><code>"geot"</code> - Geography Type</p></li>
-<li><p><code>"rls"</code> - Release</p></li>
-<li><p><code>"seas"</code> - Seasonal Adjustment</p></li>
-<li><p><code>"src"</code> - Source</p></li>
+      <td><p>A string tag group id to filter tags by type. No filtering
+by tag group by default. Possible values are:</p><ul>
+<li><p><code>"freq"</code> = Frequency</p></li>
+<li><p><code>"gen"</code> = General or Concept</p></li>
+<li><p><code>"geo"</code> = Geography</p></li>
+<li><p><code>"geot"</code> = Geography Type</p></li>
+<li><p><code>"rls"</code> = Release</p></li>
+<li><p><code>"seas"</code> = Seasonal Adjustment</p></li>
+<li><p><code>"src"</code> = Source</p></li>
 </ul></td>
     </tr>
     <tr>
       <th>search_text</th>
-      <td><p>A string to match text of tags.  No matching by default.</p></td>
+      <td><p>A string indicating the words to find matching tags with.
+No filtering by search words by default.</p></td>
     </tr>
     <tr>
       <th>limit</th>
@@ -161,13 +165,20 @@ multiple calls. Defaults to <code>0</code>.</p></td>
     </tr>
     <tr>
       <th>order_by</th>
-      <td><p>Order results by values of the specified attribute.
-Possible values include: <code>"series_count"</code> (default), <code>"popularity"``,</code>"created"<code>,</code>"name"<code>,</code>"group_id"`.</p></td>
+      <td><p>Order results by values of the specified attribute. Possible
+values are:</p><ul>
+<li><p><code>"series_count"</code> (default)</p></li>
+<li><p><code>"popularity"</code></p></li>
+<li><p><code>"created"</code></p></li>
+<li><p><code>"name"</code></p></li>
+<li><p><code>"group_id"</code></p></li>
+</ul></td>
     </tr>
     <tr>
       <th>sort_order</th>
-      <td><p>A string representing the order of the resulting series.
-Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
+      <td><p>A string representing the order of the resulting series,
+sorted by the attribute values specified by <code>order_by</code>. Possible values
+are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>
@@ -190,7 +201,7 @@ Defaults to today's date. For more information, see
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
     
-    <p><a href='https://research.stlouisfed.org/docs/api/fred/release_related_tags.html'>fred/release/related_tags</a></p>
+    <p><a href='https://research.stlouisfed.org/docs/api/fred/release_tags.html'>fred/release/tags</a></p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
