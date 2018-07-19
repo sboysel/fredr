@@ -10,9 +10,9 @@ release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-squa
 license](https://img.shields.io/github/license/sboysel/fredr.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 `fredr` provides a complete set of `R` bindings to the [Federal Reserve Economic
-Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API for, provided by 
+Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API, provided by 
 the Federal Reserve Bank of St. Louis.  The functions allow the user to search 
-for and fetch time series observations and associated metadata within the FRED 
+for and fetch time series observations as well as associated metadata within the FRED 
 database.  The core functions are
 
 - `fredr_set_key()` - Set the required FRED API key for the session.
