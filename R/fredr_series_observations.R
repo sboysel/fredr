@@ -99,7 +99,7 @@
 #' \dontrun{
 #' # Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
 #' of change from pervious observation.
-#' fredr_series_observations(
+#' fredr(
 #'   series_id = "UNRATE",
 #'   observation_start = as.Date("1980-01-01"),
 #'   observation_end = as.Date("2000-01-01"),
@@ -108,12 +108,30 @@
 #' # All observations for "OILPRICE" series.  The data is first aggregated by
 #' # quarter by taking the average of all observations in the quarter then
 #' # transformed by taking the natural logarithm.
-#' fredr_series_observations(
+#' fredr(
 #'   series_id = "OILPRICE",
 #'   frequency = "q",
 #'   aggregation_method = "avg",
 #'   unit = "log"
 #' )
+#'
+#' # To retrieve values for multiple series, use purrr's map_dfr() function.
+#' library(tidyverse)
+#' map_dfr(c("UNRATE", "OILPRICE"), fredr)
+#'
+#' # Using pmap_dfr() allows you to use varying optional parameters as well
+#' params <- list(
+#'   series_id = c("UNRATE", "OILPRICE"),
+#'   frequency = c("m", "q")
+#' )
+#'
+#' pmap_dfr(
+#'   .l = params,
+#'   .f = ~ fredr(series_id = .x, frequency = .y)
+#' )
+#'
+#'
+#'
 #' }
 #' @rdname fredr
 #' @export
@@ -155,14 +173,17 @@ fredr_series_observations <- function(series_id = NULL,
 
   frame <- do.call(fredr_request, c(fredr_args, user_args))
 
+  if(NROW(frame) == 0) {
+    return(empty_fredr_tibble())
+  }
+
   frame$value[frame$value == "."] <- NA
 
   obs <- tibble::tibble(
     date = as.Date(frame$date, "%Y-%m-%d"),
+    series_id = series_id,
     value = as.numeric(frame$value)
   )
-
-  names(obs) <- c("date", series_id)
 
   return(obs)
 }
@@ -171,3 +192,19 @@ fredr_series_observations <- function(series_id = NULL,
 #' @export
 fredr <- fredr_series_observations
 
+
+empty_fredr_tibble <- function() {
+
+  zero_length_numeric <- numeric()
+
+  zero_length_date <- zero_length_numeric
+  class(zero_length_date) <- "Date"
+
+  zero_length_character <- character()
+
+  tibble::tibble(
+    date = zero_length_date,
+    series_id = zero_length_character,
+    value = zero_length_numeric
+  )
+}
