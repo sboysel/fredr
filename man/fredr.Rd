@@ -118,7 +118,7 @@ Given a series ID, return observations of that series as a \code{tibble} object.
 \dontrun{
 # Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
 of change from pervious observation.
-fredr_series_observations(
+fredr(
   series_id = "UNRATE",
   observation_start = as.Date("1980-01-01"),
   observation_end = as.Date("2000-01-01"),
@@ -127,7 +127,7 @@ fredr_series_observations(
 # All observations for "OILPRICE" series.  The data is first aggregated by
 # quarter by taking the average of all observations in the quarter then
 # transformed by taking the natural logarithm.
-fredr_series_observations(
+fredr(
   series_id = "OILPRICE",
   frequency = "q",
   aggregation_method = "avg",
