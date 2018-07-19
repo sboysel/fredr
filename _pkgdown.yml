@@ -1,3 +1,14 @@
+url: http://sboysel.github.io/fredr/
+
+template:
+  params:
+    docsearch:
+      api_key: ebad14dda0217088554c3c389b7de5fa
+      index_name: fredr
+
+development:
+  mode: unreleased
+
 reference:
 - title: Authentication
   desc: ~
