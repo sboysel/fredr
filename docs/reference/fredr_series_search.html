@@ -138,10 +138,10 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_series_search_text</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+    <pre class="usage"><span class='fu'>fredr_series_search_text</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>fredr_series_search_id</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>1000L</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>,
   <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='st'>"asc"</span>, <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -156,6 +156,27 @@
       <td><p>A string containing the words to match against economic
 data series. For use with <code>fredr_series_search_text</code> and
 <code>fredr_series_search_id</code>.  <em>Required parameter.</em></p></td>
+    </tr>
+    <tr>
+      <th>tag_names</th>
+      <td><p>A semicolon delimited string of tag names that series match <em>all</em> of.  Defaults to no tag filtering.</p></td>
+    </tr>
+    <tr>
+      <th>exclude_tag_names</th>
+      <td><p>A semicolon delimited string of tag names that
+series match <em>none</em> of.  Defaults to no tag filtering.</p></td>
+    </tr>
+    <tr>
+      <th>filter_variable</th>
+      <td><p>A string indicating the attribute to filter results
+by. Possible values are: <code>"frequency"</code>, <code>"units"</code>, <code>"seasonal_adjustment"</code>.
+Defaults to no filter.</p></td>
+    </tr>
+    <tr>
+      <th>filter_value</th>
+      <td><p>The value of the <code>filter_variable</code> attribute to filter
+by. Possible values depend on the value of <code>filter_variable</code>. Defaults to
+no filter.</p></td>
     </tr>
     <tr>
       <th>limit</th>
@@ -194,18 +215,6 @@ for <code>fredr_series_search_id()</code>. Possible values are:</p><ul>
 Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
     </tr>
     <tr>
-      <th>filter_variable</th>
-      <td><p>A string indicating the attribute to filter results
-by. Possible values are: <code>"frequency"</code>, <code>"units"</code>, <code>"seasonal_adjustment"</code>.
-Defaults to no filter.</p></td>
-    </tr>
-    <tr>
-      <th>filter_value</th>
-      <td><p>The value of the <code>filter_variable</code> attribute to filter
-by. Possible values depend on the value of <code>filter_variable</code>. Defaults to
-no filter.</p></td>
-    </tr>
-    <tr>
       <th>realtime_start</th>
       <td><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
@@ -216,15 +225,6 @@ Defaults to today's date. For more information, see
       <td><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
-    </tr>
-    <tr>
-      <th>tag_names</th>
-      <td><p>A semicolon delimited string of tag names that series match <em>all</em> of.  Defaults to no tag filtering.</p></td>
-    </tr>
-    <tr>
-      <th>exclude_tag_names</th>
-      <td><p>A semicolon delimited string of tag names that
-series match <em>none</em> of.  Defaults to no tag filtering.</p></td>
     </tr>
     </table>
     

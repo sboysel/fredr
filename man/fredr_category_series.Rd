@@ -4,14 +4,29 @@
 \alias{fredr_category_series}
 \title{Get the series in a category}
 \usage{
-fredr_category_series(category_id = 0L, limit = NULL, offset = NULL,
-  order_by = NULL, sort_order = NULL, filter_variable = NULL,
+fredr_category_series(category_id = 0L, filter_variable = NULL,
   filter_value = NULL, tag_names = NULL, exclude_tag_names = NULL,
+  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
   realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
 \item{category_id}{An integer ID for the category.  Default is \code{0} for the
 root category. \emph{Required parameter.}}
+
+\item{filter_variable}{A string indicating which attribute to indicate the
+attribute that results are filtered by.  Possible values include: \code{"frequency"},
+\code{"units"}, \code{"seasonal_adjustment"}.  No filtering by default.}
+
+\item{filter_value}{A string giving the value of the \code{filter_variable}
+attribute to filter results by.  \code{filter_variable} must be set.  No filtering
+by default.}
+
+\item{tag_names}{A string indicating which series tags to match.  Multiple
+tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).}
+
+\item{exclude_tag_names}{A string indicating which series tags should \emph{not}
+be matched.  Multiple tags can be delimited by a semicolon in a single string
+(e.g. `"usa;gnp"``).}
 
 \item{limit}{An positive integer indicating maximum number of results to
 return.  Possible values are any integer between \code{1} and \code{1000} (default),
@@ -40,21 +55,6 @@ ordered by. Possible values include:
 
 \item{sort_order}{A string representing the order of the resulting series.
 Possible values are: \code{"asc"} (default), and \code{"desc"}.}
-
-\item{filter_variable}{A string indicating which attribute to indicate the
-attribute that results are filtered by.  Possible values include: \code{"frequency"},
-\code{"units"}, \code{"seasonal_adjustment"}.  No filtering by default.}
-
-\item{filter_value}{A string giving the value of the \code{filter_variable}
-attribute to filter results by.  \code{filter_variable} must be set.  No filtering
-by default.}
-
-\item{tag_names}{A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).}
-
-\item{exclude_tag_names}{A string indicating which series tags should \emph{not}
-be matched.  Multiple tags can be delimited by a semicolon in a single string
-(e.g. `"usa;gnp"``).}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see

@@ -13,18 +13,6 @@
 #' @param tag_names A semicolon delimited string of tag names to return.  Defaults
 #' no filtering by tag names.  _Required parameter._
 #'
-#' @param limit An integer limit on the maximum number of results to return.
-#' Defaults to `1000`, the maximum.
-#'
-#' @param order_by A string indicating the attribute to order results by.
-#' Defaults to `"series_count"`. Possible values are:
-#'
-#' * `"series_count"`
-#' * `"popularity"`
-#' * `"created"`
-#' * `"name"`
-#' * `"group_id"`
-#'
 #' @param exclude_tag_names A semicolon delimited string of tag names that
 #' series match _none_ of.  Defaults to no tag filtering.
 #'
@@ -41,6 +29,18 @@
 #'
 #' @param tag_search_text A string to match tag names.  Defaults to no filtering
 #' by tag name matching.
+#'
+#' @param limit An integer limit on the maximum number of results to return.
+#' Defaults to `1000`, the maximum.
+#'
+#' @param order_by A string indicating the attribute to order results by.
+#' Defaults to `"series_count"`. Possible values are:
+#'
+#' * `"series_count"`
+#' * `"popularity"`
+#' * `"created"`
+#' * `"name"`
+#' * `"group_id"`
 #'
 #' @return A `tibble` object.
 #'
@@ -66,26 +66,27 @@
 #' # group.
 #' fredr_series_search_related_tags(
 #'   series_search_text = "oil",
-#'   tag_names = "usa"
-#'   tag_search_text = "usa",
-#'   tag_group_id = "src"
+#'   tag_names = "usa",
+#'   tag_group_id = "src",
+#'   tag_search_text = "usa"
 #' )
 #' }
 #' @rdname fredr_series_search_related_tags
 #' @export
 fredr_series_search_related_tags <- function(series_search_text = NULL,
                                              tag_names = NULL,
+                                             exclude_tag_names = NULL,
+                                             tag_group_id = NULL,
+                                             tag_search_text = NULL,
                                              limit = NULL,
                                              offset = NULL,
                                              order_by = NULL,
                                              sort_order = NULL,
-                                             exclude_tag_names = NULL,
-                                             tag_group_id = NULL,
-                                             tag_search_text = NULL,
                                              realtime_start = NULL,
                                              realtime_end = NULL) {
 
   validate_required_string_param(series_search_text)
+
   validate_required_string_param(tag_names)
 
   args <- capture_args(

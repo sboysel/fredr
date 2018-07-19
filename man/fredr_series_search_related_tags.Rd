@@ -5,9 +5,9 @@
 \title{Get the related FRED tags for one or more FRED tags matching a series search}
 \usage{
 fredr_series_search_related_tags(series_search_text = NULL,
-  tag_names = NULL, limit = NULL, offset = NULL, order_by = NULL,
-  sort_order = NULL, exclude_tag_names = NULL, tag_group_id = NULL,
-  tag_search_text = NULL, realtime_start = NULL, realtime_end = NULL)
+  tag_names = NULL, exclude_tag_names = NULL, tag_group_id = NULL,
+  tag_search_text = NULL, limit = NULL, offset = NULL, order_by = NULL,
+  sort_order = NULL, realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
 \item{series_search_text}{A string containing the series search text.
@@ -15,6 +15,24 @@ fredr_series_search_related_tags(series_search_text = NULL,
 
 \item{tag_names}{A semicolon delimited string of tag names to return.  Defaults
 no filtering by tag names.  \emph{Required parameter.}}
+
+\item{exclude_tag_names}{A semicolon delimited string of tag names that
+series match \emph{none} of.  Defaults to no tag filtering.}
+
+\item{tag_group_id}{A string indicating the tag group id to filter tags by type.
+Defaults to no filtering by tag group.  Possible values are
+\itemize{
+\item \code{"freq"} = Frequency
+\item \code{"gen"} = General or Concept
+\item \code{"geo"} = Geography
+\item \code{"geot"} = Geography Type
+\item \code{"rls"} = Release
+\item \code{"seas"} = Seasonal Adjustment
+\item \code{"src"} = Source
+}}
+
+\item{tag_search_text}{A string to match tag names.  Defaults to no filtering
+by tag name matching.}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}
@@ -35,24 +53,6 @@ Defaults to \code{"series_count"}. Possible values are:
 
 \item{sort_order}{A string representing the order of the resulting series.
 Possible values are: \code{"asc"} (default), and \code{"desc"}.}
-
-\item{exclude_tag_names}{A semicolon delimited string of tag names that
-series match \emph{none} of.  Defaults to no tag filtering.}
-
-\item{tag_group_id}{A string indicating the tag group id to filter tags by type.
-Defaults to no filtering by tag group.  Possible values are
-\itemize{
-\item \code{"freq"} = Frequency
-\item \code{"gen"} = General or Concept
-\item \code{"geo"} = Geography
-\item \code{"geot"} = Geography Type
-\item \code{"rls"} = Release
-\item \code{"seas"} = Seasonal Adjustment
-\item \code{"src"} = Source
-}}
-
-\item{tag_search_text}{A string to match tag names.  Defaults to no filtering
-by tag name matching.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
@@ -83,9 +83,9 @@ fredr_series_search_related_tags(
 # group.
 fredr_series_search_related_tags(
   series_search_text = "oil",
-  tag_names = "usa"
-  tag_search_text = "usa",
-  tag_group_id = "src"
+  tag_names = "usa",
+  tag_group_id = "src",
+  tag_search_text = "usa"
 )
 }
 }

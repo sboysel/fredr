@@ -97,7 +97,7 @@
       <h1>FRED Categories</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2018-07-18</h4>
+            <h4 class="date">2018-07-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-categories.Rmd"><code>vignettes/fredr-categories.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-categories.Rmd</code></div>
@@ -121,7 +121,7 @@
 <div id="get-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-a-fred-category" class="anchor"></a>Get a FRED category</h2>
-<p><code><a href="../reference/fredr_category.html">fredr_category()</a></code> returns minimal information for a single category specified by <code>category_id</code>. The information returned is a <code>tibble</code> in which each row represents a category. The default is the root category.</p>
+<p><code><a href="../reference/fredr_category.html">fredr_category()</a></code> returns minimal information for a single category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a category. The default is the root category.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category.html">fredr_category</a></span>() </a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 3</span></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt;      id name       parent_id</span></a>
@@ -137,7 +137,7 @@
 <div id="get-the-children-of-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-children-of-a-fred-category" class="anchor"></a>Get the children of a FRED category</h2>
-<p><code><a href="../reference/fredr_category_children.html">fredr_category_children()</a></code> returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by <code>category_id</code>. The information returned is a <code>tibble</code> in which each row represents child category of the parent specified. The default is the root category.</p>
+<p><code><a href="../reference/fredr_category_children.html">fredr_category_children()</a></code> returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents child category of the parent specified. The default is the root category.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span>()</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt; # A tibble: 8 x 3</span></a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt;      id name                                    parent_id</span></a>
@@ -150,7 +150,7 @@
 <a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; 6 32263 International Data                              0</span></a>
 <a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; 7  3008 U.S. Regional Data                              0</span></a>
 <a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; 8 33060 Academic Data                                   0</span></a></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span>(1L)</a>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span>(<span class="dt">category_id =</span> 1L)</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; # A tibble: 12 x 3</span></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;       id name                                         parent_id</span></a>
 <a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;  * &lt;int&gt; &lt;chr&gt;                                            &lt;int&gt;</span></a>
@@ -171,10 +171,10 @@
 <div id="get-a-related-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-a-related-fred-category" class="anchor"></a>Get a related FRED category</h2>
-<p><code><a href="../reference/fredr_category_related.html">fredr_category_related()</a></code> returns minimal information (ID, name, and parent ID) for all related categories to the category specified by <code>category_id</code>. The information returned is a <code>tibble</code> in which each row represents category related to the one specified. Note that not all categories have related categories. The default is the root category.</p>
+<p><code><a href="../reference/fredr_category_related.html">fredr_category_related()</a></code> returns minimal information (ID, name, and parent ID) for all related categories to the category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents category related to the one specified. Note that not all categories have related categories. The default is the root category.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span>()</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#&gt; # A tibble: 0 x 0</span></a></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span>(4L) <span class="co"># Employment Cost Index</span></a>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span>(<span class="dt">category_id =</span> 4L) <span class="co"># Employment Cost Index</span></a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 3</span></a>
 <a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt;      id name                                    parent_id</span></a>
 <a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;                                       &lt;int&gt;</span></a>
@@ -184,7 +184,7 @@
 <div id="get-series-in-a-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-series-in-a-category" class="anchor"></a>Get series in a category</h2>
-<p><code><a href="../reference/fredr_category_series.html">fredr_category_series()</a></code> returns detailed information for the FRED series belonging to the category specified by <code>category_id</code>. The information returned is a <code>tibble</code> in which each row represents a series belonging to the category specified. The default is the root category. For example, to get the top 100 quarterly series in the “Housing” category, ordering the results so that the most recently updated series appear first:</p>
+<p><code><a href="../reference/fredr_category_series.html">fredr_category_series()</a></code> returns detailed information for the FRED series belonging to the category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a series belonging to the category specified. The default is the root category. For example, to get the top 100 quarterly series in the “Housing” category, ordering the results so that the most recently updated series appear first:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_series.html">fredr_category_series</a></span>(</a>
 <a class="sourceLine" id="cb7-2" data-line-number="2">  <span class="dt">category_id =</span> 97L, <span class="co"># Housing</span></a>
 <a class="sourceLine" id="cb7-3" data-line-number="3">  <span class="dt">limit =</span> 100L,</a>
@@ -234,7 +234,7 @@
 <div id="get-tags-within-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-tags-within-a-fred-category" class="anchor"></a>Get tags within a FRED category</h2>
-<p><code><a href="../reference/fredr_category_tags.html">fredr_category_tags()</a></code> returns information for the FRED tags assigned to series in the category specified by <code>category_id</code>. The information returned is a <code>tibble</code> in which each row represents a tag assigned to a series in the category specified. The default is the root category. For example, to get all “source” tags belonging to series in the “Retail Trade” category:</p>
+<p><code><a href="../reference/fredr_category_tags.html">fredr_category_tags()</a></code> returns information for the FRED tags assigned to series in the category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a tag assigned to a series in the category specified. The default is the root category. For example, to get all “source” tags belonging to series in the “Retail Trade” category:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_tags.html">fredr_category_tags</a></span>(</a>
 <a class="sourceLine" id="cb9-2" data-line-number="2">  <span class="dt">category_id =</span> 6L,</a>
 <a class="sourceLine" id="cb9-3" data-line-number="3">  <span class="dt">tag_group_id =</span> <span class="st">"src"</span></a>
@@ -262,7 +262,7 @@
 <div id="get-related-tags-within-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-related-tags-within-a-fred-category" class="anchor"></a>Get related tags within a FRED category</h2>
-<p><code><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags()</a></code> returns a set of FRED tags assigned to series in the category specified by <code>category_id</code> that are <em>related</em> to the tags specified in the <code>tag_names</code> parameter. The information returned is a <code>tibble</code> in which each row represents a tag <em>related to</em> a tag assigned to a series in the specified category. The default is the root category. For example, to get all tags <em>except</em> “rate” in the “Retail Trade” category related to the tags “business” and “monthly”, ordering the results alphabetically:</p>
+<p><code><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags()</a></code> returns a set of FRED tags assigned to series in the category specified by <code>category_id</code> that are <em>related</em> to the tags specified in the <code>tag_names</code> parameter. The data returned is a <code>tibble</code> in which each row represents a tag <em>related to</em> a tag assigned to a series in the specified category. The default is the root category. For example, to get all tags <em>except</em> “rate” in the “Retail Trade” category related to the tags “business” and “monthly”, ordering the results alphabetically:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags</a></span>(</a>
 <a class="sourceLine" id="cb11-2" data-line-number="2">  <span class="dt">category_id =</span> 1L,</a>
 <a class="sourceLine" id="cb11-3" data-line-number="3">  <span class="dt">tag_names =</span> <span class="st">"business;monthly"</span>,</a>

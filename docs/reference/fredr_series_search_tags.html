@@ -138,10 +138,10 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_series_search_tags</span>(<span class='kw'>series_search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>fredr_series_search_tags</span>(<span class='kw'>series_search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -150,6 +150,29 @@
       <th>series_search_text</th>
       <td><p>A string containing the series search text.
 <em>Required parameter.</em></p></td>
+    </tr>
+    <tr>
+      <th>tag_names</th>
+      <td><p>A semicolon delimited string of tag names to return.  Defaults
+no filtering by tag names.</p></td>
+    </tr>
+    <tr>
+      <th>tag_group_id</th>
+      <td><p>A string indicating the tag group id to filter tags by type.
+Defaults to no filtering by tag group.  Possible values are</p><ul>
+<li><p><code>"freq"</code> = Frequency</p></li>
+<li><p><code>"gen"</code> = General or Concept</p></li>
+<li><p><code>"geo"</code> = Geography</p></li>
+<li><p><code>"geot"</code> = Geography Type</p></li>
+<li><p><code>"rls"</code> = Release</p></li>
+<li><p><code>"seas"</code> = Seasonal Adjustment</p></li>
+<li><p><code>"src"</code> = Source</p></li>
+</ul></td>
+    </tr>
+    <tr>
+      <th>tag_search_text</th>
+      <td><p>A string to match tag names.  Defaults to no filtering
+by tag name matching.</p></td>
     </tr>
     <tr>
       <th>limit</th>
@@ -177,29 +200,6 @@ Defaults to <code>"series_count"</code>. Possible values are:</p><ul>
       <th>sort_order</th>
       <td><p>A string representing the order of the resulting series.
 Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>tag_names</th>
-      <td><p>A semicolon delimited string of tag names to return.  Defaults
-no filtering by tag names.</p></td>
-    </tr>
-    <tr>
-      <th>tag_group_id</th>
-      <td><p>A string indicating the tag group id to filter tags by type.
-Defaults to no filtering by tag group.  Possible values are</p><ul>
-<li><p><code>"freq"</code> = Frequency</p></li>
-<li><p><code>"gen"</code> = General or Concept</p></li>
-<li><p><code>"geo"</code> = Geography</p></li>
-<li><p><code>"geot"</code> = Geography Type</p></li>
-<li><p><code>"rls"</code> = Release</p></li>
-<li><p><code>"seas"</code> = Seasonal Adjustment</p></li>
-<li><p><code>"src"</code> = Source</p></li>
-</ul></td>
-    </tr>
-    <tr>
-      <th>tag_search_text</th>
-      <td><p>A string to match tag names.  Defaults to no filtering
-by tag name matching.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>
@@ -244,8 +244,8 @@ series count, and additional notes.</p>
 <span class='co'># Return only results in the "geo" (Geography) group</span>
 <span class='fu'>fredr_series_search_tags</span>(
   <span class='kw'>series_search_text</span> <span class='kw'>=</span> <span class='st'>"oil"</span>,
-  <span class='kw'>tag_search_text</span> <span class='kw'>=</span> <span class='st'>"usa"</span>,
-  <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='st'>"geo"</span>
+  <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='st'>"geo"</span>,
+  <span class='kw'>tag_search_text</span> <span class='kw'>=</span> <span class='st'>"usa"</span>
 )
 <span class='co'># }</span></pre>
   </div>

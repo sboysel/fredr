@@ -8,6 +8,19 @@
 #' data series. For use with \code{\link{fredr_series_search_text}} and
 #' \code{\link{fredr_series_search_id}}.  _Required parameter._
 #'
+#' @param tag_names A semicolon delimited string of tag names that series match _all_ of.  Defaults to no tag filtering.
+#'
+#' @param exclude_tag_names A semicolon delimited string of tag names that
+#' series match _none_ of.  Defaults to no tag filtering.
+#'
+#' @param filter_variable A string indicating the attribute to filter results
+#' by. Possible values are: `"frequency"`, `"units"`, `"seasonal_adjustment"`.
+#' Defaults to no filter.
+#'
+#' @param filter_value The value of the `filter_variable` attribute to filter
+#' by. Possible values depend on the value of `filter_variable`. Defaults to
+#' no filter.
+#'
 #' @param limit An integer limit on the maximum number of results to return.
 #' Defaults to `1000`, the maximum.
 #'
@@ -28,19 +41,6 @@
 #' * `"observation_end"`
 #' * `"popularity"`
 #' * `"group_popularity"`
-#'
-#' @param filter_variable A string indicating the attribute to filter results
-#' by. Possible values are: `"frequency"`, `"units"`, `"seasonal_adjustment"`.
-#' Defaults to no filter.
-#'
-#' @param filter_value The value of the `filter_variable` attribute to filter
-#' by. Possible values depend on the value of `filter_variable`. Defaults to
-#' no filter.
-#'
-#' @param tag_names A semicolon delimited string of tag names that series match _all_ of.  Defaults to no tag filtering.
-#'
-#' @param exclude_tag_names A semicolon delimited string of tag names that
-#' series match _none_ of.  Defaults to no tag filtering.
 #'
 #' @return A `tibble` object where each row represents a series matching the query.
 #'
@@ -86,16 +86,16 @@
 #' @rdname fredr_series_search
 #' @export
 fredr_series_search_text <- function(search_text = NULL,
+                                     tag_names = NULL,
+                                     exclude_tag_names = NULL,
+                                     filter_variable = NULL,
+                                     filter_value = NULL,
                                      limit = NULL,
                                      offset = NULL,
                                      order_by = NULL,
                                      sort_order = NULL,
-                                     filter_variable = NULL,
-                                     filter_value = NULL,
                                      realtime_start = NULL,
-                                     realtime_end = NULL,
-                                     tag_names = NULL,
-                                     exclude_tag_names = NULL) {
+                                     realtime_end = NULL) {
 
   validate_required_string_param(search_text)
 

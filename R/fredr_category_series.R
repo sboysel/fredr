@@ -3,6 +3,21 @@
 #' @param category_id An integer ID for the category.  Default is `0` for the
 #' root category. _Required parameter._
 #'
+#' @param tag_names A string indicating which series tags to match.  Multiple
+#' tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).
+#'
+#' @param exclude_tag_names A string indicating which series tags should _not_
+#' be matched.  Multiple tags can be delimited by a semicolon in a single string
+#' (e.g. `"usa;gnp"``).
+#'
+#' @param filter_variable A string indicating which attribute to indicate the
+#' attribute that results are filtered by.  Possible values include: `"frequency"`,
+#' `"units"`, `"seasonal_adjustment"`.  No filtering by default.
+#'
+#' @param filter_value A string giving the value of the `filter_variable`
+#' attribute to filter results by.  `filter_variable` must be set.  No filtering
+#' by default.
+#'
 #' @param limit An positive integer indicating maximum number of results to
 #' return.  Possible values are any integer between `1` and `1000` (default),
 #' inclusive.
@@ -29,21 +44,6 @@
 #'
 #' @param sort_order A string representing the order of the resulting series.
 #' Possible values are: `"asc"` (default), and `"desc"`.
-#'
-#' @param filter_variable A string indicating which attribute to indicate the
-#' attribute that results are filtered by.  Possible values include: `"frequency"`,
-#' `"units"`, `"seasonal_adjustment"`.  No filtering by default.
-#'
-#' @param filter_value A string giving the value of the `filter_variable`
-#' attribute to filter results by.  `filter_variable` must be set.  No filtering
-#' by default.
-#'
-#' @param tag_names A string indicating which series tags to match.  Multiple
-#' tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).
-#'
-#' @param exclude_tag_names A string indicating which series tags should _not_
-#' be matched.  Multiple tags can be delimited by a semicolon in a single string
-#' (e.g. `"usa;gnp"``).
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
@@ -72,14 +72,14 @@
 #' }
 #' @export
 fredr_category_series <- function(category_id = 0L,
-                                  limit = NULL,
-                                  offset = NULL,
-                                  order_by = NULL,
-                                  sort_order = NULL,
                                   filter_variable = NULL,
                                   filter_value = NULL,
                                   tag_names = NULL,
                                   exclude_tag_names = NULL,
+                                  limit = NULL,
+                                  offset = NULL,
+                                  order_by = NULL,
+                                  sort_order = NULL,
                                   realtime_start = NULL,
                                   realtime_end = NULL) {
 

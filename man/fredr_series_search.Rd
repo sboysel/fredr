@@ -5,10 +5,10 @@
 \alias{fredr_series_search_id}
 \title{Search for a FRED series.}
 \usage{
-fredr_series_search_text(search_text = NULL, limit = NULL, offset = NULL,
-  order_by = NULL, sort_order = NULL, filter_variable = NULL,
-  filter_value = NULL, realtime_start = NULL, realtime_end = NULL,
-  tag_names = NULL, exclude_tag_names = NULL)
+fredr_series_search_text(search_text = NULL, tag_names = NULL,
+  exclude_tag_names = NULL, filter_variable = NULL, filter_value = NULL,
+  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
+  realtime_start = NULL, realtime_end = NULL)
 
 fredr_series_search_id(search_text = NULL, limit = 1000L, offset = 0,
   order_by = NULL, sort_order = "asc", filter_variable = NULL,
@@ -19,6 +19,19 @@ fredr_series_search_id(search_text = NULL, limit = 1000L, offset = 0,
 \item{search_text}{A string containing the words to match against economic
 data series. For use with \code{\link{fredr_series_search_text}} and
 \code{\link{fredr_series_search_id}}.  \emph{Required parameter.}}
+
+\item{tag_names}{A semicolon delimited string of tag names that series match \emph{all} of.  Defaults to no tag filtering.}
+
+\item{exclude_tag_names}{A semicolon delimited string of tag names that
+series match \emph{none} of.  Defaults to no tag filtering.}
+
+\item{filter_variable}{A string indicating the attribute to filter results
+by. Possible values are: \code{"frequency"}, \code{"units"}, \code{"seasonal_adjustment"}.
+Defaults to no filter.}
+
+\item{filter_value}{The value of the \code{filter_variable} attribute to filter
+by. Possible values depend on the value of \code{filter_variable}. Defaults to
+no filter.}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}
@@ -49,14 +62,6 @@ for \code{\link[=fredr_series_search_id]{fredr_series_search_id()}}. Possible va
 \item{sort_order}{A string representing the order of the resulting series.
 Possible values are: \code{"asc"} (default), and \code{"desc"}.}
 
-\item{filter_variable}{A string indicating the attribute to filter results
-by. Possible values are: \code{"frequency"}, \code{"units"}, \code{"seasonal_adjustment"}.
-Defaults to no filter.}
-
-\item{filter_value}{The value of the \code{filter_variable} attribute to filter
-by. Possible values depend on the value of \code{filter_variable}. Defaults to
-no filter.}
-
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
@@ -64,11 +69,6 @@ Defaults to today's date. For more information, see
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
-
-\item{tag_names}{A semicolon delimited string of tag names that series match \emph{all} of.  Defaults to no tag filtering.}
-
-\item{exclude_tag_names}{A semicolon delimited string of tag names that
-series match \emph{none} of.  Defaults to no tag filtering.}
 }
 \value{
 A \code{tibble} object where each row represents a series matching the query.
