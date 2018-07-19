@@ -3,14 +3,14 @@
 #' Opens FRED API web documentation in a new browser tab.
 #'
 #' @param endpoint A string representing the desired documentation for the exact
-#'				FRED API endpoint.  Default is `"base"`, which will open a link to
-#'				\url{https://api.stlouisfed.org/docs/fred/}.
+#' FRED API endpoint.  Default is `"base"`, which will open a link to
+#' \url{https://api.stlouisfed.org/docs/fred/}.
 #' @param params A boolean value.  If `TRUE`, the documentation will be opened at
-#'        the "Parameters" section.  Default is `FALSE`.
+#' the "Parameters" section.  Default is `FALSE`.
 #' @param debug A boolean value.  If `TRUE`, the documentation is not opened in a
-#'        browser and the documentation URL is returned as a string.  If `FALSE`,
-#'        documentation is opened in a browser and nothing is returned.  Default
-#'        is `FALSE`.
+#' browser and the documentation URL is returned as a string.  If `FALSE`,
+#' documentation is opened in a browser and nothing is returned.  Default is
+#' `FALSE`.
 #'
 #' @section API Documentation:
 #'

@@ -138,9 +138,9 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_release_series</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>fredr_release_series</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -149,6 +149,29 @@
     <tr>
       <th>release_id</th>
       <td><p>An integer ID of the release. <em>Required parameter.</em></p></td>
+    </tr>
+    <tr>
+      <th>filter_variable</th>
+      <td><p>A string indicating which attribute to indicate the
+attribute that results are filtered by.  Possible values include: <code>"frequency"</code>,
+<code>"units"</code>, <code>"seasonal_adjustment"</code>.  No filtering by default.</p></td>
+    </tr>
+    <tr>
+      <th>filter_value</th>
+      <td><p>A string giving the value of the <code>filter_variable</code>
+attribute to filter results by.  <code>filter_variable</code> must be set.  No filtering
+by default.</p></td>
+    </tr>
+    <tr>
+      <th>tag_names</th>
+      <td><p>A string indicating which series tags to match.  Multiple
+tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
+    </tr>
+    <tr>
+      <th>exclude_tag_names</th>
+      <td><p>A string indicating which series tags should <em>not</em>
+be matched.  Multiple tags can be delimited by a semicolon in a single string
+(e.g. `"usa;gnp"``).</p></td>
     </tr>
     <tr>
       <th>limit</th>
@@ -183,29 +206,6 @@ ordered by. Possible values include:</p><ul>
       <th>sort_order</th>
       <td><p>A string representing the order of the resulting series.
 Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>filter_variable</th>
-      <td><p>A string indicating which attribute to indicate the
-attribute that results are filtered by.  Possible values include: <code>"frequency"</code>,
-<code>"units"</code>, <code>"seasonal_adjustment"</code>.  No filtering by default.</p></td>
-    </tr>
-    <tr>
-      <th>filter_value</th>
-      <td><p>A string giving the value of the <code>filter_variable</code>
-attribute to filter results by.  <code>filter_variable</code> must be set.  No filtering
-by default.</p></td>
-    </tr>
-    <tr>
-      <th>tag_names</th>
-      <td><p>A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
-    </tr>
-    <tr>
-      <th>exclude_tag_names</th>
-      <td><p>A string indicating which series tags should <em>not</em>
-be matched.  Multiple tags can be delimited by a semicolon in a single string
-(e.g. `"usa;gnp"``).</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>

@@ -97,7 +97,7 @@
       <h1>FRED Tags</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2018-07-18</h4>
+            <h4 class="date">2018-07-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-tags.Rmd"><code>vignettes/fredr-tags.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-tags.Rmd</code></div>
@@ -122,7 +122,7 @@
 <div id="get-series-tags" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-series-tags" class="anchor"></a>Get series tags</h2>
-<p>The function <code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> returns a list of tags matching the request. The information returned is a <code>tibble</code> in which each row represents a FRED tag. For example, running <code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> without any parameters returns the top 1000 FRED tags ordered by number of series who are assigned the tag:</p>
+<p>The function <code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> returns a list of tags matching the request. The data returned is a <code>tibble</code> in which each row represents a FRED tag. For example, running <code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> without any parameters returns the top 1000 FRED tags ordered by number of series who are assigned the tag:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>()</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 6</span></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt;    name                 group_id notes    created  popularity series_count</span></a>
@@ -139,14 +139,12 @@
 <a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt; 10 prosperity scorecard gen      ""       2017-01…         76        87532</span></a>
 <a class="sourceLine" id="cb1-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows</span></a></code></pre></div>
 <p>To return specific tags by tag name, specify multiple tags in a single string by delimiting with a semicolon:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="dt">tag_names =</span> <span class="st">"gdp;oecd"</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">)</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; # A tibble: 2 x 6</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt;   name  group_id notes                created      popularity series_count</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; * &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;                &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; 1 oecd  src      Org. for Economic C… 2012-02-27 …         78        61500</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; 2 gdp   gen      Gross Domestic Prod… 2012-02-27 …         83        48660</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(<span class="dt">tag_names =</span> <span class="st">"gdp;oecd"</span>)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 2 x 6</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;   name  group_id notes                created      popularity series_count</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; * &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;                &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; 1 oecd  src      Org. for Economic C… 2012-02-27 …         78        61500</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; 2 gdp   gen      Gross Domestic Prod… 2012-02-27 …         83        48660</span></a></code></pre></div>
 <p>Return tags for a given group ID:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="dt">tag_group_id =</span> <span class="st">"geo"</span>,</a>
@@ -167,14 +165,12 @@
 <a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; 10 in    geo      Indiana                  2012-0…         46         9148</span></a>
 <a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; # ... with 40 more rows</span></a></code></pre></div>
 <p>Search for tags by text:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="dt">search_text =</span> <span class="st">"unemployment"</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">)</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt; # A tibble: 2 x 6</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt;   name         group_id notes           created    popularity series_count</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; * &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;           &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; 1 unemployment gen      ""              2012-02-2…         75        23892</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; 2 nairu        gen      Non-Accelerati… 2012-08-1…         17            2</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(<span class="dt">search_text =</span> <span class="st">"unemployment"</span>)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; # A tibble: 2 x 6</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;   name         group_id notes           created    popularity series_count</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt; * &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;           &lt;int&gt;        &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; 1 unemployment gen      ""              2012-02-2…         75        23892</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; 2 nairu        gen      Non-Accelerati… 2012-08-1…         17            2</span></a></code></pre></div>
 <p>Note that the example above searches for <em>tags</em> matching <code>"unemployment"</code>. To search for the set of <em>series</em> with tags matching <code>"unemployment"</code>, use <code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags</a></span>(</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2">  <span class="dt">series_search_text =</span> <span class="st">"unemployment"</span>,</a>
@@ -198,26 +194,24 @@
 <div id="get-related-series-tags" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-related-series-tags" class="anchor"></a>Get related series tags</h2>
-<p>The function <code><a href="../reference/fredr_related_tags.html">fredr_related_tags()</a></code> returns a list of tags <em>related to</em> the set of tags matching the request. The information returned is a <code>tibble</code> in which each row represents a tag related to the tags specified in <code>tag_names</code>. For example, to get the set of tags related to the tags “monetary aggregates” and “weekly”:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_related_tags.html">fredr_related_tags</a></span>(</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="dt">tag_names =</span> <span class="st">"monetary aggregates;weekly"</span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">)</a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt; # A tibble: 13 x 6</span></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt;    name         group_id notes        created      popularity series_count</span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt;  * &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;  1 nation       geot     ""           2012-02-27 …        100           12</span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  2 usa          geo      United Stat… 2012-02-27 …         99           12</span></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  3 frb          src      Board of Go… 2012-02-27 …         79           10</span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  4 h6           rls      H.6 Money S… 2012-08-16 …         48           10</span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  5 nsa          seas     Not Seasona… 2012-02-27 …        100            6</span></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  6 sa           seas     Seasonally … 2012-02-27 …         87            6</span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;  7 m1           gen      M1 Money St… 2012-02-27 …         47            4</span></a>
-<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt;  8 m2           gen      M2 Money St… 2012-02-27 …         44            4</span></a>
-<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt;  9 currency     gen      ""           2012-02-27 …         63            2</span></a>
-<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt; 10 discontinued gen      ""           2012-02-27 …         68            2</span></a>
-<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#&gt; 11 frb stl      src      St. Louis F… 2012-02-27 …         64            2</span></a>
-<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#&gt; 12 m3           gen      M3 Money St… 2012-02-27 …         37            2</span></a>
-<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#&gt; 13 mzm          gen      MZM Money S… 2012-02-27 …         27            2</span></a></code></pre></div>
+<p>The function <code><a href="../reference/fredr_related_tags.html">fredr_related_tags()</a></code> returns a list of tags <em>related to</em> the set of tags matching the request. The data returned is a <code>tibble</code> in which each row represents a tag related to the tags specified in <code>tag_names</code>. For example, to get the set of tags related to the tags “monetary aggregates” and “weekly”:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_related_tags.html">fredr_related_tags</a></span>(<span class="dt">tag_names =</span> <span class="st">"monetary aggregates;weekly"</span>)</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; # A tibble: 13 x 6</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt;    name         group_id notes        created      popularity series_count</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt;  1 nation       geot     ""           2012-02-27 …        100           12</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt;  2 usa          geo      United Stat… 2012-02-27 …         99           12</span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;  3 frb          src      Board of Go… 2012-02-27 …         79           10</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  4 h6           rls      H.6 Money S… 2012-08-16 …         48           10</span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  5 nsa          seas     Not Seasona… 2012-02-27 …        100            6</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  6 sa           seas     Seasonally … 2012-02-27 …         87            6</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  7 m1           gen      M1 Money St… 2012-02-27 …         47            4</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  8 m2           gen      M2 Money St… 2012-02-27 …         44            4</span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;  9 currency     gen      ""           2012-02-27 …         63            2</span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; 10 discontinued gen      ""           2012-02-27 …         68            2</span></a>
+<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt; 11 frb stl      src      St. Louis F… 2012-02-27 …         64            2</span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt; 12 m3           gen      M3 Money St… 2012-02-27 …         37            2</span></a>
+<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#&gt; 13 mzm          gen      MZM Money S… 2012-02-27 …         27            2</span></a></code></pre></div>
 <p>To filter these results to tags belonging to the “General” tag group:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_related_tags.html">fredr_related_tags</a></span>(</a>
 <a class="sourceLine" id="cb7-2" data-line-number="2">  <span class="dt">tag_names =</span> <span class="st">"monetary aggregates;weekly"</span>,</a>
@@ -250,27 +244,25 @@
 <h2 class="hasAnchor">
 <a href="#get-series-by-tag-names" class="anchor"></a>Get series by tag names</h2>
 <p>The function <code><a href="../reference/fredr_tags_series.html">fredr_tags_series()</a></code> returns a list of series assigned tags matching the request. As with the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Series">Series endpoint</a>, the data returned is a <code>tibble</code> in which each row represents a series. For example, to get all series tagged with “gdp”:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags_series.html">fredr_tags_series</a></span>(</a>
-<a class="sourceLine" id="cb9-2" data-line-number="2">  <span class="dt">tag_names =</span> <span class="st">"gdp"</span></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3">)</a>
-<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt; # A tibble: 1,000 x 16</span></a>
-<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;    id       realtime_start realtime_end title             observation_sta…</span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;  * &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  1 A001RD3… 2018-07-18     2018-07-18   Gross national p… 1929-01-01      </span></a>
-<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  2 A001RG3… 2018-07-18     2018-07-18   Gross national p… 1929-01-01      </span></a>
-<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  3 A001RI1… 2018-07-18     2018-07-18   Gross National P… 1930-01-01      </span></a>
-<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  4 A001RI1… 2018-07-18     2018-07-18   Gross National P… 1947-04-01      </span></a>
-<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  5 A001RL1… 2018-07-18     2018-07-18   Real Gross Natio… 1930-01-01      </span></a>
-<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  6 A001RL1… 2018-07-18     2018-07-18   Real Gross Natio… 1947-04-01      </span></a>
-<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  7 A001RO1… 2018-07-18     2018-07-18   Real Gross Natio… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt;  8 A001RP1… 2018-07-18     2018-07-18   Gross National P… 1930-01-01      </span></a>
-<a class="sourceLine" id="cb9-15" data-line-number="15"><span class="co">#&gt;  9 A001RP1… 2018-07-18     2018-07-18   Gross National P… 1947-04-01      </span></a>
-<a class="sourceLine" id="cb9-16" data-line-number="16"><span class="co">#&gt; 10 A001RV1… 2018-07-18     2018-07-18   Gross National P… 1930-01-01      </span></a>
-<a class="sourceLine" id="cb9-17" data-line-number="17"><span class="co">#&gt; # ... with 990 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb9-18" data-line-number="18"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb9-19" data-line-number="19"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb9-20" data-line-number="20"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
-<a class="sourceLine" id="cb9-21" data-line-number="21"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags_series.html">fredr_tags_series</a></span>(<span class="dt">tag_names =</span> <span class="st">"gdp"</span>)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 16</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#&gt;    id       realtime_start realtime_end title             observation_sta…</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;           </span></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;  1 A001RD3… 2018-07-19     2018-07-19   Gross national p… 1929-01-01      </span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;  2 A001RG3… 2018-07-19     2018-07-19   Gross national p… 1929-01-01      </span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  3 A001RI1… 2018-07-19     2018-07-19   Gross National P… 1930-01-01      </span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  4 A001RI1… 2018-07-19     2018-07-19   Gross National P… 1947-04-01      </span></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  5 A001RL1… 2018-07-19     2018-07-19   Real Gross Natio… 1930-01-01      </span></a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  6 A001RL1… 2018-07-19     2018-07-19   Real Gross Natio… 1947-04-01      </span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  7 A001RO1… 2018-07-19     2018-07-19   Real Gross Natio… 1948-01-01      </span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  8 A001RP1… 2018-07-19     2018-07-19   Gross National P… 1930-01-01      </span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  9 A001RP1… 2018-07-19     2018-07-19   Gross National P… 1947-04-01      </span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt; 10 A001RV1… 2018-07-19     2018-07-19   Gross National P… 1930-01-01      </span></a>
+<a class="sourceLine" id="cb9-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb9-16" data-line-number="16"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb9-17" data-line-number="17"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb9-18" data-line-number="18"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb9-19" data-line-number="19"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
 <p>To get the top 100 most popular non-quarterly series tagged with “gdp”:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags_series.html">fredr_tags_series</a></span>(</a>
 <a class="sourceLine" id="cb10-2" data-line-number="2">  <span class="dt">tag_names =</span> <span class="st">"gdp"</span>,</a>

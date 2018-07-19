@@ -76,14 +76,14 @@
 #' }
 #' @export
 fredr_release_series <- function(release_id = NULL,
-                                 limit = NULL,
-                                 offset = NULL,
-                                 order_by = NULL,
-                                 sort_order = NULL,
                                  filter_variable = NULL,
                                  filter_value = NULL,
                                  tag_names = NULL,
                                  exclude_tag_names = NULL,
+                                 limit = NULL,
+                                 offset = NULL,
+                                 order_by = NULL,
+                                 sort_order = NULL,
                                  realtime_start = NULL,
                                  realtime_end = NULL) {
 

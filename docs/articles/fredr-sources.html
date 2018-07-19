@@ -97,7 +97,7 @@
       <h1>FRED Sources</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2018-07-18</h4>
+            <h4 class="date">2018-07-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-sources.Rmd"><code>vignettes/fredr-sources.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-sources.Rmd</code></div>
@@ -135,20 +135,18 @@
 <div id="get-a-single-fred-source" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-a-single-fred-source" class="anchor"></a>Get a single FRED source</h2>
-<p>The function <code><a href="../reference/fredr_source.html">fredr_source()</a></code> returns information for a <em>single</em> source indicated by <code>source_id</code>. The information returned is a <code>tibble</code> in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is <code>6</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_source.html">fredr_source</a></span>(</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="dt">source_id =</span> 6L</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">)</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; # A tibble: 1 x 5</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt;      id realtime_start realtime_end name                       link       </span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                      &lt;chr&gt;      </span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; 1     6 2018-07-18     2018-07-18   Federal Financial Institu… http://www…</span></a></code></pre></div>
+<p>The function <code><a href="../reference/fredr_source.html">fredr_source()</a></code> returns information for a <em>single</em> source indicated by <code>source_id</code>. The data returned is a <code>tibble</code> in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is <code>6</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_source.html">fredr_source</a></span>(<span class="dt">source_id =</span> 6L)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 5</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;      id realtime_start realtime_end name                       link       </span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                      &lt;chr&gt;      </span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; 1     6 2018-07-19     2018-07-19   Federal Financial Institu… http://www…</span></a></code></pre></div>
 <p>See <code><a href="../reference/fredr_source.html">fredr_source()</a></code> for additional details.</p>
 </div>
 <div id="get-fred-releases-for-a-source" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-fred-releases-for-a-source" class="anchor"></a>Get FRED releases for a source</h2>
-<p>The function <code><a href="../reference/fredr_source_releases.html">fredr_source_releases()</a></code> returns FRED release information for the source indicated by <code>source_id</code>. As with the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Releases">Releases endpoint</a>, the information returned is a <code>tibble</code> in which each row represents a FRED release for the specified source. For example, to get the first 10 releases from the Federal Reserve Board of Governors, ordered by ascending release ID:</p>
+<p>The function <code><a href="../reference/fredr_source_releases.html">fredr_source_releases()</a></code> returns FRED release information for the source indicated by <code>source_id</code>. As with the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Releases">Releases endpoint</a>, the data returned is a <code>tibble</code> in which each row represents a FRED release for the specified source. For example, to get the first 10 releases from the Federal Reserve Board of Governors, ordered by ascending release ID:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_source_releases.html">fredr_source_releases</a></span>(</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="dt">source_id =</span> 1L,</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="dt">limit =</span> 10L</a>

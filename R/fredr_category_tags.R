@@ -67,13 +67,13 @@
 #' }
 #' @export
 fredr_category_tags <- function(category_id = 0L,
+                                tag_names = NULL,
+                                tag_group_id = NULL,
+                                search_text = NULL,
                                 limit = NULL,
                                 offset = NULL,
                                 order_by = NULL,
                                 sort_order = NULL,
-                                search_text = NULL,
-                                tag_names = NULL,
-                                tag_group_id = NULL,
                                 realtime_start = NULL,
                                 realtime_end = NULL) {
 

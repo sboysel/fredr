@@ -16,8 +16,8 @@ the "Parameters" section.  Default is \code{FALSE}.}
 
 \item{debug}{A boolean value.  If \code{TRUE}, the documentation is not opened in a
 browser and the documentation URL is returned as a string.  If \code{FALSE},
-documentation is opened in a browser and nothing is returned.  Default
-is \code{FALSE}.}
+documentation is opened in a browser and nothing is returned.  Default is
+\code{FALSE}.}
 }
 \description{
 Opens FRED API web documentation in a new browser tab.

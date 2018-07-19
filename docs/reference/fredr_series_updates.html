@@ -138,24 +138,13 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_series_updates</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>start_time</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>end_time</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>fredr_series_updates</span>(<span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>start_time</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>end_time</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>limit</th>
-      <td><p>An integer limit on the maximum number of results to return.
-Defaults to <code>1000</code>, the maximum.</p></td>
-    </tr>
-    <tr>
-      <th>offset</th>
-      <td><p>An integer used in conjunction with <code>limit</code> for long series.
-This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
-multiple calls. Defaults to <code>0</code>.</p></td>
-    </tr>
     <tr>
       <th>filter_value</th>
       <td><p>Filter results by type of geographic region of economic
@@ -175,6 +164,17 @@ updates results.</p></td>
       <th>end_time</th>
       <td><p>A datetime object indicating the start time to filter series
 updates results.</p></td>
+    </tr>
+    <tr>
+      <th>limit</th>
+      <td><p>An integer limit on the maximum number of results to return.
+Defaults to <code>1000</code>, the maximum.</p></td>
+    </tr>
+    <tr>
+      <th>offset</th>
+      <td><p>An integer used in conjunction with <code>limit</code> for long series.
+This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
+multiple calls. Defaults to <code>0</code>.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>

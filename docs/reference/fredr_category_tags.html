@@ -146,9 +146,9 @@ that does not have series.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_category_tags</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>0L</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>fredr_category_tags</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>0L</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>realtime_end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -158,6 +158,28 @@ that does not have series.</p>
       <th>category_id</th>
       <td><p>An integer ID for the category.  Default is <code>0</code> for the
 root category. <em>Required parameter.</em></p></td>
+    </tr>
+    <tr>
+      <th>tag_names</th>
+      <td><p>A string indicating which series tags to match.  Multiple
+tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
+    </tr>
+    <tr>
+      <th>tag_group_id</th>
+      <td><p>A string representing the tag group id to filter tags by
+type.  No filtering by default.  Possible values include:</p><ul>
+<li><p><code>"freq"</code> - Frequency</p></li>
+<li><p><code>"gen"</code> - General or Concept</p></li>
+<li><p><code>"geo"</code> - Geography</p></li>
+<li><p><code>"geot"</code> - Geography Type</p></li>
+<li><p><code>"rls"</code> - Release</p></li>
+<li><p><code>"seas"</code> - Seasonal Adjustment</p></li>
+<li><p><code>"src"</code> - Source</p></li>
+</ul></td>
+    </tr>
+    <tr>
+      <th>search_text</th>
+      <td><p>A string to match text of tags.  No matching by default.</p></td>
     </tr>
     <tr>
       <th>limit</th>
@@ -179,28 +201,6 @@ Possible values include: <code>"series_count"</code> (default), <code>"popularit
       <th>sort_order</th>
       <td><p>A string representing the order of the resulting series.
 Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>search_text</th>
-      <td><p>A string to match text of tags.  No matching by default.</p></td>
-    </tr>
-    <tr>
-      <th>tag_names</th>
-      <td><p>A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
-    </tr>
-    <tr>
-      <th>tag_group_id</th>
-      <td><p>A string representing the tag group id to filter tags by
-type.  No filtering by default.  Possible values include:</p><ul>
-<li><p><code>"freq"</code> - Frequency</p></li>
-<li><p><code>"gen"</code> - General or Concept</p></li>
-<li><p><code>"geo"</code> - Geography</p></li>
-<li><p><code>"geot"</code> - Geography Type</p></li>
-<li><p><code>"rls"</code> - Release</p></li>
-<li><p><code>"seas"</code> - Seasonal Adjustment</p></li>
-<li><p><code>"src"</code> - Source</p></li>
-</ul></td>
     </tr>
     <tr>
       <th>realtime_start</th>

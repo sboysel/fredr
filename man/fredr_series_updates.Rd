@@ -4,18 +4,11 @@
 \alias{fredr_series_updates}
 \title{Return a set of recently updated FRED series}
 \usage{
-fredr_series_updates(limit = NULL, offset = NULL, filter_value = NULL,
-  start_time = NULL, end_time = NULL, realtime_start = NULL,
+fredr_series_updates(filter_value = NULL, start_time = NULL,
+  end_time = NULL, limit = NULL, offset = NULL, realtime_start = NULL,
   realtime_end = NULL)
 }
 \arguments{
-\item{limit}{An integer limit on the maximum number of results to return.
-Defaults to \code{1000}, the maximum.}
-
-\item{offset}{An integer used in conjunction with \code{limit} for long series.
-This mimics the idea of \emph{pagination} to retrieve large amounts of data over
-multiple calls. Defaults to \code{0}.}
-
 \item{filter_value}{Filter results by type of geographic region of economic
 the data series.  Possible values include
 \itemize{
@@ -30,6 +23,13 @@ updates results.}
 
 \item{end_time}{A datetime object indicating the start time to filter series
 updates results.}
+
+\item{limit}{An integer limit on the maximum number of results to return.
+Defaults to \code{1000}, the maximum.}
+
+\item{offset}{An integer used in conjunction with \code{limit} for long series.
+This mimics the idea of \emph{pagination} to retrieve large amounts of data over
+multiple calls. Defaults to \code{0}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
