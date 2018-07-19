@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_series_release.R
 \name{fredr_series_release}
 \alias{fredr_series_release}
-\title{Return the release for a FRED series}
+\title{Get the release for a FRED series}
 \usage{
 fredr_series_release(series_id = NULL, realtime_start = NULL,
   realtime_end = NULL)

@@ -1,4 +1,4 @@
-#' Return the release for a FRED series
+#' Get the release for a FRED series
 #'
 #' Given a series ID, return information on a series as a `tibble` object.
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_series_categories.R
 \name{fredr_series_categories}
 \alias{fredr_series_categories}
-\title{Return the categories for a FRED series}
+\title{Get the categories for a FRED series}
 \usage{
 fredr_series_categories(series_id = NULL, realtime_start = NULL,
   realtime_end = NULL)

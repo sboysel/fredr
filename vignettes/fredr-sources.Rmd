@@ -40,8 +40,6 @@ The function `fredr_sources()` returns a list of FRED data sources.  The informa
 fredr_sources()
 ```
 
-See `fredr_sources()` for additional details.
-
 ## Get a single FRED source
 
 The function `fredr_source()` returns information for a _single_ source indicated by `source_id`.  The data returned is a `tibble` in which each row represents a FRED source.   For example, the Federal Financial Institutions Examination Council source ID is `6`:
@@ -49,8 +47,6 @@ The function `fredr_source()` returns information for a _single_ source indicate
 ```{r fredr_source1}
 fredr_source(source_id = 6L)
 ```
-
-See `fredr_source()` for additional details.
 
 ## Get FRED releases for a source
 

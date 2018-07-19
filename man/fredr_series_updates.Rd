@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_series_updates.R
 \name{fredr_series_updates}
 \alias{fredr_series_updates}
-\title{Return a set of recently updated FRED series}
+\title{Get a set of recently updated FRED series}
 \usage{
 fredr_series_updates(filter_value = NULL, start_time = NULL,
   end_time = NULL, limit = NULL, offset = NULL, realtime_start = NULL,

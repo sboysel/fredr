@@ -1,4 +1,4 @@
-#' Return the categories for a FRED series
+#' Get the categories for a FRED series
 #'
 #' Given a series ID, return information on the categories to which a series belongs
 #' as a `tibble` object.

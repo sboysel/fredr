@@ -1,4 +1,4 @@
-#' Return a set of recently updated FRED series
+#' Get a set of recently updated FRED series
 #'
 #' Returns information on the recently updated series on the FRED server.
 #'

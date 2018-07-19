@@ -1,4 +1,4 @@
-#' Fetch observations of a FRED series
+#' Get observations of a FRED series
 #'
 #' Given a series ID, return observations of that series as a `tibble` object.
 #' `fredr()` is an alias for `fredr_series_observations()`.
