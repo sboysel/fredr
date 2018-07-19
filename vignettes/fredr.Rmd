@@ -61,7 +61,7 @@ library(fredr)
 
 To use `fredr` and the FRED API in general, you must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
-recommended to reveiw the [FRED API Terms of
+recommended to review the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).  Once you've obtained an API key, you can set the key as an environment variable using `fredr_set_key`
 
 ```{r fredr_set_key, eval=FALSE}
@@ -72,7 +72,7 @@ where "abcdefghijklmnopqrstuvwxyz123456" is replaced with the actual key you obt
 
 ## Retrieve series observations
 
-The `fredr()` function (an alias for `fredr_series_observations()`) retrieves series observations (i.e. the actual time series data) for a specified FRED series ID.  The function returns a `tibble` with 2 columns (observation date and value).
+The `fredr()` function (an alias for `fredr_series_observations()`) retrieves series observations (i.e. the actual time series data) for a specified FRED series ID.  The function returns a `tibble` with 3 columns (observation date, series ID, and value).
 
 ```{r fredr_series_observations, message=FALSE, warning=FALSE}
 fredr(
@@ -102,21 +102,46 @@ fredr_series_search_text(
   sort_order = "desc",
   limit = 1) %>%
   pull(id) %>%
-  fredr_series_observations(series_id = .) %>%
-  ggplot(data = ., mapping = aes(x = date, y = FEDFUNDS)) +
-    geom_line()
+  fredr(series_id = .) %>%
+  ggplot(data = ., mapping = aes(x = date, y = value, color = series_id)) +
+    geom_line() +
+    labs(x = "Observation Date", y = "Rate", color = "Series")
+```
+
+Since `fredr()` returns a `tibble` with a series ID, mapping `fredr()` over vector
+of seried IDs can be achieved as follows:
+
+```{r fredr_series_observations4, message=FALSE, warning=FALSE}
+map_dfr(c("UNRATE", "FEDFUNDS"), fredr) %>%
+  ggplot(data = ., mapping = aes(x = date, y = value, color = series_id)) +
+    geom_line() +
+    labs(x = "Observation Date", y = "Rate", color = "Series")
+```
+
+Using `purrr::pmap_dfr()` allows you to use varying optional parameters as well
+
+```{r fredr_series_observations5, message=FALSE, warning=FALSE}
+params <- list(
+  series_id = c("UNRATE", "OILPRICE"),
+  frequency = c("m", "q")
+)
+
+pmap_dfr(
+  .l = params,
+  .f = ~ fredr(series_id = .x, frequency = .y)
+)
 ```
 
 It is relatively straightforward to convert `tibbles` returned by `fredr` into other time series objects.  For example,
 
-```{r fredr_series_observations4, message=FALSE, warning=FALSE}
+```{r fredr_series_observations6, message=FALSE, warning=FALSE}
 library(xts)
-gnpca <- fredr_series_observations(series_id = "GNPCA", units = "log") %>%
-  mutate(GNPCA = GNPCA - lag(GNPCA)) %>%
-  filter(!is.na(GNPCA))
+gnpca <- fredr(series_id = "GNPCA", units = "log") %>%
+  mutate(value = value - lag(value)) %>%
+  filter(!is.na(value))
 
 gnpca_xts <- xts::xts(
-  x = gnpca$GNPCA,
+  x = gnpca$value,
   order.by = gnpca$date
 )
 
@@ -144,7 +169,7 @@ fredr_endpoints
 
 ## View FRED API documentation
 
-To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://research.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation for any endpoint with the convenience function `fredr_docs`.  The following example will open a web browser to the FRED API documentation page on `series/observation` endpoint.
+To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://research.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation for any endpoint with the convenience function `fredr_docs`.  The following example will open a web browser to the FRED API documentation page on the `series/observations` endpoint.
 
 ```{r fredr_docs1, message=FALSE, warning=FALSE, eval=FALSE}
 fredr_docs(endpoint = "series/observations")

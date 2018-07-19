@@ -30,7 +30,7 @@ options(digits = 4)
 This vignette is intended to introduce the user to `fredr` functions for the [Tags
 endpoint](https://research.stlouisfed.org/docs/api/fred/#Tags) of the FRED API.
 
-FRED series are assigned __tags__ as an attribute for classification, each with a string identifiers.  For example:
+FRED series are assigned __tags__ as an attribute for classification.  Each FRED tag is identified by a string ID.  For example:
 
 - "annual", "monthly"
 - "census", "bls"
@@ -38,9 +38,11 @@ FRED series are assigned __tags__ as an attribute for classification, each with 
 - "manufacturing", "exports", "households"
 - "sa" (i.e. "seasonally adjusted")
 
+The following examples illustrate usage of the Tags endpoint functions in `fredr`.
+
 ## Get series tags
 
-The function `fredr_tags()` returns a list of tags matching the request along with some tag information (tag name, group ID, notes, tag creation date, tag popularity, and number of series belonging assigned the tag). For example, running `fredr_tags()` without any parameters returns the top 1000 FRED tags ordered by number of series who are assigned the tag:
+The function `fredr_tags()` returns a list of tags matching the request.  The data returned is a `tibble` in which each row represents a FRED tag. For example, running `fredr_tags()` without any parameters returns the top 1000 FRED tags ordered by number of series who are assigned the tag:
 
 ```{r fredr_tags1, message=FALSE, warning=FALSE}
 fredr_tags()
@@ -49,9 +51,7 @@ fredr_tags()
 To return specific tags by tag name, specify multiple tags in a single string by delimiting with a semicolon:
 
 ```{r fredr_tags2, message=FALSE, warning=FALSE}
-fredr_tags(
-  tag_names = "gdp;oecd"
-)
+fredr_tags(tag_names = "gdp;oecd")
 ```
 
 Return tags for a given group ID:
@@ -66,12 +66,10 @@ fredr_tags(
 Search for tags by text:
 
 ```{r fredr_tags4, message=FALSE, warning=FALSE}
-fredr_tags(
-  search_text = "unemployment"
-)
+fredr_tags(search_text = "unemployment")
 ```
 
-Not that the example above search for _tags_ matching `"unemployment"`.  To search for the set of _series_ with tags matching `"unemployment"`, use `fredr_series_search_tags()`:
+Note that the example above searches for _tags_ matching `"unemployment"`.  To search for the set of _series_ with tags matching `"unemployment"`, use `fredr_series_search_tags()`:
 
 ```{r fredr_tags5, message=FALSE, warning=FALSE}
 fredr_series_search_tags(
@@ -82,12 +80,10 @@ fredr_series_search_tags(
 
 ## Get related series tags
 
-The function `fredr_related_tags()` returns a list of tags _related to_ the set of tags matching the request along with some tag information (tag name, group ID, notes, tag creation date, tag popularity, and number of series belonging assigned the tag). For example, to get the set of tags related to the tags "monetary aggregates" and "weekly":
+The function `fredr_related_tags()` returns a list of tags _related to_ the set of tags matching the request.  The data returned is a `tibble` in which each row represents a tag related to the tags specified in `tag_names`.  For example, to get the set of tags related to the tags "monetary aggregates" and "weekly":
 
 ```{r fredr_related_tags1}
-fredr_related_tags(
-  tag_names = "monetary aggregates;weekly"
-)
+fredr_related_tags(tag_names = "monetary aggregates;weekly")
 ```
 
 To filter these results to tags belonging to the "General" tag group:
@@ -111,12 +107,10 @@ fredr_related_tags(
 
 ## Get series by tag names
 
-The function `fredr_tags_series()` returns a list of series assigned tags matching the request along with some series information (same as the information returned by the functions for the [Series endpoint](http://sboysel.github.io/fredr/reference/index.html#Series)).  For example, to get all series tagged with "gdp":
+The function `fredr_tags_series()` returns a list of series assigned tags matching the request.  As with the functions for the [Series endpoint](http://sboysel.github.io/fredr/reference/index.html#Series), the data returned is a `tibble` in which each row represents a series.  For example, to get all series tagged with "gdp":
 
 ```{r fredr_series_tags1}
-fredr_tags_series(
-  tag_names = "gdp"
-)
+fredr_tags_series(tag_names = "gdp")
 ```
 
 To get the top 100 most popular non-quarterly series tagged with "gdp":

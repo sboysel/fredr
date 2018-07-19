@@ -110,7 +110,7 @@
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
 <p>This vignette is intended to introduce the user to <code>fredr</code> functions for the <a href="https://research.stlouisfed.org/docs/api/fred/#Tags">Tags endpoint</a> of the FRED API.</p>
-<p>FRED series are assigned <strong>tags</strong> as an attribute for classification, each with a string identifiers. For example:</p>
+<p>FRED series are assigned <strong>tags</strong> as an attribute for classification. Each FRED tag is identified by a string ID. For example:</p>
 <ul>
 <li>“annual”, “monthly”</li>
 <li>“census”, “bls”</li>
@@ -118,10 +118,11 @@
 <li>“manufacturing”, “exports”, “households”</li>
 <li>“sa” (i.e. “seasonally adjusted”)</li>
 </ul>
+<p>The following examples illustrate usage of the Tags endpoint functions in <code>fredr</code>.</p>
 <div id="get-series-tags" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-series-tags" class="anchor"></a>Get series tags</h2>
-<p>The function <code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> returns a list of tags matching the request along with some tag information (tag name, group ID, notes, tag creation date, tag popularity, and number of series belonging assigned the tag). For example, running <code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> without any parameters returns the top 1000 FRED tags ordered by number of series who are assigned the tag:</p>
+<p>The function <code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> returns a list of tags matching the request. The information returned is a <code>tibble</code> in which each row represents a FRED tag. For example, running <code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> without any parameters returns the top 1000 FRED tags ordered by number of series who are assigned the tag:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>()</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 6</span></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt;    name                 group_id notes    created  popularity series_count</span></a>
@@ -174,7 +175,7 @@
 <a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; * &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;           &lt;int&gt;        &lt;int&gt;</span></a>
 <a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; 1 unemployment gen      ""              2012-02-2…         75        23892</span></a>
 <a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; 2 nairu        gen      Non-Accelerati… 2012-08-1…         17            2</span></a></code></pre></div>
-<p>Not that the example above search for <em>tags</em> matching <code>"unemployment"</code>. To search for the set of <em>series</em> with tags matching <code>"unemployment"</code>, use <code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code>:</p>
+<p>Note that the example above searches for <em>tags</em> matching <code>"unemployment"</code>. To search for the set of <em>series</em> with tags matching <code>"unemployment"</code>, use <code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags</a></span>(</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2">  <span class="dt">series_search_text =</span> <span class="st">"unemployment"</span>,</a>
 <a class="sourceLine" id="cb5-3" data-line-number="3">  <span class="dt">limit =</span> 100L</a>
@@ -197,7 +198,7 @@
 <div id="get-related-series-tags" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-related-series-tags" class="anchor"></a>Get related series tags</h2>
-<p>The function <code><a href="../reference/fredr_related_tags.html">fredr_related_tags()</a></code> returns a list of tags <em>related to</em> the set of tags matching the request along with some tag information (tag name, group ID, notes, tag creation date, tag popularity, and number of series belonging assigned the tag). For example, to get the set of tags related to the tags “monetary aggregates” and “weekly”:</p>
+<p>The function <code><a href="../reference/fredr_related_tags.html">fredr_related_tags()</a></code> returns a list of tags <em>related to</em> the set of tags matching the request. The information returned is a <code>tibble</code> in which each row represents a tag related to the tags specified in <code>tag_names</code>. For example, to get the set of tags related to the tags “monetary aggregates” and “weekly”:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_related_tags.html">fredr_related_tags</a></span>(</a>
 <a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="dt">tag_names =</span> <span class="st">"monetary aggregates;weekly"</span></a>
 <a class="sourceLine" id="cb6-3" data-line-number="3">)</a>
@@ -248,7 +249,7 @@
 <div id="get-series-by-tag-names" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-series-by-tag-names" class="anchor"></a>Get series by tag names</h2>
-<p>The function <code><a href="../reference/fredr_tags_series.html">fredr_tags_series()</a></code> returns a list of series assigned tags matching the request along with some series information (same as the information returned by the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Series">Series endpoint</a>). For example, to get all series tagged with “gdp”:</p>
+<p>The function <code><a href="../reference/fredr_tags_series.html">fredr_tags_series()</a></code> returns a list of series assigned tags matching the request. As with the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Series">Series endpoint</a>, the data returned is a <code>tibble</code> in which each row represents a series. For example, to get all series tagged with “gdp”:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags_series.html">fredr_tags_series</a></span>(</a>
 <a class="sourceLine" id="cb9-2" data-line-number="2">  <span class="dt">tag_names =</span> <span class="st">"gdp"</span></a>
 <a class="sourceLine" id="cb9-3" data-line-number="3">)</a>

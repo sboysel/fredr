@@ -30,7 +30,7 @@ options(digits = 4)
 This vignette is intended to introduce the user to `fredr` functions for the [Categories
 endpoint](https://research.stlouisfed.org/docs/api/fred/#Categories) of the FRED API.
 
-FRED series are assigned categories, each with an associated integer identifier.  For example:
+FRED series are assigned __categories__.  Each FRED category is assigned an integer identifier.  For example:
 
 - "Population, Employment, & Labor Markets" (`category_id = 10`)
 - "National Accounts" (`category_id = 32992`)
@@ -38,11 +38,11 @@ FRED series are assigned categories, each with an associated integer identifier.
 - "Housing" (`category_id = 97`)
 
 Categories are organized in a hierarchical structure where parent categories contain
-children categories.  All categories are children of the root category (`category_id = 0`).
+children categories.  All categories are children of the root category (`category_id = 0`).  The following examples illustrate usage of the Categories endpoint functions in `fredr`.
 
 ## Get a FRED category
 
-`fredr_category()` returns minimal information (ID, name, and parent ID) for a single category specified by `category_id`.  The default is the root category.
+`fredr_category()` returns minimal information for a single category specified by `category_id`.  The data returned is a `tibble` in which each row represents a category.  The default is the root category.
 
 ```{r fredr_category1}
 fredr_category() 
@@ -56,35 +56,35 @@ See `fredr_category()` for more details.
 
 ## Get the children of a FRED category
 
-`fredr_category_children()` returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by `category_id`.  The default is the root category.
+`fredr_category_children()` returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by `category_id`.  The data returned is a `tibble` in which each row represents child category of the parent specified.  The default is the root category.
 
 ```{r fredr_category_children1}
 fredr_category_children()
 ```
 
 ```{r fredr_category_children2}
-fredr_category_children(1L)
+fredr_category_children(category_id = 1L)
 ```
 
 See `fredr_category_children()` for more details.
 
 ## Get a related FRED category
 
-`fredr_category_related()` returns minimal information (ID, name, and parent ID) for all related categories to the category specified by `category_id`.  Not that not all categories have related categories.  The default is the root category.
+`fredr_category_related()` returns minimal information (ID, name, and parent ID) for all related categories to the category specified by `category_id`.  The data returned is a `tibble` in which each row represents category related to the one specified.  Note that not all categories have related categories.  The default is the root category.
 
 ```{r fredr_category_related1}
 fredr_category_related()
 ```
 
 ```{r fredr_category_related2}
-fredr_category_related(4L) # Employment Cost Index
+fredr_category_related(category_id = 4L) # Employment Cost Index
 ```
 
 See `fredr_category_related()` for more details.
 
 ## Get series in a category
 
-`fredr_category_series()` returns detailed information for the FRED series belonging to the category specified by `category_id`.  The function has a number of options to filter the results.  The default is the root category.  For example, to get the top 100 quarterly series in the "Housing" category, ordering the results so that the most recently updated series appear first:
+`fredr_category_series()` returns detailed information for the FRED series belonging to the category specified by `category_id`.  The data returned is a `tibble` in which each row represents a series belonging to the category specified.  The default is the root category.  For example, to get the top 100 quarterly series in the "Housing" category, ordering the results so that the most recently updated series appear first:
 
 ```{r fredr_category_series1}
 fredr_category_series(
@@ -112,7 +112,7 @@ See `fredr_category_series()` for more details.
 
 ## Get tags within a FRED category
 
-`fredr_category_tags()` returns information for the FRED tags assigned to series in the category specified by `category_id`.  The function has a number of options to filter the results.  The default is the root category.  For example, to get all "source" tags belonging to series in the "Retail Trade" category:
+`fredr_category_tags()` returns information for the FRED tags assigned to series in the category specified by `category_id`.  The data returned is a `tibble` in which each row represents a tag assigned to a series in the category specified.  The default is the root category.  For example, to get all "source" tags belonging to series in the "Retail Trade" category:
 
 ```{r fredr_category_tags1}
 fredr_category_tags(
@@ -136,7 +136,7 @@ See `fredr_category_tags()` for more details.
 
 ## Get related tags within a FRED category
 
-`fredr_category_related_tags()` returns a set of FRED tags assigned to series in the category specified by `category_id` that are _related_ to the tags specified in the `tag_names` parameter.  The function has a number of options to filter the results.  The default is the root category.  For example, to get all tags _except_ "rate" in the "Retail Trade" category related to the tags "business" and "monthly", ordering the results alphabetically:
+`fredr_category_related_tags()` returns a set of FRED tags assigned to series in the category specified by `category_id` that are _related_ to the tags specified in the `tag_names` parameter.  The data returned is a `tibble` in which each row represents a tag _related to_ a tag assigned to a series in the specified category.  The default is the root category.  For example, to get all tags _except_ "rate" in the "Retail Trade" category related to the tags "business" and "monthly", ordering the results alphabetically:
 
 ```{r fredr_category_related_tags1}
 fredr_category_related_tags(

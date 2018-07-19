@@ -30,13 +30,13 @@ options(digits = 4)
 This vignette is intended to introduce the user to `fredr` functions for the [Series
 endpoint](https://research.stlouisfed.org/docs/api/fred/#Series) of the FRED API.
 
-FRED series are the primary data objects in the FRED database, each with string identifier.  For example:
+FRED __series__ are the primary data objects in the FRED database.  Each FRED series is assigned a string identifier.  For example:
 
 - Civilian Unemployment Rate (`series_id = "UNRATE"`)
 - Real Gross National Product (`series_id = "GNPCA"`)
 - Effective Federal Funds Rate (`series_id = "FEDFUNDS"`)
 
-FRED series are assigned categories and tags attributes for organization and classification.  The following examples illustrate the Series endpoint functions implements in `fredr`.
+FRED series are assigned categories and tags attributes for organization and classification.  The following examples illustrate usage of the Series endpoint functions in `fredr`.
 
 ## Retrieve observations
 
@@ -44,7 +44,7 @@ The function `fredr()`, an alias for `fredr_series_observations()`, is the core 
 
 ## Search for FRED series
 
-Use `fredr_series_search_text()` to search for a series _by text_ in the series description.  For example:
+Use `fredr_series_search_text()` to search for a series _by text_ in the series description.  The data returned is a `tibble` where each row represents series with description text that matches the text specified by `search_text`.  For example, to search for series with description text that matches "UNRATE":
 
 ```{r fredr_series_search_text1}
 fredr_series_search_text(
@@ -53,7 +53,7 @@ fredr_series_search_text(
 )
 ```
 
-Use `fredr_series_search_id()` to search for a series _by integer ID_ of the series.  For example:
+Use `fredr_series_search_id()` to search for a series _by integer ID_ of the series.  The data returned is a `tibble` where each row represents series with an ID that matches the text specified by `search_text`.  For example, to search for series with an ID that matches "UNRATE":
 
 ```{r fredr_search_id1}
 fredr_series_search_id(
@@ -64,7 +64,7 @@ fredr_series_search_id(
 
 ## Search for FRED series by tags
 
-Use `fredr_series_search_tags()` to search for series tags
+Use `fredr_series_search_tags()` to search for series tags.  The data returned is a `tibble` where each row represents a tag matching the text in `series_search_text`.  For example, to return the top 100 tags (by series count) matching the text "unemployment":
 
 ```{r fredr_series_search_tags, message=FALSE, warning=FALSE}
 fredr_series_search_tags(
@@ -75,7 +75,7 @@ fredr_series_search_tags(
 
 ## Search for FRED series by related tags
 
-Use `fredr_search_related_tags()` to search for series tags related to a given tag.  For example, to search for tags related to the tag "usa" in which the series text matches "gnp", use the following:
+Use `fredr_search_related_tags()` to search for series tags related to a given tag.  The data returned is a `tibble` where each row represents a tag matching the text in `series_search_text` and related tags specified by `tag_names`.  For example, to search for tags related to the tag "usa" in which the series text matches "gnp", use the following:
 
 ```{r fredr_search_related_tags1}
 fredr_series_search_related_tags(
@@ -87,25 +87,72 @@ fredr_series_search_related_tags(
 
 ## Return basic information for a FRED series
 
-See `fredr_series()` for additional details.
+The `fredr_series()` function returns information for a single series specified by `series_id`.  The data returned is a `tibble` in which each row represents the series specified.  For example, to get information for the `UNRATE` series:
+
+```{r fredr_series1}
+fredr_series(series_id = "UNRATE")
+```
+
+Note that there may potentially be more than one row returned if the series has been revised and [real time periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html) are adjusted:
+
+```{r fredr_series2}
+fredr_series(
+  series_id = "UNRATE",
+  realtime_start = as.Date("1950-01-01")
+)
+```
 
 ## Return the categories for a FRED series
 
-See `fredr_series_categories()` for additional details.
+The `fredr_series_categories()` function returns a list of categories for the series specified by `series_id`.  The data returned is a `tibble` in which each row represents a category that the series belongs to.  For example, to get the categories for the `UNRATE` series:
+
+```{r fredr_series_categories1}
+fredr_series_categories(series_id = "UNRATE")
+```
 
 ## Return the release for a FRED series
 
-See `fredr_series_release()` for additional details.
+The `fredr_series_release()` function returns a list of releases that the series specified by `series_id` belongs to.  The data returned is a `tibble` in which each row represents a release that the series belongs to.  For example, to get the release for the `UNRATE` series:
+
+```{r fredr_series_release1}
+fredr_series_release(series_id = "UNRATE")
+```
 
 ## Return the tags for a FRED series
 
-See `fredr_series_tags()` for additional details
+The `fredr_series_tags()` function returns a list of tags that are assigned to the series specified by `series_id`.  The data returned is a `tibble` in which each row represents a tag assigned to the series.  For example, to get the tags for the `UNRATE` series:
+
+```{r fredr_series_tags1}
+fredr_series_tags(
+  series_id = "UNRATE",
+  order_by = "name"
+)
+```
 
 ## Return a set of recently updated FRED series
 
-See `fredr_series_updates()` for additional details.
+The `fredr_series_updates()` function returns a list of series recently updated on the FRED server.  The data returned is a `tibble` in which each row represents a series.  For example, the default call simply lists 1000 recent updates (the default for the `limit` parameter), most recent updates appearing first:
+ 
+```{r fredr_series_updates1}
+fredr_series_updates()
+```
+
+Use the `start_time` and `end_time` parameters to filter the results by time.  For example, to get all the macroeconomic times series updated in the last hour:
+
+```{r fredr_series_updates2}
+fredr_series_updates(
+  start_time = Sys.time() - 60 * 60,
+  end_time = Sys.time(),
+  filter_value = "macro"
+)
+```
+
 
 ## Get the data vintage dates for a FRED series
 
-See `fredr_series_vintagedates()` for additiional details
+The `fredr_series_vintagedates()` function returns a sequence of dates in history when the series specified by `series_id` was revised or appended to.  The data returned is a `tibble` where row is a date.  For example, to get the vintage dates for the series `UNRATE`:
+
+```{r fredr_series_vintagedates1}
+fredr_series_vintagedates(series_id = "UNRATE")
+```
 

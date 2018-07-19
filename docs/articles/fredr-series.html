@@ -110,13 +110,13 @@
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
 <p>This vignette is intended to introduce the user to <code>fredr</code> functions for the <a href="https://research.stlouisfed.org/docs/api/fred/#Series">Series endpoint</a> of the FRED API.</p>
-<p>FRED series are the primary data objects in the FRED database, each with string identifier. For example:</p>
+<p>FRED <strong>series</strong> are the primary data objects in the FRED database. Each FRED series is assigned a string identifier. For example:</p>
 <ul>
 <li>Civilian Unemployment Rate (<code>series_id = "UNRATE"</code>)</li>
 <li>Real Gross National Product (<code>series_id = "GNPCA"</code>)</li>
 <li>Effective Federal Funds Rate (<code>series_id = "FEDFUNDS"</code>)</li>
 </ul>
-<p>FRED series are assigned categories and tags attributes for organization and classification. The following examples illustrate the Series endpoint functions implements in <code>fredr</code>.</p>
+<p>FRED series are assigned categories and tags attributes for organization and classification. The following examples illustrate usage of the Series endpoint functions in <code>fredr</code>.</p>
 <div id="retrieve-observations" class="section level2">
 <h2 class="hasAnchor">
 <a href="#retrieve-observations" class="anchor"></a>Retrieve observations</h2>
@@ -125,7 +125,7 @@
 <div id="search-for-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#search-for-fred-series" class="anchor"></a>Search for FRED series</h2>
-<p>Use <code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code> to search for a series <em>by text</em> in the series description. For example:</p>
+<p>Use <code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code> to search for a series <em>by text</em> in the series description. The data returned is a <code>tibble</code> where each row represents series with description text that matches the text specified by <code>search_text</code>. For example, to search for series with description text that matches “UNRATE”:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search.html">fredr_series_search_text</a></span>(</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2">  <span class="dt">search_text =</span> <span class="st">"unemployment"</span>,</a>
 <a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="dt">limit =</span> 100L</a>
@@ -148,7 +148,7 @@
 <a class="sourceLine" id="cb1-20" data-line-number="20"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb1-21" data-line-number="21"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
 <a class="sourceLine" id="cb1-22" data-line-number="22"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
-<p>Use <code><a href="../reference/fredr_series_search.html">fredr_series_search_id()</a></code> to search for a series <em>by integer ID</em> of the series. For example:</p>
+<p>Use <code><a href="../reference/fredr_series_search.html">fredr_series_search_id()</a></code> to search for a series <em>by integer ID</em> of the series. The data returned is a <code>tibble</code> where each row represents series with an ID that matches the text specified by <code>search_text</code>. For example, to search for series with an ID that matches “UNRATE”:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search.html">fredr_series_search_id</a></span>(</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="dt">search_text =</span> <span class="st">"UNRATE"</span>,</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3">  <span class="dt">limit =</span> 100L</a>
@@ -181,7 +181,7 @@
 <div id="search-for-fred-series-by-tags" class="section level2">
 <h2 class="hasAnchor">
 <a href="#search-for-fred-series-by-tags" class="anchor"></a>Search for FRED series by tags</h2>
-<p>Use <code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code> to search for series tags</p>
+<p>Use <code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code> to search for series tags. The data returned is a <code>tibble</code> where each row represents a tag matching the text in <code>series_search_text</code>. For example, to return the top 100 tags (by series count) matching the text “unemployment”:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags</a></span>(</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="dt">series_search_text =</span> <span class="st">"unemployment"</span>,</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="dt">limit =</span> 100L</a>
@@ -204,7 +204,7 @@
 <div id="search-for-fred-series-by-related-tags" class="section level2">
 <h2 class="hasAnchor">
 <a href="#search-for-fred-series-by-related-tags" class="anchor"></a>Search for FRED series by related tags</h2>
-<p>Use <code>fredr_search_related_tags()</code> to search for series tags related to a given tag. For example, to search for tags related to the tag “usa” in which the series text matches “gnp”, use the following:</p>
+<p>Use <code>fredr_search_related_tags()</code> to search for series tags related to a given tag. The data returned is a <code>tibble</code> where each row represents a tag matching the text in <code>series_search_text</code> and related tags specified by <code>tag_names</code>. For example, to search for tags related to the tag “usa” in which the series text matches “gnp”, use the following:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search_related_tags.html">fredr_series_search_related_tags</a></span>(</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="dt">series_search_text =</span> <span class="st">"gnp"</span>,</a>
 <a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="dt">tag_names =</span> <span class="st">"usa"</span>,</a>
@@ -228,32 +228,141 @@
 <div id="return-basic-information-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#return-basic-information-for-a-fred-series" class="anchor"></a>Return basic information for a FRED series</h2>
+<p>The <code><a href="../reference/fredr_series.html">fredr_series()</a></code> function returns information for a single series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents the series specified. For example, to get information for the <code>UNRATE</code> series:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series.html">fredr_series</a></span>(</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">)</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt; # A tibble: 1 x 15</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt;   id    realtime_start realtime_end title observation_sta… observation_end</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt; * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt; 1 UNRA… 2018-07-19     2018-07-19   Civi… 1948-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt; # ... with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt; #   notes &lt;chr&gt;</span></a></code></pre></div>
+<p>Note that there may potentially be more than one row returned if the series has been revised and <a href="https://research.stlouisfed.org/docs/api/fred/realtime_period.html">real time periods</a> are adjusted:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series.html">fredr_series</a></span>(</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span>,</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">  <span class="dt">realtime_start =</span> <span class="kw">as.Date</span>(<span class="st">"1950-01-01"</span>)</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt; # A tibble: 3 x 15</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt;   id    realtime_start realtime_end title observation_sta… observation_end</span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt; * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt; 1 UNRA… 1960-03-15     1967-02-08   Civi… 1948-01-01       1966-12-01     </span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt; 2 UNRA… 1967-02-09     2012-02-02   Civi… 1948-01-01       2011-12-01     </span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt; 3 UNRA… 2012-02-03     9999-12-31   Civi… 1948-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt; # ... with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; #   notes &lt;chr&gt;</span></a></code></pre></div>
 <p>See <code><a href="../reference/fredr_series.html">fredr_series()</a></code> for additional details.</p>
 </div>
 <div id="return-the-categories-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#return-the-categories-for-a-fred-series" class="anchor"></a>Return the categories for a FRED series</h2>
+<p>The <code><a href="../reference/fredr_series_categories.html">fredr_series_categories()</a></code> function returns a list of categories for the series specified by <code>series_id</code>. The information returned is a <code>tibble</code> in which each row represents a category that the series belongs to. For example, to get the categories for the <code>UNRATE</code> series:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_categories.html">fredr_series_categories</a></span>(</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">)</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="co">#&gt; # A tibble: 1 x 4</span></a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt;      id name              parent_id notes                                 </span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;                 &lt;int&gt; &lt;chr&gt;                                 </span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt; 1 32447 Unemployment Rate        12 The ratio of unemployed to the civili…</span></a></code></pre></div>
 <p>See <code><a href="../reference/fredr_series_categories.html">fredr_series_categories()</a></code> for additional details.</p>
 </div>
 <div id="return-the-release-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#return-the-release-for-a-fred-series" class="anchor"></a>Return the release for a FRED series</h2>
+<p>The <code><a href="../reference/fredr_series_release.html">fredr_series_release()</a></code> function returns a list of releases that the series specified by <code>series_id</code> belongs to. The information returned is a <code>tibble</code> in which each row represents a release that the series belongs to. For example, to get the release for the <code>UNRATE</code> series:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_release.html">fredr_series_release</a></span>(</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">)</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="co">#&gt; # A tibble: 1 x 6</span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="co">#&gt;      id realtime_start realtime_end name        press_release link        </span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;       &lt;lgl&gt;         &lt;chr&gt;       </span></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt; 1    50 2018-07-19     2018-07-19   Employment… TRUE          http://www.…</span></a></code></pre></div>
 <p>See <code><a href="../reference/fredr_series_release.html">fredr_series_release()</a></code> for additional details.</p>
 </div>
 <div id="return-the-tags-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#return-the-tags-for-a-fred-series" class="anchor"></a>Return the tags for a FRED series</h2>
+<p>The <code><a href="../reference/fredr_series_tags.html">fredr_series_tags()</a></code> function returns a list of tags that are assigned to the series specified by <code>series_id</code>. The information returned is a <code>tibble</code> in which each row represents a tag assigned to the series. For example, to get the tags for the <code>UNRATE</code> series:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_tags.html">fredr_series_tags</a></span>(</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span>,</a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">  <span class="dt">order_by =</span> <span class="st">"name"</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt; # A tibble: 13 x 6</span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;    name                   group_id notes   created popularity series_count</span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  * &lt;chr&gt;                  &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;        &lt;int&gt;        &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  1 16 years +             gen      ""      2012-0…         58         5810</span></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  2 bls                    src      Bureau… 2012-0…         85       113265</span></a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  3 civilian               gen      ""      2012-0…         52         5977</span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  4 headline figure        gen      ""      2013-1…         52           53</span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  5 household survey       gen      Curren… 2012-0…         60         2975</span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  6 labor                  gen      ""      2012-0…         60        24608</span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt;  7 labor underutilization gen      ""      2012-0…         35          726</span></a>
+<a class="sourceLine" id="cb9-15" data-line-number="15"><span class="co">#&gt;  8 monthly                freq     ""      2012-0…         92       100536</span></a>
+<a class="sourceLine" id="cb9-16" data-line-number="16"><span class="co">#&gt;  9 nation                 geot     ""      2012-0…        100       174523</span></a>
+<a class="sourceLine" id="cb9-17" data-line-number="17"><span class="co">#&gt; 10 rate                   gen      ""      2012-0…         87        45813</span></a>
+<a class="sourceLine" id="cb9-18" data-line-number="18"><span class="co">#&gt; 11 sa                     seas     Season… 2012-0…         87        61222</span></a>
+<a class="sourceLine" id="cb9-19" data-line-number="19"><span class="co">#&gt; 12 unemployment           gen      ""      2012-0…         75        23892</span></a>
+<a class="sourceLine" id="cb9-20" data-line-number="20"><span class="co">#&gt; 13 usa                    geo      United… 2012-0…         99       368894</span></a></code></pre></div>
 <p>See <code><a href="../reference/fredr_series_tags.html">fredr_series_tags()</a></code> for additional details</p>
 </div>
 <div id="return-a-set-of-recently-updated-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#return-a-set-of-recently-updated-fred-series" class="anchor"></a>Return a set of recently updated FRED series</h2>
+<p>The <code><a href="../reference/fredr_series_updates.html">fredr_series_updates()</a></code> function returns a list of series recently updated on the FRED server. The information returned is a <code>tibble</code> in which each row represents a series. For example, the default call simply lists 1000 recent updates (the default for the <code>limit</code> parameter), most recent updates appearing first:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_updates.html">fredr_series_updates</a></span>()</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 15</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#&gt;    id      realtime_start realtime_end title              observation_sta…</span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;              &lt;chr&gt;           </span></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="co">#&gt;  1 RUTOP2… 2018-07-19     2018-07-19   Russell Top 200® … 1978-12-31      </span></a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"><span class="co">#&gt;  2 RUTOP2… 2018-07-19     2018-07-19   Russell Top 200® … 1978-12-31      </span></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">#&gt;  3 RUMIDC… 2018-07-19     2018-07-19   Russell Midcap® T… 1978-12-31      </span></a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#&gt;  4 RUMIDC… 2018-07-19     2018-07-19   Russell Midcap® P… 1978-12-31      </span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#&gt;  5 RU3000… 2018-07-19     2018-07-19   Russell 3000® Val… 1978-12-31      </span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt;  6 RU3000… 2018-07-19     2018-07-19   Russell 3000® Tot… 1978-12-29      </span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt;  7 RU3000… 2018-07-19     2018-07-19   Russell 3000® Gro… 1978-12-31      </span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#&gt;  8 RU3000… 2018-07-19     2018-07-19   Russell 3000® Pri… 1978-12-29      </span></a>
+<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#&gt;  9 RU3000… 2018-07-19     2018-07-19   Russell 3000® Val… 1978-12-31      </span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#&gt; 10 RU2000… 2018-07-19     2018-07-19   Russell 2000® Val… 1978-12-31      </span></a>
+<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows, and 10 more variables: observation_end &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb10-16" data-line-number="16"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb10-17" data-line-number="17"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb10-18" data-line-number="18"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb10-19" data-line-number="19"><span class="co">#&gt; #   notes &lt;chr&gt;</span></a></code></pre></div>
+<p>Use the <code>start_time</code> and <code>end_time</code> parameters to filter the results by time. For example, to get all the macroeconomic times series updated in the last hour:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_updates.html">fredr_series_updates</a></span>(</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">  <span class="dt">start_time =</span> <span class="kw">Sys.time</span>() <span class="op">-</span><span class="st"> </span><span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span>,</a>
+<a class="sourceLine" id="cb11-3" data-line-number="3">  <span class="dt">end_time =</span> <span class="kw">Sys.time</span>(),</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4">  <span class="dt">filter_value =</span> <span class="st">"macro"</span></a>
+<a class="sourceLine" id="cb11-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="co">#&gt; # A tibble: 0 x 0</span></a></code></pre></div>
 <p>See <code><a href="../reference/fredr_series_updates.html">fredr_series_updates()</a></code> for additional details.</p>
 </div>
 <div id="get-the-data-vintage-dates-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-data-vintage-dates-for-a-fred-series" class="anchor"></a>Get the data vintage dates for a FRED series</h2>
-<p>See <code><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates()</a></code> for additiional details</p>
+<p>The <code><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates()</a></code> function returns a sequence of dates in history when the series specified by <code>series_id</code> was revised or appended to. The information returned is a <code>tibble</code> where row is a date. For example, to get the vintage dates for the series <code>UNRATE</code>:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates</a></span>(</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">)</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="co">#&gt; # A tibble: 701 x 1</span></a>
+<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="co">#&gt;    vintage_dates</span></a>
+<a class="sourceLine" id="cb12-6" data-line-number="6"><span class="co">#&gt;    &lt;chr&gt;        </span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="co">#&gt;  1 1960-03-15   </span></a>
+<a class="sourceLine" id="cb12-8" data-line-number="8"><span class="co">#&gt;  2 1960-04-12   </span></a>
+<a class="sourceLine" id="cb12-9" data-line-number="9"><span class="co">#&gt;  3 1960-05-11   </span></a>
+<a class="sourceLine" id="cb12-10" data-line-number="10"><span class="co">#&gt;  4 1960-06-13   </span></a>
+<a class="sourceLine" id="cb12-11" data-line-number="11"><span class="co">#&gt;  5 1960-07-12   </span></a>
+<a class="sourceLine" id="cb12-12" data-line-number="12"><span class="co">#&gt;  6 1960-08-10   </span></a>
+<a class="sourceLine" id="cb12-13" data-line-number="13"><span class="co">#&gt;  7 1960-09-09   </span></a>
+<a class="sourceLine" id="cb12-14" data-line-number="14"><span class="co">#&gt;  8 1960-10-10   </span></a>
+<a class="sourceLine" id="cb12-15" data-line-number="15"><span class="co">#&gt;  9 1960-11-10   </span></a>
+<a class="sourceLine" id="cb12-16" data-line-number="16"><span class="co">#&gt; 10 1960-12-12   </span></a>
+<a class="sourceLine" id="cb12-17" data-line-number="17"><span class="co">#&gt; # ... with 691 more rows</span></a></code></pre></div>
+<p>See <code><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates()</a></code> for additional details</p>
 </div>
 </div>
   </div>

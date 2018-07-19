@@ -32,9 +32,10 @@
 
 <meta property="og:title" content="Set the FRED API key — fredr_set_key" />
 
-<meta property="og:description" content="Users of the fredr`` package must authenticate with the FRED API by use of an API key. The functionfredr_set_key()` sets the FRED API key as an
+<meta property="og:description" content="Users of the fredr package must authenticate with the FRED API by use of
+an API key. The function fredr_set_key() sets the FRED API key as an
 environment variable for use with the service.  For persistence across sessions,
-see Details section." />
+see the Details section." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -136,9 +137,10 @@ see Details section." />
 
     <div class="ref-description">
     
-    <p>Users of the <code>fredr`` package must authenticate with the FRED API by use of an API key. The function</code>fredr_set_key()` sets the FRED API key as an
+    <p>Users of the <code>fredr</code> package must authenticate with the FRED API by use of
+an API key. The function <code>fredr_set_key()</code> sets the FRED API key as an
 environment variable for use with the service.  For persistence across sessions,
-see Details section.</p>
+see the Details section.</p>
     
     </div>
 
@@ -157,8 +159,15 @@ see Details section.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p><code>fredr_set_key()</code> sets a key as an environment variable for use with
-the <code>fredr`` package in the current session. The key can also be set in the</code>.Renviron<code>file in the working directory. You can edit the file manually by appending the line</code>FRED_API_KEY = my_api_ky<code>, where</code>my_api_key<code>is your actual key. The function</code>usethis::edit_r_environ()<code>does this safely. Run</code>base::readRenviron(".Renviron")` to set the key in the current session; the
-variable will be set in subsequent sessions started in the working directory.</p>
+the <code>fredr</code> package in the current session.  The key can also be set in the
+<code>.Renviron</code> file at the user or project level scope.  You can edit the file manually by
+appending the line <code>FRED_API_KEY = my_api_key</code>, where <code>my_api_key</code> is your
+actual key (remember to not surround the key in quotes).  The function
+<code><a href='http://www.rdocumentation.org/packages/usethis/topics/edit'>usethis::edit_r_environ()</a></code> does this safely.  Run
+<code><a href='http://www.rdocumentation.org/packages/base/topics/readRenviron'>base::readRenviron(".Renviron")</a></code> to set the key in the current session
+or restart R for it to take effect. The variable will be set in subsequent
+sessions in the working directory if you set it with project level scope,
+or everywhere if you set it with user level scope.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -173,7 +182,6 @@ to obtain an API key.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>fredr</span>)
 <span class='fu'>fredr_set_key</span>(<span class='st'>"abcdefghijklmnopqrstuvwxyz123456"</span>)
 <span class='co'># }</span><div class='input'>
 </div></pre>
