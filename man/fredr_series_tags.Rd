@@ -2,7 +2,7 @@
 % Please edit documentation in R/fredr_series_tags.R
 \name{fredr_series_tags}
 \alias{fredr_series_tags}
-\title{Return the tags for a FRED series}
+\title{Get the tags for a FRED series}
 \usage{
 fredr_series_tags(series_id = NULL, order_by = NULL, sort_order = NULL,
   realtime_start = NULL, realtime_end = NULL)

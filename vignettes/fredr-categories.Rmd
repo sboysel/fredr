@@ -52,8 +52,6 @@ fredr_category()
 fredr_category(category_id = 97L)
 ```
 
-See `fredr_category()` for more details.
-
 ## Get the children of a FRED category
 
 `fredr_category_children()` returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by `category_id`.  The data returned is a `tibble` in which each row represents child category of the parent specified.  The default is the root category.
@@ -66,8 +64,6 @@ fredr_category_children()
 fredr_category_children(category_id = 1L)
 ```
 
-See `fredr_category_children()` for more details.
-
 ## Get a related FRED category
 
 `fredr_category_related()` returns minimal information (ID, name, and parent ID) for all related categories to the category specified by `category_id`.  The data returned is a `tibble` in which each row represents category related to the one specified.  Note that not all categories have related categories.  The default is the root category.
@@ -79,8 +75,6 @@ fredr_category_related()
 ```{r fredr_category_related2}
 fredr_category_related(category_id = 4L) # Employment Cost Index
 ```
-
-See `fredr_category_related()` for more details.
 
 ## Get series in a category
 
@@ -108,8 +102,6 @@ fredr_category_series(
 )
 ```
 
-See `fredr_category_series()` for more details.
-
 ## Get tags within a FRED category
 
 `fredr_category_tags()` returns information for the FRED tags assigned to series in the category specified by `category_id`.  The data returned is a `tibble` in which each row represents a tag assigned to a series in the category specified.  The default is the root category.  For example, to get all "source" tags belonging to series in the "Retail Trade" category:
@@ -132,8 +124,6 @@ fredr_category_tags(
 )
 ```
 
-See `fredr_category_tags()` for more details.
-
 ## Get related tags within a FRED category
 
 `fredr_category_related_tags()` returns a set of FRED tags assigned to series in the category specified by `category_id` that are _related_ to the tags specified in the `tag_names` parameter.  The data returned is a `tibble` in which each row represents a tag _related to_ a tag assigned to a series in the specified category.  The default is the root category.  For example, to get all tags _except_ "rate" in the "Retail Trade" category related to the tags "business" and "monthly", ordering the results alphabetically:
@@ -147,7 +137,6 @@ fredr_category_related_tags(
 )
 ```
 
-See `fredr_category_related_tags()` for more details.
 
 
 

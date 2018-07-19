@@ -3,7 +3,7 @@
 \name{fredr_series_observations}
 \alias{fredr_series_observations}
 \alias{fredr}
-\title{Fetch observations of a FRED series}
+\title{Get observations of a FRED series}
 \usage{
 fredr_series_observations(series_id = NULL, observation_start = NULL,
   observation_end = NULL, frequency = NULL, aggregation_method = NULL,

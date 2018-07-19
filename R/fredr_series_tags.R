@@ -1,4 +1,4 @@
-#' Return the tags for a FRED series
+#' Get the tags for a FRED series
 #'
 #' Given a series ID, return associated tags for the series as a `tibble` object.
 #'

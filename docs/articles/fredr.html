@@ -145,19 +145,19 @@
 <a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span>,</a>
 <a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="dt">observation_start =</span> <span class="kw">as.Date</span>(<span class="st">"1990-01-01"</span>)</a>
 <a class="sourceLine" id="cb4-4" data-line-number="4">)</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; # A tibble: 342 x 2</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt;    date       UNRATE</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt;    &lt;date&gt;      &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  1 1990-01-01    5.4</span></a>
-<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt;  2 1990-02-01    5.3</span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  3 1990-03-01    5.2</span></a>
-<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  4 1990-04-01    5.4</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  5 1990-05-01    5.4</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  6 1990-06-01    5.2</span></a>
-<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt;  7 1990-07-01    5.5</span></a>
-<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  8 1990-08-01    5.7</span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  9 1990-09-01    5.9</span></a>
-<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; 10 1990-10-01    5.9</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; # A tibble: 342 x 3</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt;    date       series_id value</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  1 1990-01-01 UNRATE      5.4</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt;  2 1990-02-01 UNRATE      5.3</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  3 1990-03-01 UNRATE      5.2</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  4 1990-04-01 UNRATE      5.4</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  5 1990-05-01 UNRATE      5.4</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  6 1990-06-01 UNRATE      5.2</span></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt;  7 1990-07-01 UNRATE      5.5</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  8 1990-08-01 UNRATE      5.7</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  9 1990-09-01 UNRATE      5.9</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; 10 1990-10-01 UNRATE      5.9</span></a>
 <a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; # ... with 332 more rows</span></a></code></pre></div>
 <p>Leverage the native features of the FRED API by passing additional parameters:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/fredr.html">fredr_series_observations</a></span>(</a>
@@ -166,19 +166,19 @@
 <a class="sourceLine" id="cb5-4" data-line-number="4">  <span class="dt">frequency =</span> <span class="st">"q"</span>,</a>
 <a class="sourceLine" id="cb5-5" data-line-number="5">  <span class="dt">units =</span> <span class="st">"chg"</span></a>
 <a class="sourceLine" id="cb5-6" data-line-number="6">)</a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt; # A tibble: 114 x 2</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;    date        UNRATE</span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;    &lt;date&gt;       &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  1 1990-01-01 -0.0667</span></a>
-<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  2 1990-04-01  0.0333</span></a>
-<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  3 1990-07-01  0.367 </span></a>
-<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  4 1990-10-01  0.433 </span></a>
-<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  5 1991-01-01  0.467 </span></a>
-<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt;  6 1991-04-01  0.233 </span></a>
-<a class="sourceLine" id="cb5-16" data-line-number="16"><span class="co">#&gt;  7 1991-07-01  0.0333</span></a>
-<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="co">#&gt;  8 1991-10-01  0.233 </span></a>
-<a class="sourceLine" id="cb5-18" data-line-number="18"><span class="co">#&gt;  9 1992-01-01  0.267 </span></a>
-<a class="sourceLine" id="cb5-19" data-line-number="19"><span class="co">#&gt; 10 1992-04-01  0.233 </span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt; # A tibble: 114 x 3</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;    date       series_id   value</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;       &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  1 1990-01-01 UNRATE    -0.0667</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  2 1990-04-01 UNRATE     0.0333</span></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  3 1990-07-01 UNRATE     0.367 </span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  4 1990-10-01 UNRATE     0.433 </span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  5 1991-01-01 UNRATE     0.467 </span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt;  6 1991-04-01 UNRATE     0.233 </span></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16"><span class="co">#&gt;  7 1991-07-01 UNRATE     0.0333</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="co">#&gt;  8 1991-10-01 UNRATE     0.233 </span></a>
+<a class="sourceLine" id="cb5-18" data-line-number="18"><span class="co">#&gt;  9 1992-01-01 UNRATE     0.267 </span></a>
+<a class="sourceLine" id="cb5-19" data-line-number="19"><span class="co">#&gt; 10 1992-04-01 UNRATE     0.233 </span></a>
 <a class="sourceLine" id="cb5-20" data-line-number="20"><span class="co">#&gt; # ... with 104 more rows</span></a></code></pre></div>
 <p><code>fredr</code> plays nicely with the <a href="https://www.tidyverse.org/">tidyverse</a>:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
@@ -284,16 +284,16 @@
 <a class="sourceLine" id="cb13-2" data-line-number="2"><span class="co">#&gt; # A tibble: 25 x 16</span></a>
 <a class="sourceLine" id="cb13-3" data-line-number="3"><span class="co">#&gt;    id       realtime_start realtime_end title             observation_sta…</span></a>
 <a class="sourceLine" id="cb13-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="co">#&gt;  1 LFWA24T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="co">#&gt;  2 LFWA24T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-7" data-line-number="7"><span class="co">#&gt;  3 LFWA24T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-8" data-line-number="8"><span class="co">#&gt;  4 LFWA24T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-9" data-line-number="9"><span class="co">#&gt;  5 LFWA25T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-10" data-line-number="10"><span class="co">#&gt;  6 LFWA25T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-11" data-line-number="11"><span class="co">#&gt;  7 LFWA25T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-12" data-line-number="12"><span class="co">#&gt;  8 LFWA25T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-13" data-line-number="13"><span class="co">#&gt;  9 LFWA55T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb13-14" data-line-number="14"><span class="co">#&gt; 10 LFWA55T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="co">#&gt;  1 LFWA24T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="co">#&gt;  2 LFWA24T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-7" data-line-number="7"><span class="co">#&gt;  3 LFWA24T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-8" data-line-number="8"><span class="co">#&gt;  4 LFWA24T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-9" data-line-number="9"><span class="co">#&gt;  5 LFWA25T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-10" data-line-number="10"><span class="co">#&gt;  6 LFWA25T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-11" data-line-number="11"><span class="co">#&gt;  7 LFWA25T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-12" data-line-number="12"><span class="co">#&gt;  8 LFWA25T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-13" data-line-number="13"><span class="co">#&gt;  9 LFWA55T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-14" data-line-number="14"><span class="co">#&gt; 10 LFWA55T… 2018-07-19     2018-07-19   Working Age Popu… 2008-01-01      </span></a>
 <a class="sourceLine" id="cb13-15" data-line-number="15"><span class="co">#&gt; # ... with 15 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb13-16" data-line-number="16"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb13-17" data-line-number="17"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
@@ -307,7 +307,7 @@
 <a class="sourceLine" id="cb14-5" data-line-number="5">  <span class="dt">to_frame =</span> <span class="ot">FALSE</span></a>
 <a class="sourceLine" id="cb14-6" data-line-number="6">)</a>
 <a class="sourceLine" id="cb14-7" data-line-number="7"><span class="co">#&gt; Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&amp;api_key=d3ef3490ef7270cf903d07141e9e7db7&amp;file_type=json]</span></a>
-<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co">#&gt;   Date: 2018-07-18 20:28</span></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co">#&gt;   Date: 2018-07-19 07:33</span></a>
 <a class="sourceLine" id="cb14-9" data-line-number="9"><span class="co">#&gt;   Status: 200</span></a>
 <a class="sourceLine" id="cb14-10" data-line-number="10"><span class="co">#&gt;   Content-Type: application/json; charset=UTF-8</span></a>
 <a class="sourceLine" id="cb14-11" data-line-number="11"><span class="co">#&gt;   Size: 79.8 kB</span></a></code></pre></div>

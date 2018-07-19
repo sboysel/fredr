@@ -85,7 +85,7 @@ fredr_series_search_related_tags(
 )
 ```
 
-## Return basic information for a FRED series
+## Get basic information for a FRED series
 
 The `fredr_series()` function returns information for a single series specified by `series_id`.  The data returned is a `tibble` in which each row represents the series specified.  For example, to get information for the `UNRATE` series:
 
@@ -102,7 +102,7 @@ fredr_series(
 )
 ```
 
-## Return the categories for a FRED series
+## Get the categories for a FRED series
 
 The `fredr_series_categories()` function returns a list of categories for the series specified by `series_id`.  The data returned is a `tibble` in which each row represents a category that the series belongs to.  For example, to get the categories for the `UNRATE` series:
 
@@ -110,7 +110,7 @@ The `fredr_series_categories()` function returns a list of categories for the se
 fredr_series_categories(series_id = "UNRATE")
 ```
 
-## Return the release for a FRED series
+## Get the release for a FRED series
 
 The `fredr_series_release()` function returns a list of releases that the series specified by `series_id` belongs to.  The data returned is a `tibble` in which each row represents a release that the series belongs to.  For example, to get the release for the `UNRATE` series:
 
@@ -118,7 +118,7 @@ The `fredr_series_release()` function returns a list of releases that the series
 fredr_series_release(series_id = "UNRATE")
 ```
 
-## Return the tags for a FRED series
+## Get the tags for a FRED series
 
 The `fredr_series_tags()` function returns a list of tags that are assigned to the series specified by `series_id`.  The data returned is a `tibble` in which each row represents a tag assigned to the series.  For example, to get the tags for the `UNRATE` series:
 
@@ -129,7 +129,7 @@ fredr_series_tags(
 )
 ```
 
-## Return a set of recently updated FRED series
+## Get a set of recently updated FRED series
 
 The `fredr_series_updates()` function returns a list of series recently updated on the FRED server.  The data returned is a `tibble` in which each row represents a series.  For example, the default call simply lists 1000 recent updates (the default for the `limit` parameter), most recent updates appearing first:
  
