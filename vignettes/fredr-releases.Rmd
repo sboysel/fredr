@@ -1,0 +1,163 @@
+---
+title: "FRED Releases"
+author: "Sam Boysel"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+vignette: >
+  %\VignetteIndexEntry{FRED Releases}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  fig.width = 7,
+  fig.height = 5,
+  eval = !(Sys.getenv("FRED_API_KEY") == ""),
+  cache = TRUE,
+  collapse = TRUE,
+  comment = "#>"
+)
+library(fredr)
+options(digits = 4)
+```
+
+# Introduction
+
+This vignette is intended to introduce the user to `fredr` functions for the [Releases
+endpoint](https://research.stlouisfed.org/docs/api/fred/#Releases) of the FRED API.
+
+FRED series are added to the FRED database over time in __releases__.  Each FRED release is assigned an integer identifier.  The following examples illustrate usage of the Releases endpoint functions in `fredr`.
+
+## Get all releases of economic data
+
+The function `fredr_releases()` returns a set of all FRED releases matching the request.  The data returned is a `tibble` in which each row represents a FRED release.  The default call returns all FRED releases:
+
+```{r fredr_releases1}
+fredr_releases()
+```
+
+## Get release dates for all releases of economic data.
+
+The function `fredr_releases_dates()` returns a set of release dates for _all_ FRED releases.  The data returned is a `tibble` where each row represents a release date for a release.  For example, to get all release dates (up to the limit of `1000`) ordered by descending release date:
+
+```{r fredr_releases_dates1}
+fredr_releases_dates()
+```
+
+To instead order the results by ascending release ID:
+
+```{r fredr_releases_dates2}
+fredr_releases_dates(
+  sort_order = "asc",
+  order_by = "release_id"
+)
+```
+
+## Get a release of economic data
+
+The function `fredr_release()` returns data for a single FRED release specified by `release_id`.  The data returned is a `tibble` where each row represents the specified release.  For example, to get release data for the Employment Cost Index release:
+
+```{r fredr_release1}
+fredr_release(release_id = 11L)
+```
+
+## Get release dates for a single release of economic data
+
+The function `fredr_release_dates()` returns a set of release dates for a single FRED release specified by `release_id`.  The data returned is a `tibble` where each row represents a release date for the release specified.  For example, to get release dates for the Employment Cost Index release:
+
+```{r fredr_release_dates1}
+fredr_release_dates(release_id = 11L)
+```
+
+## Get the series on a release of economic data
+
+The function `fredr_release_series()` returns a set of series belonging to the FRED release specified by `release_id`.  The data returned is a `tibble` where each row represents a release date for the release specified.  For example, to get release dates for the Employment Cost Index release:
+
+```{r fredr_release_series1}
+fredr_release_series(release_id = 10L)
+```
+
+Note the parameters available to filter series belonging to a release
+
+```{r fredr_release_series2}
+fredr_release_series(
+  release_id = 10L,
+  filter_variable = "frequency",
+  filter_value = "Monthly",
+  order_by = "popularity",
+  sort_order = "desc",
+  limit = 10L
+)
+```
+
+## Get the FRED tags for a release
+
+The function `fredr_release_tags()` returns a set of tags assigned to series belonging to the FRED release specified by `release_id`.  The data returned is a `tibble` where each row represents a tag.  For example, to get the geographic tags assigned to series in the Consumer Price Index release:
+
+```{r fredr_release_tags1}
+fredr_release_tags(
+  release_id = 10L,
+  tag_group_id = "geo",
+  order_by = "popularity",
+  sort_order = "desc"
+)
+```
+
+## Get the related FRED tags for one or more FRED tags within a release
+
+The function `fredr_release_related_tags()` returns a set of tags assigned to series belonging to the FRED release specified by `release_id` that are _related to_ tags specified in `tag_names`.  The data returned is a `tibble` where each row represents a related tag.  For example, to get frequency tags assigned to series in the Consumer Price Index release that are also related to the tag `bls` and _not_ the `annual` tag:
+
+```{r fredr_release_related_tags1}
+fredr_release_related_tags(
+  release_id = 10L,
+  tag_names = "bls",
+  tag_group_id = "freq",
+  exclude_tag_names = "annual",
+  order_by = "popularity",
+  sort_order = "desc"
+)
+```
+
+## Get the sources for a release of economic data
+
+The function `fredr_release_sources()` returns a set of FRED sources for the FRED release specified by `release_id`.  The data returned is a `tibble` where each row represents a source.  For example,
+to get the sources for the Consumer Price Index release:
+
+```{r fredr_release_sources1}
+fredr_release_sources(release_id = 10L)
+```
+
+## Get release table trees for a given release
+
+The function `fredr_release_tables()` returns a set of FRED release table trees for the FRED release specified by `release_id`.  The data returned is a `tibble` where each row represents an element of the table tree's children: the column `name` gives the element ID and the column `value` stores data nodes for the element (e.g. element ID, release ID, parent ID, element type, element name, children, etc.).  For example, to get the table tree for the Consumer Price Index release:
+
+```{r fredr_release_table1}
+cpi_tbl <- fredr_release_tables(release_id = 10L)
+cpi_tbl
+```
+
+The above table has two elements: `34481` and `36712`.  Inspect an element (a list) by selecting its row and unnesting the row element `value` using `tibble::deframe()`:
+
+```{r fredr_release_table2}
+library(tidyverse)
+cpi_tbl %>%
+  slice(2) %>%
+  tibble::deframe()
+```
+
+You can extract the tree hierarchy of a deeper element in the table by specifying an `element_id`.  From the previous example, if you wanted to get the subtree for child element `36712` of the Consumer Price Index table:
+
+```{r fredr_release_table3}
+fredr_release_tables(
+  release_id = 10L,
+  element_id = 36712L
+)
+```
+
+
+
+

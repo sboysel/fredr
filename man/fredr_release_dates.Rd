@@ -42,7 +42,7 @@ Get release dates for a single release of economic data
 \section{API Documentation}{
 
 
-\href{https://research.stlouisfed.org/docs/api/fred/releases_dates.html}{fred/releases/dates}
+\href{https://research.stlouisfed.org/docs/api/fred/release_dates.html}{fred/release/dates}
 }
 
 \examples{

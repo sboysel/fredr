@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Using fredr • fredr</title>
+<title>Getting started with fredr • fredr</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Using fredr">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Getting started with fredr">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -47,6 +47,30 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="../articles/fredr-categories.html">FRED Categories</a>
+    </li>
+    <li>
+      <a href="../articles/fredr-releases.html">FRED Releases</a>
+    </li>
+    <li>
+      <a href="../articles/fredr-series.html">FRED Series</a>
+    </li>
+    <li>
+      <a href="../articles/fredr-sources.html">FRED Sources</a>
+    </li>
+    <li>
+      <a href="../articles/fredr-tags.html">FRED Tags</a>
+    </li>
+  </ul>
+</li>
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
@@ -70,10 +94,10 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Using fredr</h1>
+      <h1>Getting started with fredr</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2018-07-17</h4>
+            <h4 class="date">2018-07-18</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr.Rmd"><code>vignettes/fredr.Rmd</code></a></small>
       <div class="hidden name"><code>fredr.Rmd</code></div>
@@ -85,16 +109,16 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<p><code>fredr</code> interacts with the <a href="https://research.stlouisfed.org/fred2/">Federal Reserve Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. Essentially a simple wrapper of <a href="https://github.com/r-lib/httr"><code>httr</code></a> and the FRED API itself, <code>fredr</code> is designed with simplicity and flexibility in mind. The core functions are</p>
+<p><code>fredr</code> provides a complete set of <code>R</code> bindings to the <a href="https://research.stlouisfed.org/fred2/">Federal Reserve Economic Data (FRED)</a> RESTful API for, provided by the Federal Reserve Bank of St. Louis. The functions allow the user to search for and fetch time series observations and associated metadata within the FRED database. The core functions are</p>
 <ul>
 <li>
 <code><a href="../reference/fredr_set_key.html">fredr_set_key()</a></code> - Set the required FRED API key for the session.</li>
 <li>
-<code><a href="../reference/fredr.html">fredr_series_observations()</a></code> - Fetch a FRED series.</li>
+<code><a href="../reference/fredr.html">fredr()</a></code> or <code><a href="../reference/fredr.html">fredr_series_observations()</a></code> - Fetch a FRED series.</li>
 <li>
 <code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code> - Search for a FRED series by text.</li>
 <li>
-<code><a href="../reference/fredr.html">fredr()</a></code> - Send a general request to the FRED API.</li>
+<code><a href="../reference/fredr_request.html">fredr_request()</a></code> - Send a general request to the FRED API.</li>
 </ul>
 <p>Objects are returned as <code>tibbles</code>. The user is strongly encouraged to read the full <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API</a> documentation to leverage the full power of <code>fredr</code> and the FRED API.</p>
 <div id="installation" class="section level2">
@@ -109,18 +133,15 @@
 <div id="authentication" class="section level2">
 <h2 class="hasAnchor">
 <a href="#authentication" class="anchor"></a>Authentication</h2>
-<p>To use <code>fredr</code> and the FRED API in general, you must first <a href="https://research.stlouisfed.org/docs/api/api_key.html">obtain a FRED API key</a>. It is also recommended to reveiw the <a href="https://research.stlouisfed.org/docs/api/terms_of_use.html">FRED API Terms of Use</a>. Once you’ve obtained an API key, you can set the key as an environment variable using <code>fredr_set_key</code></p>
+<p>To use <code>fredr</code> and the FRED API in general, you must first <a href="https://research.stlouisfed.org/docs/api/api_key.html">obtain a FRED API key</a>. It is also recommended to review the <a href="https://research.stlouisfed.org/docs/api/terms_of_use.html">FRED API Terms of Use</a>. Once you’ve obtained an API key, you can set the key as an environment variable using <code>fredr_set_key</code></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_set_key.html">fredr_set_key</a></span>(<span class="st">"abcdefghijklmnopqrstuvwxyz123456"</span>)</a></code></pre></div>
 <p>where “abcdefghijklmnopqrstuvwxyz123456” is replaced with the actual key you obtain from FRED. This will set the key for the current session. You can persistently set the key by appending the line <code>FRED_API_KEY=abcdefghijklmnopqrstuvwxyz123456</code> to an <code>.Renviron</code> file in the working directory. This can be done using a text editor or by running <code><a href="http://www.rdocumentation.org/packages/usethis/topics/edit">usethis::edit_r_environ</a></code>. If you edit the <code>.Renviron</code> file, remember to either restart the session or run <code>readRenviron(".Renviron")</code> for the changes to take effect.</p>
 </div>
-<div id="series" class="section level2">
+<div id="retrieve-series-observations" class="section level2">
 <h2 class="hasAnchor">
-<a href="#series" class="anchor"></a>Series</h2>
-<div id="retrieve-series" class="section level3">
-<h3 class="hasAnchor">
-<a href="#retrieve-series" class="anchor"></a>Retrieve series</h3>
-<p><code>fredr_series_observations</code> retrieves series observations (i.e. the actual time series data) for a specified FRED series ID. The function returns a <code>tibble</code> with 2 columns (observation date and value).</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr.html">fredr_series_observations</a></span>(</a>
+<a href="#retrieve-series-observations" class="anchor"></a>Retrieve series observations</h2>
+<p>The <code><a href="../reference/fredr.html">fredr()</a></code> function (an alias for <code><a href="../reference/fredr.html">fredr_series_observations()</a></code>) retrieves series observations (i.e. the actual time series data) for a specified FRED series ID. The function returns a <code>tibble</code> with 3 columns (observation date, series ID, and value).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr.html">fredr</a></span>(</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span>,</a>
 <a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="dt">observation_start =</span> <span class="kw">as.Date</span>(<span class="st">"1990-01-01"</span>)</a>
 <a class="sourceLine" id="cb4-4" data-line-number="4">)</a>
@@ -167,239 +188,129 @@
 <a class="sourceLine" id="cb6-5" data-line-number="5">  <span class="dt">sort_order =</span> <span class="st">"desc"</span>,</a>
 <a class="sourceLine" id="cb6-6" data-line-number="6">  <span class="dt">limit =</span> <span class="dv">1</span>) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb6-7" data-line-number="7"><span class="st">  </span><span class="kw">pull</span>(id) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="../reference/fredr.html">fredr_series_observations</a></span>(<span class="dt">series_id =</span> .) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="st">  </span><span class="kw">ggplot</span>(<span class="dt">data =</span> ., <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> date, <span class="dt">y =</span> FEDFUNDS)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="st">    </span><span class="kw">geom_line</span>()</a></code></pre></div>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="../reference/fredr.html">fredr</a></span>(<span class="dt">series_id =</span> .) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="st">  </span><span class="kw">ggplot</span>(<span class="dt">data =</span> ., <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> date, <span class="dt">y =</span> value, <span class="dt">color =</span> series_id)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="st">    </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">"Observation Date"</span>, <span class="dt">y =</span> <span class="st">"Rate"</span>, <span class="dt">color =</span> <span class="st">"Series"</span>)</a></code></pre></div>
 <p><img src="fredr_files/figure-html/fredr_series_observations3-1.png" width="672"></p>
-<p>It is relatively straightforward to convert <code>tibbles</code> returned by <code>fredr</code> into other time series objects. For example,</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">library</span>(xts)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2">gnpca &lt;-<span class="st"> </span><span class="kw"><a href="../reference/fredr.html">fredr_series_observations</a></span>(<span class="dt">series_id =</span> <span class="st">"GNPCA"</span>, <span class="dt">units =</span> <span class="st">"log"</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">GNPCA =</span> GNPCA <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(GNPCA)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(GNPCA))</a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6">gnpca_xts &lt;-<span class="st"> </span>xts<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/xts/topics/xts">xts</a></span>(</a>
-<a class="sourceLine" id="cb7-7" data-line-number="7">  <span class="dt">x =</span> gnpca<span class="op">$</span>GNPCA,</a>
-<a class="sourceLine" id="cb7-8" data-line-number="8">  <span class="dt">order.by =</span> gnpca<span class="op">$</span>date</a>
-<a class="sourceLine" id="cb7-9" data-line-number="9">)</a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb7-11" data-line-number="11">gnpca_xts <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="st">  </span><span class="kw">StructTS</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="st">  </span><span class="kw">residuals</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="st">  </span><span class="kw">acf</span>(., <span class="dt">main =</span> <span class="st">"ACF for First Differenced real US GNP, log"</span>)</a></code></pre></div>
+<p>Since <code><a href="../reference/fredr.html">fredr()</a></code> returns a <code>tibble</code> with a series ID, mapping <code><a href="../reference/fredr.html">fredr()</a></code> over vector of seried IDs can be achieved as follows:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">map_dfr</span>(<span class="kw">c</span>(<span class="st">"UNRATE"</span>, <span class="st">"FEDFUNDS"</span>), fredr) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span><span class="kw">ggplot</span>(<span class="dt">data =</span> ., <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> date, <span class="dt">y =</span> value, <span class="dt">color =</span> series_id)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="st">    </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">"Observation Date"</span>, <span class="dt">y =</span> <span class="st">"Rate"</span>, <span class="dt">color =</span> <span class="st">"Series"</span>)</a></code></pre></div>
 <p><img src="fredr_files/figure-html/fredr_series_observations4-1.png" width="672"></p>
+<p>Using <code><a href="http://www.rdocumentation.org/packages/purrr/topics/map2">purrr::pmap_dfr()</a></code> allows you to use varying optional parameters as well</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">params &lt;-<span class="st"> </span><span class="kw">list</span>(</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">  <span class="dt">series_id =</span> <span class="kw">c</span>(<span class="st">"UNRATE"</span>, <span class="st">"OILPRICE"</span>),</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">  <span class="dt">frequency =</span> <span class="kw">c</span>(<span class="st">"m"</span>, <span class="st">"q"</span>)</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="kw">pmap_dfr</span>(</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">  <span class="dt">.l =</span> params,</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8">  <span class="dt">.f =</span> <span class="op">~</span><span class="st"> </span><span class="kw"><a href="../reference/fredr.html">fredr</a></span>(<span class="dt">series_id =</span> .x, <span class="dt">frequency =</span> .y)</a>
+<a class="sourceLine" id="cb8-9" data-line-number="9">)</a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt; # A tibble: 1,117 x 3</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;    date       series_id value</span></a>
+<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt;  1 1948-01-01 UNRATE      3.4</span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt;  2 1948-02-01 UNRATE      3.8</span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt;  3 1948-03-01 UNRATE      4  </span></a>
+<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt;  4 1948-04-01 UNRATE      3.9</span></a>
+<a class="sourceLine" id="cb8-17" data-line-number="17"><span class="co">#&gt;  5 1948-05-01 UNRATE      3.5</span></a>
+<a class="sourceLine" id="cb8-18" data-line-number="18"><span class="co">#&gt;  6 1948-06-01 UNRATE      3.6</span></a>
+<a class="sourceLine" id="cb8-19" data-line-number="19"><span class="co">#&gt;  7 1948-07-01 UNRATE      3.6</span></a>
+<a class="sourceLine" id="cb8-20" data-line-number="20"><span class="co">#&gt;  8 1948-08-01 UNRATE      3.9</span></a>
+<a class="sourceLine" id="cb8-21" data-line-number="21"><span class="co">#&gt;  9 1948-09-01 UNRATE      3.8</span></a>
+<a class="sourceLine" id="cb8-22" data-line-number="22"><span class="co">#&gt; 10 1948-10-01 UNRATE      3.7</span></a>
+<a class="sourceLine" id="cb8-23" data-line-number="23"><span class="co">#&gt; # ... with 1,107 more rows</span></a></code></pre></div>
+<p>It is relatively straightforward to convert <code>tibbles</code> returned by <code>fredr</code> into other time series objects. For example,</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">library</span>(xts)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">gnpca &lt;-<span class="st"> </span><span class="kw"><a href="../reference/fredr.html">fredr</a></span>(<span class="dt">series_id =</span> <span class="st">"GNPCA"</span>, <span class="dt">units =</span> <span class="st">"log"</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">value =</span> value <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(value)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(value))</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6">gnpca_xts &lt;-<span class="st"> </span>xts<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/xts/topics/xts">xts</a></span>(</a>
+<a class="sourceLine" id="cb9-7" data-line-number="7">  <span class="dt">x =</span> gnpca<span class="op">$</span>value,</a>
+<a class="sourceLine" id="cb9-8" data-line-number="8">  <span class="dt">order.by =</span> gnpca<span class="op">$</span>date</a>
+<a class="sourceLine" id="cb9-9" data-line-number="9">)</a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11">gnpca_xts <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="st">  </span><span class="kw">StructTS</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="st">  </span><span class="kw">residuals</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="st">  </span><span class="kw">acf</span>(., <span class="dt">main =</span> <span class="st">"ACF for First Differenced real US GNP, log"</span>)</a></code></pre></div>
+<p><img src="fredr_files/figure-html/fredr_series_observations6-1.png" width="672"></p>
 </div>
-<div id="search-for-a-series" class="section level3">
-<h3 class="hasAnchor">
-<a href="#search-for-a-series" class="anchor"></a>Search for a series</h3>
-<p>Search for FRED series.</p>
-<ul>
-<li>
-<p>Use <code>fredr_search</code> to search for a series by text in the series description</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search.html">fredr_series_search_text</a></span>(<span class="st">"unemployment"</span>, <span class="dt">limit =</span> 100L)</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="co">#&gt; # A tibble: 100 x 16</span></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="co">#&gt;    id        realtime_start realtime_end title            observation_sta…</span></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;     &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;            &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="co">#&gt;  1 UNRATE    2018-07-16     2018-07-16   Civilian Unempl… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#&gt;  2 UNRATENSA 2018-07-16     2018-07-16   Civilian Unempl… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt;  3 NROU      2018-07-16     2018-07-16   Natural Rate of… 1949-01-01      </span></a>
-<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt;  4 UNEMPLOY  2018-07-16     2018-07-16   Unemployment Le… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt;  5 M0892AUS… 2018-07-16     2018-07-16   Unemployment Ra… 1929-04-01      </span></a>
-<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt;  6 Q0892BUS… 2018-07-16     2018-07-16   Unemployment Ra… 1940-04-01      </span></a>
-<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;  7 LNS14000… 2018-07-16     2018-07-16   Unemployment Ra… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt;  8 M0892BUS… 2018-07-16     2018-07-16   Unemployment Ra… 1940-01-01      </span></a>
-<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt;  9 M0892CUS… 2018-07-16     2018-07-16   Unemployment Ra… 1947-01-01      </span></a>
-<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt; 10 LNU04000… 2018-07-16     2018-07-16   Unemployment Ra… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt; # ... with 90 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb8-17" data-line-number="17"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb8-18" data-line-number="18"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
-<a class="sourceLine" id="cb8-19" data-line-number="19"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
-</li>
-<li>
-<p>Use <code>fredr_search_id</code> to search for a series by the ID of the series</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search.html">fredr_series_search_id</a></span>(<span class="st">"UNRATE"</span>, <span class="dt">limit =</span> 100L)</a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co">#&gt; # A tibble: 16 x 16</span></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#&gt;    id     realtime_start realtime_end title               observation_sta…</span></a>
-<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;  1 UNRATE 2018-07-16     2018-07-16   Civilian Unemploym… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;  2 UNRAT… 2018-07-16     2018-07-16   FOMC Summary of Ec… 2018-01-01      </span></a>
-<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  3 UNRAT… 2018-07-16     2018-07-16   Longer Run FOMC Su… 2009-02-18      </span></a>
-<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  4 UNRAT… 2018-07-16     2018-07-16   FOMC Summary of Ec… 2018-01-01      </span></a>
-<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  5 UNRAT… 2018-07-16     2018-07-16   Longer Run FOMC Su… 2009-02-18      </span></a>
-<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  6 UNRAT… 2018-07-16     2018-07-16   FOMC Summary of Ec… 2018-01-01      </span></a>
-<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  7 UNRAT… 2018-07-16     2018-07-16   Longer Run FOMC Su… 2009-02-18      </span></a>
-<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  8 UNRAT… 2018-07-16     2018-07-16   FOMC Summary of Ec… 2018-01-01      </span></a>
-<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  9 UNRAT… 2018-07-16     2018-07-16   Longer Run FOMC Su… 2015-06-17      </span></a>
-<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt; 10 UNRAT… 2018-07-16     2018-07-16   Civilian Unemploym… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb9-15" data-line-number="15"><span class="co">#&gt; 11 UNRAT… 2018-07-16     2018-07-16   FOMC Summary of Ec… 2018-01-01      </span></a>
-<a class="sourceLine" id="cb9-16" data-line-number="16"><span class="co">#&gt; 12 UNRAT… 2018-07-16     2018-07-16   Longer Run FOMC Su… 2009-02-18      </span></a>
-<a class="sourceLine" id="cb9-17" data-line-number="17"><span class="co">#&gt; 13 UNRAT… 2018-07-16     2018-07-16   FOMC Summary of Ec… 2018-01-01      </span></a>
-<a class="sourceLine" id="cb9-18" data-line-number="18"><span class="co">#&gt; 14 UNRAT… 2018-07-16     2018-07-16   Longer Run FOMC Su… 2009-02-18      </span></a>
-<a class="sourceLine" id="cb9-19" data-line-number="19"><span class="co">#&gt; 15 UNRAT… 2018-07-16     2018-07-16   FOMC Summary of Ec… 2018-01-01      </span></a>
-<a class="sourceLine" id="cb9-20" data-line-number="20"><span class="co">#&gt; 16 UNRAT… 2018-07-16     2018-07-16   Longer Run FOMC Su… 2009-02-18      </span></a>
-<a class="sourceLine" id="cb9-21" data-line-number="21"><span class="co">#&gt; # ... with 11 more variables: observation_end &lt;chr&gt;, frequency &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb9-22" data-line-number="22"><span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb9-23" data-line-number="23"><span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb9-24" data-line-number="24"><span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;,</span></a>
-<a class="sourceLine" id="cb9-25" data-line-number="25"><span class="co">#&gt; #   notes &lt;chr&gt;</span></a></code></pre></div>
-</li>
-<li>
-<p>Use <code>fredr_search_tags</code> to search for series tags</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags</a></span>(<span class="st">"unemployment"</span>, <span class="dt">limit =</span> 100L)</a>
-<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="co">#&gt; # A tibble: 100 x 6</span></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#&gt;    name        group_id notes created              popularity series_count</span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;                     &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="co">#&gt;  1 1-month     gen      ""    2012-02-27 10:18:19…         40            1</span></a>
-<a class="sourceLine" id="cb10-6" data-line-number="6"><span class="co">#&gt;  2 3-month     gen      ""    2012-02-27 10:18:19…         54            1</span></a>
-<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">#&gt;  3 5-year      gen      ""    2012-02-27 10:18:19…         44            1</span></a>
-<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#&gt;  4 afghanistan geo      ""    2012-02-27 10:18:19…         21            1</span></a>
-<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#&gt;  5 albania     geo      ""    2012-02-27 10:18:19…         17            1</span></a>
-<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt;  6 algeria     geo      ""    2012-02-27 10:18:19…         21            1</span></a>
-<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt;  7 all items   gen      ""    2012-02-27 10:18:19…         59            1</span></a>
-<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#&gt;  8 angola      geo      ""    2012-08-29 14:33:53…         19            1</span></a>
-<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#&gt;  9 arab world  geo      ""    2016-06-15 09:56:27…        -10            1</span></a>
-<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#&gt; 10 argentina   geo      ""    2012-02-27 10:18:19…         41            1</span></a>
-<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#&gt; # ... with 90 more rows</span></a></code></pre></div>
-</li>
-<li>
-<p>Use <code>fredr_search_rel_tags</code> to search for series tags related to a given tag. For example, to search for tags related to the tag “usa” in which the series text matches “gnp”, use the following:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search_related_tags.html">fredr_series_search_related_tags</a></span>(<span class="st">"gnp"</span>, <span class="st">"usa"</span>, <span class="dt">limit =</span> 30L)</a>
-<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="co">#&gt; # A tibble: 30 x 6</span></a>
-<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="co">#&gt;    name        group_id notes        created       popularity series_count</span></a>
-<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;              &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb11-5" data-line-number="5"><span class="co">#&gt;  1 capital     gen      ""           2012-02-27 1…         58            1</span></a>
-<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="co">#&gt;  2 consumption gen      ""           2012-02-27 1…         62            1</span></a>
-<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="co">#&gt;  3 corporate   gen      ""           2012-02-27 1…         64            1</span></a>
-<a class="sourceLine" id="cb11-8" data-line-number="8"><span class="co">#&gt;  4 federal     gen      ""           2012-02-27 1…         60            1</span></a>
-<a class="sourceLine" id="cb11-9" data-line-number="9"><span class="co">#&gt;  5 fixed       gen      ""           2012-02-27 1…         53            1</span></a>
-<a class="sourceLine" id="cb11-10" data-line-number="10"><span class="co">#&gt;  6 foreign     gen      ""           2012-02-27 1…         44            1</span></a>
-<a class="sourceLine" id="cb11-11" data-line-number="11"><span class="co">#&gt;  7 gni         gen      Gross Natio… 2013-03-27 0…         49            1</span></a>
-<a class="sourceLine" id="cb11-12" data-line-number="12"><span class="co">#&gt;  8 government  gen      ""           2012-02-27 1…         67            1</span></a>
-<a class="sourceLine" id="cb11-13" data-line-number="13"><span class="co">#&gt;  9 inflation   gen      ""           2012-06-08 1…         75            1</span></a>
-<a class="sourceLine" id="cb11-14" data-line-number="14"><span class="co">#&gt; 10 investment  gen      ""           2012-02-27 1…         57            1</span></a>
-<a class="sourceLine" id="cb11-15" data-line-number="15"><span class="co">#&gt; # ... with 20 more rows</span></a></code></pre></div>
-</li>
-</ul>
-<p>See <code>help(fredr_search)</code> for more details.</p>
-</div>
-</div>
-<div id="tags" class="section level2">
+<div id="endpoints" class="section level2">
 <h2 class="hasAnchor">
-<a href="#tags" class="anchor"></a>Tags</h2>
-<p>Series tags can be listed or searched for using <code>fredr_tags</code>. For tags matched by the specific request, returned objects will include information such as tag description, popularity, and the number of associated series. The following examples show how to use the various parameters of <code>fredr_tags</code> to</p>
+<a href="#endpoints" class="anchor"></a>Endpoints</h2>
+<p><code>fredr</code> implements functions for all FRED API endpoints. For usage examples for these functions, please consult the relevant vignette:</p>
 <ul>
-<li>
-<p>To list all tags, run <code>fredr_tags</code> without any parameters (note that the parameter <code>limit</code> defaults to 1000)</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>()</a>
-<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 6</span></a>
-<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="co">#&gt;    name                 group_id notes    created  popularity series_count</span></a>
-<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;                &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;         &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="co">#&gt;  1 nsa                  seas     Not Sea… 2012-02…        100       448104</span></a>
-<a class="sourceLine" id="cb12-6" data-line-number="6"><span class="co">#&gt;  2 usa                  geo      United … 2012-02…         99       368894</span></a>
-<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="co">#&gt;  3 annual               freq     ""       2012-02…         92       325473</span></a>
-<a class="sourceLine" id="cb12-8" data-line-number="8"><span class="co">#&gt;  4 county               geot     County … 2012-02…         77       181325</span></a>
-<a class="sourceLine" id="cb12-9" data-line-number="9"><span class="co">#&gt;  5 census               src      Census   2012-02…         79       179590</span></a>
-<a class="sourceLine" id="cb12-10" data-line-number="10"><span class="co">#&gt;  6 nation               geot     ""       2012-02…        100       174523</span></a>
-<a class="sourceLine" id="cb12-11" data-line-number="11"><span class="co">#&gt;  7 bls                  src      Bureau … 2012-02…         85       113265</span></a>
-<a class="sourceLine" id="cb12-12" data-line-number="12"><span class="co">#&gt;  8 monthly              freq     ""       2012-02…         92       100536</span></a>
-<a class="sourceLine" id="cb12-13" data-line-number="13"><span class="co">#&gt;  9 employment           gen      ""       2012-02…         68        93212</span></a>
-<a class="sourceLine" id="cb12-14" data-line-number="14"><span class="co">#&gt; 10 prosperity scorecard gen      ""       2017-01…         76        87532</span></a>
-<a class="sourceLine" id="cb12-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows</span></a></code></pre></div>
-</li>
-<li>
-<p>Return specific tags by tag name. You can specify multiple tags in a single string by delimiting with a semicolon:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(<span class="dt">tag_names =</span> <span class="st">"gdp;oecd"</span>)</a>
-<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="co">#&gt; # A tibble: 2 x 6</span></a>
-<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="co">#&gt;   name  group_id notes                created      popularity series_count</span></a>
-<a class="sourceLine" id="cb13-4" data-line-number="4"><span class="co">#&gt; * &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;                &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="co">#&gt; 1 oecd  src      Org. for Economic C… 2012-02-27 …         78        61500</span></a>
-<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="co">#&gt; 2 gdp   gen      Gross Domestic Prod… 2012-02-27 …         83        48660</span></a></code></pre></div>
-</li>
-<li>
-<p>Return tags for a given group ID</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(<span class="dt">tag_group_id =</span> <span class="st">"geo"</span>, <span class="dt">limit =</span> 50L)</a>
-<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="co">#&gt; # A tibble: 50 x 6</span></a>
-<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="co">#&gt;    name  group_id notes                    created popularity series_count</span></a>
-<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;                    &lt;chr&gt;        &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="co">#&gt;  1 usa   geo      United States of America 2012-0…         99       368894</span></a>
-<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="co">#&gt;  2 tx    geo      Texas                    2012-0…         56        22055</span></a>
-<a class="sourceLine" id="cb14-7" data-line-number="7"><span class="co">#&gt;  3 ga    geo      Georgia (U.S. state)     2012-0…         49        12150</span></a>
-<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co">#&gt;  4 ca    geo      California               2012-0…         60        11969</span></a>
-<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="co">#&gt;  5 va    geo      Virginia                 2012-0…         46        10421</span></a>
-<a class="sourceLine" id="cb14-10" data-line-number="10"><span class="co">#&gt;  6 il    geo      Illinois                 2012-0…         50         9927</span></a>
-<a class="sourceLine" id="cb14-11" data-line-number="11"><span class="co">#&gt;  7 ky    geo      Kentucky                 2012-0…         47         9514</span></a>
-<a class="sourceLine" id="cb14-12" data-line-number="12"><span class="co">#&gt;  8 mo    geo      Missouri                 2012-0…         48         9433</span></a>
-<a class="sourceLine" id="cb14-13" data-line-number="13"><span class="co">#&gt;  9 nc    geo      North Carolina           2012-0…         48         9254</span></a>
-<a class="sourceLine" id="cb14-14" data-line-number="14"><span class="co">#&gt; 10 in    geo      Indiana                  2012-0…         45         9148</span></a>
-<a class="sourceLine" id="cb14-15" data-line-number="15"><span class="co">#&gt; # ... with 40 more rows</span></a></code></pre></div>
-</li>
-<li>
-<p>Search for tags by text</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(<span class="dt">search_text =</span> <span class="st">"unemployment"</span>)</a>
-<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="co">#&gt; # A tibble: 2 x 6</span></a>
-<a class="sourceLine" id="cb15-3" data-line-number="3"><span class="co">#&gt;   name         group_id notes           created    popularity series_count</span></a>
-<a class="sourceLine" id="cb15-4" data-line-number="4"><span class="co">#&gt; * &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;           &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb15-5" data-line-number="5"><span class="co">#&gt; 1 unemployment gen      ""              2012-02-2…         75        23892</span></a>
-<a class="sourceLine" id="cb15-6" data-line-number="6"><span class="co">#&gt; 2 nairu        gen      Non-Accelerati… 2012-08-1…         17            2</span></a></code></pre></div>
-</li>
+<li><a href="http://sboysel.github.io/fredr/articles/fredr-categories.html">Categories</a></li>
+<li><a href="http://sboysel.github.io/fredr/articles/fredr-releases.html">Releases</a></li>
+<li><a href="http://sboysel.github.io/fredr/articles/fredr-series.html">Series</a></li>
+<li><a href="http://sboysel.github.io/fredr/articles/fredr-sources.html">Sources</a></li>
+<li><a href="http://sboysel.github.io/fredr/articles/fredr-tags.html">Tags</a></li>
 </ul>
+<p>Finally, <code>fredr</code> is packaged with a list of possible endpoints in the <code>tibble</code> named <code>fredr_endpoints</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">fredr_endpoints</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="co">#&gt; # A tibble: 31 x 3</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#&gt;    endpoint                   type       note                             </span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="co">#&gt;    &lt;chr&gt;                      &lt;chr&gt;      &lt;chr&gt;                            </span></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="co">#&gt;  1 fred/category              Categories Get a category                   </span></a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"><span class="co">#&gt;  2 fred/category/children     Categories Get the child categories for a s…</span></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">#&gt;  3 fred/category/related      Categories Get the related categories for a…</span></a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#&gt;  4 fred/category/series       Categories Get the series in a category     </span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#&gt;  5 fred/category/tags         Categories Get the tags for a category      </span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt;  6 fred/category/related_tags Categories Get the related tags for a categ…</span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt;  7 fred/releases              Releases   Get all releases of economic data</span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#&gt;  8 fred/releases/dates        Releases   Get release dates for all releas…</span></a>
+<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#&gt;  9 fred/release               Releases   Get a release of economic data   </span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#&gt; 10 fred/release/dates         Releases   Get release dates for a release …</span></a>
+<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#&gt; # ... with 21 more rows</span></a></code></pre></div>
 </div>
 <div id="view-fred-api-documentation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#view-fred-api-documentation" class="anchor"></a>View FRED API documentation</h2>
-<p>To get the most out of the native features of the FRED API, it is highly recommended to review the <a href="https://research.stlouisfed.org/docs/api/fred/">API endpoint documentation</a>. Within an R session, you can quickly access the web documentation for any endpoint with the convenience function <code>fredr_docs</code>. The following example will open a web browser to the FRED API documentation page on <code>series/observation</code> endpoint.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_docs.html">fredr_docs</a></span>(<span class="dt">endpoint =</span> <span class="st">"series/observations"</span>)</a></code></pre></div>
+<p>To get the most out of the native features of the FRED API, it is highly recommended to review the <a href="https://research.stlouisfed.org/docs/api/fred/">API endpoint documentation</a>. Within an R session, you can quickly access the web documentation for any endpoint with the convenience function <code>fredr_docs</code>. The following example will open a web browser to the FRED API documentation page on the <code>series/observations</code> endpoint.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_docs.html">fredr_docs</a></span>(<span class="dt">endpoint =</span> <span class="st">"series/observations"</span>)</a></code></pre></div>
 <p>You may also use the <code>params</code> option for <code>fredr_docs</code> to go straight to the endpoint’s Parameters section.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_docs.html">fredr_docs</a></span>(<span class="dt">endpoint =</span> <span class="st">"category/related_tags"</span>, <span class="dt">params =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<p><code>fredr</code> is packaged with a list of possible endpoints in the data frame <code>fredr_endpoints</code></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">fredr_endpoints</a>
-<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="co">#&gt; # A tibble: 31 x 3</span></a>
-<a class="sourceLine" id="cb18-3" data-line-number="3"><span class="co">#&gt;    endpoint                   type       note                             </span></a>
-<a class="sourceLine" id="cb18-4" data-line-number="4"><span class="co">#&gt;    &lt;chr&gt;                      &lt;chr&gt;      &lt;chr&gt;                            </span></a>
-<a class="sourceLine" id="cb18-5" data-line-number="5"><span class="co">#&gt;  1 fred/category              Categories Get a category                   </span></a>
-<a class="sourceLine" id="cb18-6" data-line-number="6"><span class="co">#&gt;  2 fred/category/children     Categories Get the child categories for a s…</span></a>
-<a class="sourceLine" id="cb18-7" data-line-number="7"><span class="co">#&gt;  3 fred/category/related      Categories Get the related categories for a…</span></a>
-<a class="sourceLine" id="cb18-8" data-line-number="8"><span class="co">#&gt;  4 fred/category/series       Categories Get the series in a category     </span></a>
-<a class="sourceLine" id="cb18-9" data-line-number="9"><span class="co">#&gt;  5 fred/category/tags         Categories Get the tags for a category      </span></a>
-<a class="sourceLine" id="cb18-10" data-line-number="10"><span class="co">#&gt;  6 fred/category/related_tags Categories Get the related tags for a categ…</span></a>
-<a class="sourceLine" id="cb18-11" data-line-number="11"><span class="co">#&gt;  7 fred/releases              Releases   Get all releases of economic data</span></a>
-<a class="sourceLine" id="cb18-12" data-line-number="12"><span class="co">#&gt;  8 fred/releases/dates        Releases   Get release dates for all releas…</span></a>
-<a class="sourceLine" id="cb18-13" data-line-number="13"><span class="co">#&gt;  9 fred/release               Releases   Get a release of economic data   </span></a>
-<a class="sourceLine" id="cb18-14" data-line-number="14"><span class="co">#&gt; 10 fred/release/dates         Releases   Get release dates for a release …</span></a>
-<a class="sourceLine" id="cb18-15" data-line-number="15"><span class="co">#&gt; # ... with 21 more rows</span></a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_docs.html">fredr_docs</a></span>(<span class="dt">endpoint =</span> <span class="st">"category/related_tags"</span>, <span class="dt">params =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 </div>
 <div id="general-queries" class="section level2">
 <h2 class="hasAnchor">
 <a href="#general-queries" class="anchor"></a>General queries</h2>
-<p>You can also use the low-level function <code>fredr</code> to run more general queries against <em>any</em> <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API endpoint</a> (e.g. Categories, Series, Sources, Releases, Tags). This is also useful to run complex queries or .</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_request.html">fredr_request</a></span>(<span class="dt">endpoint =</span> <span class="st">"tags/series"</span>, <span class="dt">tag_names =</span> <span class="st">"population;south africa"</span>)</a>
-<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="co">#&gt; # A tibble: 59 x 16</span></a>
-<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="co">#&gt;    id       realtime_start realtime_end title             observation_sta…</span></a>
-<a class="sourceLine" id="cb19-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb19-5" data-line-number="5"><span class="co">#&gt;  1 LFWA24T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-6" data-line-number="6"><span class="co">#&gt;  2 LFWA24T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-7" data-line-number="7"><span class="co">#&gt;  3 LFWA24T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-8" data-line-number="8"><span class="co">#&gt;  4 LFWA24T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-9" data-line-number="9"><span class="co">#&gt;  5 LFWA25T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-10" data-line-number="10"><span class="co">#&gt;  6 LFWA25T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-11" data-line-number="11"><span class="co">#&gt;  7 LFWA25T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-12" data-line-number="12"><span class="co">#&gt;  8 LFWA25T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-13" data-line-number="13"><span class="co">#&gt;  9 LFWA55T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-14" data-line-number="14"><span class="co">#&gt; 10 LFWA55T… 2018-07-17     2018-07-17   Working Age Popu… 2008-01-01      </span></a>
-<a class="sourceLine" id="cb19-15" data-line-number="15"><span class="co">#&gt; # ... with 49 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb19-16" data-line-number="16"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb19-17" data-line-number="17"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb19-18" data-line-number="18"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
-<a class="sourceLine" id="cb19-19" data-line-number="19"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
-<p>By default, <code>fredr</code> (and therefore all <code>fredr_*</code> functions) return a <code>tibble</code>. Set <code>to_frame</code> to <code>FALSE</code> to return a generic <code>response</code> object from a <code><a href="http://www.rdocumentation.org/packages/httr/topics/GET">httr::GET</a></code> request that can be further parsed with <code><a href="http://www.rdocumentation.org/packages/httr/topics/content">httr::content</a></code></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">library</span>(httr)</a>
-<a class="sourceLine" id="cb20-2" data-line-number="2">resp &lt;-<span class="st"> </span><span class="kw"><a href="../reference/fredr_request.html">fredr_request</a></span>(<span class="dt">endpoint =</span> <span class="st">"series/observations"</span>, <span class="dt">series_id =</span> <span class="st">"UNRATE"</span>, <span class="dt">to_frame =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb20-3" data-line-number="3">resp</a>
-<a class="sourceLine" id="cb20-4" data-line-number="4"><span class="co">#&gt; Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&amp;api_key=d3ef3490ef7270cf903d07141e9e7db7&amp;file_type=json]</span></a>
-<a class="sourceLine" id="cb20-5" data-line-number="5"><span class="co">#&gt;   Date: 2018-07-18 01:38</span></a>
-<a class="sourceLine" id="cb20-6" data-line-number="6"><span class="co">#&gt;   Status: 200</span></a>
-<a class="sourceLine" id="cb20-7" data-line-number="7"><span class="co">#&gt;   Content-Type: application/json; charset=UTF-8</span></a>
-<a class="sourceLine" id="cb20-8" data-line-number="8"><span class="co">#&gt;   Size: 79.8 kB</span></a></code></pre></div>
+<p>You can also use the low-level function <code><a href="../reference/fredr_request.html">fredr_request()</a></code> to run more general queries against <em>any</em> <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API endpoint</a> (e.g. Categories, Series, Sources, Releases, Tags). The required parameter is <code>endpoint</code> (see <code>fredr_endpoints</code> for a list of valid endpoints) and then all API parameters are passed through as named arguments. For example:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_request.html">fredr_request</a></span>(<span class="dt">endpoint =</span> <span class="st">"tags/series"</span>, <span class="dt">tag_names =</span> <span class="st">"population;south africa"</span>, <span class="dt">limit =</span> 25L)</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="co">#&gt; # A tibble: 25 x 16</span></a>
+<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="co">#&gt;    id       realtime_start realtime_end title             observation_sta…</span></a>
+<a class="sourceLine" id="cb13-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;           </span></a>
+<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="co">#&gt;  1 LFWA24T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="co">#&gt;  2 LFWA24T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-7" data-line-number="7"><span class="co">#&gt;  3 LFWA24T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-8" data-line-number="8"><span class="co">#&gt;  4 LFWA24T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-9" data-line-number="9"><span class="co">#&gt;  5 LFWA25T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-10" data-line-number="10"><span class="co">#&gt;  6 LFWA25T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-11" data-line-number="11"><span class="co">#&gt;  7 LFWA25T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-12" data-line-number="12"><span class="co">#&gt;  8 LFWA25T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-13" data-line-number="13"><span class="co">#&gt;  9 LFWA55T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-14" data-line-number="14"><span class="co">#&gt; 10 LFWA55T… 2018-07-18     2018-07-18   Working Age Popu… 2008-01-01      </span></a>
+<a class="sourceLine" id="cb13-15" data-line-number="15"><span class="co">#&gt; # ... with 15 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb13-16" data-line-number="16"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb13-17" data-line-number="17"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb13-18" data-line-number="18"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb13-19" data-line-number="19"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
+<p>By default, <code><a href="../reference/fredr_request.html">fredr_request()</a></code> will return a <code>tibble</code>. Set <code>to_frame</code> to <code>FALSE</code> to return a generic <code>response</code> object from a <code><a href="http://www.rdocumentation.org/packages/httr/topics/GET">httr::GET()</a></code> request that can be further parsed with <code><a href="http://www.rdocumentation.org/packages/httr/topics/content">httr::content()</a></code>:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">library</span>(httr)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw"><a href="../reference/fredr_request.html">fredr_request</a></span>(</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">  <span class="dt">endpoint =</span> <span class="st">"series/observations"</span>,</a>
+<a class="sourceLine" id="cb14-4" data-line-number="4">  <span class="dt">series_id =</span> <span class="st">"UNRATE"</span>,</a>
+<a class="sourceLine" id="cb14-5" data-line-number="5">  <span class="dt">to_frame =</span> <span class="ot">FALSE</span></a>
+<a class="sourceLine" id="cb14-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb14-7" data-line-number="7"><span class="co">#&gt; Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&amp;api_key=d3ef3490ef7270cf903d07141e9e7db7&amp;file_type=json]</span></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co">#&gt;   Date: 2018-07-18 20:28</span></a>
+<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="co">#&gt;   Status: 200</span></a>
+<a class="sourceLine" id="cb14-10" data-line-number="10"><span class="co">#&gt;   Content-Type: application/json; charset=UTF-8</span></a>
+<a class="sourceLine" id="cb14-11" data-line-number="11"><span class="co">#&gt;   Size: 79.8 kB</span></a></code></pre></div>
 </div>
 </div>
   </div>
@@ -413,8 +324,8 @@
 <a href="#introduction">Introduction</a><ul class="nav nav-pills nav-stacked">
 <li><a href="#installation">Installation</a></li>
       <li><a href="#authentication">Authentication</a></li>
-      <li><a href="#series">Series</a></li>
-      <li><a href="#tags">Tags</a></li>
+      <li><a href="#retrieve-series-observations">Retrieve series observations</a></li>
+      <li><a href="#endpoints">Endpoints</a></li>
       <li><a href="#view-fred-api-documentation">View FRED API documentation</a></li>
       <li><a href="#general-queries">General queries</a></li>
       </ul>

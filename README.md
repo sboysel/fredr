@@ -2,7 +2,7 @@
 
 [![Travis
 branch](https://img.shields.io/travis/sboysel/fredr/master.svg?style=flat-square)](https://travis-ci.org/sboysel/fredr)
-[![AppVeyor Build Status](https://ci.appveyor.com/project/sboysel/fredr/branch/master)](https://ci.appveyor.com/project/sboysel/fredr/branch/master)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/sboysel/fredr?branch=master&svg=true)](https://ci.appveyor.com/api/projects/status/github/sboysel/fredr?branch=master&svg=true)
 [![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg?style=flat-square)](https://codecov.io/github/sboysel/fredr)
 [![GitHub
 release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-square)](https://github.com/sboysel/fredr/releases)

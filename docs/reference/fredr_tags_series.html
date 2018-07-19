@@ -80,6 +80,30 @@ exclude_tag_names parameter." />
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fredr-categories.html">FRED Categories</a>
+    </li>
+    <li>
+      <a href="../articles/fredr-releases.html">FRED Releases</a>
+    </li>
+    <li>
+      <a href="../articles/fredr-series.html">FRED Series</a>
+    </li>
+    <li>
+      <a href="../articles/fredr-sources.html">FRED Sources</a>
+    </li>
+    <li>
+      <a href="../articles/fredr-tags.html">FRED Tags</a>
+    </li>
+  </ul>
+</li>
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
@@ -214,7 +238,8 @@ and their descriptions.</p>
 <span class='fu'>fredr_tags_series</span>(
    <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"gdp"</span>,
    <span class='kw'>exclude_tag_names</span> <span class='kw'>=</span> <span class='st'>"quarterly"</span>,
-   <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>
+   <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>,
+   <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>100L</span>
 )
 <span class='co'># }</span></pre>
   </div>

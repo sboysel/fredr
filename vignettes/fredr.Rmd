@@ -1,5 +1,5 @@
 ---
-title: "Using fredr"
+title: "Getting started with fredr"
 author: "Sam Boysel"
 date: "`r Sys.Date()`"
 output: 
@@ -7,7 +7,7 @@ output:
     toc: true
     toc_depth: 3
 vignette: >
-  %\VignetteIndexEntry{Using fredr}
+  %\VignetteIndexEntry{Getting started with fredr}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -27,16 +27,16 @@ options(digits = 4)
 
 # Introduction
 
-`fredr` interacts with the [Federal Reserve Economic
-Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API, provided by the Federal
-Reserve Bank of St. Louis.  Essentially a simple wrapper of
-[`httr`](https://github.com/r-lib/httr) and the FRED API itself, `fredr` is
-designed with simplicity and flexibility in mind.  The core functions are
+`fredr` provides a complete set of `R` bindings to the [Federal Reserve Economic
+Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API for, provided by 
+the Federal Reserve Bank of St. Louis.  The functions allow the user to search 
+for and fetch time series observations and associated metadata within the FRED 
+database.  The core functions are
 
 - `fredr_set_key()` - Set the required FRED API key for the session.
-- `fredr_series_observations()` - Fetch a FRED series.
+- `fredr()` or `fredr_series_observations()` - Fetch a FRED series.
 - `fredr_series_search_text()` - Search for a FRED series by text.
-- `fredr()` - Send a general request to the FRED API.
+- `fredr_request()` - Send a general request to the FRED API.
 
 Objects are returned as `tibbles`.  The user is strongly encouraged to read the 
 full [FRED API](https://research.stlouisfed.org/docs/api/fred/) documentation to 
@@ -61,7 +61,7 @@ library(fredr)
 
 To use `fredr` and the FRED API in general, you must first [obtain a FRED API
 key](https://research.stlouisfed.org/docs/api/api_key.html).  It is also
-recommended to reveiw the [FRED API Terms of
+recommended to review the [FRED API Terms of
 Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).  Once you've obtained an API key, you can set the key as an environment variable using `fredr_set_key`
 
 ```{r fredr_set_key, eval=FALSE}
@@ -70,14 +70,12 @@ fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
 
 where "abcdefghijklmnopqrstuvwxyz123456" is replaced with the actual key you obtain from FRED.  This will set the key for the current session.  You can persistently set the key by appending the line `FRED_API_KEY=abcdefghijklmnopqrstuvwxyz123456` to an `.Renviron` file in the working directory.  This can be done using a text editor or by running `usethis::edit_r_environ`.  If you edit the `.Renviron` file, remember to either restart the session or run `readRenviron(".Renviron")` for the changes to take effect. 
 
-## Series
+## Retrieve series observations
 
-### Retrieve series
-
-`fredr_series_observations` retrieves series observations (i.e. the actual time series data) for a specified FRED series ID.  The function returns a `tibble` with 2 columns (observation date and value).
+The `fredr()` function (an alias for `fredr_series_observations()`) retrieves series observations (i.e. the actual time series data) for a specified FRED series ID.  The function returns a `tibble` with 3 columns (observation date, series ID, and value).
 
 ```{r fredr_series_observations, message=FALSE, warning=FALSE}
-fredr_series_observations(
+fredr(
   series_id = "UNRATE",
   observation_start = as.Date("1990-01-01")
 )
@@ -104,21 +102,46 @@ fredr_series_search_text(
   sort_order = "desc",
   limit = 1) %>%
   pull(id) %>%
-  fredr_series_observations(series_id = .) %>%
-  ggplot(data = ., mapping = aes(x = date, y = FEDFUNDS)) +
-    geom_line()
+  fredr(series_id = .) %>%
+  ggplot(data = ., mapping = aes(x = date, y = value, color = series_id)) +
+    geom_line() +
+    labs(x = "Observation Date", y = "Rate", color = "Series")
+```
+
+Since `fredr()` returns a `tibble` with a series ID, mapping `fredr()` over vector
+of seried IDs can be achieved as follows:
+
+```{r fredr_series_observations4, message=FALSE, warning=FALSE}
+map_dfr(c("UNRATE", "FEDFUNDS"), fredr) %>%
+  ggplot(data = ., mapping = aes(x = date, y = value, color = series_id)) +
+    geom_line() +
+    labs(x = "Observation Date", y = "Rate", color = "Series")
+```
+
+Using `purrr::pmap_dfr()` allows you to use varying optional parameters as well
+
+```{r fredr_series_observations5, message=FALSE, warning=FALSE}
+params <- list(
+  series_id = c("UNRATE", "OILPRICE"),
+  frequency = c("m", "q")
+)
+
+pmap_dfr(
+  .l = params,
+  .f = ~ fredr(series_id = .x, frequency = .y)
+)
 ```
 
 It is relatively straightforward to convert `tibbles` returned by `fredr` into other time series objects.  For example,
 
-```{r fredr_series_observations4, message=FALSE, warning=FALSE}
+```{r fredr_series_observations6, message=FALSE, warning=FALSE}
 library(xts)
-gnpca <- fredr_series_observations(series_id = "GNPCA", units = "log") %>%
-  mutate(GNPCA = GNPCA - lag(GNPCA)) %>%
-  filter(!is.na(GNPCA))
+gnpca <- fredr(series_id = "GNPCA", units = "log") %>%
+  mutate(value = value - lag(value)) %>%
+  filter(!is.na(value))
 
 gnpca_xts <- xts::xts(
-  x = gnpca$GNPCA,
+  x = gnpca$value,
   order.by = gnpca$date
 )
 
@@ -128,54 +151,27 @@ gnpca_xts %>%
   acf(., main = "ACF for First Differenced real US GNP, log")
 ```
 
-### Search for a series
+## Endpoints
 
-Search for FRED series.
+`fredr` implements functions for all FRED API endpoints.  For usage examples for these functions, please consult the relevant vignette:
 
-- Use `fredr_search` to search for a series by text in the series description
-    ```{r fredr_search, message=FALSE, warning=FALSE}
-    fredr_series_search_text("unemployment", limit = 100L)
-    ```
-- Use `fredr_search_id` to search for a series by the ID of the series
-    ```{r fredr_search_id, message=FALSE, warning=FALSE}
-    fredr_series_search_id("UNRATE", limit = 100L)
-    ```
-- Use `fredr_search_tags` to search for series tags
-    ```{r fredr_search_tags, message=FALSE, warning=FALSE}
-    fredr_series_search_tags("unemployment", limit = 100L)
-    ```
-- Use `fredr_search_rel_tags` to search for series tags related to a given tag.  For example, to search for tags related to the tag "usa" in which the series text matches "gnp", use the following:
-    ```{r fredr_search_rel_tags, message=FALSE, warning=FALSE}
-    fredr_series_search_related_tags("gnp", "usa", limit = 30L)
-    ```
-    
-See `help(fredr_search)` for more details.
+- [Categories](http://sboysel.github.io/fredr/articles/fredr-categories.html)
+- [Releases](http://sboysel.github.io/fredr/articles/fredr-releases.html)
+- [Series](http://sboysel.github.io/fredr/articles/fredr-series.html)
+- [Sources](http://sboysel.github.io/fredr/articles/fredr-sources.html)
+- [Tags](http://sboysel.github.io/fredr/articles/fredr-tags.html)
 
-## Tags
+Finally, `fredr` is packaged with a list of possible endpoints in the `tibble` named `fredr_endpoints`:
 
-Series tags can be listed or searched for using `fredr_tags`.  For tags matched by the specific request, returned objects will include information such as tag description, popularity, and the number of associated series.  The following examples show how to use the various parameters of `fredr_tags` to 
-
-- To list all tags, run `fredr_tags` without any parameters (note that the parameter `limit` defaults to 1000)
-    ```{r fredr_tags1, message=FALSE, warning=FALSE}
-    fredr_tags()
-    ```
-- Return specific tags by tag name.  You can specify multiple tags in a single string by delimiting with a semicolon:
-    ```{r fredr_tags2, message=FALSE, warning=FALSE}
-    fredr_tags(tag_names = "gdp;oecd")
-    ```
-- Return tags for a given group ID
-    ```{r fredr_tags3, message=FALSE, warning=FALSE}
-    fredr_tags(tag_group_id = "geo", limit = 50L)
-    ```
-- Search for tags by text
-    ```{r fredr_tags4, message=FALSE, warning=FALSE}
-    fredr_tags(search_text = "unemployment")
-    ```
+```{r fredr_endpoints1, width = 180}
+fredr_endpoints
+```
 
 ## View FRED API documentation
 
-To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://research.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation for any endpoint with the convenience function `fredr_docs`.  The following example will open a web browser to the FRED API documentation page on `series/observation` endpoint.
-```{r fredr_docs, message=FALSE, warning=FALSE, eval=FALSE}
+To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://research.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation for any endpoint with the convenience function `fredr_docs`.  The following example will open a web browser to the FRED API documentation page on the `series/observations` endpoint.
+
+```{r fredr_docs1, message=FALSE, warning=FALSE, eval=FALSE}
 fredr_docs(endpoint = "series/observations")
 ```
 
@@ -185,25 +181,24 @@ endpoint's Parameters section.
 fredr_docs(endpoint = "category/related_tags", params = TRUE)
 ```
 
-`fredr` is packaged with a list of possible endpoints in the data frame `fredr_endpoints`
-```{r fredr_docs3, message=FALSE, warning=FALSE, width = 180}
-fredr_endpoints
-```
-
 ## General queries
 
-You can also use the low-level function `fredr` to run more general queries
-against *any* [FRED API
-endpoint](https://research.stlouisfed.org/docs/api/fred/) (e.g. Categories,
-Series, Sources, Releases, Tags).  This is also useful to run complex queries or .
-```{r fredr_general}
-fredr_request(endpoint = "tags/series", tag_names = "population;south africa")
+You can also use the low-level function `fredr_request()` to run more general queries
+against *any* [FRED API endpoint](https://research.stlouisfed.org/docs/api/fred/) (e.g. Categories,
+Series, Sources, Releases, Tags).  The required parameter is `endpoint` (see `fredr_endpoints` for a list of valid endpoints) and then all API parameters are passed through as named arguments.  For example:
+
+```{r fredr_request1}
+fredr_request(endpoint = "tags/series", tag_names = "population;south africa", limit = 25L)
 ```
 
-By default, `fredr` (and therefore all `fredr_*` functions) return a `tibble`.  Set `to_frame` to `FALSE` to return a generic `response` object from a `httr::GET` request that can be further parsed with `httr::content`
-```{r fredr_general2}
+By default, `fredr_request()` will return a `tibble`.  Set `to_frame` to `FALSE` to return a generic `response` object from a `httr::GET()` request that can be further parsed with `httr::content()`:
+
+```{r fredr_request2}
 library(httr)
-resp <- fredr_request(endpoint = "series/observations", series_id = "UNRATE", to_frame = FALSE)
-resp
+fredr_request(
+  endpoint = "series/observations",
+  series_id = "UNRATE",
+  to_frame = FALSE
+)
 ```
 
