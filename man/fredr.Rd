@@ -133,6 +133,24 @@ fredr(
   aggregation_method = "avg",
   unit = "log"
 )
+
+# To retrieve values for multiple series, use purrr's map_dfr() function.
+library(tidyverse)
+map_dfr(c("UNRATE", "OILPRICE"), fredr)
+
+# Using pmap_dfr() allows you to use varying optional parameters as well
+params <- list(
+  series_id = c("UNRATE", "OILPRICE"),
+  frequency = c("m", "q")
+)
+
+pmap_dfr(
+  .l = params,
+  .f = ~ fredr(series_id = .x, frequency = .y)
+)
+
+
+
 }
 }
 \seealso{
