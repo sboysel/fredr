@@ -40,7 +40,14 @@ FRED series are assigned categories and tags attributes for organization and cla
 
 ## Retrieve observations
 
-The function `fredr()`, an alias for `fredr_series_observations()`, is the core function in `fredr` for fetching FRED data series.  See the [Get started](http://sboysel.github.io/fredr/articles/fredr.html) article and `fredr()` for usage examples.
+The function `fredr()`, an alias for `fredr_series_observations()`, is the core function in `fredr` for fetching FRED data series.  See the [Get started](http://sboysel.github.io/fredr/articles/fredr.html) article and `?fredr()` for many usage examples.
+
+```{r fredr_series_observations, message=FALSE, warning=FALSE}
+fredr(
+  series_id = "UNRATE",
+  observation_start = as.Date("1990-01-01")
+)
+```
 
 ## Search for FRED series
 
@@ -53,7 +60,7 @@ fredr_series_search_text(
 )
 ```
 
-Use `fredr_series_search_id()` to search for a series _by integer ID_ of the series.  The data returned is a `tibble` where each row represents series with an ID that matches the text specified by `search_text`.  For example, to search for series with an ID that matches "UNRATE":
+Use `fredr_series_search_id()` to search for a series _by character ID_ of the series.  The data returned is a `tibble` where each row represents series with an ID that matches the text specified by `search_text`.  For example, to search for series with an ID that matches "UNRATE":
 
 ```{r fredr_search_id1}
 fredr_series_search_id(
@@ -75,7 +82,7 @@ fredr_series_search_tags(
 
 ## Search for FRED series by related tags
 
-Use `fredr_search_related_tags()` to search for series tags related to a given tag.  The data returned is a `tibble` where each row represents a tag matching the text in `series_search_text` and related tags specified by `tag_names`.  For example, to search for tags related to the tag "usa" in which the series text matches "gnp", use the following:
+Use `fredr_search_related_tags()` to search for series tags related to a given tag.  The data returned is a `tibble` where each row represents a tag who's series matches the text in `series_search_text` and related tags specified by `tag_names`.  For example, to search for tags related to the tag "usa" in which the series text matches "gnp", use the following:
 
 ```{r fredr_search_related_tags1}
 fredr_series_search_related_tags(
@@ -104,7 +111,7 @@ fredr_series(
 
 ## Get the categories for a FRED series
 
-The `fredr_series_categories()` function returns a list of categories for the series specified by `series_id`.  The data returned is a `tibble` in which each row represents a category that the series belongs to.  For example, to get the categories for the `UNRATE` series:
+The `fredr_series_categories()` function returns a list of categories for the series specified by `series_id`. The data returned is a `tibble` in which each row represents a category that the series belongs to.  For example, to get the categories for the `UNRATE` series:
 
 ```{r fredr_series_categories1}
 fredr_series_categories(series_id = "UNRATE")
@@ -150,7 +157,7 @@ fredr_series_updates(
 
 ## Get the data vintage dates for a FRED series
 
-The `fredr_series_vintagedates()` function returns a sequence of dates in history when the series specified by `series_id` was revised or appended to.  The data returned is a `tibble` where row is a date.  For example, to get the vintage dates for the series `UNRATE`:
+The `fredr_series_vintagedates()` function returns a sequence of dates in history when the series specified by `series_id` was revised or appended to.  The data returned is a `tibble` where each row is a date.  For example, to get the vintage dates for the series `UNRATE`:
 
 ```{r fredr_series_vintagedates1}
 fredr_series_vintagedates(series_id = "UNRATE")

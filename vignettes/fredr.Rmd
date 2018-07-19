@@ -44,7 +44,7 @@ leverage the full power of `fredr` and the FRED API.
 
 ## Installation
 
-Currently, `fredr` is only available from GithHub.  You can install using `devtools::install_github`:
+Currently, `fredr` is only available from GitHub.  You can install using `devtools::install_github`:
 
 ```{r installation, eval=FALSE}
 # install.packages("devtools")
@@ -68,7 +68,7 @@ Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).  Once you've o
 fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
 ```
 
-where "abcdefghijklmnopqrstuvwxyz123456" is replaced with the actual key you obtain from FRED.  This will set the key for the current session.  You can persistently set the key by appending the line `FRED_API_KEY=abcdefghijklmnopqrstuvwxyz123456` to an `.Renviron` file in the working directory.  This can be done using a text editor or by running `usethis::edit_r_environ`.  If you edit the `.Renviron` file, remember to either restart the session or run `readRenviron(".Renviron")` for the changes to take effect. 
+where "abcdefghijklmnopqrstuvwxyz123456" is replaced with the actual key you obtain from FRED.  This will set the key for the current session.  You can persistently set the key by appending the line `FRED_API_KEY=abcdefghijklmnopqrstuvwxyz123456` to an `.Renviron` file in the working directory or at the user level.  This can be done using a text editor or by running `usethis::edit_r_environ()`.  If you edit the `.Renviron` file, remember to either restart the session or run `readRenviron(".Renviron")` for the changes to take effect. 
 
 ## Retrieve series observations
 
@@ -108,8 +108,8 @@ fredr_series_search_text(
     labs(x = "Observation Date", y = "Rate", color = "Series")
 ```
 
-Since `fredr()` returns a `tibble` with a series ID, mapping `fredr()` over vector
-of seried IDs can be achieved as follows:
+Since `fredr()` returns a `tibble` with a series ID, mapping `fredr()` over a vector
+of series IDs can be achieved as follows:
 
 ```{r fredr_series_observations4, message=FALSE, warning=FALSE}
 map_dfr(c("UNRATE", "FEDFUNDS"), fredr) %>%
@@ -118,7 +118,7 @@ map_dfr(c("UNRATE", "FEDFUNDS"), fredr) %>%
     labs(x = "Observation Date", y = "Rate", color = "Series")
 ```
 
-Using `purrr::pmap_dfr()` allows you to use varying optional parameters as well
+Using `purrr::pmap_dfr()` allows you to use varying optional parameters as well.
 
 ```{r fredr_series_observations5, message=FALSE, warning=FALSE}
 params <- list(
@@ -140,7 +140,7 @@ gnpca <- fredr(series_id = "GNPCA", units = "log") %>%
   mutate(value = value - lag(value)) %>%
   filter(!is.na(value))
 
-gnpca_xts <- xts::xts(
+gnpca_xts <- xts(
   x = gnpca$value,
   order.by = gnpca$date
 )
@@ -169,7 +169,7 @@ fredr_endpoints
 
 ## View FRED API documentation
 
-To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://research.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation for any endpoint with the convenience function `fredr_docs`.  The following example will open a web browser to the FRED API documentation page on the `series/observations` endpoint.
+To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://research.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation for any endpoint with the convenience function `fredr_docs()`.  The following example will open a web browser to the FRED API documentation page on the `series/observations` endpoint.
 
 ```{r fredr_docs1, message=FALSE, warning=FALSE, eval=FALSE}
 fredr_docs(endpoint = "series/observations")
