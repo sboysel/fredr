@@ -1,6 +1,6 @@
 Package: fredr
 Title: Interact with the FRED API in the R workspace
-Version: 0.3.0.9000
+Version: 1.0.0
 Authors@R: c(
     person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre")),
     person("Davis", "Vaughan", email = "dvaughan@business-science.io", role = c("aut"))
