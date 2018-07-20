@@ -44,9 +44,13 @@ leverage the full power of `fredr` and the FRED API.
 
 ## Installation
 
-Currently, `fredr` is only available from GitHub.  You can install using `devtools::install_github`:
+```{r installation_cran, eval=FALSE}
+install.packages("fredr")
+```
 
-```{r installation, eval=FALSE}
+To get the development version of the package:
+
+```{r installation_github, eval=FALSE}
 # install.packages("devtools")
 devtools::install_github("sboysel/fredr")
 ```

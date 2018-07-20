@@ -105,7 +105,7 @@
       <h1>FRED Tags</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2018-07-19</h4>
+            <h4 class="date">2018-07-20</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-tags.Rmd"><code>vignettes/fredr-tags.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-tags.Rmd</code></div>
@@ -138,13 +138,13 @@
 <a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt;  1 nsa                  seas     Not Sea… 2012-02…        100       448104</span></a>
 <a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt;  2 usa                  geo      United … 2012-02…         99       368894</span></a>
 <a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt;  3 annual               freq     ""       2012-02…         91       325473</span></a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt;  4 county               geot     County … 2012-02…         77       181325</span></a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt;  5 census               src      Census   2012-02…         79       179590</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt;  4 county               geot     County … 2012-02…         76       181325</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt;  5 census               src      Census   2012-02…         78       179590</span></a>
 <a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt;  6 nation               geot     ""       2012-02…        100       174523</span></a>
 <a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#&gt;  7 bls                  src      Bureau … 2012-02…         85       113265</span></a>
 <a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#&gt;  8 monthly              freq     ""       2012-02…         92       100536</span></a>
-<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#&gt;  9 employment           gen      ""       2012-02…         68        93212</span></a>
-<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt; 10 prosperity scorecard gen      ""       2017-01…         76        87532</span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#&gt;  9 employment           gen      ""       2012-02…         69        93213</span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt; 10 prosperity scorecard gen      ""       2017-01…         75        87532</span></a>
 <a class="sourceLine" id="cb1-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows</span></a></code></pre></div>
 <p>To return specific tags by tag name, specify multiple tags in a single string by delimiting with a semicolon:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(<span class="dt">tag_names =</span> <span class="st">"gdp;oecd"</span>)</a>
@@ -165,9 +165,9 @@
 <a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt;  2 tx    geo      Texas                    2012-0…         55        22055</span></a>
 <a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt;  3 ga    geo      Georgia (U.S. state)     2012-0…         48        12150</span></a>
 <a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt;  4 ca    geo      California               2012-0…         60        11969</span></a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt;  5 va    geo      Virginia                 2012-0…         46        10421</span></a>
-<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;  6 il    geo      Illinois                 2012-0…         50         9927</span></a>
-<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;  7 ky    geo      Kentucky                 2012-0…         47         9514</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt;  5 va    geo      Virginia                 2012-0…         45        10421</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;  6 il    geo      Illinois                 2012-0…         51         9927</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;  7 ky    geo      Kentucky                 2012-0…         46         9514</span></a>
 <a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;  8 mo    geo      Missouri                 2012-0…         48         9433</span></a>
 <a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;  9 nc    geo      North Carolina           2012-0…         48         9254</span></a>
 <a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; 10 in    geo      Indiana                  2012-0…         46         9148</span></a>
@@ -196,7 +196,7 @@
 <a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  7 annual       freq     ""             2012-02-2…         91        11127</span></a>
 <a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt;  8 mei          rls      Main Economic… 2012-08-1…         78        10770</span></a>
 <a class="sourceLine" id="cb5-16" data-line-number="16"><span class="co">#&gt;  9 oecd         src      Org. for Econ… 2012-02-2…         78        10770</span></a>
-<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="co">#&gt; 10 county       geot     County or Cou… 2012-02-2…         77         9504</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="co">#&gt; 10 county       geot     County or Cou… 2012-02-2…         76         9504</span></a>
 <a class="sourceLine" id="cb5-18" data-line-number="18"><span class="co">#&gt; # ... with 90 more rows</span></a></code></pre></div>
 </div>
 <div id="get-related-series-tags" class="section level2">
@@ -256,16 +256,16 @@
 <a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 16</span></a>
 <a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#&gt;    id       realtime_start realtime_end title             observation_sta…</span></a>
 <a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;  1 A001RD3… 2018-07-19     2018-07-19   Gross national p… 1929-01-01      </span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;  2 A001RG3… 2018-07-19     2018-07-19   Gross national p… 1929-01-01      </span></a>
-<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  3 A001RI1… 2018-07-19     2018-07-19   Gross National P… 1930-01-01      </span></a>
-<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  4 A001RI1… 2018-07-19     2018-07-19   Gross National P… 1947-04-01      </span></a>
-<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  5 A001RL1… 2018-07-19     2018-07-19   Real Gross Natio… 1930-01-01      </span></a>
-<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  6 A001RL1… 2018-07-19     2018-07-19   Real Gross Natio… 1947-04-01      </span></a>
-<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  7 A001RO1… 2018-07-19     2018-07-19   Real Gross Natio… 1948-01-01      </span></a>
-<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  8 A001RP1… 2018-07-19     2018-07-19   Gross National P… 1930-01-01      </span></a>
-<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  9 A001RP1… 2018-07-19     2018-07-19   Gross National P… 1947-04-01      </span></a>
-<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt; 10 A001RV1… 2018-07-19     2018-07-19   Gross National P… 1930-01-01      </span></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;  1 A001RD3… 2018-07-20     2018-07-20   Gross national p… 1929-01-01      </span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;  2 A001RG3… 2018-07-20     2018-07-20   Gross national p… 1929-01-01      </span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  3 A001RI1… 2018-07-20     2018-07-20   Gross National P… 1930-01-01      </span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  4 A001RI1… 2018-07-20     2018-07-20   Gross National P… 1947-04-01      </span></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  5 A001RL1… 2018-07-20     2018-07-20   Real Gross Natio… 1930-01-01      </span></a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  6 A001RL1… 2018-07-20     2018-07-20   Real Gross Natio… 1947-04-01      </span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  7 A001RO1… 2018-07-20     2018-07-20   Real Gross Natio… 1948-01-01      </span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  8 A001RP1… 2018-07-20     2018-07-20   Gross National P… 1930-01-01      </span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  9 A001RP1… 2018-07-20     2018-07-20   Gross National P… 1947-04-01      </span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt; 10 A001RV1… 2018-07-20     2018-07-20   Gross National P… 1930-01-01      </span></a>
 <a class="sourceLine" id="cb9-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb9-16" data-line-number="16"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb9-17" data-line-number="17"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
@@ -281,16 +281,16 @@
 <a class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">#&gt; # A tibble: 100 x 16</span></a>
 <a class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#&gt;    id      realtime_start realtime_end title              observation_sta…</span></a>
 <a class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#&gt;  * &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;              &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt;  1 N4081C… 2018-07-19     2018-07-19   Compensation of e… 1998-01-01      </span></a>
-<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt;  2 J4062C… 2018-07-19     2018-07-19   Compensation of e… 1987-01-01      </span></a>
-<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#&gt;  3 CSPPPG… 2018-07-19     2018-07-19   Consumption Share… 1993-01-01      </span></a>
-<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#&gt;  4 CSPPPG… 2018-07-19     2018-07-19   Consumption Share… 1950-01-01      </span></a>
-<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#&gt;  5 CSPPPG… 2018-07-19     2018-07-19   Consumption Share… 1950-01-01      </span></a>
-<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#&gt;  6 CSPPPG… 2018-07-19     2018-07-19   Consumption Share… 1955-01-01      </span></a>
-<a class="sourceLine" id="cb10-16" data-line-number="16"><span class="co">#&gt;  7 CSPPPG… 2018-07-19     2018-07-19   Consumption Share… 1970-01-01      </span></a>
-<a class="sourceLine" id="cb10-17" data-line-number="17"><span class="co">#&gt;  8 CGDPES… 2018-07-19     2018-07-19   Expenditure-side … 1990-01-01      </span></a>
-<a class="sourceLine" id="cb10-18" data-line-number="18"><span class="co">#&gt;  9 CGDPES… 2018-07-19     2018-07-19   Expenditure-side … 1990-01-01      </span></a>
-<a class="sourceLine" id="cb10-19" data-line-number="19"><span class="co">#&gt; 10 N4225C… 2018-07-19     2018-07-19   Full-time and par… 1998-01-01      </span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt;  1 N4081C… 2018-07-20     2018-07-20   Compensation of e… 1998-01-01      </span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt;  2 J4062C… 2018-07-20     2018-07-20   Compensation of e… 1987-01-01      </span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#&gt;  3 CSPPPG… 2018-07-20     2018-07-20   Consumption Share… 1993-01-01      </span></a>
+<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#&gt;  4 CSPPPG… 2018-07-20     2018-07-20   Consumption Share… 1950-01-01      </span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#&gt;  5 CSPPPG… 2018-07-20     2018-07-20   Consumption Share… 1950-01-01      </span></a>
+<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#&gt;  6 CSPPPG… 2018-07-20     2018-07-20   Consumption Share… 1955-01-01      </span></a>
+<a class="sourceLine" id="cb10-16" data-line-number="16"><span class="co">#&gt;  7 CSPPPG… 2018-07-20     2018-07-20   Consumption Share… 1970-01-01      </span></a>
+<a class="sourceLine" id="cb10-17" data-line-number="17"><span class="co">#&gt;  8 CGDPES… 2018-07-20     2018-07-20   Expenditure-side … 1990-01-01      </span></a>
+<a class="sourceLine" id="cb10-18" data-line-number="18"><span class="co">#&gt;  9 CGDPES… 2018-07-20     2018-07-20   Expenditure-side … 1990-01-01      </span></a>
+<a class="sourceLine" id="cb10-19" data-line-number="19"><span class="co">#&gt; 10 N4225C… 2018-07-20     2018-07-20   Full-time and par… 1998-01-01      </span></a>
 <a class="sourceLine" id="cb10-20" data-line-number="20"><span class="co">#&gt; # ... with 90 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb10-21" data-line-number="21"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb10-22" data-line-number="22"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>

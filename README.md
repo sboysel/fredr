@@ -28,6 +28,13 @@ leverage the full power of `fredr` and the FRED API.
 
 
 ```r
+install.packages("fredr")
+```
+
+To get the development version of the package:
+
+
+```r
 # install.packages("devtools")
 devtools::install_github("sboysel/fredr")
 ```
@@ -48,7 +55,5 @@ There are several existing `R` packages designed for the FRED API:
 * [jcizel/FredR](https://github.com/jcizel/FredR)
 * [joshuaulrich/quantmod](https://github.com/joshuaulrich/quantmod)
 * [quandl/quandl-r](https://github.com/quandl/quandl-r)
-* [johnlaing/rfred](https://github.com/johnlaing/rfred)
-* [jdvermeire/rfred](https://github.com/jdvermeire/rfred)
 
 
