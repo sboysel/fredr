@@ -75,13 +75,13 @@ fredr_release_dates(release_id = 11L)
 
 ## Get the series on a release of economic data
 
-The function `fredr_release_series()` returns a set of series belonging to the FRED release specified by `release_id`.  The data returned is a `tibble` where each row represents a release date for the release specified.  For example, to get release dates for the Employment Cost Index release:
+The function `fredr_release_series()` returns a set of series belonging to the FRED release specified by `release_id`.  The data returned is a `tibble` where each row represents a series in the release specified.  For example, to get series in the Employment Cost Index release:
 
 ```{r fredr_release_series1}
 fredr_release_series(release_id = 10L)
 ```
 
-Note the parameters available to filter series belonging to a release
+Note the parameters available to filter series belonging to a release:
 
 ```{r fredr_release_series2}
 fredr_release_series(
