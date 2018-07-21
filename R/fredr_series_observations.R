@@ -57,7 +57,7 @@
 #' * `"ch1"` - Change from 1 year ago
 #' * `"pch"` - Percent change
 #' * `"pc1"` - Percent change from 1 year ago
-#' * `"pca"` - Counpounded annual rate of change
+#' * `"pca"` - Compounded annual rate of change
 #' * `"cch"` - Continuously compounded rate of change
 #' * `"cca"` - Continuously compounded annual rate of change
 #' * `"log"` - Natural log

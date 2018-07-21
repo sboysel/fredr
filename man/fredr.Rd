@@ -73,7 +73,7 @@ Defaults to \code{"lin"}. Possible values are:
 \item \code{"ch1"} - Change from 1 year ago
 \item \code{"pch"} - Percent change
 \item \code{"pc1"} - Percent change from 1 year ago
-\item \code{"pca"} - Counpounded annual rate of change
+\item \code{"pca"} - Compounded annual rate of change
 \item \code{"cch"} - Continuously compounded rate of change
 \item \code{"cca"} - Continuously compounded annual rate of change
 \item \code{"log"} - Natural log

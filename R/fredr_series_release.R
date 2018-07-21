@@ -4,7 +4,7 @@
 #'
 #' @inheritParams fredr_series_observations
 #'
-#' @return A `tibble` object with information on the relase for the series specified
+#' @return A `tibble` object with information on the release for the series specified
 #' by the `series_id` parameter.  Data include release ID, real-time periods, release name,
 #' and links to press releases, if available.
 #'

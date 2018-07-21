@@ -12,7 +12,7 @@ fredr_tags_series(tag_names = NULL, exclude_tag_names = NULL,
 \item{tag_names}{A semicolon delimited string of tag names to
 find series using. \emph{Required parameter.}}
 
-\item{exclude_tag_names}{A semicolon delimted string of tag names that series
+\item{exclude_tag_names}{A semicolon delimited string of tag names that series
 match \emph{none} of. No exclusions are done by default.}
 
 \item{limit}{An integer limit on the maximum number of results to return.

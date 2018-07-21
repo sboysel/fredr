@@ -15,7 +15,7 @@ fredr_release_related_tags(release_id = NULL, tag_names = NULL,
 \item{tag_names}{A semicolon delimited string of tag names to be related to.
 \emph{Required parameter.}}
 
-\item{exclude_tag_names}{A semicolon delimted string of tag names that series
+\item{exclude_tag_names}{A semicolon delimited string of tag names that series
 match \emph{none} of. No exclusions are done by default.}
 
 \item{tag_group_id}{A string tag group id to filter tags by type. No filtering
