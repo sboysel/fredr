@@ -10,7 +10,7 @@
 #' @param tag_names A semicolon delimited string of tag names to be related to.
 #' _Required parameter._
 #'
-#' @param exclude_tag_names A semicolon delimted string of tag names that series
+#' @param exclude_tag_names A semicolon delimited string of tag names that series
 #' match _none_ of. No exclusions are done by default.
 #'
 #' @return A `tibble` containing tags related to `tag_names` and their

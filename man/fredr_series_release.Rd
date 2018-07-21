@@ -19,7 +19,7 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object with information on the relase for the series specified
+A \code{tibble} object with information on the release for the series specified
 by the \code{series_id} parameter.  Data include release ID, real-time periods, release name,
 and links to press releases, if available.
 }

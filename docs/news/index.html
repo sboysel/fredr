@@ -64,7 +64,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased package">0.3.0.9000</span>
+        <span class="label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased package">1.0.0</span>
       </span>
     </div>
 
@@ -140,41 +140,117 @@
       <small>Source: <a href='https://github.com/sboysel/fredr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="fredr-0-3-0-9000" class="section level1">
+    <div id="fredr-1-0-0" class="section level1">
 <h1 class="page-header">
-<a href="#fredr-0-3-0-9000" class="anchor"></a>fredr 0.3.0.9000</h1>
+<a href="#fredr-1-0-0" class="anchor"></a>fredr 1.0.0</h1>
+<p>Initial release for CRAN. All endpoint functions for the FRED API are now implemented as functions in fredr.</p>
 <div id="breaking-changes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#breaking-changes" class="anchor"></a>Breaking changes</h2>
 <ul>
 <li>
-<code>fredr_series</code> now returns a tibble instead of a time series object. Remove dependencies <code>dplyr</code> and <code>xts</code> (<a href='https://github.com/sboysel/fredr/issues/9'>#9</a>).</li>
+<code><a href="../reference/fredr.html">fredr()</a></code> -&gt; <code><a href="../reference/fredr_request.html">fredr_request()</a></code> (<a href='https://github.com/sboysel/fredr/issues/46'>#46</a>)</li>
 <li>
-<code>fred_key</code> -&gt; <code>fred_set_key</code> no longer modifies <code>.Renviron</code>. User is encouraged to manually change <code>.Renviron</code> to persistently set FRED API key (<a href='https://github.com/sboysel/fredr/issues/15'>#15</a>).</li>
-<li>Split <code>fredr_search</code> into
+<code><a href="../reference/fredr_series.html">fredr_series()</a></code> -&gt; <code><a href="../reference/fredr.html">fredr_series_observations()</a></code> (alias: <code><a href="../reference/fredr.html">fredr()</a></code>) (alias: <code><a href="../reference/fredr.html">fredr()</a></code>) now returns a tibble (with observation date, series ID, and values columns) instead of a time series object (<a href='https://github.com/sboysel/fredr/issues/46'>#46</a>, <a href='https://github.com/sboysel/fredr/issues/49'>#49</a>).</li>
+<li>Remove dependencies <code>dplyr</code> and <code>xts</code> (<a href='https://github.com/sboysel/fredr/issues/9'>#9</a>).</li>
+<li>
+<code>fred_set_key()</code> no longer modifies <code>.Renviron</code>. User is encouraged to manually change <code>.Renviron</code> to persistently set FRED API key (<a href='https://github.com/sboysel/fredr/issues/15'>#15</a>).</li>
+<li>Explicit parameters and parameter checking for all functions (<a href='https://github.com/sboysel/fredr/issues/20'>#20</a>).</li>
+<li>Split <code>fredr_search()</code> into
 <ul>
 <li>
-<code>fredr_search</code> (search for series by text description)</li>
+<code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code> (search for series by text description)</li>
 <li>
-<code>fredr_search_id</code> (search for series)</li>
+<code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code> (search for series)</li>
 <li>
-<code>fredr_search_tags</code> (search for series tags)</li>
+<code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code> (search for series tags)</li>
 <li>
-<code>fredr_search_rel_tags</code> (search for related tags)</li>
+<code><a href="../reference/fredr_series_search_related_tags.html">fredr_series_search_related_tags()</a></code> (search for related tags)</li>
 </ul>
 </li>
 </ul>
 </div>
-<div id="new-features" class="section level2">
+<div id="new-functions" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-features" class="anchor"></a>New features</h2>
+<a href="#new-functions" class="anchor"></a>New functions</h2>
+<p>Categories (<a href='https://github.com/sboysel/fredr/issues/21'>#21</a>)</p>
 <ul>
 <li>
-<code>fredr_tags</code> function to list and or search for series tags</li>
+<code><a href="../reference/fredr_category.html">fredr_category()</a></code> Get a FRED category</li>
+<li>
+<code><a href="../reference/fredr_category_children.html">fredr_category_children()</a></code> Get the child categories for a specified FRED parent category</li>
+<li>
+<code><a href="../reference/fredr_category_related.html">fredr_category_related()</a></code> Get the related categories for a FRED category.</li>
+<li>
+<code><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags()</a></code> Get the related FRED tags within a category</li>
+<li>
+<code><a href="../reference/fredr_category_series.html">fredr_category_series()</a></code> Get the series in a category</li>
+<li>
+<code><a href="../reference/fredr_category_tags.html">fredr_category_tags()</a></code> Get the FRED tags for a category</li>
+</ul>
+<p>Releases (<a href='https://github.com/sboysel/fredr/issues/22'>#22</a>)</p>
+<ul>
+<li>
+<code><a href="../reference/fredr_release.html">fredr_release()</a></code> Get a release of economic data</li>
+<li>
+<code><a href="../reference/fredr_release_dates.html">fredr_release_dates()</a></code> Get release dates for a single release of economic data</li>
+<li>
+<code><a href="../reference/fredr_release_related_tags.html">fredr_release_related_tags()</a></code> Get the related FRED tags for one or more FRED tags within a release</li>
+<li>
+<code><a href="../reference/fredr_release_series.html">fredr_release_series()</a></code> Get the series on a release of economic data</li>
+<li>
+<code><a href="../reference/fredr_release_sources.html">fredr_release_sources()</a></code> Get the sources for a release of economic data</li>
+<li>
+<code><a href="../reference/fredr_release_tables.html">fredr_release_tables()</a></code> Get release table trees for a given release</li>
+<li>
+<code><a href="../reference/fredr_release_tags.html">fredr_release_tags()</a></code> Get the FRED tags for a release</li>
+<li>
+<code><a href="../reference/fredr_releases.html">fredr_releases()</a></code> Get all releases of economic data</li>
+<li>
+<code><a href="../reference/fredr_releases_dates.html">fredr_releases_dates()</a></code> Get release dates for all releases of economic data.</li>
+</ul>
+<p>Series (<a href='https://github.com/sboysel/fredr/issues/23'>#23</a>)</p>
+<ul>
+<li>
+<code><a href="../reference/fredr_series.html">fredr_series()</a></code> Return basic information for a FRED series.</li>
+<li>
+<code><a href="../reference/fredr_series_categories.html">fredr_series_categories()</a></code> Get the categories for a FRED series</li>
+<li>
+<code><a href="../reference/fredr_series_release.html">fredr_series_release()</a></code> Get the release for a FRED series</li>
+<li>
+<code><a href="../reference/fredr_series_tags.html">fredr_series_tags()</a></code> Get the tags for a FRED series</li>
+<li>
+<code><a href="../reference/fredr_series_updates.html">fredr_series_updates()</a></code> Get a set of recently updated FRED series</li>
+<li>
+<code><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates()</a></code> Get the data vintage dates for a FRED series</li>
+</ul>
+<p>Sources (<a href='https://github.com/sboysel/fredr/issues/24'>#24</a>)</p>
+<ul>
+<li>
+<code><a href="../reference/fredr_source.html">fredr_source()</a></code> Get a source of economic data</li>
+<li>
+<code><a href="../reference/fredr_source_releases.html">fredr_source_releases()</a></code> Get the releases for a source</li>
+<li>
+<code><a href="../reference/fredr_sources.html">fredr_sources()</a></code> Get all sources of economic data</li>
+</ul>
+<p>Tags (<a href='https://github.com/sboysel/fredr/issues/25'>#25</a>)</p>
+<ul>
+<li>
+<code><a href="../reference/fredr_tags.html">fredr_tags()</a></code> Get FRED series tags</li>
+<li>
+<code><a href="../reference/fredr_related_tags.html">fredr_related_tags()</a></code> Get related FRED tags given one or more tags</li>
+<li>
+<code><a href="../reference/fredr_tags_series.html">fredr_tags_series()</a></code> Find FRED series matching tag names</li>
+</ul>
+</div>
+<div id="other-new-features" class="section level2">
+<h2 class="hasAnchor">
+<a href="#other-new-features" class="anchor"></a>Other new features</h2>
+<ul>
 <li>Include brief endpoint descriptions in data frame <code>fredr_endpoints</code>
 </li>
 <li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
-<li>Added a usage vignette (<a href='https://github.com/sboysel/fredr/issues/11'>#11</a>).</li>
+<li>Added a usage vignettes (<a href='https://github.com/sboysel/fredr/issues/11'>#11</a>, <a href='https://github.com/sboysel/fredr/issues/41'>#41</a>).</li>
 </ul>
 </div>
 </div>
@@ -229,7 +305,7 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="#fredr-0-3-0-9000">0.3.0.9000</a></li>
+        <li><a href="#fredr-1-0-0">1.0.0</a></li>
         <li><a href="#fredr-0-3-0">0.3.0</a></li>
         <li><a href="#fredr-0-2-0">0.2.0</a></li>
         <li><a href="#fredr-0-1-0">0.1.0</a></li>
