@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased package">1.0.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.0</span>
       </span>
     </div>
 
@@ -198,23 +198,23 @@
 <a class="sourceLine" id="cb7-6" data-line-number="6">  <span class="dt">filter_value =</span> <span class="st">"Quarterly"</span></a>
 <a class="sourceLine" id="cb7-7" data-line-number="7">)</a>
 <a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; # A tibble: 25 x 16</span></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt;    id      realtime_start realtime_end title              observation_sta…</span></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt;  * &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;              &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt;  1 ETOTAL… 2018-07-20     2018-07-20   Housing Inventory… 2000-04-01      </span></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt;  2 RHORUS… 2018-07-20     2018-07-20   Homeownership Rat… 1965-01-01      </span></a>
-<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt;  3 RRVRUS… 2018-07-20     2018-07-20   Rental Vacancy Ra… 1956-01-01      </span></a>
-<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt;  4 EOWNOC… 2018-07-20     2018-07-20   Housing Inventory… 2000-04-01      </span></a>
-<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt;  5 ERENTU… 2018-07-20     2018-07-20   Housing Inventory… 2000-04-01      </span></a>
-<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt;  6 ERNTOC… 2018-07-20     2018-07-20   Housing Inventory… 2000-04-01      </span></a>
-<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="co">#&gt;  7 ESALEU… 2018-07-20     2018-07-20   Housing Inventory… 2000-04-01      </span></a>
-<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co">#&gt;  8 EVACAN… 2018-07-20     2018-07-20   Housing Inventory… 2000-04-01      </span></a>
-<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="co">#&gt;  9 RHVRUS… 2018-07-20     2018-07-20   Homeowner Vacancy… 1956-01-01      </span></a>
-<a class="sourceLine" id="cb7-20" data-line-number="20"><span class="co">#&gt; 10 RSAHOR… 2018-07-20     2018-07-20   Homeownership Rat… 1980-01-01      </span></a>
-<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">#&gt; # ... with 15 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb7-22" data-line-number="22"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb7-23" data-line-number="23"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb7-24" data-line-number="24"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
-<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span></a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt;  1 ETOT… 2018-07-20     2018-07-20   Hous… 2000-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt;  2 RHOR… 2018-07-20     2018-07-20   Home… 1965-01-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt;  3 RRVR… 2018-07-20     2018-07-20   Rent… 1956-01-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt;  4 EOWN… 2018-07-20     2018-07-20   Hous… 2000-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt;  5 EREN… 2018-07-20     2018-07-20   Hous… 2000-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt;  6 ERNT… 2018-07-20     2018-07-20   Hous… 2000-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="co">#&gt;  7 ESAL… 2018-07-20     2018-07-20   Hous… 2000-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co">#&gt;  8 EVAC… 2018-07-20     2018-07-20   Hous… 2000-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="co">#&gt;  9 RHVR… 2018-07-20     2018-07-20   Home… 1956-01-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-20" data-line-number="20"><span class="co">#&gt; 10 RSAH… 2018-07-20     2018-07-20   Home… 1980-01-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">#&gt; # ... with 15 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb7-22" data-line-number="22"><span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb7-23" data-line-number="23"><span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb7-24" data-line-number="24"><span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="co">#&gt; #   notes &lt;chr&gt;</span></a></code></pre></div>
 <p>To return all series in the “National Accounts” tagged with “usa” and <em>not</em> “gnp”, ordering the results such that higher frequency series appear first:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_category_series.html">fredr_category_series</a></span>(</a>
 <a class="sourceLine" id="cb8-2" data-line-number="2">  <span class="dt">category_id =</span> 32992L, <span class="co"># National Accounts</span></a>
@@ -257,10 +257,10 @@
 <a class="sourceLine" id="cb10-5" data-line-number="5">  <span class="dt">sort_order =</span> <span class="st">"desc"</span></a>
 <a class="sourceLine" id="cb10-6" data-line-number="6">)</a>
 <a class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">#&gt; # A tibble: 2 x 6</span></a>
-<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#&gt;   name   group_id notes                    created popularity series_count</span></a>
-<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#&gt; * &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                    &lt;chr&gt;        &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt; 1 usa    geo      United States of America 2012-0…         99           10</span></a>
-<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt; 2 census src      Census                   2012-0…         78           10</span></a></code></pre></div>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#&gt;   name   group_id notes            created         popularity series_count</span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#&gt; * &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;                &lt;int&gt;        &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt; 1 usa    geo      United States o… 2012-02-27 10:…         99           10</span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt; 2 census src      Census           2012-02-27 10:…         78           10</span></a></code></pre></div>
 </div>
 <div id="get-related-tags-within-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
@@ -273,18 +273,18 @@
 <a class="sourceLine" id="cb11-5" data-line-number="5">  <span class="dt">order_by =</span> <span class="st">"name"</span></a>
 <a class="sourceLine" id="cb11-6" data-line-number="6">)</a>
 <a class="sourceLine" id="cb11-7" data-line-number="7"><span class="co">#&gt; # A tibble: 10 x 6</span></a>
-<a class="sourceLine" id="cb11-8" data-line-number="8"><span class="co">#&gt;    name            group_id notes        created   popularity series_count</span></a>
-<a class="sourceLine" id="cb11-9" data-line-number="9"><span class="co">#&gt;  * &lt;chr&gt;           &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;          &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb11-10" data-line-number="10"><span class="co">#&gt;  1 census          src      Census       2012-02-…         78            6</span></a>
-<a class="sourceLine" id="cb11-11" data-line-number="11"><span class="co">#&gt;  2 headline figure gen      ""           2013-11-…         52            1</span></a>
-<a class="sourceLine" id="cb11-12" data-line-number="12"><span class="co">#&gt;  3 inventories     gen      ""           2012-02-…         46            4</span></a>
-<a class="sourceLine" id="cb11-13" data-line-number="13"><span class="co">#&gt;  4 mtis            rls      Manufacturi… 2012-08-…         36            6</span></a>
-<a class="sourceLine" id="cb11-14" data-line-number="14"><span class="co">#&gt;  5 nation          geot     ""           2012-02-…        100            6</span></a>
-<a class="sourceLine" id="cb11-15" data-line-number="15"><span class="co">#&gt;  6 nsa             seas     Not Seasona… 2012-02-…        100            3</span></a>
-<a class="sourceLine" id="cb11-16" data-line-number="16"><span class="co">#&gt;  7 ratio           gen      ""           2012-02-…         51            2</span></a>
-<a class="sourceLine" id="cb11-17" data-line-number="17"><span class="co">#&gt;  8 sa              seas     Seasonally … 2012-02-…         87            3</span></a>
-<a class="sourceLine" id="cb11-18" data-line-number="18"><span class="co">#&gt;  9 sales           gen      ""           2012-02-…         61            4</span></a>
-<a class="sourceLine" id="cb11-19" data-line-number="19"><span class="co">#&gt; 10 usa             geo      United Stat… 2012-02-…         99            6</span></a></code></pre></div>
+<a class="sourceLine" id="cb11-8" data-line-number="8"><span class="co">#&gt;    name      group_id notes            created     popularity series_count</span></a>
+<a class="sourceLine" id="cb11-9" data-line-number="9"><span class="co">#&gt;  * &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb11-10" data-line-number="10"><span class="co">#&gt;  1 census    src      Census           2012-02-27…         78            6</span></a>
+<a class="sourceLine" id="cb11-11" data-line-number="11"><span class="co">#&gt;  2 headline… gen      ""               2013-11-19…         52            1</span></a>
+<a class="sourceLine" id="cb11-12" data-line-number="12"><span class="co">#&gt;  3 inventor… gen      ""               2012-02-27…         46            4</span></a>
+<a class="sourceLine" id="cb11-13" data-line-number="13"><span class="co">#&gt;  4 mtis      rls      Manufacturing &amp;… 2012-08-16…         36            6</span></a>
+<a class="sourceLine" id="cb11-14" data-line-number="14"><span class="co">#&gt;  5 nation    geot     ""               2012-02-27…        100            6</span></a>
+<a class="sourceLine" id="cb11-15" data-line-number="15"><span class="co">#&gt;  6 nsa       seas     Not Seasonally … 2012-02-27…        100            3</span></a>
+<a class="sourceLine" id="cb11-16" data-line-number="16"><span class="co">#&gt;  7 ratio     gen      ""               2012-02-27…         51            2</span></a>
+<a class="sourceLine" id="cb11-17" data-line-number="17"><span class="co">#&gt;  8 sa        seas     Seasonally Adju… 2012-02-27…         87            3</span></a>
+<a class="sourceLine" id="cb11-18" data-line-number="18"><span class="co">#&gt;  9 sales     gen      ""               2012-02-27…         61            4</span></a>
+<a class="sourceLine" id="cb11-19" data-line-number="19"><span class="co">#&gt; 10 usa       geo      United States o… 2012-02-27…         99            6</span></a></code></pre></div>
 </div>
 </div>
   </div>

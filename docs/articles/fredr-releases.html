@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased package">1.0.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.0</span>
       </span>
     </div>
 
@@ -125,18 +125,18 @@
 <p>The function <code><a href="../reference/fredr_releases.html">fredr_releases()</a></code> returns a set of all FRED releases matching the request. The data returned is a <code>tibble</code> in which each row represents a FRED release. The default call returns all FRED releases:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_releases.html">fredr_releases</a></span>()</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co">#&gt; # A tibble: 269 x 7</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt;       id realtime_start realtime_end name   press_release link  notes     </span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#&gt;  * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;  &lt;lgl&gt;         &lt;chr&gt; &lt;chr&gt;     </span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt;  1     9 2018-07-20     2018-07-20   Advan… TRUE          http… "The U.S.…</span></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt;  2    10 2018-07-20     2018-07-20   Consu… TRUE          http… &lt;NA&gt;      </span></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt;  3    11 2018-07-20     2018-07-20   Emplo… TRUE          http… &lt;NA&gt;      </span></a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt;  4    13 2018-07-20     2018-07-20   G.17 … TRUE          http… &lt;NA&gt;      </span></a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt;  5    14 2018-07-20     2018-07-20   G.19 … TRUE          http… &lt;NA&gt;      </span></a>
-<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt;  6    15 2018-07-20     2018-07-20   G.5 F… TRUE          http… &lt;NA&gt;      </span></a>
-<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#&gt;  7    17 2018-07-20     2018-07-20   H.10 … TRUE          http… &lt;NA&gt;      </span></a>
-<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#&gt;  8    18 2018-07-20     2018-07-20   H.15 … TRUE          http… &lt;NA&gt;      </span></a>
-<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#&gt;  9    19 2018-07-20     2018-07-20   H.3 A… TRUE          http… &lt;NA&gt;      </span></a>
-<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt; 10    20 2018-07-20     2018-07-20   H.4.1… TRUE          http… &lt;NA&gt;      </span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt;       id realtime_start realtime_end name     press_release link   notes  </span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#&gt;  * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;    &lt;lgl&gt;         &lt;chr&gt;  &lt;chr&gt;  </span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt;  1     9 2018-07-20     2018-07-20   Advance… TRUE          http:… "The U…</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt;  2    10 2018-07-20     2018-07-20   Consume… TRUE          http:… &lt;NA&gt;   </span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt;  3    11 2018-07-20     2018-07-20   Employm… TRUE          http:… &lt;NA&gt;   </span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt;  4    13 2018-07-20     2018-07-20   G.17 In… TRUE          http:… &lt;NA&gt;   </span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt;  5    14 2018-07-20     2018-07-20   G.19 Co… TRUE          http:… &lt;NA&gt;   </span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt;  6    15 2018-07-20     2018-07-20   G.5 For… TRUE          http:… &lt;NA&gt;   </span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#&gt;  7    17 2018-07-20     2018-07-20   H.10 Fo… TRUE          http:… &lt;NA&gt;   </span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#&gt;  8    18 2018-07-20     2018-07-20   H.15 Se… TRUE          http:… &lt;NA&gt;   </span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#&gt;  9    19 2018-07-20     2018-07-20   H.3 Agg… TRUE          http:… &lt;NA&gt;   </span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt; 10    20 2018-07-20     2018-07-20   H.4.1 F… TRUE          http:… &lt;NA&gt;   </span></a>
 <a class="sourceLine" id="cb1-15" data-line-number="15"><span class="co">#&gt; # ... with 259 more rows</span></a></code></pre></div>
 </div>
 <div id="get-release-dates-for-all-releases-of-economic-data-" class="section level2">
@@ -147,16 +147,16 @@
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 3</span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;    release_id release_name                                        date    </span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;  *      &lt;int&gt; &lt;chr&gt;                                               &lt;chr&gt;   </span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt;  1        440 Coinbase Index                                      2018-07…</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;  2         86 Commercial Paper                                    2018-07…</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;  3         72 Daily Treasury Inflation-Indexed Securities         2018-07…</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  4        279 Economic Policy Uncertainty                         2018-07…</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  5        378 Federal Funds Data                                  2018-07…</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  6        101 FOMC Press Release                                  2018-07…</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  7        331 Gross Domestic Product by Industry                  2018-07…</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  8        122 H.4.1 Factors Affecting Reserve Balances (data not… 2018-07…</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  9        106 M2 Own Rate                                         2018-07…</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; 10         63 M2 Related Series                                   2018-07…</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt;  1        441 Coinbase Cryptocurrencies                           2018-07…</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;  2        440 Coinbase Index                                      2018-07…</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;  3         86 Commercial Paper                                    2018-07…</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  4         72 Daily Treasury Inflation-Indexed Securities         2018-07…</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  5        279 Economic Policy Uncertainty                         2018-07…</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  6        378 Federal Funds Data                                  2018-07…</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  7        101 FOMC Press Release                                  2018-07…</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  8        331 Gross Domestic Product by Industry                  2018-07…</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  9         18 H.15 Selected Interest Rates                        2018-07…</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; 10        122 H.4.1 Factors Affecting Reserve Balances (data not… 2018-07…</span></a>
 <a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows</span></a></code></pre></div>
 <p>To instead order the results by ascending release ID:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_releases_dates.html">fredr_releases_dates</a></span>(</a>
@@ -164,18 +164,18 @@
 <a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="dt">order_by =</span> <span class="st">"release_id"</span></a>
 <a class="sourceLine" id="cb3-4" data-line-number="4">)</a>
 <a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; # A tibble: 1,000 x 3</span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt;    release_id release_name                                       date     </span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt;  *      &lt;int&gt; &lt;chr&gt;                                              &lt;chr&gt;    </span></a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt;  1          9 Advance Monthly Sales for Retail and Food Services 2018-01-…</span></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt;  2          9 Advance Monthly Sales for Retail and Food Services 2018-02-…</span></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt;  3          9 Advance Monthly Sales for Retail and Food Services 2018-03-…</span></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt;  4          9 Advance Monthly Sales for Retail and Food Services 2018-04-…</span></a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt;  5          9 Advance Monthly Sales for Retail and Food Services 2018-05-…</span></a>
-<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;  6          9 Advance Monthly Sales for Retail and Food Services 2018-05-…</span></a>
-<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;  7          9 Advance Monthly Sales for Retail and Food Services 2018-06-…</span></a>
-<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;  8          9 Advance Monthly Sales for Retail and Food Services 2018-07-…</span></a>
-<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;  9         10 Consumer Price Index                               2018-01-…</span></a>
-<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; 10         10 Consumer Price Index                               2018-02-…</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt;    release_id release_name                                       date      </span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt;  *      &lt;int&gt; &lt;chr&gt;                                              &lt;chr&gt;     </span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt;  1          9 Advance Monthly Sales for Retail and Food Services 2018-01-12</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt;  2          9 Advance Monthly Sales for Retail and Food Services 2018-02-14</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt;  3          9 Advance Monthly Sales for Retail and Food Services 2018-03-14</span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt;  4          9 Advance Monthly Sales for Retail and Food Services 2018-04-16</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt;  5          9 Advance Monthly Sales for Retail and Food Services 2018-05-15</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;  6          9 Advance Monthly Sales for Retail and Food Services 2018-05-25</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;  7          9 Advance Monthly Sales for Retail and Food Services 2018-06-14</span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;  8          9 Advance Monthly Sales for Retail and Food Services 2018-07-16</span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;  9         10 Consumer Price Index                               2018-01-12</span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; 10         10 Consumer Price Index                               2018-02-14</span></a>
 <a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; # ... with 990 more rows</span></a></code></pre></div>
 </div>
 <div id="get-a-release-of-economic-data" class="section level2">
@@ -214,23 +214,23 @@
 <p>The function <code><a href="../reference/fredr_release_series.html">fredr_release_series()</a></code> returns a set of series belonging to the FRED release specified by <code>release_id</code>. The data returned is a <code>tibble</code> where each row represents a series in the release specified. For example, to get series in the Employment Cost Index release:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_release_series.html">fredr_release_series</a></span>(<span class="dt">release_id =</span> 10L)</a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 16</span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt;    id     realtime_start realtime_end title               observation_sta…</span></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt;  1 CPIAP… 2018-07-20     2018-07-20   Consumer Price Ind… 1914-12-01      </span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt;  2 CPIAP… 2018-07-20     2018-07-20   Consumer Price Ind… 1947-01-01      </span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;  3 CPIAU… 2018-07-20     2018-07-20   Consumer Price Ind… 1913-01-01      </span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  4 CPIAU… 2018-07-20     2018-07-20   Consumer Price Ind… 1947-01-01      </span></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  5 CPIED… 2018-07-20     2018-07-20   Consumer Price Ind… 1993-01-01      </span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  6 CPIED… 2018-07-20     2018-07-20   Consumer Price Ind… 1993-01-01      </span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  7 CPIEN… 2018-07-20     2018-07-20   Consumer Price Ind… 1957-01-01      </span></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  8 CPIEN… 2018-07-20     2018-07-20   Consumer Price Ind… 1957-01-01      </span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;  9 CPIFA… 2018-07-20     2018-07-20   Consumer Price Ind… 1967-01-01      </span></a>
-<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; 10 CPIFA… 2018-07-20     2018-07-20   Consumer Price Ind… 1967-01-01      </span></a>
-<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows, and 11 more variables: observation_end &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt; #   frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
-<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt;  1 CPIA… 2018-07-20     2018-07-20   Cons… 1914-12-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt;  2 CPIA… 2018-07-20     2018-07-20   Cons… 1947-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;  3 CPIA… 2018-07-20     2018-07-20   Cons… 1913-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  4 CPIA… 2018-07-20     2018-07-20   Cons… 1947-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  5 CPIE… 2018-07-20     2018-07-20   Cons… 1993-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  6 CPIE… 2018-07-20     2018-07-20   Cons… 1993-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  7 CPIE… 2018-07-20     2018-07-20   Cons… 1957-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  8 CPIE… 2018-07-20     2018-07-20   Cons… 1957-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;  9 CPIF… 2018-07-20     2018-07-20   Cons… 1967-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; 10 CPIF… 2018-07-20     2018-07-20   Cons… 1967-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#&gt; #   notes &lt;chr&gt;</span></a></code></pre></div>
 <p>Note the parameters available to filter series belonging to a release:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_release_series.html">fredr_release_series</a></span>(</a>
 <a class="sourceLine" id="cb7-2" data-line-number="2">  <span class="dt">release_id =</span> 10L,</a>
@@ -241,23 +241,22 @@
 <a class="sourceLine" id="cb7-7" data-line-number="7">  <span class="dt">limit =</span> 10L</a>
 <a class="sourceLine" id="cb7-8" data-line-number="8">)</a>
 <a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt; # A tibble: 10 x 16</span></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt;    id      realtime_start realtime_end title              observation_sta…</span></a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt;  * &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;              &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt;  1 CPIAUC… 2018-07-20     2018-07-20   Consumer Price In… 1947-01-01      </span></a>
-<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt;  2 CPILFE… 2018-07-20     2018-07-20   Consumer Price In… 1957-01-01      </span></a>
-<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt;  3 CPIAUC… 2018-07-20     2018-07-20   Consumer Price In… 1913-01-01      </span></a>
-<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt;  4 CUUR00… 2018-07-20     2018-07-20   Consumer Price In… 1913-01-01      </span></a>
-<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt;  5 CPIMED… 2018-07-20     2018-07-20   Consumer Price In… 1947-01-01      </span></a>
-<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="co">#&gt;  6 CUUR00… 2018-07-20     2018-07-20   Consumer Price In… 1914-12-01      </span></a>
-<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co">#&gt;  7 CWUR00… 2018-07-20     2018-07-20   Consumer Price In… 1913-01-01      </span></a>
-<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="co">#&gt;  8 CPIFAB… 2018-07-20     2018-07-20   Consumer Price In… 1967-01-01      </span></a>
-<a class="sourceLine" id="cb7-20" data-line-number="20"><span class="co">#&gt;  9 CUUR00… 2018-07-20     2018-07-20   Consumer Price In… 1947-03-01      </span></a>
-<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">#&gt; 10 CPILFE… 2018-07-20     2018-07-20   Consumer Price In… 1957-01-01      </span></a>
-<a class="sourceLine" id="cb7-22" data-line-number="22"><span class="co">#&gt; # ... with 11 more variables: observation_end &lt;chr&gt;, frequency &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb7-23" data-line-number="23"><span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb7-24" data-line-number="24"><span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;,</span></a>
-<a class="sourceLine" id="cb7-26" data-line-number="26"><span class="co">#&gt; #   notes &lt;chr&gt;</span></a></code></pre></div>
+<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span></a>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt;  1 CPIA… 2018-07-20     2018-07-20   Cons… 1947-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt;  2 CPIL… 2018-07-20     2018-07-20   Cons… 1957-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt;  3 CPIA… 2018-07-20     2018-07-20   Cons… 1913-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt;  4 CUUR… 2018-07-20     2018-07-20   Cons… 1913-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt;  5 CPIM… 2018-07-20     2018-07-20   Cons… 1947-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="co">#&gt;  6 CUUR… 2018-07-20     2018-07-20   Cons… 1914-12-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co">#&gt;  7 CWUR… 2018-07-20     2018-07-20   Cons… 1913-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="co">#&gt;  8 CPIF… 2018-07-20     2018-07-20   Cons… 1967-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-20" data-line-number="20"><span class="co">#&gt;  9 CUUR… 2018-07-20     2018-07-20   Cons… 1947-03-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">#&gt; 10 CPIL… 2018-07-20     2018-07-20   Cons… 1957-01-01       2018-06-01     </span></a>
+<a class="sourceLine" id="cb7-22" data-line-number="22"><span class="co">#&gt; # ... with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb7-23" data-line-number="23"><span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb7-24" data-line-number="24"><span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></a></code></pre></div>
 </div>
 <div id="get-the-fred-tags-for-a-release" class="section level2">
 <h2 class="hasAnchor">
@@ -270,18 +269,18 @@
 <a class="sourceLine" id="cb8-5" data-line-number="5">  <span class="dt">sort_order =</span> <span class="st">"desc"</span></a>
 <a class="sourceLine" id="cb8-6" data-line-number="6">)</a>
 <a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt; # A tibble: 66 x 6</span></a>
-<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt;    name  group_id notes                    created popularity series_count</span></a>
-<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;                    &lt;chr&gt;        &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt;  1 usa   geo      United States of America 2012-0…         99         4609</span></a>
-<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;  2 ca    geo      California               2012-0…         60          257</span></a>
-<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt;  3 tx    geo      Texas                    2012-0…         55          200</span></a>
-<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt;  4 fl    geo      Florida                  2012-0…         53          153</span></a>
-<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt;  5 ny    geo      New York                 2012-0…         51          100</span></a>
-<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt;  6 il    geo      Illinois                 2012-0…         51          154</span></a>
-<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt;  7 pa    geo      Pennsylvania             2012-0…         49          254</span></a>
-<a class="sourceLine" id="cb8-17" data-line-number="17"><span class="co">#&gt;  8 mo    geo      Missouri                 2012-0…         48          107</span></a>
-<a class="sourceLine" id="cb8-18" data-line-number="18"><span class="co">#&gt;  9 ga    geo      Georgia (U.S. state)     2012-0…         48          100</span></a>
-<a class="sourceLine" id="cb8-19" data-line-number="19"><span class="co">#&gt; 10 wi    geo      Wisconsin                2012-0…         47          214</span></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt;    name  group_id notes            created         popularity series_count</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;                &lt;int&gt;        &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt;  1 usa   geo      United States o… 2012-02-27 10:…         99         4609</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;  2 ca    geo      California       2012-02-27 10:…         60          257</span></a>
+<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt;  3 tx    geo      Texas            2012-02-27 10:…         55          200</span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt;  4 fl    geo      Florida          2012-02-27 10:…         53          153</span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt;  5 ny    geo      New York         2012-02-27 10:…         51          100</span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt;  6 il    geo      Illinois         2012-02-27 10:…         51          154</span></a>
+<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt;  7 pa    geo      Pennsylvania     2012-02-27 10:…         49          254</span></a>
+<a class="sourceLine" id="cb8-17" data-line-number="17"><span class="co">#&gt;  8 mo    geo      Missouri         2012-02-27 10:…         48          107</span></a>
+<a class="sourceLine" id="cb8-18" data-line-number="18"><span class="co">#&gt;  9 ga    geo      Georgia (U.S. s… 2012-02-27 10:…         48          100</span></a>
+<a class="sourceLine" id="cb8-19" data-line-number="19"><span class="co">#&gt; 10 wi    geo      Wisconsin        2012-02-27 10:…         47          214</span></a>
 <a class="sourceLine" id="cb8-20" data-line-number="20"><span class="co">#&gt; # ... with 56 more rows</span></a></code></pre></div>
 </div>
 <div id="get-the-related-fred-tags-for-one-or-more-fred-tags-within-a-release" class="section level2">
@@ -308,9 +307,9 @@
 <p>The function <code><a href="../reference/fredr_release_sources.html">fredr_release_sources()</a></code> returns a set of FRED sources for the FRED release specified by <code>release_id</code>. The data returned is a <code>tibble</code> where each row represents a source. For example, to get the sources for the Consumer Price Index release:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_release_sources.html">fredr_release_sources</a></span>(<span class="dt">release_id =</span> 10L)</a>
 <a class="sourceLine" id="cb10-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 5</span></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#&gt;      id realtime_start realtime_end name                            link  </span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                           &lt;chr&gt; </span></a>
-<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="co">#&gt; 1    22 2018-07-20     2018-07-20   U.S. Bureau of Labor Statistics http:…</span></a></code></pre></div>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#&gt;      id realtime_start realtime_end name                    link          </span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                   &lt;chr&gt;         </span></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="co">#&gt; 1    22 2018-07-20     2018-07-20   U.S. Bureau of Labor S… http://www.bl…</span></a></code></pre></div>
 </div>
 <div id="get-release-table-trees-for-a-given-release" class="section level2">
 <h2 class="hasAnchor">
