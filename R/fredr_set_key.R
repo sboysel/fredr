@@ -25,9 +25,11 @@
 #' [Terms of Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).
 #'
 #' @examples
-#' \dontrun{
+#' current_key <- Sys.getenv("FRED_API_KEY")
 #' fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
-#' }
+#' Sys.getenv("FRED_API_KEY")
+#' fredr_set_key(current_key)
+#' Sys.getenv("FRED_API_KEY")
 #'
 #' @export
 fredr_set_key <- function(key) {
