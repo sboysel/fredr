@@ -1,3 +1,14 @@
+## Resubmission
+
+This is a resubmission. In this version I have:
+
+* Modified the contents of LICENSE such that it adheres to the CRAN template for
+  the MIT license.
+* Verified the Title section of DESCRIPTION is now in title case.
+* Reworded the Description section of DESCRIPTION to remove redundancies.
+* Added single quotes to mentions of 'FRED' and 'Federal Reserve Economic Data'.
+* Added the FRED API URL to the Description section of DESCRIPTION.
+
 ## Release Summary
 
 This is the first release of 'fredr'. 'fredr' provides a complete R interface
