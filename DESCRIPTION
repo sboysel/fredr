@@ -1,5 +1,5 @@
 Package: fredr
-Title: An R client for the 'FRED' API
+Title: An R Client for the 'FRED' API
 Version: 1.0.0
 Authors@R: c(
     person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre")),
