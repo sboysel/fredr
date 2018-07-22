@@ -1,13 +1,14 @@
 Package: fredr
-Title: Interact with the FRED API in the R workspace
+Title: An R client for the 'FRED' API
 Version: 1.0.0
 Authors@R: c(
     person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre")),
     person("Davis", "Vaughan", email = "dvaughan@business-science.io", role = c("aut"))
   )
-Description: Interact with the Federal Reserve Economic Data (FRED) API. A 
-  complete set of bindings to the FRED API, 'fredr' includes tools to both query the 
-  database and read economic time series into R.
+Maintainer: Sam Boysel <sboysel@gmail.com>
+Description: An R client for the 'Federal Reserve Economic Data' ('FRED') API
+  <https://api.stlouisfed.org>.  Functions to retrieve economic time series and 
+  other data from 'FRED'.
 URL: https://github.com/sboysel/fredr
 BugReports: https://github.com/sboysel/fredr/issues
 Depends:
