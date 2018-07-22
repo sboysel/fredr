@@ -17,12 +17,10 @@
 #' [FRED API](https://api.stlouisfed.org/docs/fred/)
 #'
 #' @examples
-#' \dontrun{
 #' fredr_docs()
 #' fredr_docs(endpoint = "category")
 #' fredr_docs(endpoint = "series/observations")
 #' fredr_docs(endpoint = "series/observations", params = TRUE)
-#' }
 #' @export
 fredr_docs <- function(endpoint = "base", params = FALSE, debug = FALSE) {
 
