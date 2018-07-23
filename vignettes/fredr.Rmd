@@ -96,10 +96,11 @@ fredr_series_observations(
 )
 ```
 
-`fredr` plays nicely with the [tidyverse](https://www.tidyverse.org/):
+`fredr` plays nicely with [tidyverse](https://www.tidyverse.org/) packages:
 
 ```{r fredr_series_observations3, message=FALSE, warning=FALSE}
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 fredr_series_search_text(
   search_text = "federal funds",
   order_by = "popularity",
@@ -116,6 +117,7 @@ Since `fredr()` returns a `tibble` with a series ID, mapping `fredr()` over a ve
 of series IDs can be achieved as follows:
 
 ```{r fredr_series_observations4, message=FALSE, warning=FALSE}
+library(purrr)
 map_dfr(c("UNRATE", "FEDFUNDS"), fredr) %>%
   ggplot(data = ., mapping = aes(x = date, y = value, color = series_id)) +
     geom_line() +

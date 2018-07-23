@@ -169,15 +169,15 @@
 <a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;  6 il    geo      Illinois         2012-02-27 10:…         52         9927</span></a>
 <a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;  7 ky    geo      Kentucky         2012-02-27 10:…         46         9514</span></a>
 <a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;  8 mo    geo      Missouri         2012-02-27 10:…         48         9433</span></a>
-<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;  9 nc    geo      North Carolina   2012-02-27 10:…         47         9254</span></a>
-<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; 10 in    geo      Indiana          2012-02-27 10:…         46         9148</span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;  9 nc    geo      North Carolina   2012-02-27 10:…         48         9254</span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; 10 in    geo      Indiana          2012-02-27 10:…         47         9148</span></a>
 <a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; # ... with 40 more rows</span></a></code></pre></div>
 <p>Search for tags by text:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_tags.html">fredr_tags</a></span>(<span class="dt">search_text =</span> <span class="st">"unemployment"</span>)</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; # A tibble: 2 x 6</span></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;   name     group_id notes              created     popularity series_count</span></a>
 <a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt; * &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; 1 unemplo… gen      ""                 2012-02-27…         75        23892</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; 1 unemplo… gen      ""                 2012-02-27…         74        23892</span></a>
 <a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; 2 nairu    gen      Non-Accelerating … 2012-08-10…         17            2</span></a></code></pre></div>
 <p>Note that the example above searches for <em>tags</em> matching <code>"unemployment"</code>. To search for the set of <em>series</em> with tags matching <code>"unemployment"</code>, use <code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags</a></span>(</a>
@@ -187,7 +187,7 @@
 <a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt; # A tibble: 100 x 6</span></a>
 <a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;    name     group_id notes             created     popularity series_count</span></a>
 <a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  * &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  1 unemplo… gen      ""                2012-02-27…         75        23892</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  1 unemplo… gen      ""                2012-02-27…         74        23892</span></a>
 <a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  2 nsa      seas     Not Seasonally A… 2012-02-27…        100        23173</span></a>
 <a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  3 usa      geo      United States of… 2012-02-27…         99        18376</span></a>
 <a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  4 bls      src      Bureau of Labor … 2012-02-27…         85        14408</span></a>
@@ -213,7 +213,7 @@
 <a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  4 h6        rls      H.6 Money Sto… 2012-08-16 1…         48           10</span></a>
 <a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  5 nsa       seas     Not Seasonall… 2012-02-27 1…        100            6</span></a>
 <a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  6 sa        seas     Seasonally Ad… 2012-02-27 1…         87            6</span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  7 m1        gen      M1 Money Stock 2012-02-27 1…         47            4</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  7 m1        gen      M1 Money Stock 2012-02-27 1…         46            4</span></a>
 <a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  8 m2        gen      M2 Money Stock 2012-02-27 1…         44            4</span></a>
 <a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;  9 currency  gen      ""             2012-02-27 1…         63            2</span></a>
 <a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; 10 disconti… gen      ""             2012-02-27 1…         68            2</span></a>
@@ -228,7 +228,7 @@
 <a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; # A tibble: 6 x 6</span></a>
 <a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt;   name       group_id notes       created          popularity series_count</span></a>
 <a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt; * &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;                 &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; 1 m1         gen      M1 Money S… 2012-02-27 10:1…         47            4</span></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; 1 m1         gen      M1 Money S… 2012-02-27 10:1…         46            4</span></a>
 <a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt; 2 m2         gen      M2 Money S… 2012-02-27 10:1…         44            4</span></a>
 <a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt; 3 currency   gen      ""          2012-02-27 10:1…         63            2</span></a>
 <a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt; 4 discontin… gen      ""          2012-02-27 10:1…         68            2</span></a>
@@ -243,7 +243,7 @@
 <a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#&gt; # A tibble: 4 x 6</span></a>
 <a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt;   name  group_id notes         created             popularity series_count</span></a>
 <a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt; * &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt;                    &lt;int&gt;        &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt; 1 m1    gen      M1 Money Sto… 2012-02-27 10:18:1…         47            4</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt; 1 m1    gen      M1 Money Sto… 2012-02-27 10:18:1…         46            4</span></a>
 <a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt; 2 m2    gen      M2 Money Sto… 2012-02-27 10:18:1…         44            4</span></a>
 <a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt; 3 m3    gen      M3 Money Sto… 2012-02-27 10:18:1…         37            2</span></a>
 <a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt; 4 mzm   gen      MZM Money St… 2012-02-27 10:18:1…         27            2</span></a></code></pre></div>
@@ -256,16 +256,16 @@
 <a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,000 x 16</span></a>
 <a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span></a>
 <a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span></a>
-<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;  1 A001… 2018-07-21     2018-07-21   Gros… 1929-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;  2 A001… 2018-07-21     2018-07-21   Gros… 1929-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  3 A001… 2018-07-21     2018-07-21   Gros… 1930-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  4 A001… 2018-07-21     2018-07-21   Gros… 1947-04-01       2018-01-01     </span></a>
-<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  5 A001… 2018-07-21     2018-07-21   Real… 1930-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  6 A001… 2018-07-21     2018-07-21   Real… 1947-04-01       2018-01-01     </span></a>
-<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  7 A001… 2018-07-21     2018-07-21   Real… 1948-01-01       2018-01-01     </span></a>
-<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  8 A001… 2018-07-21     2018-07-21   Gros… 1930-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  9 A001… 2018-07-21     2018-07-21   Gros… 1947-04-01       2018-01-01     </span></a>
-<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt; 10 A001… 2018-07-21     2018-07-21   Gros… 1930-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;  1 A001… 2018-07-22     2018-07-22   Gros… 1929-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;  2 A001… 2018-07-22     2018-07-22   Gros… 1929-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  3 A001… 2018-07-22     2018-07-22   Gros… 1930-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  4 A001… 2018-07-22     2018-07-22   Gros… 1947-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  5 A001… 2018-07-22     2018-07-22   Real… 1930-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  6 A001… 2018-07-22     2018-07-22   Real… 1947-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  7 A001… 2018-07-22     2018-07-22   Real… 1948-01-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  8 A001… 2018-07-22     2018-07-22   Gros… 1930-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  9 A001… 2018-07-22     2018-07-22   Gros… 1947-04-01       2018-01-01     </span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt; 10 A001… 2018-07-22     2018-07-22   Gros… 1930-01-01       2017-01-01     </span></a>
 <a class="sourceLine" id="cb9-15" data-line-number="15"><span class="co">#&gt; # ... with 990 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb9-16" data-line-number="16"><span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb9-17" data-line-number="17"><span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></a>
@@ -281,16 +281,16 @@
 <a class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">#&gt; # A tibble: 100 x 16</span></a>
 <a class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span></a>
 <a class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span></a>
-<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt;  1 N408… 2018-07-21     2018-07-21   Comp… 1998-01-01       2016-01-01     </span></a>
-<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt;  2 J406… 2018-07-21     2018-07-21   Comp… 1987-01-01       2000-01-01     </span></a>
-<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#&gt;  3 CSPP… 2018-07-21     2018-07-21   Cons… 1993-01-01       2010-01-01     </span></a>
-<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#&gt;  4 CSPP… 2018-07-21     2018-07-21   Cons… 1950-01-01       2010-01-01     </span></a>
-<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#&gt;  5 CSPP… 2018-07-21     2018-07-21   Cons… 1950-01-01       2010-01-01     </span></a>
-<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#&gt;  6 CSPP… 2018-07-21     2018-07-21   Cons… 1955-01-01       2010-01-01     </span></a>
-<a class="sourceLine" id="cb10-16" data-line-number="16"><span class="co">#&gt;  7 CSPP… 2018-07-21     2018-07-21   Cons… 1970-01-01       2010-01-01     </span></a>
-<a class="sourceLine" id="cb10-17" data-line-number="17"><span class="co">#&gt;  8 CGDP… 2018-07-21     2018-07-21   Expe… 1990-01-01       2014-01-01     </span></a>
-<a class="sourceLine" id="cb10-18" data-line-number="18"><span class="co">#&gt;  9 CGDP… 2018-07-21     2018-07-21   Expe… 1990-01-01       2014-01-01     </span></a>
-<a class="sourceLine" id="cb10-19" data-line-number="19"><span class="co">#&gt; 10 N422… 2018-07-21     2018-07-21   Full… 1998-01-01       2016-01-01     </span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt;  1 N408… 2018-07-22     2018-07-22   Comp… 1998-01-01       2016-01-01     </span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt;  2 J406… 2018-07-22     2018-07-22   Comp… 1987-01-01       2000-01-01     </span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#&gt;  3 CSPP… 2018-07-22     2018-07-22   Cons… 1993-01-01       2010-01-01     </span></a>
+<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#&gt;  4 CSPP… 2018-07-22     2018-07-22   Cons… 1950-01-01       2010-01-01     </span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#&gt;  5 CSPP… 2018-07-22     2018-07-22   Cons… 1950-01-01       2010-01-01     </span></a>
+<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#&gt;  6 CSPP… 2018-07-22     2018-07-22   Cons… 1955-01-01       2010-01-01     </span></a>
+<a class="sourceLine" id="cb10-16" data-line-number="16"><span class="co">#&gt;  7 CSPP… 2018-07-22     2018-07-22   Cons… 1970-01-01       2010-01-01     </span></a>
+<a class="sourceLine" id="cb10-17" data-line-number="17"><span class="co">#&gt;  8 CGDP… 2018-07-22     2018-07-22   Expe… 1990-01-01       2014-01-01     </span></a>
+<a class="sourceLine" id="cb10-18" data-line-number="18"><span class="co">#&gt;  9 CGDP… 2018-07-22     2018-07-22   Expe… 1990-01-01       2014-01-01     </span></a>
+<a class="sourceLine" id="cb10-19" data-line-number="19"><span class="co">#&gt; 10 N422… 2018-07-22     2018-07-22   Full… 1998-01-01       2016-01-01     </span></a>
 <a class="sourceLine" id="cb10-20" data-line-number="20"><span class="co">#&gt; # ... with 90 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb10-21" data-line-number="21"><span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb10-22" data-line-number="22"><span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></a>

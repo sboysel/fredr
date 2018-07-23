@@ -20,11 +20,12 @@ Imports:
   rlang
 Suggests:
   covr,
+  dplyr,
+  ggplot2,
   knitr,
   purrr,
   rmarkdown,
   testthat,
-  tidyverse,
   zoo,
   xts
 License: MIT + file LICENSE 

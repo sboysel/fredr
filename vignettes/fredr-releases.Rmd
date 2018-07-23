@@ -143,10 +143,12 @@ cpi_tbl
 The above table has two elements: `34481` and `36712`.  Inspect an element (a list) by selecting its row and unnesting the row element `value` using `tibble::deframe()`:
 
 ```{r fredr_release_table2}
-library(tidyverse)
+library(dplyr)
+library(tibble)
+
 cpi_tbl %>%
   slice(2) %>%
-  tibble::deframe()
+  deframe()
 ```
 
 You can extract the tree hierarchy of a deeper element in the table by specifying an `element_id`.  From the previous example, if you wanted to get the subtree for child element `36712` of the Consumer Price Index table:
