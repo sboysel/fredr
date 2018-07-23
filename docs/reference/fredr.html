@@ -293,44 +293,81 @@ dates in history. They can be specified instead of a real-time period using
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"># NOT RUN {
-# Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
-of change from pervious observation.
-fredr(
-  series_id = "UNRATE",
-  observation_start = as.Date("1980-01-01"),
-  observation_end = as.Date("2000-01-01"),
-  unit = "chg"
-)
-# All observations for "OILPRICE" series.  The data is first aggregated by
-# quarter by taking the average of all observations in the quarter then
-# transformed by taking the natural logarithm.
-fredr(
-  series_id = "OILPRICE",
-  frequency = "q",
-  aggregation_method = "avg",
-  unit = "log"
-)
+    <pre class="examples"><div class='input'><span class='co'># Observations for "UNRATE" series between 1980 and 2000.  Units are in terms</span>
+<span class='co'># of change from pervious observation.</span>
+<span class='fu'>fredr</span>(
+  <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>,
+  <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"1980-01-01"</span>),
+  <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"2000-01-01"</span>),
+  <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"chg"</span>
+)</div><div class='output co'>#&gt; # A tibble: 241 x 3
+#&gt;    date       series_id value
+#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;
+#&gt;  1 1980-01-01 UNRATE      0.3
+#&gt;  2 1980-02-01 UNRATE      0  
+#&gt;  3 1980-03-01 UNRATE      0  
+#&gt;  4 1980-04-01 UNRATE      0.6
+#&gt;  5 1980-05-01 UNRATE      0.6
+#&gt;  6 1980-06-01 UNRATE      0.1
+#&gt;  7 1980-07-01 UNRATE      0.2
+#&gt;  8 1980-08-01 UNRATE     -0.1
+#&gt;  9 1980-09-01 UNRATE     -0.2
+#&gt; 10 1980-10-01 UNRATE      0  
+#&gt; # ... with 231 more rows</div><div class='input'><span class='co'># All observations for "OILPRICE" series.  The data is first aggregated by</span>
+<span class='co'># quarter by taking the average of all observations in the quarter then</span>
+<span class='co'># transformed by taking the natural logarithm.</span>
+<span class='fu'>fredr</span>(
+  <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"OILPRICE"</span>,
+  <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='st'>"q"</span>,
+  <span class='kw'>aggregation_method</span> <span class='kw'>=</span> <span class='st'>"avg"</span>,
+  <span class='kw'>unit</span> <span class='kw'>=</span> <span class='st'>"log"</span>
+)</div><div class='output co'>#&gt; # A tibble: 271 x 3
+#&gt;    date       series_id value
+#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;
+#&gt;  1 1946-01-01 OILPRICE  0.157
+#&gt;  2 1946-04-01 OILPRICE  0.239
+#&gt;  3 1946-07-01 OILPRICE  0.362
+#&gt;  4 1946-10-01 OILPRICE  0.440
+#&gt;  5 1947-01-01 OILPRICE  0.482
+#&gt;  6 1947-04-01 OILPRICE  0.626
+#&gt;  7 1947-07-01 OILPRICE  0.626
+#&gt;  8 1947-10-01 OILPRICE  0.695
+#&gt;  9 1948-01-01 OILPRICE  0.944
+#&gt; 10 1948-04-01 OILPRICE  0.944
+#&gt; # ... with 261 more rows</div><div class='input'>
+<span class='co'># To retrieve values for multiple series, use purrr's map_dfr() function.</span>
 
-# To retrieve values for multiple series, use purrr's map_dfr() function.
-library(tidyverse)
-map_dfr(c("UNRATE", "OILPRICE"), fredr)
+<span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"purrr"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
 
-# Using pmap_dfr() allows you to use varying optional parameters as well
-params <- list(
-  series_id = c("UNRATE", "OILPRICE"),
-  frequency = c("m", "q")
-)
+  <span class='fu'>library</span>(<span class='no'>purrr</span>)
+  <span class='kw pkg'>purrr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/purrr/topics/map'>map_dfr</a></span>(<span class='fu'>c</span>(<span class='st'>"UNRATE"</span>, <span class='st'>"OILPRICE"</span>), <span class='no'>fredr</span>)
 
-pmap_dfr(
-  .l = params,
-  .f = ~ fredr(series_id = .x, frequency = .y)
-)
+  <span class='co'># Using purrr::pmap_dfr() allows you to use varying optional parameters</span>
+  <span class='no'>params</span> <span class='kw'>&lt;-</span> <span class='fu'>list</span>(
+    <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"UNRATE"</span>, <span class='st'>"OILPRICE"</span>),
+    <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"m"</span>, <span class='st'>"q"</span>)
+  )
 
+  <span class='kw pkg'>purrr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/purrr/topics/map2'>pmap_dfr</a></span>(
+    <span class='kw'>.l</span> <span class='kw'>=</span> <span class='no'>params</span>,
+    <span class='kw'>.f</span> <span class='kw'>=</span> ~ <span class='fu'>fredr</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='no'>.x</span>, <span class='kw'>frequency</span> <span class='kw'>=</span> <span class='no'>.y</span>)
+  )
 
-
-# }
-</pre>
+}</div><div class='output co'>#&gt; # A tibble: 1,117 x 3
+#&gt;    date       series_id value
+#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;
+#&gt;  1 1948-01-01 UNRATE      3.4
+#&gt;  2 1948-02-01 UNRATE      3.8
+#&gt;  3 1948-03-01 UNRATE      4  
+#&gt;  4 1948-04-01 UNRATE      3.9
+#&gt;  5 1948-05-01 UNRATE      3.5
+#&gt;  6 1948-06-01 UNRATE      3.6
+#&gt;  7 1948-07-01 UNRATE      3.6
+#&gt;  8 1948-08-01 UNRATE      3.9
+#&gt;  9 1948-09-01 UNRATE      3.8
+#&gt; 10 1948-10-01 UNRATE      3.7
+#&gt; # ... with 1,107 more rows</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

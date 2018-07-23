@@ -55,7 +55,7 @@
 #' [fredr_series_vintagedates()].
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Search for all tags matching the series text "oil" and the tag "usa".
 #' fredr_series_search_related_tags(
 #'   series_search_text = "oil",

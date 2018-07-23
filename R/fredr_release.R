@@ -21,7 +21,7 @@
 #' [fredr_release_related_tags()], [fredr_release_tables()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Release as of today
 #' fredr_release(release_id = 20)
 #'

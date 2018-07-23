@@ -78,7 +78,7 @@ release set by the \code{release_id} parameter.
 }
 
 \examples{
-\dontrun{
+\donttest{
 fredr_release_related_tags(10, tag_names = "cpi")
 }
 }

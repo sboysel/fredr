@@ -21,6 +21,7 @@ Imports:
 Suggests:
   covr,
   knitr,
+  purrr,
   rmarkdown,
   testthat,
   tidyverse,

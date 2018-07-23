@@ -246,12 +246,28 @@ creation date, and additional notes.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Tags assigned to series in the "Production &amp; Business Activity" category</span>
-<span class='fu'>fredr_category_tags</span>(<span class='kw'>category</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
-<span class='co'># Select the "nation" and "monthly" tags in the "Production &amp; Business Activity" category</span>
-<span class='fu'>fredr_category_tags</span>(<span class='kw'>category</span> <span class='kw'>=</span> <span class='fl'>3L</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"nation;monthly"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='co'># Tags assigned to series in the "Production &amp; Business Activity" category</span>
+<span class='fu'>fredr_category_tags</span>(<span class='kw'>category</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</div><div class='output co'>#&gt; # A tibble: 13 x 6
+#&gt;    name      group_id notes                created      popularity series_count
+#&gt;  * &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;                &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;
+#&gt;  1 business  gen      ""                   2012-02-27 …         59           10
+#&gt;  2 census    src      Census               2012-02-27 …         78           10
+#&gt;  3 monthly   freq     ""                   2012-02-27 …         92           10
+#&gt;  4 mtis      rls      Manufacturing &amp; Tra… 2012-08-16 …         36           10
+#&gt;  5 nation    geot     ""                   2012-02-27 …        100           10
+#&gt;  6 usa       geo      United States of Am… 2012-02-27 …         99           10
+#&gt;  7 inventor… gen      ""                   2012-02-27 …         46            6
+#&gt;  8 sales     gen      ""                   2012-02-27 …         61            6
+#&gt;  9 nsa       seas     Not Seasonally Adju… 2012-02-27 …        100            5
+#&gt; 10 sa        seas     Seasonally Adjusted  2012-02-27 …         87            5
+#&gt; 11 rate      gen      ""                   2012-02-27 …         87            4
+#&gt; 12 ratio     gen      ""                   2012-02-27 …         51            2
+#&gt; 13 headline… gen      ""                   2013-11-19 …         52            1</div><div class='input'><span class='co'># Select the "nation" and "monthly" tags in the "Production &amp; Business Activity" category</span>
+<span class='fu'>fredr_category_tags</span>(<span class='kw'>category</span> <span class='kw'>=</span> <span class='fl'>3L</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"nation;monthly"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 6
+#&gt;   name    group_id notes created                popularity series_count
+#&gt; * &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;                       &lt;int&gt;        &lt;int&gt;
+#&gt; 1 nation  geot     ""    2012-02-27 10:18:19-06        100         1884
+#&gt; 2 monthly freq     ""    2012-02-27 10:18:19-06         92         1109</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

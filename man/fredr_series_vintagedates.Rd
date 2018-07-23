@@ -42,7 +42,7 @@ data values were revised or new data values were released as a \code{tibble} obj
 }
 
 \examples{
-\dontrun{
+\donttest{
 # All data vintages for the "UNRATE" series
 fredr_series_vintagedates(series_id = "UNRATE")
 # 10 most recent data vintages for the "UNRATE" series

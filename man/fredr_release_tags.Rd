@@ -74,7 +74,7 @@ tag group, or search text.
 }
 
 \examples{
-\dontrun{
+\donttest{
 fredr_release_tags(release_id = 10L)
 }
 }

@@ -192,12 +192,33 @@ of the parent category indicated by <code>category_id</code>.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Children of the root category</span>
-<span class='fu'>fredr_category_children</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>0L</span>)
-<span class='co'># Children of the "Production &amp; Business Activity" category</span>
-<span class='fu'>fredr_category_children</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='co'># Children of the root category</span>
+<span class='fu'>fredr_category_children</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>0L</span>)</div><div class='output co'>#&gt; # A tibble: 8 x 3
+#&gt;      id name                                    parent_id
+#&gt; * &lt;int&gt; &lt;chr&gt;                                       &lt;int&gt;
+#&gt; 1 32991 Money, Banking, &amp; Finance                       0
+#&gt; 2    10 Population, Employment, &amp; Labor Markets         0
+#&gt; 3 32992 National Accounts                               0
+#&gt; 4     1 Production &amp; Business Activity                  0
+#&gt; 5 32455 Prices                                          0
+#&gt; 6 32263 International Data                              0
+#&gt; 7  3008 U.S. Regional Data                              0
+#&gt; 8 33060 Academic Data                                   0</div><div class='input'><span class='co'># Children of the "Production &amp; Business Activity" category</span>
+<span class='fu'>fredr_category_children</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</div><div class='output co'>#&gt; # A tibble: 12 x 3
+#&gt;       id name                                         parent_id
+#&gt;  * &lt;int&gt; &lt;chr&gt;                                            &lt;int&gt;
+#&gt;  1 32262 Business Cycle Expansions &amp; Contractions             1
+#&gt;  2 32436 Construction                                         1
+#&gt;  3 33490 Finance Companies                                    1
+#&gt;  4 32216 Health Insurance                                     1
+#&gt;  5    97 Housing                                              1
+#&gt;  6     3 Industrial Production &amp; Capacity Utilization         1
+#&gt;  7 32429 Manufacturing                                        1
+#&gt;  8     6 Retail Trade                                         1
+#&gt;  9 33441 Services                                             1
+#&gt; 10 33492 Technology                                           1
+#&gt; 11 33202 Transportation                                       1
+#&gt; 12 33203 Wholesale Trade                                      1</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

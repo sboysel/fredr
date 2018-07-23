@@ -40,7 +40,7 @@
 #' [fredr_release_related_tags()], [fredr_release_tables()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fredr_releases_dates(limit = 20L)
 #' }
 #' @export

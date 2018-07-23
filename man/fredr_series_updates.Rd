@@ -53,7 +53,7 @@ Returns information on the recently updated series on the FRED server.
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Get all recently updated "regional" series
 fredr_series_updates(filter_value = "regional")
 # Most recently udpated series are returned first

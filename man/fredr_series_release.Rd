@@ -33,7 +33,7 @@ Given a series ID, return information on a series as a \code{tibble} object.
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Get release information for the "UNRATE" series
 fredr_series_release(series_id = "UNRATE")
 }

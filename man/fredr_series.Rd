@@ -33,7 +33,7 @@ see \code{\link[=fredr_series_observations]{fredr_series_observations()}}.
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Return information for the "UNRATE" series
 fredr_series(series_id = "UNRATE")
 }

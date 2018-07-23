@@ -217,13 +217,27 @@ Defaults to today's date. For more information, see
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Board of Governors</span>
-<span class='fu'>fredr_source_releases</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
-
+    <pre class="examples"><div class='input'><span class='co'># Board of Governors</span>
+<span class='fu'>fredr_source_releases</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</div><div class='output co'>#&gt; # A tibble: 33 x 7
+#&gt;       id realtime_start realtime_end name       press_release link    notes    
+#&gt;  * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;lgl&gt;         &lt;chr&gt;   &lt;chr&gt;    
+#&gt;  1    13 2018-07-22     2018-07-22   G.17 Indu… TRUE          http:/… &lt;NA&gt;     
+#&gt;  2    14 2018-07-22     2018-07-22   G.19 Cons… TRUE          http:/… &lt;NA&gt;     
+#&gt;  3    15 2018-07-22     2018-07-22   G.5 Forei… TRUE          http:/… &lt;NA&gt;     
+#&gt;  4    17 2018-07-22     2018-07-22   H.10 Fore… TRUE          http:/… &lt;NA&gt;     
+#&gt;  5    18 2018-07-22     2018-07-22   H.15 Sele… TRUE          http:/… &lt;NA&gt;     
+#&gt;  6    19 2018-07-22     2018-07-22   H.3 Aggre… TRUE          http:/… &lt;NA&gt;     
+#&gt;  7    20 2018-07-22     2018-07-22   H.4.1 Fac… TRUE          http:/… &lt;NA&gt;     
+#&gt;  8    21 2018-07-22     2018-07-22   H.6 Money… TRUE          http:/… &lt;NA&gt;     
+#&gt;  9    22 2018-07-22     2018-07-22   H.8 Asset… TRUE          http:/… &lt;NA&gt;     
+#&gt; 10    52 2018-07-22     2018-07-22   Z.1 Finan… TRUE          http:/… "The Fin…
+#&gt; # ... with 23 more rows</div><div class='input'>
 <span class='co'># University of Michigan</span>
-<span class='fu'>fredr_source_releases</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>14L</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"1950-01-01"</span>))
-<span class='co'># }</span></pre>
+<span class='fu'>fredr_source_releases</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>14L</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"1950-01-01"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 6
+#&gt;      id realtime_start realtime_end name         press_release link            
+#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;        &lt;lgl&gt;         &lt;chr&gt;           
+#&gt; 1    91 1998-07-31     2006-12-31   Surveys of … TRUE          http://www.sca.…
+#&gt; 2    91 2007-01-01     9999-12-31   Surveys of … TRUE          http://www.sca.…</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

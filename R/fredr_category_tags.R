@@ -59,7 +59,7 @@
 #' [fredr_category_series()], [fredr_category_related_tags()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Tags assigned to series in the "Production & Business Activity" category
 #' fredr_category_tags(category = 1L)
 #' # Select the "nation" and "monthly" tags in the "Production & Business Activity" category

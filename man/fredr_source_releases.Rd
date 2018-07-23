@@ -52,7 +52,7 @@ Get the releases for a source
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Board of Governors
 fredr_source_releases(source_id = 1L)
 

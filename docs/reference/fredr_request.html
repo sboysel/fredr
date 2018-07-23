@@ -200,28 +200,33 @@ If <code>to_frame = FALSE</code>, a <code>response</code> object returned direct
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
+    <pre class="examples"><div class='input'>
 <span class='fu'>fredr_request</span>(
   <span class='kw'>endpoint</span> <span class='kw'>=</span> <span class='st'>"series/observations"</span>,
   <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"GNPCA"</span>,
   <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='st'>"1990-01-01"</span>,
   <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='st'>"2000-01-01"</span>
-)
-<span class='co'># Compare with to_frame = TRUE</span>
-<span class='fu'>library</span>(<span class='no'>httr</span>)
-<span class='fu'>library</span>(<span class='no'>tidyverse</span>)
+)</div><div class='output co'>#&gt; # A tibble: 11 x 4
+#&gt;    realtime_start realtime_end date       value    
+#&gt;  * &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt;    
+#&gt;  1 2018-07-22     2018-07-22   1990-01-01 9012.628 
+#&gt;  2 2018-07-22     2018-07-22   1991-01-01 8998.131 
+#&gt;  3 2018-07-22     2018-07-22   1992-01-01 9314.879 
+#&gt;  4 2018-07-22     2018-07-22   1993-01-01 9570.012 
+#&gt;  5 2018-07-22     2018-07-22   1994-01-01 9942.936 
+#&gt;  6 2018-07-22     2018-07-22   1995-01-01 10217.258
+#&gt;  7 2018-07-22     2018-07-22   1996-01-01 10606.548
+#&gt;  8 2018-07-22     2018-07-22   1997-01-01 11070.064
+#&gt;  9 2018-07-22     2018-07-22   1998-01-01 11553.116
+#&gt; 10 2018-07-22     2018-07-22   1999-01-01 12103.387
+#&gt; 11 2018-07-22     2018-07-22   2000-01-01 12608.778</div><div class='input'><span class='co'># Compare with to_frame = TRUE</span>
 <span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'>fredr_request</span>(
   <span class='kw'>endpoint</span> <span class='kw'>=</span> <span class='st'>"series/observations"</span>,
   <span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"GNPCA"</span>,
   <span class='kw'>observation_start</span> <span class='kw'>=</span> <span class='st'>"1990-01-01"</span>,
   <span class='kw'>observation_end</span> <span class='kw'>=</span> <span class='st'>"2000-01-01"</span>,
   <span class='kw'>to_frame</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)
-<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='no'>resp</span> <span class='kw'>%&gt;%</span>
-<span class='kw pkg'>httr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/httr/topics/content'>content</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='no'>.</span>$<span class='no'>observations</span> <span class='kw'>%&gt;%</span>
-  <span class='kw pkg'>purrr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/purrr/topics/map'>map_df</a></span>(<span class='kw'>.f</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='kw pkg'>tibble</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/tibble/topics/as_tibble'>as_tibble</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>x</span>))
-<span class='co'># }</span></pre>
+)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

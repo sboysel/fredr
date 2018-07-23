@@ -26,7 +26,8 @@
 #' [FRED API](https://api.stlouisfed.org/docs/fred/)
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
+#'
 #' fredr_request(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
@@ -34,8 +35,6 @@
 #'   observation_end = "2000-01-01"
 #' )
 #' # Compare with to_frame = TRUE
-#' library(httr)
-#' library(tidyverse)
 #' resp <- fredr_request(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
@@ -43,10 +42,7 @@
 #'   observation_end = "2000-01-01",
 #'   to_frame = FALSE
 #' )
-#' data <- resp %>%
-#' httr::content() %>%
-#'   .$observations %>%
-#'   purrr::map_df(.f = function(x) tibble::as_tibble(x = x))
+#'
 #' }
 #' @export
 fredr_request <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {

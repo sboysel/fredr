@@ -14,7 +14,7 @@
 #' [fredr_category_series()], [fredr_category_tags()], [fredr_category_related_tags()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Root category
 #' fredr_category()
 #' # "Production & Business Activity" category

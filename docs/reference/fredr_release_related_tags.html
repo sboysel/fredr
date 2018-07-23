@@ -255,9 +255,20 @@ Defaults to today's date. For more information, see
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_release_related_tags</span>(<span class='fl'>10</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"cpi"</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='fu'>fredr_release_related_tags</span>(<span class='fl'>10</span>, <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"cpi"</span>)</div><div class='output co'>#&gt; # A tibble: 190 x 6
+#&gt;    name      group_id notes             created         popularity series_count
+#&gt;  * &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;                &lt;int&gt;        &lt;int&gt;
+#&gt;  1 indexes   gen      ""                2012-02-27 10:…         84         4609
+#&gt;  2 price     gen      ""                2013-07-11 11:…         83         4609
+#&gt;  3 price in… gen      ""                2012-02-27 10:…         81         4609
+#&gt;  4 usa       geo      United States of… 2012-02-27 10:…         99         4609
+#&gt;  5 urban     gen      ""                2012-02-27 10:…         59         4607
+#&gt;  6 bls       src      Bureau of Labor … 2012-02-27 10:…         85         4515
+#&gt;  7 inflation gen      ""                2012-06-08 15:…         76         4428
+#&gt;  8 nsa       seas     Not Seasonally A… 2012-02-27 10:…        100         4420
+#&gt;  9 consumer  gen      ""                2012-02-27 10:…         67         4415
+#&gt; 10 monthly   freq     ""                2012-02-27 10:…         92         2142
+#&gt; # ... with 180 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

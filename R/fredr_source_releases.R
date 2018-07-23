@@ -38,7 +38,7 @@
 #' @seealso [fredr_sources()], [fredr_source()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Board of Governors
 #' fredr_source_releases(source_id = 1L)
 #'

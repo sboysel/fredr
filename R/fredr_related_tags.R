@@ -28,7 +28,7 @@
 #'
 #' @examples
 #'
-#' \dontrun{
+#' \donttest{
 #'
 #' fredr_related_tags(tag_names = "monetary aggregates;weekly")
 #'

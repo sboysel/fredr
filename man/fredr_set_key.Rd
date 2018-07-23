@@ -29,9 +29,11 @@ sessions in the working directory if you set it with project level scope,
 or everywhere if you set it with user level scope.
 }
 \examples{
-\dontrun{
+current_key <- Sys.getenv("FRED_API_KEY")
 fredr_set_key("abcdefghijklmnopqrstuvwxyz123456")
-}
+Sys.getenv("FRED_API_KEY")
+fredr_set_key(current_key)
+Sys.getenv("FRED_API_KEY")
 
 }
 \references{

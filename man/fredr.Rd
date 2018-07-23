@@ -115,9 +115,9 @@ Given a series ID, return observations of that series as a \code{tibble} object.
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
-of change from pervious observation.
+# of change from pervious observation.
 fredr(
   series_id = "UNRATE",
   observation_start = as.Date("1980-01-01"),
@@ -135,21 +135,24 @@ fredr(
 )
 
 # To retrieve values for multiple series, use purrr's map_dfr() function.
-library(tidyverse)
-map_dfr(c("UNRATE", "OILPRICE"), fredr)
 
-# Using pmap_dfr() allows you to use varying optional parameters as well
-params <- list(
-  series_id = c("UNRATE", "OILPRICE"),
-  frequency = c("m", "q")
-)
+if (requireNamespace("purrr", quietly = TRUE)) {
 
-pmap_dfr(
-  .l = params,
-  .f = ~ fredr(series_id = .x, frequency = .y)
-)
+  library(purrr)
+  purrr::map_dfr(c("UNRATE", "OILPRICE"), fredr)
 
+  # Using purrr::pmap_dfr() allows you to use varying optional parameters
+  params <- list(
+    series_id = c("UNRATE", "OILPRICE"),
+    frequency = c("m", "q")
+  )
 
+  purrr::pmap_dfr(
+    .l = params,
+    .f = ~ fredr(series_id = .x, frequency = .y)
+  )
+
+}
 
 }
 }

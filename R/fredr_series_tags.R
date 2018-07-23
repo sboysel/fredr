@@ -23,7 +23,7 @@
 #' [fredr_series_vintagedates()].
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Return all tags assigned to the "UNRATE" series and order the results by
 #' # group ID.
 #' fredr_series_tags(series_id = "UNRATE", order_by = "group_id")

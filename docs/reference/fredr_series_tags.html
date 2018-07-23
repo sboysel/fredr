@@ -205,11 +205,24 @@ popularity, series count, tag creation date, and additional notes.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Return all tags assigned to the "UNRATE" series and order the results by</span>
+    <pre class="examples"><div class='input'><span class='co'># Return all tags assigned to the "UNRATE" series and order the results by</span>
 <span class='co'># group ID.</span>
-<span class='fu'>fredr_series_tags</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"group_id"</span>)
-<span class='co'># }</span></pre>
+<span class='fu'>fredr_series_tags</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"group_id"</span>)</div><div class='output co'>#&gt; # A tibble: 13 x 6
+#&gt;    name        group_id notes              created      popularity series_count
+#&gt;  * &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;
+#&gt;  1 monthly     freq     ""                 2012-02-27 …         92       100536
+#&gt;  2 rate        gen      ""                 2012-02-27 …         87        45813
+#&gt;  3 unemployme… gen      ""                 2012-02-27 …         74        23892
+#&gt;  4 household … gen      Current Populatio… 2012-06-18 …         60         2975
+#&gt;  5 labor       gen      ""                 2012-02-27 …         60        24608
+#&gt;  6 16 years +  gen      ""                 2012-02-27 …         58         5810
+#&gt;  7 headline f… gen      ""                 2013-11-19 …         52           53
+#&gt;  8 civilian    gen      ""                 2012-02-27 …         51         5977
+#&gt;  9 labor unde… gen      ""                 2012-05-10 …         35          726
+#&gt; 10 usa         geo      United States of … 2012-02-27 …         99       368894
+#&gt; 11 nation      geot     ""                 2012-02-27 …        100       174523
+#&gt; 12 sa          seas     Seasonally Adjust… 2012-02-27 …         87        61222
+#&gt; 13 bls         src      Bureau of Labor S… 2012-02-27 …         85       113265</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

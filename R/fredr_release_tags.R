@@ -18,7 +18,7 @@
 #' [fredr_release_related_tags()], [fredr_release_tables()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fredr_release_tags(release_id = 10L)
 #' }
 #' @export

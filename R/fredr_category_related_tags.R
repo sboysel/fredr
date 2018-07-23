@@ -67,7 +67,7 @@
 #' [fredr_category_series()], [fredr_category_tags()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # First, get the tags for the "Production & Business Activity" category
 #' fredr_category_tags(1L)
 #' # Then, get the tags related to "business" and "monthly" for the

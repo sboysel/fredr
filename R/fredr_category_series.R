@@ -64,7 +64,7 @@
 #'  [fredr_category_tags()], [fredr_category_related_tags()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Top 10 most popular series belonging to the "Employment Cost Index" category
 #' fredr_category_series(category_id = 1L, limit = 10L, order_by = "popularity")
 #' # Series in the "Employment Cost Index" category, ordered by descending observation frequency

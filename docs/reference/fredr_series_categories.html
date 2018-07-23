@@ -197,10 +197,11 @@ name, parent category ID, and notes.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Return the categories to which the "UNRATE" series belongs</span>
-<span class='fu'>fredr_series_categories</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='co'># Return the categories to which the "UNRATE" series belongs</span>
+<span class='fu'>fredr_series_categories</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 4
+#&gt;      id name          parent_id notes                                          
+#&gt; * &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;                                          
+#&gt; 1 32447 Unemployment…        12 The ratio of unemployed to the civilian labor …</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

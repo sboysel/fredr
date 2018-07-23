@@ -62,7 +62,7 @@
 #' [fredr_release_related_tags()], [fredr_release_tables()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fredr_release_series(release_id = 20L)
 #'
 #' fredr_release_series(release_id = 20L, order_by = "popularity")

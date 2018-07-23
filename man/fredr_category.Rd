@@ -24,7 +24,7 @@ Get a FRED category
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Root category
 fredr_category()
 # "Production & Business Activity" category

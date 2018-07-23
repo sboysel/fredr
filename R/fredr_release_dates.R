@@ -35,7 +35,7 @@
 #' [fredr_release_related_tags()], [fredr_release_tables()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fredr_release_dates(release_id = 20L)
 #'
 #' # Call the function with an "as of" Date of 1997-03-14

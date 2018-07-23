@@ -27,7 +27,7 @@
 #' [fredr_category_series()], [fredr_category_tags()], [fredr_category_related_tags()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Categories related to the "Employment Cost Index" category
 #' fredr_category_related(category_id = 4L)
 #' }

@@ -49,7 +49,7 @@ data will be available on the FRED or ALFRED websites.
 }
 
 \examples{
-\dontrun{
+\donttest{
 fredr_releases_dates(limit = 20L)
 }
 }

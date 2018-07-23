@@ -2,6 +2,14 @@
 
 This is a resubmission. In this version I have:
 
+* Changed \dontrun{} to \donttest{} for function examples sections.
+* Properly commented out non-code lines in examples sections.
+* Added packages used only for examples to Suggests section of DESCRIPTION
+* Modified examples using packages in Suggests section of DESCRIPTION to only 
+  run if the package is available.
+
+## Previous resubmissions
+
 * Modified the contents of LICENSE such that it adheres to the CRAN template for
   the MIT license.
 * Verified the Title section of DESCRIPTION is now in title case.

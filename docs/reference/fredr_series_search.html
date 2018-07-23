@@ -258,35 +258,100 @@ Defaults to today's date. For more information, see
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># search for series with text matching "oil" and return the top 10 most popular</span>
+    <pre class="examples"><div class='input'><span class='co'># search for series with text matching "oil" and return the top 10 most popular</span>
 <span class='co'># series</span>
 <span class='fu'>fredr_series_search_text</span>(
   <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"oil"</span>,
   <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>,
   <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>
-)
-<span class='co'># search for series with text matching "oil" with the tag "usa" and return the</span>
+)</div><div class='output co'>#&gt; # A tibble: 10 x 16
+#&gt;    id    realtime_start realtime_end title observation_sta… observation_end
+#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          
+#&gt;  1 CPIA… 2018-07-22     2018-07-22   Cons… 1947-01-01       2018-06-01     
+#&gt;  2 DCOI… 2018-07-22     2018-07-22   Crud… 1986-01-02       2018-07-16     
+#&gt;  3 DCOI… 2018-07-22     2018-07-22   Crud… 1987-05-20       2018-07-16     
+#&gt;  4 WTIS… 2018-07-22     2018-07-22   Spot… 1946-01-01       2018-06-01     
+#&gt;  5 MCOI… 2018-07-22     2018-07-22   Crud… 1986-01-01       2018-06-01     
+#&gt;  6 POIL… 2018-07-22     2018-07-22   Glob… 1980-01-01       2017-06-01     
+#&gt;  7 MCOI… 2018-07-22     2018-07-22   Crud… 1987-05-01       2018-06-01     
+#&gt;  8 POIL… 2018-07-22     2018-07-22   Glob… 1980-01-01       2017-06-01     
+#&gt;  9 IPG2… 2018-07-22     2018-07-22   Indu… 1972-01-01       2018-06-01     
+#&gt; 10 WCOI… 2018-07-22     2018-07-22   Crud… 1986-01-03       2018-07-13     
+#&gt; # ... with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,
+#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,
+#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,
+#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</div><div class='input'><span class='co'># search for series with text matching "oil" with the tag "usa" and return the</span>
 <span class='co'># top 10 search results</span>
 <span class='fu'>fredr_series_search_text</span>(
   <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"oil"</span>,
   <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"search_rank"</span>,
   <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
   <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"usa"</span>
-)
-<span class='co'># search for series with text matching "unemployment" and return only series</span>
+)</div><div class='output co'>#&gt; # A tibble: 10 x 16
+#&gt;    id    realtime_start realtime_end title observation_sta… observation_end
+#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          
+#&gt;  1 DCOI… 2018-07-22     2018-07-22   Crud… 1986-01-02       2018-07-16     
+#&gt;  2 MCOI… 2018-07-22     2018-07-22   Crud… 1986-01-01       2018-06-01     
+#&gt;  3 WCOI… 2018-07-22     2018-07-22   Crud… 1986-01-03       2018-07-13     
+#&gt;  4 ACOI… 2018-07-22     2018-07-22   Crud… 1986-01-01       2017-01-01     
+#&gt;  5 DCOI… 2018-07-22     2018-07-22   Crud… 1987-05-20       2018-07-16     
+#&gt;  6 MCOI… 2018-07-22     2018-07-22   Crud… 1987-05-01       2018-06-01     
+#&gt;  7 ACOI… 2018-07-22     2018-07-22   Crud… 1987-01-01       2017-01-01     
+#&gt;  8 WCOI… 2018-07-22     2018-07-22   Crud… 1987-05-15       2018-07-13     
+#&gt;  9 WTIS… 2018-07-22     2018-07-22   Spot… 1946-01-01       2018-06-01     
+#&gt; 10 IPG2… 2018-07-22     2018-07-22   Indu… 1972-01-01       2018-06-01     
+#&gt; # ... with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,
+#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,
+#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,
+#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</div><div class='input'><span class='co'># search for series with text matching "unemployment" and return only series</span>
 <span class='co'># with monthly frequency</span>
 <span class='fu'>fredr_series_search_text</span>(
   <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"unemployment"</span>,
   <span class='kw'>filter_variable</span> <span class='kw'>=</span> <span class='st'>"frequency"</span>,
   <span class='kw'>filter_value</span> <span class='kw'>=</span> <span class='st'>"Monthly"</span>
-)
-<span class='co'># search for series ID matching "UNRATE" and return oldest series first</span>
+)</div><div class='output co'>#&gt; # A tibble: 1,000 x 16
+#&gt;    id    realtime_start realtime_end title observation_sta… observation_end
+#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          
+#&gt;  1 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     
+#&gt;  2 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     
+#&gt;  3 UNEM… 2018-07-22     2018-07-22   Unem… 1948-01-01       2018-06-01     
+#&gt;  4 M089… 2018-07-22     2018-07-22   Unem… 1929-04-01       1942-06-01     
+#&gt;  5 M089… 2018-07-22     2018-07-22   Unem… 1940-01-01       1946-12-01     
+#&gt;  6 M089… 2018-07-22     2018-07-22   Unem… 1947-01-01       1966-12-01     
+#&gt;  7 LNS1… 2018-07-22     2018-07-22   Unem… 1948-01-01       2018-06-01     
+#&gt;  8 U6RA… 2018-07-22     2018-07-22   Tota… 1994-01-01       2018-06-01     
+#&gt;  9 LNU0… 2018-07-22     2018-07-22   Unem… 1948-01-01       2018-06-01     
+#&gt; 10 LNU0… 2018-07-22     2018-07-22   Unem… 1948-01-01       2018-06-01     
+#&gt; # ... with 990 more rows, and 10 more variables: frequency &lt;chr&gt;,
+#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,
+#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,
+#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;, notes &lt;chr&gt;</div><div class='input'><span class='co'># search for series ID matching "UNRATE" and return oldest series first</span>
 <span class='fu'>fredr_series_search_id</span>(
   <span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>,
   <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"observation_start"</span>
-)
-<span class='co'># }</span></pre>
+)</div><div class='output co'>#&gt; # A tibble: 16 x 16
+#&gt;    id    realtime_start realtime_end title observation_sta… observation_end
+#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          
+#&gt;  1 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     
+#&gt;  2 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     
+#&gt;  3 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     
+#&gt;  4 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     
+#&gt;  5 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     
+#&gt;  6 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     
+#&gt;  7 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     
+#&gt;  8 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     
+#&gt;  9 UNRA… 2018-07-22     2018-07-22   Long… 2015-06-17       2018-06-13     
+#&gt; 10 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     
+#&gt; 11 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     
+#&gt; 12 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     
+#&gt; 13 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     
+#&gt; 14 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     
+#&gt; 15 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     
+#&gt; 16 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     
+#&gt; # ... with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,
+#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,
+#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,
+#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

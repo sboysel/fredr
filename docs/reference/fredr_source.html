@@ -188,12 +188,17 @@ Defaults to today's date. For more information, see
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_source</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>14L</span>)
-
+    <pre class="examples"><div class='input'><span class='fu'>fredr_source</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>14L</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
+#&gt;      id realtime_start realtime_end name                  link                 
+#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                 &lt;chr&gt;                
+#&gt; 1    14 2018-07-22     2018-07-22   University of Michig… https://www.umich.ed…</div><div class='input'>
 <span class='co'># Has this source ID ever changed over time?</span>
-<span class='fu'>fredr_source</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>14L</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"1990-01-01"</span>))
-<span class='co'># }</span></pre>
+<span class='fu'>fredr_source</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>14L</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"1990-01-01"</span>))</div><div class='output co'>#&gt; # A tibble: 3 x 5
+#&gt;      id realtime_start realtime_end name                       link            
+#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                      &lt;chr&gt;           
+#&gt; 1    14 1998-07-31     2006-12-31   Survey Research Center: U… http://www.isr.…
+#&gt; 2    14 2007-01-01     2014-12-31   Thomson Reuters/Universit… https://www.umi…
+#&gt; 3    14 2015-01-01     9999-12-31   University of Michigan     https://www.umi…</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

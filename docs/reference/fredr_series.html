@@ -197,10 +197,15 @@ Defaults to today's date. For more information, see
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Return information for the "UNRATE" series</span>
-<span class='fu'>fredr_series</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='co'># Return information for the "UNRATE" series</span>
+<span class='fu'>fredr_series</span>(<span class='kw'>series_id</span> <span class='kw'>=</span> <span class='st'>"UNRATE"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 15
+#&gt;   id    realtime_start realtime_end title observation_sta… observation_end
+#&gt; * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          
+#&gt; 1 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     
+#&gt; # ... with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,
+#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,
+#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,
+#&gt; #   notes &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
