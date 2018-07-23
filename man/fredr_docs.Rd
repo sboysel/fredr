@@ -29,10 +29,8 @@ Opens FRED API web documentation in a new browser tab.
 }
 
 \examples{
-\dontrun{
 fredr_docs()
 fredr_docs(endpoint = "category")
 fredr_docs(endpoint = "series/observations")
 fredr_docs(endpoint = "series/observations", params = TRUE)
-}
 }

@@ -38,7 +38,7 @@
 #'
 #' @examples
 #'
-#' \dontrun{
+#' \donttest{
 #' # All series tagged with "gdp"
 #' fredr_tags_series(tag_names = "gdp")
 #' # All series tagged with "gdp" and not tagged with "quarterly"

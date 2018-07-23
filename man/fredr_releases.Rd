@@ -43,7 +43,7 @@ Get all releases of economic data
 }
 
 \examples{
-\dontrun{
+\donttest{
 fredr_releases(limit = 20L)
 }
 }

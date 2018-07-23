@@ -67,7 +67,7 @@ Get the series matching tags in the \code{tag_names} parameter. Exclude tags in 
 
 \examples{
 
-\dontrun{
+\donttest{
 # All series tagged with "gdp"
 fredr_tags_series(tag_names = "gdp")
 # All series tagged with "gdp" and not tagged with "quarterly"

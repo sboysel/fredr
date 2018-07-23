@@ -43,7 +43,7 @@ Get \emph{all} sources of economic data
 }
 
 \examples{
-\dontrun{
+\donttest{
 fredr_sources(limit = 20L)
 }
 }

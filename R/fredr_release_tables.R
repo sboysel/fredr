@@ -27,7 +27,7 @@
 #'
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fredr_release_tables(release_id = 10L)
 #'
 #' # Digging further into a release element

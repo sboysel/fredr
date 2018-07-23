@@ -39,7 +39,7 @@ categories."
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Categories related to the "Employment Cost Index" category
 fredr_category_related(category_id = 4L)
 }

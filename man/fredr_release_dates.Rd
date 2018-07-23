@@ -46,7 +46,7 @@ Get release dates for a single release of economic data
 }
 
 \examples{
-\dontrun{
+\donttest{
 fredr_release_dates(release_id = 20L)
 
 # Call the function with an "as of" Date of 1997-03-14

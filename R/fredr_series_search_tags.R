@@ -47,7 +47,7 @@
 #' @seealso [fredr_series_search_text()], [fredr_series_search_id()], [fredr_series_search_related_tags()], [fredr_tags()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Search for tags matching the series text "gnp"
 #' fredr_series_search_tags("gnp")
 #' # Search for tags matching the series text "oil" and the tag text "usa"

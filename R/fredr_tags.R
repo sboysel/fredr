@@ -54,7 +54,7 @@
 #' [fredr_tags_series()], [fredr_related_tags()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Information for all tags
 #' fredr_tags()
 #' # Information for just the "gdp" and "oecd" tags

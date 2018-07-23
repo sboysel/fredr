@@ -198,12 +198,19 @@ with the release table.  Default is <code>9999-12-31</code> (latest date availab
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_release_tables</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
-
+    <pre class="examples"><div class='input'><span class='fu'>fredr_release_tables</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>10L</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 2
+#&gt;   name  value     
+#&gt;   &lt;chr&gt; &lt;list&gt;    
+#&gt; 1 34481 &lt;list [9]&gt;
+#&gt; 2 36712 &lt;list [9]&gt;</div><div class='input'>
 <span class='co'># Digging further into a release element</span>
-<span class='fu'>fredr_release_tables</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>53L</span>, <span class='kw'>element_id</span> <span class='kw'>=</span> <span class='fl'>12886</span>)
-<span class='co'># }</span></pre>
+<span class='fu'>fredr_release_tables</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>53L</span>, <span class='kw'>element_id</span> <span class='kw'>=</span> <span class='fl'>12886</span>)</div><div class='output co'>#&gt; # A tibble: 4 x 2
+#&gt;   name  value     
+#&gt;   &lt;chr&gt; &lt;list&gt;    
+#&gt; 1 12887 &lt;list [9]&gt;
+#&gt; 2 12888 &lt;list [9]&gt;
+#&gt; 3 12889 &lt;list [9]&gt;
+#&gt; 4 12890 &lt;list [9]&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

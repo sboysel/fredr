@@ -255,16 +255,36 @@ creation date, and additional notes.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-</div><span class='co'># NOT RUN {</span>
-<span class='fu'>fredr_related_tags</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"monetary aggregates;weekly"</span>)
-
+</div><div class='input'>
+<span class='fu'>fredr_related_tags</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"monetary aggregates;weekly"</span>)</div><div class='output co'>#&gt; # A tibble: 13 x 6
+#&gt;    name       group_id notes            created         popularity series_count
+#&gt;  * &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;                &lt;int&gt;        &lt;int&gt;
+#&gt;  1 nation     geot     ""               2012-02-27 10:…        100           12
+#&gt;  2 usa        geo      United States o… 2012-02-27 10:…         99           12
+#&gt;  3 frb        src      Board of Govern… 2012-02-27 10:…         79           10
+#&gt;  4 h6         rls      H.6 Money Stock… 2012-08-16 15:…         48           10
+#&gt;  5 nsa        seas     Not Seasonally … 2012-02-27 10:…        100            6
+#&gt;  6 sa         seas     Seasonally Adju… 2012-02-27 10:…         87            6
+#&gt;  7 m1         gen      M1 Money Stock   2012-02-27 10:…         46            4
+#&gt;  8 m2         gen      M2 Money Stock   2012-02-27 10:…         44            4
+#&gt;  9 currency   gen      ""               2012-02-27 10:…         63            2
+#&gt; 10 discontin… gen      ""               2012-02-27 10:…         68            2
+#&gt; 11 frb stl    src      St. Louis Fed    2012-02-27 10:…         64            2
+#&gt; 12 m3         gen      M3 Money Stock   2012-02-27 10:…         37            2
+#&gt; 13 mzm        gen      MZM Money Stock  2012-02-27 10:…         27            2</div><div class='input'>
 <span class='fu'>fredr_related_tags</span>(
    <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"monetary aggregates;weekly"</span>,
    <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='st'>"gen"</span>
- )
-
-
-<span class='co'># }</span></pre>
+ )</div><div class='output co'>#&gt; # A tibble: 6 x 6
+#&gt;   name        group_id notes         created            popularity series_count
+#&gt; * &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;
+#&gt; 1 m1          gen      M1 Money Sto… 2012-02-27 10:18:…         46            4
+#&gt; 2 m2          gen      M2 Money Sto… 2012-02-27 10:18:…         44            4
+#&gt; 3 currency    gen      ""            2012-02-27 10:18:…         63            2
+#&gt; 4 discontinu… gen      ""            2012-02-27 10:18:…         68            2
+#&gt; 5 m3          gen      M3 Money Sto… 2012-02-27 10:18:…         37            2
+#&gt; 6 mzm         gen      MZM Money St… 2012-02-27 10:18:…         27            2</div><div class='input'>
+ </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

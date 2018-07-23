@@ -31,7 +31,7 @@ Get a release of economic data
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Release as of today
 fredr_release(release_id = 20)
 

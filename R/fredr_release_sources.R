@@ -21,7 +21,7 @@
 #' [fredr_release_related_tags()], [fredr_release_tables()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Where does the data for ID 10 come from?
 #' fredr_release_sources(release_id = 10L)
 #' }

@@ -31,7 +31,7 @@ Get the sources for a release of economic data
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Where does the data for ID 10 come from?
 fredr_release_sources(release_id = 10L)
 }

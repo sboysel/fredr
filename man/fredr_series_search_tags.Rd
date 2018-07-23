@@ -68,7 +68,7 @@ series count, and additional notes.
 Return the FRED tags by searching for matches in series text.
 }
 \examples{
-\dontrun{
+\donttest{
 # Search for tags matching the series text "gnp"
 fredr_series_search_tags("gnp")
 # Search for tags matching the series text "oil" and the tag text "usa"

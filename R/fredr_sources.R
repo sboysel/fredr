@@ -31,7 +31,7 @@
 #' @seealso [fredr_source()], [fredr_source_releases()]
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fredr_sources(limit = 20L)
 #' }
 #' @export

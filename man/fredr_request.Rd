@@ -41,7 +41,8 @@ object from \code{\link[httr]{GET}} or the response parsed as a \code{tibble}.
 }
 
 \examples{
-\dontrun{
+\donttest{
+
 fredr_request(
   endpoint = "series/observations",
   series_id = "GNPCA",
@@ -49,8 +50,6 @@ fredr_request(
   observation_end = "2000-01-01"
 )
 # Compare with to_frame = TRUE
-library(httr)
-library(tidyverse)
 resp <- fredr_request(
   endpoint = "series/observations",
   series_id = "GNPCA",
@@ -58,9 +57,6 @@ resp <- fredr_request(
   observation_end = "2000-01-01",
   to_frame = FALSE
 )
-data <- resp \%>\%
-httr::content() \%>\%
-  .$observations \%>\%
-  purrr::map_df(.f = function(x) tibble::as_tibble(x = x))
+
 }
 }

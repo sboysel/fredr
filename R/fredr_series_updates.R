@@ -35,7 +35,7 @@
 #' [fredr_series_vintagedates()].
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Get all recently updated "regional" series
 #' fredr_series_updates(filter_value = "regional")
 #' # Most recently udpated series are returned first

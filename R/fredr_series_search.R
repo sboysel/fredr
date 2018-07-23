@@ -54,7 +54,7 @@
 #' [fredr_series_vintagedates()].
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # search for series with text matching "oil" and return the top 10 most popular
 #' # series
 #' fredr_series_search_text(

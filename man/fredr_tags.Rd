@@ -74,7 +74,7 @@ all tags are returned, unfiltered, up to the \code{limit}.
 }
 
 \examples{
-\dontrun{
+\donttest{
 # Information for all tags
 fredr_tags()
 # Information for just the "gdp" and "oecd" tags

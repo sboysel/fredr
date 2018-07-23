@@ -75,7 +75,7 @@ Get the series on a release of economic data
 }
 
 \examples{
-\dontrun{
+\donttest{
 fredr_release_series(release_id = 20L)
 
 fredr_release_series(release_id = 20L, order_by = "popularity")
