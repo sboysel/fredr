@@ -7,6 +7,11 @@ This is a resubmission. In this version I have:
 * Added packages used only for examples to Suggests section of DESCRIPTION
 * Modified examples using packages in Suggests section of DESCRIPTION to only 
   run if the package is available.
+  
+Note: The examples for fredr_tags() and fredr_tags_series() take greater than 5s
+due to the response time from the FRED API itself.  No modifications to the R code
+or changes to parameters such as 'limit' seem to be able to increase this response
+time.
 
 ## Previous resubmissions
 
