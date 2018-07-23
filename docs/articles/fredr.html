@@ -189,24 +189,26 @@
 <a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#&gt;  9 1992-01-01 UNRATE     0.267 </span></a>
 <a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#&gt; 10 1992-04-01 UNRATE     0.233 </span></a>
 <a class="sourceLine" id="cb6-20" data-line-number="20"><span class="co">#&gt; # ... with 104 more rows</span></a></code></pre></div>
-<p><code>fredr</code> plays nicely with the <a href="https://www.tidyverse.org/">tidyverse</a>:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw"><a href="../reference/fredr_series_search.html">fredr_series_search_text</a></span>(</a>
-<a class="sourceLine" id="cb7-3" data-line-number="3">  <span class="dt">search_text =</span> <span class="st">"federal funds"</span>,</a>
-<a class="sourceLine" id="cb7-4" data-line-number="4">  <span class="dt">order_by =</span> <span class="st">"popularity"</span>,</a>
-<a class="sourceLine" id="cb7-5" data-line-number="5">  <span class="dt">sort_order =</span> <span class="st">"desc"</span>,</a>
-<a class="sourceLine" id="cb7-6" data-line-number="6">  <span class="dt">limit =</span> <span class="dv">1</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="st">  </span><span class="kw">pull</span>(id) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="../reference/fredr.html">fredr</a></span>(<span class="dt">series_id =</span> .) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="st">  </span><span class="kw">ggplot</span>(<span class="dt">data =</span> ., <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> date, <span class="dt">y =</span> value, <span class="dt">color =</span> series_id)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="st">    </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">"Observation Date"</span>, <span class="dt">y =</span> <span class="st">"Rate"</span>, <span class="dt">color =</span> <span class="st">"Series"</span>)</a></code></pre></div>
+<p><code>fredr</code> plays nicely with <a href="https://www.tidyverse.org/">tidyverse</a> packages:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="kw"><a href="../reference/fredr_series_search.html">fredr_series_search_text</a></span>(</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">  <span class="dt">search_text =</span> <span class="st">"federal funds"</span>,</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">  <span class="dt">order_by =</span> <span class="st">"popularity"</span>,</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6">  <span class="dt">sort_order =</span> <span class="st">"desc"</span>,</a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">  <span class="dt">limit =</span> <span class="dv">1</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/pull.html">pull</a></span>(id) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="st">  </span><span class="kw"><a href="../reference/fredr.html">fredr</a></span>(<span class="dt">series_id =</span> .) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(<span class="dt">data =</span> ., <span class="dt">mapping =</span> <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">x =</span> date, <span class="dt">y =</span> value, <span class="dt">color =</span> series_id)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="st">    </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_path">geom_line</a></span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="st">    </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">x =</span> <span class="st">"Observation Date"</span>, <span class="dt">y =</span> <span class="st">"Rate"</span>, <span class="dt">color =</span> <span class="st">"Series"</span>)</a></code></pre></div>
 <p><img src="fredr_files/figure-html/fredr_series_observations3-1.png" width="672"></p>
 <p>Since <code><a href="../reference/fredr.html">fredr()</a></code> returns a <code>tibble</code> with a series ID, mapping <code><a href="../reference/fredr.html">fredr()</a></code> over a vector of series IDs can be achieved as follows:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">map_dfr</span>(<span class="kw">c</span>(<span class="st">"UNRATE"</span>, <span class="st">"FEDFUNDS"</span>), fredr) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="st">  </span><span class="kw">ggplot</span>(<span class="dt">data =</span> ., <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> date, <span class="dt">y =</span> value, <span class="dt">color =</span> series_id)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="st">    </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">"Observation Date"</span>, <span class="dt">y =</span> <span class="st">"Rate"</span>, <span class="dt">color =</span> <span class="st">"Series"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">library</span>(purrr)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="kw"><a href="http://www.rdocumentation.org/packages/purrr/topics/map">map_dfr</a></span>(<span class="kw">c</span>(<span class="st">"UNRATE"</span>, <span class="st">"FEDFUNDS"</span>), fredr) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(<span class="dt">data =</span> ., <span class="dt">mapping =</span> <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">x =</span> date, <span class="dt">y =</span> value, <span class="dt">color =</span> series_id)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="st">    </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_path">geom_line</a></span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="st">    </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">x =</span> <span class="st">"Observation Date"</span>, <span class="dt">y =</span> <span class="st">"Rate"</span>, <span class="dt">color =</span> <span class="st">"Series"</span>)</a></code></pre></div>
 <p><img src="fredr_files/figure-html/fredr_series_observations4-1.png" width="672"></p>
 <p>Using <code><a href="http://www.rdocumentation.org/packages/purrr/topics/map2">purrr::pmap_dfr()</a></code> allows you to use varying optional parameters as well.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">params &lt;-<span class="st"> </span><span class="kw">list</span>(</a>
@@ -214,7 +216,7 @@
 <a class="sourceLine" id="cb9-3" data-line-number="3">  <span class="dt">frequency =</span> <span class="kw">c</span>(<span class="st">"m"</span>, <span class="st">"q"</span>)</a>
 <a class="sourceLine" id="cb9-4" data-line-number="4">)</a>
 <a class="sourceLine" id="cb9-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="kw">pmap_dfr</span>(</a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="kw"><a href="http://www.rdocumentation.org/packages/purrr/topics/map2">pmap_dfr</a></span>(</a>
 <a class="sourceLine" id="cb9-7" data-line-number="7">  <span class="dt">.l =</span> params,</a>
 <a class="sourceLine" id="cb9-8" data-line-number="8">  <span class="dt">.f =</span> <span class="op">~</span><span class="st"> </span><span class="kw"><a href="../reference/fredr.html">fredr</a></span>(<span class="dt">series_id =</span> .x, <span class="dt">frequency =</span> .y)</a>
 <a class="sourceLine" id="cb9-9" data-line-number="9">)</a>
@@ -235,8 +237,8 @@
 <p>It is relatively straightforward to convert <code>tibbles</code> returned by <code>fredr</code> into other time series objects. For example,</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">library</span>(xts)</a>
 <a class="sourceLine" id="cb10-2" data-line-number="2">gnpca &lt;-<span class="st"> </span><span class="kw"><a href="../reference/fredr.html">fredr</a></span>(<span class="dt">series_id =</span> <span class="st">"GNPCA"</span>, <span class="dt">units =</span> <span class="st">"log"</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">value =</span> value <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(value)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(value))</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="dt">value =</span> value <span class="op">-</span><span class="st"> </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/lead-lag.html">lag</a></span>(value)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="op">!</span><span class="kw">is.na</span>(value))</a>
 <a class="sourceLine" id="cb10-5" data-line-number="5"></a>
 <a class="sourceLine" id="cb10-6" data-line-number="6">gnpca_xts &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/xts/topics/xts">xts</a></span>(</a>
 <a class="sourceLine" id="cb10-7" data-line-number="7">  <span class="dt">x =</span> gnpca<span class="op">$</span>value,</a>
@@ -293,16 +295,16 @@
 <a class="sourceLine" id="cb14-2" data-line-number="2"><span class="co">#&gt; # A tibble: 25 x 16</span></a>
 <a class="sourceLine" id="cb14-3" data-line-number="3"><span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span></a>
 <a class="sourceLine" id="cb14-4" data-line-number="4"><span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span></a>
-<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="co">#&gt;  1 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="co">#&gt;  2 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb14-7" data-line-number="7"><span class="co">#&gt;  3 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-10-01     </span></a>
-<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co">#&gt;  4 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-10-01     </span></a>
-<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="co">#&gt;  5 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb14-10" data-line-number="10"><span class="co">#&gt;  6 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb14-11" data-line-number="11"><span class="co">#&gt;  7 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-10-01     </span></a>
-<a class="sourceLine" id="cb14-12" data-line-number="12"><span class="co">#&gt;  8 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-10-01     </span></a>
-<a class="sourceLine" id="cb14-13" data-line-number="13"><span class="co">#&gt;  9 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-01-01     </span></a>
-<a class="sourceLine" id="cb14-14" data-line-number="14"><span class="co">#&gt; 10 LFWA… 2018-07-21     2018-07-21   Work… 2008-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="co">#&gt;  1 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="co">#&gt;  2 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb14-7" data-line-number="7"><span class="co">#&gt;  3 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-10-01     </span></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co">#&gt;  4 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-10-01     </span></a>
+<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="co">#&gt;  5 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb14-10" data-line-number="10"><span class="co">#&gt;  6 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb14-11" data-line-number="11"><span class="co">#&gt;  7 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-10-01     </span></a>
+<a class="sourceLine" id="cb14-12" data-line-number="12"><span class="co">#&gt;  8 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-10-01     </span></a>
+<a class="sourceLine" id="cb14-13" data-line-number="13"><span class="co">#&gt;  9 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span></a>
+<a class="sourceLine" id="cb14-14" data-line-number="14"><span class="co">#&gt; 10 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span></a>
 <a class="sourceLine" id="cb14-15" data-line-number="15"><span class="co">#&gt; # ... with 15 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb14-16" data-line-number="16"><span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb14-17" data-line-number="17"><span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></a>
@@ -316,7 +318,7 @@
 <a class="sourceLine" id="cb15-5" data-line-number="5">  <span class="dt">to_frame =</span> <span class="ot">FALSE</span></a>
 <a class="sourceLine" id="cb15-6" data-line-number="6">)</a>
 <a class="sourceLine" id="cb15-7" data-line-number="7"><span class="co">#&gt; Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&amp;api_key=d3ef3490ef7270cf903d07141e9e7db7&amp;file_type=json]</span></a>
-<a class="sourceLine" id="cb15-8" data-line-number="8"><span class="co">#&gt;   Date: 2018-07-22 04:00</span></a>
+<a class="sourceLine" id="cb15-8" data-line-number="8"><span class="co">#&gt;   Date: 2018-07-23 01:07</span></a>
 <a class="sourceLine" id="cb15-9" data-line-number="9"><span class="co">#&gt;   Status: 200</span></a>
 <a class="sourceLine" id="cb15-10" data-line-number="10"><span class="co">#&gt;   Content-Type: application/json; charset=UTF-8</span></a>
 <a class="sourceLine" id="cb15-11" data-line-number="11"><span class="co">#&gt;   Size: 79.8 kB</span></a></code></pre></div>
