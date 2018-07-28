@@ -7,13 +7,12 @@ opts_chunk$set(fig.width = 7,
                comment = "#>")
 ```
 [![Travis
-branch](https://img.shields.io/travis/sboysel/fredr/master.svg?style=flat-square)](https://travis-ci.org/sboysel/fredr)
+branch](https://img.shields.io/travis/sboysel/fredr/master.svg)](https://travis-ci.org/sboysel/fredr)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/sboysel/fredr?branch=master&svg=true)](https://ci.appveyor.com/project/sboysel/fredr)
-[![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg?style=flat-square)](https://codecov.io/github/sboysel/fredr)
-[![GitHub
-release](https://img.shields.io/github/release/sboysel/fredr.svg?style=flat-square)](https://github.com/sboysel/fredr/releases)
-[![GitHub
-license](https://img.shields.io/github/license/sboysel/fredr.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg)](https://codecov.io/github/sboysel/fredr)
+[![CRAN](https://img.shields.io/cran/v/fredr.svg)](https://cran.r-project.org/web/packages/fredr/index.html)
+
+
 
 `fredr` provides a complete set of `R` bindings to the [Federal Reserve Economic
 Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API, provided by 

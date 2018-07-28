@@ -191,7 +191,7 @@ Defaults to today's date. For more information, see
     <pre class="examples"><div class='input'><span class='fu'>fredr_source</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>14L</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;      id realtime_start realtime_end name                  link                 
 #&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                 &lt;chr&gt;                
-#&gt; 1    14 2018-07-22     2018-07-22   University of Michig… https://www.umich.ed…</div><div class='input'>
+#&gt; 1    14 2018-07-28     2018-07-28   University of Michig… https://www.umich.ed…</div><div class='input'>
 <span class='co'># Has this source ID ever changed over time?</span>
 <span class='fu'>fredr_source</span>(<span class='kw'>source_id</span> <span class='kw'>=</span> <span class='fl'>14L</span>, <span class='kw'>realtime_start</span> <span class='kw'>=</span> <span class='fu'>as.Date</span>(<span class='st'>"1990-01-01"</span>))</div><div class='output co'>#&gt; # A tibble: 3 x 5
 #&gt;      id realtime_start realtime_end name                       link            
