@@ -28,8 +28,9 @@ Suggests:
   testthat,
   zoo,
   xts
+Encoding: UTF-8
 License: MIT + file LICENSE 
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr
