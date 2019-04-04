@@ -57,10 +57,12 @@ fredr_request <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
   params$api_key <- Sys.getenv("FRED_API_KEY")
   params$file_type <- "json"
 
-  resp <- httr::GET(
+  resp <- httr::RETRY(
+    verb = "GET",
     url = "https://api.stlouisfed.org/",
     path = paste0("fred/", endpoint),
-    query = params
+    query = params,
+    times = 10L
   )
 
   if (print_req) {
