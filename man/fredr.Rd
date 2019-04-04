@@ -6,14 +6,15 @@
 \title{Get observations of a FRED series}
 \usage{
 fredr_series_observations(series_id = NULL, observation_start = NULL,
-  observation_end = NULL, frequency = NULL, aggregation_method = NULL,
-  limit = NULL, offset = NULL, sort_order = NULL, units = NULL,
-  realtime_start = NULL, realtime_end = NULL, vintage_dates = NULL,
-  output_type = NULL)
+  observation_end = NULL, frequency = NULL,
+  aggregation_method = NULL, limit = NULL, offset = NULL,
+  sort_order = NULL, units = NULL, realtime_start = NULL,
+  realtime_end = NULL, vintage_dates = NULL, output_type = NULL)
 
-fredr(series_id = NULL, observation_start = NULL, observation_end = NULL,
-  frequency = NULL, aggregation_method = NULL, limit = NULL,
-  offset = NULL, sort_order = NULL, units = NULL, realtime_start = NULL,
+fredr(series_id = NULL, observation_start = NULL,
+  observation_end = NULL, frequency = NULL,
+  aggregation_method = NULL, limit = NULL, offset = NULL,
+  sort_order = NULL, units = NULL, realtime_start = NULL,
   realtime_end = NULL, vintage_dates = NULL, output_type = NULL)
 }
 \arguments{

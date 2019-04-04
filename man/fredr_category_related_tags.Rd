@@ -43,7 +43,7 @@ long series.  This mimics the idea of \emph{pagination} to retrieve large amount
 of data over multiple calls. Defaults to \code{0}.}
 
 \item{order_by}{Order results by values of the specified attribute.
-Possible values include: \code{"series_count"} (default), \code{"popularity"``,}"created"\code{,}"name"\code{,}"group_id"`.}
+Possible values include: \code{"series_count"} (default), \code{"popularity"``, }"created"\code{, }"name"\code{, }"group_id"`.}
 
 \item{sort_order}{A string representing the order of the resulting series.
 Possible values are: \code{"asc"} (default), and \code{"desc"}.}

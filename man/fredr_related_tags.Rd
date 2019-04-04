@@ -5,9 +5,9 @@
 \title{Get related FRED tags given one or more tags}
 \usage{
 fredr_related_tags(tag_names = NULL, exclude_tag_names = NULL,
-  tag_group_id = NULL, search_text = NULL, limit = NULL, offset = NULL,
-  order_by = NULL, sort_order = NULL, realtime_start = NULL,
-  realtime_end = NULL)
+  tag_group_id = NULL, search_text = NULL, limit = NULL,
+  offset = NULL, order_by = NULL, sort_order = NULL,
+  realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
 \item{tag_names}{A semicolon delimited string of tag names to be related to.

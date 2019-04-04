@@ -5,8 +5,8 @@
 \title{Get a set of recently updated FRED series}
 \usage{
 fredr_series_updates(filter_value = NULL, start_time = NULL,
-  end_time = NULL, limit = NULL, offset = NULL, realtime_start = NULL,
-  realtime_end = NULL)
+  end_time = NULL, limit = NULL, offset = NULL,
+  realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
 \item{filter_value}{Filter results by type of geographic region of economic

@@ -4,7 +4,8 @@
 \alias{fredr_source}
 \title{Get a source of economic data}
 \usage{
-fredr_source(source_id = NULL, realtime_start = NULL, realtime_end = NULL)
+fredr_source(source_id = NULL, realtime_start = NULL,
+  realtime_end = NULL)
 }
 \arguments{
 \item{source_id}{An integer ID for the data source.  \emph{Required parameter}.}
