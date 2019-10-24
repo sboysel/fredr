@@ -70,12 +70,12 @@ fredr_request <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
   }
 
   if (resp$status_code != 200) {
-    err <- httr::content(resp)
+    err <- httr::content(resp, encoding = "utf8")
     stop(paste0(err$error_code, ": ", err$error_message))
   }
 
   if (to_frame) {
-    parsed <- jsonlite::fromJSON(httr::content(resp, "text"))
+    parsed <- jsonlite::fromJSON(httr::content(resp, "text", encoding = "utf8"))
     if (endpoint %in% c("category",
                         "category/children",
                         "category/related",
