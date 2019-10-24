@@ -1,3 +1,5 @@
+# fredr (development version)
+
 # fredr 1.0.0
 
 Initial release for CRAN.  All endpoint functions for the FRED API are now 
