@@ -4,9 +4,15 @@
 \alias{fredr_release_dates}
 \title{Get release dates for a single release of economic data}
 \usage{
-fredr_release_dates(release_id = NULL, limit = NULL, offset = NULL,
-  sort_order = NULL, include_release_dates_with_no_data = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_release_dates(
+  release_id = NULL,
+  limit = NULL,
+  offset = NULL,
+  sort_order = NULL,
+  include_release_dates_with_no_data = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}

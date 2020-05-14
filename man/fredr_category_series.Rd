@@ -4,10 +4,19 @@
 \alias{fredr_category_series}
 \title{Get the series in a category}
 \usage{
-fredr_category_series(category_id = 0L, filter_variable = NULL,
-  filter_value = NULL, tag_names = NULL, exclude_tag_names = NULL,
-  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_category_series(
+  category_id = 0L,
+  filter_variable = NULL,
+  filter_value = NULL,
+  tag_names = NULL,
+  exclude_tag_names = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{category_id}{An integer ID for the category.  Default is \code{0} for the

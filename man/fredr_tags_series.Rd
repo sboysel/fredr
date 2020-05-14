@@ -4,9 +4,16 @@
 \alias{fredr_tags_series}
 \title{Find FRED series matching tag names}
 \usage{
-fredr_tags_series(tag_names = NULL, exclude_tag_names = NULL,
-  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_tags_series(
+  tag_names = NULL,
+  exclude_tag_names = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{tag_names}{A semicolon delimited string of tag names to

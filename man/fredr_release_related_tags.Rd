@@ -4,10 +4,19 @@
 \alias{fredr_release_related_tags}
 \title{Get the related FRED tags for one or more FRED tags within a release}
 \usage{
-fredr_release_related_tags(release_id = NULL, tag_names = NULL,
-  exclude_tag_names = NULL, tag_group_id = NULL, search_text = NULL,
-  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_release_related_tags(
+  release_id = NULL,
+  tag_names = NULL,
+  exclude_tag_names = NULL,
+  tag_group_id = NULL,
+  search_text = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}

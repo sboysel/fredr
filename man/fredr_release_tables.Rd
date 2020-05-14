@@ -4,8 +4,12 @@
 \alias{fredr_release_tables}
 \title{Get release table trees for a given release}
 \usage{
-fredr_release_tables(release_id = NULL, element_id = NULL,
-  include_observation_values = NULL, observation_date = NULL)
+fredr_release_tables(
+  release_id = NULL,
+  element_id = NULL,
+  include_observation_values = NULL,
+  observation_date = NULL
+)
 }
 \arguments{
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}

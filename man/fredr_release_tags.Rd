@@ -4,10 +4,18 @@
 \alias{fredr_release_tags}
 \title{Get the FRED tags for a release}
 \usage{
-fredr_release_tags(release_id = NULL, tag_names = NULL,
-  tag_group_id = NULL, search_text = NULL, limit = NULL,
-  offset = NULL, order_by = NULL, sort_order = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_release_tags(
+  release_id = NULL,
+  tag_names = NULL,
+  tag_group_id = NULL,
+  search_text = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}

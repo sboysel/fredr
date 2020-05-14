@@ -5,16 +5,33 @@
 \alias{fredr_series_search_id}
 \title{Search for a FRED series.}
 \usage{
-fredr_series_search_text(search_text = NULL, tag_names = NULL,
-  exclude_tag_names = NULL, filter_variable = NULL,
-  filter_value = NULL, limit = NULL, offset = NULL,
-  order_by = NULL, sort_order = NULL, realtime_start = NULL,
-  realtime_end = NULL)
+fredr_series_search_text(
+  search_text = NULL,
+  tag_names = NULL,
+  exclude_tag_names = NULL,
+  filter_variable = NULL,
+  filter_value = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 
-fredr_series_search_id(search_text = NULL, limit = 1000L, offset = 0,
-  order_by = NULL, sort_order = "asc", filter_variable = NULL,
-  filter_value = NULL, realtime_start = NULL, realtime_end = NULL,
-  tag_names = NULL, exclude_tag_names = NULL)
+fredr_series_search_id(
+  search_text = NULL,
+  limit = 1000L,
+  offset = 0,
+  order_by = NULL,
+  sort_order = "asc",
+  filter_variable = NULL,
+  filter_value = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL,
+  tag_names = NULL,
+  exclude_tag_names = NULL
+)
 }
 \arguments{
 \item{search_text}{A string containing the words to match against economic

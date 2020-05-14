@@ -4,9 +4,15 @@
 \alias{fredr_releases_dates}
 \title{Get release dates for \emph{all} releases of economic data.}
 \usage{
-fredr_releases_dates(limit = NULL, offset = NULL, sort_order = NULL,
-  order_by = NULL, include_release_dates_with_no_data = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_releases_dates(
+  limit = NULL,
+  offset = NULL,
+  sort_order = NULL,
+  order_by = NULL,
+  include_release_dates_with_no_data = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{limit}{An integer limit on the maximum number of results to return.

@@ -4,10 +4,19 @@
 \alias{fredr_release_series}
 \title{Get the series on a release of economic data}
 \usage{
-fredr_release_series(release_id = NULL, filter_variable = NULL,
-  filter_value = NULL, tag_names = NULL, exclude_tag_names = NULL,
-  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_release_series(
+  release_id = NULL,
+  filter_variable = NULL,
+  filter_value = NULL,
+  tag_names = NULL,
+  exclude_tag_names = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}
