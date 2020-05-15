@@ -4,8 +4,11 @@
 \alias{fredr_release_sources}
 \title{Get the sources for a release of economic data}
 \usage{
-fredr_release_sources(release_id = NULL, realtime_start = NULL,
-  realtime_end = NULL)
+fredr_release_sources(
+  release_id = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{release_id}{An integer ID of the release. \emph{Required parameter.}}

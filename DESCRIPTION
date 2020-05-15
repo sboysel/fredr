@@ -1,6 +1,6 @@
 Package: fredr
 Title: An R Client for the 'FRED' API
-Version: 1.0.0.9000
+Version: 1.1.0.9000
 Authors@R: c(
     person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre")),
     person("Davis", "Vaughan", email = "dvaughan@business-science.io", role = c("aut"))
@@ -32,5 +32,5 @@ Encoding: UTF-8
 License: MIT + file LICENSE 
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr

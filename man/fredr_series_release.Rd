@@ -4,8 +4,11 @@
 \alias{fredr_series_release}
 \title{Get the release for a FRED series}
 \usage{
-fredr_series_release(series_id = NULL, realtime_start = NULL,
-  realtime_end = NULL)
+fredr_series_release(
+  series_id = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}

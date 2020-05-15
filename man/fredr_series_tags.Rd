@@ -4,8 +4,13 @@
 \alias{fredr_series_tags}
 \title{Get the tags for a FRED series}
 \usage{
-fredr_series_tags(series_id = NULL, order_by = NULL,
-  sort_order = NULL, realtime_start = NULL, realtime_end = NULL)
+fredr_series_tags(
+  series_id = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}
@@ -26,7 +31,7 @@ Defaults to today's date. For more information, see
 \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble`` object where each row is represents a tag associated with the series specified by }series_id`.  Data include tag name, group ID,
+A \verb{tibble`` object where each row is represents a tag associated with the series specified by }series_id`.  Data include tag name, group ID,
 popularity, series count, tag creation date, and additional notes.
 }
 \description{

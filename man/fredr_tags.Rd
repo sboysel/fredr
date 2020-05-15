@@ -4,9 +4,17 @@
 \alias{fredr_tags}
 \title{Get FRED series tags}
 \usage{
-fredr_tags(tag_names = NULL, tag_group_id = NULL, search_text = NULL,
-  limit = NULL, offset = NULL, order_by = NULL, sort_order = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_tags(
+  tag_names = NULL,
+  tag_group_id = NULL,
+  search_text = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{tag_names}{A semicolon delimited string of tag names to only

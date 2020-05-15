@@ -4,8 +4,11 @@
 \alias{fredr_category_children}
 \title{Get the child categories for a specified FRED parent category}
 \usage{
-fredr_category_children(category_id = 0L, realtime_start = NULL,
-  realtime_end = NULL)
+fredr_category_children(
+  category_id = 0L,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{category_id}{An integer ID for the category.  Default is \code{0} for the

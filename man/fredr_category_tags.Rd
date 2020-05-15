@@ -4,10 +4,18 @@
 \alias{fredr_category_tags}
 \title{Get the FRED tags for a category}
 \usage{
-fredr_category_tags(category_id = 0L, tag_names = NULL,
-  tag_group_id = NULL, search_text = NULL, limit = NULL,
-  offset = NULL, order_by = NULL, sort_order = NULL,
-  realtime_start = NULL, realtime_end = NULL)
+fredr_category_tags(
+  category_id = 0L,
+  tag_names = NULL,
+  tag_group_id = NULL,
+  search_text = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{category_id}{An integer ID for the category.  Default is \code{0} for the
@@ -38,7 +46,7 @@ long series.  This mimics the idea of \emph{pagination} to retrieve large amount
 of data over multiple calls. Defaults to \code{0}.}
 
 \item{order_by}{Order results by values of the specified attribute.
-Possible values include: \code{"series_count"} (default), \code{"popularity"``, }"created"\code{, }"name"\code{, }"group_id"`.}
+Possible values include: \code{"series_count"} (default), \verb{"popularity"``, }"created"\verb{, }"name"\verb{, }"group_id"`.}
 
 \item{sort_order}{A string representing the order of the resulting series.
 Possible values are: \code{"asc"} (default), and \code{"desc"}.}

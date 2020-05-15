@@ -4,8 +4,14 @@
 \alias{fredr_sources}
 \title{Get \emph{all} sources of economic data}
 \usage{
-fredr_sources(limit = NULL, offset = NULL, order_by = NULL,
-  sort_order = NULL, realtime_start = NULL, realtime_end = NULL)
+fredr_sources(
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{limit}{An integer limit on the maximum number of results to return.

@@ -4,9 +4,14 @@
 \alias{fredr_series_vintagedates}
 \title{Get the data vintage dates for a FRED series}
 \usage{
-fredr_series_vintagedates(series_id = NULL, limit = NULL,
-  offset = NULL, sort_order = NULL, realtime_start = NULL,
-  realtime_end = NULL)
+fredr_series_vintagedates(
+  series_id = NULL,
+  limit = NULL,
+  offset = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}

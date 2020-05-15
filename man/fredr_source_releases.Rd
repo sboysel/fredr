@@ -4,9 +4,15 @@
 \alias{fredr_source_releases}
 \title{Get the releases for a source}
 \usage{
-fredr_source_releases(source_id = NULL, limit = NULL, offset = NULL,
-  order_by = NULL, sort_order = NULL, realtime_start = NULL,
-  realtime_end = NULL)
+fredr_source_releases(
+  source_id = NULL,
+  limit = NULL,
+  offset = NULL,
+  order_by = NULL,
+  sort_order = NULL,
+  realtime_start = NULL,
+  realtime_end = NULL
+)
 }
 \arguments{
 \item{source_id}{An integer ID for the data source.  \emph{Required parameter}.}
