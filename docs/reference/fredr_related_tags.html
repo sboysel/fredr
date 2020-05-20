@@ -81,7 +81,7 @@ exclude_tag_names parameter." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
       </span>
     </div>
 
@@ -264,10 +264,10 @@ creation date, and additional notes.</p>
 <p><a href='https://research.stlouisfed.org/docs/api/fred/related_tags.html'>fred/related_tags</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code>fredr_category_tags()</code>, <code>fredr_category_related_tags()</code>, <code>fredr_docs()</code>,
-<code>fredr_release_tags()</code>, <code>fredr_release_related_tags()</code>,
-<code>fredr_series_search_tags()</code>, <code>fredr_series_search_related_tags()</code>,
-<code>fredr_tags_series()</code>, <code>fredr_tags()</code></p></div>
+    <div class='dont-index'><p><code><a href='fredr_category_tags.html'>fredr_category_tags()</a></code>, <code><a href='fredr_category_related_tags.html'>fredr_category_related_tags()</a></code>, <code><a href='fredr_docs.html'>fredr_docs()</a></code>,
+<code><a href='fredr_release_tags.html'>fredr_release_tags()</a></code>, <code><a href='fredr_release_related_tags.html'>fredr_release_related_tags()</a></code>,
+<code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>,
+<code><a href='fredr_tags_series.html'>fredr_tags_series()</a></code>, <code><a href='fredr_tags.html'>fredr_tags()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
@@ -280,7 +280,7 @@ creation date, and additional notes.</p>
 #&gt; </span><span style='color: #555555;'> 2</span><span> usa              geo      </span><span style='color: #555555;'>"</span><span>United State… 2012-02-27 …        100           12
 #&gt; </span><span style='color: #555555;'> 3</span><span> frb              src      </span><span style='color: #555555;'>"</span><span>Board of Gov… 2012-02-27 …         81           10
 #&gt; </span><span style='color: #555555;'> 4</span><span> h6               rls      </span><span style='color: #555555;'>"</span><span>H.6 Money St… 2012-08-16 …         49           10
-#&gt; </span><span style='color: #555555;'> 5</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …        100           10
+#&gt; </span><span style='color: #555555;'> 5</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …         99           10
 #&gt; </span><span style='color: #555555;'> 6</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100            8
 #&gt; </span><span style='color: #555555;'> 7</span><span> m1               gen      </span><span style='color: #555555;'>"</span><span>M1 Money Sto… 2012-02-27 …         48            6
 #&gt; </span><span style='color: #555555;'> 8</span><span> m2               gen      </span><span style='color: #555555;'>"</span><span>M2 Money Sto… 2012-02-27 …         44            4
@@ -292,12 +292,15 @@ creation date, and additional notes.</p>
 <span class='fu'>fredr_related_tags</span>(
    <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"monetary aggregates;weekly"</span>,
    <span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='st'>"gen"</span>
- )</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 3 x 6</span><span>
-#&gt;   name  group_id notes           created                popularity series_count
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> m2    gen      M2 Money Stock  2012-02-27 10:18:19-06         44            6
-#&gt; </span><span style='color: #555555;'>2</span><span> m1    gen      M1 Money Stock  2012-02-27 10:18:19-06         48            2
-#&gt; </span><span style='color: #555555;'>3</span><span> mzm   gen      MZM Money Stock 2012-02-27 10:18:19-06         28            2</div><div class='input'>
+ )</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6 x 6</span><span>
+#&gt;   name        group_id notes          created            popularity series_count
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> discontinu… gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 10:18:…         67            4
+#&gt; </span><span style='color: #555555;'>2</span><span> m1          gen      </span><span style='color: #555555;'>"</span><span>M1 Money Sto… 2012-02-27 10:18:…         48            4
+#&gt; </span><span style='color: #555555;'>3</span><span> m2          gen      </span><span style='color: #555555;'>"</span><span>M2 Money Sto… 2012-02-27 10:18:…         44            4
+#&gt; </span><span style='color: #555555;'>4</span><span> m3          gen      </span><span style='color: #555555;'>"</span><span>M3 Money Sto… 2012-02-27 10:18:…         40            4
+#&gt; </span><span style='color: #555555;'>5</span><span> currency    gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 10:18:…         62            2
+#&gt; </span><span style='color: #555555;'>6</span><span> mzm         gen      </span><span style='color: #555555;'>"</span><span>MZM Money St… 2012-02-27 10:18:…         28            2</div><div class='input'>
  # }
 </div></span></pre>
   </div>

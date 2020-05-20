@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
       </span>
     </div>
 
@@ -218,33 +218,33 @@ Defaults to today's date. For more information, see
 <p><a href='https://research.stlouisfed.org/docs/api/fred/sources.html'>fred/sources</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code>fredr_source()</code>, <code>fredr_source_releases()</code></p></div>
+    <div class='dont-index'><p><code><a href='fredr_source.html'>fredr_source()</a></code>, <code><a href='fredr_source_releases.html'>fredr_source_releases()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
 <span class='fu'>fredr_sources</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>20L</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 20 x 6</span><span>
 #&gt;       id realtime_start realtime_end name           link               notes    
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>     1 2020-05-14     2020-05-14   Board of Gove… http://www.federa… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'> 2</span><span>     3 2020-05-14     2020-05-14   Federal Reser… https://www.phila… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'> 3</span><span>     4 2020-05-14     2020-05-14   Federal Reser… http://www.stloui… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'> 4</span><span>     6 2020-05-14     2020-05-14   Federal Finan… http://www.ffiec.… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'> 5</span><span>    11 2020-05-14     2020-05-14   Dow Jones &amp; C… http://www.dowjon… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'> 6</span><span>    14 2020-05-14     2020-05-14   University of… https://www.umich… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'> 7</span><span>    15 2020-05-14     2020-05-14   Council of Ec… https://www.white… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'> 8</span><span>    16 2020-05-14     2020-05-14   U.S. Office o… https://www.white… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'> 9</span><span>    17 2020-05-14     2020-05-14   U.S. Congress… http://www.cbo.go… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>10</span><span>    18 2020-05-14     2020-05-14   U.S. Bureau o… http://www.bea.go… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>11</span><span>    19 2020-05-14     2020-05-14   U.S. Census B… http://www.census… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>12</span><span>    21 2020-05-14     2020-05-14   U.S. Departme… http://www.hud.go… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>13</span><span>    22 2020-05-14     2020-05-14   U.S. Bureau o… https://www.bls.g… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>14</span><span>    23 2020-05-14     2020-05-14   U.S. Departme… http://www.fiscal… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>15</span><span>    26 2020-05-14     2020-05-14   Haver Analyti… http://www.haver.… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>16</span><span>    31 2020-05-14     2020-05-14   Reserve Bank … http://www.rba.go… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>17</span><span>    32 2020-05-14     2020-05-14   Deutsche Bund… http://www.bundes… </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>18</span><span>    33 2020-05-14     2020-05-14   Bank of Italy  http://www.bancad… Banca d'…
-#&gt; </span><span style='color: #555555;'>19</span><span>    34 2020-05-14     2020-05-14   Swiss Nationa… http://www.snb.ch/ </span><span style='color: #BB0000;'>NA</span><span>       
-#&gt; </span><span style='color: #555555;'>20</span><span>    35 2020-05-14     2020-05-14   Central Bank … http://www.tcmb.g… Türkiye… </div><div class='input'># }
+#&gt; </span><span style='color: #555555;'> 1</span><span>     1 2020-05-20     2020-05-20   Board of Gove… http://www.federa… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'> 2</span><span>     3 2020-05-20     2020-05-20   Federal Reser… https://www.phila… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'> 3</span><span>     4 2020-05-20     2020-05-20   Federal Reser… http://www.stloui… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'> 4</span><span>     6 2020-05-20     2020-05-20   Federal Finan… http://www.ffiec.… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'> 5</span><span>    11 2020-05-20     2020-05-20   Dow Jones &amp; C… http://www.dowjon… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'> 6</span><span>    14 2020-05-20     2020-05-20   University of… https://www.umich… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'> 7</span><span>    15 2020-05-20     2020-05-20   Council of Ec… https://www.white… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'> 8</span><span>    16 2020-05-20     2020-05-20   U.S. Office o… https://www.white… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'> 9</span><span>    17 2020-05-20     2020-05-20   U.S. Congress… http://www.cbo.go… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>10</span><span>    18 2020-05-20     2020-05-20   U.S. Bureau o… http://www.bea.go… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>11</span><span>    19 2020-05-20     2020-05-20   U.S. Census B… http://www.census… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>12</span><span>    21 2020-05-20     2020-05-20   U.S. Departme… http://www.hud.go… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>13</span><span>    22 2020-05-20     2020-05-20   U.S. Bureau o… https://www.bls.g… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>14</span><span>    23 2020-05-20     2020-05-20   U.S. Departme… http://www.fiscal… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>15</span><span>    26 2020-05-20     2020-05-20   Haver Analyti… http://www.haver.… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>16</span><span>    31 2020-05-20     2020-05-20   Reserve Bank … http://www.rba.go… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>17</span><span>    32 2020-05-20     2020-05-20   Deutsche Bund… http://www.bundes… </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>18</span><span>    33 2020-05-20     2020-05-20   Bank of Italy  http://www.bancad… Banca d'…
+#&gt; </span><span style='color: #555555;'>19</span><span>    34 2020-05-20     2020-05-20   Swiss Nationa… http://www.snb.ch/ </span><span style='color: #BB0000;'>NA</span><span>       
+#&gt; </span><span style='color: #555555;'>20</span><span>    35 2020-05-20     2020-05-20   Central Bank … http://www.tcmb.g… Türkiye… </div><div class='input'># }
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
