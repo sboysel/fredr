@@ -19,12 +19,14 @@ Imports:
   tibble,
   rlang
 Suggests:
+  bindrcpp,
   covr,
   dplyr,
   ggplot2,
   here,
   httptest,
   knitr,
+  pkgdown,
   purrr,
   rmarkdown,
   testthat,
