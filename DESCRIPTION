@@ -22,6 +22,8 @@ Suggests:
   covr,
   dplyr,
   ggplot2,
+  here,
+  httptest,
   knitr,
   purrr,
   rmarkdown,

@@ -1,0 +1,14 @@
+{
+    "realtime_start": "2020-05-19",
+    "realtime_end": "2020-05-19",
+    "releases": [
+        {
+            "id": 53,
+            "realtime_start": "2020-05-19",
+            "realtime_end": "2020-05-19",
+            "name": "Gross Domestic Product",
+            "press_release": true,
+            "link": "https://www.bea.gov/data/gdp/gross-domestic-product"
+        }
+    ]
+}

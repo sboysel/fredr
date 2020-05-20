@@ -20,6 +20,7 @@ test_that("capture_args() validation: dates", {
   expect_silent(good_args <- capture_args(
     observation_start = Sys.Date(),
     observation_end = Sys.Date(),
+    observation_date = Sys.Date(),
     realtime_start = Sys.Date(),
     realtime_end = Sys.Date(),
     vintage_dates = Sys.Date()
@@ -29,12 +30,14 @@ test_that("capture_args() validation: dates", {
   # non-Date objects throw errors
   expect_error(capture_args(observation_start = "a"))
   expect_error(capture_args(observation_end = 1))
+  expect_error(capture_args(observation_date = c("a", "b")))
   expect_error(capture_args(realtime_start = TRUE))
   expect_error(capture_args(realtime_end = list(a = 1, b = 2)))
   expect_error(capture_args(vintage_dates = mtcars))
   # Unformatted character dates throw errors
   expect_error(capture_args(observation_start = "2000-01-01"))
   expect_error(capture_args(observation_end = "2000-01-01"))
+  expect_error(capture_args(observation_date = "2000-01-01"))
   expect_error(capture_args(realtime_start = "2000-01-01"))
   expect_error(capture_args(realtime_end = "2000-01-01"))
   expect_error(capture_args(vintage_dates = "2000-01-01"))
@@ -76,6 +79,7 @@ test_that("validate_series_id()", {
   numeric <- 1
   length2 <- 1:2
   expect_silent(validate_series_id(good))
+  expect_error(validate_series_id(NULL))
   expect_error(validate_series_id(numeric))
   expect_error(validate_series_id(length2))
 })
@@ -85,8 +89,32 @@ test_that("validate_release_id()", {
   char <- "bad"
   length2 <- 1:2
   expect_silent(validate_release_id(good))
+  expect_error(validate_release_id(NULL))
   expect_error(validate_release_id(char))
   expect_error(validate_release_id(length2))
+})
+
+test_that("validate_source_id()", {
+  good <- 1
+  char <- "bad"
+  length2 <- 1:2
+  expect_silent(validate_source_id(good))
+  expect_error(validate_source_id(NULL))
+  expect_error(validate_source_id(char))
+  expect_error(validate_source_id(length2))
+})
+
+test_that("validate_limit()", {
+  good <- 1
+  char <- "bad"
+  length2 <- 1:2
+  neg <- -1
+  expect_silent(validate_limit(good))
+  expect_silent(validate_limit(NULL))
+  expect_error(validate_limit(char))
+  expect_error(validate_limit(length2))
+  expect_error(validate_limit(neg))
+  expect_error(validate_limit(0))
 })
 
 test_that("validate_boolean()", {

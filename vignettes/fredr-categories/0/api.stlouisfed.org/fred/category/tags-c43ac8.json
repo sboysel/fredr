@@ -1,0 +1,35 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "popularity",
+    "sort_order": "desc",
+    "count": 3,
+    "offset": 0,
+    "limit": 1000,
+    "tags": [
+        {
+            "name": "usa",
+            "group_id": "geo",
+            "notes": "United States of America",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 1578
+        },
+        {
+            "name": "census",
+            "group_id": "src",
+            "notes": "Census",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 79,
+            "series_count": 1578
+        },
+        {
+            "name": "ga",
+            "group_id": "geo",
+            "notes": "Georgia (U.S. state)",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 50,
+            "series_count": 28
+        }
+    ]
+}

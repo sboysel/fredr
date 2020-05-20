@@ -81,7 +81,7 @@ search words set by the series_search_text parameter (optional)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
       </span>
     </div>
 
@@ -265,11 +265,11 @@ Defaults to today's date. For more information, see
 <p><a href='https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html'>series/search/related_tags</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code>fredr_series_observations()</code>, <code>fredr_series_search_text()</code>,
-<code>fredr_series_search_id()</code>, <code>fredr_series_search_tags()</code>,
-<code>fredr_series()</code>, <code>fredr_series_categories()</code>,
-<code>fredr_series_release()</code>, <code>fredr_series_tags()</code>, <code>fredr_series_updates()</code>,
-<code>fredr_series_vintagedates()</code>.</p></div>
+    <div class='dont-index'><p><code><a href='fredr.html'>fredr_series_observations()</a></code>, <code><a href='fredr_series_search.html'>fredr_series_search_text()</a></code>,
+<code><a href='fredr_series_search.html'>fredr_series_search_id()</a></code>, <code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>,
+<code><a href='fredr_series.html'>fredr_series()</a></code>, <code><a href='fredr_series_categories.html'>fredr_series_categories()</a></code>,
+<code><a href='fredr_series_release.html'>fredr_series_release()</a></code>, <code><a href='fredr_series_tags.html'>fredr_series_tags()</a></code>, <code><a href='fredr_series_updates.html'>fredr_series_updates()</a></code>,
+<code><a href='fredr_series_vintagedates.html'>fredr_series_vintagedates()</a></code>.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
@@ -277,20 +277,20 @@ Defaults to today's date. For more information, see
 <span class='fu'>fredr_series_search_related_tags</span>(
   <span class='kw'>series_search_text</span> <span class='kw'>=</span> <span class='st'>"oil"</span>,
   <span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"usa"</span>
-)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 310 x 6</span><span>
+)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 304 x 6</span><span>
 #&gt;    name             group_id notes          created      popularity series_count
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>             </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …        100         </span><span style='text-decoration: underline;'>1</span><span>170
-#&gt; </span><span style='color: #555555;'> 2</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>1</span><span>154
-#&gt; </span><span style='color: #555555;'> 3</span><span> annual           freq     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         91          756
+#&gt; </span><span style='color: #555555;'> 1</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …         99         </span><span style='text-decoration: underline;'>1</span><span>140
+#&gt; </span><span style='color: #555555;'> 2</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>1</span><span>136
+#&gt; </span><span style='color: #555555;'> 3</span><span> annual           freq     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         91          724
 #&gt; </span><span style='color: #555555;'> 4</span><span> oil              gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         53          722
-#&gt; </span><span style='color: #555555;'> 5</span><span> industry         gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         75          710
-#&gt; </span><span style='color: #555555;'> 6</span><span> state            geot     </span><span style='color: #555555;'>"</span><span>State</span><span style='color: #555555;'>"</span><span>        2012-02-27 …         74          626
-#&gt; </span><span style='color: #555555;'> 7</span><span> mining           gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         48          604
-#&gt; </span><span style='color: #555555;'> 8</span><span> bea              src      </span><span style='color: #555555;'>"</span><span>Bureau of Ec… 2012-02-27 …         79          574
-#&gt; </span><span style='color: #555555;'> 9</span><span> gas              gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         50          526
-#&gt; </span><span style='color: #555555;'>10</span><span> nation           geot     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         99          488
-#&gt; </span><span style='color: #555555;'># … with 300 more rows</span><span></div><div class='input'><span class='co'># Search for tags matching the series text "oil", the tag text "usa", and</span>
+#&gt; </span><span style='color: #555555;'> 5</span><span> industry         gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         74          678
+#&gt; </span><span style='color: #555555;'> 6</span><span> state            geot     </span><span style='color: #555555;'>"</span><span>State</span><span style='color: #555555;'>"</span><span>        2012-02-27 …         74          598
+#&gt; </span><span style='color: #555555;'> 7</span><span> mining           gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         48          580
+#&gt; </span><span style='color: #555555;'> 8</span><span> bea              src      </span><span style='color: #555555;'>"</span><span>Bureau of Ec… 2012-02-27 …         79          532
+#&gt; </span><span style='color: #555555;'> 9</span><span> nation           geot     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         99          512
+#&gt; </span><span style='color: #555555;'>10</span><span> gas              gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         49          494
+#&gt; </span><span style='color: #555555;'># … with 294 more rows</span><span></div><div class='input'><span class='co'># Search for tags matching the series text "oil", the tag text "usa", and</span>
 <span class='co'># are related to the tag "usa".  Return only results in the "src" (Source)</span>
 <span class='co'># group.</span>
 <span class='fu'>fredr_series_search_related_tags</span>(
@@ -301,11 +301,11 @@ Defaults to today's date. For more information, see
 )</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 5 x 6</span><span>
 #&gt;   name   group_id notes                  created         popularity series_count
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> bea    src      Bureau of Economic An… 2012-02-27 10:…         79          600
-#&gt; </span><span style='color: #555555;'>2</span><span> bls    src      Bureau of Labor Stati… 2012-02-27 10:…         86          412
-#&gt; </span><span style='color: #555555;'>3</span><span> eia    src      Energy Information Ad… 2012-02-27 10:…         44          112
-#&gt; </span><span style='color: #555555;'>4</span><span> frb    src      Board of Governors     2012-02-27 10:…         81           52
-#&gt; </span><span style='color: #555555;'>5</span><span> census src      Census                 2012-02-27 10:…         79           26</div><div class='input'># }
+#&gt; </span><span style='color: #555555;'>1</span><span> bea    src      Bureau of Economic An… 2012-02-27 10:…         79          560
+#&gt; </span><span style='color: #555555;'>2</span><span> bls    src      Bureau of Labor Stati… 2012-02-27 10:…         86          386
+#&gt; </span><span style='color: #555555;'>3</span><span> eia    src      Energy Information Ad… 2012-02-27 10:…         44          108
+#&gt; </span><span style='color: #555555;'>4</span><span> frb    src      Board of Governors     2012-02-27 10:…         81           56
+#&gt; </span><span style='color: #555555;'>5</span><span> census src      Census                 2012-02-27 10:…         79           36</div><div class='input'># }
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

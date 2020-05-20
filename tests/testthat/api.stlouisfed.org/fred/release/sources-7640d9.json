@@ -1,0 +1,13 @@
+{
+    "realtime_start": "2020-05-19",
+    "realtime_end": "2020-05-19",
+    "sources": [
+        {
+            "id": 22,
+            "realtime_start": "2020-05-19",
+            "realtime_end": "2020-05-19",
+            "name": "U.S. Bureau of Labor Statistics",
+            "link": "https://www.bls.gov/"
+        }
+    ]
+}

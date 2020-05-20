@@ -1,0 +1,76 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "observation_start": "1600-01-01",
+    "observation_end": "9999-12-31",
+    "units": "lin",
+    "output_type": 1,
+    "file_type": "json",
+    "order_by": "observation_date",
+    "sort_order": "asc",
+    "count": 91,
+    "offset": 0,
+    "limit": 10,
+    "observations": [
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1929-01-01",
+            "value": "1120.076"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1930-01-01",
+            "value": "1025.091"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1931-01-01",
+            "value": "958.378"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1932-01-01",
+            "value": "834.291"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1933-01-01",
+            "value": "823.156"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1934-01-01",
+            "value": "911.019"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1935-01-01",
+            "value": "992.537"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1936-01-01",
+            "value": "1118.944"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1937-01-01",
+            "value": "1177.572"
+        },
+        {
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "date": "1938-01-01",
+            "value": "1138.989"
+        }
+    ]
+}

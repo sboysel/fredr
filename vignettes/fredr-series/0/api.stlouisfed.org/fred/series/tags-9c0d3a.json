@@ -1,0 +1,123 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "name",
+    "sort_order": "asc",
+    "count": 14,
+    "offset": 0,
+    "limit": 1000,
+    "tags": [
+        {
+            "name": "16 years +",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 59,
+            "series_count": 5814
+        },
+        {
+            "name": "bls",
+            "group_id": "src",
+            "notes": "Bureau of Labor Statistics",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 86,
+            "series_count": 137174
+        },
+        {
+            "name": "civilian",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 54,
+            "series_count": 9558
+        },
+        {
+            "name": "headline figure",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2013-11-19 13:55:53-06",
+            "popularity": 53,
+            "series_count": 56
+        },
+        {
+            "name": "household survey",
+            "group_id": "gen",
+            "notes": "Current Population Survey (Household Survey)",
+            "created": "2012-06-18 08:18:21-05",
+            "popularity": 63,
+            "series_count": 21560
+        },
+        {
+            "name": "labor",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 61,
+            "series_count": 30158
+        },
+        {
+            "name": "labor underutilization",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-05-10 10:46:02-05",
+            "popularity": 37,
+            "series_count": 716
+        },
+        {
+            "name": "monthly",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 93,
+            "series_count": 211628
+        },
+        {
+            "name": "nation",
+            "group_id": "geot",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 99,
+            "series_count": 219168
+        },
+        {
+            "name": "public domain: citation requested",
+            "group_id": "cc",
+            "notes": null,
+            "created": "2018-12-17 23:33:13-06",
+            "popularity": 99,
+            "series_count": 553406
+        },
+        {
+            "name": "rate",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 88,
+            "series_count": 46732
+        },
+        {
+            "name": "sa",
+            "group_id": "seas",
+            "notes": "Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 88,
+            "series_count": 79542
+        },
+        {
+            "name": "unemployment",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 78,
+            "series_count": 32162
+        },
+        {
+            "name": "usa",
+            "group_id": "geo",
+            "notes": "United States of America",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 604808
+        }
+    ]
+}

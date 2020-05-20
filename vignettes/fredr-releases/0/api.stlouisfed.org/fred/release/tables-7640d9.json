@@ -1,0 +1,31 @@
+{
+    "release_id": "10",
+    "elements": {
+        "34481": {
+            "element_id": 34481,
+            "release_id": 10,
+            "series_id": null,
+            "parent_id": null,
+            "line": null,
+            "type": "section",
+            "name": "Consumer Price Index by Expenditure Category",
+            "level": "0",
+            "children": [
+
+            ]
+        },
+        "36712": {
+            "element_id": 36712,
+            "release_id": 10,
+            "series_id": null,
+            "parent_id": null,
+            "line": null,
+            "type": "section",
+            "name": "Consumer Price Index Special Aggregate Indices",
+            "level": "0",
+            "children": [
+
+            ]
+        }
+    }
+}

@@ -22,7 +22,9 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(fredr)
+library(httptest)
 options(digits = 4)
+httptest::start_vignette("fredr-sources")
 ```
 
 # Introduction
@@ -66,4 +68,8 @@ fredr_source_releases(
   source_id = 14L,
   realtime_start = as.Date("1950-01-01")
 )
+```
+
+```{r, include=FALSE}
+httptest::end_vignette()
 ```

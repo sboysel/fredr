@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
       </span>
     </div>
 
@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Sources</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-05-14</h4>
+            <h4 class="date">2020-05-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-sources.Rmd"><code>vignettes/fredr-sources.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-sources.Rmd</code></div>
@@ -125,64 +125,63 @@
 <div id="get-fred-sources" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-fred-sources" class="anchor"></a>Get FRED sources</h2>
-<p>The function <code>fredr_sources()</code> returns a list of FRED data sources. The information returned is a <code>tibble</code> in which each row represents a FRED source. For example, running <code>fredr_sources()</code> without any arguments returns the first 1000 (<code>limit</code> default) sources ordered by ascending source ID:</p>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu">fredr_sources</span>()
-<span class="co">#&gt; # A tibble: 87 x 6</span>
-<span class="co">#&gt;       id realtime_start realtime_end name                link        notes</span>
-<span class="co">#&gt;  * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;       &lt;chr&gt;</span>
-<span class="co">#&gt;  1     1 2018-07-22     2018-07-22   Board of Governors… http://www… &lt;NA&gt; </span>
-<span class="co">#&gt;  2     3 2018-07-22     2018-07-22   Federal Reserve Ba… http://www… &lt;NA&gt; </span>
-<span class="co">#&gt;  3     4 2018-07-22     2018-07-22   Federal Reserve Ba… http://www… &lt;NA&gt; </span>
-<span class="co">#&gt;  4     6 2018-07-22     2018-07-22   Federal Financial … http://www… &lt;NA&gt; </span>
-<span class="co">#&gt;  5    11 2018-07-22     2018-07-22   Dow Jones &amp; Company http://www… &lt;NA&gt; </span>
-<span class="co">#&gt;  6    14 2018-07-22     2018-07-22   University of Mich… https://ww… &lt;NA&gt; </span>
-<span class="co">#&gt;  7    15 2018-07-22     2018-07-22   Council of Economi… http://www… &lt;NA&gt; </span>
-<span class="co">#&gt;  8    16 2018-07-22     2018-07-22   U.S. Office of Man… http://www… &lt;NA&gt; </span>
-<span class="co">#&gt;  9    17 2018-07-22     2018-07-22   U.S. Congressional… http://www… &lt;NA&gt; </span>
-<span class="co">#&gt; 10    18 2018-07-22     2018-07-22   U.S. Bureau of Eco… http://www… &lt;NA&gt; </span>
-<span class="co">#&gt; # ... with 77 more rows</span></pre></body></html></div>
+<p>The function <code><a href="../reference/fredr_sources.html">fredr_sources()</a></code> returns a list of FRED data sources. The information returned is a <code>tibble</code> in which each row represents a FRED source. For example, running <code><a href="../reference/fredr_sources.html">fredr_sources()</a></code> without any arguments returns the first 1000 (<code>limit</code> default) sources ordered by ascending source ID:</p>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_sources.html">fredr_sources</a></span>()
+<span class="co">#&gt; # A tibble: 94 x 6</span>
+<span class="co">#&gt;       id realtime_start realtime_end name                   link           notes</span>
+<span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                  &lt;chr&gt;          &lt;chr&gt;</span>
+<span class="co">#&gt;  1     1 2020-05-20     2020-05-20   Board of Governors of… http://www.fe… &lt;NA&gt; </span>
+<span class="co">#&gt;  2     3 2020-05-20     2020-05-20   Federal Reserve Bank … https://www.p… &lt;NA&gt; </span>
+<span class="co">#&gt;  3     4 2020-05-20     2020-05-20   Federal Reserve Bank … http://www.st… &lt;NA&gt; </span>
+<span class="co">#&gt;  4     6 2020-05-20     2020-05-20   Federal Financial Ins… http://www.ff… &lt;NA&gt; </span>
+<span class="co">#&gt;  5    11 2020-05-20     2020-05-20   Dow Jones &amp; Company    http://www.do… &lt;NA&gt; </span>
+<span class="co">#&gt;  6    14 2020-05-20     2020-05-20   University of Michigan https://www.u… &lt;NA&gt; </span>
+<span class="co">#&gt;  7    15 2020-05-20     2020-05-20   Council of Economic A… https://www.w… &lt;NA&gt; </span>
+<span class="co">#&gt;  8    16 2020-05-20     2020-05-20   U.S. Office of Manage… https://www.w… &lt;NA&gt; </span>
+<span class="co">#&gt;  9    17 2020-05-20     2020-05-20   U.S. Congressional Bu… http://www.cb… &lt;NA&gt; </span>
+<span class="co">#&gt; 10    18 2020-05-20     2020-05-20   U.S. Bureau of Econom… http://www.be… &lt;NA&gt; </span>
+<span class="co">#&gt; # … with 84 more rows</span></pre></body></html></div>
 </div>
 <div id="get-a-single-fred-source" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-a-single-fred-source" class="anchor"></a>Get a single FRED source</h2>
-<p>The function <code>fredr_source()</code> returns information for a <em>single</em> source indicated by <code>source_id</code>. The data returned is a <code>tibble</code> in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is <code>6</code>:</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu">fredr_source</span>(<span class="kw">source_id</span> <span class="kw">=</span> <span class="fl">6L</span>)
+<p>The function <code><a href="../reference/fredr_source.html">fredr_source()</a></code> returns information for a <em>single</em> source indicated by <code>source_id</code>. The data returned is a <code>tibble</code> in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is <code>6</code>:</p>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_source.html">fredr_source</a></span>(<span class="kw">source_id</span> <span class="kw">=</span> <span class="fl">6L</span>)
 <span class="co">#&gt; # A tibble: 1 x 5</span>
-<span class="co">#&gt;      id realtime_start realtime_end name                       link       </span>
-<span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                      &lt;chr&gt;      </span>
-<span class="co">#&gt; 1     6 2018-07-22     2018-07-22   Federal Financial Institu… http://www…</span></pre></body></html></div>
+<span class="co">#&gt;      id realtime_start realtime_end name                           link         </span>
+<span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                          &lt;chr&gt;        </span>
+<span class="co">#&gt; 1     6 2020-05-20     2020-05-20   Federal Financial Institution… http://www.f…</span></pre></body></html></div>
 </div>
 <div id="get-fred-releases-for-a-source" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-fred-releases-for-a-source" class="anchor"></a>Get FRED releases for a source</h2>
-<p>The function <code>fredr_source_releases()</code> returns FRED release information for the source indicated by <code>source_id</code>. As with the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Releases">Releases endpoint</a>, the data returned is a <code>tibble</code> in which each row represents a FRED release for the specified source. For example, to get the first 10 releases from the Federal Reserve Board of Governors, ordered by ascending release ID:</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu">fredr_source_releases</span>(
+<p>The function <code><a href="../reference/fredr_source_releases.html">fredr_source_releases()</a></code> returns FRED release information for the source indicated by <code>source_id</code>. As with the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Releases">Releases endpoint</a>, the data returned is a <code>tibble</code> in which each row represents a FRED release for the specified source. For example, to get the first 10 releases from the Federal Reserve Board of Governors, ordered by ascending release ID:</p>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_source_releases.html">fredr_source_releases</a></span>(
   <span class="kw">source_id</span> <span class="kw">=</span> <span class="fl">1L</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">10L</span>
 )
 <span class="co">#&gt; # A tibble: 10 x 7</span>
-<span class="co">#&gt;       id realtime_start realtime_end name     press_release link   notes  </span>
-<span class="co">#&gt;  * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;    &lt;lgl&gt;         &lt;chr&gt;  &lt;chr&gt;  </span>
-<span class="co">#&gt;  1    13 2018-07-22     2018-07-22   G.17 In… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt;  2    14 2018-07-22     2018-07-22   G.19 Co… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt;  3    15 2018-07-22     2018-07-22   G.5 For… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt;  4    17 2018-07-22     2018-07-22   H.10 Fo… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt;  5    18 2018-07-22     2018-07-22   H.15 Se… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt;  6    19 2018-07-22     2018-07-22   H.3 Agg… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt;  7    20 2018-07-22     2018-07-22   H.4.1 F… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt;  8    21 2018-07-22     2018-07-22   H.6 Mon… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt;  9    22 2018-07-22     2018-07-22   H.8 Ass… TRUE          http:… &lt;NA&gt;   </span>
-<span class="co">#&gt; 10    52 2018-07-22     2018-07-22   Z.1 Fin… TRUE          http:… "The F…</span></pre></body></html></div>
+<span class="co">#&gt;       id realtime_start realtime_end name       press_release link     notes    </span>
+<span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;lgl&gt;         &lt;chr&gt;    &lt;chr&gt;    </span>
+<span class="co">#&gt;  1    13 2020-05-20     2020-05-20   G.17 Indu… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  2    14 2020-05-20     2020-05-20   G.19 Cons… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  3    15 2020-05-20     2020-05-20   G.5 Forei… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  4    17 2020-05-20     2020-05-20   H.10 Fore… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  5    18 2020-05-20     2020-05-20   H.15 Sele… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  6    19 2020-05-20     2020-05-20   H.3 Aggre… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  7    20 2020-05-20     2020-05-20   H.4.1 Fac… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  8    21 2020-05-20     2020-05-20   H.6 Money… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  9    22 2020-05-20     2020-05-20   H.8 Asset… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt; 10    52 2020-05-20     2020-05-20   Z.1 Finan… TRUE          http://… "The Fin…</span></pre></body></html></div>
 <p>To get University of Michigan releases since 1950:</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu">fredr_source_releases</span>(
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_source_releases.html">fredr_source_releases</a></span>(
   <span class="kw">source_id</span> <span class="kw">=</span> <span class="fl">14L</span>,
   <span class="kw">realtime_start</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="st">"1950-01-01"</span>)
 )
-<span class="co">#&gt; # A tibble: 2 x 6</span>
-<span class="co">#&gt;      id realtime_start realtime_end name       press_release link         </span>
-<span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;lgl&gt;         &lt;chr&gt;        </span>
-<span class="co">#&gt; 1    91 1998-07-31     2006-12-31   Surveys o… TRUE          http://www.s…</span>
-<span class="co">#&gt; 2    91 2007-01-01     9999-12-31   Surveys o… TRUE          http://www.s…</span></pre></body></html></div>
+<span class="co">#&gt; # A tibble: 1 x 6</span>
+<span class="co">#&gt;      id realtime_start realtime_end name          press_release link            </span>
+<span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;         &lt;lgl&gt;         &lt;chr&gt;           </span>
+<span class="co">#&gt; 1    91 1998-07-31     9999-12-31   Surveys of C… TRUE          http://www.sca.…</span></pre></body></html></div>
 </div>
 </div>
   </div>

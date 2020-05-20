@@ -1,0 +1,12 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "series_id",
+    "sort_order": "asc",
+    "count": 0,
+    "offset": 0,
+    "limit": 1000,
+    "seriess": [
+
+    ]
+}

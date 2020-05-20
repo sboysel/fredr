@@ -1,0 +1,5011 @@
+{
+    "realtime_start": "2020-01-01",
+    "realtime_end": "9999-12-31",
+    "order_by": "release_id",
+    "sort_order": "asc",
+    "count": 3358,
+    "offset": 0,
+    "limit": 1000,
+    "release_dates": [
+        {
+            "release_id": 9,
+            "release_name": "Advance Monthly Sales for Retail and Food Services",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 9,
+            "release_name": "Advance Monthly Sales for Retail and Food Services",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 9,
+            "release_name": "Advance Monthly Sales for Retail and Food Services",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 9,
+            "release_name": "Advance Monthly Sales for Retail and Food Services",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 9,
+            "release_name": "Advance Monthly Sales for Retail and Food Services",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 10,
+            "release_name": "Consumer Price Index",
+            "date": "2020-01-14"
+        },
+        {
+            "release_id": 10,
+            "release_name": "Consumer Price Index",
+            "date": "2020-02-11"
+        },
+        {
+            "release_id": 10,
+            "release_name": "Consumer Price Index",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 10,
+            "release_name": "Consumer Price Index",
+            "date": "2020-03-11"
+        },
+        {
+            "release_id": 10,
+            "release_name": "Consumer Price Index",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 10,
+            "release_name": "Consumer Price Index",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 11,
+            "release_name": "Employment Cost Index",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 11,
+            "release_name": "Employment Cost Index",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 13,
+            "release_name": "G.17 Industrial Production and Capacity Utilization",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 13,
+            "release_name": "G.17 Industrial Production and Capacity Utilization",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 13,
+            "release_name": "G.17 Industrial Production and Capacity Utilization",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 13,
+            "release_name": "G.17 Industrial Production and Capacity Utilization",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 13,
+            "release_name": "G.17 Industrial Production and Capacity Utilization",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 14,
+            "release_name": "G.19 Consumer Credit",
+            "date": "2020-01-08"
+        },
+        {
+            "release_id": 14,
+            "release_name": "G.19 Consumer Credit",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 14,
+            "release_name": "G.19 Consumer Credit",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 14,
+            "release_name": "G.19 Consumer Credit",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 14,
+            "release_name": "G.19 Consumer Credit",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 15,
+            "release_name": "G.5 Foreign Exchange Rates",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 15,
+            "release_name": "G.5 Foreign Exchange Rates",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 15,
+            "release_name": "G.5 Foreign Exchange Rates",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 15,
+            "release_name": "G.5 Foreign Exchange Rates",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 15,
+            "release_name": "G.5 Foreign Exchange Rates",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-01-21"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-02-18"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-03-09"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-07"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-08"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-14"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-15"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-21"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-22"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-24"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-29"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-04"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-11"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-12"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-18"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-21"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-25"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-03"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-04"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-09"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-10"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-11"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-13"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-18"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-03-31"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-01-24"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-02-21"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-03-13"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 25,
+            "release_name": "Manufacturing and Trade Inventories and Sales",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 25,
+            "release_name": "Manufacturing and Trade Inventories and Sales",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 25,
+            "release_name": "Manufacturing and Trade Inventories and Sales",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 25,
+            "release_name": "Manufacturing and Trade Inventories and Sales",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 25,
+            "release_name": "Manufacturing and Trade Inventories and Sales",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-03-18"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 46,
+            "release_name": "Producer Price Index",
+            "date": "2020-01-15"
+        },
+        {
+            "release_id": 46,
+            "release_name": "Producer Price Index",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 46,
+            "release_name": "Producer Price Index",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 46,
+            "release_name": "Producer Price Index",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 46,
+            "release_name": "Producer Price Index",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 46,
+            "release_name": "Producer Price Index",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 47,
+            "release_name": "Productivity and Costs",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 47,
+            "release_name": "Productivity and Costs",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 47,
+            "release_name": "Productivity and Costs",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 49,
+            "release_name": "U.S. International Transactions",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 50,
+            "release_name": "Employment Situation",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 50,
+            "release_name": "Employment Situation",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 50,
+            "release_name": "Employment Situation",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 50,
+            "release_name": "Employment Situation",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 50,
+            "release_name": "Employment Situation",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 50,
+            "release_name": "Employment Situation",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 51,
+            "release_name": "U.S. International Trade in Goods and Services",
+            "date": "2020-01-07"
+        },
+        {
+            "release_id": 51,
+            "release_name": "U.S. International Trade in Goods and Services",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 51,
+            "release_name": "U.S. International Trade in Goods and Services",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 51,
+            "release_name": "U.S. International Trade in Goods and Services",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 51,
+            "release_name": "U.S. International Trade in Goods and Services",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 52,
+            "release_name": "Z.1 Financial Accounts of the United States",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 53,
+            "release_name": "Gross Domestic Product",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 53,
+            "release_name": "Gross Domestic Product",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 53,
+            "release_name": "Gross Domestic Product",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 53,
+            "release_name": "Gross Domestic Product",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 54,
+            "release_name": "Personal Income and Outlays",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 54,
+            "release_name": "Personal Income and Outlays",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 54,
+            "release_name": "Personal Income and Outlays",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 54,
+            "release_name": "Personal Income and Outlays",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 55,
+            "release_name": "Reports of Condition and Income for All Insured U.S. Commercial Banks",
+            "date": "2020-02-12"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 70,
+            "release_name": "Monthly Treasury Inflation-Indexed Securities",
+            "date": "2020-01-01"
+        },
+        {
+            "release_id": 70,
+            "release_name": "Monthly Treasury Inflation-Indexed Securities",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 70,
+            "release_name": "Monthly Treasury Inflation-Indexed Securities",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 70,
+            "release_name": "Monthly Treasury Inflation-Indexed Securities",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 70,
+            "release_name": "Monthly Treasury Inflation-Indexed Securities",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-01-20"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-02-17"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-03-09"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-07"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-08"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-14"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-15"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-21"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-22"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-24"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-29"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-04"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-11"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-12"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-18"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-21"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-25"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-03"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-04"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-10"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-11"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-13"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-18"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-03-31"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 80,
+            "release_name": "Treasury Bulletin",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 81,
+            "release_name": "Fiscal Year Budget Data",
+            "date": "2020-02-12"
+        },
+        {
+            "release_id": 82,
+            "release_name": "Economic Report of the President",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-07"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-08"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-14"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-15"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-21"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-22"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-24"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-29"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-04"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-11"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-12"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-18"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-21"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-25"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-03"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-04"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-09"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-10"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-11"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-13"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-18"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-03-31"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 89,
+            "release_name": "Household Debt Service and Financial Obligations Ratios",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 91,
+            "release_name": "Surveys of Consumers",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 91,
+            "release_name": "Surveys of Consumers",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 91,
+            "release_name": "Surveys of Consumers",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 92,
+            "release_name": "Selected Real Retail Sales Series",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 92,
+            "release_name": "Selected Real Retail Sales Series",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 92,
+            "release_name": "Selected Real Retail Sales Series",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 92,
+            "release_name": "Selected Real Retail Sales Series",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 92,
+            "release_name": "Selected Real Retail Sales Series",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-01-15"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-01-07"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-02-04"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 97,
+            "release_name": "New Residential Sales",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 97,
+            "release_name": "New Residential Sales",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 97,
+            "release_name": "New Residential Sales",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 97,
+            "release_name": "New Residential Sales",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 99,
+            "release_name": "Budget and Economic Outlook",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-07"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-08"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-14"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-15"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-21"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-22"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-24"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-29"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-04"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-11"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-12"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-18"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-21"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-25"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-03"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-04"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-09"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-10"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-11"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-13"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-18"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-03-31"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 103,
+            "release_name": "Discount Rate Meeting Minutes",
+            "date": "2020-03-04"
+        },
+        {
+            "release_id": 103,
+            "release_name": "Discount Rate Meeting Minutes",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 107,
+            "release_name": "Multifactor Productivity Trends in Manufacturing",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 107,
+            "release_name": "Multifactor Productivity Trends in Manufacturing",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 109,
+            "release_name": "State Coincident Indexes",
+            "date": "2020-01-29"
+        },
+        {
+            "release_id": 109,
+            "release_name": "State Coincident Indexes",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 109,
+            "release_name": "State Coincident Indexes",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 109,
+            "release_name": "State Coincident Indexes",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 110,
+            "release_name": "State Personal Income (Quarterly)",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 111,
+            "release_name": "Annual Estimates of the Population of Metropolitan and Micropolitan Statistical Areas",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 112,
+            "release_name": "State Employment and Unemployment",
+            "date": "2020-01-24"
+        },
+        {
+            "release_id": 112,
+            "release_name": "State Employment and Unemployment",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 112,
+            "release_name": "State Employment and Unemployment",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 112,
+            "release_name": "State Employment and Unemployment",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 113,
+            "release_name": "Metropolitan Area Employment and Unemployment",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 113,
+            "release_name": "Metropolitan Area Employment and Unemployment",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 113,
+            "release_name": "Metropolitan Area Employment and Unemployment",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 113,
+            "release_name": "Metropolitan Area Employment and Unemployment",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 113,
+            "release_name": "Metropolitan Area Employment and Unemployment",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 116,
+            "release_name": "Unemployment in States and Local Areas (all other areas)",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 116,
+            "release_name": "Unemployment in States and Local Areas (all other areas)",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 116,
+            "release_name": "Unemployment in States and Local Areas (all other areas)",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 116,
+            "release_name": "Unemployment in States and Local Areas (all other areas)",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 116,
+            "release_name": "Unemployment in States and Local Areas (all other areas)",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 119,
+            "release_name": "Annual Estimates of the Population for Counties",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 122,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances (data not included in press release)",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 122,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances (data not included in press release)",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 122,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances (data not included in press release)",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 122,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances (data not included in press release)",
+            "date": "2020-02-21"
+        },
+        {
+            "release_id": 122,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances (data not included in press release)",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 122,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances (data not included in press release)",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 122,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances (data not included in press release)",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 140,
+            "release_name": "Gross Domestic Product (GDP) by State",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 140,
+            "release_name": "Gross Domestic Product (GDP) by State",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 143,
+            "release_name": "Annual Survey of State Government Tax Collections",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 144,
+            "release_name": "Residential Vacancies and Homeownership Annual Statistics",
+            "date": "2020-03-10"
+        },
+        {
+            "release_id": 148,
+            "release_name": "Housing Units Authorized By Building Permits",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 148,
+            "release_name": "Housing Units Authorized By Building Permits",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 148,
+            "release_name": "Housing Units Authorized By Building Permits",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 148,
+            "release_name": "Housing Units Authorized By Building Permits",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 151,
+            "release_name": "State Per Capita Personal Income",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 169,
+            "release_name": "Turkish Foreign Exchange Intervention",
+            "date": "2020-01-01"
+        },
+        {
+            "release_id": 169,
+            "release_name": "Turkish Foreign Exchange Intervention",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 169,
+            "release_name": "Turkish Foreign Exchange Intervention",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 169,
+            "release_name": "Turkish Foreign Exchange Intervention",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 169,
+            "release_name": "Turkish Foreign Exchange Intervention",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 171,
+            "release_name": "House Price Index",
+            "date": "2020-01-22"
+        },
+        {
+            "release_id": 171,
+            "release_name": "House Price Index",
+            "date": "2020-02-25"
+        },
+        {
+            "release_id": 171,
+            "release_name": "House Price Index",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 171,
+            "release_name": "House Price Index",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 172,
+            "release_name": "Japan Foreign Exchange Intervention",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 172,
+            "release_name": "Japan Foreign Exchange Intervention",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 179,
+            "release_name": "Quarterly Retail E-Commerce Sales",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 179,
+            "release_name": "Quarterly Retail E-Commerce Sales",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-01-21"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-02-18"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-03-09"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-07"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-08"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-14"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-15"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-21"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-22"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-24"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-29"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-04"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-11"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-12"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-18"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-21"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-25"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-03"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-04"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-09"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-10"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-11"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-13"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-18"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-03-31"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 186,
+            "release_name": "G.5A Foreign Exchange Rates",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 188,
+            "release_name": "U.S. Import and Export Price Indexes",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 188,
+            "release_name": "U.S. Import and Export Price Indexes",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 188,
+            "release_name": "U.S. Import and Export Price Indexes",
+            "date": "2020-03-13"
+        },
+        {
+            "release_id": 188,
+            "release_name": "U.S. Import and Export Price Indexes",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 188,
+            "release_name": "U.S. Import and Export Price Indexes",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 191,
+            "release_name": "Senior Loan Officer Opinion Survey on Bank Lending Practices",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 191,
+            "release_name": "Senior Loan Officer Opinion Survey on Bank Lending Practices",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 192,
+            "release_name": "Job Openings and Labor Turnover",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 192,
+            "release_name": "Job Openings and Labor Turnover",
+            "date": "2020-02-11"
+        },
+        {
+            "release_id": 192,
+            "release_name": "Job Openings and Labor Turnover",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 192,
+            "release_name": "Job Openings and Labor Turnover",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 192,
+            "release_name": "Job Openings and Labor Turnover",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 193,
+            "release_name": "Money Velocity",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 193,
+            "release_name": "Money Velocity",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 193,
+            "release_name": "Money Velocity",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 193,
+            "release_name": "Money Velocity",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 194,
+            "release_name": "ADP National Employment Report",
+            "date": "2020-01-08"
+        },
+        {
+            "release_id": 194,
+            "release_name": "ADP National Employment Report",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 194,
+            "release_name": "ADP National Employment Report",
+            "date": "2020-03-04"
+        },
+        {
+            "release_id": 194,
+            "release_name": "ADP National Employment Report",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 194,
+            "release_name": "ADP National Employment Report",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-02"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-03"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-06"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-07"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-08"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-09"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-10"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-13"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-14"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-15"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-16"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-17"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-21"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-22"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-23"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-24"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-27"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-28"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-29"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-30"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-01-31"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-03"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-04"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-05"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-06"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-07"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-10"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-11"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-12"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-13"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-14"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-18"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-19"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-20"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-21"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-24"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-25"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-26"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-27"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-02-28"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-02"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-03"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-04"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-05"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-06"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-09"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-10"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-11"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-12"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-13"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-16"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-17"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-18"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-19"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-20"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-23"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-24"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-25"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-26"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-27"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-30"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-03-31"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-01"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-02"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-03"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-06"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-07"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-29"
+        }
+    ]
+}

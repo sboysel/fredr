@@ -22,7 +22,9 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(fredr)
+library(httptest)
 options(digits = 4)
+httptest::start_vignette("fredr-categories")
 ```
 
 # Introduction
@@ -135,6 +137,10 @@ fredr_category_related_tags(
   exclude_tag_names = "rate",
   order_by = "name"
 )
+```
+
+```{r, include=FALSE}
+httptest::end_vignette()
 ```
 
 

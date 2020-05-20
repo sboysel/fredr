@@ -1,8 +1,14 @@
 pandoc: 2.9.2.1
 pkgdown: 1.5.1
 pkgdown_sha: ~
-articles: []
-last_built: 2020-05-14T22:26Z
+articles:
+  fredr-categories: fredr-categories.html
+  fredr-releases: fredr-releases.html
+  fredr-series: fredr-series.html
+  fredr-sources: fredr-sources.html
+  fredr-tags: fredr-tags.html
+  fredr: fredr.html
+last_built: 2020-05-20T05:52Z
 urls:
   reference: http://sboysel.github.io/fredr//reference
   article: http://sboysel.github.io/fredr//articles

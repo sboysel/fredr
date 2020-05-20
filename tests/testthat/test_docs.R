@@ -1,6 +1,6 @@
 library(fredr)
-context("Documentation function")
+context("fredr_docs()")
 
-test_that("fredr_docs just works...", {
+test_that("fredr_docs() just works...", {
   expect_silent(fredr_docs())
 })

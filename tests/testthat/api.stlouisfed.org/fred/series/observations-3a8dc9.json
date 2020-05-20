@@ -1,0 +1,17 @@
+{
+    "realtime_start": "2020-05-19",
+    "realtime_end": "2020-05-19",
+    "observation_start": "2050-01-01",
+    "observation_end": "9999-12-31",
+    "units": "lin",
+    "output_type": 1,
+    "file_type": "json",
+    "order_by": "observation_date",
+    "sort_order": "asc",
+    "count": 0,
+    "offset": 0,
+    "limit": 100000,
+    "observations": [
+
+    ]
+}

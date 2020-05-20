@@ -1,0 +1,91 @@
+{
+    "realtime_start": "2020-05-19",
+    "realtime_end": "2020-05-19",
+    "order_by": "series_count",
+    "sort_order": "desc",
+    "count": 194,
+    "offset": 0,
+    "limit": 10,
+    "tags": [
+        {
+            "name": "bls",
+            "group_id": "src",
+            "notes": "Bureau of Labor Statistics",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 86,
+            "series_count": 4708
+        },
+        {
+            "name": "cpi",
+            "group_id": "gen",
+            "notes": "Consumer Price Index",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 68,
+            "series_count": 4708
+        },
+        {
+            "name": "indexes",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 84,
+            "series_count": 4708
+        },
+        {
+            "name": "price",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2013-07-11 11:24:55-05",
+            "popularity": 83,
+            "series_count": 4708
+        },
+        {
+            "name": "price index",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 81,
+            "series_count": 4708
+        },
+        {
+            "name": "public domain: citation requested",
+            "group_id": "cc",
+            "notes": null,
+            "created": "2018-12-17 23:33:13-06",
+            "popularity": 99,
+            "series_count": 4708
+        },
+        {
+            "name": "urban",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 57,
+            "series_count": 4706
+        },
+        {
+            "name": "inflation",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-06-08 15:10:11-05",
+            "popularity": 75,
+            "series_count": 4514
+        },
+        {
+            "name": "nsa",
+            "group_id": "seas",
+            "notes": "Not Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 4502
+        },
+        {
+            "name": "consumer",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 65,
+            "series_count": 4484
+        }
+    ]
+}

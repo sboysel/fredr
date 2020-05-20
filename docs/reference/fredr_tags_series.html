@@ -79,7 +79,7 @@ exclude_tag_names parameter." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
       </span>
     </div>
 
@@ -246,10 +246,10 @@ and their descriptions.</p>
 <p><a href='https://research.stlouisfed.org/docs/api/fred/tags_series.html'>fred/tags/series</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code>fredr_category_tags()</code>, <code>fredr_category_related_tags()</code>, <code>fredr_docs()</code>,
-<code>fredr_release_tags()</code>, <code>fredr_release_related_tags()</code>,
-<code>fredr_series_search_tags()</code>, <code>fredr_series_search_related_tags()</code>,
-<code>fredr_tags()</code>, <code>fredr_related_tags()</code></p></div>
+    <div class='dont-index'><p><code><a href='fredr_category_tags.html'>fredr_category_tags()</a></code>, <code><a href='fredr_category_related_tags.html'>fredr_category_related_tags()</a></code>, <code><a href='fredr_docs.html'>fredr_docs()</a></code>,
+<code><a href='fredr_release_tags.html'>fredr_release_tags()</a></code>, <code><a href='fredr_release_related_tags.html'>fredr_release_related_tags()</a></code>,
+<code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>,
+<code><a href='fredr_tags.html'>fredr_tags()</a></code>, <code><a href='fredr_related_tags.html'>fredr_related_tags()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
@@ -258,16 +258,16 @@ and their descriptions.</p>
 <span class='fu'>fredr_tags_series</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"gdp"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1,000 x 16</span><span>
 #&gt;    id    realtime_start realtime_end title observation_sta… observation_end
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          
-#&gt; </span><span style='color: #555555;'> 1</span><span> A001… 2020-05-14     2020-05-14   Gros… 1929-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 2</span><span> A001… 2020-05-14     2020-05-14   Gros… 1929-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 3</span><span> A001… 2020-05-14     2020-05-14   Gros… 1930-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 4</span><span> A001… 2020-05-14     2020-05-14   Gros… 1947-04-01       2019-10-01     
-#&gt; </span><span style='color: #555555;'> 5</span><span> A001… 2020-05-14     2020-05-14   Real… 1930-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 6</span><span> A001… 2020-05-14     2020-05-14   Real… 1947-04-01       2019-10-01     
-#&gt; </span><span style='color: #555555;'> 7</span><span> A001… 2020-05-14     2020-05-14   Real… 1948-01-01       2019-10-01     
-#&gt; </span><span style='color: #555555;'> 8</span><span> A001… 2020-05-14     2020-05-14   Gros… 1930-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 9</span><span> A001… 2020-05-14     2020-05-14   Gros… 1947-04-01       2019-10-01     
-#&gt; </span><span style='color: #555555;'>10</span><span> A001… 2020-05-14     2020-05-14   Gros… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 1</span><span> A001… 2020-05-20     2020-05-20   Gros… 1929-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 2</span><span> A001… 2020-05-20     2020-05-20   Gros… 1929-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 3</span><span> A001… 2020-05-20     2020-05-20   Gros… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 4</span><span> A001… 2020-05-20     2020-05-20   Gros… 1947-04-01       2019-10-01     
+#&gt; </span><span style='color: #555555;'> 5</span><span> A001… 2020-05-20     2020-05-20   Real… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 6</span><span> A001… 2020-05-20     2020-05-20   Real… 1947-04-01       2019-10-01     
+#&gt; </span><span style='color: #555555;'> 7</span><span> A001… 2020-05-20     2020-05-20   Real… 1948-01-01       2019-10-01     
+#&gt; </span><span style='color: #555555;'> 8</span><span> A001… 2020-05-20     2020-05-20   Gros… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 9</span><span> A001… 2020-05-20     2020-05-20   Gros… 1947-04-01       2019-10-01     
+#&gt; </span><span style='color: #555555;'>10</span><span> A001… 2020-05-20     2020-05-20   Gros… 1930-01-01       2019-01-01     
 #&gt; </span><span style='color: #555555;'># … with 990 more rows, and 10 more variables: frequency </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   frequency_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   seasonal_adjustment </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, seasonal_adjustment_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
@@ -278,16 +278,16 @@ and their descriptions.</p>
  )</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1,000 x 16</span><span>
 #&gt;    id    realtime_start realtime_end title observation_sta… observation_end
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          
-#&gt; </span><span style='color: #555555;'> 1</span><span> A001… 2020-05-14     2020-05-14   Gros… 1929-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 2</span><span> A001… 2020-05-14     2020-05-14   Gros… 1929-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 3</span><span> A001… 2020-05-14     2020-05-14   Gros… 1930-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 4</span><span> A001… 2020-05-14     2020-05-14   Real… 1930-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 5</span><span> A001… 2020-05-14     2020-05-14   Gros… 1930-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 6</span><span> A001… 2020-05-14     2020-05-14   Gros… 1930-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 7</span><span> A006… 2020-05-14     2020-05-14   Real… 1929-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 8</span><span> A006… 2020-05-14     2020-05-14   Gros… 1929-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 9</span><span> A006… 2020-05-14     2020-05-14   Shar… 1929-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'>10</span><span> A006… 2020-05-14     2020-05-14   Cont… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 1</span><span> A001… 2020-05-20     2020-05-20   Gros… 1929-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 2</span><span> A001… 2020-05-20     2020-05-20   Gros… 1929-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 3</span><span> A001… 2020-05-20     2020-05-20   Gros… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 4</span><span> A001… 2020-05-20     2020-05-20   Real… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 5</span><span> A001… 2020-05-20     2020-05-20   Gros… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 6</span><span> A001… 2020-05-20     2020-05-20   Gros… 1930-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 7</span><span> A006… 2020-05-20     2020-05-20   Real… 1929-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 8</span><span> A006… 2020-05-20     2020-05-20   Gros… 1929-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 9</span><span> A006… 2020-05-20     2020-05-20   Shar… 1929-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'>10</span><span> A006… 2020-05-20     2020-05-20   Cont… 1930-01-01       2019-01-01     
 #&gt; </span><span style='color: #555555;'># … with 990 more rows, and 10 more variables: frequency </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   frequency_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   seasonal_adjustment </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, seasonal_adjustment_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
@@ -300,16 +300,16 @@ and their descriptions.</p>
 )</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 100 x 16</span><span>
 #&gt;    id    realtime_start realtime_end title observation_sta… observation_end
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          
-#&gt; </span><span style='color: #555555;'> 1</span><span> B408… 2020-05-14     2020-05-14   Cont… 1973-01-01       2019-01-01     
-#&gt; </span><span style='color: #555555;'> 2</span><span> B435… 2020-05-14     2020-05-14   Full… 1987-01-01       2000-01-01     
-#&gt; </span><span style='color: #555555;'> 3</span><span> GDPA… 2020-05-14     2020-05-14   Gros… 2001-01-01       2018-01-01     
-#&gt; </span><span style='color: #555555;'> 4</span><span> GDPA… 2020-05-14     2020-05-14   Gros… 2001-01-01       2018-01-01     
-#&gt; </span><span style='color: #555555;'> 5</span><span> GDPA… 2020-05-14     2020-05-14   Gros… 2001-01-01       2018-01-01     
-#&gt; </span><span style='color: #555555;'> 6</span><span> GDPA… 2020-05-14     2020-05-14   Gros… 2001-01-01       2018-01-01     
-#&gt; </span><span style='color: #555555;'> 7</span><span> GDPA… 2020-05-14     2020-05-14   Gros… 2001-01-01       2018-01-01     
-#&gt; </span><span style='color: #555555;'> 8</span><span> GDPA… 2020-05-14     2020-05-14   Gros… 2001-01-01       2018-01-01     
-#&gt; </span><span style='color: #555555;'> 9</span><span> GDPA… 2020-05-14     2020-05-14   Gros… 2001-01-01       2018-01-01     
-#&gt; </span><span style='color: #555555;'>10</span><span> GDPA… 2020-05-14     2020-05-14   Gros… 2001-01-01       2018-01-01     
+#&gt; </span><span style='color: #555555;'> 1</span><span> GDPA… 2020-05-20     2020-05-20   Gros… 2001-01-01       2018-01-01     
+#&gt; </span><span style='color: #555555;'> 2</span><span> GDPA… 2020-05-20     2020-05-20   Gros… 2001-01-01       2018-01-01     
+#&gt; </span><span style='color: #555555;'> 3</span><span> GDPA… 2020-05-20     2020-05-20   Gros… 2001-01-01       2018-01-01     
+#&gt; </span><span style='color: #555555;'> 4</span><span> GDPA… 2020-05-20     2020-05-20   Gros… 2001-01-01       2018-01-01     
+#&gt; </span><span style='color: #555555;'> 5</span><span> HIGO… 2020-05-20     2020-05-20   Gros… 1997-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 6</span><span> SDFI… 2020-05-20     2020-05-20   Gros… 1997-01-01       2019-01-01     
+#&gt; </span><span style='color: #555555;'> 7</span><span> MARE… 2020-05-20     2020-05-20   Gros… 1997-01-01       2017-01-01     
+#&gt; </span><span style='color: #555555;'> 8</span><span> MABR… 2020-05-20     2020-05-20   Gros… 1997-01-01       2017-01-01     
+#&gt; </span><span style='color: #555555;'> 9</span><span> NMSA… 2020-05-20     2020-05-20   Gros… 1997-01-01       2017-01-01     
+#&gt; </span><span style='color: #555555;'>10</span><span> NENG… 2020-05-20     2020-05-20   Gros… 1997-01-01       2017-01-01     
 #&gt; </span><span style='color: #555555;'># … with 90 more rows, and 10 more variables: frequency </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   frequency_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   seasonal_adjustment </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, seasonal_adjustment_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>

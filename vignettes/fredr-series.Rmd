@@ -22,7 +22,9 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(fredr)
+library(httptest)
 options(digits = 4)
+httptest::start_vignette("fredr-series")
 ```
 
 # Introduction
@@ -161,5 +163,9 @@ The `fredr_series_vintagedates()` function returns a sequence of dates in histor
 
 ```{r fredr_series_vintagedates1}
 fredr_series_vintagedates(series_id = "UNRATE")
+```
+
+```{r, include=FALSE}
+httptest::end_vignette()
 ```
 

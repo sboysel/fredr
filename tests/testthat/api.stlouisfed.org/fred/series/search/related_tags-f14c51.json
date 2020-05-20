@@ -1,0 +1,91 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "series_count",
+    "sort_order": "desc",
+    "count": 51,
+    "offset": 0,
+    "limit": 10,
+    "tags": [
+        {
+            "name": "nation",
+            "group_id": "geot",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 99,
+            "series_count": 70
+        },
+        {
+            "name": "gnp",
+            "group_id": "gen",
+            "notes": "Gross National Product",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 39,
+            "series_count": 52
+        },
+        {
+            "name": "public domain: citation requested",
+            "group_id": "cc",
+            "notes": null,
+            "created": "2018-12-17 23:33:13-06",
+            "popularity": 99,
+            "series_count": 52
+        },
+        {
+            "name": "quarterly",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 85,
+            "series_count": 40
+        },
+        {
+            "name": "bea",
+            "group_id": "src",
+            "notes": "Bureau of Economic Analysis",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 79,
+            "series_count": 38
+        },
+        {
+            "name": "nipa",
+            "group_id": "rls",
+            "notes": "National Income and Product Accounts",
+            "created": "2012-08-16 15:21:17-05",
+            "popularity": 71,
+            "series_count": 38
+        },
+        {
+            "name": "sa",
+            "group_id": "seas",
+            "notes": "Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 88,
+            "series_count": 38
+        },
+        {
+            "name": "nsa",
+            "group_id": "seas",
+            "notes": "Not Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 32
+        },
+        {
+            "name": "annual",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 91,
+            "series_count": 30
+        },
+        {
+            "name": "gdp",
+            "group_id": "gen",
+            "notes": "Gross Domestic Product",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 82,
+            "series_count": 28
+        }
+    ]
+}

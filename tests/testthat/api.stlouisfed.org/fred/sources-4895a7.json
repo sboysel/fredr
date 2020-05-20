@@ -1,0 +1,81 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "source_id",
+    "sort_order": "asc",
+    "count": 94,
+    "offset": 0,
+    "limit": 10,
+    "sources": [
+        {
+            "id": 1,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Board of Governors of the Federal Reserve System (US)",
+            "link": "http://www.federalreserve.gov/"
+        },
+        {
+            "id": 3,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of Philadelphia",
+            "link": "https://www.philadelphiafed.org/"
+        },
+        {
+            "id": 4,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of St. Louis",
+            "link": "http://www.stlouisfed.org/"
+        },
+        {
+            "id": 6,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Financial Institutions Examination Council (US)",
+            "link": "http://www.ffiec.gov/"
+        },
+        {
+            "id": 11,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Dow Jones & Company",
+            "link": "http://www.dowjones.com"
+        },
+        {
+            "id": 14,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "University of Michigan",
+            "link": "https://www.umich.edu/"
+        },
+        {
+            "id": 15,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Council of Economic Advisers (US)",
+            "link": "https://www.whitehouse.gov/cea/"
+        },
+        {
+            "id": 16,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Office of Management and Budget",
+            "link": "https://www.whitehouse.gov/omb/"
+        },
+        {
+            "id": 17,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Congressional Budget Office",
+            "link": "http://www.cbo.gov/"
+        },
+        {
+            "id": 18,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Bureau of Economic Analysis",
+            "link": "http://www.bea.gov/"
+        }
+    ]
+}

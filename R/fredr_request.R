@@ -3,7 +3,7 @@
 #' Send a general request to the FRED API by specifying an endpoint and a sequence
 #' of parameters.  The `fredr_request()` function forms and submits a request to
 #' a specified endpoint of the FRED API.  The return is either the `response`
-#' object from \code{\link[httr]{GET}} or the response parsed as a `tibble`.
+#' object from \code{\link[httr]{RETRY}} or the response parsed as a `tibble`.
 #'
 #' @param endpoint A string representing the FRED API endpoint of interest. See
 #'        [fredr_endpoints] for a list of endpoint possible values. _Required parameter._
@@ -17,9 +17,11 @@
 #'        \code{\link[httr]{content}}.  Default is `TRUE`.
 #' @param print_req A boolean value indicating whether or not the request
 #'        should be printed as well.  Useful for debugging.  Default is `FALSE`.
+#' @param retry_times An integer indicating the maximum number of requests to attempt.
+#'        Passed directly to \code{\link[httr]{RETRY}}.  Default is 10.
 #' @return If `to_frame = TRUE`, a `tibble` containing the parsed response.
 #'         If `to_frame = FALSE`, a `response` object returned directly from
-#'         \code{\link[httr]{GET}}.
+#'         \code{\link[httr]{RETRY}}.
 #'
 #' @section API Documentation:
 #'
@@ -45,7 +47,7 @@
 #'
 #' }
 #' @export
-fredr_request <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
+fredr_request <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE, retry_times = 10L) {
 
   if (identical(Sys.getenv("FRED_API_KEY"), "")) {
     stop("FRED API key must be set. See `?fredr_set_key`.")
@@ -62,7 +64,7 @@ fredr_request <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
     url = "https://api.stlouisfed.org/",
     path = paste0("fred/", endpoint),
     query = params,
-    times = 10L
+    times = retry_times
   )
 
   if (print_req) {
