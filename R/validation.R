@@ -18,12 +18,13 @@ capture_args <- function(...) {
   date_lst <- list(
     args$observation_start,
     args$observation_end,
+    args$observation_date,
     args$realtime_start,
     args$realtime_end,
     args$vintage_dates
   )
 
-  date_nms <- list("observation_start", "observation_end",
+  date_nms <- list("observation_start", "observation_end", "observation_date",
                    "realtime_start", "realtime_end", "vintage_dates")
 
   mapply(validate_is_class, date_lst, date_nms, MoreArgs = list(x_class = "Date"))
@@ -59,6 +60,7 @@ capture_args <- function(...) {
   # Formatting - dates
   args$observation_start <- format_fred_date(args$observation_start)
   args$observation_end   <- format_fred_date(args$observation_end)
+  args$observation_date  <- format_fred_date(args$observation_date)
   args$realtime_start    <- format_fred_date(args$realtime_start)
   args$realtime_end      <- format_fred_date(args$realtime_end)
   args$vintage_dates     <- format_fred_date(args$vintage_dates)
