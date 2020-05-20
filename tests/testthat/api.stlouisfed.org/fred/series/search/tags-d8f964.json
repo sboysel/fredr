@@ -1,0 +1,171 @@
+{
+    "realtime_start": "2020-05-19",
+    "realtime_end": "2020-05-19",
+    "order_by": "series_count",
+    "sort_order": "desc",
+    "count": 478,
+    "offset": 0,
+    "limit": 20,
+    "tags": [
+        {
+            "name": "nsa",
+            "group_id": "seas",
+            "notes": "Not Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 2582
+        },
+        {
+            "name": "nation",
+            "group_id": "geot",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 99,
+            "series_count": 1748
+        },
+        {
+            "name": "copyrighted: citation required",
+            "group_id": "cc",
+            "notes": null,
+            "created": "2018-12-17 23:33:13-06",
+            "popularity": 89,
+            "series_count": 1540
+        },
+        {
+            "name": "annual",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 91,
+            "series_count": 1362
+        },
+        {
+            "name": "monthly",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 93,
+            "series_count": 1270
+        },
+        {
+            "name": "usa",
+            "group_id": "geo",
+            "notes": "United States of America",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 1246
+        },
+        {
+            "name": "price",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2013-07-11 11:24:55-05",
+            "popularity": 83,
+            "series_count": 1170
+        },
+        {
+            "name": "public domain: citation requested",
+            "group_id": "cc",
+            "notes": null,
+            "created": "2018-12-17 23:33:13-06",
+            "popularity": 99,
+            "series_count": 1150
+        },
+        {
+            "name": "indexes",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 84,
+            "series_count": 1032
+        },
+        {
+            "name": "price index",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 81,
+            "series_count": 976
+        },
+        {
+            "name": "oil",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 53,
+            "series_count": 876
+        },
+        {
+            "name": "cpi",
+            "group_id": "gen",
+            "notes": "Consumer Price Index",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 68,
+            "series_count": 806
+        },
+        {
+            "name": "harmonized",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 50,
+            "series_count": 792
+        },
+        {
+            "name": "eurostat",
+            "group_id": "src",
+            "notes": "Statistical Office of the European Communities",
+            "created": "2012-08-02 10:13:50-05",
+            "popularity": 53,
+            "series_count": 788
+        },
+        {
+            "name": "hicp",
+            "group_id": "rls",
+            "notes": "Harmonized Index of Consumer Prices",
+            "created": "2012-10-15 09:41:39-05",
+            "popularity": 42,
+            "series_count": 788
+        },
+        {
+            "name": "industry",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 74,
+            "series_count": 678
+        },
+        {
+            "name": "imf",
+            "group_id": "src",
+            "notes": "International Monetary Fund",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 67,
+            "series_count": 646
+        },
+        {
+            "name": "reo",
+            "group_id": "gen",
+            "notes": "Regional Economic Outlook",
+            "created": "2015-12-07 09:06:41-06",
+            "popularity": 52,
+            "series_count": 618
+        },
+        {
+            "name": "state",
+            "group_id": "geot",
+            "notes": "State",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 74,
+            "series_count": 616
+        },
+        {
+            "name": "mining",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 48,
+            "series_count": 590
+        }
+    ]
+}

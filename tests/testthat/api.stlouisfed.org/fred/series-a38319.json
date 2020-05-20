@@ -1,0 +1,23 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "seriess": [
+        {
+            "id": "GNPCA",
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "title": "Real Gross National Product",
+            "observation_start": "1929-01-01",
+            "observation_end": "2019-01-01",
+            "frequency": "Annual",
+            "frequency_short": "A",
+            "units": "Billions of Chained 2012 Dollars",
+            "units_short": "Bil. of Chn. 2012 $",
+            "seasonal_adjustment": "Not Seasonally Adjusted",
+            "seasonal_adjustment_short": "NSA",
+            "last_updated": "2020-03-26 08:10:46-05",
+            "popularity": 19,
+            "notes": "BEA Account Code: A001RX\n\n"
+        }
+    ]
+}

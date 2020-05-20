@@ -1,0 +1,61 @@
+{
+    "realtime_start": "2020-01-01",
+    "realtime_end": "9999-12-31",
+    "order_by": "release_date",
+    "sort_order": "desc",
+    "count": 3358,
+    "offset": 0,
+    "limit": 10,
+    "release_dates": [
+        {
+            "release_id": 354,
+            "release_name": "An Arbitrage-Free Three-Factor Term Structure Model and the Recent Behavior of Long-Term Yields and Distant-Horizon Forward Rates",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-19"
+        }
+    ]
+}

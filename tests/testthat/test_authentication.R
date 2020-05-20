@@ -1,6 +1,6 @@
 # Mock API status: not required
 library(fredr)
-context("Authentication functions")
+context("fredr_set_key()")
 
 test_that("fredr_set_key() properly sets key.", {
   backup <- Sys.getenv("FRED_API_KEY")

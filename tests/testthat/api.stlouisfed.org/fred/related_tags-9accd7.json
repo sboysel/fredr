@@ -1,0 +1,171 @@
+{
+    "realtime_start": "2020-05-19",
+    "realtime_end": "2020-05-19",
+    "order_by": "series_count",
+    "sort_order": "desc",
+    "count": 4263,
+    "offset": 0,
+    "limit": 20,
+    "tags": [
+        {
+            "name": "public domain: citation requested",
+            "group_id": "cc",
+            "notes": null,
+            "created": "2018-12-17 23:33:13-06",
+            "popularity": 99,
+            "series_count": 70994
+        },
+        {
+            "name": "nsa",
+            "group_id": "seas",
+            "notes": "Not Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 65322
+        },
+        {
+            "name": "annual",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 91,
+            "series_count": 64678
+        },
+        {
+            "name": "usa",
+            "group_id": "geo",
+            "notes": "United States of America",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 60678
+        },
+        {
+            "name": "bea",
+            "group_id": "src",
+            "notes": "Bureau of Economic Analysis",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 79,
+            "series_count": 60432
+        },
+        {
+            "name": "industry",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 74,
+            "series_count": 44322
+        },
+        {
+            "name": "private",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 67,
+            "series_count": 36296
+        },
+        {
+            "name": "real",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 75,
+            "series_count": 29200
+        },
+        {
+            "name": "nation",
+            "group_id": "geot",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 99,
+            "series_count": 27104
+        },
+        {
+            "name": "county",
+            "group_id": "geot",
+            "notes": "County or County Equivalent",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 80,
+            "series_count": 24914
+        },
+        {
+            "name": "private industries",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 51,
+            "series_count": 21066
+        },
+        {
+            "name": "gsp",
+            "group_id": "gen",
+            "notes": "Gross State Product",
+            "created": "2014-06-12 09:41:44-05",
+            "popularity": 55,
+            "series_count": 20750
+        },
+        {
+            "name": "state",
+            "group_id": "geot",
+            "notes": "State",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 74,
+            "series_count": 17654
+        },
+        {
+            "name": "nipa",
+            "group_id": "rls",
+            "notes": "National Income and Product Accounts",
+            "created": "2012-08-16 15:21:17-05",
+            "popularity": 71,
+            "series_count": 12658
+        },
+        {
+            "name": "government",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 68,
+            "series_count": 12232
+        },
+        {
+            "name": "quarterly",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 85,
+            "series_count": 9894
+        },
+        {
+            "name": "services",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 66,
+            "series_count": 9536
+        },
+        {
+            "name": "sa",
+            "group_id": "seas",
+            "notes": "Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 88,
+            "series_count": 9400
+        },
+        {
+            "name": "quantity index",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 37,
+            "series_count": 8530
+        },
+        {
+            "name": "goods",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 68,
+            "series_count": 7888
+        }
+    ]
+}
