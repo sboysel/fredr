@@ -1,0 +1,5011 @@
+{
+    "realtime_start": "2020-01-01",
+    "realtime_end": "9999-12-31",
+    "order_by": "release_date",
+    "sort_order": "desc",
+    "count": 3358,
+    "offset": 0,
+    "limit": 1000,
+    "release_dates": [
+        {
+            "release_id": 354,
+            "release_name": "An Arbitrage-Free Three-Factor Term Structure Model and the Recent Behavior of Long-Term Yields and Distant-Horizon Forward Rates",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 179,
+            "release_name": "Quarterly Retail E-Commerce Sales",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 228,
+            "release_name": "Quarterly Starts and Completions by Purpose and Design",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 382,
+            "release_name": "Real Trade-Weighted Value of the Dollar by U.S. State",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 271,
+            "release_name": "Weekly Financial Statements of the Eurosystem",
+            "date": "2020-05-19"
+        },
+        {
+            "release_id": 322,
+            "release_name": "Business Leaders Survey",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 316,
+            "release_name": "G.20 Finance Companies",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 341,
+            "release_name": "Kansas City Fed Labor Market Conditions Indicators",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 439,
+            "release_name": "Mean Household Wages Adjusted by Cost of Living",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 403,
+            "release_name": "Real Personal Income for States and Metropolitan Areas",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 349,
+            "release_name": "U.S. Transportation Data",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 317,
+            "release_name": "Weekly National Rates and Rate Caps",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-18"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-17"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-17"
+        },
+        {
+            "release_id": 269,
+            "release_name": "National Accounts of Japan",
+            "date": "2020-05-17"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-16"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-16"
+        },
+        {
+            "release_id": 9,
+            "release_name": "Advance Monthly Sales for Retail and Food Services",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 321,
+            "release_name": "Empire State Manufacturing Survey",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 13,
+            "release_name": "G.17 Industrial Production and Capacity Utilization",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 371,
+            "release_name": "Hornstein-Kudlyak-Lange Non-Employment Index",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 192,
+            "release_name": "Job Openings and Labor Turnover",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 25,
+            "release_name": "Manufacturing and Trade Inventories and Sales",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 436,
+            "release_name": "Monthly Retail Trade and Food Services",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 267,
+            "release_name": "National Accounts - GDP (Eurostat)",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 301,
+            "release_name": "Real Money Stock Measures",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 92,
+            "release_name": "Selected Real Retail Sales Series",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 400,
+            "release_name": "St. Louis Fed Economic News Index",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-15"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 205,
+            "release_name": "Main Economic Indicators",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 469,
+            "release_name": "State Unemployment Insurance Weekly Claims Report",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 188,
+            "release_name": "U.S. Import and Export Price Indexes",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 468,
+            "release_name": "Weekly Business Formation Statistics",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-14"
+        },
+        {
+            "release_id": 280,
+            "release_name": "Cass Freight Index Report",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 221,
+            "release_name": "Chicago Fed National Financial Conditions Index",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 383,
+            "release_name": "Market Value of U.S. Government Debt",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 342,
+            "release_name": "Natural Gas Spot and Futures Prices (NYMEX)",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 46,
+            "release_name": "Producer Price Index",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 212,
+            "release_name": "Spot Prices",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 339,
+            "release_name": "Transportation Services Index (TSI)",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-13"
+        },
+        {
+            "release_id": 354,
+            "release_name": "An Arbitrage-Free Three-Factor Term Structure Model and the Recent Behavior of Long-Term Yields and Distant-Horizon Forward Rates",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 454,
+            "release_name": "Average Price Data",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 372,
+            "release_name": "Chicago Fed Survey of Business Conditions",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 10,
+            "release_name": "Consumer Price Index",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 402,
+            "release_name": "Corporate Bond Yield Curve",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 315,
+            "release_name": "Current Median CPI",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 345,
+            "release_name": "Experimental Consumer Price Index",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 172,
+            "release_name": "Japan Foreign Exchange Intervention",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 363,
+            "release_name": "Monthly Treasury Statement",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 313,
+            "release_name": "Sticky Price CPI",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 268,
+            "release_name": "United Kingdom Main Aggregates of National Accounts",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 271,
+            "release_name": "Weekly Financial Statements of the Eurosystem",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-12"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 50,
+            "release_name": "Employment Situation",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 239,
+            "release_name": "International Financial Statistics",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 198,
+            "release_name": "Kansas City Financial Stress Index",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 365,
+            "release_name": "Primary Commodity Prices",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 317,
+            "release_name": "Weekly National Rates and Rate Caps",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-11"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-10"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-10"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-09"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-09"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 50,
+            "release_name": "Employment Situation",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 334,
+            "release_name": "Labor Force Status Flows from the Current Population Survey",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 290,
+            "release_name": "Monthly Wholesale Trade: Sales and Inventories",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 301,
+            "release_name": "Real Money Stock Measures",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 456,
+            "release_name": "Sahm Rule Recession Indicator",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 400,
+            "release_name": "St. Louis Fed Economic News Index",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-08"
+        },
+        {
+            "release_id": 266,
+            "release_name": "Bank of Japan Accounts",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 14,
+            "release_name": "G.19 Consumer Credit",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 283,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base  (data not included in press release)",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 47,
+            "release_name": "Productivity and Costs",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 469,
+            "release_name": "State Unemployment Insurance Weekly Claims Report",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 468,
+            "release_name": "Weekly Business Formation Statistics",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-07"
+        },
+        {
+            "release_id": 194,
+            "release_name": "ADP National Employment Report",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 221,
+            "release_name": "Chicago Fed National Financial Conditions Index",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 342,
+            "release_name": "Natural Gas Spot and Futures Prices (NYMEX)",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 394,
+            "release_name": "Spliced Oil Price",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 212,
+            "release_name": "Spot Prices",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-06"
+        },
+        {
+            "release_id": 354,
+            "release_name": "An Arbitrage-Free Three-Factor Term Structure Model and the Recent Behavior of Long-Term Yields and Distant-Horizon Forward Rates",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 262,
+            "release_name": "Failures and Assistance Transactions",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 462,
+            "release_name": "Housing Inventory Core Metrics",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 463,
+            "release_name": "Market Hotness Index",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 426,
+            "release_name": "Status Report of U.S. Government Gold Reserve",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 254,
+            "release_name": "Travel Volume Trends",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 51,
+            "release_name": "U.S. International Trade in Goods and Services",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 449,
+            "release_name": "U.S. Trade in Goods by State, by NAICS-Based Product",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 271,
+            "release_name": "Weekly Financial Statements of the Eurosystem",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-05"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 15,
+            "release_name": "G.5 Foreign Exchange Rates",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 239,
+            "release_name": "International Financial Statistics",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 191,
+            "release_name": "Senior Loan Officer Opinion Survey on Bank Lending Practices",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 317,
+            "release_name": "Weekly National Rates and Rate Caps",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-04"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-03"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-03"
+        },
+        {
+            "release_id": 409,
+            "release_name": "Equifax Credit Quality",
+            "date": "2020-05-03"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-02"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-02"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 229,
+            "release_name": "Construction Spending",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 238,
+            "release_name": "Financial Soundness Indicators",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 122,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances (data not included in press release)",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 70,
+            "release_name": "Monthly Treasury Inflation-Indexed Securities",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 206,
+            "release_name": "Quarterly National Accounts",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 301,
+            "release_name": "Real Money Stock Measures",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 245,
+            "release_name": "Summary Measures of the Foreign Exchange Value of the Dollar",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 169,
+            "release_name": "Turkish Foreign Exchange Intervention",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 274,
+            "release_name": "University of Louisville and Oklahoma State University: LoDI National Index",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 261,
+            "release_name": "U.S. Recession Probabilities",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-05-01"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 333,
+            "release_name": "Chicago Fed Midwest Economy Index",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 11,
+            "release_name": "Employment Cost Index",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 355,
+            "release_name": "Minimum Wage Rates",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 54,
+            "release_name": "Personal Income and Outlays",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 364,
+            "release_name": "St. Louis Fed Price Pressures Measures",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 93,
+            "release_name": "Supplemental Estimates, Motor Vehicles",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 281,
+            "release_name": "Supplemental Estimates, Underlying Detail Tables",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 282,
+            "release_name": "Supplemental Estimates, Underlying Detail Tables, Spliced Series",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 323,
+            "release_name": "Trimmed Mean PCE Inflation Rate",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 468,
+            "release_name": "Weekly Business Formation Statistics",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-30"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 221,
+            "release_name": "Chicago Fed National Financial Conditions Index",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 373,
+            "release_name": "GDP-Based Recession Indicator Index",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 53,
+            "release_name": "Gross Domestic Product",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 113,
+            "release_name": "Metropolitan Area Employment and Unemployment",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 193,
+            "release_name": "Money Velocity",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 342,
+            "release_name": "Natural Gas Spot and Futures Prices (NYMEX)",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 212,
+            "release_name": "Spot Prices",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 459,
+            "release_name": "Survey of Business Uncertainty",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 116,
+            "release_name": "Unemployment in States and Local Areas (all other areas)",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-29"
+        },
+        {
+            "release_id": 435,
+            "release_name": "Advance Economic Indicators",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 354,
+            "release_name": "An Arbitrage-Free Three-Factor Term Structure Model and the Recent Behavior of Long-Term Yields and Distant-Horizon Forward Rates",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 296,
+            "release_name": "Housing Vacancies and Homeownership",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 199,
+            "release_name": "S&P/Case-Shiller Home Price Indices",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 377,
+            "release_name": "Texas Retail Outlook Survey",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 376,
+            "release_name": "Texas Service Sector Outlook Survey",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 271,
+            "release_name": "Weekly Financial Statements of the Eurosystem",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-28"
+        },
+        {
+            "release_id": 366,
+            "release_name": "Asia and Pacific Regional Economic Outlook",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 239,
+            "release_name": "International Financial Statistics",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 374,
+            "release_name": "Texas Manufacturing Outlook Survey",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 317,
+            "release_name": "Weekly National Rates and Rate Caps",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-27"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-26"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-26"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-25"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-25"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 95,
+            "release_name": "Manufacturer's Shipments, Inventories, and Orders (M3) Survey",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 301,
+            "release_name": "Real Money Stock Measures",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 400,
+            "release_name": "St. Louis Fed Economic News Index",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-24"
+        },
+        {
+            "release_id": 354,
+            "release_name": "An Arbitrage-Free Three-Factor Term Structure Model and the Recent Behavior of Long-Term Yields and Distant-Horizon Forward Rates",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 283,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base  (data not included in press release)",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 148,
+            "release_name": "Housing Units Authorized By Building Permits",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 97,
+            "release_name": "New Residential Sales",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 468,
+            "release_name": "Weekly Business Formation Statistics",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-23"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 221,
+            "release_name": "Chicago Fed National Financial Conditions Index",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 171,
+            "release_name": "House Price Index",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 342,
+            "release_name": "Natural Gas Spot and Futures Prices (NYMEX)",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 212,
+            "release_name": "Spot Prices",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 109,
+            "release_name": "State Coincident Indexes",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-22"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 352,
+            "release_name": "Nonmanufacturing Business Outlook Survey",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 305,
+            "release_name": "Swiss National Bank Monthly Statistical Bulletin",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 271,
+            "release_name": "Weekly Financial Statements of the Eurosystem",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-21"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 219,
+            "release_name": "Chicago Fed National Activity Index",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 316,
+            "release_name": "G.20 Finance Companies",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 239,
+            "release_name": "International Financial Statistics",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 267,
+            "release_name": "National Accounts - GDP (Eurostat)",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 349,
+            "release_name": "U.S. Transportation Data",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 317,
+            "release_name": "Weekly National Rates and Rate Caps",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-20"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-19"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-19"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-18"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-18"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 251,
+            "release_name": "Harmonized Indices of Consumer Prices (HICP)",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 357,
+            "release_name": "Hours of Wage and Salary Workers on Nonfarm Payrolls by Sector",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 446,
+            "release_name": "Labor Force Participation by State",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 301,
+            "release_name": "Real Money Stock Measures",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 308,
+            "release_name": "State and Metro Area Employment, Hours, and Earnings",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 112,
+            "release_name": "State Employment and Unemployment",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 400,
+            "release_name": "St. Louis Fed Economic News Index",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-17"
+        },
+        {
+            "release_id": 319,
+            "release_name": "BIS Effective Exchange Rate Indices",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 322,
+            "release_name": "Business Leaders Survey",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 402,
+            "release_name": "Corporate Bond Yield Curve",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 351,
+            "release_name": "Manufacturing Business Outlook Survey",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 27,
+            "release_name": "New Residential Construction",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 382,
+            "release_name": "Real Trade-Weighted Value of the Dollar by U.S. State",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 468,
+            "release_name": "Weekly Business Formation Statistics",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 465,
+            "release_name": "Weekly Economic Index (Lewis-Mertens-Stock)",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 367,
+            "release_name": "Western Hemisphere Regional Economic Outlook",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-16"
+        },
+        {
+            "release_id": 9,
+            "release_name": "Advance Monthly Sales for Retail and Food Services",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 354,
+            "release_name": "An Arbitrage-Free Three-Factor Term Structure Model and the Recent Behavior of Long-Term Yields and Distant-Horizon Forward Rates",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 143,
+            "release_name": "Annual Survey of State Government Tax Collections",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 443,
+            "release_name": "Business Formation Statistics",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 221,
+            "release_name": "Chicago Fed National Financial Conditions Index",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 372,
+            "release_name": "Chicago Fed Survey of Business Conditions",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 321,
+            "release_name": "Empire State Manufacturing Survey",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 13,
+            "release_name": "G.17 Industrial Production and Capacity Utilization",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 25,
+            "release_name": "Manufacturing and Trade Inventories and Sales",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 368,
+            "release_name": "Middle East and Central Asia Regional Economic Outlook",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 436,
+            "release_name": "Monthly Retail Trade and Food Services",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 342,
+            "release_name": "Natural Gas Spot and Futures Prices (NYMEX)",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 92,
+            "release_name": "Selected Real Retail Sales Series",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 212,
+            "release_name": "Spot Prices",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 369,
+            "release_name": "Sub-Saharan Africa Regional Economic Outlook",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 332,
+            "release_name": "Weekly and Hourly Earnings from the Current Population Survey",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 271,
+            "release_name": "Weekly Financial Statements of the Eurosystem",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-15"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 343,
+            "release_name": "Metro Area Economic Conditions Indexes",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 208,
+            "release_name": "State Leading Indexes",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 188,
+            "release_name": "U.S. Import and Export Price Indexes",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 240,
+            "release_name": "World Economic Outlook",
+            "date": "2020-04-14"
+        },
+        {
+            "release_id": 280,
+            "release_name": "Cass Freight Index Report",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 183,
+            "release_name": "Gasoline and Diesel Fuel Update",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 17,
+            "release_name": "H.10 Foreign Exchange Rates",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 239,
+            "release_name": "International Financial Statistics",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 317,
+            "release_name": "Weekly National Rates and Rate Caps",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 71,
+            "release_name": "Weekly Treasury Inflation-Indexed Securities",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-13"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-12"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-12"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-11"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-11"
+        },
+        {
+            "release_id": 205,
+            "release_name": "Main Economic Indicators",
+            "date": "2020-04-11"
+        },
+        {
+            "release_id": 383,
+            "release_name": "Market Value of U.S. Government Debt",
+            "date": "2020-04-11"
+        },
+        {
+            "release_id": 454,
+            "release_name": "Average Price Data",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 10,
+            "release_name": "Consumer Price Index",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 315,
+            "release_name": "Current Median CPI",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 345,
+            "release_name": "Experimental Consumer Price Index",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 22,
+            "release_name": "H.8 Assets and Liabilities of Commercial Banks in the United States",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 371,
+            "release_name": "Hornstein-Kudlyak-Lange Non-Employment Index",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 363,
+            "release_name": "Monthly Treasury Statement",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 301,
+            "release_name": "Real Money Stock Measures",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 109,
+            "release_name": "State Coincident Indexes",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 313,
+            "release_name": "Sticky Price CPI",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 400,
+            "release_name": "St. Louis Fed Economic News Index",
+            "date": "2020-04-10"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 386,
+            "release_name": "GDPNow",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 19,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 283,
+            "release_name": "H.3 Aggregate Reserves of Depository Institutions and the Monetary Base  (data not included in press release)",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 20,
+            "release_name": "H.4.1 Factors Affecting Reserve Balances",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 21,
+            "release_name": "H.6 Money Stock Measures",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 198,
+            "release_name": "Kansas City Financial Stress Index",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 256,
+            "release_name": "LBMA Gold Price: Daily Prices",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 442,
+            "release_name": "LBMA Silver Price: Daily Prices",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 63,
+            "release_name": "M2 Related Series",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 61,
+            "release_name": "Money Zero Maturity (MZM)",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 290,
+            "release_name": "Monthly Wholesale Trade: Sales and Inventories",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 427,
+            "release_name": "Moody's Daily Corporate Bond Yield Averages",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 328,
+            "release_name": "NASDAQ",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 287,
+            "release_name": "Nikkei Indexes",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 375,
+            "release_name": "Overnight Bank Funding Rate Data",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 190,
+            "release_name": "Primary Mortgage Market Survey",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 46,
+            "release_name": "Producer Price Index",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 242,
+            "release_name": "Recession Indicators Series",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 100,
+            "release_name": "Seasonal Credit Rate",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 445,
+            "release_name": "Secured Overnight Financing Rate Data",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 187,
+            "release_name": "St. Louis Fed Financial Stress Index",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 379,
+            "release_name": "Temporary Open Market Operations",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 180,
+            "release_name": "Unemployment Insurance Weekly Claims Report",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 468,
+            "release_name": "Weekly Business Formation Statistics",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 196,
+            "release_name": "Wilshire Indexes",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 234,
+            "release_name": "World Development Indicators",
+            "date": "2020-04-09"
+        },
+        {
+            "release_id": 200,
+            "release_name": "CBOE Market Statistics",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 221,
+            "release_name": "Chicago Fed National Financial Conditions Index",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 441,
+            "release_name": "Coinbase Cryptocurrencies",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 440,
+            "release_name": "Coinbase Index",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 86,
+            "release_name": "Commercial Paper",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 72,
+            "release_name": "Daily Treasury Inflation-Indexed Securities",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 279,
+            "release_name": "Economic Policy Uncertainty",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 378,
+            "release_name": "Federal Funds Data",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 101,
+            "release_name": "FOMC Press Release",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 18,
+            "release_name": "H.15 Selected Interest Rates",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 209,
+            "release_name": "ICE BofA Indices",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 253,
+            "release_name": "ICE Libor Rates",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 444,
+            "release_name": "ICE Swap Rates",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 185,
+            "release_name": "Interest on Required Balances and Excess Balances",
+            "date": "2020-04-08"
+        },
+        {
+            "release_id": 304,
+            "release_name": "Interest Rate Spreads",
+            "date": "2020-04-08"
+        }
+    ]
+}

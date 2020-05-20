@@ -1,0 +1,23 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "seriess": [
+        {
+            "id": "UNRATE",
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "title": "Unemployment Rate",
+            "observation_start": "1948-01-01",
+            "observation_end": "2020-04-01",
+            "frequency": "Monthly",
+            "frequency_short": "M",
+            "units": "Percent",
+            "units_short": "%",
+            "seasonal_adjustment": "Seasonally Adjusted",
+            "seasonal_adjustment_short": "SA",
+            "last_updated": "2020-05-08 07:47:02-05",
+            "popularity": 100,
+            "notes": "The unemployment rate represents the number of unemployed as a percentage of the labor force. Labor force data are restricted to people 16 years of age and older, who currently reside in 1 of the 50 states or the District of Columbia, who do not reside in institutions (e.g., penal and mental facilities, homes for the aged), and who are not on active duty in the Armed Forces.\r\n\r\nThis rate is also defined as the U-3 measure of labor underutilization.\r\n\r\nThe series comes from the 'Current Population Survey (Household Survey)'\r\n\r\nThe source code is: LNS14000000"
+        }
+    ]
+}

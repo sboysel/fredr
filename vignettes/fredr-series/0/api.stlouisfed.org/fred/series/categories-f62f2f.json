@@ -1,0 +1,10 @@
+{
+    "categories": [
+        {
+            "id": 32447,
+            "name": "Unemployment Rate",
+            "parent_id": 12,
+            "notes": "The ratio of unemployed to the civilian labor force expressed as a percent."
+        }
+    ]
+}

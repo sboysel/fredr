@@ -1,0 +1,27 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "popularity",
+    "sort_order": "desc",
+    "count": 2,
+    "offset": 0,
+    "limit": 1000,
+    "tags": [
+        {
+            "name": "monthly",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 93,
+            "series_count": 2152
+        },
+        {
+            "name": "semiannual",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 32,
+            "series_count": 1884
+        }
+    ]
+}

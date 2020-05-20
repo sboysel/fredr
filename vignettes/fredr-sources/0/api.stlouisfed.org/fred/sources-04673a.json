@@ -1,0 +1,659 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "source_id",
+    "sort_order": "asc",
+    "count": 94,
+    "offset": 0,
+    "limit": 1000,
+    "sources": [
+        {
+            "id": 1,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Board of Governors of the Federal Reserve System (US)",
+            "link": "http://www.federalreserve.gov/"
+        },
+        {
+            "id": 3,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of Philadelphia",
+            "link": "https://www.philadelphiafed.org/"
+        },
+        {
+            "id": 4,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of St. Louis",
+            "link": "http://www.stlouisfed.org/"
+        },
+        {
+            "id": 6,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Financial Institutions Examination Council (US)",
+            "link": "http://www.ffiec.gov/"
+        },
+        {
+            "id": 11,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Dow Jones & Company",
+            "link": "http://www.dowjones.com"
+        },
+        {
+            "id": 14,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "University of Michigan",
+            "link": "https://www.umich.edu/"
+        },
+        {
+            "id": 15,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Council of Economic Advisers (US)",
+            "link": "https://www.whitehouse.gov/cea/"
+        },
+        {
+            "id": 16,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Office of Management and Budget",
+            "link": "https://www.whitehouse.gov/omb/"
+        },
+        {
+            "id": 17,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Congressional Budget Office",
+            "link": "http://www.cbo.gov/"
+        },
+        {
+            "id": 18,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Bureau of Economic Analysis",
+            "link": "http://www.bea.gov/"
+        },
+        {
+            "id": 19,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Census Bureau",
+            "link": "http://www.census.gov/"
+        },
+        {
+            "id": 21,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Department of Housing and Urban Development",
+            "link": "http://www.hud.gov/"
+        },
+        {
+            "id": 22,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Bureau of Labor Statistics",
+            "link": "https://www.bls.gov/"
+        },
+        {
+            "id": 23,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Department of the Treasury. Fiscal Service",
+            "link": "http://www.fiscal.treasury.gov/"
+        },
+        {
+            "id": 26,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Haver Analytics",
+            "link": "http://www.haver.com/"
+        },
+        {
+            "id": 31,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Reserve Bank of Australia",
+            "link": "http://www.rba.gov.au/"
+        },
+        {
+            "id": 32,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Deutsche Bundesbank",
+            "link": "http://www.bundesbank.de"
+        },
+        {
+            "id": 33,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Bank of Italy",
+            "link": "http://www.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1",
+            "notes": "Banca d'Italia"
+        },
+        {
+            "id": 34,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Swiss National Bank",
+            "link": "http://www.snb.ch/"
+        },
+        {
+            "id": 35,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Central Bank of the Republic of Turkey",
+            "link": "http://www.tcmb.gov.tr/",
+            "notes": "Türkiye Cumhuriyet Merkez Bankası"
+        },
+        {
+            "id": 36,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Federal Housing Finance Agency",
+            "link": "http://www.fhfa.gov/"
+        },
+        {
+            "id": 37,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Bank of Japan"
+        },
+        {
+            "id": 38,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Bank of Mexico",
+            "link": "http://www.banxico.org.mx/",
+            "notes": "Banco de México"
+        },
+        {
+            "id": 41,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Freddie Mac",
+            "link": "http://www.freddiemac.com/index.html"
+        },
+        {
+            "id": 42,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Automatic Data Processing, Inc.",
+            "link": "http://www.adp.com/"
+        },
+        {
+            "id": 44,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Wilshire Associates",
+            "link": "http://www.wilshire.com/"
+        },
+        {
+            "id": 46,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of Kansas City",
+            "link": "https://www.kansascityfed.org/"
+        },
+        {
+            "id": 47,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Chicago Board Options Exchange",
+            "link": "http://www.cboe.com/"
+        },
+        {
+            "id": 48,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Organization for Economic Co-operation and Development",
+            "link": "http://www.oecd.org/"
+        },
+        {
+            "id": 50,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Employment and Training Administration",
+            "link": "http://www.doleta.gov"
+        },
+        {
+            "id": 53,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Energy Information Administration",
+            "link": "http://www.eia.gov/"
+        },
+        {
+            "id": 54,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of Chicago",
+            "link": "http://www.chicagofed.org"
+        },
+        {
+            "id": 55,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "National Bureau of Economic Research",
+            "link": "http://www.nber.org/"
+        },
+        {
+            "id": 57,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "World Bank",
+            "link": "http://www.worldbank.org/"
+        },
+        {
+            "id": 59,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "National Association of Realtors",
+            "link": "http://www.realtor.org"
+        },
+        {
+            "id": 60,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "International Monetary Fund",
+            "link": "https://www.imf.org/external/index.htm",
+            "notes": "The International Monetary Fund (IMF) is an organization of 187 countries, working to foster global monetary cooperation, secure financial stability, facilitate international trade, promote high employment and sustainable economic growth, and reduce poverty around the world."
+        },
+        {
+            "id": 61,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Eurostat",
+            "link": "http://ec.europa.eu/eurostat/about/overview"
+        },
+        {
+            "id": 62,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "ICE Benchmark Administration Limited (IBA)",
+            "link": "https://www.theice.com/iba"
+        },
+        {
+            "id": 63,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Federal Highway Administration",
+            "link": "http://www.fhwa.dot.gov/"
+        },
+        {
+            "id": 66,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "University of Pennsylvania",
+            "link": "http://www.upenn.edu/"
+        },
+        {
+            "id": 67,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "CredAbility Nonprofit Credit Counseling & Education",
+            "link": "http://www.credability.org/en/homepage.aspx"
+        },
+        {
+            "id": 68,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Piger, Jeremy Max",
+            "link": "http://pages.uoregon.edu/jpiger/us_recession_probs.htm"
+        },
+        {
+            "id": 69,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Deposit Insurance Corporation",
+            "link": "http://www.fdic.gov/"
+        },
+        {
+            "id": 70,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Weber, Warren E."
+        },
+        {
+            "id": 71,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Dwyer, Gerald P."
+        },
+        {
+            "id": 72,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Hafer, R.W."
+        },
+        {
+            "id": 74,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "GB. Office for National Statistics",
+            "link": "http://www.ons.gov.uk/ons/index.html"
+        },
+        {
+            "id": 75,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "JP. Cabinet Office",
+            "link": "http://www.cao.go.jp/index-e.html",
+            "notes": "JP. Naikakufu"
+        },
+        {
+            "id": 76,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Bank of England",
+            "link": "http://www.bankofengland.co.uk/Pages/home.aspx"
+        },
+        {
+            "id": 77,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "European Central Bank"
+        },
+        {
+            "id": 78,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "University of Louisville. Logistics and Distribution Institute",
+            "link": "http://louisville.edu/lodi"
+        },
+        {
+            "id": 80,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Baker, Scott R."
+        },
+        {
+            "id": 81,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Cass Information Systems, Inc.",
+            "link": "http://www.cassinfo.com/"
+        },
+        {
+            "id": 82,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Anderson, Richard G.",
+            "link": "http://research.stlouisfed.org/econ/anderson/"
+        },
+        {
+            "id": 84,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "University of Groningen",
+            "link": "http://www.rug.nl/"
+        },
+        {
+            "id": 85,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "S&P Dow Jones Indices LLC",
+            "link": "https://us.spindices.com/"
+        },
+        {
+            "id": 86,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Nikkei Industry Research Institute",
+            "link": "http://indexes.nikkei.co.jp/en/nkave/index/profile?idx=nk225"
+        },
+        {
+            "id": 88,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "DiCecio, Riccardo",
+            "link": "http://research.stlouisfed.org/econ/dicecio/"
+        },
+        {
+            "id": 89,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of Dallas",
+            "link": "http://www.dallasfed.org/"
+        },
+        {
+            "id": 90,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of Cleveland",
+            "link": "http://www.clevelandfed.org/"
+        },
+        {
+            "id": 91,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of Atlanta",
+            "link": "http://www.frbatlanta.org/"
+        },
+        {
+            "id": 92,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of San Francisco",
+            "link": "http://www.frbsf.org/"
+        },
+        {
+            "id": 93,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Bank for International Settlements",
+            "link": "https://www.bis.org/index.htm"
+        },
+        {
+            "id": 94,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "University of California, Davis",
+            "link": "http://www.ucdavis.edu/"
+        },
+        {
+            "id": 96,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of New York",
+            "link": "http://www.newyorkfed.org/"
+        },
+        {
+            "id": 97,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "NASDAQ OMX Group",
+            "link": "https://www.nasdaq.com/"
+        },
+        {
+            "id": 98,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Federal Open Market Committee"
+        },
+        {
+            "id": 99,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Equifax",
+            "link": "http://www.equifax.com/home/en_us"
+        },
+        {
+            "id": 101,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Bureau of Transportation Statistics",
+            "link": "https://www.bts.gov/"
+        },
+        {
+            "id": 102,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Chauvet, Marcelle"
+        },
+        {
+            "id": 103,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Jones, Barry E."
+        },
+        {
+            "id": 104,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Bloom, Nick"
+        },
+        {
+            "id": 105,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Davis, Stephen J."
+        },
+        {
+            "id": 106,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Oklahoma State University",
+            "link": "http://go.okstate.edu/"
+        },
+        {
+            "id": 114,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Department of Labor",
+            "link": "http://www.dol.gov"
+        },
+        {
+            "id": 115,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Reserve Bank of Richmond",
+            "link": "https://www.richmondfed.org/"
+        },
+        {
+            "id": 116,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Hamilton, James",
+            "link": "http://econbrowser.com/recession-index"
+        },
+        {
+            "id": 122,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Department of the Treasury. Internal Revenue Service",
+            "link": "https://www.irs.gov/"
+        },
+        {
+            "id": 123,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Department of the Treasury",
+            "link": "https://www.treasury.gov"
+        },
+        {
+            "id": 126,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Federal Bureau of Investigation",
+            "link": "https://ucr.fbi.gov/"
+        },
+        {
+            "id": 128,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Dartmouth Atlas of Healthcare",
+            "link": "http://www.dartmouthatlas.org/",
+            "notes": "The Dartmouth Atlas of Health Care is based at The Dartmouth Institute for Health Policy and Clinical Practice."
+        },
+        {
+            "id": 129,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Moody’s",
+            "link": "https://www.moodys.com/"
+        },
+        {
+            "id": 133,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "DHI Group, Inc."
+        },
+        {
+            "id": 135,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Centers for Disease Control and Prevention",
+            "link": "https://www.cdc.gov",
+            "notes": "The CDC is one of the major operating components of the U.S. Department of Health and Human Services"
+        },
+        {
+            "id": 136,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "U.S. Patent and Trademark Office",
+            "link": "http://www.uspto.gov/"
+        },
+        {
+            "id": 141,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Coinbase",
+            "link": "https://www.coinbase.com/"
+        },
+        {
+            "id": 145,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Sahm, Claudia",
+            "link": "https://equitablegrowth.org/people/claudia-sahm/"
+        },
+        {
+            "id": 146,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Davis, Lance E."
+        },
+        {
+            "id": 147,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Stettler, H. Louis"
+        },
+        {
+            "id": 148,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Ice Data Indices, LLC",
+            "link": "https://www.theice.com/market-data/indices"
+        },
+        {
+            "id": 149,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Realtor.com",
+            "link": "https://realtor.com"
+        },
+        {
+            "id": 151,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Lewis, Daniel J."
+        },
+        {
+            "id": 152,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Mertens, Karel"
+        },
+        {
+            "id": 153,
+            "realtime_start": "2020-05-20",
+            "realtime_end": "2020-05-20",
+            "name": "Stock, James H."
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "series_count",
+    "sort_order": "desc",
+    "count": 2,
+    "offset": 0,
+    "limit": 1000,
+    "tags": [
+        {
+            "name": "unemployment",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 78,
+            "series_count": 32116
+        },
+        {
+            "name": "nairu",
+            "group_id": "gen",
+            "notes": "Non-Accelerating Inflation Rate of Unemployment",
+            "created": "2012-08-10 15:13:56-05",
+            "popularity": 19,
+            "series_count": 2
+        }
+    ]
+}

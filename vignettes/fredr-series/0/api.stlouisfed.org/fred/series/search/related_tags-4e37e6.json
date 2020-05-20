@@ -1,0 +1,251 @@
+{
+    "realtime_start": "2020-05-20",
+    "realtime_end": "2020-05-20",
+    "order_by": "series_count",
+    "sort_order": "desc",
+    "count": 51,
+    "offset": 0,
+    "limit": 30,
+    "tags": [
+        {
+            "name": "nation",
+            "group_id": "geot",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 99,
+            "series_count": 70
+        },
+        {
+            "name": "gnp",
+            "group_id": "gen",
+            "notes": "Gross National Product",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 39,
+            "series_count": 52
+        },
+        {
+            "name": "public domain: citation requested",
+            "group_id": "cc",
+            "notes": null,
+            "created": "2018-12-17 23:33:13-06",
+            "popularity": 99,
+            "series_count": 52
+        },
+        {
+            "name": "quarterly",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 85,
+            "series_count": 40
+        },
+        {
+            "name": "bea",
+            "group_id": "src",
+            "notes": "Bureau of Economic Analysis",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 79,
+            "series_count": 38
+        },
+        {
+            "name": "nipa",
+            "group_id": "rls",
+            "notes": "National Income and Product Accounts",
+            "created": "2012-08-16 15:21:17-05",
+            "popularity": 71,
+            "series_count": 38
+        },
+        {
+            "name": "sa",
+            "group_id": "seas",
+            "notes": "Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 88,
+            "series_count": 38
+        },
+        {
+            "name": "nsa",
+            "group_id": "seas",
+            "notes": "Not Seasonally Adjusted",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 100,
+            "series_count": 32
+        },
+        {
+            "name": "annual",
+            "group_id": "freq",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 91,
+            "series_count": 30
+        },
+        {
+            "name": "gdp",
+            "group_id": "gen",
+            "notes": "Gross Domestic Product",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 82,
+            "series_count": 28
+        },
+        {
+            "name": "rate",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 88,
+            "series_count": 20
+        },
+        {
+            "name": "copyrighted: citation required",
+            "group_id": "cc",
+            "notes": null,
+            "created": "2018-12-17 23:33:13-06",
+            "popularity": 89,
+            "series_count": 18
+        },
+        {
+            "name": "nber",
+            "group_id": "src",
+            "notes": "National Bureau of Economic Research",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 59,
+            "series_count": 18
+        },
+        {
+            "name": "real",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 75,
+            "series_count": 16
+        },
+        {
+            "name": "flow",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-06-25 15:08:38-05",
+            "popularity": 50,
+            "series_count": 12
+        },
+        {
+            "name": "frb",
+            "group_id": "src",
+            "notes": "Board of Governors",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 81,
+            "series_count": 12
+        },
+        {
+            "name": "z1",
+            "group_id": "rls",
+            "notes": "Z.1 US Financial Accounts",
+            "created": "2012-08-16 15:21:17-05",
+            "popularity": 65,
+            "series_count": 12
+        },
+        {
+            "name": "discontinued",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 67,
+            "series_count": 10
+        },
+        {
+            "name": "goods",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 68,
+            "series_count": 10
+        },
+        {
+            "name": "services",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 66,
+            "series_count": 10
+        },
+        {
+            "name": "implicit price deflator",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 40,
+            "series_count": 8
+        },
+        {
+            "name": "exports",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 56,
+            "series_count": 6
+        },
+        {
+            "name": "final sales",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2013-03-26 16:25:06-05",
+            "popularity": 25,
+            "series_count": 6
+        },
+        {
+            "name": "indexes",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 84,
+            "series_count": 6
+        },
+        {
+            "name": "purchase",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-07-24 16:24:48-05",
+            "popularity": 43,
+            "series_count": 6
+        },
+        {
+            "name": "sales",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 64,
+            "series_count": 6
+        },
+        {
+            "name": "chained",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 47,
+            "series_count": 4
+        },
+        {
+            "name": "command basis",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": -9,
+            "series_count": 4
+        },
+        {
+            "name": "imports",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 52,
+            "series_count": 4
+        },
+        {
+            "name": "per capita",
+            "group_id": "gen",
+            "notes": "",
+            "created": "2012-02-27 10:18:19-06",
+            "popularity": 62,
+            "series_count": 4
+        }
+    ]
+}

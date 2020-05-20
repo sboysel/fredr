@@ -1,0 +1,9 @@
+{
+    "categories": [
+        {
+            "id": 97,
+            "name": "Housing",
+            "parent_id": 1
+        }
+    ]
+}
