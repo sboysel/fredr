@@ -148,7 +148,7 @@ fredr_series_updates()
 
 Use the `start_time` and `end_time` parameters to filter the results by time.  For example, to get all the macroeconomic times series updated in the last day:
 
-```{r fredr_series_updates2}
+```{r fredr_series_updates2, eval=FALSE}
 fredr_series_updates(
   start_time = Sys.time() - 60 * 60 * 24,
   end_time = Sys.time(),
