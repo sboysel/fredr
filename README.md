@@ -1,13 +1,11 @@
 # fredr
 
-[![Travis
-branch](https://img.shields.io/travis/sboysel/fredr/master.svg)](https://travis-ci.org/sboysel/fredr)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/sboysel/fredr?branch=master&svg=true)](https://ci.appveyor.com/project/sboysel/fredr)
-[![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg)](https://codecov.io/github/sboysel/fredr)
-[![CRAN](https://img.shields.io/cran/v/fredr.svg)](https://cran.r-project.org/web/packages/fredr/index.html)
-[![CRAN Downloads](https://cranlogs.r-pkg.org/badges/fredr)](https://cran.r-project.org/package=fredr)
-
-
+<!-- badges: start -->
+  [![CRAN](https://www.r-pkg.org/badges/version/fredr)](https://cran.r-project.org/package=fredr)
+  [![CRAN Downloads](https://cranlogs.r-pkg.org/badges/fredr)](https://cran.r-project.org/package=fredr)
+  [![R build status](https://github.com/sboysel/fredr/workflows/R-CMD-check/badge.svg)](https://github.com/sboysel/fredr/actions)
+  [![Codecov](https://codecov.io/gh/sboysel/fredr/branch/master/graph/badge.svg)](https://codecov.io/gh/sboysel/fredr?branch=master)
+<!-- badges: end -->
 
 `fredr` provides a complete set of `R` bindings to the [Federal Reserve Economic
 Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful API, provided by 
