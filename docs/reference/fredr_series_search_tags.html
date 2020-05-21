@@ -260,34 +260,34 @@ series count, and additional notes.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
 <span class='co'># Search for tags matching the series text "gnp"</span>
-<span class='fu'>fredr_series_search_tags</span>(<span class='st'>"gnp"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 217 x 6</span><span>
+<span class='fu'>fredr_series_search_tags</span>(<span class='st'>"gnp"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 198 x 6</span><span>
 #&gt;    name             group_id notes          created      popularity series_count
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>             </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …         99          482
-#&gt; </span><span style='color: #555555;'> 2</span><span> nation           geot     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         99          474
-#&gt; </span><span style='color: #555555;'> 3</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100          454
-#&gt; </span><span style='color: #555555;'> 4</span><span> annual           freq     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         91          448
-#&gt; </span><span style='color: #555555;'> 5</span><span> gni              gen      </span><span style='color: #555555;'>"</span><span>Gross Nation… 2013-03-27 …         46          260
-#&gt; </span><span style='color: #555555;'> 6</span><span> wdi              rls      </span><span style='color: #555555;'>"</span><span>World Develo… 2012-08-16 …         72          260
-#&gt; </span><span style='color: #555555;'> 7</span><span> world bank       src      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         77          260
-#&gt; </span><span style='color: #555555;'> 8</span><span> gnp              gen      </span><span style='color: #555555;'>"</span><span>Gross Nation… 2012-02-27 …         39          230
-#&gt; </span><span style='color: #555555;'> 9</span><span> gdp              gen      </span><span style='color: #555555;'>"</span><span>Gross Domest… 2012-02-27 …         82          206
-#&gt; </span><span style='color: #555555;'>10</span><span> pwt              rls      </span><span style='color: #555555;'>"</span><span>Penn World T… 2012-08-24 …         61          170
-#&gt; </span><span style='color: #555555;'># … with 207 more rows</span><span></div><div class='input'><span class='co'># Search for tags matching the series text "oil" and the tag text "usa"</span>
+#&gt; </span><span style='color: #555555;'> 1</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …        100          468
+#&gt; </span><span style='color: #555555;'> 2</span><span> nation           geot     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         99          458
+#&gt; </span><span style='color: #555555;'> 3</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100          452
+#&gt; </span><span style='color: #555555;'> 4</span><span> annual           freq     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         91          446
+#&gt; </span><span style='color: #555555;'> 5</span><span> gni              gen      </span><span style='color: #555555;'>"</span><span>Gross Nation… 2013-03-27 …         46          246
+#&gt; </span><span style='color: #555555;'> 6</span><span> wdi              rls      </span><span style='color: #555555;'>"</span><span>World Develo… 2012-08-16 …         71          246
+#&gt; </span><span style='color: #555555;'> 7</span><span> world bank       src      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         77          246
+#&gt; </span><span style='color: #555555;'> 8</span><span> gnp              gen      </span><span style='color: #555555;'>"</span><span>Gross Nation… 2012-02-27 …         39          234
+#&gt; </span><span style='color: #555555;'> 9</span><span> gdp              gen      </span><span style='color: #555555;'>"</span><span>Gross Domest… 2012-02-27 …         83          206
+#&gt; </span><span style='color: #555555;'>10</span><span> pwt              rls      </span><span style='color: #555555;'>"</span><span>Penn World T… 2012-08-24 …         62          178
+#&gt; </span><span style='color: #555555;'># … with 188 more rows</span><span></div><div class='input'><span class='co'># Search for tags matching the series text "oil" and the tag text "usa"</span>
 <span class='fu'>fredr_series_search_tags</span>(
   <span class='kw'>series_search_text</span> <span class='kw'>=</span> <span class='st'>"oil"</span>,
   <span class='kw'>tag_search_text</span> <span class='kw'>=</span> <span class='st'>"usa"</span>
 )</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 9 x 6</span><span>
 #&gt;   name   group_id notes                  created         popularity series_count
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> usa    geo      United States of Amer… 2012-02-27 10:…        100         </span><span style='text-decoration: underline;'>1</span><span>200
-#&gt; </span><span style='color: #555555;'>2</span><span> bea    src      Bureau of Economic An… 2012-02-27 10:…         79          530
-#&gt; </span><span style='color: #555555;'>3</span><span> bls    src      Bureau of Labor Stati… 2012-02-27 10:…         86          382
-#&gt; </span><span style='color: #555555;'>4</span><span> eia    src      Energy Information Ad… 2012-02-27 10:…         44          120
-#&gt; </span><span style='color: #555555;'>5</span><span> frb    src      Board of Governors     2012-02-27 10:…         81           46
-#&gt; </span><span style='color: #555555;'>6</span><span> mxp    rls      U.S. Import &amp; Export … 2012-08-16 15:…         42           32
-#&gt; </span><span style='color: #555555;'>7</span><span> census src      Census                 2012-02-27 10:…         79           28
-#&gt; </span><span style='color: #555555;'>8</span><span> ga     geo      Georgia (U.S. state)   2012-02-27 10:…         50           10
+#&gt; </span><span style='color: #555555;'>1</span><span> usa    geo      United States of Amer… 2012-02-27 10:…        100         </span><span style='text-decoration: underline;'>1</span><span>236
+#&gt; </span><span style='color: #555555;'>2</span><span> bea    src      Bureau of Economic An… 2012-02-27 10:…         79          556
+#&gt; </span><span style='color: #555555;'>3</span><span> bls    src      Bureau of Labor Stati… 2012-02-27 10:…         86          398
+#&gt; </span><span style='color: #555555;'>4</span><span> eia    src      Energy Information Ad… 2012-02-27 10:…         44          112
+#&gt; </span><span style='color: #555555;'>5</span><span> frb    src      Board of Governors     2012-02-27 10:…         81           48
+#&gt; </span><span style='color: #555555;'>6</span><span> mxp    rls      U.S. Import &amp; Export … 2012-08-16 15:…         42           42
+#&gt; </span><span style='color: #555555;'>7</span><span> census src      Census                 2012-02-27 10:…         79           24
+#&gt; </span><span style='color: #555555;'>8</span><span> ga     geo      Georgia (U.S. state)   2012-02-27 10:…         51           14
 #&gt; </span><span style='color: #555555;'>9</span><span> z1     rls      Z.1 US Financial Acco… 2012-08-16 15:…         65            4</div><div class='input'><span class='co'># Search for tags matching the series text "oil" and the tag text "usa".</span>
 <span class='co'># Return only results in the "geo" (Geography) group</span>
 <span class='fu'>fredr_series_search_tags</span>(
@@ -297,8 +297,8 @@ series count, and additional notes.</p>
 )</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 6</span><span>
 #&gt;   name  group_id notes                created            popularity series_count
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> usa   geo      United States of Am… 2012-02-27 10:18:…        100         </span><span style='text-decoration: underline;'>1</span><span>202
-#&gt; </span><span style='color: #555555;'>2</span><span> ga    geo      Georgia (U.S. state) 2012-02-27 10:18:…         50           10</div><div class='input'># }
+#&gt; </span><span style='color: #555555;'>1</span><span> usa   geo      United States of Am… 2012-02-27 10:18:…        100         </span><span style='text-decoration: underline;'>1</span><span>314
+#&gt; </span><span style='color: #555555;'>2</span><span> ga    geo      Georgia (U.S. state) 2012-02-27 10:18:…         51           14</div><div class='input'># }
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

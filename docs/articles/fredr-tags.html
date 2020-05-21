@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Tags</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-05-19</h4>
+            <h4 class="date">2020-05-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-tags.Rmd"><code>vignettes/fredr-tags.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-tags.Rmd</code></div>
@@ -207,6 +207,7 @@
 <a href="#get-related-series-tags" class="anchor"></a>Get related series tags</h2>
 <p>The function <code><a href="../reference/fredr_related_tags.html">fredr_related_tags()</a></code> returns a list of tags <em>related to</em> the set of tags matching the request. The data returned is a <code>tibble</code> in which each row represents a tag related to the tags specified in <code>tag_names</code>. For example, to get the set of tags related to the tags “monetary aggregates” and “weekly”:</p>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_related_tags.html">fredr_related_tags</a></span>(<span class="kw">tag_names</span> <span class="kw">=</span> <span class="st">"monetary aggregates;weekly"</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 12 x 6</span>
 <span class="co">#&gt;    name             group_id notes          created      popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;            &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span>
@@ -227,6 +228,7 @@
   <span class="kw">tag_names</span> <span class="kw">=</span> <span class="st">"monetary aggregates;weekly"</span>,
   <span class="kw">tag_group_id</span> <span class="kw">=</span> <span class="st">"gen"</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 4 x 6</span>
 <span class="co">#&gt;   name     group_id notes           created              popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;                     &lt;int&gt;        &lt;int&gt;</span>
@@ -240,6 +242,7 @@
   <span class="kw">tag_group_id</span> <span class="kw">=</span> <span class="st">"gen"</span>,
   <span class="kw">search_text</span> <span class="kw">=</span> <span class="st">"money stock"</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 4 x 6</span>
 <span class="co">#&gt;   name  group_id notes           created                popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;                       &lt;int&gt;        &lt;int&gt;</span>
@@ -253,6 +256,7 @@
 <a href="#get-series-by-tag-names" class="anchor"></a>Get series by tag names</h2>
 <p>The function <code><a href="../reference/fredr_tags_series.html">fredr_tags_series()</a></code> returns a list of series assigned tags matching the request. As with the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Series">Series endpoint</a>, the data returned is a <code>tibble</code> in which each row represents a series. For example, to get all series tagged with “gdp”:</p>
 <div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_tags_series.html">fredr_tags_series</a></span>(<span class="kw">tag_names</span> <span class="kw">=</span> <span class="st">"gdp"</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1,000 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
@@ -277,6 +281,7 @@
   <span class="kw">order_by</span> <span class="kw">=</span> <span class="st">"popularity"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">100L</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 100 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>

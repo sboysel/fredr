@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Series</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-05-19</h4>
+            <h4 class="date">2020-05-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-series.Rmd"><code>vignettes/fredr-series.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-series.Rmd</code></div>
@@ -159,6 +159,7 @@
   <span class="kw">search_text</span> <span class="kw">=</span> <span class="st">"unemployment"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">100L</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 100 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
@@ -181,6 +182,7 @@
   <span class="kw">search_text</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">100L</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 16 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
@@ -237,6 +239,7 @@
   <span class="kw">tag_names</span> <span class="kw">=</span> <span class="st">"usa"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">30L</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 30 x 6</span>
 <span class="co">#&gt;    name            group_id notes            created     popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;           &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
@@ -257,6 +260,7 @@
 <a href="#get-basic-information-for-a-fred-series" class="anchor"></a>Get basic information for a FRED series</h2>
 <p>The <code><a href="../reference/fredr_series.html">fredr_series()</a></code> function returns information for a single series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents the series specified. For example, to get information for the <code>UNRATE</code> series:</p>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series.html">fredr_series</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1 x 15</span>
 <span class="co">#&gt;   id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
@@ -270,6 +274,7 @@
   <span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">realtime_start</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="st">"1950-01-01"</span>)
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 4 x 15</span>
 <span class="co">#&gt;   id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
@@ -287,6 +292,7 @@
 <a href="#get-the-categories-for-a-fred-series" class="anchor"></a>Get the categories for a FRED series</h2>
 <p>The <code><a href="../reference/fredr_series_categories.html">fredr_series_categories()</a></code> function returns a list of categories for the series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents a category that the series belongs to. For example, to get the categories for the <code>UNRATE</code> series:</p>
 <div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_categories.html">fredr_series_categories</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1 x 4</span>
 <span class="co">#&gt;      id name          parent_id notes                                           </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;                                           </span>
@@ -297,6 +303,7 @@
 <a href="#get-the-release-for-a-fred-series" class="anchor"></a>Get the release for a FRED series</h2>
 <p>The <code><a href="../reference/fredr_series_release.html">fredr_series_release()</a></code> function returns a list of releases that the series specified by <code>series_id</code> belongs to. The data returned is a <code>tibble</code> in which each row represents a release that the series belongs to. For example, to get the release for the <code>UNRATE</code> series:</p>
 <div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_release.html">fredr_series_release</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1 x 6</span>
 <span class="co">#&gt;      id realtime_start realtime_end name           press_release link           </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;          &lt;lgl&gt;         &lt;chr&gt;          </span>
@@ -310,6 +317,7 @@
   <span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">order_by</span> <span class="kw">=</span> <span class="st">"name"</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 14 x 6</span>
 <span class="co">#&gt;    name           group_id notes             created     popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
@@ -333,6 +341,7 @@
 <a href="#get-a-set-of-recently-updated-fred-series" class="anchor"></a>Get a set of recently updated FRED series</h2>
 <p>The <code><a href="../reference/fredr_series_updates.html">fredr_series_updates()</a></code> function returns a list of series recently updated on the FRED server. The data returned is a <code>tibble</code> in which each row represents a series. For example, the default call simply lists 1000 recent updates (the default for the <code>limit</code> parameter), most recent updates appearing first:</p>
 <div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_updates.html">fredr_series_updates</a></span>()
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1,000 x 15</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
@@ -355,30 +364,14 @@
   <span class="kw">start_time</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.time</a></span>() - <span class="fl">60</span> * <span class="fl">60</span> * <span class="fl">24</span>,
   <span class="kw">end_time</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.time</a></span>(),
   <span class="kw">filter_value</span> <span class="kw">=</span> <span class="st">"macro"</span>
-)
-<span class="co">#&gt; # A tibble: 860 x 15</span>
-<span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 GOLD… 2020-05-20     2020-05-20   Gold… 1999-01-04       2020-05-19     </span>
-<span class="co">#&gt;  2 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  3 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  4 GOLD… 2020-05-20     2020-05-20   Gold… 1999-01-04       2020-05-19     </span>
-<span class="co">#&gt;  5 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  6 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  7 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt;  8 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt;  9 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt; 10 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt; # … with 850 more rows, and 9 more variables: frequency &lt;chr&gt;,</span>
-<span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
-<span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
-<span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></body></html></div>
+)</pre></body></html></div>
 </div>
 <div id="get-the-data-vintage-dates-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-data-vintage-dates-for-a-fred-series" class="anchor"></a>Get the data vintage dates for a FRED series</h2>
 <p>The <code><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates()</a></code> function returns a sequence of dates in history when the series specified by <code>series_id</code> was revised or appended to. The data returned is a <code>tibble</code> where each row is a date. For example, to get the vintage dates for the series <code>UNRATE</code>:</p>
 <div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 723 x 1</span>
 <span class="co">#&gt;    vintage_dates</span>
 <span class="co">#&gt;    &lt;chr&gt;        </span>

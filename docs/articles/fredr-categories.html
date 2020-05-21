@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Categories</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-05-19</h4>
+            <h4 class="date">2020-05-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-categories.Rmd"><code>vignettes/fredr-categories.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-categories.Rmd</code></div>
@@ -134,11 +134,13 @@
 <a href="#get-a-fred-category" class="anchor"></a>Get a FRED category</h2>
 <p><code><a href="../reference/fredr_category.html">fredr_category()</a></code> returns minimal information for a single category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a category. The default is the root category.</p>
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_category.html">fredr_category</a></span>()
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1 x 3</span>
 <span class="co">#&gt;      id name       parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;int&gt;</span>
 <span class="co">#&gt; 1     0 Categories         0</span></pre></body></html></div>
 <div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_category.html">fredr_category</a></span>(<span class="kw">category_id</span> <span class="kw">=</span> <span class="fl">97L</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1 x 3</span>
 <span class="co">#&gt;      id name    parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;       &lt;int&gt;</span>
@@ -149,6 +151,7 @@
 <a href="#get-the-children-of-a-fred-category" class="anchor"></a>Get the children of a FRED category</h2>
 <p><code><a href="../reference/fredr_category_children.html">fredr_category_children()</a></code> returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents child category of the parent specified. The default is the root category.</p>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span>()
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 8 x 3</span>
 <span class="co">#&gt;      id name                                    parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;                                       &lt;int&gt;</span>
@@ -161,6 +164,7 @@
 <span class="co">#&gt; 7  3008 U.S. Regional Data                              0</span>
 <span class="co">#&gt; 8 33060 Academic Data                                   0</span></pre></body></html></div>
 <div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span>(<span class="kw">category_id</span> <span class="kw">=</span> <span class="fl">1L</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 14 x 3</span>
 <span class="co">#&gt;       id name                                         parent_id</span>
 <span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;                                            &lt;int&gt;</span>
@@ -184,8 +188,10 @@
 <a href="#get-a-related-fred-category" class="anchor"></a>Get a related FRED category</h2>
 <p><code><a href="../reference/fredr_category_related.html">fredr_category_related()</a></code> returns minimal information (ID, name, and parent ID) for all related categories to the category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents category related to the one specified. Note that not all categories have related categories. The default is the root category.</p>
 <div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span>()
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 0 x 0</span></pre></body></html></div>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span>(<span class="kw">category_id</span> <span class="kw">=</span> <span class="fl">4L</span>) <span class="co"># Employment Cost Index</span>
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1 x 3</span>
 <span class="co">#&gt;      id name                                    parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;                                       &lt;int&gt;</span>
@@ -202,6 +208,7 @@
   <span class="kw">filter_variable</span> <span class="kw">=</span> <span class="st">"frequency"</span>,
   <span class="kw">filter_value</span> <span class="kw">=</span> <span class="st">"Quarterly"</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 30 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
@@ -227,6 +234,7 @@
   <span class="kw">tag_names</span> <span class="kw">=</span> <span class="st">"usa"</span>,
   <span class="kw">exclude_tag_names</span> <span class="kw">=</span> <span class="st">"gnp"</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 4 x 16</span>
 <span class="co">#&gt;   id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
@@ -247,6 +255,7 @@
   <span class="kw">category_id</span> <span class="kw">=</span> <span class="fl">6L</span>,
   <span class="kw">tag_group_id</span> <span class="kw">=</span> <span class="st">"src"</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 3 x 6</span>
 <span class="co">#&gt;   name    group_id notes               created           popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;</span>
@@ -260,6 +269,7 @@
   <span class="kw">order_by</span> <span class="kw">=</span> <span class="st">"popularity"</span>,
   <span class="kw">sort_order</span> <span class="kw">=</span> <span class="st">"desc"</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 3 x 6</span>
 <span class="co">#&gt;   name   group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
@@ -277,6 +287,7 @@
   <span class="kw">exclude_tag_names</span> <span class="kw">=</span> <span class="st">"rate"</span>,
   <span class="kw">order_by</span> <span class="kw">=</span> <span class="st">"name"</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 10 x 6</span>
 <span class="co">#&gt;    name           group_id notes             created     popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>

@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Sources</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-05-19</h4>
+            <h4 class="date">2020-05-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-sources.Rmd"><code>vignettes/fredr-sources.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-sources.Rmd</code></div>
@@ -127,6 +127,7 @@
 <a href="#get-fred-sources" class="anchor"></a>Get FRED sources</h2>
 <p>The function <code><a href="../reference/fredr_sources.html">fredr_sources()</a></code> returns a list of FRED data sources. The information returned is a <code>tibble</code> in which each row represents a FRED source. For example, running <code><a href="../reference/fredr_sources.html">fredr_sources()</a></code> without any arguments returns the first 1000 (<code>limit</code> default) sources ordered by ascending source ID:</p>
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_sources.html">fredr_sources</a></span>()
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 94 x 6</span>
 <span class="co">#&gt;       id realtime_start realtime_end name                   link           notes</span>
 <span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                  &lt;chr&gt;          &lt;chr&gt;</span>
@@ -147,6 +148,7 @@
 <a href="#get-a-single-fred-source" class="anchor"></a>Get a single FRED source</h2>
 <p>The function <code><a href="../reference/fredr_source.html">fredr_source()</a></code> returns information for a <em>single</em> source indicated by <code>source_id</code>. The data returned is a <code>tibble</code> in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is <code>6</code>:</p>
 <div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_source.html">fredr_source</a></span>(<span class="kw">source_id</span> <span class="kw">=</span> <span class="fl">6L</span>)
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1 x 5</span>
 <span class="co">#&gt;      id realtime_start realtime_end name                           link         </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                          &lt;chr&gt;        </span>
@@ -160,6 +162,7 @@
   <span class="kw">source_id</span> <span class="kw">=</span> <span class="fl">1L</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">10L</span>
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 10 x 7</span>
 <span class="co">#&gt;       id realtime_start realtime_end name       press_release link     notes    </span>
 <span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;lgl&gt;         &lt;chr&gt;    &lt;chr&gt;    </span>
@@ -178,6 +181,7 @@
   <span class="kw">source_id</span> <span class="kw">=</span> <span class="fl">14L</span>,
   <span class="kw">realtime_start</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="st">"1950-01-01"</span>)
 )
+<span class="co">#&gt; No encoding supplied: defaulting to UTF-8.</span>
 <span class="co">#&gt; # A tibble: 1 x 6</span>
 <span class="co">#&gt;      id realtime_start realtime_end name          press_release link            </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;         &lt;lgl&gt;         &lt;chr&gt;           </span>
