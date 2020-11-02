@@ -1,41 +1,52 @@
-tbl_class <- c("tbl_df", "tbl", "data.frame")
-
-test_that("fredr_request() throws proper errors and messages", {
-  skip_if_no_key()
-
-  # unset API key
+test_that("errors without key", {
   original <- fredr_get_key()
   on.exit(fredr_set_key(original), add = TRUE)
 
   fredr_set_key(NULL)
-  expect_error(fredr_request(endpoint = "series"))
+  expect_error(fredr_request(endpoint = "series"), "key must be set")
+})
 
-  fredr_set_key(original)
+test_that("can print http request", {
+  skip_if_no_key()
 
-  # print HTTP request
   expect_message(
     fredr_request(endpoint = "series", series_id = "GNPCA", print_req = TRUE),
     regexp = "GNPCA"
   )
-  # bad endpoint
-  expect_error(fredr_request(endpoint = "foo"))
-  # bad request
+})
+
+test_that("errors on bad endpoint", {
+  expect_error(fredr_request(endpoint = "foo"), "not a valid endpoint")
+})
+
+test_that("errors with 400 bad request error", {
+  skip_if_no_key()
+
   expect_error(
     fredr_request(endpoint = "series/observations", series_id = "bad_series_id"),
-    regexp = "400: Bad Request"
+    "400: Bad Request"
   )
 })
 
-test_that("fredr_request() returns proper objects", {
+test_that("can return tibble", {
   skip_if_no_key()
-  expect_silent(resp <- fredr_request(endpoint = "series", series_id = "GNPCA", to_frame = FALSE))
+  tbl_class <- c("tbl_df", "tbl", "data.frame")
+
   expect_silent(frame <- fredr_request(endpoint = "series", series_id = "GNPCA"))
-  expect_s3_class(resp, "response")
   expect_s3_class(frame, tbl_class)
 })
 
-test_that("fredr_request() endpoints", {
+test_that("can return response object", {
   skip_if_no_key()
+
+  expect_silent(resp <- fredr_request(endpoint = "series", series_id = "GNPCA", to_frame = FALSE))
+  expect_s3_class(resp, "response")
+})
+
+test_that("can hit various endpoints", {
+  skip_if_no_key()
+  tbl_class <- c("tbl_df", "tbl", "data.frame")
+
   # categories
   expect_s3_class(fredr_request(endpoint = "category"), tbl_class)
   expect_s3_class(fredr_request(endpoint = "category/children"), tbl_class)
@@ -52,7 +63,7 @@ test_that("fredr_request() endpoints", {
       endpoint = "category/related_tags",
       category_id = 0,
       tag_names = "gnp"
-      ),
+    ),
     tbl_class
   )
   # series
