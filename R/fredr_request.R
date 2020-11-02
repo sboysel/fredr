@@ -1,42 +1,44 @@
 #' Send a request to the FRED API
 #'
-#' Send a general request to the FRED API by specifying an endpoint and a sequence
-#' of parameters.  The `fredr_request()` function forms and submits a request to
-#' a specified endpoint of the FRED API.  The return is either the `response`
-#' object from [httr::GET()] or the response parsed as a `tibble`.
+#' Send a general request to the FRED API by specifying an endpoint and a
+#' sequence of parameters.  The `fredr_request()` function forms and submits a
+#' request to a specified endpoint of the FRED API.  The result is either the
+#' `response` object from [httr::GET()] or the response parsed as a `tibble`.
 #'
 #' @param endpoint A string representing the FRED API endpoint of interest. See
-#'        [fredr_endpoints] for a list of endpoint possible values. _Required parameter._
-#' @param ... A series of named parameters to be used in the query.  Must be of the form
-#'        `param_key = "param_value"`.  Acceptable parameters are endpoint-specific.
-#'        See the [fredr_endpoints] data frame for a list of endpoints and [fredr_docs()]
-#'        access to the web documentation for each endpoint function.
-#' @param to_frame A boolean value indicating whether or not the response
-#'        should be parsed and formatted as a data frame.  If `FALSE`,
-#'        a `response` object is returned and further processing can be done with
-#'        [httr::content()].  Default is `TRUE`.
-#' @param print_req A boolean value indicating whether or not the request
-#'        should be printed as well.  Useful for debugging.  Default is `FALSE`.
-#' @param retry_times An integer indicating the maximum number of requests to attempt.
-#'        Passed directly to [httr::RETRY()].  Default is 10.
-#' @return If `to_frame = TRUE`, a `tibble` containing the parsed response.
-#'         If `to_frame = FALSE`, a `response` object returned directly from
-#'         [httr::GET()].
+#'   [fredr_endpoints] for a list of endpoint possible values. _Required
+#'   parameter._
+#' @param ... A series of named parameters to be used in the query.  Must be of
+#'   the form `param_key = "param_value"`.  Acceptable parameters are
+#'   endpoint-specific. See the [fredr_endpoints] data frame for a list of
+#'   endpoints and [fredr_docs()] to access the web documentation for each
+#'   endpoint function.
+#' @param to_frame A boolean value indicating whether or not the response should
+#'   be parsed and formatted as a data frame.  If `FALSE`, a `response` object
+#'   is returned and further processing can be done with [httr::content()].
+#'   Default is `TRUE`.
+#' @param print_req A boolean value indicating whether or not the request should
+#'   be printed as well.  Useful for debugging.  Default is `FALSE`.
+#' @param retry_times An integer indicating the maximum number of requests to
+#'   attempt. Passed directly to [httr::RETRY()].  Default is 10.
+#' @return If `to_frame = TRUE`, a `tibble` containing the parsed response. If
+#'   `to_frame = FALSE`, a `response` object returned directly from
+#'   [httr::GET()].
 #'
 #' @section API Documentation:
 #'
-#' [FRED API](https://api.stlouisfed.org/docs/fred/)
+#'   [FRED API](https://api.stlouisfed.org/docs/fred/)
 #'
 #' @examples
 #' \donttest{
-#'
 #' fredr_request(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
 #'   observation_start = "1990-01-01",
 #'   observation_end = "2000-01-01"
 #' )
-#' # Compare with to_frame = TRUE
+#'
+#' # Compare to to_frame = `FALSE`
 #' resp <- fredr_request(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
@@ -44,7 +46,6 @@
 #'   observation_end = "2000-01-01",
 #'   to_frame = FALSE
 #' )
-#'
 #' }
 #' @export
 fredr_request <- function(endpoint,

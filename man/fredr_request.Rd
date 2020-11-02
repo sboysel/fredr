@@ -14,34 +14,36 @@ fredr_request(
 }
 \arguments{
 \item{endpoint}{A string representing the FRED API endpoint of interest. See
-\link{fredr_endpoints} for a list of endpoint possible values. \emph{Required parameter.}}
+\link{fredr_endpoints} for a list of endpoint possible values. \emph{Required
+parameter.}}
 
-\item{...}{A series of named parameters to be used in the query.  Must be of the form
-\code{param_key = "param_value"}.  Acceptable parameters are endpoint-specific.
-See the \link{fredr_endpoints} data frame for a list of endpoints and \code{\link[=fredr_docs]{fredr_docs()}}
-access to the web documentation for each endpoint function.}
+\item{...}{A series of named parameters to be used in the query.  Must be of
+the form \code{param_key = "param_value"}.  Acceptable parameters are
+endpoint-specific. See the \link{fredr_endpoints} data frame for a list of
+endpoints and \code{\link[=fredr_docs]{fredr_docs()}} to access the web documentation for each
+endpoint function.}
 
-\item{to_frame}{A boolean value indicating whether or not the response
-should be parsed and formatted as a data frame.  If \code{FALSE},
-a \code{response} object is returned and further processing can be done with
-\code{\link[httr:content]{httr::content()}}.  Default is \code{TRUE}.}
+\item{to_frame}{A boolean value indicating whether or not the response should
+be parsed and formatted as a data frame.  If \code{FALSE}, a \code{response} object
+is returned and further processing can be done with \code{\link[httr:content]{httr::content()}}.
+Default is \code{TRUE}.}
 
-\item{print_req}{A boolean value indicating whether or not the request
-should be printed as well.  Useful for debugging.  Default is \code{FALSE}.}
+\item{print_req}{A boolean value indicating whether or not the request should
+be printed as well.  Useful for debugging.  Default is \code{FALSE}.}
 
-\item{retry_times}{An integer indicating the maximum number of requests to attempt.
-Passed directly to \code{\link[httr:RETRY]{httr::RETRY()}}.  Default is 10.}
+\item{retry_times}{An integer indicating the maximum number of requests to
+attempt. Passed directly to \code{\link[httr:RETRY]{httr::RETRY()}}.  Default is 10.}
 }
 \value{
-If \code{to_frame = TRUE}, a \code{tibble} containing the parsed response.
-If \code{to_frame = FALSE}, a \code{response} object returned directly from
+If \code{to_frame = TRUE}, a \code{tibble} containing the parsed response. If
+\code{to_frame = FALSE}, a \code{response} object returned directly from
 \code{\link[httr:GET]{httr::GET()}}.
 }
 \description{
-Send a general request to the FRED API by specifying an endpoint and a sequence
-of parameters.  The \code{fredr_request()} function forms and submits a request to
-a specified endpoint of the FRED API.  The return is either the \code{response}
-object from \code{\link[httr:GET]{httr::GET()}} or the response parsed as a \code{tibble}.
+Send a general request to the FRED API by specifying an endpoint and a
+sequence of parameters.  The \code{fredr_request()} function forms and submits a
+request to a specified endpoint of the FRED API.  The result is either the
+\code{response} object from \code{\link[httr:GET]{httr::GET()}} or the response parsed as a \code{tibble}.
 }
 \section{API Documentation}{
 
@@ -51,14 +53,14 @@ object from \code{\link[httr:GET]{httr::GET()}} or the response parsed as a \cod
 
 \examples{
 \donttest{
-
 fredr_request(
   endpoint = "series/observations",
   series_id = "GNPCA",
   observation_start = "1990-01-01",
   observation_end = "2000-01-01"
 )
-# Compare with to_frame = TRUE
+
+# Compare to to_frame = `FALSE`
 resp <- fredr_request(
   endpoint = "series/observations",
   series_id = "GNPCA",
@@ -66,6 +68,5 @@ resp <- fredr_request(
   observation_end = "2000-01-01",
   to_frame = FALSE
 )
-
 }
 }
