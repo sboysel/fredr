@@ -16,7 +16,7 @@ vignette: >
 knitr::opts_chunk$set(
   fig.width = 7,
   fig.height = 5,
-  eval = !(Sys.getenv("FRED_API_KEY") == ""),
+  eval = !is.null(fredr_get_key()),
   cache = TRUE,
   collapse = TRUE,
   comment = "#>"

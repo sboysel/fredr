@@ -47,14 +47,14 @@
 #' @export
 fredr_request <- function(endpoint, ..., to_frame = TRUE, print_req = FALSE) {
 
-  if (identical(Sys.getenv("FRED_API_KEY"), "")) {
+  if (is_null(fredr_get_key())) {
     stop("FRED API key must be set. See `?fredr_set_key`.")
   }
 
   validate_endpoint(endpoint)
 
   params <- list(...)
-  params$api_key <- Sys.getenv("FRED_API_KEY")
+  params$api_key <- fredr_get_key()
   params$file_type <- "json"
 
   resp <- httr::RETRY(

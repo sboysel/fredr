@@ -5,11 +5,16 @@ tbl_class <- c("tbl_df", "tbl", "data.frame")
 
 test_that("fredr_request() throws proper errors and messages", {
   skip_if_no_key()
+
   # unset API key
-  key_backup <- Sys.getenv("FRED_API_KEY")
-  fredr_set_key("")
+  original <- fredr_get_key()
+  on.exit(fredr_set_key(original), add = TRUE)
+
+  fredr_set_key(NULL)
   expect_error(fredr_request(endpoint = "series"))
-  fredr_set_key(key_backup)
+
+  fredr_set_key(original)
+
   # print HTTP request
   expect_message(
     fredr_request(endpoint = "series", series_id = "GNPCA", print_req = TRUE),
