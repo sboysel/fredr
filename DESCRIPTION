@@ -1,36 +1,42 @@
 Package: fredr
 Title: An R Client for the 'FRED' API
 Version: 1.1.0.9000
-Authors@R: c(
-    person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre")),
-    person("Davis", "Vaughan", email = "davis@rstudio.com", role = c("aut"))
-  )
+Authors@R: 
+    c(person(given = "Sam",
+             family = "Boysel",
+             role = c("aut", "cre"),
+             email = "sboysel@gmail.com"),
+      person(given = "Davis",
+             family = "Vaughan",
+             role = "aut",
+             email = "davis@rstudio.com"))
 Maintainer: Sam Boysel <sboysel@gmail.com>
-Description: An R client for the 'Federal Reserve Economic Data' ('FRED') API
-  <https://api.stlouisfed.org>.  Functions to retrieve economic time series and 
-  other data from 'FRED'.
+Description: An R client for the 'Federal Reserve Economic Data'
+    ('FRED') API <https://api.stlouisfed.org>.  Functions to retrieve
+    economic time series and other data from 'FRED'.
+License: MIT + file LICENSE
 URL: https://github.com/sboysel/fredr
 BugReports: https://github.com/sboysel/fredr/issues
 Depends:
-  R (>= 3.2.2)
+    R (>= 3.2.2)
 Imports:
-  httr,
-  jsonlite,
-  tibble,
-  rlang
+    httr,
+    jsonlite,
+    rlang,
+    tibble
 Suggests:
-  covr,
-  dplyr,
-  ggplot2,
-  knitr,
-  purrr,
-  rmarkdown,
-  testthat,
-  zoo,
-  xts
+    covr,
+    dplyr,
+    ggplot2,
+    knitr,
+    purrr,
+    rmarkdown,
+    testthat,
+    xts,
+    zoo
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
-License: MIT + file LICENSE 
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
-VignetteBuilder: knitr
