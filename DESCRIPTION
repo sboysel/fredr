@@ -3,7 +3,7 @@ Title: An R Client for the 'FRED' API
 Version: 1.1.0.9000
 Authors@R: c(
     person("Sam", "Boysel", email = "sboysel@gmail.com", role = c("aut", "cre")),
-    person("Davis", "Vaughan", email = "dvaughan@business-science.io", role = c("aut"))
+    person("Davis", "Vaughan", email = "davis@rstudio.com", role = c("aut"))
   )
 Maintainer: Sam Boysel <sboysel@gmail.com>
 Description: An R client for the 'Federal Reserve Economic Data' ('FRED') API
