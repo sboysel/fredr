@@ -9,7 +9,7 @@ fredr_request(
   ...,
   to_frame = TRUE,
   print_req = FALSE,
-  retry_times = 10L
+  retry_times = 3L
 )
 }
 \arguments{
@@ -32,7 +32,7 @@ Default is \code{TRUE}.}
 be printed as well.  Useful for debugging.  Default is \code{FALSE}.}
 
 \item{retry_times}{An integer indicating the maximum number of requests to
-attempt. Passed directly to \code{\link[httr:RETRY]{httr::RETRY()}}.  Default is 10.}
+attempt. Passed directly to \code{\link[httr:RETRY]{httr::RETRY()}}.  Default is 3.}
 }
 \value{
 If \code{to_frame = TRUE}, a \code{tibble} containing the parsed response. If

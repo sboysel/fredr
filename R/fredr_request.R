@@ -20,7 +20,7 @@
 #' @param print_req A boolean value indicating whether or not the request should
 #'   be printed as well.  Useful for debugging.  Default is `FALSE`.
 #' @param retry_times An integer indicating the maximum number of requests to
-#'   attempt. Passed directly to [httr::RETRY()].  Default is 10.
+#'   attempt. Passed directly to [httr::RETRY()].  Default is 3.
 #' @return If `to_frame = TRUE`, a `tibble` containing the parsed response. If
 #'   `to_frame = FALSE`, a `response` object returned directly from
 #'   [httr::GET()].
@@ -52,7 +52,7 @@ fredr_request <- function(endpoint,
                           ...,
                           to_frame = TRUE,
                           print_req = FALSE,
-                          retry_times = 10L) {
+                          retry_times = 3L) {
 
   if (is_null(fredr_get_key())) {
     stop("FRED API key must be set. See `?fredr_set_key`.")
