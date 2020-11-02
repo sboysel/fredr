@@ -83,9 +83,34 @@ capture_args <- function(...) {
 validate_is_class <- function(x, x_nm, x_class) {
   if(is.null(x)) return(x)
 
-  if(!inherits(x, x_class)) {
-    msg <- paste0("Argument `", x_nm, "` must be a `", x_class, "`.")
-    stop(msg, call. = FALSE)
+  if(!inherits_any(x, x_class)) {
+    cls <- class_collapse(x_class)
+    msg <- paste0("Argument `", x_nm, "` must be a ", cls, ".")
+    abort(msg)
+  }
+}
+
+class_collapse <- function(x) {
+  n <- length(x)
+
+  if (n == 0L) {
+    return(character())
+  }
+
+  if (n == 1L) {
+    return(paste0("`", x, "`"))
+  }
+
+  front <- x[-n]
+  back <- x[n]
+
+  front <- paste0("`", front, "`", collapse = ", ")
+  back <- paste0(" or `", back, "`")
+
+  if (n == 2L) {
+    paste0(front, back)
+  } else {
+    paste0(front, ",",  back)
   }
 }
 
