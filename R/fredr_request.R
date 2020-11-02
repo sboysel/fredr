@@ -69,7 +69,8 @@ fredr_request <- function(endpoint,
     url = "https://api.stlouisfed.org/",
     path = paste0("fred/", endpoint),
     query = params,
-    times = retry_times
+    times = retry_times,
+    terminate_on = fredr_termination_codes()
   )
 
   if (print_req) {
@@ -140,4 +141,19 @@ fredr_request <- function(endpoint,
   } else {
     return(resp)
   }
+}
+
+fredr_termination_codes <- function() {
+  # https://fred.stlouisfed.org/docs/api/fred/errors.html
+  code_bad_request <- 400L
+  code_not_found <- 404L
+  code_locked <- 423L
+  code_internal_server_error <- 500L
+
+  c(
+    code_bad_request,
+    code_not_found,
+    code_locked,
+    code_internal_server_error
+  )
 }
