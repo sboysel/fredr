@@ -93,9 +93,9 @@ test_that("validate_boolean()", {
   good <- TRUE
   numeric <- 1
   length2 <- c("a", "b")
-  expect_silent(validate_boolean(good))
-  expect_error(validate_boolean(numeric))
-  expect_error(validate_boolean(length2))
+  expect_silent(validate_boolean(good, "x"))
+  expect_error(validate_boolean(numeric, "x"), "`x` must be a `logical`")
+  expect_error(validate_boolean(length2, "x"), "`x` must be a `logical`")
 })
 
 test_that("format_boolean()", {

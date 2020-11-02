@@ -11,8 +11,8 @@ capture_args <- function(...) {
   validate_limit(args$limit)
 
   # Validation - boolean values
-  validate_boolean(args$include_release_dates_with_no_data)
-  validate_boolean(args$include_observation_values)
+  validate_boolean(args$include_release_dates_with_no_data, "include_release_dates_with_no_data")
+  validate_boolean(args$include_observation_values, "include_observation_values")
 
   # Validation - dates
   date_lst <- list(
@@ -167,11 +167,9 @@ validate_required_string_param <- function(x) {
 
 }
 
-validate_boolean <- function(x) {
+validate_boolean <- function(x, x_nm) {
   if(is.null(x)) return(x)
-
-  validate_is_class(x, "include_release_dates_with_no_data", "logical")
-
+  validate_is_class(x, x_nm, "logical")
 }
 
 validate_endpoint <- function(x) {
