@@ -4,7 +4,13 @@
 \alias{fredr_request}
 \title{Send a request to the FRED API}
 \usage{
-fredr_request(endpoint, ..., to_frame = TRUE, print_req = FALSE)
+fredr_request(
+  endpoint,
+  ...,
+  to_frame = TRUE,
+  print_req = FALSE,
+  retry_times = 10L
+)
 }
 \arguments{
 \item{endpoint}{A string representing the FRED API endpoint of interest. See
@@ -18,21 +24,24 @@ access to the web documentation for each endpoint function.}
 \item{to_frame}{A boolean value indicating whether or not the response
 should be parsed and formatted as a data frame.  If \code{FALSE},
 a \code{response} object is returned and further processing can be done with
-\code{\link[httr]{content}}.  Default is \code{TRUE}.}
+\code{\link[httr:content]{httr::content()}}.  Default is \code{TRUE}.}
 
 \item{print_req}{A boolean value indicating whether or not the request
 should be printed as well.  Useful for debugging.  Default is \code{FALSE}.}
+
+\item{retry_times}{An integer indicating the maximum number of requests to attempt.
+Passed directly to \code{\link[httr:RETRY]{httr::RETRY()}}.  Default is 10.}
 }
 \value{
 If \code{to_frame = TRUE}, a \code{tibble} containing the parsed response.
 If \code{to_frame = FALSE}, a \code{response} object returned directly from
-\code{\link[httr]{GET}}.
+\code{\link[httr:GET]{httr::GET()}}.
 }
 \description{
 Send a general request to the FRED API by specifying an endpoint and a sequence
 of parameters.  The \code{fredr_request()} function forms and submits a request to
 a specified endpoint of the FRED API.  The return is either the \code{response}
-object from \code{\link[httr]{GET}} or the response parsed as a \code{tibble}.
+object from \code{\link[httr:GET]{httr::GET()}} or the response parsed as a \code{tibble}.
 }
 \section{API Documentation}{
 
