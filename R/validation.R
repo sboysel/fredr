@@ -90,30 +90,6 @@ validate_is_class <- function(x, x_nm, x_class) {
   }
 }
 
-class_collapse <- function(x) {
-  n <- length(x)
-
-  if (n == 0L) {
-    return(character())
-  }
-
-  if (n == 1L) {
-    return(paste0("`", x, "`"))
-  }
-
-  front <- x[-n]
-  back <- x[n]
-
-  front <- paste0("`", front, "`", collapse = ", ")
-  back <- paste0(" or `", back, "`")
-
-  if (n == 2L) {
-    paste0(front, back)
-  } else {
-    paste0(front, ",",  back)
-  }
-}
-
 validate_limit <- function(x) {
   if(is.null(x)) return(x)
 
@@ -254,6 +230,30 @@ force_integer <- function(x) {
     x
   } else {
     as.integer(x)
+  }
+}
+
+class_collapse <- function(x) {
+  n <- length(x)
+
+  if (n == 0L) {
+    return(character())
+  }
+
+  if (n == 1L) {
+    return(paste0("`", x, "`"))
+  }
+
+  front <- x[-n]
+  back <- x[n]
+
+  front <- paste0("`", front, "`", collapse = ", ")
+  back <- paste0(" or `", back, "`")
+
+  if (n == 2L) {
+    paste0(front, back)
+  } else {
+    paste0(front, ",",  back)
   }
 }
 
