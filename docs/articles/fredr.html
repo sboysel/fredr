@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
       </span>
     </div>
 
@@ -108,7 +108,7 @@
       <h1 data-toc-skip>Getting started with fredr</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-05-19</h4>
+            <h4 class="date">2020-05-14</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr.Rmd"><code>vignettes/fredr.Rmd</code></a></small>
       <div class="hidden name"><code>fredr.Rmd</code></div>
@@ -123,13 +123,13 @@
 <p><code>fredr</code> provides a complete set of <code>R</code> bindings to the <a href="https://research.stlouisfed.org/fred2/">Federal Reserve Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. The functions allow the user to search for and fetch time series observations as well as associated metadata within the FRED database. The core functions are</p>
 <ul>
 <li>
-<code><a href="../reference/fredr_set_key.html">fredr_set_key()</a></code> - Set the required FRED API key for the session.</li>
+<code><a href="https://rdrr.io/pkg/fredr/man/fredr_set_key.html">fredr_set_key()</a></code> - Set the required FRED API key for the session.</li>
 <li>
-<code><a href="../reference/fredr.html">fredr()</a></code> or <code><a href="../reference/fredr.html">fredr_series_observations()</a></code> - Fetch a FRED series.</li>
+<code><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr()</a></code> or <code><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr_series_observations()</a></code> - Fetch a FRED series.</li>
 <li>
-<code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code> - Search for a FRED series by text.</li>
+<code><a href="https://rdrr.io/pkg/fredr/man/fredr_series_search.html">fredr_series_search_text()</a></code> - Search for a FRED series by text.</li>
 <li>
-<code><a href="../reference/fredr_request.html">fredr_request()</a></code> - Send a general request to the FRED API.</li>
+<code><a href="https://rdrr.io/pkg/fredr/man/fredr_request.html">fredr_request()</a></code> - Send a general request to the FRED API.</li>
 </ul>
 <p>Objects are returned as <code>tibbles</code>. The user is strongly encouraged to read the full <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API</a> documentation to leverage the full power of <code>fredr</code> and the FRED API.</p>
 <div id="installation" class="section level2">
@@ -146,18 +146,18 @@
 <h2 class="hasAnchor">
 <a href="#authentication" class="anchor"></a>Authentication</h2>
 <p>To use <code>fredr</code> and the FRED API in general, you must first <a href="https://research.stlouisfed.org/docs/api/api_key.html">obtain a FRED API key</a>. It is also recommended to review the <a href="https://research.stlouisfed.org/docs/api/terms_of_use.html">FRED API Terms of Use</a>. Once you’ve obtained an API key, you can set the key as an environment variable using <code>fredr_set_key</code></p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_set_key.html">fredr_set_key</a></span>(<span class="st">"abcdefghijklmnopqrstuvwxyz123456"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr_set_key.html">fredr_set_key</a></span>(<span class="st">"abcdefghijklmnopqrstuvwxyz123456"</span>)</pre></body></html></div>
 <p>where “abcdefghijklmnopqrstuvwxyz123456” is replaced with the actual key you obtain from FRED. This will set the key for the current session. You can persistently set the key by appending the line <code>FRED_API_KEY=abcdefghijklmnopqrstuvwxyz123456</code> to an <code>.Renviron</code> file in the working directory or at the user level. This can be done using a text editor or by running <code><a href="https://usethis.r-lib.org/reference/edit.html">usethis::edit_r_environ()</a></code>. If you edit the <code>.Renviron</code> file, remember to either restart the session or run <code><a href="https://rdrr.io/r/base/readRenviron.html">readRenviron(".Renviron")</a></code> for the changes to take effect.</p>
 </div>
 <div id="retrieve-series-observations" class="section level2">
 <h2 class="hasAnchor">
 <a href="#retrieve-series-observations" class="anchor"></a>Retrieve series observations</h2>
-<p>The <code><a href="../reference/fredr.html">fredr()</a></code> function (an alias for <code><a href="../reference/fredr.html">fredr_series_observations()</a></code>) retrieves series observations (i.e. the actual time series data) for a specified FRED series ID. The function returns a <code>tibble</code> with 3 columns (observation date, series ID, and value).</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr.html">fredr</a></span>(
+<p>The <code><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr()</a></code> function (an alias for <code><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr_series_observations()</a></code>) retrieves series observations (i.e. the actual time series data) for a specified FRED series ID. The function returns a <code>tibble</code> with 3 columns (observation date, series ID, and value).</p>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr</a></span>(
   <span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">observation_start</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="st">"1990-01-01"</span>)
 )
-<span class="co">#&gt; # A tibble: 364 x 3</span>
+<span class="co">#&gt; # A tibble: 342 x 3</span>
 <span class="co">#&gt;    date       series_id value</span>
 <span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 1990-01-01 UNRATE      5.4</span>
@@ -170,15 +170,15 @@
 <span class="co">#&gt;  8 1990-08-01 UNRATE      5.7</span>
 <span class="co">#&gt;  9 1990-09-01 UNRATE      5.9</span>
 <span class="co">#&gt; 10 1990-10-01 UNRATE      5.9</span>
-<span class="co">#&gt; # … with 354 more rows</span></pre></body></html></div>
+<span class="co">#&gt; # ... with 332 more rows</span></pre></body></html></div>
 <p>Leverage the native features of the FRED API by passing additional parameters:</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr.html">fredr_series_observations</a></span>(
+<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr_series_observations</a></span>(
   <span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">observation_start</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="st">"1990-01-01"</span>),
   <span class="kw">frequency</span> <span class="kw">=</span> <span class="st">"q"</span>,
   <span class="kw">units</span> <span class="kw">=</span> <span class="st">"chg"</span>
 )
-<span class="co">#&gt; # A tibble: 122 x 3</span>
+<span class="co">#&gt; # A tibble: 114 x 3</span>
 <span class="co">#&gt;    date       series_id   value</span>
 <span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;       &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 1990-01-01 UNRATE    -0.0667</span>
@@ -191,22 +191,22 @@
 <span class="co">#&gt;  8 1991-10-01 UNRATE     0.233 </span>
 <span class="co">#&gt;  9 1992-01-01 UNRATE     0.267 </span>
 <span class="co">#&gt; 10 1992-04-01 UNRATE     0.233 </span>
-<span class="co">#&gt; # … with 112 more rows</span></pre></body></html></div>
+<span class="co">#&gt; # ... with 104 more rows</span></pre></body></html></div>
 <p><code>fredr</code> plays nicely with <a href="https://www.tidyverse.org/">tidyverse</a> packages:</p>
 <div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
-<span class="fu"><a href="../reference/fredr_series_search.html">fredr_series_search_text</a></span>(
+<span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr_series_search.html">fredr_series_search_text</a></span>(
   <span class="kw">search_text</span> <span class="kw">=</span> <span class="st">"federal funds"</span>,
   <span class="kw">order_by</span> <span class="kw">=</span> <span class="st">"popularity"</span>,
   <span class="kw">sort_order</span> <span class="kw">=</span> <span class="st">"desc"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">1</span>) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span>(<span class="no">id</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="../reference/fredr.html">fredr</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="no">.</span>) <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="no">.</span>) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">data</span> <span class="kw">=</span> <span class="no">.</span>, <span class="kw">mapping</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">date</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">value</span>, <span class="kw">color</span> <span class="kw">=</span> <span class="no">series_id</span>)) +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="st">"Observation Date"</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="st">"Rate"</span>, <span class="kw">color</span> <span class="kw">=</span> <span class="st">"Series"</span>)</pre></body></html></div>
 <p><img src="fredr_files/figure-html/fredr_series_observations3-1.png" width="672"></p>
-<p>Since <code><a href="../reference/fredr.html">fredr()</a></code> returns a <code>tibble</code> with a series ID, mapping <code><a href="../reference/fredr.html">fredr()</a></code> over a vector of series IDs can be achieved as follows:</p>
+<p>Since <code><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr()</a></code> returns a <code>tibble</code> with a series ID, mapping <code><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr()</a></code> over a vector of series IDs can be achieved as follows:</p>
 <div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">purrr</span>)
 <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"UNRATE"</span>, <span class="st">"FEDFUNDS"</span>), <span class="no">fredr</span>) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">data</span> <span class="kw">=</span> <span class="no">.</span>, <span class="kw">mapping</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">date</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">value</span>, <span class="kw">color</span> <span class="kw">=</span> <span class="no">series_id</span>)) +
@@ -221,9 +221,9 @@
 
 <span class="fu"><a href="https://purrr.tidyverse.org/reference/map2.html">pmap_dfr</a></span>(
   <span class="kw">.l</span> <span class="kw">=</span> <span class="no">params</span>,
-  <span class="kw">.f</span> <span class="kw">=</span> ~ <span class="fu"><a href="../reference/fredr.html">fredr</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="no">.x</span>, <span class="kw">frequency</span> <span class="kw">=</span> <span class="no">.y</span>)
+  <span class="kw">.f</span> <span class="kw">=</span> ~ <span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="no">.x</span>, <span class="kw">frequency</span> <span class="kw">=</span> <span class="no">.y</span>)
 )
-<span class="co">#&gt; # A tibble: 1,139 x 3</span>
+<span class="co">#&gt; # A tibble: 1,117 x 3</span>
 <span class="co">#&gt;    date       series_id value</span>
 <span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 1948-01-01 UNRATE      3.4</span>
@@ -236,10 +236,10 @@
 <span class="co">#&gt;  8 1948-08-01 UNRATE      3.9</span>
 <span class="co">#&gt;  9 1948-09-01 UNRATE      3.8</span>
 <span class="co">#&gt; 10 1948-10-01 UNRATE      3.7</span>
-<span class="co">#&gt; # … with 1,129 more rows</span></pre></body></html></div>
+<span class="co">#&gt; # ... with 1,107 more rows</span></pre></body></html></div>
 <p>It is relatively straightforward to convert <code>tibbles</code> returned by <code>fredr</code> into other time series objects. For example,</p>
 <div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">xts</span>)
-<span class="no">gnpca</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/fredr.html">fredr</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"GNPCA"</span>, <span class="kw">units</span> <span class="kw">=</span> <span class="st">"log"</span>) <span class="kw">%&gt;%</span>
+<span class="no">gnpca</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr.html">fredr</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"GNPCA"</span>, <span class="kw">units</span> <span class="kw">=</span> <span class="st">"log"</span>) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="kw">value</span> <span class="kw">=</span> <span class="no">value</span> - <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag</a></span>(<span class="no">value</span>)) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(!<span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span>(<span class="no">value</span>))
 
@@ -268,62 +268,63 @@
 <p>Finally, <code>fredr</code> is packaged with a list of possible endpoints in the <code>tibble</code> named <code>fredr_endpoints</code>:</p>
 <div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="no">fredr_endpoints</span>
 <span class="co">#&gt; # A tibble: 31 x 3</span>
-<span class="co">#&gt;    endpoint               type      note                                        </span>
-<span class="co">#&gt;    &lt;chr&gt;                  &lt;chr&gt;     &lt;chr&gt;                                       </span>
-<span class="co">#&gt;  1 fred/category          Categori… Get a category                              </span>
-<span class="co">#&gt;  2 fred/category/children Categori… Get the child categories for a specified pa…</span>
-<span class="co">#&gt;  3 fred/category/related  Categori… Get the related categories for a category   </span>
-<span class="co">#&gt;  4 fred/category/series   Categori… Get the series in a category                </span>
-<span class="co">#&gt;  5 fred/category/tags     Categori… Get the tags for a category                 </span>
-<span class="co">#&gt;  6 fred/category/related… Categori… Get the related tags for a category         </span>
-<span class="co">#&gt;  7 fred/releases          Releases  Get all releases of economic data           </span>
-<span class="co">#&gt;  8 fred/releases/dates    Releases  Get release dates for all releases of econo…</span>
-<span class="co">#&gt;  9 fred/release           Releases  Get a release of economic data              </span>
-<span class="co">#&gt; 10 fred/release/dates     Releases  Get release dates for a release of economic…</span>
-<span class="co">#&gt; # … with 21 more rows</span></pre></body></html></div>
+<span class="co">#&gt;    endpoint              type     note                                    </span>
+<span class="co">#&gt;    &lt;chr&gt;                 &lt;chr&gt;    &lt;chr&gt;                                   </span>
+<span class="co">#&gt;  1 fred/category         Categor… Get a category                          </span>
+<span class="co">#&gt;  2 fred/category/childr… Categor… Get the child categories for a specifie…</span>
+<span class="co">#&gt;  3 fred/category/related Categor… Get the related categories for a catego…</span>
+<span class="co">#&gt;  4 fred/category/series  Categor… Get the series in a category            </span>
+<span class="co">#&gt;  5 fred/category/tags    Categor… Get the tags for a category             </span>
+<span class="co">#&gt;  6 fred/category/relate… Categor… Get the related tags for a category     </span>
+<span class="co">#&gt;  7 fred/releases         Releases Get all releases of economic data       </span>
+<span class="co">#&gt;  8 fred/releases/dates   Releases Get release dates for all releases of e…</span>
+<span class="co">#&gt;  9 fred/release          Releases Get a release of economic data          </span>
+<span class="co">#&gt; 10 fred/release/dates    Releases Get release dates for a release of econ…</span>
+<span class="co">#&gt; # ... with 21 more rows</span></pre></body></html></div>
 </div>
 <div id="view-fred-api-documentation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#view-fred-api-documentation" class="anchor"></a>View FRED API documentation</h2>
-<p>To get the most out of the native features of the FRED API, it is highly recommended to review the <a href="https://research.stlouisfed.org/docs/api/fred/">API endpoint documentation</a>. Within an R session, you can quickly access the web documentation for any endpoint with the convenience function <code><a href="../reference/fredr_docs.html">fredr_docs()</a></code>. The following example will open a web browser to the FRED API documentation page on the <code>series/observations</code> endpoint.</p>
-<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_docs.html">fredr_docs</a></span>(<span class="kw">endpoint</span> <span class="kw">=</span> <span class="st">"series/observations"</span>)</pre></body></html></div>
+<p>To get the most out of the native features of the FRED API, it is highly recommended to review the <a href="https://research.stlouisfed.org/docs/api/fred/">API endpoint documentation</a>. Within an R session, you can quickly access the web documentation for any endpoint with the convenience function <code><a href="https://rdrr.io/pkg/fredr/man/fredr_docs.html">fredr_docs()</a></code>. The following example will open a web browser to the FRED API documentation page on the <code>series/observations</code> endpoint.</p>
+<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr_docs.html">fredr_docs</a></span>(<span class="kw">endpoint</span> <span class="kw">=</span> <span class="st">"series/observations"</span>)</pre></body></html></div>
 <p>You may also use the <code>params</code> option for <code>fredr_docs</code> to go straight to the endpoint’s Parameters section.</p>
-<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_docs.html">fredr_docs</a></span>(<span class="kw">endpoint</span> <span class="kw">=</span> <span class="st">"category/related_tags"</span>, <span class="kw">params</span> <span class="kw">=</span> <span class="fl">TRUE</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr_docs.html">fredr_docs</a></span>(<span class="kw">endpoint</span> <span class="kw">=</span> <span class="st">"category/related_tags"</span>, <span class="kw">params</span> <span class="kw">=</span> <span class="fl">TRUE</span>)</pre></body></html></div>
 </div>
 <div id="general-queries" class="section level2">
 <h2 class="hasAnchor">
 <a href="#general-queries" class="anchor"></a>General queries</h2>
-<p>You can also use the low-level function <code><a href="../reference/fredr_request.html">fredr_request()</a></code> to run more general queries against <em>any</em> <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API endpoint</a> (e.g. Categories, Series, Sources, Releases, Tags). The required parameter is <code>endpoint</code> (see <code>fredr_endpoints</code> for a list of valid endpoints) and then all API parameters are passed through as named arguments. For example:</p>
-<div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_request.html">fredr_request</a></span>(<span class="kw">endpoint</span> <span class="kw">=</span> <span class="st">"tags/series"</span>, <span class="kw">tag_names</span> <span class="kw">=</span> <span class="st">"population;south africa"</span>, <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">25L</span>)
+<p>You can also use the low-level function <code><a href="https://rdrr.io/pkg/fredr/man/fredr_request.html">fredr_request()</a></code> to run more general queries against <em>any</em> <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API endpoint</a> (e.g. Categories, Series, Sources, Releases, Tags). The required parameter is <code>endpoint</code> (see <code>fredr_endpoints</code> for a list of valid endpoints) and then all API parameters are passed through as named arguments. For example:</p>
+<div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr_request.html">fredr_request</a></span>(<span class="kw">endpoint</span> <span class="kw">=</span> <span class="st">"tags/series"</span>, <span class="kw">tag_names</span> <span class="kw">=</span> <span class="st">"population;south africa"</span>, <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">25L</span>)
 <span class="co">#&gt; # A tibble: 25 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt;  2 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt;  3 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-10-01     </span>
-<span class="co">#&gt;  4 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-10-01     </span>
-<span class="co">#&gt;  5 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt;  6 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt;  7 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-10-01     </span>
-<span class="co">#&gt;  8 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-10-01     </span>
-<span class="co">#&gt;  9 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt; 10 LFWA… 2020-05-20     2020-05-20   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt; # … with 15 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
+<span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
+<span class="co">#&gt;  1 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span>
+<span class="co">#&gt;  2 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span>
+<span class="co">#&gt;  3 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-10-01     </span>
+<span class="co">#&gt;  4 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-10-01     </span>
+<span class="co">#&gt;  5 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span>
+<span class="co">#&gt;  6 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span>
+<span class="co">#&gt;  7 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-10-01     </span>
+<span class="co">#&gt;  8 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-10-01     </span>
+<span class="co">#&gt;  9 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span>
+<span class="co">#&gt; 10 LFWA… 2018-07-22     2018-07-22   Work… 2008-01-01       2017-01-01     </span>
+<span class="co">#&gt; # ... with 15 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
-<span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></body></html></div>
-<p>By default, <code><a href="../reference/fredr_request.html">fredr_request()</a></code> will return a <code>tibble</code>. Set <code>to_frame</code> to <code>FALSE</code> to return a generic <code>response</code> object from a <code><a href="https://httr.r-lib.org/reference/GET.html">httr::GET()</a></code> request that can be further parsed with <code><a href="https://httr.r-lib.org/reference/content.html">httr::content()</a></code>:</p>
+<span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;,</span>
+<span class="co">#&gt; #   notes &lt;chr&gt;</span></pre></body></html></div>
+<p>By default, <code><a href="https://rdrr.io/pkg/fredr/man/fredr_request.html">fredr_request()</a></code> will return a <code>tibble</code>. Set <code>to_frame</code> to <code>FALSE</code> to return a generic <code>response</code> object from a <code><a href="https://httr.r-lib.org/reference/GET.html">httr::GET()</a></code> request that can be further parsed with <code><a href="https://httr.r-lib.org/reference/content.html">httr::content()</a></code>:</p>
 <div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">httr</span>)
-<span class="fu"><a href="../reference/fredr_request.html">fredr_request</a></span>(
+<span class="fu"><a href="https://rdrr.io/pkg/fredr/man/fredr_request.html">fredr_request</a></span>(
   <span class="kw">endpoint</span> <span class="kw">=</span> <span class="st">"series/observations"</span>,
   <span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">to_frame</span> <span class="kw">=</span> <span class="fl">FALSE</span>
 )
 <span class="co">#&gt; Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&amp;api_key=d3ef3490ef7270cf903d07141e9e7db7&amp;file_type=json]</span>
-<span class="co">#&gt;   Date: 2020-05-20 05:56</span>
+<span class="co">#&gt;   Date: 2018-07-23 01:07</span>
 <span class="co">#&gt;   Status: 200</span>
 <span class="co">#&gt;   Content-Type: application/json; charset=UTF-8</span>
-<span class="co">#&gt;   Size: 81.9 kB</span></pre></body></html></div>
+<span class="co">#&gt;   Size: 79.8 kB</span></pre></body></html></div>
 </div>
 </div>
   </div>

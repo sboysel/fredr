@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
       </span>
     </div>
 
@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Series</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-05-19</h4>
+            <h4 class="date">2020-05-14</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-series.Rmd"><code>vignettes/fredr-series.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-series.Rmd</code></div>
@@ -131,12 +131,12 @@
 <div id="retrieve-observations" class="section level2">
 <h2 class="hasAnchor">
 <a href="#retrieve-observations" class="anchor"></a>Retrieve observations</h2>
-<p>The function <code><a href="../reference/fredr.html">fredr()</a></code>, an alias for <code><a href="../reference/fredr.html">fredr_series_observations()</a></code>, is the core function in <code>fredr</code> for fetching FRED data series. See the <a href="http://sboysel.github.io/fredr/articles/fredr.html">Get started</a> article and <code>?fredr()</code> for many usage examples.</p>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr.html">fredr</a></span>(
+<p>The function <code>fredr()</code>, an alias for <code>fredr_series_observations()</code>, is the core function in <code>fredr</code> for fetching FRED data series. See the <a href="http://sboysel.github.io/fredr/articles/fredr.html">Get started</a> article and <code>?fredr()</code> for many usage examples.</p>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu">fredr</span>(
   <span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">observation_start</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="st">"1990-01-01"</span>)
 )
-<span class="co">#&gt; # A tibble: 364 x 3</span>
+<span class="co">#&gt; # A tibble: 342 x 3</span>
 <span class="co">#&gt;    date       series_id value</span>
 <span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 1990-01-01 UNRATE      5.4</span>
@@ -149,58 +149,59 @@
 <span class="co">#&gt;  8 1990-08-01 UNRATE      5.7</span>
 <span class="co">#&gt;  9 1990-09-01 UNRATE      5.9</span>
 <span class="co">#&gt; 10 1990-10-01 UNRATE      5.9</span>
-<span class="co">#&gt; # … with 354 more rows</span></pre></body></html></div>
+<span class="co">#&gt; # ... with 332 more rows</span></pre></body></html></div>
 </div>
 <div id="search-for-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#search-for-fred-series" class="anchor"></a>Search for FRED series</h2>
-<p>Use <code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code> to search for a series <em>by text</em> in the series description. The data returned is a <code>tibble</code> where each row represents series with description text that matches the text specified by <code>search_text</code>. For example, to search for series with description text that matches “UNRATE”:</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_search.html">fredr_series_search_text</a></span>(
+<p>Use <code>fredr_series_search_text()</code> to search for a series <em>by text</em> in the series description. The data returned is a <code>tibble</code> where each row represents series with description text that matches the text specified by <code>search_text</code>. For example, to search for series with description text that matches “UNRATE”:</p>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu">fredr_series_search_text</span>(
   <span class="kw">search_text</span> <span class="kw">=</span> <span class="st">"unemployment"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">100L</span>
 )
 <span class="co">#&gt; # A tibble: 100 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 UNRA… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt;  2 UNRA… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt;  3 NROU  2020-05-20     2020-05-20   Natu… 1949-01-01       2030-10-01     </span>
-<span class="co">#&gt;  4 UNEM… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt;  5 CCSA  2020-05-20     2020-05-20   Cont… 1967-01-07       2020-05-02     </span>
-<span class="co">#&gt;  6 LNS1… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt;  7 CCNSA 2020-05-20     2020-05-20   Cont… 1967-01-07       2020-05-02     </span>
-<span class="co">#&gt;  8 LNU0… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt;  9 LNU0… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt; 10 U6RA… 2020-05-20     2020-05-20   Tota… 1994-01-01       2020-04-01     </span>
-<span class="co">#&gt; # … with 90 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
+<span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
+<span class="co">#&gt;  1 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     </span>
+<span class="co">#&gt;  2 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     </span>
+<span class="co">#&gt;  3 NROU  2018-07-22     2018-07-22   Natu… 1949-01-01       2027-10-01     </span>
+<span class="co">#&gt;  4 UNEM… 2018-07-22     2018-07-22   Unem… 1948-01-01       2018-06-01     </span>
+<span class="co">#&gt;  5 M089… 2018-07-22     2018-07-22   Unem… 1929-04-01       1942-06-01     </span>
+<span class="co">#&gt;  6 Q089… 2018-07-22     2018-07-22   Unem… 1940-04-01       1946-10-01     </span>
+<span class="co">#&gt;  7 M089… 2018-07-22     2018-07-22   Unem… 1940-01-01       1946-12-01     </span>
+<span class="co">#&gt;  8 M089… 2018-07-22     2018-07-22   Unem… 1947-01-01       1966-12-01     </span>
+<span class="co">#&gt;  9 LNS1… 2018-07-22     2018-07-22   Unem… 1948-01-01       2018-06-01     </span>
+<span class="co">#&gt; 10 U6RA… 2018-07-22     2018-07-22   Tota… 1994-01-01       2018-06-01     </span>
+<span class="co">#&gt; # ... with 90 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
-<span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></body></html></div>
-<p>Use <code><a href="../reference/fredr_series_search.html">fredr_series_search_id()</a></code> to search for a series <em>by character ID</em> of the series. The data returned is a <code>tibble</code> where each row represents series with an ID that matches the text specified by <code>search_text</code>. For example, to search for series with an ID that matches “UNRATE”:</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_search.html">fredr_series_search_id</a></span>(
+<span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;,</span>
+<span class="co">#&gt; #   notes &lt;chr&gt;</span></pre></body></html></div>
+<p>Use <code>fredr_series_search_id()</code> to search for a series <em>by character ID</em> of the series. The data returned is a <code>tibble</code> where each row represents series with an ID that matches the text specified by <code>search_text</code>. For example, to search for series with an ID that matches “UNRATE”:</p>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu">fredr_series_search_id</span>(
   <span class="kw">search_text</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">100L</span>
 )
 <span class="co">#&gt; # A tibble: 16 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 UNRA… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt;  2 UNRA… 2020-05-20     2020-05-20   FOMC… 2019-01-01       2022-01-01     </span>
-<span class="co">#&gt;  3 UNRA… 2020-05-20     2020-05-20   Long… 2009-02-18       2019-12-11     </span>
-<span class="co">#&gt;  4 UNRA… 2020-05-20     2020-05-20   FOMC… 2019-01-01       2022-01-01     </span>
-<span class="co">#&gt;  5 UNRA… 2020-05-20     2020-05-20   Long… 2009-02-18       2019-12-11     </span>
-<span class="co">#&gt;  6 UNRA… 2020-05-20     2020-05-20   FOMC… 2019-01-01       2022-01-01     </span>
-<span class="co">#&gt;  7 UNRA… 2020-05-20     2020-05-20   Long… 2009-02-18       2019-12-11     </span>
-<span class="co">#&gt;  8 UNRA… 2020-05-20     2020-05-20   FOMC… 2019-01-01       2022-01-01     </span>
-<span class="co">#&gt;  9 UNRA… 2020-05-20     2020-05-20   Long… 2015-06-17       2019-12-11     </span>
-<span class="co">#&gt; 10 UNRA… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt; 11 UNRA… 2020-05-20     2020-05-20   FOMC… 2019-01-01       2022-01-01     </span>
-<span class="co">#&gt; 12 UNRA… 2020-05-20     2020-05-20   Long… 2009-02-18       2019-12-11     </span>
-<span class="co">#&gt; 13 UNRA… 2020-05-20     2020-05-20   FOMC… 2019-01-01       2022-01-01     </span>
-<span class="co">#&gt; 14 UNRA… 2020-05-20     2020-05-20   Long… 2009-02-18       2019-12-11     </span>
-<span class="co">#&gt; 15 UNRA… 2020-05-20     2020-05-20   FOMC… 2019-01-01       2022-01-01     </span>
-<span class="co">#&gt; 16 UNRA… 2020-05-20     2020-05-20   Long… 2009-02-18       2019-12-11     </span>
-<span class="co">#&gt; # … with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span>
+<span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
+<span class="co">#&gt;  1 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     </span>
+<span class="co">#&gt;  2 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     </span>
+<span class="co">#&gt;  3 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     </span>
+<span class="co">#&gt;  4 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     </span>
+<span class="co">#&gt;  5 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     </span>
+<span class="co">#&gt;  6 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     </span>
+<span class="co">#&gt;  7 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     </span>
+<span class="co">#&gt;  8 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     </span>
+<span class="co">#&gt;  9 UNRA… 2018-07-22     2018-07-22   Long… 2015-06-17       2018-06-13     </span>
+<span class="co">#&gt; 10 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     </span>
+<span class="co">#&gt; 11 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     </span>
+<span class="co">#&gt; 12 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     </span>
+<span class="co">#&gt; 13 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     </span>
+<span class="co">#&gt; 14 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     </span>
+<span class="co">#&gt; 15 UNRA… 2018-07-22     2018-07-22   FOMC… 2018-01-01       2020-01-01     </span>
+<span class="co">#&gt; 16 UNRA… 2018-07-22     2018-07-22   Long… 2009-02-18       2018-06-13     </span>
+<span class="co">#&gt; # ... with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
 <span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></body></html></div>
@@ -208,168 +209,166 @@
 <div id="search-for-fred-series-by-tags" class="section level2">
 <h2 class="hasAnchor">
 <a href="#search-for-fred-series-by-tags" class="anchor"></a>Search for FRED series by tags</h2>
-<p>Use <code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code> to search for series tags. The data returned is a <code>tibble</code> where each row represents a tag matching the text in <code>series_search_text</code>. For example, to return the top 100 tags (by series count) matching the text “unemployment”:</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags</a></span>(
+<p>Use <code>fredr_series_search_tags()</code> to search for series tags. The data returned is a <code>tibble</code> where each row represents a tag matching the text in <code>series_search_text</code>. For example, to return the top 100 tags (by series count) matching the text “unemployment”:</p>
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu">fredr_series_search_tags</span>(
   <span class="kw">series_search_text</span> <span class="kw">=</span> <span class="st">"unemployment"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">100L</span>
 )
 <span class="co">#&gt; # A tibble: 100 x 6</span>
-<span class="co">#&gt;    name           group_id notes             created     popularity series_count</span>
-<span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 nsa            seas     "Not Seasonally … 2012-02-27…        100        34928</span>
-<span class="co">#&gt;  2 unemployment   gen      ""                2012-02-27…         78        32308</span>
-<span class="co">#&gt;  3 usa            geo      "United States o… 2012-02-27…        100        29778</span>
-<span class="co">#&gt;  4 public domain… cc        &lt;NA&gt;             2018-12-17…         99        29454</span>
-<span class="co">#&gt;  5 bls            src      "Bureau of Labor… 2012-02-27…         86        25734</span>
-<span class="co">#&gt;  6 annual         freq     ""                2012-02-27…         91        18992</span>
-<span class="co">#&gt;  7 county         geot     "County or Count… 2012-02-27…         80        18940</span>
-<span class="co">#&gt;  8 rate           gen      ""                2012-02-27…         88        14912</span>
-<span class="co">#&gt;  9 household sur… gen      "Current Populat… 2012-06-18…         63        13556</span>
-<span class="co">#&gt; 10 nation         geot     ""                2012-02-27…         99        12958</span>
-<span class="co">#&gt; # … with 90 more rows</span></pre></body></html></div>
+<span class="co">#&gt;    name     group_id notes             created     popularity series_count</span>
+<span class="co">#&gt;  * &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
+<span class="co">#&gt;  1 unemplo… gen      ""                2012-02-27…         74        23892</span>
+<span class="co">#&gt;  2 nsa      seas     Not Seasonally A… 2012-02-27…        100        23173</span>
+<span class="co">#&gt;  3 usa      geo      United States of… 2012-02-27…         99        18376</span>
+<span class="co">#&gt;  4 bls      src      Bureau of Labor … 2012-02-27…         85        14408</span>
+<span class="co">#&gt;  5 rate     gen      ""                2012-02-27…         87        14216</span>
+<span class="co">#&gt;  6 nation   geot     ""                2012-02-27…        100        12647</span>
+<span class="co">#&gt;  7 annual   freq     ""                2012-02-27…         91        11127</span>
+<span class="co">#&gt;  8 mei      rls      Main Economic In… 2012-08-16…         78        10770</span>
+<span class="co">#&gt;  9 oecd     src      Org. for Economi… 2012-02-27…         78        10770</span>
+<span class="co">#&gt; 10 county   geot     County or County… 2012-02-27…         76         9504</span>
+<span class="co">#&gt; # ... with 90 more rows</span></pre></body></html></div>
 </div>
 <div id="search-for-fred-series-by-related-tags" class="section level2">
 <h2 class="hasAnchor">
 <a href="#search-for-fred-series-by-related-tags" class="anchor"></a>Search for FRED series by related tags</h2>
 <p>Use <code>fredr_search_related_tags()</code> to search for series tags related to a given tag. The data returned is a <code>tibble</code> where each row represents a tag who’s series matches the text in <code>series_search_text</code> and related tags specified by <code>tag_names</code>. For example, to search for tags related to the tag “usa” in which the series text matches “gnp”, use the following:</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_search_related_tags.html">fredr_series_search_related_tags</a></span>(
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu">fredr_series_search_related_tags</span>(
   <span class="kw">series_search_text</span> <span class="kw">=</span> <span class="st">"gnp"</span>,
   <span class="kw">tag_names</span> <span class="kw">=</span> <span class="st">"usa"</span>,
   <span class="kw">limit</span> <span class="kw">=</span> <span class="fl">30L</span>
 )
 <span class="co">#&gt; # A tibble: 30 x 6</span>
-<span class="co">#&gt;    name            group_id notes            created     popularity series_count</span>
-<span class="co">#&gt;    &lt;chr&gt;           &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 nation          geot     ""               2012-02-27…         99           70</span>
-<span class="co">#&gt;  2 gnp             gen      "Gross National… 2012-02-27…         39           52</span>
-<span class="co">#&gt;  3 public domain:… cc        &lt;NA&gt;            2018-12-17…         99           52</span>
-<span class="co">#&gt;  4 quarterly       freq     ""               2012-02-27…         85           40</span>
-<span class="co">#&gt;  5 bea             src      "Bureau of Econ… 2012-02-27…         79           38</span>
-<span class="co">#&gt;  6 nipa            rls      "National Incom… 2012-08-16…         71           38</span>
-<span class="co">#&gt;  7 sa              seas     "Seasonally Adj… 2012-02-27…         88           38</span>
-<span class="co">#&gt;  8 nsa             seas     "Not Seasonally… 2012-02-27…        100           32</span>
-<span class="co">#&gt;  9 annual          freq     ""               2012-02-27…         91           30</span>
-<span class="co">#&gt; 10 gdp             gen      "Gross Domestic… 2012-02-27…         82           28</span>
-<span class="co">#&gt; # … with 20 more rows</span></pre></body></html></div>
+<span class="co">#&gt;    name    group_id notes             created      popularity series_count</span>
+<span class="co">#&gt;  * &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span>
+<span class="co">#&gt;  1 nation  geot     ""                2012-02-27 …        100           61</span>
+<span class="co">#&gt;  2 gnp     gen      Gross National P… 2012-02-27 …         46           46</span>
+<span class="co">#&gt;  3 quarte… freq     ""                2012-02-27 …         85           41</span>
+<span class="co">#&gt;  4 bea     src      Bureau of Econom… 2012-02-27 …         79           37</span>
+<span class="co">#&gt;  5 nipa    rls      National Income … 2012-08-16 …         72           37</span>
+<span class="co">#&gt;  6 sa      seas     Seasonally Adjus… 2012-02-27 …         87           36</span>
+<span class="co">#&gt;  7 gdp     gen      Gross Domestic P… 2012-02-27 …         83           30</span>
+<span class="co">#&gt;  8 nsa     seas     Not Seasonally A… 2012-02-27 …        100           25</span>
+<span class="co">#&gt;  9 nber    src      National Bureau … 2012-02-27 …         59           22</span>
+<span class="co">#&gt; 10 annual  freq     ""                2012-02-27 …         91           20</span>
+<span class="co">#&gt; # ... with 20 more rows</span></pre></body></html></div>
 </div>
 <div id="get-basic-information-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-basic-information-for-a-fred-series" class="anchor"></a>Get basic information for a FRED series</h2>
-<p>The <code><a href="../reference/fredr_series.html">fredr_series()</a></code> function returns information for a single series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents the series specified. For example, to get information for the <code>UNRATE</code> series:</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series.html">fredr_series</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
+<p>The <code>fredr_series()</code> function returns information for a single series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents the series specified. For example, to get information for the <code>UNRATE</code> series:</p>
+<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu">fredr_series</span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
 <span class="co">#&gt; # A tibble: 1 x 15</span>
 <span class="co">#&gt;   id    realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt; 1 UNRA… 2020-05-20     2020-05-20   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt; # … with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span>
-<span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
+<span class="co">#&gt; * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
+<span class="co">#&gt; 1 UNRA… 2018-07-22     2018-07-22   Civi… 1948-01-01       2018-06-01     </span>
+<span class="co">#&gt; # ... with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span>
+<span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
 <span class="co">#&gt; #   notes &lt;chr&gt;</span></pre></body></html></div>
 <p>Note that there may potentially be more than one row returned if the series has been revised and <a href="https://research.stlouisfed.org/docs/api/fred/realtime_period.html">real time periods</a> are adjusted:</p>
-<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series.html">fredr_series</a></span>(
+<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu">fredr_series</span>(
   <span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">realtime_start</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="st">"1950-01-01"</span>)
 )
-<span class="co">#&gt; # A tibble: 4 x 15</span>
+<span class="co">#&gt; # A tibble: 3 x 15</span>
 <span class="co">#&gt;   id    realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
+<span class="co">#&gt; * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
 <span class="co">#&gt; 1 UNRA… 1960-03-15     1967-02-08   Civi… 1948-01-01       1966-12-01     </span>
 <span class="co">#&gt; 2 UNRA… 1967-02-09     2012-02-02   Civi… 1948-01-01       2011-12-01     </span>
-<span class="co">#&gt; 3 UNRA… 2012-02-03     2019-09-05   Civi… 1948-01-01       2019-07-01     </span>
-<span class="co">#&gt; 4 UNRA… 2019-09-06     9999-12-31   Unem… 1948-01-01       2020-04-01     </span>
-<span class="co">#&gt; # … with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span>
-<span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
+<span class="co">#&gt; 3 UNRA… 2012-02-03     9999-12-31   Civi… 1948-01-01       2018-06-01     </span>
+<span class="co">#&gt; # ... with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span>
+<span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
 <span class="co">#&gt; #   notes &lt;chr&gt;</span></pre></body></html></div>
 </div>
 <div id="get-the-categories-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-categories-for-a-fred-series" class="anchor"></a>Get the categories for a FRED series</h2>
-<p>The <code><a href="../reference/fredr_series_categories.html">fredr_series_categories()</a></code> function returns a list of categories for the series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents a category that the series belongs to. For example, to get the categories for the <code>UNRATE</code> series:</p>
-<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_categories.html">fredr_series_categories</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
+<p>The <code>fredr_series_categories()</code> function returns a list of categories for the series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents a category that the series belongs to. For example, to get the categories for the <code>UNRATE</code> series:</p>
+<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="fu">fredr_series_categories</span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
 <span class="co">#&gt; # A tibble: 1 x 4</span>
-<span class="co">#&gt;      id name          parent_id notes                                           </span>
-<span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;                                           </span>
-<span class="co">#&gt; 1 32447 Unemployment…        12 The ratio of unemployed to the civilian labor f…</span></pre></body></html></div>
+<span class="co">#&gt;      id name         parent_id notes                                      </span>
+<span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;                                      </span>
+<span class="co">#&gt; 1 32447 Unemploymen…        12 The ratio of unemployed to the civilian la…</span></pre></body></html></div>
 </div>
 <div id="get-the-release-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-release-for-a-fred-series" class="anchor"></a>Get the release for a FRED series</h2>
-<p>The <code><a href="../reference/fredr_series_release.html">fredr_series_release()</a></code> function returns a list of releases that the series specified by <code>series_id</code> belongs to. The data returned is a <code>tibble</code> in which each row represents a release that the series belongs to. For example, to get the release for the <code>UNRATE</code> series:</p>
-<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_release.html">fredr_series_release</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
+<p>The <code>fredr_series_release()</code> function returns a list of releases that the series specified by <code>series_id</code> belongs to. The data returned is a <code>tibble</code> in which each row represents a release that the series belongs to. For example, to get the release for the <code>UNRATE</code> series:</p>
+<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu">fredr_series_release</span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
 <span class="co">#&gt; # A tibble: 1 x 6</span>
-<span class="co">#&gt;      id realtime_start realtime_end name           press_release link           </span>
-<span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;          &lt;lgl&gt;         &lt;chr&gt;          </span>
-<span class="co">#&gt; 1    50 2020-05-20     2020-05-20   Employment Si… TRUE          http://www.bls…</span></pre></body></html></div>
+<span class="co">#&gt;      id realtime_start realtime_end name        press_release link        </span>
+<span class="co">#&gt; * &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;       &lt;lgl&gt;         &lt;chr&gt;       </span>
+<span class="co">#&gt; 1    50 2018-07-22     2018-07-22   Employment… TRUE          http://www.…</span></pre></body></html></div>
 </div>
 <div id="get-the-tags-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-tags-for-a-fred-series" class="anchor"></a>Get the tags for a FRED series</h2>
-<p>The <code><a href="../reference/fredr_series_tags.html">fredr_series_tags()</a></code> function returns a list of tags that are assigned to the series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents a tag assigned to the series. For example, to get the tags for the <code>UNRATE</code> series:</p>
-<div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_tags.html">fredr_series_tags</a></span>(
+<p>The <code>fredr_series_tags()</code> function returns a list of tags that are assigned to the series specified by <code>series_id</code>. The data returned is a <code>tibble</code> in which each row represents a tag assigned to the series. For example, to get the tags for the <code>UNRATE</code> series:</p>
+<div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="fu">fredr_series_tags</span>(
   <span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>,
   <span class="kw">order_by</span> <span class="kw">=</span> <span class="st">"name"</span>
 )
-<span class="co">#&gt; # A tibble: 14 x 6</span>
-<span class="co">#&gt;    name           group_id notes             created     popularity series_count</span>
-<span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 16 years +     gen      ""                2012-02-27…         59         5814</span>
-<span class="co">#&gt;  2 bls            src      "Bureau of Labor… 2012-02-27…         86       137174</span>
-<span class="co">#&gt;  3 civilian       gen      ""                2012-02-27…         54         9558</span>
-<span class="co">#&gt;  4 headline figu… gen      ""                2013-11-19…         53           56</span>
-<span class="co">#&gt;  5 household sur… gen      "Current Populat… 2012-06-18…         63        21560</span>
-<span class="co">#&gt;  6 labor          gen      ""                2012-02-27…         61        30158</span>
-<span class="co">#&gt;  7 labor underut… gen      ""                2012-05-10…         37          716</span>
-<span class="co">#&gt;  8 monthly        freq     ""                2012-02-27…         93       211628</span>
-<span class="co">#&gt;  9 nation         geot     ""                2012-02-27…         99       219168</span>
-<span class="co">#&gt; 10 public domain… cc        &lt;NA&gt;             2018-12-17…         99       553406</span>
-<span class="co">#&gt; 11 rate           gen      ""                2012-02-27…         88        46732</span>
-<span class="co">#&gt; 12 sa             seas     "Seasonally Adju… 2012-02-27…         88        79542</span>
-<span class="co">#&gt; 13 unemployment   gen      ""                2012-02-27…         78        32162</span>
-<span class="co">#&gt; 14 usa            geo      "United States o… 2012-02-27…        100       604808</span></pre></body></html></div>
+<span class="co">#&gt; # A tibble: 13 x 6</span>
+<span class="co">#&gt;    name       group_id notes           created     popularity series_count</span>
+<span class="co">#&gt;  * &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
+<span class="co">#&gt;  1 16 years + gen      ""              2012-02-27…         58         5810</span>
+<span class="co">#&gt;  2 bls        src      Bureau of Labo… 2012-02-27…         85       113265</span>
+<span class="co">#&gt;  3 civilian   gen      ""              2012-02-27…         51         5977</span>
+<span class="co">#&gt;  4 headline … gen      ""              2013-11-19…         52           53</span>
+<span class="co">#&gt;  5 household… gen      Current Popula… 2012-06-18…         60         2975</span>
+<span class="co">#&gt;  6 labor      gen      ""              2012-02-27…         60        24608</span>
+<span class="co">#&gt;  7 labor und… gen      ""              2012-05-10…         35          726</span>
+<span class="co">#&gt;  8 monthly    freq     ""              2012-02-27…         92       100536</span>
+<span class="co">#&gt;  9 nation     geot     ""              2012-02-27…        100       174523</span>
+<span class="co">#&gt; 10 rate       gen      ""              2012-02-27…         87        45813</span>
+<span class="co">#&gt; 11 sa         seas     Seasonally Adj… 2012-02-27…         87        61222</span>
+<span class="co">#&gt; 12 unemploym… gen      ""              2012-02-27…         74        23892</span>
+<span class="co">#&gt; 13 usa        geo      United States … 2012-02-27…         99       368894</span></pre></body></html></div>
 </div>
 <div id="get-a-set-of-recently-updated-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-a-set-of-recently-updated-fred-series" class="anchor"></a>Get a set of recently updated FRED series</h2>
-<p>The <code><a href="../reference/fredr_series_updates.html">fredr_series_updates()</a></code> function returns a list of series recently updated on the FRED server. The data returned is a <code>tibble</code> in which each row represents a series. For example, the default call simply lists 1000 recent updates (the default for the <code>limit</code> parameter), most recent updates appearing first:</p>
-<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_updates.html">fredr_series_updates</a></span>()
+<p>The <code>fredr_series_updates()</code> function returns a list of series recently updated on the FRED server. The data returned is a <code>tibble</code> in which each row represents a series. For example, the default call simply lists 1000 recent updates (the default for the <code>limit</code> parameter), most recent updates appearing first:</p>
+<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="fu">fredr_series_updates</span>()
 <span class="co">#&gt; # A tibble: 1,000 x 15</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  2 GOLD… 2020-05-20     2020-05-20   Gold… 1999-01-04       2020-05-19     </span>
-<span class="co">#&gt;  3 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  4 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  5 GOLD… 2020-05-20     2020-05-20   Gold… 1999-01-04       2020-05-19     </span>
-<span class="co">#&gt;  6 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  7 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt;  8 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt;  9 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt; 10 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt; # … with 990 more rows, and 9 more variables: frequency &lt;chr&gt;,</span>
+<span class="co">#&gt;  * &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
+<span class="co">#&gt;  1 CBBC… 2018-07-22     2018-07-22   Coin… 2017-12-20       2018-07-22     </span>
+<span class="co">#&gt;  2 CBLT… 2018-07-22     2018-07-22   Coin… 2016-08-17       2018-07-22     </span>
+<span class="co">#&gt;  3 CBCC… 2018-07-22     2018-07-22   Coin… 2015-01-01       2018-07-21     </span>
+<span class="co">#&gt;  4 CBBT… 2018-07-22     2018-07-22   Coin… 2014-12-01       2018-07-22     </span>
+<span class="co">#&gt;  5 CBET… 2018-07-22     2018-07-22   Coin… 2016-05-18       2018-07-22     </span>
+<span class="co">#&gt;  6 R250… 2018-07-22     2018-07-22   Russ… 1985-12-31       2018-07-20     </span>
+<span class="co">#&gt;  7 RTOP… 2018-07-22     2018-07-22   Russ… 1985-12-31       2018-07-20     </span>
+<span class="co">#&gt;  8 R250… 2018-07-22     2018-07-22   Russ… 1985-12-31       2018-07-20     </span>
+<span class="co">#&gt;  9 RTOP… 2018-07-22     2018-07-22   Russ… 1985-12-31       2018-07-20     </span>
+<span class="co">#&gt; 10 RTOP… 2018-07-22     2018-07-22   Russ… 1985-12-31       2018-07-20     </span>
+<span class="co">#&gt; # ... with 990 more rows, and 9 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></body></html></div>
 <p>Use the <code>start_time</code> and <code>end_time</code> parameters to filter the results by time. For example, to get all the macroeconomic times series updated in the last day:</p>
-<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_updates.html">fredr_series_updates</a></span>(
+<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="fu">fredr_series_updates</span>(
   <span class="kw">start_time</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.time</a></span>() - <span class="fl">60</span> * <span class="fl">60</span> * <span class="fl">24</span>,
   <span class="kw">end_time</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.time</a></span>(),
   <span class="kw">filter_value</span> <span class="kw">=</span> <span class="st">"macro"</span>
 )
-<span class="co">#&gt; # A tibble: 860 x 15</span>
+<span class="co">#&gt; # A tibble: 944 x 15</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 GOLD… 2020-05-20     2020-05-20   Gold… 1999-01-04       2020-05-19     </span>
-<span class="co">#&gt;  2 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  3 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  4 GOLD… 2020-05-20     2020-05-20   Gold… 1999-01-04       2020-05-19     </span>
-<span class="co">#&gt;  5 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  6 GOLD… 2020-05-20     2020-05-20   Gold… 1968-04-01       2020-05-19     </span>
-<span class="co">#&gt;  7 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt;  8 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt;  9 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt; 10 SLVP… 2020-05-20     2020-05-20   Silv… 2017-10-02       2020-05-19     </span>
-<span class="co">#&gt; # … with 850 more rows, and 9 more variables: frequency &lt;chr&gt;,</span>
+<span class="co">#&gt;  1 GOLD… 2019-10-24     2019-10-24   Gold… 1968-04-01       2019-10-23     </span>
+<span class="co">#&gt;  2 GOLD… 2019-10-24     2019-10-24   Gold… 1968-04-01       2019-10-23     </span>
+<span class="co">#&gt;  3 GOLD… 2019-10-24     2019-10-24   Gold… 1968-04-01       2019-10-23     </span>
+<span class="co">#&gt;  4 GOLD… 2019-10-24     2019-10-24   Gold… 1999-01-04       2019-10-23     </span>
+<span class="co">#&gt;  5 GOLD… 2019-10-24     2019-10-24   Gold… 1968-04-01       2019-10-23     </span>
+<span class="co">#&gt;  6 GOLD… 2019-10-24     2019-10-24   Gold… 1999-01-04       2019-10-23     </span>
+<span class="co">#&gt;  7 CBCC… 2019-10-24     2019-10-24   Coin… 2015-01-01       2019-10-23     </span>
+<span class="co">#&gt;  8 SLVP… 2019-10-24     2019-10-24   Silv… 2017-10-02       2019-10-23     </span>
+<span class="co">#&gt;  9 SLVP… 2019-10-24     2019-10-24   Silv… 2017-10-02       2019-10-23     </span>
+<span class="co">#&gt; 10 SLVP… 2019-10-24     2019-10-24   Silv… 2017-10-02       2019-10-23     </span>
+<span class="co">#&gt; # … with 934 more rows, and 9 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></body></html></div>
@@ -377,9 +376,9 @@
 <div id="get-the-data-vintage-dates-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-data-vintage-dates-for-a-fred-series" class="anchor"></a>Get the data vintage dates for a FRED series</h2>
-<p>The <code><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates()</a></code> function returns a sequence of dates in history when the series specified by <code>series_id</code> was revised or appended to. The data returned is a <code>tibble</code> where each row is a date. For example, to get the vintage dates for the series <code>UNRATE</code>:</p>
-<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="fu"><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates</a></span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
-<span class="co">#&gt; # A tibble: 723 x 1</span>
+<p>The <code>fredr_series_vintagedates()</code> function returns a sequence of dates in history when the series specified by <code>series_id</code> was revised or appended to. The data returned is a <code>tibble</code> where each row is a date. For example, to get the vintage dates for the series <code>UNRATE</code>:</p>
+<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="fu">fredr_series_vintagedates</span>(<span class="kw">series_id</span> <span class="kw">=</span> <span class="st">"UNRATE"</span>)
+<span class="co">#&gt; # A tibble: 701 x 1</span>
 <span class="co">#&gt;    vintage_dates</span>
 <span class="co">#&gt;    &lt;chr&gt;        </span>
 <span class="co">#&gt;  1 1960-03-15   </span>
@@ -392,7 +391,7 @@
 <span class="co">#&gt;  8 1960-10-10   </span>
 <span class="co">#&gt;  9 1960-11-10   </span>
 <span class="co">#&gt; 10 1960-12-12   </span>
-<span class="co">#&gt; # … with 713 more rows</span></pre></body></html></div>
+<span class="co">#&gt; # ... with 691 more rows</span></pre></body></html></div>
 </div>
 </div>
   </div>

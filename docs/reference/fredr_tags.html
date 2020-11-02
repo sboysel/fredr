@@ -80,7 +80,7 @@ all tags are returned, unfiltered, up to the limit." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
       </span>
     </div>
 
@@ -257,10 +257,10 @@ notes.</p>
 <p><a href='https://research.stlouisfed.org/docs/api/fred/tags.html'>fred/tags</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_category_tags.html'>fredr_category_tags()</a></code>, <code><a href='fredr_category_related_tags.html'>fredr_category_related_tags()</a></code>, <code><a href='fredr_docs.html'>fredr_docs()</a></code>,
-<code><a href='fredr_release_tags.html'>fredr_release_tags()</a></code>, <code><a href='fredr_release_related_tags.html'>fredr_release_related_tags()</a></code>,
-<code><a href='fredr_series_search_tags.html'>fredr_series_search_tags()</a></code>, <code><a href='fredr_series_search_related_tags.html'>fredr_series_search_related_tags()</a></code>,
-<code><a href='fredr_tags_series.html'>fredr_tags_series()</a></code>, <code><a href='fredr_related_tags.html'>fredr_related_tags()</a></code></p></div>
+    <div class='dont-index'><p><code>fredr_category_tags()</code>, <code>fredr_category_related_tags()</code>, <code>fredr_docs()</code>,
+<code>fredr_release_tags()</code>, <code>fredr_release_related_tags()</code>,
+<code>fredr_series_search_tags()</code>, <code>fredr_series_search_related_tags()</code>,
+<code>fredr_tags_series()</code>, <code>fredr_related_tags()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
@@ -268,40 +268,40 @@ notes.</p>
 <span class='fu'>fredr_tags</span>()</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1,000 x 6</span><span>
 #&gt;    name             group_id notes          created      popularity series_count
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>             </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100       </span><span style='text-decoration: underline;'>686</span><span>538
-#&gt; </span><span style='color: #555555;'> 2</span><span> usa              geo      </span><span style='color: #555555;'>"</span><span>United State… 2012-02-27 …        100       </span><span style='text-decoration: underline;'>604</span><span>408
-#&gt; </span><span style='color: #555555;'> 3</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …         99       </span><span style='text-decoration: underline;'>553</span><span>140
-#&gt; </span><span style='color: #555555;'> 4</span><span> annual           freq     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         91       </span><span style='text-decoration: underline;'>444</span><span>964
-#&gt; </span><span style='color: #555555;'> 5</span><span> county           geot     </span><span style='color: #555555;'>"</span><span>County or Co… 2012-02-27 …         80       </span><span style='text-decoration: underline;'>327</span><span>924
-#&gt; </span><span style='color: #555555;'> 6</span><span> census           src      </span><span style='color: #555555;'>"</span><span>Census</span><span style='color: #555555;'>"</span><span>       2012-02-27 …         79       </span><span style='text-decoration: underline;'>235</span><span>128
-#&gt; </span><span style='color: #555555;'> 7</span><span> nation           geot     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         99       </span><span style='text-decoration: underline;'>219</span><span>580
-#&gt; </span><span style='color: #555555;'> 8</span><span> monthly          freq     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         93       </span><span style='text-decoration: underline;'>210</span><span>948
-#&gt; </span><span style='color: #555555;'> 9</span><span> copyrighted: ci… cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …         89       </span><span style='text-decoration: underline;'>206</span><span>874
-#&gt; </span><span style='color: #555555;'>10</span><span> bls              src      </span><span style='color: #555555;'>"</span><span>Bureau of La… 2012-02-27 …         86       </span><span style='text-decoration: underline;'>136</span><span>710
+#&gt; </span><span style='color: #555555;'> 1</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100       </span><span style='text-decoration: underline;'>687</span><span>308
+#&gt; </span><span style='color: #555555;'> 2</span><span> usa              geo      </span><span style='color: #555555;'>"</span><span>United State… 2012-02-27 …        100       </span><span style='text-decoration: underline;'>605</span><span>678
+#&gt; </span><span style='color: #555555;'> 3</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …        100       </span><span style='text-decoration: underline;'>554</span><span>446
+#&gt; </span><span style='color: #555555;'> 4</span><span> annual           freq     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         91       </span><span style='text-decoration: underline;'>445</span><span>506
+#&gt; </span><span style='color: #555555;'> 5</span><span> county           geot     </span><span style='color: #555555;'>"</span><span>County or Co… 2012-02-27 …         79       </span><span style='text-decoration: underline;'>327</span><span>878
+#&gt; </span><span style='color: #555555;'> 6</span><span> census           src      </span><span style='color: #555555;'>"</span><span>Census</span><span style='color: #555555;'>"</span><span>       2012-02-27 …         79       </span><span style='text-decoration: underline;'>235</span><span>258
+#&gt; </span><span style='color: #555555;'> 7</span><span> nation           geot     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         99       </span><span style='text-decoration: underline;'>220</span><span>312
+#&gt; </span><span style='color: #555555;'> 8</span><span> monthly          freq     </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         93       </span><span style='text-decoration: underline;'>211</span><span>758
+#&gt; </span><span style='color: #555555;'> 9</span><span> copyrighted: ci… cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …         89       </span><span style='text-decoration: underline;'>207</span><span>008
+#&gt; </span><span style='color: #555555;'>10</span><span> bls              src      </span><span style='color: #555555;'>"</span><span>Bureau of La… 2012-02-27 …         86       </span><span style='text-decoration: underline;'>137</span><span>382
 #&gt; </span><span style='color: #555555;'># … with 990 more rows</span><span></div><div class='input'><span class='co'># Information for just the "gdp" and "oecd" tags</span>
 <span class='fu'>fredr_tags</span>(<span class='kw'>tag_names</span> <span class='kw'>=</span> <span class='st'>"gdp;oecd"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 6</span><span>
 #&gt;   name  group_id notes                     created       popularity series_count
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> gdp   gen      Gross Domestic Product    2012-02-27 1…         82        </span><span style='text-decoration: underline;'>74</span><span>534
-#&gt; </span><span style='color: #555555;'>2</span><span> oecd  src      Org. for Economic Co-ope… 2012-02-27 1…         78        </span><span style='text-decoration: underline;'>64</span><span>190</div><div class='input'><span class='co'># Information for all tags in the "geo" group</span>
+#&gt; </span><span style='color: #555555;'>1</span><span> gdp   gen      Gross Domestic Product    2012-02-27 1…         83        </span><span style='text-decoration: underline;'>74</span><span>296
+#&gt; </span><span style='color: #555555;'>2</span><span> oecd  src      Org. for Economic Co-ope… 2012-02-27 1…         78        </span><span style='text-decoration: underline;'>64</span><span>166</div><div class='input'><span class='co'># Information for all tags in the "geo" group</span>
 <span class='fu'>fredr_tags</span>(<span class='kw'>tag_group_id</span> <span class='kw'>=</span> <span class='st'>"geo"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1,000 x 6</span><span>
 #&gt;    name  group_id notes               created            popularity series_count
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>               </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> usa   geo      United States of A… 2012-02-27 10:18:…        100       </span><span style='text-decoration: underline;'>606</span><span>258
-#&gt; </span><span style='color: #555555;'> 2</span><span> tx    geo      Texas               2012-02-27 10:18:…         60        </span><span style='text-decoration: underline;'>35</span><span>340
-#&gt; </span><span style='color: #555555;'> 3</span><span> ga    geo      Georgia (U.S. stat… 2012-02-27 10:18:…         50        </span><span style='text-decoration: underline;'>20</span><span>542
-#&gt; </span><span style='color: #555555;'> 4</span><span> ca    geo      California          2012-02-27 10:18:…         62        </span><span style='text-decoration: underline;'>17</span><span>938
-#&gt; </span><span style='color: #555555;'> 5</span><span> nc    geo      North Carolina      2012-02-27 10:18:…         52        </span><span style='text-decoration: underline;'>17</span><span>244
-#&gt; </span><span style='color: #555555;'> 6</span><span> va    geo      Virginia            2012-02-27 10:18:…         50        </span><span style='text-decoration: underline;'>17</span><span>192
-#&gt; </span><span style='color: #555555;'> 7</span><span> il    geo      Illinois            2012-02-27 10:18:…         50        </span><span style='text-decoration: underline;'>16</span><span>228
-#&gt; </span><span style='color: #555555;'> 8</span><span> oh    geo      Ohio                2012-02-27 10:18:…         50        </span><span style='text-decoration: underline;'>16</span><span>128
-#&gt; </span><span style='color: #555555;'> 9</span><span> ky    geo      Kentucky            2012-02-27 10:18:…         44        </span><span style='text-decoration: underline;'>15</span><span>546
-#&gt; </span><span style='color: #555555;'>10</span><span> mo    geo      Missouri            2012-02-27 10:18:…         47        </span><span style='text-decoration: underline;'>15</span><span>188
+#&gt; </span><span style='color: #555555;'> 1</span><span> usa   geo      United States of A… 2012-02-27 10:18:…        100       </span><span style='text-decoration: underline;'>606</span><span>150
+#&gt; </span><span style='color: #555555;'> 2</span><span> tx    geo      Texas               2012-02-27 10:18:…         61        </span><span style='text-decoration: underline;'>35</span><span>318
+#&gt; </span><span style='color: #555555;'> 3</span><span> ga    geo      Georgia (U.S. stat… 2012-02-27 10:18:…         50        </span><span style='text-decoration: underline;'>20</span><span>514
+#&gt; </span><span style='color: #555555;'> 4</span><span> ca    geo      California          2012-02-27 10:18:…         62        </span><span style='text-decoration: underline;'>17</span><span>928
+#&gt; </span><span style='color: #555555;'> 5</span><span> nc    geo      North Carolina      2012-02-27 10:18:…         52        </span><span style='text-decoration: underline;'>17</span><span>186
+#&gt; </span><span style='color: #555555;'> 6</span><span> va    geo      Virginia            2012-02-27 10:18:…         50        </span><span style='text-decoration: underline;'>17</span><span>186
+#&gt; </span><span style='color: #555555;'> 7</span><span> oh    geo      Ohio                2012-02-27 10:18:…         50        </span><span style='text-decoration: underline;'>16</span><span>244
+#&gt; </span><span style='color: #555555;'> 8</span><span> il    geo      Illinois            2012-02-27 10:18:…         50        </span><span style='text-decoration: underline;'>16</span><span>216
+#&gt; </span><span style='color: #555555;'> 9</span><span> ky    geo      Kentucky            2012-02-27 10:18:…         44        </span><span style='text-decoration: underline;'>15</span><span>504
+#&gt; </span><span style='color: #555555;'>10</span><span> in    geo      Indiana             2012-02-27 10:18:…         48        </span><span style='text-decoration: underline;'>15</span><span>184
 #&gt; </span><span style='color: #555555;'># … with 990 more rows</span><span></div><div class='input'><span class='co'># Information for tags matching the text "unemployment"</span>
 <span class='fu'>fredr_tags</span>(<span class='kw'>search_text</span> <span class='kw'>=</span> <span class='st'>"unemployment"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 6</span><span>
 #&gt;   name     group_id notes                   created      popularity series_count
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>             </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> unemplo… gen      </span><span style='color: #555555;'>""</span><span>                      2012-02-27 …         78        </span><span style='text-decoration: underline;'>32</span><span>238
+#&gt; </span><span style='color: #555555;'>1</span><span> unemplo… gen      </span><span style='color: #555555;'>""</span><span>                      2012-02-27 …         78        </span><span style='text-decoration: underline;'>32</span><span>254
 #&gt; </span><span style='color: #555555;'>2</span><span> nairu    gen      </span><span style='color: #555555;'>"</span><span>Non-Accelerating Infl… 2012-08-10 …         19            2</div><div class='input'># }
 </div></span></pre>
   </div>

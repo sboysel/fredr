@@ -22,9 +22,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(fredr)
-library(httptest)
 options(digits = 4)
-httptest::start_vignette("fredr")
 ```
 
 # Introduction
@@ -210,6 +208,3 @@ fredr_request(
 )
 ```
 
-```{r, include=FALSE}
-httptest::end_vignette()
-```

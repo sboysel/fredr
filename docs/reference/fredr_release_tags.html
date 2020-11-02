@@ -79,7 +79,7 @@ tag group, or search text." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
       </span>
     </div>
 
@@ -258,26 +258,26 @@ Defaults to today's date. For more information, see
 <p><a href='https://research.stlouisfed.org/docs/api/fred/release_tags.html'>fred/release/tags</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_releases.html'>fredr_releases()</a></code>, <code><a href='fredr_releases_dates.html'>fredr_releases_dates()</a></code>, <code><a href='fredr_release.html'>fredr_release()</a></code>,
-<code><a href='fredr_release_dates.html'>fredr_release_dates()</a></code>, <code><a href='fredr_release_series.html'>fredr_release_series()</a></code>, <code><a href='fredr_release_sources.html'>fredr_release_sources()</a></code>,
-<code><a href='fredr_release_related_tags.html'>fredr_release_related_tags()</a></code>, <code><a href='fredr_release_tables.html'>fredr_release_tables()</a></code></p></div>
+    <div class='dont-index'><p><code>fredr_releases()</code>, <code>fredr_releases_dates()</code>, <code>fredr_release()</code>,
+<code>fredr_release_dates()</code>, <code>fredr_release_series()</code>, <code>fredr_release_sources()</code>,
+<code>fredr_release_related_tags()</code>, <code>fredr_release_tables()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>fredr_release_tags</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>10L</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 184 x 6</span><span>
+<span class='fu'>fredr_release_tags</span>(<span class='kw'>release_id</span> <span class='kw'>=</span> <span class='fl'>10L</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 173 x 6</span><span>
 #&gt;    name             group_id notes          created      popularity series_count
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>             </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> bls              src      </span><span style='color: #555555;'>"</span><span>Bureau of La… 2012-02-27 …         86         </span><span style='text-decoration: underline;'>4</span><span>552
-#&gt; </span><span style='color: #555555;'> 2</span><span> cpi              gen      </span><span style='color: #555555;'>"</span><span>Consumer Pri… 2012-02-27 …         68         </span><span style='text-decoration: underline;'>4</span><span>552
-#&gt; </span><span style='color: #555555;'> 3</span><span> indexes          gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         84         </span><span style='text-decoration: underline;'>4</span><span>552
-#&gt; </span><span style='color: #555555;'> 4</span><span> price            gen      </span><span style='color: #555555;'>""</span><span>             2013-07-11 …         83         </span><span style='text-decoration: underline;'>4</span><span>552
-#&gt; </span><span style='color: #555555;'> 5</span><span> price index      gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         81         </span><span style='text-decoration: underline;'>4</span><span>552
-#&gt; </span><span style='color: #555555;'> 6</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …         99         </span><span style='text-decoration: underline;'>4</span><span>552
-#&gt; </span><span style='color: #555555;'> 7</span><span> usa              geo      </span><span style='color: #555555;'>"</span><span>United State… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>4</span><span>552
-#&gt; </span><span style='color: #555555;'> 8</span><span> urban            gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         57         </span><span style='text-decoration: underline;'>4</span><span>550
-#&gt; </span><span style='color: #555555;'> 9</span><span> consumer         gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         65         </span><span style='text-decoration: underline;'>4</span><span>394
-#&gt; </span><span style='color: #555555;'>10</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>4</span><span>382
-#&gt; </span><span style='color: #555555;'># … with 174 more rows</span><span></div><div class='input'># }
+#&gt; </span><span style='color: #555555;'> 1</span><span> bls              src      </span><span style='color: #555555;'>"</span><span>Bureau of La… 2012-02-27 …         86         </span><span style='text-decoration: underline;'>4</span><span>506
+#&gt; </span><span style='color: #555555;'> 2</span><span> cpi              gen      </span><span style='color: #555555;'>"</span><span>Consumer Pri… 2012-02-27 …         68         </span><span style='text-decoration: underline;'>4</span><span>506
+#&gt; </span><span style='color: #555555;'> 3</span><span> indexes          gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         84         </span><span style='text-decoration: underline;'>4</span><span>506
+#&gt; </span><span style='color: #555555;'> 4</span><span> price            gen      </span><span style='color: #555555;'>""</span><span>             2013-07-11 …         83         </span><span style='text-decoration: underline;'>4</span><span>506
+#&gt; </span><span style='color: #555555;'> 5</span><span> price index      gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         81         </span><span style='text-decoration: underline;'>4</span><span>506
+#&gt; </span><span style='color: #555555;'> 6</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …        100         </span><span style='text-decoration: underline;'>4</span><span>506
+#&gt; </span><span style='color: #555555;'> 7</span><span> usa              geo      </span><span style='color: #555555;'>"</span><span>United State… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>4</span><span>506
+#&gt; </span><span style='color: #555555;'> 8</span><span> urban            gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         57         </span><span style='text-decoration: underline;'>4</span><span>504
+#&gt; </span><span style='color: #555555;'> 9</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>4</span><span>338
+#&gt; </span><span style='color: #555555;'>10</span><span> inflation        gen      </span><span style='color: #555555;'>""</span><span>             2012-06-08 …         75         </span><span style='text-decoration: underline;'>4</span><span>336
+#&gt; </span><span style='color: #555555;'># … with 163 more rows</span><span></div><div class='input'># }
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

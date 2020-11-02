@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
       </span>
     </div>
 
@@ -218,35 +218,35 @@ Defaults to today's date. For more information, see
 <p><a href='https://research.stlouisfed.org/docs/api/fred/releases.html'>fred/releases</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_releases_dates.html'>fredr_releases_dates()</a></code>, <code><a href='fredr_release.html'>fredr_release()</a></code>, <code><a href='fredr_release_dates.html'>fredr_release_dates()</a></code>,
-<code><a href='fredr_release_series.html'>fredr_release_series()</a></code>, <code><a href='fredr_release_sources.html'>fredr_release_sources()</a></code>, <code><a href='fredr_release_tags.html'>fredr_release_tags()</a></code>,
-<code><a href='fredr_release_related_tags.html'>fredr_release_related_tags()</a></code>, <code><a href='fredr_release_tables.html'>fredr_release_tables()</a></code>,</p></div>
+    <div class='dont-index'><p><code>fredr_releases_dates()</code>, <code>fredr_release()</code>, <code>fredr_release_dates()</code>,
+<code>fredr_release_series()</code>, <code>fredr_release_sources()</code>, <code>fredr_release_tags()</code>,
+<code>fredr_release_related_tags()</code>, <code>fredr_release_tables()</code>,</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
 <span class='fu'>fredr_releases</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>20L</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 20 x 7</span><span>
 #&gt;       id realtime_start realtime_end name      press_release link      notes    
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>     9 2020-05-20     2020-05-20   Advance … TRUE          http://w… </span><span style='color: #555555;'>"</span><span>The U.S…
-#&gt; </span><span style='color: #555555;'> 2</span><span>    10 2020-05-20     2020-05-20   Consumer… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'> 3</span><span>    11 2020-05-20     2020-05-20   Employme… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'> 4</span><span>    13 2020-05-20     2020-05-20   G.17 Ind… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'> 5</span><span>    14 2020-05-20     2020-05-20   G.19 Con… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'> 6</span><span>    15 2020-05-20     2020-05-20   G.5 Fore… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'> 7</span><span>    17 2020-05-20     2020-05-20   H.10 For… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'> 8</span><span>    18 2020-05-20     2020-05-20   H.15 Sel… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'> 9</span><span>    19 2020-05-20     2020-05-20   H.3 Aggr… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>10</span><span>    20 2020-05-20     2020-05-20   H.4.1 Fa… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>11</span><span>    21 2020-05-20     2020-05-20   H.6 Mone… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>12</span><span>    22 2020-05-20     2020-05-20   H.8 Asse… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>13</span><span>    25 2020-05-20     2020-05-20   Manufact… TRUE          http://w… </span><span style='color: #555555;'>"</span><span>The Man…
-#&gt; </span><span style='color: #555555;'>14</span><span>    27 2020-05-20     2020-05-20   New Resi… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>15</span><span>    46 2020-05-20     2020-05-20   Producer… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>16</span><span>    47 2020-05-20     2020-05-20   Producti… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>17</span><span>    49 2020-05-20     2020-05-20   U.S. Int… TRUE          https://…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>18</span><span>    50 2020-05-20     2020-05-20   Employme… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>19</span><span>    51 2020-05-20     2020-05-20   U.S. Int… TRUE          https://…  </span><span style='color: #BB0000;'>NA</span><span>      
-#&gt; </span><span style='color: #555555;'>20</span><span>    52 2020-05-20     2020-05-20   Z.1 Fina… TRUE          http://w… </span><span style='color: #555555;'>"</span><span>The Fin…</div><div class='input'># }
+#&gt; </span><span style='color: #555555;'> 1</span><span>     9 2020-05-14     2020-05-14   Advance … TRUE          http://w… </span><span style='color: #555555;'>"</span><span>The U.S…
+#&gt; </span><span style='color: #555555;'> 2</span><span>    10 2020-05-14     2020-05-14   Consumer… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'> 3</span><span>    11 2020-05-14     2020-05-14   Employme… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'> 4</span><span>    13 2020-05-14     2020-05-14   G.17 Ind… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'> 5</span><span>    14 2020-05-14     2020-05-14   G.19 Con… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'> 6</span><span>    15 2020-05-14     2020-05-14   G.5 Fore… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'> 7</span><span>    17 2020-05-14     2020-05-14   H.10 For… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'> 8</span><span>    18 2020-05-14     2020-05-14   H.15 Sel… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'> 9</span><span>    19 2020-05-14     2020-05-14   H.3 Aggr… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>10</span><span>    20 2020-05-14     2020-05-14   H.4.1 Fa… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>11</span><span>    21 2020-05-14     2020-05-14   H.6 Mone… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>12</span><span>    22 2020-05-14     2020-05-14   H.8 Asse… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>13</span><span>    25 2020-05-14     2020-05-14   Manufact… TRUE          http://w… </span><span style='color: #555555;'>"</span><span>The Man…
+#&gt; </span><span style='color: #555555;'>14</span><span>    27 2020-05-14     2020-05-14   New Resi… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>15</span><span>    46 2020-05-14     2020-05-14   Producer… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>16</span><span>    47 2020-05-14     2020-05-14   Producti… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>17</span><span>    49 2020-05-14     2020-05-14   U.S. Int… TRUE          https://…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>18</span><span>    50 2020-05-14     2020-05-14   Employme… TRUE          http://w…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>19</span><span>    51 2020-05-14     2020-05-14   U.S. Int… TRUE          https://…  </span><span style='color: #BB0000;'>NA</span><span>      
+#&gt; </span><span style='color: #555555;'>20</span><span>    52 2020-05-14     2020-05-14   Z.1 Fina… TRUE          http://w… </span><span style='color: #555555;'>"</span><span>The Fin…</div><div class='input'># }
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

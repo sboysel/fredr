@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
       </span>
     </div>
 
@@ -265,8 +265,8 @@ the category specified in <code>category_id</code>.</p>
 <p><a href='https://research.stlouisfed.org/docs/api/fred/category_series.html'>fred/category/series</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='fredr_category.html'>fredr_category()</a></code>, <code><a href='fredr_category_children.html'>fredr_category_children()</a></code>, <code><a href='fredr_category_related.html'>fredr_category_related()</a></code>,
-<code><a href='fredr_category_tags.html'>fredr_category_tags()</a></code>, <code><a href='fredr_category_related_tags.html'>fredr_category_related_tags()</a></code></p></div>
+    <div class='dont-index'><p><code>fredr_category()</code>, <code>fredr_category_children()</code>, <code>fredr_category_related()</code>,
+<code>fredr_category_tags()</code>, <code>fredr_category_related_tags()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
@@ -274,16 +274,16 @@ the category specified in <code>category_id</code>.</p>
 <span class='fu'>fredr_category_series</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"popularity"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 10 x 16</span><span>
 #&gt;    id    realtime_start realtime_end title observation_sta… observation_end
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          
-#&gt; </span><span style='color: #555555;'> 1</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'> 2</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'> 3</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'> 4</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'> 5</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'> 6</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'> 7</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'> 8</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'> 9</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
-#&gt; </span><span style='color: #555555;'>10</span><span> BF8Q… 2020-05-20     2020-05-20   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 1</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 2</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 3</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 4</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 5</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 6</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 7</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 8</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'> 9</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
+#&gt; </span><span style='color: #555555;'>10</span><span> BF8Q… 2020-05-14     2020-05-14   Busi… 2004-07-01       2014-10-01     
 #&gt; </span><span style='color: #555555;'># … with 10 more variables: frequency </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, frequency_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   units </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, seasonal_adjustment </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   seasonal_adjustment_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, last_updated </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, popularity </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
@@ -291,16 +291,16 @@ the category specified in <code>category_id</code>.</p>
 <span class='fu'>fredr_category_series</span>(<span class='kw'>category_id</span> <span class='kw'>=</span> <span class='fl'>4L</span>, <span class='kw'>order_by</span> <span class='kw'>=</span> <span class='st'>"frequency"</span>, <span class='kw'>sort_order</span> <span class='kw'>=</span> <span class='st'>"desc"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 417 x 16</span><span>
 #&gt;    id    realtime_start realtime_end title observation_sta… observation_end
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          
-#&gt; </span><span style='color: #555555;'> 1</span><span> ECIW… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'> 2</span><span> ECIA… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'> 3</span><span> CIU2… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'> 4</span><span> CIS2… 2020-05-20     2020-05-20   Empl… 2003-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'> 5</span><span> CIU2… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'> 6</span><span> CIS1… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'> 7</span><span> CIU1… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'> 8</span><span> CIU2… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'> 9</span><span> ECIC… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
-#&gt; </span><span style='color: #555555;'>10</span><span> CIU2… 2020-05-20     2020-05-20   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 1</span><span> ECIW… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 2</span><span> ECIA… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 3</span><span> CIU2… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 4</span><span> CIS2… 2020-05-14     2020-05-14   Empl… 2003-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 5</span><span> CIU2… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 6</span><span> CIS1… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 7</span><span> CIU1… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 8</span><span> ECIC… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'> 9</span><span> CIU2… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
+#&gt; </span><span style='color: #555555;'>10</span><span> CIU2… 2020-05-14     2020-05-14   Empl… 2001-01-01       2020-01-01     
 #&gt; </span><span style='color: #555555;'># … with 407 more rows, and 10 more variables: frequency </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   frequency_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, units_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   seasonal_adjustment </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, seasonal_adjustment_short </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
