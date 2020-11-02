@@ -25,3 +25,6 @@
 ^vignettes/fredr-sources_files$
 ^vignettes/fredr-tags_cache$
 ^vignettes/fredr-tags_files$
+^codecov\.yml$
+^\.github$
+^README\.Rmd$
