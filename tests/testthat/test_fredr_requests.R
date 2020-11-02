@@ -1,6 +1,3 @@
-library(fredr)
-context("Core functions")
-
 tbl_class <- c("tbl_df", "tbl", "data.frame")
 
 test_that("fredr_request() throws proper errors and messages", {

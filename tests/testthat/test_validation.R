@@ -1,6 +1,3 @@
-library(fredr)
-context("Validation functions")
-
 test_that("capture_args() returns a named list", {
   expect_silent(capture_args())
   expect_is(capture_args(), "list")

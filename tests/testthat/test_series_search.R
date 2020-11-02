@@ -1,6 +1,3 @@
-library(fredr)
-context("Endpoint functions: Series (search functions)")
-
 test_that("fredr_series_search_text()", {
   skip_if_no_key()
   expect_silent(search <- fredr_series_search_text(search_text = "oil", limit = 20L))

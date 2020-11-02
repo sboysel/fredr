@@ -1,6 +1,3 @@
-library(fredr)
-context("Endpoint functions: Tags")
-
 test_that("fredr_tags()", {
   skip_if_no_key()
   expect_silent(tags <- fredr_tags(limit = 20L))

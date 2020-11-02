@@ -1,6 +1,3 @@
-library(fredr)
-context("Endpoint functions: Series (observations)")
-
 test_that("fredr_series_observations() returns proper object", {
   skip_if_no_key()
   expect_silent(series <- fredr_series_observations(series_id = "GNPCA", limit = 20L))

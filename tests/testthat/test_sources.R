@@ -1,6 +1,3 @@
-library(fredr)
-context("Endpoint functions: Sources")
-
 test_that("fredr_sources()", {
   skip_if_no_key()
   expect_silent(srcs <- fredr_sources(limit = 10L))

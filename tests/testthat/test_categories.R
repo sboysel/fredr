@@ -1,6 +1,3 @@
-library(fredr)
-context("Endpoint functions: Categories")
-
 test_that("fredr_category()", {
   skip_if_no_key()
   expect_silent(ctg <- fredr_category())

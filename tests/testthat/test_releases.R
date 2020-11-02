@@ -1,6 +1,3 @@
-library(fredr)
-context("Endpoint functions: Releases")
-
 test_that("fredr_release()", {
   skip_if_no_key()
   expect_silent(release <- fredr_release(release_id = 10L))
