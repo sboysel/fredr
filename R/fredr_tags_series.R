@@ -63,6 +63,7 @@ fredr_tags_series <- function(tag_names = NULL,
                               sort_order = NULL,
                               realtime_start = NULL,
                               realtime_end = NULL) {
+  validate_required_string_param(tag_names)
 
   user_args <- capture_args(
     tag_names,
