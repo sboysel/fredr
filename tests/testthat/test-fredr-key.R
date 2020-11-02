@@ -1,6 +1,3 @@
-library(fredr)
-context("Authentication functions")
-
 test_that("fredr_set_key() properly sets key.", {
   original <- fredr_get_key()
   on.exit(fredr_set_key(original), add = TRUE)
