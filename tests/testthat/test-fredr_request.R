@@ -16,6 +16,8 @@ test_that("can print http request", {
 })
 
 test_that("errors on bad endpoint", {
+  skip_if_no_key()
+
   expect_error(fredr_request(endpoint = "foo"), "not a valid endpoint")
 })
 
