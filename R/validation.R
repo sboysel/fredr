@@ -199,22 +199,20 @@ validate_boolean <- function(x) {
 }
 
 validate_endpoint <- function(x) {
-
   validate_is_class(x, "endpoint", "character")
 
-  if(! (length(x) == 1) ) {
-    stop("x must be of length 1.", call. = FALSE)
+  if(length(x) != 1) {
+    abort("x must be of length 1.")
   }
 
   if (!is_endpoint(x)) {
     msg <- paste0(
       "`", x,
-      "` is not a valid endpoint.  See ",
+      "` is not a valid endpoint. See ",
       "https://research.stlouisfed.org/docs/api/fred/"
     )
-    stop(msg,  call. = FALSE)
+    abort(msg)
   }
-
 }
 
 # ------------------------------------------------------------------------------
