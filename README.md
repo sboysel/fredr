@@ -82,6 +82,20 @@ started](http://sboysel.github.io/fredr/articles/fredr.html) article.
 
 See the [documentation site](http://sboysel.github.io/fredr/).
 
+## Restrictions
+
+According to the FRED team, the following data sources do not permit
+redistribution through the FRED API:
+
+-   ICE Libor Rates
+-   ICE Swap Rates
+-   LBMA Gold Price: Daily Prices
+-   LBMA Silver Price: Daily Prices
+
+If you need data from any of these sources, it is recommended to
+download the data directly from the FRED website. The series in these
+sources can be found [here](https://fred.stlouisfed.org/source?soid=62).
+
 ## See Also
 
 There are several other existing R packages designed for the FRED API:
