@@ -13,10 +13,10 @@ Downloads](https://cranlogs.r-pkg.org/badges/fredr)](https://cran.r-project.org/
 <!-- badges: end -->
 
 fredr provides a complete set of R bindings to the [Federal Reserve of
-Economic Data (FRED)](https://research.stlouisfed.org/fred2/) RESTful
-API, provided by the Federal Reserve Bank of St. Louis. The functions
-allow the user to search for and fetch time series observations as well
-as associated metadata within the FRED database.
+Economic Data (FRED)](https://fred.stlouisfed.org/) RESTful API,
+provided by the Federal Reserve Bank of St. Louis. The functions allow
+the user to search for and fetch time series observations as well as
+associated metadata within the FRED database.
 
 The core function in this package is `fredr()`, which fetches
 observations for a FRED series. That said, there are many other FRED
