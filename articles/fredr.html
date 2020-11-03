@@ -125,7 +125,7 @@
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr">fredr</a></span><span class="op">)</span></pre></div>
 <p>fredr provides a complete set of R bindings to the <a href="https://fred.stlouisfed.org/">Federal Reserve of Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. The functions allow the user to search for and fetch time series observations as well as associated metadata within the FRED database.</p>
 <p>The core function in this package is <code><a href="../reference/fredr_series_observations.html">fredr()</a></code>, which fetches observations for a FRED series. That said, there are many other FRED endpoints exposed through fredr, such as <code><a href="../reference/fredr_series_search_text.html">fredr_series_search_text()</a></code>, which allows you to search for a FRED series by text.</p>
-<p>We strongly encourage referencing the FRED API <a href="https://research.stlouisfed.org/docs/api/fred/">documentation</a> to leverage the full power of fredr.</p>
+<p>We strongly encourage referencing the FRED API <a href="https://fred.stlouisfed.org/docs/api/fred/">documentation</a> to leverage the full power of fredr.</p>
 <div id="authentication" class="section level2">
 <h2 class="hasAnchor">
 <a href="#authentication" class="anchor"></a>Authentication</h2>
@@ -293,14 +293,14 @@
 <div id="view-fred-api-documentation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#view-fred-api-documentation" class="anchor"></a>View FRED API documentation</h2>
-<p>To get the most out of the native features of the FRED API, it is highly recommended to review the <a href="https://research.stlouisfed.org/docs/api/fred/">API endpoint documentation</a>. Within an R session, you can quickly access the web documentation with the convenience function <code><a href="../reference/fredr_docs.html">fredr_docs()</a></code>.</p>
+<p>To get the most out of the native features of the FRED API, it is highly recommended to review the <a href="https://fred.stlouisfed.org/docs/api/fred/">API endpoint documentation</a>. Within an R session, you can quickly access the web documentation with the convenience function <code><a href="../reference/fredr_docs.html">fredr_docs()</a></code>.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_docs.html">fredr_docs</a></span><span class="op">(</span><span class="op">)</span></pre></div>
 </div>
 <div id="general-queries" class="section level2">
 <h2 class="hasAnchor">
 <a href="#general-queries" class="anchor"></a>General queries</h2>
-<p>You can also use the low-level function <code><a href="../reference/fredr_request.html">fredr_request()</a></code> to run more general queries against <em>any</em> <a href="https://research.stlouisfed.org/docs/api/fred/">FRED API endpoint</a> (e.g. Categories, Series, Sources, Releases, Tags). The required parameter is <code>endpoint</code> (see <code>fredr_endpoints</code> for a list of valid endpoints) and then all API parameters are passed through as named arguments. For example:</p>
+<p>You can also use the low-level function <code><a href="../reference/fredr_request.html">fredr_request()</a></code> to run more general queries against <em>any</em> <a href="https://fred.stlouisfed.org/docs/api/fred/">FRED API endpoint</a> (e.g. Categories, Series, Sources, Releases, Tags). The required parameter is <code>endpoint</code> (see <code>fredr_endpoints</code> for a list of valid endpoints) and then all API parameters are passed through as named arguments. For example:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_request.html">fredr_request</a></span><span class="op">(</span>
   endpoint <span class="op">=</span> <span class="st">"tags/series"</span>, 
@@ -332,7 +332,7 @@
   to_frame <span class="op">=</span> <span class="cn">FALSE</span>
 <span class="op">)</span>
 <span class="co">#&gt; Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&amp;api_key=a1dfde330d2d15991130fc103b3f7a2c&amp;file_type=json]</span>
-<span class="co">#&gt;   Date: 2020-11-03 21:22</span>
+<span class="co">#&gt;   Date: 2020-11-03 22:12</span>
 <span class="co">#&gt;   Status: 200</span>
 <span class="co">#&gt;   Content-Type: application/json; charset=UTF-8</span>
 <span class="co">#&gt;   Size: 82.4 kB</span></pre></div>

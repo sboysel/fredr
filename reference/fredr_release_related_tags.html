@@ -250,13 +250,13 @@ are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></td>
       <th>realtime_start</th>
       <td><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
-<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
+<a href='https://fred.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     <tr>
       <th>realtime_end</th>
       <td><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
-<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
+<a href='https://fred.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     </table>
 
@@ -268,7 +268,7 @@ Defaults to today's date. For more information, see
     
 
 
-<p><a href='https://research.stlouisfed.org/docs/api/fred/release_related_tags.html'>fred/release/related_tags</a></p>
+<p><a href='https://fred.stlouisfed.org/docs/api/fred/release_related_tags.html'>fred/release/related_tags</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='fredr_releases.html'>fredr_releases()</a></code>,  <code><a href='fredr_releases_dates.html'>fredr_releases_dates()</a></code>, <code><a href='fredr_release.html'>fredr_release()</a></code>,
@@ -279,20 +279,20 @@ Defaults to today's date. For more information, see
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='fredr-key.html'>fredr_has_key</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='fu'>fredr_release_related_tags</span><span class='op'>(</span><span class='fl'>10</span>, tag_names <span class='op'>=</span> <span class='st'>"cpi"</span><span class='op'>)</span>
 <span class='op'>}</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 177 x 6</span><span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 178 x 6</span><span>
 #&gt;    name             group_id notes          created      popularity series_count
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>             </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> bls              src      </span><span style='color: #555555;'>"</span><span>Bureau of La… 2012-02-27 …         87         </span><span style='text-decoration: underline;'>4</span><span>488
-#&gt; </span><span style='color: #555555;'> 2</span><span> indexes          gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         84         </span><span style='text-decoration: underline;'>4</span><span>488
-#&gt; </span><span style='color: #555555;'> 3</span><span> price            gen      </span><span style='color: #555555;'>""</span><span>             2013-07-11 …         83         </span><span style='text-decoration: underline;'>4</span><span>488
-#&gt; </span><span style='color: #555555;'> 4</span><span> price index      gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         80         </span><span style='text-decoration: underline;'>4</span><span>488
-#&gt; </span><span style='color: #555555;'> 5</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …        100         </span><span style='text-decoration: underline;'>4</span><span>488
-#&gt; </span><span style='color: #555555;'> 6</span><span> usa              geo      </span><span style='color: #555555;'>"</span><span>United State… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>4</span><span>488
-#&gt; </span><span style='color: #555555;'> 7</span><span> urban            gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         56         </span><span style='text-decoration: underline;'>4</span><span>486
-#&gt; </span><span style='color: #555555;'> 8</span><span> inflation        gen      </span><span style='color: #555555;'>""</span><span>             2012-06-08 …         74         </span><span style='text-decoration: underline;'>4</span><span>342
-#&gt; </span><span style='color: #555555;'> 9</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>4</span><span>320
-#&gt; </span><span style='color: #555555;'>10</span><span> consumer         gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         65         </span><span style='text-decoration: underline;'>4</span><span>290
-#&gt; </span><span style='color: #555555;'># … with 167 more rows</span><span></div></span></pre>
+#&gt; </span><span style='color: #555555;'> 1</span><span> bls              src      </span><span style='color: #555555;'>"</span><span>Bureau of La… 2012-02-27 …         87         </span><span style='text-decoration: underline;'>4</span><span>696
+#&gt; </span><span style='color: #555555;'> 2</span><span> indexes          gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         84         </span><span style='text-decoration: underline;'>4</span><span>696
+#&gt; </span><span style='color: #555555;'> 3</span><span> price            gen      </span><span style='color: #555555;'>""</span><span>             2013-07-11 …         83         </span><span style='text-decoration: underline;'>4</span><span>696
+#&gt; </span><span style='color: #555555;'> 4</span><span> price index      gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         80         </span><span style='text-decoration: underline;'>4</span><span>696
+#&gt; </span><span style='color: #555555;'> 5</span><span> public domain: … cc        </span><span style='color: #BB0000;'>NA</span><span>            2018-12-17 …        100         </span><span style='text-decoration: underline;'>4</span><span>696
+#&gt; </span><span style='color: #555555;'> 6</span><span> usa              geo      </span><span style='color: #555555;'>"</span><span>United State… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>4</span><span>696
+#&gt; </span><span style='color: #555555;'> 7</span><span> urban            gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         56         </span><span style='text-decoration: underline;'>4</span><span>694
+#&gt; </span><span style='color: #555555;'> 8</span><span> inflation        gen      </span><span style='color: #555555;'>""</span><span>             2012-06-08 …         74         </span><span style='text-decoration: underline;'>4</span><span>522
+#&gt; </span><span style='color: #555555;'> 9</span><span> nsa              seas     </span><span style='color: #555555;'>"</span><span>Not Seasonal… 2012-02-27 …        100         </span><span style='text-decoration: underline;'>4</span><span>494
+#&gt; </span><span style='color: #555555;'>10</span><span> consumer         gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 …         65         </span><span style='text-decoration: underline;'>4</span><span>468
+#&gt; </span><span style='color: #555555;'># … with 168 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

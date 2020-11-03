@@ -123,7 +123,7 @@
 <a href="#introduction" class="anchor"></a>Introduction</h1>
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr">fredr</a></span><span class="op">)</span></pre></div>
-<p>This vignette is intended to introduce the user to fredr functions for the <a href="https://research.stlouisfed.org/docs/api/fred/#Tags">Tags endpoint</a> of the FRED API.</p>
+<p>This vignette is intended to introduce the user to fredr functions for the <a href="https://fred.stlouisfed.org/docs/api/fred/#Tags">Tags endpoint</a> of the FRED API.</p>
 <p>FRED series are assigned <strong>tags</strong> as an attribute for classification. Each FRED tag is identified by a string ID. For example:</p>
 <ul>
 <li>“annual”, “monthly”</li>
@@ -142,24 +142,24 @@
 <span class="co">#&gt; # A tibble: 10 x 6</span>
 <span class="co">#&gt;    name             group_id notes          created      popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;            &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 nsa              seas     "Not Seasonal… 2012-02-27 …        100       686112</span>
-<span class="co">#&gt;  2 usa              geo      "United State… 2012-02-27 …        100       604526</span>
-<span class="co">#&gt;  3 public domain: … cc        &lt;NA&gt;          2018-12-17 …        100       553352</span>
-<span class="co">#&gt;  4 annual           freq     ""             2012-02-27 …         90       444806</span>
-<span class="co">#&gt;  5 county           geot     "County or Co… 2012-02-27 …         80       328394</span>
-<span class="co">#&gt;  6 census           src      "Census"       2012-02-27 …         80       235476</span>
-<span class="co">#&gt;  7 nation           geot     ""             2012-02-27 …         99       219838</span>
-<span class="co">#&gt;  8 monthly          freq     ""             2012-02-27 …         93       210650</span>
-<span class="co">#&gt;  9 copyrighted: ci… cc        &lt;NA&gt;          2018-12-17 …         88       205784</span>
-<span class="co">#&gt; 10 bls              src      "Bureau of La… 2012-02-27 …         87       136292</span></pre></div>
+<span class="co">#&gt;  1 nsa              seas     "Not Seasonal… 2012-02-27 …        100       686994</span>
+<span class="co">#&gt;  2 usa              geo      "United State… 2012-02-27 …        100       605234</span>
+<span class="co">#&gt;  3 public domain: … cc        &lt;NA&gt;          2018-12-17 …        100       554388</span>
+<span class="co">#&gt;  4 annual           freq     ""             2012-02-27 …         90       445612</span>
+<span class="co">#&gt;  5 county           geot     "County or Co… 2012-02-27 …         80       328878</span>
+<span class="co">#&gt;  6 census           src      "Census"       2012-02-27 …         80       235684</span>
+<span class="co">#&gt;  7 nation           geot     ""             2012-02-27 …         99       220050</span>
+<span class="co">#&gt;  8 monthly          freq     ""             2012-02-27 …         93       210812</span>
+<span class="co">#&gt;  9 copyrighted: ci… cc        &lt;NA&gt;          2018-12-17 …         88       205662</span>
+<span class="co">#&gt; 10 bls              src      "Bureau of La… 2012-02-27 …         87       136542</span></pre></div>
 <p>To return specific tags by tag name, specify multiple tags in a single string by delimiting with a semicolon:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_tags.html">fredr_tags</a></span><span class="op">(</span>tag_names <span class="op">=</span> <span class="st">"gdp;oecd"</span>, limit <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 2 x 6</span>
 <span class="co">#&gt;   name  group_id notes                     created       popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;                     &lt;chr&gt;              &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 gdp   gen      Gross Domestic Product    2012-02-27 1…         82        73534</span>
-<span class="co">#&gt; 2 oecd  src      Org. for Economic Co-ope… 2012-02-27 1…         77        63326</span></pre></div>
+<span class="co">#&gt; 1 gdp   gen      Gross Domestic Product    2012-02-27 1…         82        74756</span>
+<span class="co">#&gt; 2 oecd  src      Org. for Economic Co-ope… 2012-02-27 1…         77        64546</span></pre></div>
 <p>Return tags for a given group ID:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_tags.html">fredr_tags</a></span><span class="op">(</span>
@@ -169,16 +169,16 @@
 <span class="co">#&gt; # A tibble: 50 x 6</span>
 <span class="co">#&gt;    name  group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100       605398</span>
-<span class="co">#&gt;  2 tx    geo      Texas               2012-02-27 10:18:…         58        35302</span>
-<span class="co">#&gt;  3 ga    geo      Georgia (U.S. stat… 2012-02-27 10:18:…         49        20636</span>
-<span class="co">#&gt;  4 ca    geo      California          2012-02-27 10:18:…         61        17954</span>
-<span class="co">#&gt;  5 nc    geo      North Carolina      2012-02-27 10:18:…         50        17078</span>
-<span class="co">#&gt;  6 va    geo      Virginia            2012-02-27 10:18:…         49        17002</span>
-<span class="co">#&gt;  7 il    geo      Illinois            2012-02-27 10:18:…         49        15920</span>
-<span class="co">#&gt;  8 oh    geo      Ohio                2012-02-27 10:18:…         50        15912</span>
-<span class="co">#&gt;  9 ky    geo      Kentucky            2012-02-27 10:18:…         45        15416</span>
-<span class="co">#&gt; 10 mi    geo      Michigan            2012-02-27 10:18:…         52        15200</span>
+<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100       606282</span>
+<span class="co">#&gt;  2 tx    geo      Texas               2012-02-27 10:18:…         58        35294</span>
+<span class="co">#&gt;  3 ga    geo      Georgia (U.S. stat… 2012-02-27 10:18:…         49        20574</span>
+<span class="co">#&gt;  4 ca    geo      California          2012-02-27 10:18:…         61        17860</span>
+<span class="co">#&gt;  5 va    geo      Virginia            2012-02-27 10:18:…         49        17232</span>
+<span class="co">#&gt;  6 nc    geo      North Carolina      2012-02-27 10:18:…         50        17078</span>
+<span class="co">#&gt;  7 il    geo      Illinois            2012-02-27 10:18:…         49        16082</span>
+<span class="co">#&gt;  8 oh    geo      Ohio                2012-02-27 10:18:…         50        15952</span>
+<span class="co">#&gt;  9 ky    geo      Kentucky            2012-02-27 10:18:…         45        15432</span>
+<span class="co">#&gt; 10 in    geo      Indiana             2012-02-27 10:18:…         48        15254</span>
 <span class="co">#&gt; # … with 40 more rows</span></pre></div>
 <p>Search for tags by text:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit">
@@ -186,7 +186,7 @@
 <span class="co">#&gt; # A tibble: 2 x 6</span>
 <span class="co">#&gt;   name     group_id notes                   created      popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;                   &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 unemplo… gen      ""                      2012-02-27 …         78        32350</span>
+<span class="co">#&gt; 1 unemplo… gen      ""                      2012-02-27 …         78        32088</span>
 <span class="co">#&gt; 2 nairu    gen      "Non-Accelerating Infl… 2012-08-10 …         19            2</span></pre></div>
 <p>Note that the example above searches for <em>tags</em> matching <code>"unemployment"</code>. To search for the set of <em>series</em> with tags matching <code>"unemployment"</code>, use <code><a href="../reference/fredr_series_search_tags.html">fredr_series_search_tags()</a></code>:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
@@ -197,16 +197,16 @@
 <span class="co">#&gt; # A tibble: 100 x 6</span>
 <span class="co">#&gt;    name           group_id notes             created     popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 nsa            seas     "Not Seasonally … 2012-02-27…        100        44378</span>
-<span class="co">#&gt;  2 usa            geo      "United States o… 2012-02-27…        100        39348</span>
-<span class="co">#&gt;  3 public domain… cc        &lt;NA&gt;             2018-12-17…        100        39008</span>
-<span class="co">#&gt;  4 bls            src      "Bureau of Labor… 2012-02-27…         87        35248</span>
-<span class="co">#&gt;  5 unemployment   gen      ""                2012-02-27…         78        32220</span>
-<span class="co">#&gt;  6 county         geot     "County or Count… 2012-02-27…         80        28234</span>
-<span class="co">#&gt;  7 annual         freq     ""                2012-02-27…         90        22044</span>
-<span class="co">#&gt;  8 household sur… gen      "Current Populat… 2012-06-18…         65        19880</span>
-<span class="co">#&gt;  9 monthly        freq     ""                2012-02-27…         93        18800</span>
-<span class="co">#&gt; 10 rate           gen      ""                2012-02-27…         87        14924</span>
+<span class="co">#&gt;  1 nsa            seas     "Not Seasonally … 2012-02-27…        100        44224</span>
+<span class="co">#&gt;  2 usa            geo      "United States o… 2012-02-27…        100        39346</span>
+<span class="co">#&gt;  3 public domain… cc        &lt;NA&gt;             2018-12-17…        100        39062</span>
+<span class="co">#&gt;  4 bls            src      "Bureau of Labor… 2012-02-27…         87        35318</span>
+<span class="co">#&gt;  5 unemployment   gen      ""                2012-02-27…         78        31976</span>
+<span class="co">#&gt;  6 county         geot     "County or Count… 2012-02-27…         80        28240</span>
+<span class="co">#&gt;  7 annual         freq     ""                2012-02-27…         90        21940</span>
+<span class="co">#&gt;  8 household sur… gen      "Current Populat… 2012-06-18…         65        19940</span>
+<span class="co">#&gt;  9 monthly        freq     ""                2012-02-27…         93        18832</span>
+<span class="co">#&gt; 10 rate           gen      ""                2012-02-27…         87        14682</span>
 <span class="co">#&gt; # … with 90 more rows</span></pre></div>
 </div>
 <div id="get-related-series-tags" class="section level2">
@@ -215,22 +215,24 @@
 <p>The function <code><a href="../reference/fredr_related_tags.html">fredr_related_tags()</a></code> returns a list of tags <em>related to</em> the set of tags matching the request. The data returned is a tibble in which each row represents a tag related to the tags specified in <code>tag_names</code>. For example, to get the set of tags related to the tags <code>"monetary aggregates"</code> and <code>"weekly"</code>:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_related_tags.html">fredr_related_tags</a></span><span class="op">(</span>tag_names <span class="op">=</span> <span class="st">"monetary aggregates;weekly"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 13 x 6</span>
+<span class="co">#&gt; # A tibble: 15 x 6</span>
 <span class="co">#&gt;    name             group_id notes          created      popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;            &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;             &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 nation           geot     ""             2012-02-27 …         99           12</span>
-<span class="co">#&gt;  2 usa              geo      "United State… 2012-02-27 …        100           12</span>
-<span class="co">#&gt;  3 frb              src      "Board of Gov… 2012-02-27 …         80           10</span>
-<span class="co">#&gt;  4 h6               rls      "H.6 Money St… 2012-08-16 …         51           10</span>
-<span class="co">#&gt;  5 public domain: … cc        &lt;NA&gt;          2018-12-17 …        100           10</span>
+<span class="co">#&gt;  1 nation           geot     ""             2012-02-27 …         99           16</span>
+<span class="co">#&gt;  2 usa              geo      "United State… 2012-02-27 …        100           16</span>
+<span class="co">#&gt;  3 frb              src      "Board of Gov… 2012-02-27 …         80           12</span>
+<span class="co">#&gt;  4 h6               rls      "H.6 Money St… 2012-08-16 …         51           12</span>
+<span class="co">#&gt;  5 public domain: … cc        &lt;NA&gt;          2018-12-17 …        100           12</span>
 <span class="co">#&gt;  6 nsa              seas     "Not Seasonal… 2012-02-27 …        100            8</span>
-<span class="co">#&gt;  7 m2               gen      "M2 Money Sto… 2012-02-27 …         43            6</span>
-<span class="co">#&gt;  8 m1               gen      "M1 Money Sto… 2012-02-27 …         47            4</span>
-<span class="co">#&gt;  9 sa               seas     "Seasonally A… 2012-02-27 …         88            4</span>
-<span class="co">#&gt; 10 copyrighted: ci… cc        &lt;NA&gt;          2018-12-17 …         88            2</span>
-<span class="co">#&gt; 11 currency         gen      ""             2012-02-27 …         62            2</span>
-<span class="co">#&gt; 12 frb stl          src      "St. Louis Fe… 2012-02-27 …         68            2</span>
-<span class="co">#&gt; 13 mzm              gen      "MZM Money St… 2012-02-27 …         27            2</span></pre></div>
+<span class="co">#&gt;  7 sa               seas     "Seasonally A… 2012-02-27 …         88            8</span>
+<span class="co">#&gt;  8 copyrighted: ci… cc        &lt;NA&gt;          2018-12-17 …         88            4</span>
+<span class="co">#&gt;  9 discontinued     gen      ""             2012-02-27 …         67            4</span>
+<span class="co">#&gt; 10 frb stl          src      "St. Louis Fe… 2012-02-27 …         68            4</span>
+<span class="co">#&gt; 11 m1               gen      "M1 Money Sto… 2012-02-27 …         47            4</span>
+<span class="co">#&gt; 12 m2               gen      "M2 Money Sto… 2012-02-27 …         43            4</span>
+<span class="co">#&gt; 13 m3               gen      "M3 Money Sto… 2012-02-27 …         39            4</span>
+<span class="co">#&gt; 14 mzm              gen      "MZM Money St… 2012-02-27 …         27            4</span>
+<span class="co">#&gt; 15 currency         gen      ""             2012-02-27 …         62            2</span></pre></div>
 <p>To filter these results to tags belonging to the “General” tag group:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_related_tags.html">fredr_related_tags</a></span><span class="op">(</span>
@@ -240,11 +242,11 @@
 <span class="co">#&gt; # A tibble: 6 x 6</span>
 <span class="co">#&gt;   name        group_id notes          created            popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 m1          gen      "M1 Money Sto… 2012-02-27 10:18:…         47            6</span>
-<span class="co">#&gt; 2 currency    gen      ""             2012-02-27 10:18:…         62            4</span>
-<span class="co">#&gt; 3 discontinu… gen      ""             2012-02-27 10:18:…         67            4</span>
-<span class="co">#&gt; 4 m3          gen      "M3 Money Sto… 2012-02-27 10:18:…         39            4</span>
-<span class="co">#&gt; 5 m2          gen      "M2 Money Sto… 2012-02-27 10:18:…         43            2</span>
+<span class="co">#&gt; 1 m1          gen      "M1 Money Sto… 2012-02-27 10:18:…         47            4</span>
+<span class="co">#&gt; 2 currency    gen      ""             2012-02-27 10:18:…         62            2</span>
+<span class="co">#&gt; 3 discontinu… gen      ""             2012-02-27 10:18:…         67            2</span>
+<span class="co">#&gt; 4 m2          gen      "M2 Money Sto… 2012-02-27 10:18:…         43            2</span>
+<span class="co">#&gt; 5 m3          gen      "M3 Money Sto… 2012-02-27 10:18:…         39            2</span>
 <span class="co">#&gt; 6 mzm         gen      "MZM Money St… 2012-02-27 10:18:…         27            2</span></pre></div>
 <p>To filter these results even further, keep only the tags matching the string <code>"money stock"</code>:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit">
@@ -256,8 +258,8 @@
 <span class="co">#&gt; # A tibble: 3 x 6</span>
 <span class="co">#&gt;   name  group_id notes           created                popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;                       &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 m2    gen      M2 Money Stock  2012-02-27 10:18:19-06         43            6</span>
-<span class="co">#&gt; 2 m1    gen      M1 Money Stock  2012-02-27 10:18:19-06         47            2</span>
+<span class="co">#&gt; 1 m1    gen      M1 Money Stock  2012-02-27 10:18:19-06         47            6</span>
+<span class="co">#&gt; 2 m2    gen      M2 Money Stock  2012-02-27 10:18:19-06         43            4</span>
 <span class="co">#&gt; 3 mzm   gen      MZM Money Stock 2012-02-27 10:18:19-06         27            2</span></pre></div>
 </div>
 <div id="get-series-by-tag-names" class="section level2">

@@ -123,7 +123,7 @@
 <a href="#introduction" class="anchor"></a>Introduction</h1>
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr">fredr</a></span><span class="op">)</span></pre></div>
-<p>This vignette is intended to introduce the user to fredr functions for the <a href="https://research.stlouisfed.org/docs/api/fred/#Releases">Releases endpoint</a> of the FRED API.</p>
+<p>This vignette is intended to introduce the user to fredr functions for the <a href="https://fred.stlouisfed.org/docs/api/fred/#Releases">Releases endpoint</a> of the FRED API.</p>
 <p>FRED series are added to the FRED database over time in <strong>releases</strong>. Each FRED release is assigned an integer identifier. The following examples illustrate usage of the Releases endpoint functions in fredr.</p>
 <div id="get-all-releases-of-economic-data" class="section level2">
 <h2 class="hasAnchor">
@@ -152,6 +152,7 @@
 <p>The function <code><a href="../reference/fredr_releases_dates.html">fredr_releases_dates()</a></code> returns a set of release dates for <em>all</em> FRED releases. The data returned is a tibble where each row represents a release date for a release. For example, to get all release dates (up to the limit of <code>1000</code>) ordered by descending release date:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_releases_dates.html">fredr_releases_dates</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; You have hit the rate limit of 120 requests / minute. Waiting 20 seconds before retrying request. This is attempt 1 of 6.</span>
 <span class="co">#&gt; # A tibble: 1,000 x 3</span>
 <span class="co">#&gt;    release_id release_name                                              date    </span>
 <span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                                                     &lt;chr&gt;   </span>
@@ -161,10 +162,10 @@
 <span class="co">#&gt;  4        279 Economic Policy Uncertainty                               2020-11…</span>
 <span class="co">#&gt;  5        378 Federal Funds Data                                        2020-11…</span>
 <span class="co">#&gt;  6        101 FOMC Press Release                                        2020-11…</span>
-<span class="co">#&gt;  7         95 Manufacturer's Shipments, Inventories, and Orders (M3) S… 2020-11…</span>
-<span class="co">#&gt;  8        427 Moody's Daily Corporate Bond Yield Averages               2020-11…</span>
-<span class="co">#&gt;  9        375 Overnight Bank Funding Rate Data                          2020-11…</span>
-<span class="co">#&gt; 10        445 Secured Overnight Financing Rate Data                     2020-11…</span>
+<span class="co">#&gt;  7         18 H.15 Selected Interest Rates                              2020-11…</span>
+<span class="co">#&gt;  8        185 Interest on Required Balances and Excess Balances         2020-11…</span>
+<span class="co">#&gt;  9        304 Interest Rate Spreads                                     2020-11…</span>
+<span class="co">#&gt; 10         95 Manufacturer's Shipments, Inventories, and Orders (M3) S… 2020-11…</span>
 <span class="co">#&gt; # … with 990 more rows</span></pre></div>
 <p>To instead order the results by ascending release ID:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
@@ -284,16 +285,16 @@
 <span class="co">#&gt; # A tibble: 65 x 6</span>
 <span class="co">#&gt;    name  group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100         4690</span>
-<span class="co">#&gt;  2 ca    geo      California          2012-02-27 10:18:…         61          292</span>
-<span class="co">#&gt;  3 tx    geo      Texas               2012-02-27 10:18:…         58          186</span>
-<span class="co">#&gt;  4 fl    geo      Florida             2012-02-27 10:18:…         55          170</span>
-<span class="co">#&gt;  5 pa    geo      Pennsylvania        2012-02-27 10:18:…         55          258</span>
-<span class="co">#&gt;  6 ny    geo      New York            2012-02-27 10:18:…         55          104</span>
-<span class="co">#&gt;  7 wi    geo      Wisconsin           2012-02-27 10:18:…         54          214</span>
-<span class="co">#&gt;  8 mi    geo      Michigan            2012-02-27 10:18:…         52          100</span>
-<span class="co">#&gt;  9 oh    geo      Ohio                2012-02-27 10:18:…         50          162</span>
-<span class="co">#&gt; 10 il    geo      Illinois            2012-02-27 10:18:…         49          140</span>
+<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100         4662</span>
+<span class="co">#&gt;  2 ca    geo      California          2012-02-27 10:18:…         61          266</span>
+<span class="co">#&gt;  3 tx    geo      Texas               2012-02-27 10:18:…         58          180</span>
+<span class="co">#&gt;  4 fl    geo      Florida             2012-02-27 10:18:…         55          166</span>
+<span class="co">#&gt;  5 pa    geo      Pennsylvania        2012-02-27 10:18:…         55          238</span>
+<span class="co">#&gt;  6 ny    geo      New York            2012-02-27 10:18:…         55          108</span>
+<span class="co">#&gt;  7 wi    geo      Wisconsin           2012-02-27 10:18:…         54          220</span>
+<span class="co">#&gt;  8 mi    geo      Michigan            2012-02-27 10:18:…         52           92</span>
+<span class="co">#&gt;  9 oh    geo      Ohio                2012-02-27 10:18:…         50          170</span>
+<span class="co">#&gt; 10 il    geo      Illinois            2012-02-27 10:18:…         49          156</span>
 <span class="co">#&gt; # … with 55 more rows</span></pre></div>
 </div>
 <div id="get-the-related-fred-tags-for-one-or-more-fred-tags-within-a-release" class="section level2">
@@ -312,8 +313,8 @@
 <span class="co">#&gt; # A tibble: 2 x 6</span>
 <span class="co">#&gt;   name       group_id notes created                popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;                       &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 monthly    freq     ""    2012-02-27 10:18:19-06         93         2184</span>
-<span class="co">#&gt; 2 semiannual freq     ""    2012-02-27 10:18:19-06         32         1856</span></pre></div>
+<span class="co">#&gt; 1 monthly    freq     ""    2012-02-27 10:18:19-06         93         2162</span>
+<span class="co">#&gt; 2 semiannual freq     ""    2012-02-27 10:18:19-06         32         1842</span></pre></div>
 </div>
 <div id="get-the-sources-for-a-release-of-economic-data" class="section level2">
 <h2 class="hasAnchor">

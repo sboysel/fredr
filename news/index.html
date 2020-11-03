@@ -158,6 +158,7 @@
 <a href="#fredr-development-version" class="anchor"></a>fredr (development version)<small> Unreleased </small>
 </h1>
 <ul>
+<li><p>fredr has been un-orphaned!</p></li>
 <li><p>If the FRED rate limit is hit, all fredr functions will now wait an appropriate amount of time before automatically attempting to make the request again. The rate limit seems to be 120 requests per minute, so fredr functions will wait 20 seconds between failed attempts, with a maximum of 6 failed attempts. This should be plenty of time for the rate limit to reset.</p></li>
 <li><p>Required arguments no longer have a default of <code>NULL</code>. This should make it easier to visually distinguish between required and optional arguments. Additionally, <code>...</code> have been added between the required and optional arguments of every function to force naming of optional arguments.</p></li>
 <li><p>All requests to the FRED API are now retried a maximum of 3 times on failure. The low level function, <code><a href="../reference/fredr_request.html">fredr_request()</a></code>, has gained a <code>retry_times</code> argument if you need to change this on a case-by-case basis.</p></li>

@@ -123,7 +123,7 @@
 <a href="#introduction" class="anchor"></a>Introduction</h1>
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr">fredr</a></span><span class="op">)</span></pre></div>
-<p>This vignette is intended to introduce the user to fredr functions for the <a href="https://research.stlouisfed.org/docs/api/fred/#Categories">Categories endpoint</a> of the FRED API.</p>
+<p>This vignette is intended to introduce the user to fredr functions for the <a href="https://fred.stlouisfed.org/docs/api/fred/#Categories">Categories endpoint</a> of the FRED API.</p>
 <p>FRED series are assigned <strong>categories</strong>. Each FRED category is assigned an integer identifier. For example:</p>
 <ul>
 <li>“Population, Employment, &amp; Labor Markets” (<code>category_id = 10</code>)</li>
@@ -264,9 +264,9 @@
 <span class="co">#&gt; # A tibble: 3 x 6</span>
 <span class="co">#&gt;   name    group_id notes               created           popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 census  src      Census              2012-02-27 10:18…         80          374</span>
-<span class="co">#&gt; 2 bea     src      Bureau of Economic… 2012-02-27 10:18…         79            2</span>
-<span class="co">#&gt; 3 frb stl src      St. Louis Fed       2012-02-27 10:18…         68            2</span></pre></div>
+<span class="co">#&gt; 1 census  src      Census              2012-02-27 10:18…         80          378</span>
+<span class="co">#&gt; 2 frb stl src      St. Louis Fed       2012-02-27 10:18…         68            8</span>
+<span class="co">#&gt; 3 bea     src      Bureau of Economic… 2012-02-27 10:18…         79            6</span></pre></div>
 <p>To search for tags with the words <code>"usa"</code> in the “Production &amp; Business Activity” category, ordering the results by popularity:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span>
@@ -278,9 +278,9 @@
 <span class="co">#&gt; # A tibble: 3 x 6</span>
 <span class="co">#&gt;   name   group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 usa    geo      United States of A… 2012-02-27 10:18:…        100         1588</span>
-<span class="co">#&gt; 2 census src      Census              2012-02-27 10:18:…         80         1588</span>
-<span class="co">#&gt; 3 ga     geo      Georgia (U.S. stat… 2012-02-27 10:18:…         49           28</span></pre></div>
+<span class="co">#&gt; 1 usa    geo      United States of A… 2012-02-27 10:18:…        100         1608</span>
+<span class="co">#&gt; 2 census src      Census              2012-02-27 10:18:…         80         1608</span>
+<span class="co">#&gt; 3 ga     geo      Georgia (U.S. stat… 2012-02-27 10:18:…         49           36</span></pre></div>
 </div>
 <div id="get-related-tags-within-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
@@ -293,18 +293,19 @@
   exclude_tag_names <span class="op">=</span> <span class="st">"rate"</span>,
   order_by <span class="op">=</span> <span class="st">"name"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 9 x 6</span>
-<span class="co">#&gt;   name           group_id notes              created     popularity series_count</span>
-<span class="co">#&gt;   &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 census         src      "Census"           2012-02-27…         80            4</span>
-<span class="co">#&gt; 2 inventories    gen      ""                 2012-02-27…         46            2</span>
-<span class="co">#&gt; 3 mtis           rls      "Manufacturing &amp; … 2012-08-16…         35            4</span>
-<span class="co">#&gt; 4 nation         geot     ""                 2012-02-27…         99            4</span>
-<span class="co">#&gt; 5 public domain… cc        &lt;NA&gt;              2018-12-17…        100            4</span>
-<span class="co">#&gt; 6 ratio          gen      ""                 2012-02-27…         47            2</span>
-<span class="co">#&gt; 7 sa             seas     "Seasonally Adjus… 2012-02-27…         88            4</span>
-<span class="co">#&gt; 8 sales          gen      ""                 2012-02-27…         63            4</span>
-<span class="co">#&gt; 9 usa            geo      "United States of… 2012-02-27…        100            4</span></pre></div>
+<span class="co">#&gt; # A tibble: 10 x 6</span>
+<span class="co">#&gt;    name           group_id notes             created     popularity series_count</span>
+<span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
+<span class="co">#&gt;  1 census         src      "Census"          2012-02-27…         80            8</span>
+<span class="co">#&gt;  2 inventories    gen      ""                2012-02-27…         46            6</span>
+<span class="co">#&gt;  3 mtis           rls      "Manufacturing &amp;… 2012-08-16…         35            8</span>
+<span class="co">#&gt;  4 nation         geot     ""                2012-02-27…         99            8</span>
+<span class="co">#&gt;  5 nsa            seas     "Not Seasonally … 2012-02-27…        100            4</span>
+<span class="co">#&gt;  6 public domain… cc        &lt;NA&gt;             2018-12-17…        100            8</span>
+<span class="co">#&gt;  7 ratio          gen      ""                2012-02-27…         47            4</span>
+<span class="co">#&gt;  8 sa             seas     "Seasonally Adju… 2012-02-27…         88            4</span>
+<span class="co">#&gt;  9 sales          gen      ""                2012-02-27…         63            6</span>
+<span class="co">#&gt; 10 usa            geo      "United States o… 2012-02-27…        100            8</span></pre></div>
 </div>
 </div>
   </div>
