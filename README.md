@@ -96,6 +96,12 @@ If you need data from any of these sources, it is recommended to
 download the data directly from the FRED website. The series in these
 sources can be found [here](https://fred.stlouisfed.org/source?soid=62).
 
+## Code of Conduct
+
+Please note that the fredr project is released with a [Contributor Code
+of Conduct](http://sboysel.github.io/fredr/CODE_OF_CONDUCT.html). By
+contributing to this project, you agree to abide by its terms.
+
 ## See Also
 
 There are several other existing R packages designed for the FRED API:
