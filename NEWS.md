@@ -1,4 +1,4 @@
-# fredr (development version)
+# fredr 2.0.0
 
 * If the FRED rate limit is hit, all fredr functions will now wait an
   appropriate amount of time before automatically attempting to make the

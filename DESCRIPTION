@@ -1,6 +1,6 @@
 Package: fredr
 Title: An R Client for the 'FRED' API
-Version: 1.1.0.9000
+Version: 2.0.0
 Authors@R: 
     c(person(given = "Sam",
              family = "Boysel",
