@@ -7,35 +7,34 @@ template:
       index_name: fredr
 
 reference:
-- title: Authentication
-  desc: ~
-  contents:
-  - '`fredr_set_key`'
-- title: Categories
-  desc: ~
-  contents:
-  - starts_with("fredr_category")
-- title: Releases
-  desc: ~
-  contents:
-  - starts_with("fredr_release")
-- title: Series
-  desc: ~
-  contents:
-  - starts_with("fredr_series")
-- title: Sources
-  desc: ~
-  contents:
-  - starts_with("fredr_source")
-- title: Tags
-  desc: ~
-  contents:
-  - '`fredr_tags`'
-  - '`fredr_related_tags`'
-  - '`fredr_tags_series`'
-- title: Miscellania
-  desc: ~
-  contents:
-  - '`fredr_request`'
-  - '`fredr_docs`'
-  - '`fredr_endpoints`'
+  - title: Authentication
+    contents:
+    - fredr_set_key
+
+  - title: Categories
+    contents:
+    - starts_with("fredr_category")
+
+  - title: Releases
+    contents:
+    - starts_with("fredr_release")
+
+  - title: Series
+    contents:
+    - starts_with("fredr_series")
+
+  - title: Sources
+    contents:
+    - starts_with("fredr_source")
+
+  - title: Tags
+    contents:
+    - fredr_tags
+    - fredr_related_tags
+    - fredr_tags_series
+
+  - title: Miscellania
+    contents:
+    - fredr_request
+    - fredr_docs
+    - fredr_endpoints
