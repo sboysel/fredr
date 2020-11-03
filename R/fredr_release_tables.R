@@ -42,10 +42,10 @@ fredr_release_tables <- function(release_id = NULL,
   validate_release_id(release_id)
 
   user_args <- capture_args(
-    release_id,
-    element_id,
-    include_observation_values,
-    observation_date
+    release_id = release_id,
+    element_id = element_id,
+    include_observation_values = include_observation_values,
+    observation_date = observation_date
   )
 
   fredr_args <- list(

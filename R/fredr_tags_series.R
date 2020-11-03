@@ -66,14 +66,14 @@ fredr_tags_series <- function(tag_names = NULL,
   validate_required_string_param(tag_names)
 
   user_args <- capture_args(
-    tag_names,
-    exclude_tag_names,
-    realtime_start,
-    realtime_end,
-    limit,
-    offset,
-    order_by,
-    sort_order
+    tag_names = tag_names,
+    exclude_tag_names = exclude_tag_names,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order
   )
 
   fredr_args <- list(

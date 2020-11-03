@@ -33,9 +33,9 @@ fredr_source <- function(source_id = NULL,
   validate_source_id(source_id)
 
   user_args <- capture_args(
-    source_id,
-    realtime_start,
-    realtime_end
+    source_id = source_id,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

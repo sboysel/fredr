@@ -90,17 +90,17 @@ fredr_release_series <- function(release_id = NULL,
   validate_release_id(release_id)
 
   user_args <- capture_args(
-    release_id,
-    limit,
-    offset,
-    order_by,
-    sort_order,
-    filter_variable,
-    filter_value,
-    tag_names,
-    exclude_tag_names,
-    realtime_start,
-    realtime_end
+    release_id = release_id,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order,
+    filter_variable = filter_variable,
+    filter_value = filter_value,
+    tag_names = tag_names,
+    exclude_tag_names = exclude_tag_names,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

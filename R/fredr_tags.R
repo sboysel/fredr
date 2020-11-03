@@ -76,15 +76,15 @@ fredr_tags <- function(tag_names = NULL,
                        realtime_end = NULL) {
 
   user_args <- capture_args(
-    realtime_start,
-    realtime_end,
-    tag_names,
-    tag_group_id,
-    search_text,
-    limit,
-    offset,
-    order_by,
-    sort_order
+    realtime_start = realtime_start,
+    realtime_end = realtime_end,
+    tag_names = tag_names,
+    tag_group_id = tag_group_id,
+    search_text = search_text,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order
   )
 
   fredr_args <- list(

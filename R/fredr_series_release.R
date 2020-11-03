@@ -31,9 +31,9 @@ fredr_series_release <- function(series_id = NULL,
   validate_series_id(series_id)
 
   user_args <- capture_args(
-    series_id,
-    realtime_start,
-    realtime_end
+    series_id = series_id,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

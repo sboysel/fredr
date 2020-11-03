@@ -80,16 +80,16 @@ fredr_category_tags <- function(category_id = 0L,
   validate_category_id(category_id)
 
   user_args <- capture_args(
-    category_id,
-    realtime_start,
-    realtime_end,
-    tag_names,
-    tag_group_id,
-    search_text,
-    limit,
-    offset,
-    order_by,
-    sort_order
+    category_id = category_id,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end,
+    tag_names = tag_names,
+    tag_group_id = tag_group_id,
+    search_text = search_text,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order
   )
 
   fredr_args <- list(

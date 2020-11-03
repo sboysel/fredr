@@ -36,16 +36,16 @@ fredr_release_tags <- function(release_id = NULL,
   validate_release_id(release_id)
 
   user_args <- capture_args(
-    release_id,
-    tag_names,
-    tag_group_id,
-    search_text,
-    limit,
-    offset,
-    order_by,
-    sort_order,
-    realtime_start,
-    realtime_end
+    release_id = release_id,
+    tag_names = tag_names,
+    tag_group_id = tag_group_id,
+    search_text = search_text,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

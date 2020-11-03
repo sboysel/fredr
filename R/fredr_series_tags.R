@@ -38,11 +38,11 @@ fredr_series_tags <- function(series_id = NULL,
   validate_series_id(series_id)
 
   user_args <- capture_args(
-    series_id,
-    order_by,
-    sort_order,
-    realtime_start,
-    realtime_end
+    series_id = series_id,
+    order_by = order_by,
+    sort_order = sort_order,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

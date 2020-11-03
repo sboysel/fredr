@@ -57,13 +57,13 @@ fredr_source_releases <- function(source_id = NULL,
   validate_source_id(source_id)
 
   user_args <- capture_args(
-    realtime_start,
-    realtime_end,
-    source_id,
-    limit,
-    offset,
-    order_by,
-    sort_order
+    realtime_start = realtime_start,
+    realtime_end = realtime_end,
+    source_id = source_id,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order
   )
 
   fredr_args <- list(

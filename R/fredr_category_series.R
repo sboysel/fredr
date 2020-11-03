@@ -86,17 +86,17 @@ fredr_category_series <- function(category_id = 0L,
   validate_category_id(category_id)
 
   user_args <- capture_args(
-    category_id,
-    realtime_start,
-    realtime_end,
-    limit,
-    offset,
-    order_by,
-    sort_order,
-    filter_variable,
-    filter_value,
-    tag_names,
-    exclude_tag_names
+    category_id = category_id,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order,
+    filter_variable = filter_variable,
+    filter_value = filter_value,
+    tag_names = tag_names,
+    exclude_tag_names = exclude_tag_names
   )
 
   fredr_args <- list(

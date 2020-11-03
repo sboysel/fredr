@@ -26,7 +26,7 @@ fredr_category <- function(category_id = 0L) {
   validate_category_id(category_id)
 
   user_args <- capture_args(
-    category_id
+    category_id = category_id
   )
 
   fredr_args <- list(

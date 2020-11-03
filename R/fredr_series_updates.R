@@ -52,13 +52,13 @@ fredr_series_updates <- function(filter_value = NULL,
                                  realtime_end = NULL) {
 
   user_args <- capture_args(
-    limit,
-    offset,
-    filter_value,
-    start_time,
-    end_time,
-    realtime_start,
-    realtime_end
+    limit = limit,
+    offset = offset,
+    filter_value = filter_value,
+    start_time = start_time,
+    end_time = end_time,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

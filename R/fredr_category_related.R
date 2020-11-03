@@ -39,9 +39,9 @@ fredr_category_related <- function(category_id = 0L,
   validate_category_id(category_id)
 
   user_args <- capture_args(
-    category_id,
-    realtime_start,
-    realtime_end
+    category_id = category_id,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

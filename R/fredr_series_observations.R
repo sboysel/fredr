@@ -155,18 +155,18 @@ fredr_series_observations <- function(series_id = NULL,
   validate_series_id(series_id)
 
   user_args <- capture_args(
-    observation_start,
-    observation_end,
-    frequency,
-    aggregation_method,
-    limit,
-    offset,
-    sort_order,
-    units,
-    realtime_start,
-    realtime_end,
-    vintage_dates,
-    output_type
+    observation_start = observation_start,
+    observation_end = observation_end,
+    frequency = frequency,
+    aggregation_method = aggregation_method,
+    limit = limit,
+    offset = offset,
+    sort_order = sort_order,
+    units = units,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end,
+    vintage_dates = vintage_dates,
+    output_type = output_type
   )
 
   fredr_args <- list(

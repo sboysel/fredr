@@ -90,17 +90,17 @@ fredr_series_search_related_tags <- function(series_search_text = NULL,
   validate_required_string_param(tag_names)
 
   args <- capture_args(
-    series_search_text,
-    tag_names,
-    limit,
-    offset,
-    order_by,
-    sort_order,
-    exclude_tag_names,
-    tag_group_id,
-    tag_search_text,
-    realtime_start,
-    realtime_end
+    series_search_text = series_search_text,
+    tag_names = tag_names,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order,
+    exclude_tag_names = exclude_tag_names,
+    tag_group_id = tag_group_id,
+    tag_search_text = tag_search_text,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(endpoint = "series/search/related_tags")

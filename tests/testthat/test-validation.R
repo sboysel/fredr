@@ -89,25 +89,3 @@ test_that("validate_release_id()", {
   expect_error(validate_release_id(length2))
 })
 
-test_that("validate_boolean()", {
-  good <- TRUE
-  numeric <- 1
-  length2 <- c("a", "b")
-  expect_silent(validate_boolean(good, "x"))
-  expect_error(validate_boolean(numeric, "x"), "`x` must be a `logical`")
-  expect_error(validate_boolean(length2, "x"), "`x` must be a `logical`")
-})
-
-test_that("format_boolean()", {
-  expect_silent(format_boolean(TRUE))
-  expect_silent(format_boolean(FALSE))
-  expect_silent(format_boolean(1L))
-  expect_silent(format_boolean(0L))
-  expect_identical(format_boolean(TRUE), "true")
-  expect_identical(format_boolean(FALSE), "false")
-  expect_identical(format_boolean(1L), "true")
-  expect_identical(format_boolean(0L), "false")
-  expect_null(format_boolean(NULL))
-})
-
-

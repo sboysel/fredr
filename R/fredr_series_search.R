@@ -135,17 +135,17 @@ fredr_series_search_id <- function(search_text = NULL,
   validate_required_string_param(search_text)
 
   args <- capture_args(
-    search_text,
-    limit,
-    offset,
-    order_by,
-    sort_order,
-    filter_variable,
-    filter_value,
-    realtime_start,
-    realtime_end,
-    tag_names,
-    exclude_tag_names
+    search_text = search_text,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order,
+    filter_variable = filter_variable,
+    filter_value = filter_value,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end,
+    tag_names = tag_names,
+    exclude_tag_names = exclude_tag_names
   )
 
   fredr_args <- list(

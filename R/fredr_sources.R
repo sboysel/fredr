@@ -43,12 +43,12 @@ fredr_sources <- function(limit = NULL,
                           realtime_end = NULL) {
 
   user_args <- capture_args(
-    limit,
-    offset,
-    order_by,
-    sort_order,
-    realtime_start,
-    realtime_end
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

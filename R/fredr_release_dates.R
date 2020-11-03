@@ -53,13 +53,13 @@ fredr_release_dates <- function(release_id = NULL,
   validate_release_id(release_id)
 
   user_args <- capture_args(
-    release_id,
-    limit,
-    offset,
-    sort_order,
-    include_release_dates_with_no_data,
-    realtime_start,
-    realtime_end
+    release_id = release_id,
+    limit = limit,
+    offset = offset,
+    sort_order = sort_order,
+    include_release_dates_with_no_data = include_release_dates_with_no_data,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(

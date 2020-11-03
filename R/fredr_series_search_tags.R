@@ -79,16 +79,16 @@ fredr_series_search_tags <- function(series_search_text = NULL,
   validate_required_string_param(series_search_text)
 
   args <- capture_args(
-    series_search_text,
-    limit,
-    offset,
-    order_by,
-    sort_order,
-    tag_names,
-    tag_group_id,
-    tag_search_text,
-    realtime_start,
-    realtime_end
+    series_search_text = series_search_text,
+    limit = limit,
+    offset = offset,
+    order_by = order_by,
+    sort_order = sort_order,
+    tag_names = tag_names,
+    tag_group_id = tag_group_id,
+    tag_search_text = tag_search_text,
+    realtime_start = realtime_start,
+    realtime_end = realtime_end
   )
 
   fredr_args <- list(endpoint = "series/search/tags")
