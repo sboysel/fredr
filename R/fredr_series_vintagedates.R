@@ -21,7 +21,7 @@
 #' [fredr_series_updates()].
 #'
 #' @examples
-#' \donttest{
+#' if (fredr_has_key()) {
 #' # All data vintages for the "UNRATE" series
 #' fredr_series_vintagedates(series_id = "UNRATE")
 #' # 10 most recent data vintages for the "UNRATE" series

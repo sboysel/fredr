@@ -87,7 +87,7 @@ search text. Related FRED tags are the tags assigned to series that match
 
 \examples{
 
-\donttest{
+if (fredr_has_key()) {
 
 fredr_related_tags(tag_names = "monetary aggregates;weekly")
 

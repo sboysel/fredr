@@ -33,7 +33,7 @@
 #' [fredr_release_related_tags()], [fredr_release_tables()],
 #'
 #' @examples
-#' \donttest{
+#' if (fredr_has_key()) {
 #' fredr_releases(limit = 20L)
 #' }
 #' @export

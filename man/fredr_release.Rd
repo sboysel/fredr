@@ -30,7 +30,7 @@ Get a release of economic data
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Release as of today
 fredr_release(release_id = 20)
 

@@ -4,11 +4,14 @@
 \alias{fredr-key}
 \alias{fredr_set_key}
 \alias{fredr_get_key}
+\alias{fredr_has_key}
 \title{FRED API key}
 \usage{
 fredr_set_key(key)
 
 fredr_get_key()
+
+fredr_has_key()
 }
 \arguments{
 \item{key}{A valid FRED API key as a string. Obtain one at the \href{https://api.stlouisfed.org/api_key.html}{API Keys} page. Can also be \code{NULL}
@@ -24,6 +27,8 @@ if the key is unset.
 \item \code{fredr_set_key()} will set the key \emph{for the current R session}. For
 persistence across sessions, set the environment variable.
 See the Details section for more information.
+\item \code{fredr_has_key()} returns \code{TRUE} if a key can be found. Otherwise it
+returns \code{FALSE}.
 }
 }
 \details{

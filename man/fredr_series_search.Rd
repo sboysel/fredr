@@ -95,7 +95,7 @@ A \code{tibble} object where each row represents a series matching the query.
 Search FRED for a series by full text of series or by series ID.
 }
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # search for series with text matching "oil" and return the top 10 most popular
 # series
 fredr_series_search_text(

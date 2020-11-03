@@ -58,7 +58,7 @@ Get the releases for a source
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Board of Governors
 fredr_source_releases(source_id = 1L)
 

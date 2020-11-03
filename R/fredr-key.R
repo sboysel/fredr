@@ -12,6 +12,9 @@
 #'   persistence across sessions, set the environment variable.
 #'   See the Details section for more information.
 #'
+#' - `fredr_has_key()` returns `TRUE` if a key can be found. Otherwise it
+#'   returns `FALSE`.
+#'
 #' @param key A valid FRED API key as a string. Obtain one at the [API
 #'   Keys](https://api.stlouisfed.org/api_key.html) page. Can also be `NULL`
 #'   to unset the key for the current R session.
@@ -67,4 +70,10 @@ fredr_get_key <- function() {
   } else {
     key
   }
+}
+
+#' @export
+#' @rdname fredr-key
+fredr_has_key <- function() {
+  !is.null(fredr_get_key())
 }

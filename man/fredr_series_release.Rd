@@ -36,7 +36,7 @@ Given a series ID, return information on a series as a \code{tibble} object.
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Get release information for the "UNRATE" series
 fredr_series_release(series_id = "UNRATE")
 }

@@ -24,7 +24,7 @@ Get a FRED category
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Root category
 fredr_category()
 # "Production & Business Activity" category

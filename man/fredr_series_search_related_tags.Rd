@@ -81,7 +81,7 @@ parameter (required), \emph{no} tags in the \code{exclude_tag_names} (optional) 
 search words set by the \code{series_search_text} parameter (optional).
 }
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Search for all tags matching the series text "oil" and the tag "usa".
 fredr_series_search_related_tags(
   series_search_text = "oil",

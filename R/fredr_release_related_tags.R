@@ -20,7 +20,7 @@
 #' [fredr_release_tags()], [fredr_release_tables()]
 #'
 #' @examples
-#' \donttest{
+#' if (fredr_has_key()) {
 #' fredr_release_related_tags(10, tag_names = "cpi")
 #' }
 #' @export

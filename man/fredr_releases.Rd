@@ -49,7 +49,7 @@ Get all releases of economic data
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 fredr_releases(limit = 20L)
 }
 }

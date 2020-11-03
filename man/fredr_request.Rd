@@ -52,7 +52,7 @@ request to a specified endpoint of the FRED API.  The result is either the
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 fredr_request(
   endpoint = "series/observations",
   series_id = "GNPCA",

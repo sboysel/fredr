@@ -55,7 +55,7 @@ data will be available on the FRED or ALFRED websites.
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 fredr_releases_dates(limit = 20L)
 }
 }

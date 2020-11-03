@@ -18,7 +18,7 @@ library(fredr)
 knitr::opts_chunk$set(
   fig.width = 7,
   fig.height = 5,
-  eval = !is.null(fredr_get_key()),
+  eval = fredr_has_key(),
   cache = TRUE,
   collapse = TRUE,
   comment = "#>"

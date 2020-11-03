@@ -27,7 +27,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' if (fredr_has_key()) {
 #' fredr_release_tables(release_id = 10L)
 #'
 #' # Digging further into a release element

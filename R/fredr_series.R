@@ -20,7 +20,7 @@
 #' [fredr_series_vintagedates()].
 #'
 #' @examples
-#' \donttest{
+#' if (fredr_has_key()) {
 #' # Return information for the "UNRATE" series
 #' fredr_series(series_id = "UNRATE")
 #' }

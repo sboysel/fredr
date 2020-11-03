@@ -28,7 +28,7 @@
 #'
 #' @examples
 #'
-#' \donttest{
+#' if (fredr_has_key()) {
 #'
 #' fredr_related_tags(tag_names = "monetary aggregates;weekly")
 #'

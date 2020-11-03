@@ -44,7 +44,7 @@ Given a series ID, return associated tags for the series as a \code{tibble} obje
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Return all tags assigned to the "UNRATE" series and order the results by
 # group ID.
 fredr_series_tags(series_id = "UNRATE", order_by = "group_id")

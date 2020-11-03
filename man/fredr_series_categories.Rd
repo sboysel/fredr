@@ -37,7 +37,7 @@ as a \code{tibble} object.
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Return the categories to which the "UNRATE" series belongs
 fredr_series_categories(series_id = "UNRATE")
 }

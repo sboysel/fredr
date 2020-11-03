@@ -82,7 +82,7 @@ tag group, or search text.
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 fredr_release_tags(release_id = 10L)
 }
 }

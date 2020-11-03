@@ -36,7 +36,7 @@ Get the child categories for a specified FRED parent category
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Children of the root category
 fredr_category_children(category_id = 0L)
 # Children of the "Production & Business Activity" category

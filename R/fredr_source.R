@@ -19,7 +19,7 @@
 #' @seealso [fredr_sources()], [fredr_source_releases()]
 #'
 #' @examples
-#' \donttest{
+#' if (fredr_has_key()) {
 #' fredr_source(source_id = 14L)
 #'
 #' # Has this source ID ever changed over time?

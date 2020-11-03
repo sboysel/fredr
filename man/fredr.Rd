@@ -136,7 +136,7 @@ Given a series ID, return observations of that series as a \code{tibble} object.
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
 # of change from pervious observation.
 fredr(

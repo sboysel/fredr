@@ -49,7 +49,7 @@ Get \emph{all} sources of economic data
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 fredr_sources(limit = 20L)
 }
 }

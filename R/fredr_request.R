@@ -30,7 +30,7 @@
 #'   [FRED API](https://api.stlouisfed.org/docs/fred/)
 #'
 #' @examples
-#' \donttest{
+#' if (fredr_has_key()) {
 #' fredr_request(
 #'   endpoint = "series/observations",
 #'   series_id = "GNPCA",
@@ -54,7 +54,7 @@ fredr_request <- function(endpoint,
                           print_req = FALSE,
                           retry_times = 3L) {
 
-  if (is_null(fredr_get_key())) {
+  if (!fredr_has_key()) {
     stop("FRED API key must be set. See `?fredr_set_key`.")
   }
 

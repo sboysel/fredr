@@ -38,7 +38,7 @@
 #' @seealso [fredr_sources()], [fredr_source()]
 #'
 #' @examples
-#' \donttest{
+#' if (fredr_has_key()) {
 #' # Board of Governors
 #' fredr_source_releases(source_id = 1L)
 #'

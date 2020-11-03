@@ -82,7 +82,7 @@ all tags are returned, unfiltered, up to the \code{limit}.
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Information for all tags
 fredr_tags()
 # Information for just the "gdp" and "oecd" tags

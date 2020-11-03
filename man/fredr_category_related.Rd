@@ -42,7 +42,7 @@ categories."
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # Categories related to the "Employment Cost Index" category
 fredr_category_related(category_id = 4L)
 }

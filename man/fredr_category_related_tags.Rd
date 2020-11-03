@@ -87,7 +87,7 @@ that does not have series.
 }
 
 \examples{
-\donttest{
+if (fredr_has_key()) {
 # First, get the tags for the "Production & Business Activity" category
 fredr_category_tags(1L)
 # Then, get the tags related to "business" and "monthly" for the
