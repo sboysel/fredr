@@ -64,11 +64,11 @@
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param realtime_end A `Date` indicating the end of the real-time period.
 #' Defaults to today's date. For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param vintage_dates A vector of `Date` objects to download data for.
 #' Vintage dates are used to download data as it existed on these specified
@@ -89,7 +89,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/series/observations](https://research.stlouisfed.org/docs/api/fred/series_observations.html)
+#' [fred/series/observations](https://fred.stlouisfed.org/docs/api/fred/series_observations.html)
 #'
 #' @seealso [fredr_series_search_text()],
 #' [fredr_series_search_id()], [fredr_series_search_tags()],

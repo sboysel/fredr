@@ -66,11 +66,11 @@ Possible values are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
 A \code{tibble} object.
@@ -102,7 +102,7 @@ fredr_series_search_related_tags(
 \references{
 API Documentation:
 
-\href{https://research.stlouisfed.org/docs/api/fred/series_search_related_tags.html}{series/search/related_tags}
+\href{https://fred.stlouisfed.org/docs/api/fred/series_search_related_tags.html}{series/search/related_tags}
 }
 \seealso{
 \code{\link[=fredr_series_observations]{fredr_series_observations()}}, \code{\link[=fredr_series_search_text]{fredr_series_search_text()}},

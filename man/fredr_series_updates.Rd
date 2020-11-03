@@ -42,11 +42,11 @@ multiple calls. Defaults to \code{0}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
 A \code{tibble} object where each row represents a series. Rows are sorted
@@ -58,7 +58,7 @@ Returns information on the recently updated series on the FRED server.
 \section{API Documentation}{
 
 
-\href{https://research.stlouisfed.org/docs/api/fred/series_updates.html}{fred/series/updates}
+\href{https://fred.stlouisfed.org/docs/api/fred/series_updates.html}{fred/series/updates}
 }
 
 \examples{

@@ -10,7 +10,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/series/release](https://research.stlouisfed.org/docs/api/fred/series_release.html)
+#' [fred/series/release](https://fred.stlouisfed.org/docs/api/fred/series_release.html)
 #'
 #' @seealso [fredr_series_observations()], [fredr_series_search_text()],
 #' [fredr_series_search_id()], [fredr_series_search_tags()],

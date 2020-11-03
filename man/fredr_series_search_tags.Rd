@@ -63,11 +63,11 @@ Possible values are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
 A \code{tibble} object where each row represents a series tag matching the
@@ -98,7 +98,7 @@ fredr_series_search_tags(
 \references{
 API Documentation:
 
-\href{https://research.stlouisfed.org/docs/api/fred/series_search_tags.html}{series/search/tags}
+\href{https://fred.stlouisfed.org/docs/api/fred/series_search_tags.html}{series/search/tags}
 }
 \seealso{
 \code{\link[=fredr_series_search_text]{fredr_series_search_text()}}, \code{\link[=fredr_series_search_id]{fredr_series_search_id()}}, \code{\link[=fredr_series_search_related_tags]{fredr_series_search_related_tags()}}, \code{\link[=fredr_tags]{fredr_tags()}}

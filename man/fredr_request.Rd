@@ -48,7 +48,7 @@ request to a specified endpoint of the FRED API.  The result is either the
 \section{API Documentation}{
 
 
-\href{https://api.stlouisfed.org/docs/fred/}{FRED API}
+\href{https://fred.stlouisfed.org/docs/api/fred/}{FRED API}
 }
 
 \examples{

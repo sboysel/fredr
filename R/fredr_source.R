@@ -4,11 +4,11 @@
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param realtime_end A `Date` indicating the end of the real-time period.
 #' Defaults to today's date. For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param ... These dots only exist for future extensions and should be empty.
 #'
@@ -16,7 +16,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/source](https://research.stlouisfed.org/docs/api/fred/source.html)
+#' [fred/source](https://fred.stlouisfed.org/docs/api/fred/source.html)
 #'
 #' @seealso [fredr_sources()], [fredr_source_releases()]
 #'

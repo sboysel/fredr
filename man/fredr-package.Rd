@@ -7,8 +7,8 @@
 \title{fredr: An R Client for the 'FRED' API}
 \description{
 An R client for the 'Federal Reserve Economic Data'
-    ('FRED') API <https://api.stlouisfed.org>.  Functions to retrieve
-    economic time series and other data from 'FRED'.
+    ('FRED') API <https://research.stlouisfed.org/docs/api/>.  Functions
+    to retrieve economic time series and other data from 'FRED'.
 }
 \seealso{
 Useful links:

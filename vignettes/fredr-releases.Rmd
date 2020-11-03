@@ -34,7 +34,7 @@ options(digits = 4)
 library(fredr)
 ```
 
-This vignette is intended to introduce the user to fredr functions for the [Releases endpoint](https://research.stlouisfed.org/docs/api/fred/#Releases) of the FRED API.
+This vignette is intended to introduce the user to fredr functions for the [Releases endpoint](https://fred.stlouisfed.org/docs/api/fred/#Releases) of the FRED API.
 
 FRED series are added to the FRED database over time in **releases**. Each FRED release is assigned an integer identifier. The following examples illustrate usage of the Releases endpoint functions in fredr.
 

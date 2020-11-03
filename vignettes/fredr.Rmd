@@ -38,7 +38,7 @@ fredr provides a complete set of R bindings to the [Federal Reserve of Economic 
 
 The core function in this package is `fredr()`, which fetches observations for a FRED series. That said, there are many other FRED endpoints exposed through fredr, such as `fredr_series_search_text()`, which allows you to search for a FRED series by text.
 
-We strongly encourage referencing the FRED API [documentation](https://research.stlouisfed.org/docs/api/fred/) to leverage the full power of fredr.
+We strongly encourage referencing the FRED API [documentation](https://fred.stlouisfed.org/docs/api/fred/) to leverage the full power of fredr.
 
 ## Authentication
 
@@ -170,7 +170,7 @@ fredr_endpoints
 
 ## View FRED API documentation
 
-To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://research.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation with the convenience function `fredr_docs()`.
+To get the most out of the native features of the FRED API, it is highly recommended to review the [API endpoint documentation](https://fred.stlouisfed.org/docs/api/fred/). Within an R session, you can quickly access the web documentation with the convenience function `fredr_docs()`.
 
 ```{r fredr_docs, message=FALSE, warning=FALSE, eval=FALSE}
 fredr_docs()
@@ -178,7 +178,7 @@ fredr_docs()
 
 ## General queries
 
-You can also use the low-level function `fredr_request()` to run more general queries against *any* [FRED API endpoint](https://research.stlouisfed.org/docs/api/fred/) (e.g. Categories, Series, Sources, Releases, Tags). The required parameter is `endpoint` (see `fredr_endpoints` for a list of valid endpoints) and then all API parameters are passed through as named arguments. For example:
+You can also use the low-level function `fredr_request()` to run more general queries against *any* [FRED API endpoint](https://fred.stlouisfed.org/docs/api/fred/) (e.g. Categories, Series, Sources, Releases, Tags). The required parameter is `endpoint` (see `fredr_endpoints` for a list of valid endpoints) and then all API parameters are passed through as named arguments. For example:
 
 ```{r fredr_request1}
 fredr_request(

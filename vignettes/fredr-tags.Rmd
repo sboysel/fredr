@@ -35,7 +35,7 @@ options(digits = 4)
 library(fredr)
 ```
 
-This vignette is intended to introduce the user to fredr functions for the [Tags endpoint](https://research.stlouisfed.org/docs/api/fred/#Tags) of the FRED API.
+This vignette is intended to introduce the user to fredr functions for the [Tags endpoint](https://fred.stlouisfed.org/docs/api/fred/#Tags) of the FRED API.
 
 FRED series are assigned **tags** as an attribute for classification. Each FRED tag is identified by a string ID. For example:
 

@@ -5,25 +5,25 @@
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param realtime_end A `Date` indicating the end of the real-time period.
 #' Defaults to today's date. For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param ... These dots only exist for future extensions and should be empty.
 #'
 #' @return A `tibble` object containing the name and parent ID for categories
 #' related to the category indicated by `category_id`.
 #'
-#' @details From the [FRED API documentation](https://research.stlouisfed.org/docs/api/fred/category_related.html):
+#' @details From the [FRED API documentation](https://fred.stlouisfed.org/docs/api/fred/category_related.html):
 #' "A related category is a one-way relation between 2 categories that is not
 #' part of a parent-child category hierarchy. Most categories do not have related
 #' categories."
 #'
 #' @section API Documentation:
 #'
-#' [fred/category/related](https://research.stlouisfed.org/docs/api/fred/category_related.html)
+#' [fred/category/related](https://fred.stlouisfed.org/docs/api/fred/category_related.html)
 #'
 #' @seealso [fredr_category()], [fredr_category_children()],
 #' [fredr_category_series()], [fredr_category_tags()], [fredr_category_related_tags()]

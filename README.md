@@ -24,7 +24,7 @@ endpoints exposed through fredr, such as `fredr_series_search_text()`,
 which allows you to search for a FRED series by text.
 
 We strongly encourage referencing the FRED API
-[documentation](https://research.stlouisfed.org/docs/api/fred/) to
+[documentation](https://fred.stlouisfed.org/docs/api/fred/) to
 leverage the full power of fredr.
 
 You’ll also need a free API key to use fredr. See `?fredr_set_key()`.

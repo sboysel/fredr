@@ -64,11 +64,11 @@ are: \code{"asc"} (default), and \code{"desc"}.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
 A \code{tibble} containing tags related to \code{tag_names} and their
@@ -84,7 +84,7 @@ search text. Related FRED tags are the tags assigned to series that match
 \section{API Documentation}{
 
 
-\href{https://research.stlouisfed.org/docs/api/fred/related_tags.html}{fred/related_tags}
+\href{https://fred.stlouisfed.org/docs/api/fred/related_tags.html}{fred/related_tags}
 }
 
 \examples{

@@ -18,7 +18,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/related_tags](https://research.stlouisfed.org/docs/api/fred/related_tags.html)
+#' [fred/related_tags](https://fred.stlouisfed.org/docs/api/fred/related_tags.html)
 #'
 #' @seealso [fredr_category_tags()], [fredr_category_related_tags()], [fredr_docs()],
 #' [fredr_release_tags()], [fredr_release_related_tags()],

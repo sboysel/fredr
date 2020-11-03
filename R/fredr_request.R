@@ -27,7 +27,7 @@
 #'
 #' @section API Documentation:
 #'
-#'   [FRED API](https://api.stlouisfed.org/docs/fred/)
+#'   [FRED API](https://fred.stlouisfed.org/docs/api/fred/)
 #'
 #' @examples
 #' if (fredr_has_key()) {
@@ -203,7 +203,7 @@ fredr_download_loop <- function(endpoint, params, retry_times) {
 fredr_download <- function(endpoint, params, retry_times) {
   httr::RETRY(
     verb = "GET",
-    url = "https://api.stlouisfed.org/",
+    url = "https://research.stlouisfed.org/docs/api/",
     path = paste0("fred/", endpoint),
     query = params,
     times = retry_times,
