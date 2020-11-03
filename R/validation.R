@@ -4,8 +4,8 @@
 # and accessing a nonexistent element of a list also returns NULL
 
 capture_args <- function(...) {
-
-  args <- list_named(...)
+  # Auto name so we can access elements with `$`
+  args <- rlang::dots_list(..., .named = TRUE)
 
   # Validation - integer values
   validate_limit(args$limit)
@@ -215,10 +215,6 @@ format_boolean <- function(x) {
 
   ifelse(x, "true", "false")
 
-}
-
-list_named <- function(...) {
-  lapply(rlang::enquos(..., .named = TRUE), rlang::eval_tidy)
 }
 
 force_integer <- function(x) {
