@@ -149,11 +149,13 @@ fredr_termination_codes <- function() {
   code_not_found <- 404L
   code_locked <- 423L
   code_internal_server_error <- 500L
+  code_exceeded_rate_limit <- 429L
 
   c(
     code_bad_request,
     code_not_found,
     code_locked,
-    code_internal_server_error
+    code_internal_server_error,
+    code_exceeded_rate_limit
   )
 }
