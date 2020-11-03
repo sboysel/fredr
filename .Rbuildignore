@@ -5,7 +5,6 @@
 ^\.Renviron$
 ^\.gitignore$
 ^\.Rhistory$
-^figure$
 ^docs$
 ^\.travis\.yml$
 ^appveyor\.yml$
