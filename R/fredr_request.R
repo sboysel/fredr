@@ -203,7 +203,7 @@ fredr_download_loop <- function(endpoint, params, retry_times) {
 fredr_download <- function(endpoint, params, retry_times) {
   httr::RETRY(
     verb = "GET",
-    url = "https://research.stlouisfed.org/docs/api/",
+    url = "https://api.stlouisfed.org/",
     path = paste0("fred/", endpoint),
     query = params,
     times = retry_times,
