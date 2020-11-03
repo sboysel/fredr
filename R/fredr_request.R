@@ -179,9 +179,7 @@ fredr_download_loop <- function(endpoint, params, retry_times) {
       next
     }
 
-    attempt <- attempt + 1L
-
-    if (attempt > max_attempt) {
+    if (attempt == max_attempt) {
       abort(paste0(
         "Maximum number of attempts reached. ",
         "Please wait before submitting another request."
@@ -189,12 +187,14 @@ fredr_download_loop <- function(endpoint, params, retry_times) {
     }
 
     inform(paste0(
-      "You have been rate limited. ",
+      "You have hit the rate limit of 120 requests / minute. ",
       "Waiting 20 seconds before retrying request. ",
       "This is attempt ", attempt, " of ", max_attempt, "."
     ))
 
     Sys.sleep(20)
+
+    attempt <- attempt + 1L
   }
 
   response
