@@ -32,7 +32,7 @@ jobs:
           - {os: macOS-latest,   r: 'release'}
 
     env:
-      FRED_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
