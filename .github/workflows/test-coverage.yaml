@@ -4,8 +4,9 @@ on:
   schedule:
     # - `*` is a special character in YAML so we have to quote this string
     # - https://crontab.guru is your friend
-    # - This runs every Monday at midnight UTC (7pm EST, previous Sunday)
-    - cron:  '0 12 * * 1'
+    # - This runs every Monday at 1am UTC (8pm EST, previous Sunday)
+    #   (offset from pkgdown build to avoid rate limits)
+    - cron:  '0 13 * * 1'
 
 name: test-coverage
 
