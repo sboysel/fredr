@@ -1,5 +1,12 @@
 # fredr (development version)
 
+* All requests to the FRED API are now retried a maximum of 3 times on failure.
+  The low level function, `fredr_request()`, has gained a `retry_times` argument
+  if you need to change this on a case-by-case basis.
+
+* There are two new functions related to the API key, `fredr_set_key()` and
+  `fredr_has_key()`. These are mainly for internal usage.
+
 # fredr 1.0.0
 
 Initial release for CRAN.  All endpoint functions for the FRED API are now 
