@@ -5,7 +5,15 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 note(s)
+
+New submission
+   
+   Package was archived on CRAN
+   
+   CRAN repository db overrides:
+     X-CRAN-Comment: Archived on 2020-04-21 as check problems were not
+       corrected in time.
 
 ## Reverse dependencies
 
