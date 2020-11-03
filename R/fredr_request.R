@@ -55,7 +55,7 @@ fredr_request <- function(endpoint,
                           retry_times = 3L) {
 
   if (!fredr_has_key()) {
-    stop("FRED API key must be set. See `?fredr_set_key`.")
+    abort("FRED API key must be set. See `?fredr_set_key`.")
   }
 
   validate_endpoint(endpoint)

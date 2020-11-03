@@ -96,47 +96,47 @@ validate_limit <- function(x) {
   validate_is_class(x, "limit", c("integer", "numeric"))
 
   if (!length(x) == 1) {
-    stop("`limit` must be of length 1.", call. = FALSE)
+    abort("`limit` must be of length 1.")
   }
 
   if(x <= 0) {
-    stop("`limit` must be a non-negative integer.", call. = FALSE)
+    abort("`limit` must be a non-negative integer.")
   }
 }
 
 validate_series_id <- function(x) {
   if(is.null(x)) {
-    stop("Argument `series_id` must be supplied.", call. = FALSE)
+    abort("Argument `series_id` must be supplied.")
   }
 
   validate_is_class(x, "series_id", "character")
 
   if(! (length(x) == 1) ) {
-    stop("Argument `series_id` must be of length 1.", call. = FALSE)
+    abort("Argument `series_id` must be of length 1.")
   }
 }
 
 validate_release_id <- function(x) {
   if(is.null(x)) {
-    stop("Argument `release_id` must be supplied.", call. = FALSE)
+    abort("Argument `release_id` must be supplied.")
   }
 
   validate_is_class(x, "release_id", c("integer", "numeric"))
 
   if(! (length(x) == 1) ) {
-    stop("Argument `release_id` must be of length 1.", call. = FALSE)
+    abort("Argument `release_id` must be of length 1.")
   }
 }
 
 validate_source_id <- function(x) {
   if(is.null(x)) {
-    stop("Argument `source_id` must be supplied.", call. = FALSE)
+    abort("Argument `source_id` must be supplied.")
   }
 
   validate_is_class(x, "source_id", c("integer", "numeric"))
 
   if(! (length(x) == 1) ) {
-    stop("Argument `source_id` must be of length 1.", call. = FALSE)
+    abort("Argument `source_id` must be of length 1.")
   }
 }
 
@@ -145,7 +145,7 @@ validate_category_id <- function(x) {
   validate_is_class(x, "category_id", c("integer", "numeric"))
 
   if(! (length(x) == 1) ) {
-    stop("Argument `category_id` must be of length 1.", call. = FALSE)
+    abort("Argument `category_id` must be of length 1.")
   }
 }
 
@@ -155,14 +155,14 @@ validate_required_string_param <- function(x) {
 
   if(is.null(x)) {
     msg <- paste0("Argument `", x_nm, "` must be supplied.")
-    stop(msg, call. = FALSE)
+    abort(msg)
   }
 
   validate_is_class(x, x_nm, "character")
 
   if(! (length(x) == 1) ) {
     msg <- paste0("Argument `", x_nm, "` must be of length 1.")
-    stop(msg, call. = FALSE)
+    abort(msg)
   }
 
 }
