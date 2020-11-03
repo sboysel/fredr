@@ -1,6 +1,5 @@
-# This workflow runs on the standard config of multiple R versions + multiple
-# OS's, but runs without an API key. This mocks running on CRAN's servers as
-# closely as possible.
+# This workflow runs only on Mac with the latest version of R, but runs with
+# an API key so we can fully test the package.
 
 # NOTE: This workflow is overkill for most R packages
 # check-standard.yaml is likely a better choice
@@ -18,11 +17,11 @@ on:
       - main
       - master
 
-name: R-CMD-check
+name: R-CMD-check-auth
 
 jobs:
-  R-CMD-check:
-    runs-on: ${{ matrix.config.os }}
+  R-CMD-check-auth:
+    runs-on: macOS-latest
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
@@ -31,16 +30,9 @@ jobs:
       matrix:
         config:
           - {os: macOS-latest,   r: 'release'}
-          - {os: windows-latest, r: 'release'}
-          - {os: windows-latest, r: '3.6'}
-          - {os: ubuntu-16.04,   r: 'devel', rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest", http-user-agent: "R/4.0.0 (ubuntu-16.04) R (4.0.0 x86_64-pc-linux-gnu x86_64 linux-gnu) on GitHub Actions" }
-          - {os: ubuntu-16.04,   r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          - {os: ubuntu-16.04,   r: 'oldrel',  rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          - {os: ubuntu-16.04,   r: '3.5',     rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          - {os: ubuntu-16.04,   r: '3.4',     rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          - {os: ubuntu-16.04,   r: '3.3',     rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
 
     env:
+      FRED_API_KEY: ${{ secrets.GITHUB_TOKEN }}
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -106,5 +98,5 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@main
         with:
-          name: ${{ runner.os }}-r${{ matrix.config.r }}-results
+          name: ${{ runner.os }}-r${{ matrix.config.r }}-auth-results
           path: check
