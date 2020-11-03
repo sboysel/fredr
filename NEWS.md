@@ -1,5 +1,10 @@
 # fredr (development version)
 
+* Required arguments no longer have a default of `NULL`. This should make it
+  easier to visually distinguish between required and optional arguments.
+  Additionally, `...` have been added between the required and optional
+  arguments of every function to force naming of optional arguments.
+
 * All requests to the FRED API are now retried a maximum of 3 times on failure.
   The low level function, `fredr_request()`, has gained a `retry_times` argument
   if you need to change this on a case-by-case basis.
