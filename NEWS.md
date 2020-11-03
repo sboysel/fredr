@@ -1,4 +1,4 @@
-# fredr 2.0.0
+# fredr (development version)
 
 * fredr has been un-orphaned!
 
