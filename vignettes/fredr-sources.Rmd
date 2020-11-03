@@ -8,8 +8,10 @@ output:
     toc_depth: 3
 vignette: >
   %\VignetteIndexEntry{FRED Sources}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include = FALSE}
@@ -19,7 +21,6 @@ knitr::opts_chunk$set(
   fig.width = 7,
   fig.height = 5,
   eval = fredr_has_key(),
-  cache = TRUE,
   collapse = TRUE,
   comment = "#>"
 )
@@ -29,22 +30,25 @@ options(digits = 4)
 
 # Introduction
 
-This vignette is intended to introduce the user to `fredr` functions for the [Sources
-endpoint](https://research.stlouisfed.org/docs/api/fred/#Sources) of the FRED API.
+```{r}
+library(fredr)
+```
 
-FRED series are derived from a specific data __source__.  Each FRED source is assigned an integer identifier.  The following examples illustrate usage of the Sources endpoint functions in `fredr`.
+This vignette is intended to introduce the user to fredr functions for the [Sources endpoint](https://research.stlouisfed.org/docs/api/fred/#Sources) of the FRED API.
+
+FRED series are derived from a specific data **source**. Each FRED source is assigned an integer identifier. The following examples illustrate usage of the Sources endpoint functions in fredr.
 
 ## Get FRED sources
 
-The function `fredr_sources()` returns a list of FRED data sources.  The information returned is a `tibble` in which each row represents a FRED source.  For example, running `fredr_sources()` without any arguments returns the first 1000 (`limit` default) sources ordered by ascending source ID:
+The function `fredr_sources()` returns a list of FRED data sources. The information returned is a tibble in which each row represents a FRED source. For example, running `fredr_sources()` without any arguments returns the first 1000 (`limit` default) sources ordered by ascending source ID (but here we limit to just 10):
 
 ```{r fredr_sources1}
-fredr_sources()
+fredr_sources(limit = 10)
 ```
 
 ## Get a single FRED source
 
-The function `fredr_source()` returns information for a _single_ source indicated by `source_id`.  The data returned is a `tibble` in which each row represents a FRED source.   For example, the Federal Financial Institutions Examination Council source ID is `6`:
+The function `fredr_source()` returns information for a *single* source indicated by `source_id`. The data returned is a tibble in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is `6`:
 
 ```{r fredr_source1}
 fredr_source(source_id = 6L)
@@ -52,7 +56,7 @@ fredr_source(source_id = 6L)
 
 ## Get FRED releases for a source
 
-The function `fredr_source_releases()` returns FRED release information for the source indicated by `source_id`.  As with the functions for the [Releases endpoint](http://sboysel.github.io/fredr/reference/index.html#Releases), the data returned is a `tibble` in which each row represents a FRED release for the specified source.  For example, to get the first 10 releases from the Federal Reserve Board of Governors, ordered by ascending release ID:
+The function `fredr_source_releases()` returns FRED release information for the source indicated by `source_id`. As with the functions for the [Releases endpoint](http://sboysel.github.io/fredr/reference/index.html#Releases), the data returned is a tibble in which each row represents a FRED release for the specified source. For example, to get the first 10 releases from the Federal Reserve Board of Governors, ordered by ascending release ID:
 
 ```{r fredr_source_releases1}
 fredr_source_releases(
