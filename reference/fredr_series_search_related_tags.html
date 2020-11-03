@@ -49,7 +49,7 @@
 <meta property="og:description" content="FRED tags are attributes assigned to series.  Return the related FRED tags
 for a search: tags assigned to series that match all tags in the tag_names
 parameter (required), no tags in the exclude_tag_names (optional) and the
-search words set by the series_search_text parameter (optional)." />
+search words set by the series_search_text parameter (required)." />
 
 
 
@@ -162,12 +162,13 @@ search words set by the series_search_text parameter (optional)." />
     <p>FRED tags are attributes assigned to series.  Return the <em>related</em> FRED tags
 for a search: tags assigned to series that match <em>all</em> tags in the <code>tag_names</code>
 parameter (required), <em>no</em> tags in the <code>exclude_tag_names</code> (optional) and the
-search words set by the <code>series_search_text</code> parameter (optional).</p>
+search words set by the <code>series_search_text</code> parameter (required).</p>
     </div>
 
     <pre class="usage"><span class='fu'>fredr_series_search_related_tags</span><span class='op'>(</span>
-  series_search_text <span class='op'>=</span> <span class='cn'>NULL</span>,
-  tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>series_search_text</span>,
+  <span class='va'>tag_names</span>,
+  <span class='va'>...</span>,
   exclude_tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
   tag_group_id <span class='op'>=</span> <span class='cn'>NULL</span>,
   tag_search_text <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -184,13 +185,15 @@ search words set by the <code>series_search_text</code> parameter (optional).</p
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>series_search_text</th>
-      <td><p>A string containing the series search text.
-<em>Required parameter.</em></p></td>
+      <td><p>A string containing the series search text.</p></td>
     </tr>
     <tr>
       <th>tag_names</th>
-      <td><p>A semicolon delimited string of tag names to return.  Defaults
-no filtering by tag names.  <em>Required parameter.</em></p></td>
+      <td><p>A semicolon delimited string of tag names to return.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>exclude_tag_names</th>
@@ -291,11 +294,11 @@ Defaults to today's date. For more information, see
 </div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 5 x 6</span><span>
 #&gt;   name   group_id notes                  created         popularity series_count
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> census src      Census                 2012-02-27 10:…         80         </span><span style='text-decoration: underline;'>3</span><span>146
-#&gt; </span><span style='color: #555555;'>2</span><span> bea    src      Bureau of Economic An… 2012-02-27 10:…         79          592
-#&gt; </span><span style='color: #555555;'>3</span><span> bls    src      Bureau of Labor Stati… 2012-02-27 10:…         87          422
-#&gt; </span><span style='color: #555555;'>4</span><span> eia    src      Energy Information Ad… 2012-02-27 10:…         42          114
-#&gt; </span><span style='color: #555555;'>5</span><span> frb    src      Board of Governors     2012-02-27 10:…         80          100</div></span></pre>
+#&gt; </span><span style='color: #555555;'>1</span><span> census src      Census                 2012-02-27 10:…         80         </span><span style='text-decoration: underline;'>3</span><span>152
+#&gt; </span><span style='color: #555555;'>2</span><span> bea    src      Bureau of Economic An… 2012-02-27 10:…         79          524
+#&gt; </span><span style='color: #555555;'>3</span><span> bls    src      Bureau of Labor Stati… 2012-02-27 10:…         87          376
+#&gt; </span><span style='color: #555555;'>4</span><span> frb    src      Board of Governors     2012-02-27 10:…         80          142
+#&gt; </span><span style='color: #555555;'>5</span><span> eia    src      Energy Information Ad… 2012-02-27 10:…         42          118</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

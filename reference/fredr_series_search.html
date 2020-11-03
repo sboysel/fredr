@@ -160,7 +160,8 @@
     </div>
 
     <pre class="usage"><span class='fu'>fredr_series_search_text</span><span class='op'>(</span>
-  search_text <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>search_text</span>,
+  <span class='va'>...</span>,
   tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
   exclude_tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
   filter_variable <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -174,7 +175,8 @@
 <span class='op'>)</span>
 
 <span class='fu'>fredr_series_search_id</span><span class='op'>(</span>
-  search_text <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>search_text</span>,
+  <span class='va'>...</span>,
   limit <span class='op'>=</span> <span class='fl'>1000L</span>,
   offset <span class='op'>=</span> <span class='fl'>0</span>,
   order_by <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -194,7 +196,11 @@
       <th>search_text</th>
       <td><p>A string containing the words to match against economic
 data series. For use with <code>fredr_series_search_text</code> and
-<code>fredr_series_search_id</code>.  <em>Required parameter.</em></p></td>
+<code>fredr_series_search_id</code>.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>tag_names</th>

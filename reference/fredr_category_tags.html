@@ -168,7 +168,8 @@ that does not have series.</p>
     </div>
 
     <pre class="usage"><span class='fu'>fredr_category_tags</span><span class='op'>(</span>
-  category_id <span class='op'>=</span> <span class='fl'>0L</span>,
+  <span class='va'>category_id</span>,
+  <span class='va'>...</span>,
   tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
   tag_group_id <span class='op'>=</span> <span class='cn'>NULL</span>,
   search_text <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -185,13 +186,16 @@ that does not have series.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>category_id</th>
-      <td><p>An integer ID for the category.  Default is <code>0</code> for the
-root category. <em>Required parameter.</em></p></td>
+      <td><p>An integer ID for the category.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>tag_names</th>
       <td><p>A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
+tags can be delimited by a semicolon in a single string (e.g. <code>"usa;gnp"</code>).</p></td>
     </tr>
     <tr>
       <th>tag_group_id</th>
@@ -271,8 +275,8 @@ creation date, and additional notes.</p>
 </div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2 x 6</span><span>
 #&gt;   name    group_id notes created                popularity series_count
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> nation  geot     </span><span style='color: #555555;'>""</span><span>    2012-02-27 10:18:19-06         99         </span><span style='text-decoration: underline;'>1</span><span>880
-#&gt; </span><span style='color: #555555;'>2</span><span> monthly freq     </span><span style='color: #555555;'>""</span><span>    2012-02-27 10:18:19-06         93         </span><span style='text-decoration: underline;'>1</span><span>134</div></span></pre>
+#&gt; </span><span style='color: #555555;'>1</span><span> nation  geot     </span><span style='color: #555555;'>""</span><span>    2012-02-27 10:18:19-06         99         </span><span style='text-decoration: underline;'>1</span><span>894
+#&gt; </span><span style='color: #555555;'>2</span><span> monthly freq     </span><span style='color: #555555;'>""</span><span>    2012-02-27 10:18:19-06         93         </span><span style='text-decoration: underline;'>1</span><span>110</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -160,7 +160,8 @@
     </div>
 
     <pre class="usage"><span class='fu'>fredr_source_releases</span><span class='op'>(</span>
-  source_id <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>source_id</span>,
+  <span class='va'>...</span>,
   limit <span class='op'>=</span> <span class='cn'>NULL</span>,
   offset <span class='op'>=</span> <span class='cn'>NULL</span>,
   order_by <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -174,7 +175,11 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>source_id</th>
-      <td><p>An integer ID for the data source.  <em>Required parameter</em>.</p></td>
+      <td><p>An integer ID for the data source.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>limit</th>

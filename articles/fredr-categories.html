@@ -121,7 +121,9 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<p>This vignette is intended to introduce the user to <code>fredr</code> functions for the <a href="https://research.stlouisfed.org/docs/api/fred/#Categories">Categories endpoint</a> of the FRED API.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr">fredr</a></span><span class="op">)</span></pre></div>
+<p>This vignette is intended to introduce the user to fredr functions for the <a href="https://research.stlouisfed.org/docs/api/fred/#Categories">Categories endpoint</a> of the FRED API.</p>
 <p>FRED series are assigned <strong>categories</strong>. Each FRED category is assigned an integer identifier. For example:</p>
 <ul>
 <li>“Population, Employment, &amp; Labor Markets” (<code>category_id = 10</code>)</li>
@@ -129,18 +131,18 @@
 <li>“Production &amp; Business Activity” (<code>category_id = 1</code>)</li>
 <li>“Housing” (<code>category_id = 97</code>)</li>
 </ul>
-<p>Categories are organized in a hierarchical structure where parent categories contain children categories. All categories are children of the root category (<code>category_id = 0</code>). The following examples illustrate usage of the Categories endpoint functions in <code>fredr</code>.</p>
+<p>Categories are organized in a hierarchical structure where parent categories contain children categories. All categories are children of the root category (<code>category_id = 0</code>). The following examples illustrate usage of the Categories endpoint functions in fredr.</p>
 <div id="get-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-a-fred-category" class="anchor"></a>Get a FRED category</h2>
-<p><code><a href="../reference/fredr_category.html">fredr_category()</a></code> returns minimal information for a single category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a category. The default is the root category.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_category.html">fredr_category</a></span><span class="op">(</span><span class="op">)</span> 
+<p><code><a href="../reference/fredr_category.html">fredr_category()</a></code> returns minimal information for a single category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a category.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="../reference/fredr_category.html">fredr_category</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span> 
 <span class="co">#&gt; # A tibble: 1 x 3</span>
 <span class="co">#&gt;      id name       parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;int&gt;</span>
 <span class="co">#&gt; 1     0 Categories         0</span></pre></div>
-<div class="sourceCode" id="cb2"><pre class="downlit">
+<div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_category.html">fredr_category</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">97L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 3</span>
 <span class="co">#&gt;      id name    parent_id</span>
@@ -150,9 +152,9 @@
 <div id="get-the-children-of-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-children-of-a-fred-category" class="anchor"></a>Get the children of a FRED category</h2>
-<p><code><a href="../reference/fredr_category_children.html">fredr_category_children()</a></code> returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents child category of the parent specified. The default is the root category.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span><span class="op">(</span><span class="op">)</span>
+<p><code><a href="../reference/fredr_category_children.html">fredr_category_children()</a></code> returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by <code>category_id</code>. The data returned is a tibble in which each row represents child category of the parent specified.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 8 x 3</span>
 <span class="co">#&gt;      id name                                    parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;                                       &lt;int&gt;</span>
@@ -164,7 +166,7 @@
 <span class="co">#&gt; 6 32263 International Data                              0</span>
 <span class="co">#&gt; 7  3008 U.S. Regional Data                              0</span>
 <span class="co">#&gt; 8 33060 Academic Data                                   0</span></pre></div>
-<div class="sourceCode" id="cb4"><pre class="downlit">
+<div class="sourceCode" id="cb5"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">1L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 14 x 3</span>
 <span class="co">#&gt;       id name                                         parent_id</span>
@@ -187,12 +189,14 @@
 <div id="get-a-related-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-a-related-fred-category" class="anchor"></a>Get a related FRED category</h2>
-<p><code><a href="../reference/fredr_category_related.html">fredr_category_related()</a></code> returns minimal information (ID, name, and parent ID) for all related categories to the category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents category related to the one specified. Note that not all categories have related categories. The default is the root category.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 0 x 0</span></pre></div>
+<p><code><a href="../reference/fredr_category_related.html">fredr_category_related()</a></code> returns minimal information (ID, name, and parent ID) for all related categories to the category specified by <code>category_id</code>. The data returned is a tibble in which each row represents category related to the one specified. Note that not all categories have related categories.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span> <span class="co"># Employment Cost Index</span>
+<span class="co"># Nothing related to the root</span>
+<span class="fu"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 0 x 0</span></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="co"># What is related to the Employment Cost Index category?</span>
+<span class="fu"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 3</span>
 <span class="co">#&gt;      id name                                    parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;                                       &lt;int&gt;</span>
@@ -201,8 +205,8 @@
 <div id="get-series-in-a-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-series-in-a-category" class="anchor"></a>Get series in a category</h2>
-<p><code><a href="../reference/fredr_category_series.html">fredr_category_series()</a></code> returns detailed information for the FRED series belonging to the category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a series belonging to the category specified. The default is the root category. For example, to get the top 100 quarterly series in the “Housing” category, ordering the results so that the most recently updated series appear first:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
+<p><code><a href="../reference/fredr_category_series.html">fredr_category_series()</a></code> returns detailed information for the FRED series belonging to the category specified by <code>category_id</code>. The data returned is a tibble in which each row represents a series belonging to the category specified. For example, to get the top 100 quarterly series in the “Housing” category, ordering the results so that the most recently updated series appear first:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_category_series.html">fredr_category_series</a></span><span class="op">(</span>
   category_id <span class="op">=</span> <span class="fl">97L</span>, <span class="co"># Housing</span>
   limit <span class="op">=</span> <span class="fl">100L</span>,
@@ -227,8 +231,8 @@
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></div>
-<p>To return all series in the “National Accounts” tagged with “usa” and <em>not</em> “gnp”, ordering the results such that higher frequency series appear first:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
+<p>To return all series in the “National Accounts” category tagged with <code>"usa"</code> and <em>not</em> <code>"gnp"</code>, ordering the results such that higher frequency series appear first:</p>
+<div class="sourceCode" id="cb9"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_category_series.html">fredr_category_series</a></span><span class="op">(</span>
   category_id <span class="op">=</span> <span class="fl">32992L</span>, <span class="co"># National Accounts</span>
   order_by <span class="op">=</span> <span class="st">"frequency"</span>,
@@ -251,19 +255,20 @@
 <div id="get-tags-within-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-tags-within-a-fred-category" class="anchor"></a>Get tags within a FRED category</h2>
-<p><code><a href="../reference/fredr_category_tags.html">fredr_category_tags()</a></code> returns information for the FRED tags assigned to series in the category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a tag assigned to a series in the category specified. The default is the root category. For example, to get all “source” tags belonging to series in the “Retail Trade” category:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
+<p><code><a href="../reference/fredr_category_tags.html">fredr_category_tags()</a></code> returns information for the FRED tags assigned to series in the category specified by <code>category_id</code>. The data returned is a tibble in which each row represents a tag assigned to a series in the category specified. For example, to get all “source” tags belonging to series in the “Retail Trade” category:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span>
   category_id <span class="op">=</span> <span class="fl">6L</span>,
   tag_group_id <span class="op">=</span> <span class="st">"src"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 2 x 6</span>
-<span class="co">#&gt;   name   group_id notes                created           popularity series_count</span>
-<span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 census src      Census               2012-02-27 10:18…         80          378</span>
-<span class="co">#&gt; 2 bea    src      Bureau of Economic … 2012-02-27 10:18…         79            4</span></pre></div>
-<p>To search for tags with the words “usa” in the “Production &amp; Business Activity” category, ordering the results by popularity:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit">
+<span class="co">#&gt; # A tibble: 3 x 6</span>
+<span class="co">#&gt;   name    group_id notes               created           popularity series_count</span>
+<span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;</span>
+<span class="co">#&gt; 1 census  src      Census              2012-02-27 10:18…         80          374</span>
+<span class="co">#&gt; 2 bea     src      Bureau of Economic… 2012-02-27 10:18…         79            2</span>
+<span class="co">#&gt; 3 frb stl src      St. Louis Fed       2012-02-27 10:18…         68            2</span></pre></div>
+<p>To search for tags with the words <code>"usa"</code> in the “Production &amp; Business Activity” category, ordering the results by popularity:</p>
+<div class="sourceCode" id="cb11"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span>
   category_id <span class="op">=</span> <span class="fl">1L</span>,
   search_text <span class="op">=</span> <span class="st">"usa"</span>,
@@ -273,34 +278,33 @@
 <span class="co">#&gt; # A tibble: 3 x 6</span>
 <span class="co">#&gt;   name   group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 usa    geo      United States of A… 2012-02-27 10:18:…        100         1630</span>
-<span class="co">#&gt; 2 census src      Census              2012-02-27 10:18:…         80         1630</span>
-<span class="co">#&gt; 3 ga     geo      Georgia (U.S. stat… 2012-02-27 10:18:…         49           34</span></pre></div>
+<span class="co">#&gt; 1 usa    geo      United States of A… 2012-02-27 10:18:…        100         1588</span>
+<span class="co">#&gt; 2 census src      Census              2012-02-27 10:18:…         80         1588</span>
+<span class="co">#&gt; 3 ga     geo      Georgia (U.S. stat… 2012-02-27 10:18:…         49           28</span></pre></div>
 </div>
 <div id="get-related-tags-within-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-related-tags-within-a-fred-category" class="anchor"></a>Get related tags within a FRED category</h2>
-<p><code><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags()</a></code> returns a set of FRED tags assigned to series in the category specified by <code>category_id</code> that are <em>related</em> to the tags specified in the <code>tag_names</code> parameter. The data returned is a <code>tibble</code> in which each row represents a tag <em>related to</em> a tag assigned to a series in the specified category. The default is the root category. For example, to get all tags <em>except</em> “rate” in the “Retail Trade” category related to the tags “business” and “monthly”, ordering the results alphabetically:</p>
-<div class="sourceCode" id="cb11"><pre class="downlit">
+<p><code><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags()</a></code> returns a set of FRED tags assigned to series in the category specified by <code>category_id</code> that are <em>related</em> to the tags specified in the <code>tag_names</code> parameter. The data returned is a tibble in which each row represents a tag <em>related to</em> a tag assigned to a series in the specified category. For example, to get all tags <em>except</em> <code>"rate"</code> in the “Retail Trade” category related to the tags <code>"business"</code> and <code>"monthly"</code>, ordering the results alphabetically:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit">
 <span class="fu"><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags</a></span><span class="op">(</span>
   category_id <span class="op">=</span> <span class="fl">1L</span>,
   tag_names <span class="op">=</span> <span class="st">"business;monthly"</span>,
   exclude_tag_names <span class="op">=</span> <span class="st">"rate"</span>,
   order_by <span class="op">=</span> <span class="st">"name"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 10 x 6</span>
-<span class="co">#&gt;    name           group_id notes             created     popularity series_count</span>
-<span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 census         src      "Census"          2012-02-27…         80            8</span>
-<span class="co">#&gt;  2 inventories    gen      ""                2012-02-27…         46            6</span>
-<span class="co">#&gt;  3 mtis           rls      "Manufacturing &amp;… 2012-08-16…         35            8</span>
-<span class="co">#&gt;  4 nation         geot     ""                2012-02-27…         99            8</span>
-<span class="co">#&gt;  5 nsa            seas     "Not Seasonally … 2012-02-27…        100            4</span>
-<span class="co">#&gt;  6 public domain… cc        &lt;NA&gt;             2018-12-17…        100            8</span>
-<span class="co">#&gt;  7 ratio          gen      ""                2012-02-27…         47            4</span>
-<span class="co">#&gt;  8 sa             seas     "Seasonally Adju… 2012-02-27…         88            4</span>
-<span class="co">#&gt;  9 sales          gen      ""                2012-02-27…         63            6</span>
-<span class="co">#&gt; 10 usa            geo      "United States o… 2012-02-27…        100            8</span></pre></div>
+<span class="co">#&gt; # A tibble: 9 x 6</span>
+<span class="co">#&gt;   name           group_id notes              created     popularity series_count</span>
+<span class="co">#&gt;   &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
+<span class="co">#&gt; 1 census         src      "Census"           2012-02-27…         80            4</span>
+<span class="co">#&gt; 2 inventories    gen      ""                 2012-02-27…         46            2</span>
+<span class="co">#&gt; 3 mtis           rls      "Manufacturing &amp; … 2012-08-16…         35            4</span>
+<span class="co">#&gt; 4 nation         geot     ""                 2012-02-27…         99            4</span>
+<span class="co">#&gt; 5 public domain… cc        &lt;NA&gt;              2018-12-17…        100            4</span>
+<span class="co">#&gt; 6 ratio          gen      ""                 2012-02-27…         47            2</span>
+<span class="co">#&gt; 7 sa             seas     "Seasonally Adjus… 2012-02-27…         88            4</span>
+<span class="co">#&gt; 8 sales          gen      ""                 2012-02-27…         63            4</span>
+<span class="co">#&gt; 9 usa            geo      "United States of… 2012-02-27…        100            4</span></pre></div>
 </div>
 </div>
   </div>

@@ -160,7 +160,8 @@
     </div>
 
     <pre class="usage"><span class='fu'>fredr_series_release</span><span class='op'>(</span>
-  series_id <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>series_id</span>,
+  <span class='va'>...</span>,
   realtime_start <span class='op'>=</span> <span class='cn'>NULL</span>,
   realtime_end <span class='op'>=</span> <span class='cn'>NULL</span>
 <span class='op'>)</span></pre>
@@ -170,7 +171,11 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>series_id</th>
-      <td><p>A string ID for the FRED series. <em>Required parameter.</em></p></td>
+      <td><p>A string ID for the FRED series.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>

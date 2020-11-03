@@ -166,7 +166,8 @@ search text. Related FRED tags are the tags assigned to series that match
     </div>
 
     <pre class="usage"><span class='fu'>fredr_related_tags</span><span class='op'>(</span>
-  tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>tag_names</span>,
+  <span class='va'>...</span>,
   exclude_tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
   tag_group_id <span class='op'>=</span> <span class='cn'>NULL</span>,
   search_text <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -183,8 +184,11 @@ search text. Related FRED tags are the tags assigned to series that match
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>tag_names</th>
-      <td><p>A semicolon delimited string of tag names to be related to.
-<em>Required parameter.</em></p></td>
+      <td><p>A semicolon delimited string of tag names to be related to.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>exclude_tag_names</th>
@@ -281,15 +285,12 @@ creation date, and additional notes.</p>
  <span class='op'>)</span>
 
  <span class='op'>}</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 6 x 6</span><span>
-#&gt;   name        group_id notes          created            popularity series_count
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> m1          gen      </span><span style='color: #555555;'>"</span><span>M1 Money Sto… 2012-02-27 10:18:…         47            6
-#&gt; </span><span style='color: #555555;'>2</span><span> currency    gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 10:18:…         62            4
-#&gt; </span><span style='color: #555555;'>3</span><span> discontinu… gen      </span><span style='color: #555555;'>""</span><span>             2012-02-27 10:18:…         67            4
-#&gt; </span><span style='color: #555555;'>4</span><span> m3          gen      </span><span style='color: #555555;'>"</span><span>M3 Money Sto… 2012-02-27 10:18:…         39            4
-#&gt; </span><span style='color: #555555;'>5</span><span> m2          gen      </span><span style='color: #555555;'>"</span><span>M2 Money Sto… 2012-02-27 10:18:…         43            2
-#&gt; </span><span style='color: #555555;'>6</span><span> mzm         gen      </span><span style='color: #555555;'>"</span><span>MZM Money St… 2012-02-27 10:18:…         27            2</div></span></pre>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 3 x 6</span><span>
+#&gt;   name     group_id notes           created              popularity series_count
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                     </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> m1       gen      </span><span style='color: #555555;'>"</span><span>M1 Money Stoc… 2012-02-27 10:18:19…         47            4
+#&gt; </span><span style='color: #555555;'>2</span><span> m2       gen      </span><span style='color: #555555;'>"</span><span>M2 Money Stoc… 2012-02-27 10:18:19…         43            4
+#&gt; </span><span style='color: #555555;'>3</span><span> currency gen      </span><span style='color: #555555;'>""</span><span>              2012-02-27 10:18:19…         62            2</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

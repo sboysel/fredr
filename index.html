@@ -111,7 +111,7 @@
 <a href="#fredr" class="anchor"></a>fredr</h1></div>
 <!-- badges: start -->
 
-<p>fredr provides a complete set of R bindings to the <a href="https://research.stlouisfed.org/fred2/">Federal Reserve of Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. The functions allow the user to search for and fetch time series observations as well as associated metadata within the FRED database.</p>
+<p>fredr provides a complete set of R bindings to the <a href="https://fred.stlouisfed.org/">Federal Reserve of Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. The functions allow the user to search for and fetch time series observations as well as associated metadata within the FRED database.</p>
 <p>The core function in this package is <code><a href="reference/fredr_series_observations.html">fredr()</a></code>, which fetches observations for a FRED series. That said, there are many other FRED endpoints exposed through fredr, such as <code><a href="reference/fredr_series_search_text.html">fredr_series_search_text()</a></code>, which allows you to search for a FRED series by text.</p>
 <p>We strongly encourage referencing the FRED API <a href="https://research.stlouisfed.org/docs/api/fred/">documentation</a> to leverage the full power of fredr.</p>
 <p>You’ll also need a free API key to use fredr. See <code>?fredr_set_key()</code>.</p>
@@ -163,6 +163,23 @@
 <a href="#documentation" class="anchor"></a>Documentation</h2>
 <p>See the <a href="http://sboysel.github.io/fredr/">documentation site</a>.</p>
 </div>
+<div id="restrictions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#restrictions" class="anchor"></a>Restrictions</h2>
+<p>According to the FRED team, the following data sources do not permit redistribution through the FRED API:</p>
+<ul>
+<li>ICE Libor Rates</li>
+<li>ICE Swap Rates</li>
+<li>LBMA Gold Price: Daily Prices</li>
+<li>LBMA Silver Price: Daily Prices</li>
+</ul>
+<p>If you need data from any of these sources, it is recommended to download the data directly from the FRED website. The series in these sources can be found <a href="https://fred.stlouisfed.org/source?soid=62">here</a>.</p>
+</div>
+<div id="code-of-conduct" class="section level2">
+<h2 class="hasAnchor">
+<a href="#code-of-conduct" class="anchor"></a>Code of Conduct</h2>
+<p>Please note that the fredr project is released with a <a href="http://sboysel.github.io/fredr/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+</div>
 <div id="see-also" class="section level2">
 <h2 class="hasAnchor">
 <a href="#see-also" class="anchor"></a>See Also</h2>
@@ -195,6 +212,12 @@
 <li>
 <a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
 </li>
+</ul>
+</div>
+<div class="community">
+<h2>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
 <div class="developers">

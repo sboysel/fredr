@@ -160,7 +160,8 @@
     </div>
 
     <pre class="usage"><span class='fu'>fredr_category_children</span><span class='op'>(</span>
-  category_id <span class='op'>=</span> <span class='fl'>0L</span>,
+  <span class='va'>category_id</span>,
+  <span class='va'>...</span>,
   realtime_start <span class='op'>=</span> <span class='cn'>NULL</span>,
   realtime_end <span class='op'>=</span> <span class='cn'>NULL</span>
 <span class='op'>)</span></pre>
@@ -170,27 +171,28 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>category_id</th>
-      <td><p>An integer ID for the category.  Default is <code>0</code> for the
-root category. <em>Required parameter.</em></p></td>
+      <td><p>An integer ID for the category.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>
       <td><p>A <code>Date</code> indicating the start of the real-time period.
-Defaults to today's date. For more information, see
-<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
+Defaults to today's date. For more information, see <a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     <tr>
       <th>realtime_end</th>
       <td><p>A <code>Date</code> indicating the end of the real-time period.
-Defaults to today's date. For more information, see
-<a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
+Defaults to today's date. For more information, see <a href='https://research.stlouisfed.org/docs/api/fred/realtime_period.html'>Real-Time Periods</a>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>tibble</code> object containing the name and ID for the children categories
-of the parent category indicated by <code>category_id</code>.</p>
+    <p>A <code>tibble</code> object containing the name and ID for the children
+categories of the parent category indicated by <code>category_id</code>.</p>
     <h2 class="hasAnchor" id="api-documentation"><a class="anchor" href="#api-documentation"></a>API Documentation</h2>
 
     
@@ -200,7 +202,8 @@ of the parent category indicated by <code>category_id</code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='fredr_category.html'>fredr_category()</a></code>, <code><a href='fredr_category_related.html'>fredr_category_related()</a></code>,
-<code><a href='fredr_category_series.html'>fredr_category_series()</a></code>, <code><a href='fredr_category_tags.html'>fredr_category_tags()</a></code>, <code><a href='fredr_category_related_tags.html'>fredr_category_related_tags()</a></code></p></div>
+<code><a href='fredr_category_series.html'>fredr_category_series()</a></code>, <code><a href='fredr_category_tags.html'>fredr_category_tags()</a></code>,
+<code><a href='fredr_category_related_tags.html'>fredr_category_related_tags()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='fredr-key.html'>fredr_has_key</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>

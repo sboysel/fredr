@@ -160,7 +160,8 @@
     </div>
 
     <pre class="usage"><span class='fu'>fredr_category_related</span><span class='op'>(</span>
-  category_id <span class='op'>=</span> <span class='fl'>0L</span>,
+  <span class='va'>category_id</span>,
+  <span class='va'>...</span>,
   realtime_start <span class='op'>=</span> <span class='cn'>NULL</span>,
   realtime_end <span class='op'>=</span> <span class='cn'>NULL</span>
 <span class='op'>)</span></pre>
@@ -172,6 +173,10 @@
       <th>category_id</th>
       <td><p>An integer ID for the category.  Default is <code>0</code> for the
 root category. <em>Required parameter.</em></p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>

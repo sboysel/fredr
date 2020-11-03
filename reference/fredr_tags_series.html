@@ -162,7 +162,8 @@ exclude_tag_names parameter." />
     </div>
 
     <pre class="usage"><span class='fu'>fredr_tags_series</span><span class='op'>(</span>
-  tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>tag_names</span>,
+  <span class='va'>...</span>,
   exclude_tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
   limit <span class='op'>=</span> <span class='cn'>NULL</span>,
   offset <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -178,7 +179,11 @@ exclude_tag_names parameter." />
     <tr>
       <th>tag_names</th>
       <td><p>A semicolon delimited string of tag names to
-find series using. <em>Required parameter.</em></p></td>
+find series using.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>exclude_tag_names</th>

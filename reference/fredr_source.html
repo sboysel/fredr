@@ -159,14 +159,18 @@
     <p>Get a source of economic data</p>
     </div>
 
-    <pre class="usage"><span class='fu'>fredr_source</span><span class='op'>(</span>source_id <span class='op'>=</span> <span class='cn'>NULL</span>, realtime_start <span class='op'>=</span> <span class='cn'>NULL</span>, realtime_end <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>fredr_source</span><span class='op'>(</span><span class='va'>source_id</span>, <span class='va'>...</span>, realtime_start <span class='op'>=</span> <span class='cn'>NULL</span>, realtime_end <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>source_id</th>
-      <td><p>An integer ID for the data source.  <em>Required parameter</em>.</p></td>
+      <td><p>An integer ID for the data source.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>realtime_start</th>

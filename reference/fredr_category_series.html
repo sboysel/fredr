@@ -160,7 +160,8 @@
     </div>
 
     <pre class="usage"><span class='fu'>fredr_category_series</span><span class='op'>(</span>
-  category_id <span class='op'>=</span> <span class='fl'>0L</span>,
+  <span class='va'>category_id</span>,
+  <span class='va'>...</span>,
   filter_variable <span class='op'>=</span> <span class='cn'>NULL</span>,
   filter_value <span class='op'>=</span> <span class='cn'>NULL</span>,
   tag_names <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -178,8 +179,11 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>category_id</th>
-      <td><p>An integer ID for the category.  Default is <code>0</code> for the
-root category. <em>Required parameter.</em></p></td>
+      <td><p>An integer ID for the category.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>These dots only exist for future extensions and should be empty.</p></td>
     </tr>
     <tr>
       <th>filter_variable</th>
@@ -196,7 +200,7 @@ by default.</p></td>
     <tr>
       <th>tag_names</th>
       <td><p>A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).</p></td>
+tags can be delimited by a semicolon in a single string (e.g. <code>"usa;gnp"</code>).</p></td>
     </tr>
     <tr>
       <th>exclude_tag_names</th>
