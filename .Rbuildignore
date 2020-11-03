@@ -28,3 +28,4 @@
 ^codecov\.yml$
 ^\.github$
 ^README\.Rmd$
+^pkgdown$
