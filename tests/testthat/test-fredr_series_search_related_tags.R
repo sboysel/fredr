@@ -1,11 +1,11 @@
 test_that("fredr_series_search_related_tags()", {
   skip_if_no_key()
 
-  expect_silent(search <- fredr_series_search_related_tags(
+  search <- fredr_series_search_related_tags(
     series_search_text = "oil",
     tag_names = "usa",
     limit = 5L
-  ))
+  )
 
   expect_s3_class(search, c("tbl_df", "tbl", "data.frame"))
   expect_true(ncol(search) == 6)

@@ -1,7 +1,8 @@
 test_that("fredr_series_search_tags()", {
   skip_if_no_key()
 
-  expect_silent(search <- fredr_series_search_tags(series_search_text = "oil", limit = 5L))
+  search <- fredr_series_search_tags(series_search_text = "oil", limit = 5L)
+
   expect_s3_class(search, c("tbl_df", "tbl", "data.frame"))
   expect_true(ncol(search) == 6)
 })

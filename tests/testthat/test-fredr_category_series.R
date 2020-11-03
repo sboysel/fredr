@@ -1,6 +1,7 @@
 test_that("fredr_category_series()", {
   skip_if_no_key()
-  expect_silent(ctg <- fredr_category_series(category_id = 0L))
+
+  ctg <- fredr_category_series(category_id = 0L)
   expect_s3_class(ctg, c("tbl_df", "tbl", "data.frame"))
   expect_true(ncol(ctg) == 0)
   expect_true(nrow(ctg) == 0)

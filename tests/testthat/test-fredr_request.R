@@ -34,14 +34,16 @@ test_that("can return tibble", {
   skip_if_no_key()
   tbl_class <- c("tbl_df", "tbl", "data.frame")
 
-  expect_silent(frame <- fredr_request(endpoint = "series", series_id = "GNPCA"))
+  frame <- fredr_request(endpoint = "series", series_id = "GNPCA")
+
   expect_s3_class(frame, tbl_class)
 })
 
 test_that("can return response object", {
   skip_if_no_key()
 
-  expect_silent(resp <- fredr_request(endpoint = "series", series_id = "GNPCA", to_frame = FALSE))
+  resp <- fredr_request(endpoint = "series", series_id = "GNPCA", to_frame = FALSE)
+
   expect_s3_class(resp, "response")
 })
 

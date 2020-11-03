@@ -1,7 +1,8 @@
 test_that("fredr_category_related()", {
   skip_if_no_key()
 
-  expect_silent(ctg <- fredr_category_related(category_id = 3008L))
+  ctg <- fredr_category_related(category_id = 3008L)
+
   expect_s3_class(ctg, c("tbl_df", "tbl", "data.frame"))
   expect_true(ncol(ctg) == 0)
   expect_true(nrow(ctg) == 0)

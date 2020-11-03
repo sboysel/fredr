@@ -1,7 +1,8 @@
 test_that("fredr_tags_series()", {
   skip_if_no_key()
 
-  expect_silent(tags <- fredr_tags_series(tag_names = "gdp", limit = 20L))
+  tags <- fredr_tags_series(tag_names = "gdp", limit = 20L)
+
   expect_s3_class(tags, c("tbl_df", "tbl", "data.frame"))
   expect_true(ncol(tags) == 16)
   expect_true(nrow(tags) == 20)

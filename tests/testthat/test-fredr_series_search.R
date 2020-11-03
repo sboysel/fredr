@@ -1,7 +1,8 @@
 test_that("fredr_series_search_text()", {
   skip_if_no_key()
 
-  expect_silent(search <- fredr_series_search_text(search_text = "oil", limit = 20L))
+  search <- fredr_series_search_text(search_text = "oil", limit = 20L)
+
   expect_s3_class(search, c("tbl_df", "tbl", "data.frame"))
   expect_true(ncol(search) == 16)
 })
@@ -15,7 +16,8 @@ test_that("input is validated", {
 test_that("fredr_series_search_id()", {
   skip_if_no_key()
 
-  expect_silent(search <- fredr_series_search_id(search_text = "GNPCA", limit = 20L))
+  search <- fredr_series_search_id(search_text = "GNPCA", limit = 20L)
+
   expect_s3_class(search, c("tbl_df", "tbl", "data.frame"))
   expect_true(ncol(search) == 16)
 })
