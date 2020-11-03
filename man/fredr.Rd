@@ -142,7 +142,7 @@ Given a series ID, return observations of that series as a \code{tibble} object.
 \examples{
 if (fredr_has_key()) {
 # Observations for "UNRATE" series between 1980 and 2000.  Units are in terms
-# of change from pervious observation.
+# of change from previous observation.
 fredr(
   series_id = "UNRATE",
   observation_start = as.Date("1980-01-01"),
