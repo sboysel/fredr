@@ -7,7 +7,9 @@
 #' [FRED API](https://api.stlouisfed.org/docs/fred/)
 #'
 #' @examples
+#' if (interactive()) {
 #' fredr_docs()
+#' }
 #' @export
 fredr_docs <- function() {
   utils::browseURL(url = "https://api.stlouisfed.org/docs/fred/")

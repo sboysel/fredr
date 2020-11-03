@@ -16,5 +16,7 @@ Opens FRED API web documentation in a new web browser tab.
 }
 
 \examples{
+if (interactive()) {
 fredr_docs()
+}
 }
