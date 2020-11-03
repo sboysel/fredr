@@ -1,19 +1,23 @@
 on:
   push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
+    branches: master
+  schedule:
+    # - `*` is a special character in YAML so we have to quote this string
+    # - https://crontab.guru is your friend
+    # - This runs every Monday at midnight UTC (7pm EST, previous Sunday)
+    - cron:  '0 12 * * 1'
 
 name: test-coverage
 
 jobs:
   test-coverage:
     runs-on: macOS-latest
+    # Only run coverage job if on a schedule or if a direct push to master
+    # with [covr] in the commit message
+    if: github.event_name == 'schedule' || contains(github.event.head_commit.message, '[covr]')
+
     env:
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
