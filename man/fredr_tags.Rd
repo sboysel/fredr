@@ -5,6 +5,7 @@
 \title{Get FRED series tags}
 \usage{
 fredr_tags(
+  ...,
   tag_names = NULL,
   tag_group_id = NULL,
   search_text = NULL,
@@ -17,6 +18,8 @@ fredr_tags(
 )
 }
 \arguments{
+\item{...}{These dots only exist for future extensions and should be empty.}
+
 \item{tag_names}{A semicolon delimited string of tag names to only
 include in the response. No filtering by tag names by default (i.e. \emph{all}
 FRED tags returned).}
@@ -82,13 +85,16 @@ all tags are returned, unfiltered, up to the \code{limit}.
 }
 
 \examples{
-if (fredr_has_key()) {
+if (fredr_has_key() && interactive()) {
 # Information for all tags
 fredr_tags()
+
 # Information for just the "gdp" and "oecd" tags
 fredr_tags(tag_names = "gdp;oecd")
+
 # Information for all tags in the "geo" group
 fredr_tags(tag_group_id = "geo")
+
 # Information for tags matching the text "unemployment"
 fredr_tags(search_text = "unemployment")
 }

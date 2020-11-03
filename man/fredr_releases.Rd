@@ -5,6 +5,7 @@
 \title{Get all releases of economic data}
 \usage{
 fredr_releases(
+  ...,
   limit = NULL,
   offset = NULL,
   order_by = NULL,
@@ -14,6 +15,8 @@ fredr_releases(
 )
 }
 \arguments{
+\item{...}{These dots only exist for future extensions and should be empty.}
+
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}
 

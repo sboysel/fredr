@@ -5,7 +5,8 @@
 \title{Get release dates for a single release of economic data}
 \usage{
 fredr_release_dates(
-  release_id = NULL,
+  release_id,
+  ...,
   limit = NULL,
   offset = NULL,
   sort_order = NULL,
@@ -15,7 +16,9 @@ fredr_release_dates(
 )
 }
 \arguments{
-\item{release_id}{An integer ID of the release. \emph{Required parameter.}}
+\item{release_id}{An integer ID of the release.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{10000}, the maximum.}

@@ -1,6 +1,6 @@
 #' Get the series on a release of economic data
 #'
-#' @param release_id An integer ID of the release. _Required parameter._
+#' @param release_id An integer ID of the release.
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
@@ -51,6 +51,8 @@
 #' be matched.  Multiple tags can be delimited by a semicolon in a single string
 #' (e.g. `"usa;gnp"``).
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @return A `tibble` object.
 #'
 #' @section API Documentation:
@@ -75,7 +77,8 @@
 #' )
 #' }
 #' @export
-fredr_release_series <- function(release_id = NULL,
+fredr_release_series <- function(release_id,
+                                 ...,
                                  filter_variable = NULL,
                                  filter_value = NULL,
                                  tag_names = NULL,
@@ -86,8 +89,8 @@ fredr_release_series <- function(release_id = NULL,
                                  sort_order = NULL,
                                  realtime_start = NULL,
                                  realtime_end = NULL) {
-
-  validate_release_id(release_id)
+  check_dots_empty(...)
+  check_not_null(release_id, "release_id")
 
   user_args <- capture_args(
     release_id = release_id,
@@ -108,5 +111,4 @@ fredr_release_series <- function(release_id = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

@@ -1,6 +1,6 @@
 #' Get the releases for a source
 #'
-#' @param source_id An integer ID for the data source.  _Required parameter_.
+#' @param source_id An integer ID for the data source.
 #'
 #' @param limit An integer limit on the maximum number of results to return.
 #' Defaults to `1000`, the maximum.
@@ -29,6 +29,8 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @return A `tibble` object.
 #'
 #' @section API Documentation:
@@ -46,15 +48,16 @@
 #' fredr_source_releases(source_id = 14L, realtime_start = as.Date("1950-01-01"))
 #' }
 #' @export
-fredr_source_releases <- function(source_id = NULL,
+fredr_source_releases <- function(source_id,
+                                  ...,
                                   limit = NULL,
                                   offset = NULL,
                                   order_by = NULL,
                                   sort_order = NULL,
                                   realtime_start = NULL,
                                   realtime_end = NULL) {
-
-  validate_source_id(source_id)
+  check_dots_empty(...)
+  check_not_null(source_id, "source_id")
 
   user_args <- capture_args(
     realtime_start = realtime_start,
@@ -71,5 +74,4 @@ fredr_source_releases <- function(source_id = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

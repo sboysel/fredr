@@ -5,7 +5,8 @@
 \title{Get the data vintage dates for a FRED series}
 \usage{
 fredr_series_vintagedates(
-  series_id = NULL,
+  series_id,
+  ...,
   limit = NULL,
   offset = NULL,
   sort_order = NULL,
@@ -14,7 +15,9 @@ fredr_series_vintagedates(
 )
 }
 \arguments{
-\item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}
+\item{series_id}{A string ID for the FRED series.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}

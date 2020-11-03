@@ -5,7 +5,6 @@
 #' @inheritParams fredr_series_observations
 #'
 #' @param series_search_text A string containing the series search text.
-#' _Required parameter._
 #'
 #' @param tag_names A semicolon delimited string of tag names to return.  Defaults
 #' no filtering by tag names.
@@ -65,7 +64,8 @@
 #' }
 #' @name fredr_series_search_tags
 #' @export
-fredr_series_search_tags <- function(series_search_text = NULL,
+fredr_series_search_tags <- function(series_search_text,
+                                     ...,
                                      tag_names = NULL,
                                      tag_group_id = NULL,
                                      tag_search_text = NULL,
@@ -75,8 +75,8 @@ fredr_series_search_tags <- function(series_search_text = NULL,
                                      sort_order = NULL,
                                      realtime_start = NULL,
                                      realtime_end = NULL) {
-
-  validate_required_string_param(series_search_text)
+  check_dots_empty(...)
+  check_not_null(series_search_text, "series_search_text")
 
   args <- capture_args(
     series_search_text = series_search_text,

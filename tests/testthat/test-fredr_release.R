@@ -8,6 +8,6 @@ test_that("fredr_release()", {
 })
 
 test_that("input is validated", {
-  expect_error(fredr_release(), "must be supplied")
+  expect_error(fredr_release())
   expect_error(fredr_release(release_id = "foo", "must be a"))
 })

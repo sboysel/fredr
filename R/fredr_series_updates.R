@@ -43,13 +43,15 @@
 #' is.unsorted(rev(as.POSIXct(updates)))
 #' }
 #' @export
-fredr_series_updates <- function(filter_value = NULL,
+fredr_series_updates <- function(...,
+                                 filter_value = NULL,
                                  start_time = NULL,
                                  end_time = NULL,
                                  limit = NULL,
                                  offset = NULL,
                                  realtime_start = NULL,
                                  realtime_end = NULL) {
+  check_dots_empty(...)
 
   user_args <- capture_args(
     limit = limit,
@@ -66,5 +68,4 @@ fredr_series_updates <- function(filter_value = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

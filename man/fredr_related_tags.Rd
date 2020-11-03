@@ -5,7 +5,8 @@
 \title{Get related FRED tags given one or more tags}
 \usage{
 fredr_related_tags(
-  tag_names = NULL,
+  tag_names,
+  ...,
   exclude_tag_names = NULL,
   tag_group_id = NULL,
   search_text = NULL,
@@ -18,8 +19,9 @@ fredr_related_tags(
 )
 }
 \arguments{
-\item{tag_names}{A semicolon delimited string of tag names to be related to.
-\emph{Required parameter.}}
+\item{tag_names}{A semicolon delimited string of tag names to be related to.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{exclude_tag_names}{A semicolon delimited string of tag names that series
 match \emph{none} of. No exclusions are done by default.}

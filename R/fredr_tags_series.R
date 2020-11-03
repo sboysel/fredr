@@ -6,7 +6,7 @@
 #' @inheritParams fredr_related_tags
 #'
 #' @param tag_names A semicolon delimited string of tag names to
-#' find series using. _Required parameter._
+#' find series using.
 #'
 #' @param order_by A string indicating which attribute by which to order the
 #' results of the query.  Possible values include:
@@ -55,7 +55,8 @@
 #' )
 #' }
 #' @export
-fredr_tags_series <- function(tag_names = NULL,
+fredr_tags_series <- function(tag_names,
+                              ...,
                               exclude_tag_names = NULL,
                               limit = NULL,
                               offset = NULL,
@@ -63,7 +64,8 @@ fredr_tags_series <- function(tag_names = NULL,
                               sort_order = NULL,
                               realtime_start = NULL,
                               realtime_end = NULL) {
-  validate_required_string_param(tag_names)
+  check_dots_empty(...)
+  check_not_null(tag_names, "tag_names")
 
   user_args <- capture_args(
     tag_names = tag_names,
@@ -81,5 +83,4 @@ fredr_tags_series <- function(tag_names = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

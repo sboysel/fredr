@@ -1,10 +1,9 @@
 #' Get the series in a category
 #'
-#' @param category_id An integer ID for the category.  Default is `0` for the
-#' root category. _Required parameter._
+#' @param category_id An integer ID for the category.
 #'
 #' @param tag_names A string indicating which series tags to match.  Multiple
-#' tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).
+#' tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"`).
 #'
 #' @param exclude_tag_names A string indicating which series tags should _not_
 #' be matched.  Multiple tags can be delimited by a semicolon in a single string
@@ -53,6 +52,8 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @return A `tibble` object with information for series matching the request for
 #' the category specified in `category_id`.
 #'
@@ -71,7 +72,8 @@
 #' fredr_category_series(category_id = 4L, order_by = "frequency", sort_order = "desc")
 #' }
 #' @export
-fredr_category_series <- function(category_id = 0L,
+fredr_category_series <- function(category_id,
+                                  ...,
                                   filter_variable = NULL,
                                   filter_value = NULL,
                                   tag_names = NULL,
@@ -82,8 +84,8 @@ fredr_category_series <- function(category_id = 0L,
                                   sort_order = NULL,
                                   realtime_start = NULL,
                                   realtime_end = NULL) {
-
-  validate_category_id(category_id)
+  check_dots_empty(...)
+  check_not_null(category_id, "category_id")
 
   user_args <- capture_args(
     category_id = category_id,
@@ -104,5 +106,4 @@ fredr_category_series <- function(category_id = 0L,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

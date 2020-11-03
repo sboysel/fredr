@@ -6,7 +6,8 @@
 \title{Search for a FRED series.}
 \usage{
 fredr_series_search_text(
-  search_text = NULL,
+  search_text,
+  ...,
   tag_names = NULL,
   exclude_tag_names = NULL,
   filter_variable = NULL,
@@ -20,7 +21,8 @@ fredr_series_search_text(
 )
 
 fredr_series_search_id(
-  search_text = NULL,
+  search_text,
+  ...,
   limit = 1000L,
   offset = 0,
   order_by = NULL,
@@ -36,7 +38,9 @@ fredr_series_search_id(
 \arguments{
 \item{search_text}{A string containing the words to match against economic
 data series. For use with \code{\link{fredr_series_search_text}} and
-\code{\link{fredr_series_search_id}}.  \emph{Required parameter.}}
+\code{\link{fredr_series_search_id}}.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{tag_names}{A semicolon delimited string of tag names that series match \emph{all} of.  Defaults to no tag filtering.}
 

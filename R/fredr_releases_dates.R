@@ -29,6 +29,8 @@
 #' @param include_release_dates_with_no_data A boolean value indicating if the
 #' results with no data available should be returned as well.  Default is `FALSE`.
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @return A `tibble` object.
 #'
 #' @section API Documentation:
@@ -44,13 +46,15 @@
 #' fredr_releases_dates(limit = 20L)
 #' }
 #' @export
-fredr_releases_dates <- function(limit = NULL,
+fredr_releases_dates <- function(...,
+                                 limit = NULL,
                                  offset = NULL,
                                  sort_order = NULL,
                                  order_by = NULL,
                                  include_release_dates_with_no_data = NULL,
                                  realtime_start = NULL,
                                  realtime_end = NULL) {
+  check_dots_empty(...)
 
   user_args <- capture_args(
     limit = limit,
@@ -67,5 +71,4 @@ fredr_releases_dates <- function(limit = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

@@ -5,7 +5,8 @@
 \title{Get the FRED tags for a series search.}
 \usage{
 fredr_series_search_tags(
-  series_search_text = NULL,
+  series_search_text,
+  ...,
   tag_names = NULL,
   tag_group_id = NULL,
   tag_search_text = NULL,
@@ -18,8 +19,9 @@ fredr_series_search_tags(
 )
 }
 \arguments{
-\item{series_search_text}{A string containing the series search text.
-\emph{Required parameter.}}
+\item{series_search_text}{A string containing the series search text.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{tag_names}{A semicolon delimited string of tag names to return.  Defaults
 no filtering by tag names.}

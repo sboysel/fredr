@@ -3,7 +3,7 @@
 #' Given a series ID, return observations of that series as a `tibble` object.
 #' `fredr()` is an alias for `fredr_series_observations()`.
 #'
-#' @param series_id A string ID for the FRED series. _Required parameter._
+#' @param series_id A string ID for the FRED series.
 #'
 #' @param observation_start A `Date` indicating the start of the observation period.
 #' Defaults to `1776-07-04`, the earliest available date.
@@ -83,6 +83,8 @@
 #' * `3` for Observations by Vintage Date, New and Revised Observations Only
 #' * `4` for Observations, Initial Release Only.
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @return A `tibble` object with observation dates and values.
 #'
 #' @section API Documentation:
@@ -103,7 +105,7 @@
 #'   series_id = "UNRATE",
 #'   observation_start = as.Date("1980-01-01"),
 #'   observation_end = as.Date("2000-01-01"),
-#'   unit = "chg"
+#'   units = "chg"
 #' )
 #' # All observations for "OILPRICE" series.  The data is first aggregated by
 #' # quarter by taking the average of all observations in the quarter then
@@ -112,7 +114,7 @@
 #'   series_id = "OILPRICE",
 #'   frequency = "q",
 #'   aggregation_method = "avg",
-#'   unit = "log"
+#'   units = "log"
 #' )
 #'
 #' # To retrieve values for multiple series, use purrr's map_dfr() function.
@@ -138,7 +140,8 @@
 #' }
 #' @rdname fredr
 #' @export
-fredr_series_observations <- function(series_id = NULL,
+fredr_series_observations <- function(series_id,
+                                      ...,
                                       observation_start = NULL,
                                       observation_end = NULL,
                                       frequency = NULL,
@@ -151,10 +154,11 @@ fredr_series_observations <- function(series_id = NULL,
                                       realtime_end = NULL,
                                       vintage_dates = NULL,
                                       output_type = NULL) {
-
-  validate_series_id(series_id)
+  check_dots_empty(...)
+  check_not_null(series_id, "series_id")
 
   user_args <- capture_args(
+    series_id = series_id,
     observation_start = observation_start,
     observation_end = observation_end,
     frequency = frequency,
@@ -170,7 +174,6 @@ fredr_series_observations <- function(series_id = NULL,
   )
 
   fredr_args <- list(
-    series_id = series_id,
     endpoint = "series/observations"
   )
 
@@ -188,7 +191,7 @@ fredr_series_observations <- function(series_id = NULL,
     value = as.numeric(frame$value)
   )
 
-  return(obs)
+  obs
 }
 
 #' @rdname fredr

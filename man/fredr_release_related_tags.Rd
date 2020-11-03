@@ -5,8 +5,9 @@
 \title{Get the related FRED tags for one or more FRED tags within a release}
 \usage{
 fredr_release_related_tags(
-  release_id = NULL,
-  tag_names = NULL,
+  release_id,
+  tag_names,
+  ...,
   exclude_tag_names = NULL,
   tag_group_id = NULL,
   search_text = NULL,
@@ -19,10 +20,11 @@ fredr_release_related_tags(
 )
 }
 \arguments{
-\item{release_id}{An integer ID of the release. \emph{Required parameter.}}
+\item{release_id}{An integer ID of the release.}
 
-\item{tag_names}{A semicolon delimited string of tag names to be related to.
-\emph{Required parameter.}}
+\item{tag_names}{A semicolon delimited string of tag names to be related to.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{exclude_tag_names}{A semicolon delimited string of tag names that series
 match \emph{none} of. No exclusions are done by default.}

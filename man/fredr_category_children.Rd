@@ -5,14 +5,16 @@
 \title{Get the child categories for a specified FRED parent category}
 \usage{
 fredr_category_children(
-  category_id = 0L,
+  category_id,
+  ...,
   realtime_start = NULL,
   realtime_end = NULL
 )
 }
 \arguments{
-\item{category_id}{An integer ID for the category.  Default is \code{0} for the
-root category. \emph{Required parameter.}}
+\item{category_id}{An integer ID for the category.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}

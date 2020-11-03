@@ -5,7 +5,8 @@
 \title{Get the releases for a source}
 \usage{
 fredr_source_releases(
-  source_id = NULL,
+  source_id,
+  ...,
   limit = NULL,
   offset = NULL,
   order_by = NULL,
@@ -15,7 +16,9 @@ fredr_source_releases(
 )
 }
 \arguments{
-\item{source_id}{An integer ID for the data source.  \emph{Required parameter}.}
+\item{source_id}{An integer ID for the data source.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{limit}{An integer limit on the maximum number of results to return.
 Defaults to \code{1000}, the maximum.}

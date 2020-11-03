@@ -54,18 +54,22 @@
 #' [fredr_tags_series()], [fredr_related_tags()]
 #'
 #' @examples
-#' if (fredr_has_key()) {
+#' if (fredr_has_key() && interactive()) {
 #' # Information for all tags
 #' fredr_tags()
+#'
 #' # Information for just the "gdp" and "oecd" tags
 #' fredr_tags(tag_names = "gdp;oecd")
+#'
 #' # Information for all tags in the "geo" group
 #' fredr_tags(tag_group_id = "geo")
+#'
 #' # Information for tags matching the text "unemployment"
 #' fredr_tags(search_text = "unemployment")
 #' }
 #' @export
-fredr_tags <- function(tag_names = NULL,
+fredr_tags <- function(...,
+                       tag_names = NULL,
                        tag_group_id = NULL,
                        search_text = NULL,
                        limit = NULL,
@@ -74,6 +78,7 @@ fredr_tags <- function(tag_names = NULL,
                        sort_order = NULL,
                        realtime_start = NULL,
                        realtime_end = NULL) {
+  check_dots_empty(...)
 
   user_args <- capture_args(
     realtime_start = realtime_start,
@@ -92,5 +97,4 @@ fredr_tags <- function(tag_names = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

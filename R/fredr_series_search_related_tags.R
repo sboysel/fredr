@@ -3,15 +3,13 @@
 #' FRED tags are attributes assigned to series.  Return the _related_ FRED tags
 #' for a search: tags assigned to series that match _all_ tags in the `tag_names`
 #' parameter (required), _no_ tags in the `exclude_tag_names` (optional) and the
-#' search words set by the `series_search_text` parameter (optional).
+#' search words set by the `series_search_text` parameter (required).
 #'
 #' @inheritParams fredr_series_observations
 #'
 #' @param series_search_text A string containing the series search text.
-#' _Required parameter._
 #'
-#' @param tag_names A semicolon delimited string of tag names to return.  Defaults
-#' no filtering by tag names.  _Required parameter._
+#' @param tag_names A semicolon delimited string of tag names to return.
 #'
 #' @param exclude_tag_names A semicolon delimited string of tag names that
 #' series match _none_ of.  Defaults to no tag filtering.
@@ -73,8 +71,9 @@
 #' }
 #' @rdname fredr_series_search_related_tags
 #' @export
-fredr_series_search_related_tags <- function(series_search_text = NULL,
-                                             tag_names = NULL,
+fredr_series_search_related_tags <- function(series_search_text,
+                                             tag_names,
+                                             ...,
                                              exclude_tag_names = NULL,
                                              tag_group_id = NULL,
                                              tag_search_text = NULL,
@@ -84,10 +83,9 @@ fredr_series_search_related_tags <- function(series_search_text = NULL,
                                              sort_order = NULL,
                                              realtime_start = NULL,
                                              realtime_end = NULL) {
-
-  validate_required_string_param(series_search_text)
-
-  validate_required_string_param(tag_names)
+  check_dots_empty(...)
+  check_not_null(series_search_text, "series_search_text")
+  check_not_null(tag_names, "tag_names")
 
   args <- capture_args(
     series_search_text = series_search_text,

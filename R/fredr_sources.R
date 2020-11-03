@@ -22,6 +22,8 @@
 #' @param sort_order A string representing the order of the resulting series.
 #' Possible values are: `"asc"` (default), and `"desc"`.
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @return A `tibble` object.
 #'
 #' @section API Documentation:
@@ -35,12 +37,14 @@
 #' fredr_sources(limit = 20L)
 #' }
 #' @export
-fredr_sources <- function(limit = NULL,
+fredr_sources <- function(...,
+                          limit = NULL,
                           offset = NULL,
                           order_by = NULL,
                           sort_order = NULL,
                           realtime_start = NULL,
                           realtime_end = NULL) {
+  check_dots_empty(...)
 
   user_args <- capture_args(
     limit = limit,
@@ -56,5 +60,4 @@ fredr_sources <- function(limit = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

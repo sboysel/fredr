@@ -5,14 +5,17 @@
 \title{Get release table trees for a given release}
 \usage{
 fredr_release_tables(
-  release_id = NULL,
+  release_id,
+  ...,
   element_id = NULL,
   include_observation_values = NULL,
   observation_date = NULL
 )
 }
 \arguments{
-\item{release_id}{An integer ID of the release. \emph{Required parameter.}}
+\item{release_id}{An integer ID of the release.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{element_id}{An integer ID for the desired release table element.}
 

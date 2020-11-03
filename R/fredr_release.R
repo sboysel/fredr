@@ -1,6 +1,6 @@
 #' Get a release of economic data
 #'
-#' @param release_id An integer ID of the release. _Required parameter._
+#' @param release_id An integer ID of the release.
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
@@ -9,6 +9,8 @@
 #' @param realtime_end A `Date` indicating the end of the real-time period.
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#'
+#' @param ... These dots only exist for future extensions and should be empty.
 #'
 #' @return A `tibble` object.
 #'
@@ -30,11 +32,12 @@
 #' fredr_release(9, realtime_start = as.Date("1950-01-01"))
 #' }
 #' @export
-fredr_release <- function(release_id = NULL,
+fredr_release <- function(release_id,
+                          ...,
                           realtime_start = NULL,
                           realtime_end = NULL) {
-
-  validate_release_id(release_id)
+  check_dots_empty(...)
+  check_not_null(release_id, "release_id")
 
   user_args <- capture_args(
     release_id = release_id,
@@ -47,5 +50,4 @@ fredr_release <- function(release_id = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

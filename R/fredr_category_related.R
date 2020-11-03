@@ -11,6 +11,8 @@
 #' Defaults to today's date. For more information, see
 #' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @return A `tibble` object containing the name and parent ID for categories
 #' related to the category indicated by `category_id`.
 #'
@@ -32,11 +34,12 @@
 #' fredr_category_related(category_id = 4L)
 #' }
 #' @export
-fredr_category_related <- function(category_id = 0L,
+fredr_category_related <- function(category_id,
+                                   ...,
                                    realtime_start = NULL,
                                    realtime_end = NULL) {
-
-  validate_category_id(category_id)
+  check_dots_empty(...)
+  check_not_null(category_id, "category_id")
 
   user_args <- capture_args(
     category_id = category_id,
@@ -49,5 +52,4 @@ fredr_category_related <- function(category_id = 0L,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

@@ -4,7 +4,7 @@
 #' `element_id`. You may also use a drill-down approach to start at the root
 #' (top most) element by leaving the `element_id` off.
 #'
-#' @param release_id An integer ID of the release. _Required parameter._
+#' @param release_id An integer ID of the release.
 #'
 #' @param element_id An integer ID for the desired release table element.
 #'
@@ -14,6 +14,8 @@
 #'
 #' @param observation_date A `Date` indicating which observation date to include
 #' with the release table.  Default is `9999-12-31` (latest date available).
+#'
+#' @param ... These dots only exist for future extensions and should be empty.
 #'
 #' @return A `tibble` object with nested results.
 #'
@@ -34,12 +36,13 @@
 #' fredr_release_tables(release_id = 53L, element_id = 12886)
 #' }
 #' @export
-fredr_release_tables <- function(release_id = NULL,
+fredr_release_tables <- function(release_id,
+                                 ...,
                                  element_id = NULL,
                                  include_observation_values = NULL,
                                  observation_date = NULL) {
-
-  validate_release_id(release_id)
+  check_dots_empty(...)
+  check_not_null(release_id, "release_id")
 
   user_args <- capture_args(
     release_id = release_id,
@@ -53,5 +56,4 @@ fredr_release_tables <- function(release_id = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

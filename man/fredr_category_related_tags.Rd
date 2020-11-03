@@ -5,8 +5,9 @@
 \title{Get the related FRED tags within a category}
 \usage{
 fredr_category_related_tags(
-  category_id = 0L,
-  tag_names = NULL,
+  category_id,
+  tag_names,
+  ...,
   exclude_tag_names = NULL,
   tag_group_id = NULL,
   search_text = NULL,
@@ -19,12 +20,12 @@ fredr_category_related_tags(
 )
 }
 \arguments{
-\item{category_id}{An integer ID for the category.  Default is \code{0} for the
-root category. \emph{Required parameter.}}
+\item{category_id}{An integer ID for the category.}
 
 \item{tag_names}{A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).
-\emph{Required parameter.}}
+tags can be delimited by a semicolon in a single string (e.g. \code{"usa;gnp"}).}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{exclude_tag_names}{A string indicating which series tags should \emph{not}
 be matched.  Multiple tags can be delimited by a semicolon in a single string

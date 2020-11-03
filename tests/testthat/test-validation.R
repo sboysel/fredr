@@ -53,39 +53,9 @@ test_that("capture_args() validation: time", {
   expect_error(capture_args(start_time = 1))
 })
 
-test_that("validate_required_string_param()", {
-  good <- "good"
-  bad <- NULL
-  numeric <- 1
-  length2 <- c("a", "b")
-  expect_silent(validate_required_string_param(good))
-  expect_error(validate_required_string_param(bad))
-  expect_error(validate_required_string_param(numeric))
-  expect_error(validate_required_string_param(length2))
-})
-
 test_that("validate_endpoint()", {
   expect_silent(validate_endpoint("series/observations"))
   expect_error(validate_endpoint("bad"))
   expect_error(validate_endpoint(1))
   expect_error(validate_endpoint(c("series/observations", "series/observations")))
 })
-
-test_that("validate_series_id()", {
-  good <- "my_series_id"
-  numeric <- 1
-  length2 <- 1:2
-  expect_silent(validate_series_id(good))
-  expect_error(validate_series_id(numeric))
-  expect_error(validate_series_id(length2))
-})
-
-test_that("validate_release_id()", {
-  good <- 1
-  char <- "bad"
-  length2 <- 1:2
-  expect_silent(validate_release_id(good))
-  expect_error(validate_release_id(char))
-  expect_error(validate_release_id(length2))
-})
-

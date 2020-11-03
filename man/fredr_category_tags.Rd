@@ -5,7 +5,8 @@
 \title{Get the FRED tags for a category}
 \usage{
 fredr_category_tags(
-  category_id = 0L,
+  category_id,
+  ...,
   tag_names = NULL,
   tag_group_id = NULL,
   search_text = NULL,
@@ -18,11 +19,12 @@ fredr_category_tags(
 )
 }
 \arguments{
-\item{category_id}{An integer ID for the category.  Default is \code{0} for the
-root category. \emph{Required parameter.}}
+\item{category_id}{An integer ID for the category.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{tag_names}{A string indicating which series tags to match.  Multiple
-tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).}
+tags can be delimited by a semicolon in a single string (e.g. \code{"usa;gnp"}).}
 
 \item{tag_group_id}{A string representing the tag group id to filter tags by
 type.  No filtering by default.  Possible values include:

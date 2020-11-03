@@ -5,7 +5,8 @@
 \title{Get the series on a release of economic data}
 \usage{
 fredr_release_series(
-  release_id = NULL,
+  release_id,
+  ...,
   filter_variable = NULL,
   filter_value = NULL,
   tag_names = NULL,
@@ -19,7 +20,9 @@ fredr_release_series(
 )
 }
 \arguments{
-\item{release_id}{An integer ID of the release. \emph{Required parameter.}}
+\item{release_id}{An integer ID of the release.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{filter_variable}{A string indicating which attribute to indicate the
 attribute that results are filtered by.  Possible values include: \code{"frequency"},

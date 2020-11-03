@@ -1,6 +1,6 @@
 #' Get release dates for a single release of economic data
 #'
-#' @param release_id An integer ID of the release. _Required parameter._
+#' @param release_id An integer ID of the release.
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to `1776-07-04` (earliest available). For more information, see
@@ -24,6 +24,8 @@
 #' results with no data available should be returned as well.
 #' Default is `FALSE`.
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @return A `tibble` object.
 #'
 #' @section API Documentation:
@@ -42,15 +44,16 @@
 #' fredr_release_dates(release_id = 20L, realtime_end = as.Date("1997-03-14"))
 #' }
 #' @export
-fredr_release_dates <- function(release_id = NULL,
+fredr_release_dates <- function(release_id,
+                                ...,
                                 limit = NULL,
                                 offset = NULL,
                                 sort_order = NULL,
                                 include_release_dates_with_no_data = NULL,
                                 realtime_start = NULL,
                                 realtime_end = NULL) {
-
-  validate_release_id(release_id)
+  check_dots_empty(...)
+  check_not_null(release_id, "release_id")
 
   user_args <- capture_args(
     release_id = release_id,

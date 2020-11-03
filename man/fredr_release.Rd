@@ -4,10 +4,12 @@
 \alias{fredr_release}
 \title{Get a release of economic data}
 \usage{
-fredr_release(release_id = NULL, realtime_start = NULL, realtime_end = NULL)
+fredr_release(release_id, ..., realtime_start = NULL, realtime_end = NULL)
 }
 \arguments{
-\item{release_id}{An integer ID of the release. \emph{Required parameter.}}
+\item{release_id}{An integer ID of the release.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see

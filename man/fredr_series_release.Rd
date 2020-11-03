@@ -5,13 +5,16 @@
 \title{Get the release for a FRED series}
 \usage{
 fredr_series_release(
-  series_id = NULL,
+  series_id,
+  ...,
   realtime_start = NULL,
   realtime_end = NULL
 )
 }
 \arguments{
-\item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}
+\item{series_id}{A string ID for the FRED series.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see

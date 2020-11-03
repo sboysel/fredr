@@ -8,6 +8,6 @@ test_that("fredr_source()", {
 })
 
 test_that("input is validated", {
-  expect_error(fredr_source(source_id = "a"), "`integer` or `numeric`")
-  expect_error(fredr_source(source_id = 1:2), "length 1")
+  expect_error(fredr_source(source_id = "a"), "single finite integer")
+  expect_error(fredr_source(source_id = 1:2), "single finite integer")
 })

@@ -5,8 +5,9 @@
 \title{Get the related FRED tags for one or more FRED tags matching a series search}
 \usage{
 fredr_series_search_related_tags(
-  series_search_text = NULL,
-  tag_names = NULL,
+  series_search_text,
+  tag_names,
+  ...,
   exclude_tag_names = NULL,
   tag_group_id = NULL,
   tag_search_text = NULL,
@@ -19,11 +20,11 @@ fredr_series_search_related_tags(
 )
 }
 \arguments{
-\item{series_search_text}{A string containing the series search text.
-\emph{Required parameter.}}
+\item{series_search_text}{A string containing the series search text.}
 
-\item{tag_names}{A semicolon delimited string of tag names to return.  Defaults
-no filtering by tag names.  \emph{Required parameter.}}
+\item{tag_names}{A semicolon delimited string of tag names to return.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{exclude_tag_names}{A semicolon delimited string of tag names that
 series match \emph{none} of.  Defaults to no tag filtering.}
@@ -78,7 +79,7 @@ A \code{tibble} object.
 FRED tags are attributes assigned to series.  Return the \emph{related} FRED tags
 for a search: tags assigned to series that match \emph{all} tags in the \code{tag_names}
 parameter (required), \emph{no} tags in the \code{exclude_tag_names} (optional) and the
-search words set by the \code{series_search_text} parameter (optional).
+search words set by the \code{series_search_text} parameter (required).
 }
 \examples{
 if (fredr_has_key()) {

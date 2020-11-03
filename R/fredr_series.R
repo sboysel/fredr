@@ -25,11 +25,12 @@
 #' fredr_series(series_id = "UNRATE")
 #' }
 #' @export
-fredr_series <- function(series_id = NULL,
+fredr_series <- function(series_id,
+                         ...,
                          realtime_start = NULL,
                          realtime_end = NULL) {
-
-  validate_series_id(series_id)
+  check_dots_empty(...)
+  check_not_null(series_id, "series_id")
 
   user_args <- capture_args(
     series_id = series_id,
@@ -42,5 +43,4 @@ fredr_series <- function(series_id = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

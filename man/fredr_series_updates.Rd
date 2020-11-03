@@ -5,6 +5,7 @@
 \title{Get a set of recently updated FRED series}
 \usage{
 fredr_series_updates(
+  ...,
   filter_value = NULL,
   start_time = NULL,
   end_time = NULL,
@@ -15,6 +16,8 @@ fredr_series_updates(
 )
 }
 \arguments{
+\item{...}{These dots only exist for future extensions and should be empty.}
+
 \item{filter_value}{Filter results by type of geographic region of economic
 the data series.  Possible values include
 \itemize{

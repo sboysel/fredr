@@ -5,7 +5,8 @@
 \title{Get the tags for a FRED series}
 \usage{
 fredr_series_tags(
-  series_id = NULL,
+  series_id,
+  ...,
   order_by = NULL,
   sort_order = NULL,
   realtime_start = NULL,
@@ -13,7 +14,9 @@ fredr_series_tags(
 )
 }
 \arguments{
-\item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}
+\item{series_id}{A string ID for the FRED series.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{order_by}{A string indicating the attribute by which to order the
 Possible values include \code{"series_count"} (default), \code{"popularity"},

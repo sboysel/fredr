@@ -6,11 +6,10 @@
 #' the `fredr/series` endpoint.  See [fredr_series]. No tags exist for a category
 #' that does not have series.
 #'
-#' @param category_id An integer ID for the category.  Default is `0` for the
-#' root category. _Required parameter._
+#' @param category_id An integer ID for the category.
 #'
 #' @param tag_names A string indicating which series tags to match.  Multiple
-#' tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"``).
+#' tags can be delimited by a semicolon in a single string (e.g. `"usa;gnp"`).
 #'
 #' @param tag_group_id A string representing the tag group id to filter tags by
 #' type.  No filtering by default.  Possible values include:
@@ -51,6 +50,8 @@
 #' descriptions.  Data include tag name, group ID, popularity, series count, tag
 #' creation date, and additional notes.
 #'
+#' @param ... These dots only exist for future extensions and should be empty.
+#'
 #' @section API Documentation:
 #'
 #' [fred/category/tags](https://research.stlouisfed.org/docs/api/fred/category_tags.html)
@@ -66,7 +67,8 @@
 #' fredr_category_tags(category = 3L, tag_names = "nation;monthly", order_by = "popularity")
 #' }
 #' @export
-fredr_category_tags <- function(category_id = 0L,
+fredr_category_tags <- function(category_id,
+                                ...,
                                 tag_names = NULL,
                                 tag_group_id = NULL,
                                 search_text = NULL,
@@ -76,8 +78,8 @@ fredr_category_tags <- function(category_id = 0L,
                                 sort_order = NULL,
                                 realtime_start = NULL,
                                 realtime_end = NULL) {
-
-  validate_category_id(category_id)
+  check_dots_empty(...)
+  check_not_null(category_id, "category_id")
 
   user_args <- capture_args(
     category_id = category_id,
@@ -97,5 +99,4 @@ fredr_category_tags <- function(category_id = 0L,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

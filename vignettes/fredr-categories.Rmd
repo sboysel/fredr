@@ -44,10 +44,10 @@ children categories.  All categories are children of the root category (`categor
 
 ## Get a FRED category
 
-`fredr_category()` returns minimal information for a single category specified by `category_id`.  The data returned is a `tibble` in which each row represents a category.  The default is the root category.
+`fredr_category()` returns minimal information for a single category specified by `category_id`.  The data returned is a `tibble` in which each row represents a category.
 
 ```{r fredr_category1}
-fredr_category() 
+fredr_category(category_id = 0L) 
 ```
 
 ```{r fredr_category2}
@@ -56,10 +56,10 @@ fredr_category(category_id = 97L)
 
 ## Get the children of a FRED category
 
-`fredr_category_children()` returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by `category_id`.  The data returned is a `tibble` in which each row represents child category of the parent specified.  The default is the root category.
+`fredr_category_children()` returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by `category_id`.  The data returned is a `tibble` in which each row represents child category of the parent specified.
 
 ```{r fredr_category_children1}
-fredr_category_children()
+fredr_category_children(category_id = 0L)
 ```
 
 ```{r fredr_category_children2}
@@ -68,10 +68,10 @@ fredr_category_children(category_id = 1L)
 
 ## Get a related FRED category
 
-`fredr_category_related()` returns minimal information (ID, name, and parent ID) for all related categories to the category specified by `category_id`.  The data returned is a `tibble` in which each row represents category related to the one specified.  Note that not all categories have related categories.  The default is the root category.
+`fredr_category_related()` returns minimal information (ID, name, and parent ID) for all related categories to the category specified by `category_id`.  The data returned is a `tibble` in which each row represents category related to the one specified.  Note that not all categories have related categories.
 
 ```{r fredr_category_related1}
-fredr_category_related()
+fredr_category_related(category_id = 0L)
 ```
 
 ```{r fredr_category_related2}

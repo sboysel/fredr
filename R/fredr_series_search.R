@@ -6,7 +6,7 @@
 #'
 #' @param search_text A string containing the words to match against economic
 #' data series. For use with \code{\link{fredr_series_search_text}} and
-#' \code{\link{fredr_series_search_id}}.  _Required parameter._
+#' \code{\link{fredr_series_search_id}}.
 #'
 #' @param tag_names A semicolon delimited string of tag names that series match _all_ of.  Defaults to no tag filtering.
 #'
@@ -85,7 +85,8 @@
 #' }
 #' @rdname fredr_series_search
 #' @export
-fredr_series_search_text <- function(search_text = NULL,
+fredr_series_search_text <- function(search_text,
+                                     ...,
                                      tag_names = NULL,
                                      exclude_tag_names = NULL,
                                      filter_variable = NULL,
@@ -96,8 +97,8 @@ fredr_series_search_text <- function(search_text = NULL,
                                      sort_order = NULL,
                                      realtime_start = NULL,
                                      realtime_end = NULL) {
-
-  validate_required_string_param(search_text)
+  check_dots_empty(...)
+  check_not_null(search_text, "search_text")
 
   args <- capture_args(
     search_text = search_text,
@@ -120,7 +121,8 @@ fredr_series_search_text <- function(search_text = NULL,
 
 #' @rdname fredr_series_search
 #' @export
-fredr_series_search_id <- function(search_text = NULL,
+fredr_series_search_id <- function(search_text,
+                                   ...,
                                    limit = 1000L,
                                    offset = 0,
                                    order_by = NULL,
@@ -131,8 +133,8 @@ fredr_series_search_id <- function(search_text = NULL,
                                    realtime_end = NULL,
                                    tag_names = NULL,
                                    exclude_tag_names = NULL) {
-
-  validate_required_string_param(search_text)
+  check_dots_empty(...)
+  check_not_null(search_text, "search_text")
 
   args <- capture_args(
     search_text = search_text,

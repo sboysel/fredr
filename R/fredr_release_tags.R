@@ -3,7 +3,7 @@
 #' Get the FRED tags for a release. Optionally, filter results by tag name,
 #' tag group, or search text.
 #'
-#' @param release_id An integer ID of the release. _Required parameter._
+#' @param release_id An integer ID of the release.
 #'
 #' @inheritParams fredr_tags
 #'
@@ -22,7 +22,8 @@
 #' fredr_release_tags(release_id = 10L)
 #' }
 #' @export
-fredr_release_tags <- function(release_id = NULL,
+fredr_release_tags <- function(release_id,
+                               ...,
                                tag_names = NULL,
                                tag_group_id = NULL,
                                search_text = NULL,
@@ -32,8 +33,8 @@ fredr_release_tags <- function(release_id = NULL,
                                sort_order = NULL,
                                realtime_start = NULL,
                                realtime_end = NULL) {
-
-  validate_release_id(release_id)
+  check_dots_empty(...)
+  check_not_null(release_id, "release_id")
 
   user_args <- capture_args(
     release_id = release_id,
@@ -53,5 +54,4 @@ fredr_release_tags <- function(release_id = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

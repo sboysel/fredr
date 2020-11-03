@@ -28,14 +28,15 @@
 #' fredr_series_vintagedates(series_id = "UNRATE", limit = 10L, sort_order = "desc")
 #' }
 #' @export
-fredr_series_vintagedates <- function(series_id = NULL,
+fredr_series_vintagedates <- function(series_id,
+                                      ...,
                                       limit = NULL,
                                       offset = NULL,
                                       sort_order = NULL,
                                       realtime_start = NULL,
                                       realtime_end = NULL) {
-
-  validate_series_id(series_id)
+  check_dots_empty(...)
+  check_not_null(series_id, "series_id")
 
   user_args <- capture_args(
     series_id = series_id,
@@ -51,6 +52,5 @@ fredr_series_vintagedates <- function(series_id = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }
 

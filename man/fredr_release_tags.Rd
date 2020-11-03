@@ -5,7 +5,8 @@
 \title{Get the FRED tags for a release}
 \usage{
 fredr_release_tags(
-  release_id = NULL,
+  release_id,
+  ...,
   tag_names = NULL,
   tag_group_id = NULL,
   search_text = NULL,
@@ -18,7 +19,9 @@ fredr_release_tags(
 )
 }
 \arguments{
-\item{release_id}{An integer ID of the release. \emph{Required parameter.}}
+\item{release_id}{An integer ID of the release.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{tag_names}{A semicolon delimited string of tag names to only
 include in the response. No filtering by tag names by default (i.e. \emph{all}

@@ -5,7 +5,8 @@
 \title{Find FRED series matching tag names}
 \usage{
 fredr_tags_series(
-  tag_names = NULL,
+  tag_names,
+  ...,
   exclude_tag_names = NULL,
   limit = NULL,
   offset = NULL,
@@ -17,7 +18,9 @@ fredr_tags_series(
 }
 \arguments{
 \item{tag_names}{A semicolon delimited string of tag names to
-find series using. \emph{Required parameter.}}
+find series using.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{exclude_tag_names}{A semicolon delimited string of tag names that series
 match \emph{none} of. No exclusions are done by default.}

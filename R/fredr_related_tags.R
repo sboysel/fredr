@@ -8,7 +8,6 @@
 #' @inheritParams fredr_tags
 #'
 #' @param tag_names A semicolon delimited string of tag names to be related to.
-#' _Required parameter._
 #'
 #' @param exclude_tag_names A semicolon delimited string of tag names that series
 #' match _none_ of. No exclusions are done by default.
@@ -39,7 +38,8 @@
 #'
 #'  }
 #' @export
-fredr_related_tags <- function(tag_names = NULL,
+fredr_related_tags <- function(tag_names,
+                               ...,
                                exclude_tag_names = NULL,
                                tag_group_id = NULL,
                                search_text = NULL,
@@ -49,8 +49,8 @@ fredr_related_tags <- function(tag_names = NULL,
                                sort_order = NULL,
                                realtime_start = NULL,
                                realtime_end = NULL) {
-
-  validate_required_string_param(tag_names)
+  check_dots_empty(...)
+  check_not_null(tag_names, "tag_names")
 
   user_args <- capture_args(
     tag_names = tag_names,
@@ -70,5 +70,4 @@ fredr_related_tags <- function(tag_names = NULL,
   )
 
   do.call(fredr_request, c(fredr_args, user_args))
-
 }

@@ -6,7 +6,8 @@
 \title{Get observations of a FRED series}
 \usage{
 fredr_series_observations(
-  series_id = NULL,
+  series_id,
+  ...,
   observation_start = NULL,
   observation_end = NULL,
   frequency = NULL,
@@ -22,7 +23,8 @@ fredr_series_observations(
 )
 
 fredr(
-  series_id = NULL,
+  series_id,
+  ...,
   observation_start = NULL,
   observation_end = NULL,
   frequency = NULL,
@@ -38,7 +40,9 @@ fredr(
 )
 }
 \arguments{
-\item{series_id}{A string ID for the FRED series. \emph{Required parameter.}}
+\item{series_id}{A string ID for the FRED series.}
+
+\item{...}{These dots only exist for future extensions and should be empty.}
 
 \item{observation_start}{A \code{Date} indicating the start of the observation period.
 Defaults to \code{1776-07-04}, the earliest available date.}
@@ -143,7 +147,7 @@ fredr(
   series_id = "UNRATE",
   observation_start = as.Date("1980-01-01"),
   observation_end = as.Date("2000-01-01"),
-  unit = "chg"
+  units = "chg"
 )
 # All observations for "OILPRICE" series.  The data is first aggregated by
 # quarter by taking the average of all observations in the quarter then
@@ -152,7 +156,7 @@ fredr(
   series_id = "OILPRICE",
   frequency = "q",
   aggregation_method = "avg",
-  unit = "log"
+  units = "log"
 )
 
 # To retrieve values for multiple series, use purrr's map_dfr() function.

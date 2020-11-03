@@ -329,70 +329,16 @@ check_scalar <- function(x, x_nm) {
   x
 }
 
+check_not_null <- function(x, x_nm) {
+  if (is.null(x)) {
+    msg <- sprintf("`%s` must not be `NULL`.", x_nm)
+    abort(msg)
+  }
+
+  x
+}
+
 # ------------------------------------------------------------------------------
-
-validate_series_id <- function(x) {
-  if(is.null(x)) {
-    abort("Argument `series_id` must be supplied.")
-  }
-
-  check_is_class(x, "series_id", "character")
-
-  if(! (length(x) == 1) ) {
-    abort("Argument `series_id` must be of length 1.")
-  }
-}
-
-validate_release_id <- function(x) {
-  if(is.null(x)) {
-    abort("Argument `release_id` must be supplied.")
-  }
-
-  check_is_class(x, "release_id", c("integer", "numeric"))
-
-  if(! (length(x) == 1) ) {
-    abort("Argument `release_id` must be of length 1.")
-  }
-}
-
-validate_source_id <- function(x) {
-  if(is.null(x)) {
-    abort("Argument `source_id` must be supplied.")
-  }
-
-  check_is_class(x, "source_id", c("integer", "numeric"))
-
-  if(! (length(x) == 1) ) {
-    abort("Argument `source_id` must be of length 1.")
-  }
-}
-
-validate_category_id <- function(x) {
-
-  check_is_class(x, "category_id", c("integer", "numeric"))
-
-  if(! (length(x) == 1) ) {
-    abort("Argument `category_id` must be of length 1.")
-  }
-}
-
-validate_required_string_param <- function(x) {
-
-  x_nm <- deparse(substitute(x))
-
-  if(is.null(x)) {
-    msg <- paste0("Argument `", x_nm, "` must be supplied.")
-    abort(msg)
-  }
-
-  check_is_class(x, x_nm, "character")
-
-  if(! (length(x) == 1) ) {
-    msg <- paste0("Argument `", x_nm, "` must be of length 1.")
-    abort(msg)
-  }
-
-}
 
 validate_endpoint <- function(x) {
   check_is_class(x, "endpoint", "character")
@@ -409,6 +355,42 @@ validate_endpoint <- function(x) {
     )
     abort(msg)
   }
+}
+
+is_endpoint <- function(x) {
+  x %in% c(
+    "category",
+    "category/children",
+    "category/related",
+    "category/series",
+    "category/tags",
+    "category/related_tags",
+    "series",
+    "series/search",
+    "series/updates",
+    "series/categories",
+    "series/search/tags",
+    "series/search/related_tags",
+    "series/release",
+    "series/observations",
+    "series/vintagedates",
+    "series/tags",
+    "release",
+    "releases",
+    "releases/dates",
+    "release/dates",
+    "release/series",
+    "release/sources",
+    "release/tags",
+    "release/related_tags",
+    "release/tables",
+    "source",
+    "sources",
+    "source/releases",
+    "tags",
+    "related_tags",
+    "tags/series"
+  )
 }
 
 # ------------------------------------------------------------------------------
@@ -451,38 +433,4 @@ class_collapse <- function(x) {
   }
 }
 
-is_endpoint <- function(x) {
-  x %in% c(
-    "category",
-    "category/children",
-    "category/related",
-    "category/series",
-    "category/tags",
-    "category/related_tags",
-    "series",
-    "series/search",
-    "series/updates",
-    "series/categories",
-    "series/search/tags",
-    "series/search/related_tags",
-    "series/release",
-    "series/observations",
-    "series/vintagedates",
-    "series/tags",
-    "release",
-    "releases",
-    "releases/dates",
-    "release/dates",
-    "release/series",
-    "release/sources",
-    "release/tags",
-    "release/related_tags",
-    "release/tables",
-    "source",
-    "sources",
-    "source/releases",
-    "tags",
-    "related_tags",
-    "tags/series"
-  )
-}
+
