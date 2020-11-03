@@ -15,16 +15,14 @@ fredr_category_children(
 root category. \emph{Required parameter.}}
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+Defaults to today's date. For more information, see \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
-Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+Defaults to today's date. For more information, see \href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 }
 \value{
-A \code{tibble} object containing the name and ID for the children categories
-of the parent category indicated by \code{category_id}.
+A \code{tibble} object containing the name and ID for the children
+categories of the parent category indicated by \code{category_id}.
 }
 \description{
 Get the child categories for a specified FRED parent category
@@ -45,5 +43,6 @@ fredr_category_children(category_id = 1L)
 }
 \seealso{
 \code{\link[=fredr_category]{fredr_category()}}, \code{\link[=fredr_category_related]{fredr_category_related()}},
-\code{\link[=fredr_category_series]{fredr_category_series()}}, \code{\link[=fredr_category_tags]{fredr_category_tags()}}, \code{\link[=fredr_category_related_tags]{fredr_category_related_tags()}}
+\code{\link[=fredr_category_series]{fredr_category_series()}}, \code{\link[=fredr_category_tags]{fredr_category_tags()}},
+\code{\link[=fredr_category_related_tags]{fredr_category_related_tags()}}
 }
