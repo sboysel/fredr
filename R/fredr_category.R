@@ -7,7 +7,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/category](https://research.stlouisfed.org/docs/api/fred/category.html)
+#' [fred/category](https://fred.stlouisfed.org/docs/api/fred/category.html)
 #'
 #' @seealso [fredr_category_children()], [fredr_category_related()],
 #' [fredr_category_series()], [fredr_category_tags()], [fredr_category_related_tags()]

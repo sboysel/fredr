@@ -12,7 +12,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/series/vintagedates](https://research.stlouisfed.org/docs/api/fred/series_vintagedates.html)
+#' [fred/series/vintagedates](https://fred.stlouisfed.org/docs/api/fred/series_vintagedates.html)
 #'
 #' @seealso [fredr_series_observations()], [fredr_series_search_text()],
 #' [fredr_series_search_id()], [fredr_series_search_tags()],

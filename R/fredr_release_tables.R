@@ -21,7 +21,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/release/tables](https://research.stlouisfed.org/docs/api/fred/release_tables.html)
+#' [fred/release/tables](https://fred.stlouisfed.org/docs/api/fred/release_tables.html)
 #'
 #' @seealso [fredr_releases()], [fredr_release_dates()], [fredr_releases_dates()],
 #' [fredr_release()], [fredr_release_series()], [fredr_release_sources()],

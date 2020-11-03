@@ -19,7 +19,7 @@ Get a FRED category
 \section{API Documentation}{
 
 
-\href{https://research.stlouisfed.org/docs/api/fred/category.html}{fred/category}
+\href{https://fred.stlouisfed.org/docs/api/fred/category.html}{fred/category}
 }
 
 \examples{

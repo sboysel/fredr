@@ -2,11 +2,11 @@
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to today's date. For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param realtime_end A `Date` indicating the end of the real-time period.
 #' Defaults to today's date. For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param limit An integer limit on the maximum number of results to return.
 #' Defaults to `1000`, the maximum.
@@ -28,7 +28,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/sources](https://research.stlouisfed.org/docs/api/fred/sources.html)
+#' [fred/sources](https://fred.stlouisfed.org/docs/api/fred/sources.html)
 #'
 #' @seealso [fredr_source()], [fredr_source_releases()]
 #'

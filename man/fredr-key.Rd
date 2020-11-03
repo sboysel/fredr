@@ -14,7 +14,7 @@ fredr_get_key()
 fredr_has_key()
 }
 \arguments{
-\item{key}{A valid FRED API key as a string. Obtain one at the \href{https://api.stlouisfed.org/api_key.html}{API Keys} page. Can also be \code{NULL}
+\item{key}{A valid FRED API key as a string. Obtain one at the \href{https://research.stlouisfed.org/docs/api/api_key.html}{API Keys} page. Can also be \code{NULL}
 to unset the key for the current R session.}
 }
 \description{
@@ -50,7 +50,7 @@ fredr_get_key()
 fredr_set_key(original_key)
 }
 \references{
-See St. Louis Fed Web Services \href{https://api.stlouisfed.org/api_key.html}{API Keys} to obtain an API key.
+See St. Louis Fed Web Services \href{https://research.stlouisfed.org/docs/api/api_key.html}{API Keys} to obtain an API key.
 }
 \seealso{
 Note that by using a FRED API key, you agree to the FRED API \href{https://research.stlouisfed.org/docs/api/terms_of_use.html}{Terms of Use}.

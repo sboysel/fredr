@@ -34,7 +34,7 @@ options(digits = 4)
 library(fredr)
 ```
 
-This vignette is intended to introduce the user to fredr functions for the [Categories endpoint](https://research.stlouisfed.org/docs/api/fred/#Categories) of the FRED API.
+This vignette is intended to introduce the user to fredr functions for the [Categories endpoint](https://fred.stlouisfed.org/docs/api/fred/#Categories) of the FRED API.
 
 FRED series are assigned **categories**. Each FRED category is assigned an integer identifier. For example:
 

@@ -12,8 +12,8 @@ Authors@R:
              email = "davis@rstudio.com"))
 Maintainer: Sam Boysel <sboysel@gmail.com>
 Description: An R client for the 'Federal Reserve Economic Data'
-    ('FRED') API <https://api.stlouisfed.org>.  Functions to retrieve
-    economic time series and other data from 'FRED'.
+    ('FRED') API <https://research.stlouisfed.org/docs/api/>.  Functions
+    to retrieve economic time series and other data from 'FRED'.
 License: MIT + file LICENSE
 URL: https://github.com/sboysel/fredr
 BugReports: https://github.com/sboysel/fredr/issues

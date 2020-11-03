@@ -351,7 +351,7 @@ validate_endpoint <- function(x) {
     msg <- paste0(
       "`", x,
       "` is not a valid endpoint. See ",
-      "https://research.stlouisfed.org/docs/api/fred/"
+      "https://fred.stlouisfed.org/docs/api/fred/"
     )
     abort(msg)
   }

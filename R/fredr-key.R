@@ -16,7 +16,7 @@
 #'   returns `FALSE`.
 #'
 #' @param key A valid FRED API key as a string. Obtain one at the [API
-#'   Keys](https://api.stlouisfed.org/api_key.html) page. Can also be `NULL`
+#'   Keys](https://research.stlouisfed.org/docs/api/api_key.html) page. Can also be `NULL`
 #'   to unset the key for the current R session.
 #'
 #' @details
@@ -26,7 +26,7 @@
 #'   setting the key.
 #'
 #' @references See St. Louis Fed Web Services [API
-#'   Keys](https://api.stlouisfed.org/api_key.html) to obtain an API key.
+#'   Keys](https://research.stlouisfed.org/docs/api/api_key.html) to obtain an API key.
 #'
 #' @seealso Note that by using a FRED API key, you agree to the FRED API [Terms
 #'   of Use](https://research.stlouisfed.org/docs/api/terms_of_use.html).

@@ -29,7 +29,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/tags/series](https://research.stlouisfed.org/docs/api/fred/tags_series.html)
+#' [fred/tags/series](https://fred.stlouisfed.org/docs/api/fred/tags_series.html)
 #'
 #' @seealso [fredr_category_tags()], [fredr_category_related_tags()], [fredr_docs()],
 #' [fredr_release_tags()], [fredr_release_related_tags()],

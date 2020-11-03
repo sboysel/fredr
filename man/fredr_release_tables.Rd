@@ -37,7 +37,7 @@ You can go directly to the tree structure by passing the appropriate
 \section{API Documentation}{
 
 
-\href{https://research.stlouisfed.org/docs/api/fred/release_tables.html}{fred/release/tables}
+\href{https://fred.stlouisfed.org/docs/api/fred/release_tables.html}{fred/release/tables}
 }
 
 \examples{

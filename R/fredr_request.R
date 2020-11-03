@@ -27,7 +27,7 @@
 #'
 #' @section API Documentation:
 #'
-#'   [FRED API](https://api.stlouisfed.org/docs/fred/)
+#'   [FRED API](https://fred.stlouisfed.org/docs/api/fred/)
 #'
 #' @examples
 #' if (fredr_has_key()) {

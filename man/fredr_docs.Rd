@@ -12,9 +12,11 @@ Opens FRED API web documentation in a new web browser tab.
 \section{API Documentation}{
 
 
-\href{https://api.stlouisfed.org/docs/fred/}{FRED API}
+\href{https://fred.stlouisfed.org/docs/api/fred/}{FRED API}
 }
 
 \examples{
+if (interactive()) {
 fredr_docs()
+}
 }

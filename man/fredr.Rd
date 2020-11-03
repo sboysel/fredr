@@ -106,11 +106,11 @@ Defaults to \code{"lin"}. Possible values are:
 
 \item{realtime_start}{A \code{Date} indicating the start of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{realtime_end}{A \code{Date} indicating the end of the real-time period.
 Defaults to today's date. For more information, see
-\href{https://research.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
+\href{https://fred.stlouisfed.org/docs/api/fred/realtime_period.html}{Real-Time Periods}.}
 
 \item{vintage_dates}{A vector of \code{Date} objects to download data for.
 Vintage dates are used to download data as it existed on these specified
@@ -136,7 +136,7 @@ Given a series ID, return observations of that series as a \code{tibble} object.
 \section{API Documentation}{
 
 
-\href{https://research.stlouisfed.org/docs/api/fred/series_observations.html}{fred/series/observations}
+\href{https://fred.stlouisfed.org/docs/api/fred/series_observations.html}{fred/series/observations}
 }
 
 \examples{

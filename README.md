@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Codecov](https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg)](https://codecov.io/github/sboysel/fredr)
-[![CRAN](https://img.shields.io/cran/v/fredr.svg)](https://cran.r-project.org/web/packages/fredr/index.html)
+[![CRAN](https://img.shields.io/cran/v/fredr.svg)](https://cran.r-project.org/package=fredr)
 [![CRAN
 Downloads](https://cranlogs.r-pkg.org/badges/fredr)](https://cran.r-project.org/package=fredr)
 [![R-CMD-check](https://github.com/sboysel/fredr/workflows/R-CMD-check/badge.svg)](https://github.com/sboysel/fredr/actions)
@@ -24,7 +24,7 @@ endpoints exposed through fredr, such as `fredr_series_search_text()`,
 which allows you to search for a FRED series by text.
 
 We strongly encourage referencing the FRED API
-[documentation](https://research.stlouisfed.org/docs/api/fred/) to
+[documentation](https://fred.stlouisfed.org/docs/api/fred/) to
 leverage the full power of fredr.
 
 You’ll also need a free API key to use fredr. See `?fredr_set_key()`.

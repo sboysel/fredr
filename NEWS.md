@@ -1,5 +1,7 @@
 # fredr (development version)
 
+* fredr has been un-orphaned!
+
 * If the FRED rate limit is hit, all fredr functions will now wait an
   appropriate amount of time before automatically attempting to make the
   request again. The rate limit seems to be 120 requests per minute, so

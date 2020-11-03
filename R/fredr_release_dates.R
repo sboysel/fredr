@@ -4,11 +4,11 @@
 #'
 #' @param realtime_start A `Date` indicating the start of the real-time period.
 #' Defaults to `1776-07-04` (earliest available). For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param realtime_end A `Date` indicating the end of the real-time period.
 #' Defaults to `9999-12-31` (latest available). For more information, see
-#' [Real-Time Periods](https://research.stlouisfed.org/docs/api/fred/realtime_period.html).
+#' [Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html).
 #'
 #' @param limit An integer limit on the maximum number of results to return.
 #' Defaults to `10000`, the maximum.
@@ -30,7 +30,7 @@
 #'
 #' @section API Documentation:
 #'
-#' [fred/release/dates](https://research.stlouisfed.org/docs/api/fred/release_dates.html)
+#' [fred/release/dates](https://fred.stlouisfed.org/docs/api/fred/release_dates.html)
 #'
 #' @seealso [fredr_releases()], [fredr_releases_dates()], [fredr_release()],
 #' [fredr_release_series()], [fredr_release_sources()], [fredr_release_tags()],
