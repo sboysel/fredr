@@ -29,3 +29,4 @@
 ^README\.Rmd$
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
+^CRAN-RELEASE$
