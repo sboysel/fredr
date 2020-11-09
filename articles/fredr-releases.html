@@ -109,7 +109,7 @@
       <h1 data-toc-skip>FRED Releases</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-11-03</h4>
+            <h4 class="date">2020-11-09</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-releases.Rmd"><code>vignettes/fredr-releases.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-releases.Rmd</code></div>
@@ -121,55 +121,54 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr">fredr</a></span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr">fredr</a></span><span class="op">)</span></code></pre></div>
 <p>This vignette is intended to introduce the user to fredr functions for the <a href="https://fred.stlouisfed.org/docs/api/fred/#Releases">Releases endpoint</a> of the FRED API.</p>
 <p>FRED series are added to the FRED database over time in <strong>releases</strong>. Each FRED release is assigned an integer identifier. The following examples illustrate usage of the Releases endpoint functions in fredr.</p>
 <div id="get-all-releases-of-economic-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-all-releases-of-economic-data" class="anchor"></a>Get all releases of economic data</h2>
 <p>The function <code><a href="../reference/fredr_releases.html">fredr_releases()</a></code> returns a set of all FRED releases matching the request. The data returned is a tibble in which each row represents a FRED release. The default call returns all FRED releases:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_releases.html">fredr_releases</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 290 x 7</span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_releases.html">fredr_releases</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 291 x 7</span>
 <span class="co">#&gt;       id realtime_start realtime_end name       press_release link     notes    </span>
 <span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;lgl&gt;         &lt;chr&gt;    &lt;chr&gt;    </span>
-<span class="co">#&gt;  1     9 2020-11-03     2020-11-03   Advance M… TRUE          http://… "The U.S…</span>
-<span class="co">#&gt;  2    10 2020-11-03     2020-11-03   Consumer … TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  3    11 2020-11-03     2020-11-03   Employmen… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  4    13 2020-11-03     2020-11-03   G.17 Indu… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  5    14 2020-11-03     2020-11-03   G.19 Cons… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  6    15 2020-11-03     2020-11-03   G.5 Forei… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  7    17 2020-11-03     2020-11-03   H.10 Fore… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  8    18 2020-11-03     2020-11-03   H.15 Sele… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  9    19 2020-11-03     2020-11-03   H.3 Aggre… TRUE          http://… "The Boa…</span>
-<span class="co">#&gt; 10    20 2020-11-03     2020-11-03   H.4.1 Fac… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt; # … with 280 more rows</span></pre></div>
+<span class="co">#&gt;  1     9 2020-11-09     2020-11-09   Advance M… TRUE          http://… "The U.S…</span>
+<span class="co">#&gt;  2    10 2020-11-09     2020-11-09   Consumer … TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  3    11 2020-11-09     2020-11-09   Employmen… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  4    13 2020-11-09     2020-11-09   G.17 Indu… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  5    14 2020-11-09     2020-11-09   G.19 Cons… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  6    15 2020-11-09     2020-11-09   G.5 Forei… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  7    17 2020-11-09     2020-11-09   H.10 Fore… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  8    18 2020-11-09     2020-11-09   H.15 Sele… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  9    19 2020-11-09     2020-11-09   H.3 Aggre… TRUE          http://… "The Boa…</span>
+<span class="co">#&gt; 10    20 2020-11-09     2020-11-09   H.4.1 Fac… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt; # … with 281 more rows</span></code></pre></div>
 </div>
 <div id="get-release-dates-for-all-releases-of-economic-data-" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-release-dates-for-all-releases-of-economic-data-" class="anchor"></a>Get release dates for all releases of economic data.</h2>
 <p>The function <code><a href="../reference/fredr_releases_dates.html">fredr_releases_dates()</a></code> returns a set of release dates for <em>all</em> FRED releases. The data returned is a tibble where each row represents a release date for a release. For example, to get all release dates (up to the limit of <code>1000</code>) ordered by descending release date:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_releases_dates.html">fredr_releases_dates</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; You have hit the rate limit of 120 requests / minute. Waiting 20 seconds before retrying request. This is attempt 1 of 6.</span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_releases_dates.html">fredr_releases_dates</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1,000 x 3</span>
-<span class="co">#&gt;    release_id release_name                                              date    </span>
-<span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                                                     &lt;chr&gt;   </span>
-<span class="co">#&gt;  1        354 An Arbitrage-Free Three-Factor Term Structure Model and … 2020-11…</span>
-<span class="co">#&gt;  2         86 Commercial Paper                                          2020-11…</span>
-<span class="co">#&gt;  3         72 Daily Treasury Inflation-Indexed Securities               2020-11…</span>
-<span class="co">#&gt;  4        279 Economic Policy Uncertainty                               2020-11…</span>
-<span class="co">#&gt;  5        378 Federal Funds Data                                        2020-11…</span>
-<span class="co">#&gt;  6        101 FOMC Press Release                                        2020-11…</span>
-<span class="co">#&gt;  7         18 H.15 Selected Interest Rates                              2020-11…</span>
-<span class="co">#&gt;  8        185 Interest on Required Balances and Excess Balances         2020-11…</span>
-<span class="co">#&gt;  9        304 Interest Rate Spreads                                     2020-11…</span>
-<span class="co">#&gt; 10         95 Manufacturer's Shipments, Inventories, and Orders (M3) S… 2020-11…</span>
-<span class="co">#&gt; # … with 990 more rows</span></pre></div>
+<span class="co">#&gt;    release_id release_name                                date      </span>
+<span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                                       &lt;chr&gt;     </span>
+<span class="co">#&gt;  1         72 Daily Treasury Inflation-Indexed Securities 2020-11-09</span>
+<span class="co">#&gt;  2        441 Coinbase Cryptocurrencies                   2020-11-08</span>
+<span class="co">#&gt;  3        441 Coinbase Cryptocurrencies                   2020-11-07</span>
+<span class="co">#&gt;  4        441 Coinbase Cryptocurrencies                   2020-11-06</span>
+<span class="co">#&gt;  5         86 Commercial Paper                            2020-11-06</span>
+<span class="co">#&gt;  6         72 Daily Treasury Inflation-Indexed Securities 2020-11-06</span>
+<span class="co">#&gt;  7        279 Economic Policy Uncertainty                 2020-11-06</span>
+<span class="co">#&gt;  8         50 Employment Situation                        2020-11-06</span>
+<span class="co">#&gt;  9        378 Federal Funds Data                          2020-11-06</span>
+<span class="co">#&gt; 10        101 FOMC Press Release                          2020-11-06</span>
+<span class="co">#&gt; # … with 990 more rows</span></code></pre></div>
 <p>To instead order the results by ascending release ID:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_releases_dates.html">fredr_releases_dates</a></span><span class="op">(</span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_releases_dates.html">fredr_releases_dates</a></span><span class="op">(</span>
   sort_order <span class="op">=</span> <span class="st">"asc"</span>,
   order_by <span class="op">=</span> <span class="st">"release_id"</span>
 <span class="op">)</span>
@@ -186,25 +185,25 @@
 <span class="co">#&gt;  8          9 Advance Monthly Sales for Retail and Food Services 2020-08-14</span>
 <span class="co">#&gt;  9          9 Advance Monthly Sales for Retail and Food Services 2020-09-16</span>
 <span class="co">#&gt; 10          9 Advance Monthly Sales for Retail and Food Services 2020-10-16</span>
-<span class="co">#&gt; # … with 990 more rows</span></pre></div>
+<span class="co">#&gt; # … with 990 more rows</span></code></pre></div>
 </div>
 <div id="get-a-release-of-economic-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-a-release-of-economic-data" class="anchor"></a>Get a release of economic data</h2>
 <p>The function <code><a href="../reference/fredr_release.html">fredr_release()</a></code> returns data for a single FRED release specified by <code>release_id</code>. The data returned is a tibble where each row represents the specified release. For example, to get release data for the Employment Cost Index release:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_release.html">fredr_release</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">11L</span><span class="op">)</span>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_release.html">fredr_release</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">11L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 6</span>
 <span class="co">#&gt;      id realtime_start realtime_end name          press_release link            </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;         &lt;lgl&gt;         &lt;chr&gt;           </span>
-<span class="co">#&gt; 1    11 2020-11-03     2020-11-03   Employment C… TRUE          http://www.bls.…</span></pre></div>
+<span class="co">#&gt; 1    11 2020-11-09     2020-11-09   Employment C… TRUE          http://www.bls.…</span></code></pre></div>
 </div>
 <div id="get-release-dates-for-a-single-release-of-economic-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-release-dates-for-a-single-release-of-economic-data" class="anchor"></a>Get release dates for a single release of economic data</h2>
 <p>The function <code><a href="../reference/fredr_release_dates.html">fredr_release_dates()</a></code> returns a set of release dates for a single FRED release specified by <code>release_id</code>. The data returned is a tibble where each row represents a release date for the release specified. For example, to get release dates for the Employment Cost Index release:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_release_dates.html">fredr_release_dates</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">11L</span><span class="op">)</span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_release_dates.html">fredr_release_dates</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">11L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 108 x 2</span>
 <span class="co">#&gt;    release_id date      </span>
 <span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;     </span>
@@ -218,34 +217,34 @@
 <span class="co">#&gt;  8         11 1998-07-30</span>
 <span class="co">#&gt;  9         11 1998-10-29</span>
 <span class="co">#&gt; 10         11 1999-01-28</span>
-<span class="co">#&gt; # … with 98 more rows</span></pre></div>
+<span class="co">#&gt; # … with 98 more rows</span></code></pre></div>
 </div>
 <div id="get-the-series-in-a-release-of-economic-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-series-in-a-release-of-economic-data" class="anchor"></a>Get the series in a release of economic data</h2>
 <p>The function <code><a href="../reference/fredr_release_series.html">fredr_release_series()</a></code> returns a set of series belonging to the FRED release specified by <code>release_id</code>. The data returned is a tibble where each row represents a series in the release specified. For example, to get series in the Employment Cost Index release:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_release_series.html">fredr_release_series</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_release_series.html">fredr_release_series</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1,000 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 CPIA… 2020-11-03     2020-11-03   Cons… 1914-12-01       2020-09-01     </span>
-<span class="co">#&gt;  2 CPIA… 2020-11-03     2020-11-03   Cons… 1947-01-01       2020-09-01     </span>
-<span class="co">#&gt;  3 CPIA… 2020-11-03     2020-11-03   Cons… 1913-01-01       2020-09-01     </span>
-<span class="co">#&gt;  4 CPIA… 2020-11-03     2020-11-03   Cons… 1947-01-01       2020-09-01     </span>
-<span class="co">#&gt;  5 CPIE… 2020-11-03     2020-11-03   Cons… 1993-01-01       2020-09-01     </span>
-<span class="co">#&gt;  6 CPIE… 2020-11-03     2020-11-03   Cons… 1993-01-01       2020-09-01     </span>
-<span class="co">#&gt;  7 CPIE… 2020-11-03     2020-11-03   Cons… 1957-01-01       2020-09-01     </span>
-<span class="co">#&gt;  8 CPIE… 2020-11-03     2020-11-03   Cons… 1957-01-01       2020-09-01     </span>
-<span class="co">#&gt;  9 CPIF… 2020-11-03     2020-11-03   Cons… 1967-01-01       2020-09-01     </span>
-<span class="co">#&gt; 10 CPIF… 2020-11-03     2020-11-03   Cons… 1967-01-01       2020-09-01     </span>
+<span class="co">#&gt;  1 CPIA… 2020-11-09     2020-11-09   Cons… 1914-12-01       2020-09-01     </span>
+<span class="co">#&gt;  2 CPIA… 2020-11-09     2020-11-09   Cons… 1947-01-01       2020-09-01     </span>
+<span class="co">#&gt;  3 CPIA… 2020-11-09     2020-11-09   Cons… 1913-01-01       2020-09-01     </span>
+<span class="co">#&gt;  4 CPIA… 2020-11-09     2020-11-09   Cons… 1947-01-01       2020-09-01     </span>
+<span class="co">#&gt;  5 CPIE… 2020-11-09     2020-11-09   Cons… 1993-01-01       2020-09-01     </span>
+<span class="co">#&gt;  6 CPIE… 2020-11-09     2020-11-09   Cons… 1993-01-01       2020-09-01     </span>
+<span class="co">#&gt;  7 CPIE… 2020-11-09     2020-11-09   Cons… 1957-01-01       2020-09-01     </span>
+<span class="co">#&gt;  8 CPIE… 2020-11-09     2020-11-09   Cons… 1957-01-01       2020-09-01     </span>
+<span class="co">#&gt;  9 CPIF… 2020-11-09     2020-11-09   Cons… 1967-01-01       2020-09-01     </span>
+<span class="co">#&gt; 10 CPIF… 2020-11-09     2020-11-09   Cons… 1967-01-01       2020-09-01     </span>
 <span class="co">#&gt; # … with 990 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
-<span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></div>
+<span class="co">#&gt; #   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></code></pre></div>
 <p>Note the parameters available to filter series belonging to a release:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_release_series.html">fredr_release_series</a></span><span class="op">(</span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_release_series.html">fredr_release_series</a></span><span class="op">(</span>
   release_id <span class="op">=</span> <span class="fl">10L</span>,
   filter_variable <span class="op">=</span> <span class="st">"frequency"</span>,
   filter_value <span class="op">=</span> <span class="st">"Monthly"</span>,
@@ -256,53 +255,53 @@
 <span class="co">#&gt; # A tibble: 10 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 CPIA… 2020-11-03     2020-11-03   Cons… 1947-01-01       2020-09-01     </span>
-<span class="co">#&gt;  2 CPIL… 2020-11-03     2020-11-03   Cons… 1957-01-01       2020-09-01     </span>
-<span class="co">#&gt;  3 CPIA… 2020-11-03     2020-11-03   Cons… 1913-01-01       2020-09-01     </span>
-<span class="co">#&gt;  4 CUUR… 2020-11-03     2020-11-03   Cons… 1913-01-01       2020-09-01     </span>
-<span class="co">#&gt;  5 CPIM… 2020-11-03     2020-11-03   Cons… 1947-01-01       2020-09-01     </span>
-<span class="co">#&gt;  6 CPIF… 2020-11-03     2020-11-03   Cons… 1967-01-01       2020-09-01     </span>
-<span class="co">#&gt;  7 CUUR… 2020-11-03     2020-11-03   Cons… 1914-12-01       2020-09-01     </span>
-<span class="co">#&gt;  8 CUSR… 2020-11-03     2020-11-03   Cons… 1953-01-01       2020-09-01     </span>
-<span class="co">#&gt;  9 CPIA… 2020-11-03     2020-11-03   Cons… 1947-01-01       2020-09-01     </span>
-<span class="co">#&gt; 10 CWUR… 2020-11-03     2020-11-03   Cons… 1913-01-01       2020-09-01     </span>
+<span class="co">#&gt;  1 CPIA… 2020-11-09     2020-11-09   Cons… 1947-01-01       2020-09-01     </span>
+<span class="co">#&gt;  2 CPIL… 2020-11-09     2020-11-09   Cons… 1957-01-01       2020-09-01     </span>
+<span class="co">#&gt;  3 CPIA… 2020-11-09     2020-11-09   Cons… 1913-01-01       2020-09-01     </span>
+<span class="co">#&gt;  4 CUUR… 2020-11-09     2020-11-09   Cons… 1913-01-01       2020-09-01     </span>
+<span class="co">#&gt;  5 CPIM… 2020-11-09     2020-11-09   Cons… 1947-01-01       2020-09-01     </span>
+<span class="co">#&gt;  6 CPIF… 2020-11-09     2020-11-09   Cons… 1967-01-01       2020-09-01     </span>
+<span class="co">#&gt;  7 CUUR… 2020-11-09     2020-11-09   Cons… 1914-12-01       2020-09-01     </span>
+<span class="co">#&gt;  8 CUSR… 2020-11-09     2020-11-09   Cons… 1953-01-01       2020-09-01     </span>
+<span class="co">#&gt;  9 CPIA… 2020-11-09     2020-11-09   Cons… 1947-01-01       2020-09-01     </span>
+<span class="co">#&gt; 10 CWUR… 2020-11-09     2020-11-09   Cons… 1913-01-01       2020-09-01     </span>
 <span class="co">#&gt; # … with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
-<span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></pre></div>
+<span class="co">#&gt; #   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></code></pre></div>
 </div>
 <div id="get-the-fred-tags-for-a-release" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-fred-tags-for-a-release" class="anchor"></a>Get the FRED tags for a release</h2>
 <p>The function <code><a href="../reference/fredr_release_tags.html">fredr_release_tags()</a></code> returns a set of tags assigned to series belonging to the FRED release specified by <code>release_id</code>. The data returned is a tibble where each row represents a tag. For example, to get the geographic tags assigned to series in the Consumer Price Index release:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_release_tags.html">fredr_release_tags</a></span><span class="op">(</span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_release_tags.html">fredr_release_tags</a></span><span class="op">(</span>
   release_id <span class="op">=</span> <span class="fl">10L</span>,
   tag_group_id <span class="op">=</span> <span class="st">"geo"</span>,
   order_by <span class="op">=</span> <span class="st">"popularity"</span>,
   sort_order <span class="op">=</span> <span class="st">"desc"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 65 x 6</span>
+<span class="co">#&gt; # A tibble: 64 x 6</span>
 <span class="co">#&gt;    name  group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100         4662</span>
-<span class="co">#&gt;  2 ca    geo      California          2012-02-27 10:18:…         61          266</span>
-<span class="co">#&gt;  3 tx    geo      Texas               2012-02-27 10:18:…         58          180</span>
-<span class="co">#&gt;  4 fl    geo      Florida             2012-02-27 10:18:…         55          166</span>
-<span class="co">#&gt;  5 pa    geo      Pennsylvania        2012-02-27 10:18:…         55          238</span>
-<span class="co">#&gt;  6 ny    geo      New York            2012-02-27 10:18:…         55          108</span>
-<span class="co">#&gt;  7 wi    geo      Wisconsin           2012-02-27 10:18:…         54          220</span>
-<span class="co">#&gt;  8 mi    geo      Michigan            2012-02-27 10:18:…         52           92</span>
-<span class="co">#&gt;  9 oh    geo      Ohio                2012-02-27 10:18:…         50          170</span>
-<span class="co">#&gt; 10 il    geo      Illinois            2012-02-27 10:18:…         49          156</span>
-<span class="co">#&gt; # … with 55 more rows</span></pre></div>
+<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100         4748</span>
+<span class="co">#&gt;  2 ca    geo      California          2012-02-27 10:18:…         61          286</span>
+<span class="co">#&gt;  3 tx    geo      Texas               2012-02-27 10:18:…         58          198</span>
+<span class="co">#&gt;  4 fl    geo      Florida             2012-02-27 10:18:…         55          164</span>
+<span class="co">#&gt;  5 pa    geo      Pennsylvania        2012-02-27 10:18:…         55          256</span>
+<span class="co">#&gt;  6 ny    geo      New York            2012-02-27 10:18:…         55           90</span>
+<span class="co">#&gt;  7 wi    geo      Wisconsin           2012-02-27 10:18:…         54          228</span>
+<span class="co">#&gt;  8 mi    geo      Michigan            2012-02-27 10:18:…         52           94</span>
+<span class="co">#&gt;  9 oh    geo      Ohio                2012-02-27 10:18:…         50          164</span>
+<span class="co">#&gt; 10 il    geo      Illinois            2012-02-27 10:18:…         49          158</span>
+<span class="co">#&gt; # … with 54 more rows</span></code></pre></div>
 </div>
 <div id="get-the-related-fred-tags-for-one-or-more-fred-tags-within-a-release" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-related-fred-tags-for-one-or-more-fred-tags-within-a-release" class="anchor"></a>Get the related FRED tags for one or more FRED tags within a release</h2>
 <p>The function <code><a href="../reference/fredr_release_related_tags.html">fredr_release_related_tags()</a></code> returns a set of tags assigned to series belonging to the FRED release specified by <code>release_id</code> that are <em>related to</em> tags specified in <code>tag_names</code>. The data returned is a tibble where each row represents a related tag. For example, to get frequency tags assigned to series in the Consumer Price Index release that are also related to the tag <code>bls</code> and <em>not</em> the <code>annual</code> tag:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_release_related_tags.html">fredr_release_related_tags</a></span><span class="op">(</span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_release_related_tags.html">fredr_release_related_tags</a></span><span class="op">(</span>
   release_id <span class="op">=</span> <span class="fl">10L</span>,
   tag_names <span class="op">=</span> <span class="st">"bls"</span>,
   tag_group_id <span class="op">=</span> <span class="st">"freq"</span>,
@@ -313,35 +312,35 @@
 <span class="co">#&gt; # A tibble: 2 x 6</span>
 <span class="co">#&gt;   name       group_id notes created                popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;                       &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 monthly    freq     ""    2012-02-27 10:18:19-06         93         2162</span>
-<span class="co">#&gt; 2 semiannual freq     ""    2012-02-27 10:18:19-06         32         1842</span></pre></div>
+<span class="co">#&gt; 1 monthly    freq     ""    2012-02-27 10:18:19-06         93         2156</span>
+<span class="co">#&gt; 2 semiannual freq     ""    2012-02-27 10:18:19-06         32         1844</span></code></pre></div>
 </div>
 <div id="get-the-sources-for-a-release-of-economic-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-the-sources-for-a-release-of-economic-data" class="anchor"></a>Get the sources for a release of economic data</h2>
 <p>The function <code><a href="../reference/fredr_release_sources.html">fredr_release_sources()</a></code> returns a set of FRED sources for the FRED release specified by <code>release_id</code>. The data returned is a tibble where each row represents a source. For example, to get the sources for the Consumer Price Index release:</p>
-<div class="sourceCode" id="cb11"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_release_sources.html">fredr_release_sources</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_release_sources.html">fredr_release_sources</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 5</span>
 <span class="co">#&gt;      id realtime_start realtime_end name                       link             </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                      &lt;chr&gt;            </span>
-<span class="co">#&gt; 1    22 2020-11-03     2020-11-03   U.S. Bureau of Labor Stat… https://www.bls.…</span></pre></div>
+<span class="co">#&gt; 1    22 2020-11-09     2020-11-09   U.S. Bureau of Labor Stat… https://www.bls.…</span></code></pre></div>
 </div>
 <div id="get-release-table-trees-for-a-given-release" class="section level2">
 <h2 class="hasAnchor">
 <a href="#get-release-table-trees-for-a-given-release" class="anchor"></a>Get release table trees for a given release</h2>
 <p>The function <code><a href="../reference/fredr_release_tables.html">fredr_release_tables()</a></code> returns a set of FRED release table trees for the FRED release specified by <code>release_id</code>. The data returned is a tibble where each row represents an element of the table tree’s children: the column <code>name</code> gives the element ID and the column <code>value</code> stores data nodes for the element (e.g. element ID, release ID, parent ID, element type, element name, children, etc.). For example, to get the table tree for the Consumer Price Index release:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit">
-<span class="va">cpi_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/fredr_release_tables.html">fredr_release_tables</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">cpi_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/fredr_release_tables.html">fredr_release_tables</a></span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span>
 <span class="va">cpi_tbl</span>
 <span class="co">#&gt; # A tibble: 2 x 2</span>
 <span class="co">#&gt;   name  value           </span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;list&gt;          </span>
 <span class="co">#&gt; 1 34481 &lt;named list [9]&gt;</span>
-<span class="co">#&gt; 2 36712 &lt;named list [9]&gt;</span></pre></div>
+<span class="co">#&gt; 2 36712 &lt;named list [9]&gt;</span></code></pre></div>
 <p>The above table has two elements: <code>34481</code> and <code>36712</code>. Inspect an element (a list) by selecting its row and unnesting the row element <code>value</code> using <code><a href="https://tibble.tidyverse.org/reference/enframe.html">tibble::deframe()</a></code>:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Attaching package: 'dplyr'</span>
 <span class="co">#&gt; The following objects are masked from 'package:stats':</span>
@@ -381,10 +380,10 @@
 <span class="co">#&gt; [1] "0"</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $`36712`$children</span>
-<span class="co">#&gt; list()</span></pre></div>
+<span class="co">#&gt; list()</span></code></pre></div>
 <p>You can extract the tree hierarchy of a deeper element in the table by specifying an <code>element_id</code>. From the previous example, if you wanted to get the subtree for child element <code>36712</code> of the Consumer Price Index table:</p>
-<div class="sourceCode" id="cb14"><pre class="downlit">
-<span class="fu"><a href="../reference/fredr_release_tables.html">fredr_release_tables</a></span><span class="op">(</span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_release_tables.html">fredr_release_tables</a></span><span class="op">(</span>
   release_id <span class="op">=</span> <span class="fl">10L</span>,
   element_id <span class="op">=</span> <span class="fl">36712L</span>
 <span class="op">)</span>
@@ -394,7 +393,7 @@
 <span class="co">#&gt; 1 36713 &lt;named list [9]&gt;</span>
 <span class="co">#&gt; 2 36801 &lt;named list [9]&gt;</span>
 <span class="co">#&gt; 3 37003 &lt;named list [9]&gt;</span>
-<span class="co">#&gt; 4 37691 &lt;named list [9]&gt;</span></pre></div>
+<span class="co">#&gt; 4 37691 &lt;named list [9]&gt;</span></code></pre></div>
 </div>
 </div>
   </div>
