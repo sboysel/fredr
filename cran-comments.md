@@ -19,6 +19,30 @@ New submission
 
 There are no reverse dependencies.
 
+## 2.0.0 Resubmission
+
+This is a re-submission of fredr 2.0.0. See below for the explanation of why
+fredr was archived to begin with, and our fix.
+
+### Review 1 - 2020-11-11
+
+> Please always make sure to reset to user's options(), working directory
+or par() after you changed it in examples and vignettes and demos.
+e.g.:
+old <- options(digits = 3)
+...
+options(old)
+
+The fredr vignettes were using `options(digits = 4)`. This has been removed.
+
+> Have the issues why your package was archived been fixed?
+Please explain this in the submission comments.
+
+fredr was archived because `fredr_docs()` was hitting a URL that used to be
+valid, but changed somewhere along the way to be invalid. This broke a test.
+We have updated `fredr_docs()` to be simpler, and to only browse a URL that
+should be more stable.
+
 ## 2.0.0 Submission
 
 This is a submission of fredr 2.0.0 intended to un-orphan the fredr package. 
