@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
       </span>
     </div>
 
@@ -153,18 +153,18 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_releases_dates.html">fredr_releases_dates</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1,000 x 3</span>
-<span class="co">#&gt;    release_id release_name                                             date     </span>
-<span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                                                    &lt;chr&gt;    </span>
-<span class="co">#&gt;  1        441 Coinbase Cryptocurrencies                                2020-11-…</span>
-<span class="co">#&gt;  2        441 Coinbase Cryptocurrencies                                2020-11-…</span>
-<span class="co">#&gt;  3        441 Coinbase Cryptocurrencies                                2020-11-…</span>
-<span class="co">#&gt;  4         86 Commercial Paper                                         2020-11-…</span>
-<span class="co">#&gt;  5         72 Daily Treasury Inflation-Indexed Securities              2020-11-…</span>
-<span class="co">#&gt;  6        279 Economic Policy Uncertainty                              2020-11-…</span>
-<span class="co">#&gt;  7        378 Federal Funds Data                                       2020-11-…</span>
-<span class="co">#&gt;  8        101 FOMC Press Release                                       2020-11-…</span>
-<span class="co">#&gt;  9         18 H.15 Selected Interest Rates                             2020-11-…</span>
-<span class="co">#&gt; 10         22 H.8 Assets and Liabilities of Commercial Banks in the U… 2020-11-…</span>
+<span class="co">#&gt;    release_id release_name                                date      </span>
+<span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                                       &lt;chr&gt;     </span>
+<span class="co">#&gt;  1         72 Daily Treasury Inflation-Indexed Securities 2020-11-16</span>
+<span class="co">#&gt;  2        279 Economic Policy Uncertainty                 2020-11-16</span>
+<span class="co">#&gt;  3        321 Empire State Manufacturing Survey           2020-11-16</span>
+<span class="co">#&gt;  4        378 Federal Funds Data                          2020-11-16</span>
+<span class="co">#&gt;  5        101 FOMC Press Release                          2020-11-16</span>
+<span class="co">#&gt;  6        239 International Financial Statistics          2020-11-16</span>
+<span class="co">#&gt;  7        427 Moody's Daily Corporate Bond Yield Averages 2020-11-16</span>
+<span class="co">#&gt;  8        287 Nikkei Indexes                              2020-11-16</span>
+<span class="co">#&gt;  9        375 Overnight Bank Funding Rate Data            2020-11-16</span>
+<span class="co">#&gt; 10        445 Secured Overnight Financing Rate Data       2020-11-16</span>
 <span class="co">#&gt; # … with 990 more rows</span></code></pre></div>
 <p>To instead order the results by ascending release ID:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -281,20 +281,19 @@
   order_by <span class="op">=</span> <span class="st">"popularity"</span>,
   sort_order <span class="op">=</span> <span class="st">"desc"</span>
 <span class="op">)</span>
-<span class="co">#&gt; Request failed [504]. Retrying in 1 seconds...</span>
 <span class="co">#&gt; # A tibble: 65 x 6</span>
 <span class="co">#&gt;    name  group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100         4660</span>
-<span class="co">#&gt;  2 ca    geo      California          2012-02-27 10:18:…         61          266</span>
-<span class="co">#&gt;  3 tx    geo      Texas               2012-02-27 10:18:…         58          180</span>
-<span class="co">#&gt;  4 fl    geo      Florida             2012-02-27 10:18:…         55          164</span>
-<span class="co">#&gt;  5 pa    geo      Pennsylvania        2012-02-27 10:18:…         55          238</span>
-<span class="co">#&gt;  6 ny    geo      New York            2012-02-27 10:18:…         55          108</span>
-<span class="co">#&gt;  7 wi    geo      Wisconsin           2012-02-27 10:18:…         54          220</span>
-<span class="co">#&gt;  8 mi    geo      Michigan            2012-02-27 10:18:…         52           92</span>
-<span class="co">#&gt;  9 oh    geo      Ohio                2012-02-27 10:18:…         50          170</span>
-<span class="co">#&gt; 10 il    geo      Illinois            2012-02-27 10:18:…         49          156</span>
+<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100         4698</span>
+<span class="co">#&gt;  2 ca    geo      California          2012-02-27 10:18:…         61          284</span>
+<span class="co">#&gt;  3 tx    geo      Texas               2012-02-27 10:18:…         58          186</span>
+<span class="co">#&gt;  4 fl    geo      Florida             2012-02-27 10:18:…         55          174</span>
+<span class="co">#&gt;  5 pa    geo      Pennsylvania        2012-02-27 10:18:…         55          244</span>
+<span class="co">#&gt;  6 ny    geo      New York            2012-02-27 10:18:…         55          106</span>
+<span class="co">#&gt;  7 wi    geo      Wisconsin           2012-02-27 10:18:…         54          226</span>
+<span class="co">#&gt;  8 mi    geo      Michigan            2012-02-27 10:18:…         52           94</span>
+<span class="co">#&gt;  9 oh    geo      Ohio                2012-02-27 10:18:…         50          174</span>
+<span class="co">#&gt; 10 il    geo      Illinois            2012-02-27 10:18:…         49          150</span>
 <span class="co">#&gt; # … with 55 more rows</span></code></pre></div>
 </div>
 <div id="get-the-related-fred-tags-for-one-or-more-fred-tags-within-a-release" class="section level2">
@@ -314,7 +313,7 @@
 <span class="co">#&gt;   name       group_id notes created                popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;                       &lt;int&gt;        &lt;int&gt;</span>
 <span class="co">#&gt; 1 monthly    freq     ""    2012-02-27 10:18:19-06         93         2150</span>
-<span class="co">#&gt; 2 semiannual freq     ""    2012-02-27 10:18:19-06         32         1814</span></code></pre></div>
+<span class="co">#&gt; 2 semiannual freq     ""    2012-02-27 10:18:19-06         32         1852</span></code></pre></div>
 </div>
 <div id="get-the-sources-for-a-release-of-economic-data" class="section level2">
 <h2 class="hasAnchor">

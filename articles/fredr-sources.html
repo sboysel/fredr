@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
       </span>
     </div>
 
@@ -151,6 +151,7 @@
 <p>The function <code><a href="../reference/fredr_source.html">fredr_source()</a></code> returns information for a <em>single</em> source indicated by <code>source_id</code>. The data returned is a tibble in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is <code>6</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_source.html">fredr_source</a></span><span class="op">(</span>source_id <span class="op">=</span> <span class="fl">6L</span><span class="op">)</span>
+<span class="co">#&gt; You have hit the rate limit of 120 requests / minute. Waiting 20 seconds before retrying request. This is attempt 1 of 6.</span>
 <span class="co">#&gt; # A tibble: 1 x 5</span>
 <span class="co">#&gt;      id realtime_start realtime_end name                           link         </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                          &lt;chr&gt;        </span>

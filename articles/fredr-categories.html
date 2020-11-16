@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
       </span>
     </div>
 
@@ -261,12 +261,13 @@
   category_id <span class="op">=</span> <span class="fl">6L</span>,
   tag_group_id <span class="op">=</span> <span class="st">"src"</span>
 <span class="op">)</span>
+<span class="co">#&gt; You have hit the rate limit of 120 requests / minute. Waiting 20 seconds before retrying request. This is attempt 1 of 6.</span>
 <span class="co">#&gt; # A tibble: 3 x 6</span>
 <span class="co">#&gt;   name    group_id notes               created           popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 census  src      Census              2012-02-27 10:18…         80          406</span>
-<span class="co">#&gt; 2 bea     src      Bureau of Economic… 2012-02-27 10:18…         79            4</span>
-<span class="co">#&gt; 3 frb stl src      St. Louis Fed       2012-02-27 10:18…         68            2</span></code></pre></div>
+<span class="co">#&gt; 1 census  src      Census              2012-02-27 10:18…         80          384</span>
+<span class="co">#&gt; 2 bea     src      Bureau of Economic… 2012-02-27 10:18…         79            8</span>
+<span class="co">#&gt; 3 frb stl src      St. Louis Fed       2012-02-27 10:18…         68            8</span></code></pre></div>
 <p>To search for tags with the words <code>"usa"</code> in the “Production &amp; Business Activity” category, ordering the results by popularity:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span>
@@ -293,19 +294,20 @@
   exclude_tag_names <span class="op">=</span> <span class="st">"rate"</span>,
   order_by <span class="op">=</span> <span class="st">"name"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 10 x 6</span>
+<span class="co">#&gt; # A tibble: 11 x 6</span>
 <span class="co">#&gt;    name           group_id notes             created     popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;            &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 census         src      "Census"          2012-02-27…         80            4</span>
+<span class="co">#&gt;  1 census         src      "Census"          2012-02-27…         80            8</span>
 <span class="co">#&gt;  2 headline figu… gen      ""                2013-11-19…         53            2</span>
-<span class="co">#&gt;  3 inventories    gen      ""                2012-02-27…         46            2</span>
-<span class="co">#&gt;  4 mtis           rls      "Manufacturing &amp;… 2012-08-16…         35            4</span>
-<span class="co">#&gt;  5 nation         geot     ""                2012-02-27…         99            4</span>
-<span class="co">#&gt;  6 nsa            seas     "Not Seasonally … 2012-02-27…        100            2</span>
-<span class="co">#&gt;  7 public domain… cc        &lt;NA&gt;             2018-12-17…        100            4</span>
-<span class="co">#&gt;  8 sa             seas     "Seasonally Adju… 2012-02-27…         88            2</span>
-<span class="co">#&gt;  9 sales          gen      ""                2012-02-27…         63            2</span>
-<span class="co">#&gt; 10 usa            geo      "United States o… 2012-02-27…        100            4</span></code></pre></div>
+<span class="co">#&gt;  3 inventories    gen      ""                2012-02-27…         46            6</span>
+<span class="co">#&gt;  4 mtis           rls      "Manufacturing &amp;… 2012-08-16…         35            8</span>
+<span class="co">#&gt;  5 nation         geot     ""                2012-02-27…         99            8</span>
+<span class="co">#&gt;  6 nsa            seas     "Not Seasonally … 2012-02-27…        100            6</span>
+<span class="co">#&gt;  7 public domain… cc        &lt;NA&gt;             2018-12-17…        100            8</span>
+<span class="co">#&gt;  8 ratio          gen      ""                2012-02-27…         47            2</span>
+<span class="co">#&gt;  9 sa             seas     "Seasonally Adju… 2012-02-27…         88            2</span>
+<span class="co">#&gt; 10 sales          gen      ""                2012-02-27…         63            4</span>
+<span class="co">#&gt; 11 usa            geo      "United States o… 2012-02-27…        100            8</span></code></pre></div>
 </div>
 </div>
   </div>
