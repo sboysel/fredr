@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0.9000</span>
       </span>
     </div>
 
@@ -109,7 +109,7 @@
       <h1 data-toc-skip>FRED Sources</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2020-11-16</h4>
+            <h4 class="date">2020-11-23</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-sources.Rmd"><code>vignettes/fredr-sources.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-sources.Rmd</code></div>
@@ -134,16 +134,16 @@
 <span class="co">#&gt; # A tibble: 10 x 5</span>
 <span class="co">#&gt;       id realtime_start realtime_end name                       link            </span>
 <span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                      &lt;chr&gt;           </span>
-<span class="co">#&gt;  1     1 2020-11-16     2020-11-16   Board of Governors of the… http://www.fede…</span>
-<span class="co">#&gt;  2     3 2020-11-16     2020-11-16   Federal Reserve Bank of P… https://www.phi…</span>
-<span class="co">#&gt;  3     4 2020-11-16     2020-11-16   Federal Reserve Bank of S… http://www.stlo…</span>
-<span class="co">#&gt;  4     6 2020-11-16     2020-11-16   Federal Financial Institu… http://www.ffie…</span>
-<span class="co">#&gt;  5    11 2020-11-16     2020-11-16   Dow Jones &amp; Company        http://www.dowj…</span>
-<span class="co">#&gt;  6    14 2020-11-16     2020-11-16   University of Michigan     https://www.umi…</span>
-<span class="co">#&gt;  7    15 2020-11-16     2020-11-16   Council of Economic Advis… https://www.whi…</span>
-<span class="co">#&gt;  8    16 2020-11-16     2020-11-16   U.S. Office of Management… https://www.whi…</span>
-<span class="co">#&gt;  9    17 2020-11-16     2020-11-16   U.S. Congressional Budget… http://www.cbo.…</span>
-<span class="co">#&gt; 10    18 2020-11-16     2020-11-16   U.S. Bureau of Economic A… http://www.bea.…</span></code></pre></div>
+<span class="co">#&gt;  1     1 2020-11-23     2020-11-23   Board of Governors of the… http://www.fede…</span>
+<span class="co">#&gt;  2     3 2020-11-23     2020-11-23   Federal Reserve Bank of P… https://www.phi…</span>
+<span class="co">#&gt;  3     4 2020-11-23     2020-11-23   Federal Reserve Bank of S… http://www.stlo…</span>
+<span class="co">#&gt;  4     6 2020-11-23     2020-11-23   Federal Financial Institu… http://www.ffie…</span>
+<span class="co">#&gt;  5    11 2020-11-23     2020-11-23   Dow Jones &amp; Company        http://www.dowj…</span>
+<span class="co">#&gt;  6    14 2020-11-23     2020-11-23   University of Michigan     https://www.umi…</span>
+<span class="co">#&gt;  7    15 2020-11-23     2020-11-23   Council of Economic Advis… https://www.whi…</span>
+<span class="co">#&gt;  8    16 2020-11-23     2020-11-23   U.S. Office of Management… https://www.whi…</span>
+<span class="co">#&gt;  9    17 2020-11-23     2020-11-23   U.S. Congressional Budget… http://www.cbo.…</span>
+<span class="co">#&gt; 10    18 2020-11-23     2020-11-23   U.S. Bureau of Economic A… http://www.bea.…</span></code></pre></div>
 </div>
 <div id="get-a-single-fred-source" class="section level2">
 <h2 class="hasAnchor">
@@ -151,11 +151,10 @@
 <p>The function <code><a href="../reference/fredr_source.html">fredr_source()</a></code> returns information for a <em>single</em> source indicated by <code>source_id</code>. The data returned is a tibble in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is <code>6</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_source.html">fredr_source</a></span><span class="op">(</span>source_id <span class="op">=</span> <span class="fl">6L</span><span class="op">)</span>
-<span class="co">#&gt; You have hit the rate limit of 120 requests / minute. Waiting 20 seconds before retrying request. This is attempt 1 of 6.</span>
 <span class="co">#&gt; # A tibble: 1 x 5</span>
 <span class="co">#&gt;      id realtime_start realtime_end name                           link         </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                          &lt;chr&gt;        </span>
-<span class="co">#&gt; 1     6 2020-11-16     2020-11-16   Federal Financial Institution… http://www.f…</span></code></pre></div>
+<span class="co">#&gt; 1     6 2020-11-23     2020-11-23   Federal Financial Institution… http://www.f…</span></code></pre></div>
 </div>
 <div id="get-fred-releases-for-a-source" class="section level2">
 <h2 class="hasAnchor">
@@ -169,16 +168,16 @@
 <span class="co">#&gt; # A tibble: 10 x 7</span>
 <span class="co">#&gt;       id realtime_start realtime_end name       press_release link     notes    </span>
 <span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;lgl&gt;         &lt;chr&gt;    &lt;chr&gt;    </span>
-<span class="co">#&gt;  1    13 2020-11-16     2020-11-16   G.17 Indu… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  2    14 2020-11-16     2020-11-16   G.19 Cons… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  3    15 2020-11-16     2020-11-16   G.5 Forei… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  4    17 2020-11-16     2020-11-16   H.10 Fore… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  5    18 2020-11-16     2020-11-16   H.15 Sele… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  6    19 2020-11-16     2020-11-16   H.3 Aggre… TRUE          http://… "The Boa…</span>
-<span class="co">#&gt;  7    20 2020-11-16     2020-11-16   H.4.1 Fac… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  8    21 2020-11-16     2020-11-16   H.6 Money… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  9    22 2020-11-16     2020-11-16   H.8 Asset… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt; 10    52 2020-11-16     2020-11-16   Z.1 Finan… TRUE          http://… "The Fin…</span></code></pre></div>
+<span class="co">#&gt;  1    13 2020-11-23     2020-11-23   G.17 Indu… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  2    14 2020-11-23     2020-11-23   G.19 Cons… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  3    15 2020-11-23     2020-11-23   G.5 Forei… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  4    17 2020-11-23     2020-11-23   H.10 Fore… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  5    18 2020-11-23     2020-11-23   H.15 Sele… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  6    19 2020-11-23     2020-11-23   H.3 Aggre… TRUE          http://… "The Boa…</span>
+<span class="co">#&gt;  7    20 2020-11-23     2020-11-23   H.4.1 Fac… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  8    21 2020-11-23     2020-11-23   H.6 Money… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  9    22 2020-11-23     2020-11-23   H.8 Asset… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt; 10    52 2020-11-23     2020-11-23   Z.1 Finan… TRUE          http://… "The Fin…</span></code></pre></div>
 <p>To get University of Michigan releases since 1950:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_source_releases.html">fredr_source_releases</a></span><span class="op">(</span>
