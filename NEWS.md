@@ -1,5 +1,13 @@
 # fredr (development version)
 
+# fredr 2.0.1
+
+## Bugfix
+
+* Fixed a bug in `fredr()` / `fredr_series_observations()` so that now the 
+  `vintage_dates` argument properly accepts a `Date` vector of length 1 or
+  greater (#89).
+
 # fredr 2.0.0
 
 * fredr has been un-orphaned!
