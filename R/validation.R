@@ -151,7 +151,14 @@ check_realtime_end <- function(x) {
 }
 
 check_vintage_dates <- function(x) {
-  check_date(x, "vintage_dates")
+  x <- check_date(x, "vintage_dates")
+
+  if (length(x) > 1) {
+    x <- paste0(x, collapse = ",")
+  }
+
+  x
+
 }
 
 check_include_release_dates_with_no_data <- function(x) {
