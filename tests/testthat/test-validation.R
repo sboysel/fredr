@@ -38,6 +38,10 @@ test_that("capture_args() validation: dates", {
   expect_error(capture_args(realtime_start = "2000-01-01"))
   expect_error(capture_args(realtime_end = "2000-01-01"))
   expect_error(capture_args(vintage_dates = "2000-01-01"))
+  expect_error(capture_args(vintage_dates = rep("2000-01-01", 5)))
+  # vintage_dates accepts a vector of dates
+  expect_silent(capture_args(vintage_dates = Sys.Date()))
+  expect_silent(capture_args(vintage_dates = rep(Sys.Date(), 5)))
 })
 
 test_that("capture_args() validation: time", {

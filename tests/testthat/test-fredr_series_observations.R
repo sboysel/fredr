@@ -40,6 +40,18 @@ test_that("fredr_series_observations() throws errors for bad parameters", {
   expect_error(fredr_series_observations(series_id = c("a", "b")))
 })
 
+test_that("vintage_dates parameter accepts a vector of dates", {
+  skip_if_no_key()
+
+  x <- as.Date(c("1991-12-04", "1991-12-20"))
+  expect_silent(fredr_series_observations(
+    series_id = "GDPC1", vintage_dates = x[1], limit = 2)
+  )
+  expect_silent(fredr_series_observations(
+    series_id = "GDPC1", vintage_dates = x, limit = 2)
+  )
+})
+
 test_that("validate_series_id() throws proper errors", {
   expect_error(validate_series_id(NULL))
   expect_error(validate_series_id(1))
