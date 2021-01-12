@@ -184,11 +184,18 @@ fredr_series_observations <- function(series_id,
   }
 
   frame$value[frame$value == "."] <- NA
+  frame$value <- as.numeric(frame$value)
+
+  frame$date <- as.Date(frame$date, format = "%Y-%m-%d")
+  frame$realtime_start <- as.Date(frame$realtime_start, format = "%Y-%m-%d")
+  frame$realtime_end <- as.Date(frame$realtime_end, format = "%Y-%m-%d")
 
   obs <- tibble::tibble(
-    date = as.Date(frame$date, "%Y-%m-%d"),
+    date = frame$date,
     series_id = series_id,
-    value = as.numeric(frame$value)
+    value = frame$value,
+    realtime_start = frame$realtime_start,
+    realtime_end = frame$realtime_end
   )
 
   obs
@@ -211,6 +218,8 @@ empty_fredr_tibble <- function() {
   tibble::tibble(
     date = zero_length_date,
     series_id = zero_length_character,
-    value = zero_length_numeric
+    value = zero_length_numeric,
+    realtime_start = zero_length_date,
+    realtime_end = zero_length_date
   )
 }

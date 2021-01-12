@@ -14,9 +14,11 @@ test_that("fredr_series_observations() works", {
 
   expect_s3_class(series, c("tbl_df", "tbl", "data.frame"))
   expect_s3_class(series$date, "Date")
-  expect_type(series[[2]], "character")
-  expect_type(series[[3]], "double")
-  expect_true(ncol(series) == 3)
+  expect_type(series$series_id, "character")
+  expect_type(series$value, "double")
+  expect_s3_class(series$realtime_start, "Date")
+  expect_s3_class(series$realtime_end, "Date")
+  expect_true(ncol(series) == 5)
   expect_true(nrow(series) == 20)
 })
 
@@ -29,7 +31,12 @@ test_that("fredr_series_observations() properly returns zero row tibble", {
   )
 
   expect_s3_class(series, c("tbl_df", "tbl", "data.frame"))
-  expect_true(ncol(series) == 3)
+  expect_s3_class(series$date, "Date")
+  expect_type(series$series_id, "character")
+  expect_type(series$value, "double")
+  expect_s3_class(series$realtime_start, "Date")
+  expect_s3_class(series$realtime_end, "Date")
+  expect_true(ncol(series) == 5)
   expect_true(nrow(series) == 0)
 })
 
@@ -43,13 +50,24 @@ test_that("fredr_series_observations() throws errors for bad parameters", {
 test_that("vintage_dates parameter accepts a vector of dates", {
   skip_if_no_key()
 
-  x <- as.Date(c("1991-12-04", "1991-12-20"))
-  expect_silent(fredr_series_observations(
-    series_id = "GDPC1", vintage_dates = x[1], limit = 2)
+  # An update to GDPC1 was done on 2001-07-27,
+  # back-updating the value on 2000-01-01. This vintage_dates range
+  # captures the value before and after that transition.
+  vintage_dates <- as.Date(c("2001-07-25", "2001-07-28"))
+
+  result <- fredr_series_observations(
+    series_id = "GDPC1",
+    observation_start = as.Date("2000-01-01"),
+    observation_end = as.Date("2000-01-01"),
+    vintage_dates = vintage_dates
   )
-  expect_silent(fredr_series_observations(
-    series_id = "GDPC1", vintage_dates = x, limit = 2)
-  )
+
+  expect_realtime_start <- as.Date(c("2001-07-25", "2001-07-27"))
+  expect_realtime_end <- as.Date(c("2001-07-26", "2001-07-28"))
+
+  expect_identical(nrow(result), 2L)
+  expect_identical(result$realtime_start, expect_realtime_start)
+  expect_identical(result$realtime_end, expect_realtime_end)
 })
 
 test_that("validate_series_id() throws proper errors", {

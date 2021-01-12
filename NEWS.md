@@ -1,8 +1,9 @@
 # fredr (development version)
 
-# fredr 2.0.1
-
-## Bugfix
+* `fredr()` / `fredr_series_observations()` now always return `realtime_start`
+  and `realtime_end` columns. These are useful when setting the
+  `realtime_start` / `realtime_end` arguments, or when using the `vintage_dates`
+  argument (#88).
 
 * Fixed a bug in `fredr()` / `fredr_series_observations()` so that now the 
   `vintage_dates` argument properly accepts a `Date` vector of length 1 or
