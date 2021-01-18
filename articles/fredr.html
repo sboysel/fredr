@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.1.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0.9000</span>
       </span>
     </div>
 
@@ -108,7 +108,7 @@
       <h1 data-toc-skip>Getting started with fredr</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2021-01-11</h4>
+            <h4 class="date">2021-01-18</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr.Rmd"><code>vignettes/fredr.Rmd</code></a></small>
       <div class="hidden name"><code>fredr.Rmd</code></div>
@@ -147,19 +147,19 @@
   observation_start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"1990-01-01"</span><span class="op">)</span>,
   observation_end <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"2000-01-01"</span><span class="op">)</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 121 x 3</span>
-<span class="co">#&gt;    date       series_id value</span>
-<span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 1990-01-01 UNRATE      5.4</span>
-<span class="co">#&gt;  2 1990-02-01 UNRATE      5.3</span>
-<span class="co">#&gt;  3 1990-03-01 UNRATE      5.2</span>
-<span class="co">#&gt;  4 1990-04-01 UNRATE      5.4</span>
-<span class="co">#&gt;  5 1990-05-01 UNRATE      5.4</span>
-<span class="co">#&gt;  6 1990-06-01 UNRATE      5.2</span>
-<span class="co">#&gt;  7 1990-07-01 UNRATE      5.5</span>
-<span class="co">#&gt;  8 1990-08-01 UNRATE      5.7</span>
-<span class="co">#&gt;  9 1990-09-01 UNRATE      5.9</span>
-<span class="co">#&gt; 10 1990-10-01 UNRATE      5.9</span>
+<span class="co">#&gt; # A tibble: 121 x 5</span>
+<span class="co">#&gt;    date       series_id value realtime_start realtime_end</span>
+<span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt; &lt;date&gt;         &lt;date&gt;      </span>
+<span class="co">#&gt;  1 1990-01-01 UNRATE      5.4 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  2 1990-02-01 UNRATE      5.3 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  3 1990-03-01 UNRATE      5.2 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  4 1990-04-01 UNRATE      5.4 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  5 1990-05-01 UNRATE      5.4 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  6 1990-06-01 UNRATE      5.2 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  7 1990-07-01 UNRATE      5.5 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  8 1990-08-01 UNRATE      5.7 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  9 1990-09-01 UNRATE      5.9 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt; 10 1990-10-01 UNRATE      5.9 2021-01-18     2021-01-18  </span>
 <span class="co">#&gt; # … with 111 more rows</span></code></pre></div>
 <p>Leverage the native features of the FRED API by passing additional parameters:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
@@ -170,19 +170,19 @@
   frequency <span class="op">=</span> <span class="st">"q"</span>, <span class="co"># quarterly</span>
   units <span class="op">=</span> <span class="st">"chg"</span> <span class="co"># change over previous value</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 41 x 3</span>
-<span class="co">#&gt;    date       series_id   value</span>
-<span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;       &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 1990-01-01 UNRATE    -0.0667</span>
-<span class="co">#&gt;  2 1990-04-01 UNRATE     0.0333</span>
-<span class="co">#&gt;  3 1990-07-01 UNRATE     0.367 </span>
-<span class="co">#&gt;  4 1990-10-01 UNRATE     0.433 </span>
-<span class="co">#&gt;  5 1991-01-01 UNRATE     0.467 </span>
-<span class="co">#&gt;  6 1991-04-01 UNRATE     0.233 </span>
-<span class="co">#&gt;  7 1991-07-01 UNRATE     0.0333</span>
-<span class="co">#&gt;  8 1991-10-01 UNRATE     0.233 </span>
-<span class="co">#&gt;  9 1992-01-01 UNRATE     0.267 </span>
-<span class="co">#&gt; 10 1992-04-01 UNRATE     0.233 </span>
+<span class="co">#&gt; # A tibble: 41 x 5</span>
+<span class="co">#&gt;    date       series_id   value realtime_start realtime_end</span>
+<span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;       &lt;dbl&gt; &lt;date&gt;         &lt;date&gt;      </span>
+<span class="co">#&gt;  1 1990-01-01 UNRATE    -0.0667 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  2 1990-04-01 UNRATE     0.0333 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  3 1990-07-01 UNRATE     0.367  2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  4 1990-10-01 UNRATE     0.433  2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  5 1991-01-01 UNRATE     0.467  2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  6 1991-04-01 UNRATE     0.233  2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  7 1991-07-01 UNRATE     0.0333 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  8 1991-10-01 UNRATE     0.233  2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  9 1992-01-01 UNRATE     0.267  2021-01-18     2021-01-18  </span>
+<span class="co">#&gt; 10 1992-04-01 UNRATE     0.233  2021-01-18     2021-01-18  </span>
 <span class="co">#&gt; # … with 31 more rows</span></code></pre></div>
 <p><code>fredr</code> plays nicely with <a href="https://www.tidyverse.org/">tidyverse</a> packages:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -227,19 +227,19 @@
   .l <span class="op">=</span> <span class="va">params</span>,
   .f <span class="op">=</span> <span class="op">~</span> <span class="fu"><a href="../reference/fredr_series_observations.html">fredr</a></span><span class="op">(</span>series_id <span class="op">=</span> <span class="va">.x</span>, frequency <span class="op">=</span> <span class="va">.y</span><span class="op">)</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1,147 x 3</span>
-<span class="co">#&gt;    date       series_id value</span>
-<span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 1948-01-01 UNRATE      3.4</span>
-<span class="co">#&gt;  2 1948-02-01 UNRATE      3.8</span>
-<span class="co">#&gt;  3 1948-03-01 UNRATE      4  </span>
-<span class="co">#&gt;  4 1948-04-01 UNRATE      3.9</span>
-<span class="co">#&gt;  5 1948-05-01 UNRATE      3.5</span>
-<span class="co">#&gt;  6 1948-06-01 UNRATE      3.6</span>
-<span class="co">#&gt;  7 1948-07-01 UNRATE      3.6</span>
-<span class="co">#&gt;  8 1948-08-01 UNRATE      3.9</span>
-<span class="co">#&gt;  9 1948-09-01 UNRATE      3.8</span>
-<span class="co">#&gt; 10 1948-10-01 UNRATE      3.7</span>
+<span class="co">#&gt; # A tibble: 1,147 x 5</span>
+<span class="co">#&gt;    date       series_id value realtime_start realtime_end</span>
+<span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt; &lt;date&gt;         &lt;date&gt;      </span>
+<span class="co">#&gt;  1 1948-01-01 UNRATE      3.4 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  2 1948-02-01 UNRATE      3.8 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  3 1948-03-01 UNRATE      4   2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  4 1948-04-01 UNRATE      3.9 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  5 1948-05-01 UNRATE      3.5 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  6 1948-06-01 UNRATE      3.6 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  7 1948-07-01 UNRATE      3.6 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  8 1948-08-01 UNRATE      3.9 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt;  9 1948-09-01 UNRATE      3.8 2021-01-18     2021-01-18  </span>
+<span class="co">#&gt; 10 1948-10-01 UNRATE      3.7 2021-01-18     2021-01-18  </span>
 <span class="co">#&gt; # … with 1,137 more rows</span></code></pre></div>
 <p>It is relatively straightforward to convert tibbles returned by fredr into other time series objects. For example:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
@@ -309,16 +309,16 @@
 <span class="co">#&gt; # A tibble: 25 x 16</span>
 <span class="co">#&gt;    id    realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt;  2 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt;  3 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2020-07-01     </span>
-<span class="co">#&gt;  4 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2020-07-01     </span>
-<span class="co">#&gt;  5 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt;  6 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt;  7 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2020-07-01     </span>
-<span class="co">#&gt;  8 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2020-07-01     </span>
-<span class="co">#&gt;  9 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2019-01-01     </span>
-<span class="co">#&gt; 10 LFWA… 2021-01-11     2021-01-11   Work… 2008-01-01       2019-01-01     </span>
+<span class="co">#&gt;  1 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2019-01-01     </span>
+<span class="co">#&gt;  2 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2019-01-01     </span>
+<span class="co">#&gt;  3 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2020-07-01     </span>
+<span class="co">#&gt;  4 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2020-07-01     </span>
+<span class="co">#&gt;  5 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2019-01-01     </span>
+<span class="co">#&gt;  6 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2019-01-01     </span>
+<span class="co">#&gt;  7 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2020-07-01     </span>
+<span class="co">#&gt;  8 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2020-07-01     </span>
+<span class="co">#&gt;  9 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2019-01-01     </span>
+<span class="co">#&gt; 10 LFWA… 2021-01-18     2021-01-18   Work… 2008-01-01       2019-01-01     </span>
 <span class="co">#&gt; # … with 15 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
@@ -331,7 +331,7 @@
   to_frame <span class="op">=</span> <span class="cn">FALSE</span>
 <span class="op">)</span>
 <span class="co">#&gt; Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&amp;api_key=a1dfde330d2d15991130fc103b3f7a2c&amp;file_type=json]</span>
-<span class="co">#&gt;   Date: 2021-01-11 12:17</span>
+<span class="co">#&gt;   Date: 2021-01-18 12:28</span>
 <span class="co">#&gt;   Status: 200</span>
 <span class="co">#&gt;   Content-Type: application/json; charset=UTF-8</span>
 <span class="co">#&gt;   Size: 82.6 kB</span></code></pre></div>
