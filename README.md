@@ -24,8 +24,8 @@ endpoints exposed through fredr, such as `fredr_series_search_text()`,
 which allows you to search for a FRED series by text.
 
 We strongly encourage referencing the FRED API
-[documentation](https://fred.stlouisfed.org/docs/api/fred/) to
-leverage the full power of fredr.
+[documentation](https://fred.stlouisfed.org/docs/api/fred/) to leverage
+the full power of fredr.
 
 You’ll also need a free API key to use fredr. See `?fredr_set_key()`.
 
@@ -57,19 +57,19 @@ fredr(
   observation_start = as.Date("1990-01-01"),
   observation_end = as.Date("2000-01-01")
 )
-#> # A tibble: 121 x 3
-#>    date       series_id value
-#>    <date>     <chr>     <dbl>
-#>  1 1990-01-01 UNRATE      5.4
-#>  2 1990-02-01 UNRATE      5.3
-#>  3 1990-03-01 UNRATE      5.2
-#>  4 1990-04-01 UNRATE      5.4
-#>  5 1990-05-01 UNRATE      5.4
-#>  6 1990-06-01 UNRATE      5.2
-#>  7 1990-07-01 UNRATE      5.5
-#>  8 1990-08-01 UNRATE      5.7
-#>  9 1990-09-01 UNRATE      5.9
-#> 10 1990-10-01 UNRATE      5.9
+#> # A tibble: 121 x 5
+#>    date       series_id value realtime_start realtime_end
+#>    <date>     <chr>     <dbl> <date>         <date>      
+#>  1 1990-01-01 UNRATE      5.4 2021-01-29     2021-01-29  
+#>  2 1990-02-01 UNRATE      5.3 2021-01-29     2021-01-29  
+#>  3 1990-03-01 UNRATE      5.2 2021-01-29     2021-01-29  
+#>  4 1990-04-01 UNRATE      5.4 2021-01-29     2021-01-29  
+#>  5 1990-05-01 UNRATE      5.4 2021-01-29     2021-01-29  
+#>  6 1990-06-01 UNRATE      5.2 2021-01-29     2021-01-29  
+#>  7 1990-07-01 UNRATE      5.5 2021-01-29     2021-01-29  
+#>  8 1990-08-01 UNRATE      5.7 2021-01-29     2021-01-29  
+#>  9 1990-09-01 UNRATE      5.9 2021-01-29     2021-01-29  
+#> 10 1990-10-01 UNRATE      5.9 2021-01-29     2021-01-29  
 #> # … with 111 more rows
 ```
 
