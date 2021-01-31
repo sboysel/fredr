@@ -5,19 +5,15 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note(s)
-
-New submission
-   
-   Package was archived on CRAN
-   
-   CRAN repository db overrides:
-     X-CRAN-Comment: Archived on 2020-04-21 as check problems were not
-       corrected in time.
+0 errors | 0 warnings | 0 notes
 
 ## Reverse dependencies
 
 There are no reverse dependencies.
+
+## 2.1.0 Submission
+
+This is a minor release, fixing a bug and adding new columns to the output of `fredr()`.
 
 ## 2.0.0 Resubmission
 
