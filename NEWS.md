@@ -1,3 +1,5 @@
+# fredr (development version)
+
 # fredr 2.1.0
 
 * `fredr()` / `fredr_series_observations()` now always return `realtime_start`
