@@ -241,8 +241,9 @@ validate_status <- function(response) {
     message <- paste0(error_code, ": ", error_message)
   } else {
     # Completely unexpected error format.
-    # Do the best we can by at least passing the info through.
-    message <- paste(as.character(content), sep = " ")
+    # Do the best we can with `http_status()`.
+    status <- httr::http_status(response)
+    message <- status$message
   }
 
   abort(message)
