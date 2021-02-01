@@ -69,10 +69,7 @@ fredr_request <- function(endpoint,
     inform(resp$url)
   }
 
-  if (resp$status_code != 200) {
-    err <- httr::content(resp)
-    abort(paste0(err$error_code, ": ", err$error_message))
-  }
+  validate_status(resp)
 
   if (!to_frame) {
     return(resp)
@@ -226,4 +223,27 @@ fredr_termination_codes <- function() {
     code_internal_server_error,
     code_exceeded_rate_limit
   )
+}
+
+validate_status <- function(response) {
+  if (response$status_code == 200) {
+    return(invisible(response))
+  }
+
+  content <- httr::content(response, "text")
+  content <- jsonlite::fromJSON(content)
+
+  error_code <- content$error_code
+  error_message <- content$error_message
+
+  if (!is_null(error_code) && !is_null(error_message)) {
+    # Known error format
+    message <- paste0(error_code, ": ", error_message)
+  } else {
+    # Completely unexpected error format.
+    # Do the best we can by at least passing the info through.
+    message <- paste(as.character(content), sep = " ")
+  }
+
+  abort(message)
 }

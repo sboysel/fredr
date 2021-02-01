@@ -1,5 +1,7 @@
 # fredr (development version)
 
+* Improved error handling when the response has an unknown error format (#96).
+
 # fredr 2.1.0
 
 * `fredr()` / `fredr_series_observations()` now always return `realtime_start`
