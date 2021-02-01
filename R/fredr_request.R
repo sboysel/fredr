@@ -70,8 +70,7 @@ fredr_request <- function(endpoint,
   }
 
   if (resp$status_code != 200) {
-    err <- httr::content(resp)
-    abort(paste0(err$error_code, ": ", err$error_message))
+    abort(httr::http_status(resp))
   }
 
   if (!to_frame) {
