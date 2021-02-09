@@ -69,10 +69,7 @@ fredr_request <- function(endpoint,
     inform(resp$url)
   }
 
-  if (resp$status_code != 200) {
-    err <- httr::content(resp)
-    abort(paste0(err$error_code, ": ", err$error_message))
-  }
+  validate_status(resp)
 
   if (!to_frame) {
     return(resp)
@@ -226,4 +223,43 @@ fredr_termination_codes <- function() {
     code_internal_server_error,
     code_exceeded_rate_limit
   )
+}
+
+validate_status <- function(response) {
+  type <- httr::http_type(response)
+
+  if (!identical(type, "application/json")) {
+    # Something went wrong before we could even request a JSON response.
+    # The returned response is likely XML, but we don't guess, and instead
+    # extract a basic error message with `http_status()`.
+    # This can happen when the FRED API is completely down, where we
+    # can get a 500 error and an XML reponse.
+    status <- httr::http_status(response)
+    message <- status$message
+    abort(message)
+  }
+
+  if (response$status_code == 200) {
+    # All good
+    return(invisible(response))
+  }
+
+  content <- httr::content(response, "text")
+  content <- jsonlite::fromJSON(content)
+
+  error_code <- content$error_code
+  error_message <- content$error_message
+
+  if (is_null(error_code) || is_null(error_message)) {
+    # Completely unexpected JSON error format.
+    # Do the best we can with `http_status()`.
+    status <- httr::http_status(response)
+    message <- status$message
+    abort(message)
+  }
+
+  # Known error format
+  message <- paste0(error_code, ": ", error_message)
+
+  abort(message)
 }
