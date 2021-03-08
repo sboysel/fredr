@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Releases</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2021-03-01</h4>
+            <h4 class="date">2021-03-08</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-releases.Rmd"><code>vignettes/fredr-releases.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-releases.Rmd</code></div>
@@ -130,20 +130,20 @@
 <p>The function <code><a href="../reference/fredr_releases.html">fredr_releases()</a></code> returns a set of all FRED releases matching the request. The data returned is a tibble in which each row represents a FRED release. The default call returns all FRED releases:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_releases.html">fredr_releases</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 296 x 7</span>
+<span class="co">#&gt; # A tibble: 297 x 7</span>
 <span class="co">#&gt;       id realtime_start realtime_end name       press_release link     notes    </span>
 <span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;lgl&gt;         &lt;chr&gt;    &lt;chr&gt;    </span>
-<span class="co">#&gt;  1     9 2021-02-28     2021-02-28   Advance M… TRUE          http://… "The U.S…</span>
-<span class="co">#&gt;  2    10 2021-02-28     2021-02-28   Consumer … TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  3    11 2021-02-28     2021-02-28   Employmen… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  4    13 2021-02-28     2021-02-28   G.17 Indu… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  5    14 2021-02-28     2021-02-28   G.19 Cons… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  6    15 2021-02-28     2021-02-28   G.5 Forei… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  7    17 2021-02-28     2021-02-28   H.10 Fore… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  8    18 2021-02-28     2021-02-28   H.15 Sele… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt;  9    19 2021-02-28     2021-02-28   H.3 Aggre… TRUE          http://… "The Boa…</span>
-<span class="co">#&gt; 10    20 2021-02-28     2021-02-28   H.4.1 Fac… TRUE          http://…  &lt;NA&gt;    </span>
-<span class="co">#&gt; # … with 286 more rows</span></code></pre></div>
+<span class="co">#&gt;  1     9 2021-03-07     2021-03-07   Advance M… TRUE          http://… "The U.S…</span>
+<span class="co">#&gt;  2    10 2021-03-07     2021-03-07   Consumer … TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  3    11 2021-03-07     2021-03-07   Employmen… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  4    13 2021-03-07     2021-03-07   G.17 Indu… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  5    14 2021-03-07     2021-03-07   G.19 Cons… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  6    15 2021-03-07     2021-03-07   G.5 Forei… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  7    17 2021-03-07     2021-03-07   H.10 Fore… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  8    18 2021-03-07     2021-03-07   H.15 Sele… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt;  9    19 2021-03-07     2021-03-07   H.3 Aggre… TRUE          http://… "The Boa…</span>
+<span class="co">#&gt; 10    20 2021-03-07     2021-03-07   H.4.1 Fac… TRUE          http://…  &lt;NA&gt;    </span>
+<span class="co">#&gt; # … with 287 more rows</span></code></pre></div>
 </div>
 <div id="get-release-dates-for-all-releases-of-economic-data-" class="section level2">
 <h2 class="hasAnchor">
@@ -154,16 +154,16 @@
 <span class="co">#&gt; # A tibble: 1,000 x 3</span>
 <span class="co">#&gt;    release_id release_name                                date      </span>
 <span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                                       &lt;chr&gt;     </span>
-<span class="co">#&gt;  1         72 Daily Treasury Inflation-Indexed Securities 2021-03-01</span>
-<span class="co">#&gt;  2        441 Coinbase Cryptocurrencies                   2021-02-28</span>
-<span class="co">#&gt;  3        101 FOMC Press Release                          2021-02-28</span>
-<span class="co">#&gt;  4        441 Coinbase Cryptocurrencies                   2021-02-27</span>
-<span class="co">#&gt;  5        101 FOMC Press Release                          2021-02-27</span>
-<span class="co">#&gt;  6        435 Advance Economic Indicators                 2021-02-26</span>
-<span class="co">#&gt;  7        441 Coinbase Cryptocurrencies                   2021-02-26</span>
-<span class="co">#&gt;  8         86 Commercial Paper                            2021-02-26</span>
-<span class="co">#&gt;  9         72 Daily Treasury Inflation-Indexed Securities 2021-02-26</span>
-<span class="co">#&gt; 10        279 Economic Policy Uncertainty                 2021-02-26</span>
+<span class="co">#&gt;  1        441 Coinbase Cryptocurrencies                   2021-03-07</span>
+<span class="co">#&gt;  2        101 FOMC Press Release                          2021-03-07</span>
+<span class="co">#&gt;  3        441 Coinbase Cryptocurrencies                   2021-03-06</span>
+<span class="co">#&gt;  4        101 FOMC Press Release                          2021-03-06</span>
+<span class="co">#&gt;  5        441 Coinbase Cryptocurrencies                   2021-03-05</span>
+<span class="co">#&gt;  6         86 Commercial Paper                            2021-03-05</span>
+<span class="co">#&gt;  7         72 Daily Treasury Inflation-Indexed Securities 2021-03-05</span>
+<span class="co">#&gt;  8        279 Economic Policy Uncertainty                 2021-03-05</span>
+<span class="co">#&gt;  9         50 Employment Situation                        2021-03-05</span>
+<span class="co">#&gt; 10        378 Federal Funds Data                          2021-03-05</span>
 <span class="co">#&gt; # … with 990 more rows</span></code></pre></div>
 <p>To instead order the results by ascending release ID:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -195,7 +195,7 @@
 <span class="co">#&gt; # A tibble: 1 x 6</span>
 <span class="co">#&gt;      id realtime_start realtime_end name          press_release link            </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;         &lt;lgl&gt;         &lt;chr&gt;           </span>
-<span class="co">#&gt; 1    11 2021-03-01     2021-03-01   Employment C… TRUE          http://www.bls.…</span></code></pre></div>
+<span class="co">#&gt; 1    11 2021-03-08     2021-03-08   Employment C… TRUE          http://www.bls.…</span></code></pre></div>
 </div>
 <div id="get-release-dates-for-a-single-release-of-economic-data" class="section level2">
 <h2 class="hasAnchor">
@@ -227,16 +227,16 @@
 <span class="co">#&gt; # A tibble: 1,000 x 16</span>
 <span class="co">#&gt;    id     realtime_start realtime_end title     observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 CPIAP… 2021-03-01     2021-03-01   Consumer… 1914-12-01       2021-01-01     </span>
-<span class="co">#&gt;  2 CPIAP… 2021-03-01     2021-03-01   Consumer… 1947-01-01       2021-01-01     </span>
-<span class="co">#&gt;  3 CPIAU… 2021-03-01     2021-03-01   Consumer… 1913-01-01       2021-01-01     </span>
-<span class="co">#&gt;  4 CPIAU… 2021-03-01     2021-03-01   Consumer… 1947-01-01       2021-01-01     </span>
-<span class="co">#&gt;  5 CPIED… 2021-03-01     2021-03-01   Consumer… 1993-01-01       2021-01-01     </span>
-<span class="co">#&gt;  6 CPIED… 2021-03-01     2021-03-01   Consumer… 1993-01-01       2021-01-01     </span>
-<span class="co">#&gt;  7 CPIEN… 2021-03-01     2021-03-01   Consumer… 1957-01-01       2021-01-01     </span>
-<span class="co">#&gt;  8 CPIEN… 2021-03-01     2021-03-01   Consumer… 1957-01-01       2021-01-01     </span>
-<span class="co">#&gt;  9 CPIFA… 2021-03-01     2021-03-01   Consumer… 1967-01-01       2021-01-01     </span>
-<span class="co">#&gt; 10 CPIFA… 2021-03-01     2021-03-01   Consumer… 1967-01-01       2021-01-01     </span>
+<span class="co">#&gt;  1 CPIAP… 2021-03-08     2021-03-08   Consumer… 1914-12-01       2021-01-01     </span>
+<span class="co">#&gt;  2 CPIAP… 2021-03-08     2021-03-08   Consumer… 1947-01-01       2021-01-01     </span>
+<span class="co">#&gt;  3 CPIAU… 2021-03-08     2021-03-08   Consumer… 1913-01-01       2021-01-01     </span>
+<span class="co">#&gt;  4 CPIAU… 2021-03-08     2021-03-08   Consumer… 1947-01-01       2021-01-01     </span>
+<span class="co">#&gt;  5 CPIED… 2021-03-08     2021-03-08   Consumer… 1993-01-01       2021-01-01     </span>
+<span class="co">#&gt;  6 CPIED… 2021-03-08     2021-03-08   Consumer… 1993-01-01       2021-01-01     </span>
+<span class="co">#&gt;  7 CPIEN… 2021-03-08     2021-03-08   Consumer… 1957-01-01       2021-01-01     </span>
+<span class="co">#&gt;  8 CPIEN… 2021-03-08     2021-03-08   Consumer… 1957-01-01       2021-01-01     </span>
+<span class="co">#&gt;  9 CPIFA… 2021-03-08     2021-03-08   Consumer… 1967-01-01       2021-01-01     </span>
+<span class="co">#&gt; 10 CPIFA… 2021-03-08     2021-03-08   Consumer… 1967-01-01       2021-01-01     </span>
 <span class="co">#&gt; # … with 990 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
@@ -254,16 +254,16 @@
 <span class="co">#&gt; # A tibble: 10 x 16</span>
 <span class="co">#&gt;    id     realtime_start realtime_end title     observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 CPIAU… 2021-03-01     2021-03-01   Consumer… 1947-01-01       2021-01-01     </span>
-<span class="co">#&gt;  2 CPILF… 2021-03-01     2021-03-01   Consumer… 1957-01-01       2021-01-01     </span>
-<span class="co">#&gt;  3 CPIAU… 2021-03-01     2021-03-01   Consumer… 1913-01-01       2021-01-01     </span>
-<span class="co">#&gt;  4 CUUR0… 2021-03-01     2021-03-01   Consumer… 1913-01-01       2021-01-01     </span>
-<span class="co">#&gt;  5 CPIME… 2021-03-01     2021-03-01   Consumer… 1947-01-01       2021-01-01     </span>
-<span class="co">#&gt;  6 CUUR0… 2021-03-01     2021-03-01   Consumer… 1914-12-01       2021-01-01     </span>
-<span class="co">#&gt;  7 CPIFA… 2021-03-01     2021-03-01   Consumer… 1967-01-01       2021-01-01     </span>
-<span class="co">#&gt;  8 CPIAP… 2021-03-01     2021-03-01   Consumer… 1947-01-01       2021-01-01     </span>
-<span class="co">#&gt;  9 CUUR0… 2021-03-01     2021-03-01   Consumer… 1947-03-01       2021-01-01     </span>
-<span class="co">#&gt; 10 CWUR0… 2021-03-01     2021-03-01   Consumer… 1913-01-01       2021-01-01     </span>
+<span class="co">#&gt;  1 CPIAU… 2021-03-08     2021-03-08   Consumer… 1947-01-01       2021-01-01     </span>
+<span class="co">#&gt;  2 CPILF… 2021-03-08     2021-03-08   Consumer… 1957-01-01       2021-01-01     </span>
+<span class="co">#&gt;  3 CPIAU… 2021-03-08     2021-03-08   Consumer… 1913-01-01       2021-01-01     </span>
+<span class="co">#&gt;  4 CUUR0… 2021-03-08     2021-03-08   Consumer… 1913-01-01       2021-01-01     </span>
+<span class="co">#&gt;  5 CPIME… 2021-03-08     2021-03-08   Consumer… 1947-01-01       2021-01-01     </span>
+<span class="co">#&gt;  6 CPIFA… 2021-03-08     2021-03-08   Consumer… 1967-01-01       2021-01-01     </span>
+<span class="co">#&gt;  7 CUUR0… 2021-03-08     2021-03-08   Consumer… 1914-12-01       2021-01-01     </span>
+<span class="co">#&gt;  8 CPIAP… 2021-03-08     2021-03-08   Consumer… 1947-01-01       2021-01-01     </span>
+<span class="co">#&gt;  9 CWUR0… 2021-03-08     2021-03-08   Consumer… 1913-01-01       2021-01-01     </span>
+<span class="co">#&gt; 10 CUUR0… 2021-03-08     2021-03-08   Consumer… 1947-03-01       2021-01-01     </span>
 <span class="co">#&gt; # … with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
@@ -280,20 +280,20 @@
   order_by <span class="op">=</span> <span class="st">"popularity"</span>,
   sort_order <span class="op">=</span> <span class="st">"desc"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 65 x 6</span>
+<span class="co">#&gt; # A tibble: 66 x 6</span>
 <span class="co">#&gt;    name  group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100         4662</span>
-<span class="co">#&gt;  2 ca    geo      California          2012-02-27 10:18:…         61          264</span>
-<span class="co">#&gt;  3 tx    geo      Texas               2012-02-27 10:18:…         58          178</span>
-<span class="co">#&gt;  4 fl    geo      Florida             2012-02-27 10:18:…         55          150</span>
-<span class="co">#&gt;  5 pa    geo      Pennsylvania        2012-02-27 10:18:…         55          228</span>
-<span class="co">#&gt;  6 ny    geo      New York            2012-02-27 10:18:…         55           92</span>
-<span class="co">#&gt;  7 wi    geo      Wisconsin           2012-02-27 10:18:…         54          234</span>
-<span class="co">#&gt;  8 mi    geo      Michigan            2012-02-27 10:18:…         52           98</span>
-<span class="co">#&gt;  9 oh    geo      Ohio                2012-02-27 10:18:…         50          170</span>
-<span class="co">#&gt; 10 il    geo      Illinois            2012-02-27 10:18:…         49          168</span>
-<span class="co">#&gt; # … with 55 more rows</span></code></pre></div>
+<span class="co">#&gt;  1 usa   geo      United States of A… 2012-02-27 10:18:…        100         4708</span>
+<span class="co">#&gt;  2 ca    geo      California          2012-02-27 10:18:…         61          256</span>
+<span class="co">#&gt;  3 tx    geo      Texas               2012-02-27 10:18:…         58          208</span>
+<span class="co">#&gt;  4 fl    geo      Florida             2012-02-27 10:18:…         55          168</span>
+<span class="co">#&gt;  5 pa    geo      Pennsylvania        2012-02-27 10:18:…         55          264</span>
+<span class="co">#&gt;  6 ny    geo      New York            2012-02-27 10:18:…         55           96</span>
+<span class="co">#&gt;  7 wi    geo      Wisconsin           2012-02-27 10:18:…         54          206</span>
+<span class="co">#&gt;  8 mi    geo      Michigan            2012-02-27 10:18:…         52          100</span>
+<span class="co">#&gt;  9 oh    geo      Ohio                2012-02-27 10:18:…         50          144</span>
+<span class="co">#&gt; 10 il    geo      Illinois            2012-02-27 10:18:…         49          150</span>
+<span class="co">#&gt; # … with 56 more rows</span></code></pre></div>
 </div>
 <div id="get-the-related-fred-tags-for-one-or-more-fred-tags-within-a-release" class="section level2">
 <h2 class="hasAnchor">
@@ -311,8 +311,8 @@
 <span class="co">#&gt; # A tibble: 2 x 6</span>
 <span class="co">#&gt;   name       group_id notes created                popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;                       &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 monthly    freq     ""    2012-02-27 10:18:19-06         93         2134</span>
-<span class="co">#&gt; 2 semiannual freq     ""    2012-02-27 10:18:19-06         32         1820</span></code></pre></div>
+<span class="co">#&gt; 1 monthly    freq     ""    2012-02-27 10:18:19-06         93         2122</span>
+<span class="co">#&gt; 2 semiannual freq     ""    2012-02-27 10:18:19-06         32         1792</span></code></pre></div>
 </div>
 <div id="get-the-sources-for-a-release-of-economic-data" class="section level2">
 <h2 class="hasAnchor">
@@ -323,7 +323,7 @@
 <span class="co">#&gt; # A tibble: 1 x 5</span>
 <span class="co">#&gt;      id realtime_start realtime_end name                       link             </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                      &lt;chr&gt;            </span>
-<span class="co">#&gt; 1    22 2021-02-28     2021-02-28   U.S. Bureau of Labor Stat… https://www.bls.…</span></code></pre></div>
+<span class="co">#&gt; 1    22 2021-03-08     2021-03-08   U.S. Bureau of Labor Stat… https://www.bls.…</span></code></pre></div>
 </div>
 <div id="get-release-table-trees-for-a-given-release" class="section level2">
 <h2 class="hasAnchor">
