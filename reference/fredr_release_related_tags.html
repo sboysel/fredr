@@ -279,20 +279,20 @@ Defaults to today's date. For more information, see
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='fredr-key.html'>fredr_has_key</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='fu'>fredr_release_related_tags</span><span class='op'>(</span><span class='fl'>10</span>, tag_names <span class='op'>=</span> <span class='st'>"cpi"</span><span class='op'>)</span>
 <span class='op'>}</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 177 x 6</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 176 x 6</span>
 #&gt;    name             group_id notes          created      popularity series_count
 #&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>          <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>
-#&gt; <span style='color: #BCBCBC;'> 1</span> bls              src      <span style='color: #949494;'>"</span>Bureau of La… 2012-02-27 …         87         <span style='text-decoration: underline;'>4</span>488
-#&gt; <span style='color: #BCBCBC;'> 2</span> indexes          gen      <span style='color: #949494;'>""</span>             2012-02-27 …         84         <span style='text-decoration: underline;'>4</span>488
-#&gt; <span style='color: #BCBCBC;'> 3</span> price            gen      <span style='color: #949494;'>""</span>             2013-07-11 …         83         <span style='text-decoration: underline;'>4</span>488
-#&gt; <span style='color: #BCBCBC;'> 4</span> price index      gen      <span style='color: #949494;'>""</span>             2012-02-27 …         80         <span style='text-decoration: underline;'>4</span>488
-#&gt; <span style='color: #BCBCBC;'> 5</span> public domain: … cc        <span style='color: #BB0000;'>NA</span>            2018-12-17 …        100         <span style='text-decoration: underline;'>4</span>488
-#&gt; <span style='color: #BCBCBC;'> 6</span> usa              geo      <span style='color: #949494;'>"</span>United State… 2012-02-27 …        100         <span style='text-decoration: underline;'>4</span>488
-#&gt; <span style='color: #BCBCBC;'> 7</span> urban            gen      <span style='color: #949494;'>""</span>             2012-02-27 …         56         <span style='text-decoration: underline;'>4</span>486
-#&gt; <span style='color: #BCBCBC;'> 8</span> inflation        gen      <span style='color: #949494;'>""</span>             2012-06-08 …         74         <span style='text-decoration: underline;'>4</span>342
-#&gt; <span style='color: #BCBCBC;'> 9</span> nsa              seas     <span style='color: #949494;'>"</span>Not Seasonal… 2012-02-27 …        100         <span style='text-decoration: underline;'>4</span>320
-#&gt; <span style='color: #BCBCBC;'>10</span> consumer         gen      <span style='color: #949494;'>""</span>             2012-02-27 …         65         <span style='text-decoration: underline;'>4</span>292
-#&gt; <span style='color: #949494;'># … with 167 more rows</span></div></pre>
+#&gt; <span style='color: #BCBCBC;'> 1</span> bls              src      <span style='color: #949494;'>"</span>Bureau of La… 2012-02-27 …         87         <span style='text-decoration: underline;'>4</span>660
+#&gt; <span style='color: #BCBCBC;'> 2</span> indexes          gen      <span style='color: #949494;'>""</span>             2012-02-27 …         84         <span style='text-decoration: underline;'>4</span>660
+#&gt; <span style='color: #BCBCBC;'> 3</span> price            gen      <span style='color: #949494;'>""</span>             2013-07-11 …         83         <span style='text-decoration: underline;'>4</span>660
+#&gt; <span style='color: #BCBCBC;'> 4</span> price index      gen      <span style='color: #949494;'>""</span>             2012-02-27 …         80         <span style='text-decoration: underline;'>4</span>660
+#&gt; <span style='color: #BCBCBC;'> 5</span> public domain: … cc        <span style='color: #BB0000;'>NA</span>            2018-12-17 …        100         <span style='text-decoration: underline;'>4</span>660
+#&gt; <span style='color: #BCBCBC;'> 6</span> usa              geo      <span style='color: #949494;'>"</span>United State… 2012-02-27 …        100         <span style='text-decoration: underline;'>4</span>660
+#&gt; <span style='color: #BCBCBC;'> 7</span> urban            gen      <span style='color: #949494;'>""</span>             2012-02-27 …         56         <span style='text-decoration: underline;'>4</span>658
+#&gt; <span style='color: #BCBCBC;'> 8</span> inflation        gen      <span style='color: #949494;'>""</span>             2012-06-08 …         74         <span style='text-decoration: underline;'>4</span>482
+#&gt; <span style='color: #BCBCBC;'> 9</span> nsa              seas     <span style='color: #949494;'>"</span>Not Seasonal… 2012-02-27 …        100         <span style='text-decoration: underline;'>4</span>464
+#&gt; <span style='color: #BCBCBC;'>10</span> consumer         gen      <span style='color: #949494;'>""</span>             2012-02-27 …         65         <span style='text-decoration: underline;'>4</span>438
+#&gt; <span style='color: #949494;'># … with 166 more rows</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
