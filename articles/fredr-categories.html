@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Categories</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2021-07-19</h4>
+            <h4 class="date">2021-07-26</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-categories.Rmd"><code>vignettes/fredr-categories.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-categories.Rmd</code></div>
@@ -137,13 +137,13 @@
 <p><code><a href="../reference/fredr_category.html">fredr_category()</a></code> returns minimal information for a single category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a category.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category.html">fredr_category</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span> 
-<span class="co">#&gt; # A tibble: 1 x 3</span>
+<span class="co">#&gt; # A tibble: 1 × 3</span>
 <span class="co">#&gt;      id name       parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;int&gt;</span>
 <span class="co">#&gt; 1     0 Categories         0</span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category.html">fredr_category</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">97L</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 3</span>
+<span class="co">#&gt; # A tibble: 1 × 3</span>
 <span class="co">#&gt;      id name    parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;       &lt;int&gt;</span>
 <span class="co">#&gt; 1    97 Housing         1</span></code></pre></div>
@@ -154,7 +154,7 @@
 <p><code><a href="../reference/fredr_category_children.html">fredr_category_children()</a></code> returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by <code>category_id</code>. The data returned is a tibble in which each row represents child category of the parent specified.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 8 x 3</span>
+<span class="co">#&gt; # A tibble: 8 × 3</span>
 <span class="co">#&gt;      id name                                    parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;                                       &lt;int&gt;</span>
 <span class="co">#&gt; 1 32991 Money, Banking, &amp; Finance                       0</span>
@@ -167,7 +167,7 @@
 <span class="co">#&gt; 8 33060 Academic Data                                   0</span></code></pre></div>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">1L</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 16 x 3</span>
+<span class="co">#&gt; # A tibble: 16 × 3</span>
 <span class="co">#&gt;       id name                                         parent_id</span>
 <span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;                                            &lt;int&gt;</span>
 <span class="co">#&gt;  1 32262 Business Cycle Expansions &amp; Contractions             1</span>
@@ -194,11 +194,11 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Nothing related to the root</span>
 <span class="fu"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 0 x 0</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 0 × 0</span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># What is related to the Employment Cost Index category?</span>
 <span class="fu"><a href="../reference/fredr_category_related.html">fredr_category_related</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 3</span>
+<span class="co">#&gt; # A tibble: 1 × 3</span>
 <span class="co">#&gt;      id name                                    parent_id</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;                                       &lt;int&gt;</span>
 <span class="co">#&gt; 1    10 Population, Employment, &amp; Labor Markets         0</span></code></pre></div>
@@ -215,19 +215,19 @@
   filter_variable <span class="op">=</span> <span class="st">"frequency"</span>,
   filter_value <span class="op">=</span> <span class="st">"Quarterly"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 30 x 16</span>
+<span class="co">#&gt; # A tibble: 30 × 16</span>
 <span class="co">#&gt;    id     realtime_start realtime_end title     observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 RHORU… 2021-07-19     2021-07-19   Homeowne… 1965-01-01       2021-01-01     </span>
-<span class="co">#&gt;  2 ETOTA… 2021-07-19     2021-07-19   Housing … 2000-04-01       2021-01-01     </span>
-<span class="co">#&gt;  3 RRVRU… 2021-07-19     2021-07-19   Rental V… 1956-01-01       2021-01-01     </span>
-<span class="co">#&gt;  4 BOAAA… 2021-07-19     2021-07-19   Homeowne… 1994-01-01       2021-01-01     </span>
-<span class="co">#&gt;  5 RSAHO… 2021-07-19     2021-07-19   Homeowne… 1980-01-01       2021-01-01     </span>
-<span class="co">#&gt;  6 EVACA… 2021-07-19     2021-07-19   Housing … 2000-04-01       2021-01-01     </span>
-<span class="co">#&gt;  7 ERNTO… 2021-07-19     2021-07-19   Housing … 2000-04-01       2021-01-01     </span>
-<span class="co">#&gt;  8 EOWNO… 2021-07-19     2021-07-19   Housing … 2000-04-01       2021-01-01     </span>
-<span class="co">#&gt;  9 RHVRU… 2021-07-19     2021-07-19   Homeowne… 1956-01-01       2021-01-01     </span>
-<span class="co">#&gt; 10 ESALE… 2021-07-19     2021-07-19   Housing … 2000-04-01       2021-01-01     </span>
+<span class="co">#&gt;  1 RHORU… 2021-07-26     2021-07-26   Homeowne… 1965-01-01       2021-01-01     </span>
+<span class="co">#&gt;  2 ETOTA… 2021-07-26     2021-07-26   Housing … 2000-04-01       2021-01-01     </span>
+<span class="co">#&gt;  3 RRVRU… 2021-07-26     2021-07-26   Rental V… 1956-01-01       2021-01-01     </span>
+<span class="co">#&gt;  4 BOAAA… 2021-07-26     2021-07-26   Homeowne… 1994-01-01       2021-01-01     </span>
+<span class="co">#&gt;  5 RSAHO… 2021-07-26     2021-07-26   Homeowne… 1980-01-01       2021-01-01     </span>
+<span class="co">#&gt;  6 EVACA… 2021-07-26     2021-07-26   Housing … 2000-04-01       2021-01-01     </span>
+<span class="co">#&gt;  7 ERNTO… 2021-07-26     2021-07-26   Housing … 2000-04-01       2021-01-01     </span>
+<span class="co">#&gt;  8 EOWNO… 2021-07-26     2021-07-26   Housing … 2000-04-01       2021-01-01     </span>
+<span class="co">#&gt;  9 RHVRU… 2021-07-26     2021-07-26   Homeowne… 1956-01-01       2021-01-01     </span>
+<span class="co">#&gt; 10 ESALE… 2021-07-26     2021-07-26   Housing … 2000-04-01       2021-01-01     </span>
 <span class="co">#&gt; # … with 20 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
@@ -241,13 +241,13 @@
   tag_names <span class="op">=</span> <span class="st">"usa"</span>,
   exclude_tag_names <span class="op">=</span> <span class="st">"gnp"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 4 x 16</span>
+<span class="co">#&gt; # A tibble: 4 × 16</span>
 <span class="co">#&gt;   id     realtime_start realtime_end title      observation_sta… observation_end</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt; 1 NGMPU… 2021-07-19     2021-07-19   Total Gro… 2001-01-01       2019-01-01     </span>
-<span class="co">#&gt; 2 RGMPU… 2021-07-19     2021-07-19   Total Rea… 2001-01-01       2019-01-01     </span>
-<span class="co">#&gt; 3 PCRGM… 2021-07-19     2021-07-19   Total Per… 2001-01-01       2017-01-01     </span>
-<span class="co">#&gt; 4 QGMPU… 2021-07-19     2021-07-19   Total Qua… 2001-01-01       2019-01-01     </span>
+<span class="co">#&gt; 1 NGMPU… 2021-07-26     2021-07-26   Total Gro… 2001-01-01       2019-01-01     </span>
+<span class="co">#&gt; 2 RGMPU… 2021-07-26     2021-07-26   Total Rea… 2001-01-01       2019-01-01     </span>
+<span class="co">#&gt; 3 PCRGM… 2021-07-26     2021-07-26   Total Per… 2001-01-01       2017-01-01     </span>
+<span class="co">#&gt; 4 QGMPU… 2021-07-26     2021-07-26   Total Qua… 2001-01-01       2019-01-01     </span>
 <span class="co">#&gt; # … with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
@@ -262,11 +262,12 @@
   category_id <span class="op">=</span> <span class="fl">6L</span>,
   tag_group_id <span class="op">=</span> <span class="st">"src"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 2 x 6</span>
-<span class="co">#&gt;   name   group_id notes                created           popularity series_count</span>
-<span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 census src      Census               2012-02-27 10:18…         80          400</span>
-<span class="co">#&gt; 2 bea    src      Bureau of Economic … 2012-02-27 10:18…         79            2</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 3 × 6</span>
+<span class="co">#&gt;   name    group_id notes               created           popularity series_count</span>
+<span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;</span>
+<span class="co">#&gt; 1 census  src      Census              2012-02-27 10:18…         80          372</span>
+<span class="co">#&gt; 2 bea     src      Bureau of Economic… 2012-02-27 10:18…         79            8</span>
+<span class="co">#&gt; 3 frb stl src      St. Louis Fed       2012-02-27 10:18…         68            6</span></code></pre></div>
 <p>To search for tags with the words <code>"usa"</code> in the “Production &amp; Business Activity” category, ordering the results by popularity:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span>
@@ -275,12 +276,12 @@
   order_by <span class="op">=</span> <span class="st">"popularity"</span>,
   sort_order <span class="op">=</span> <span class="st">"desc"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 3 x 6</span>
+<span class="co">#&gt; # A tibble: 3 × 6</span>
 <span class="co">#&gt;   name   group_id notes               created            popularity series_count</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;                   &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt; 1 usa    geo      United States of A… 2012-02-27 10:18:…        100         3220</span>
-<span class="co">#&gt; 2 census src      Census              2012-02-27 10:18:…         80         3220</span>
-<span class="co">#&gt; 3 ga     geo      Georgia (U.S. stat… 2012-02-27 10:18:…         49           54</span></code></pre></div>
+<span class="co">#&gt; 1 usa    geo      United States of A… 2012-02-27 10:18:…        100         3240</span>
+<span class="co">#&gt; 2 census src      Census              2012-02-27 10:18:…         80         3240</span>
+<span class="co">#&gt; 3 ga     geo      Georgia (U.S. stat… 2012-02-27 10:18:…         49           52</span></code></pre></div>
 </div>
 <div id="get-related-tags-within-a-fred-category" class="section level2">
 <h2 class="hasAnchor">
@@ -293,20 +294,20 @@
   exclude_tag_names <span class="op">=</span> <span class="st">"rate"</span>,
   order_by <span class="op">=</span> <span class="st">"name"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 103 x 6</span>
+<span class="co">#&gt; # A tibble: 106 × 6</span>
 <span class="co">#&gt;    name              group_id notes    created           popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;             &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 accommodation     gen      ""       2012-02-27 10:18…         27           22</span>
-<span class="co">#&gt;  2 administrative    gen      ""       2012-02-27 10:18…         18           20</span>
-<span class="co">#&gt;  3 agriculture       gen      ""       2012-02-27 10:18…         46           22</span>
-<span class="co">#&gt;  4 ak                geo      "Alaska" 2012-02-27 10:18…         35           22</span>
-<span class="co">#&gt;  5 al                geo      "Alabam… 2012-02-27 10:18…         45           20</span>
-<span class="co">#&gt;  6 ar                geo      "Arkans… 2012-02-27 10:18…         47           30</span>
+<span class="co">#&gt;  1 accommodation     gen      ""       2012-02-27 10:18…         27           18</span>
+<span class="co">#&gt;  2 administrative    gen      ""       2012-02-27 10:18…         18           28</span>
+<span class="co">#&gt;  3 agriculture       gen      ""       2012-02-27 10:18…         46           32</span>
+<span class="co">#&gt;  4 ak                geo      "Alaska" 2012-02-27 10:18…         35           14</span>
+<span class="co">#&gt;  5 al                geo      "Alabam… 2012-02-27 10:18…         45           24</span>
+<span class="co">#&gt;  6 ar                geo      "Arkans… 2012-02-27 10:18…         47           22</span>
 <span class="co">#&gt;  7 arts              gen      ""       2012-02-27 10:18…         23           20</span>
-<span class="co">#&gt;  8 average           gen      ""       2015-05-06 14:42…         50          154</span>
-<span class="co">#&gt;  9 az                geo      "Arizon… 2012-02-27 10:18…         44           16</span>
-<span class="co">#&gt; 10 business applica… gen       &lt;NA&gt;    2019-03-19 15:47…         32          796</span>
-<span class="co">#&gt; # … with 93 more rows</span></code></pre></div>
+<span class="co">#&gt;  8 average           gen      ""       2015-05-06 14:42…         50          162</span>
+<span class="co">#&gt;  9 az                geo      "Arizon… 2012-02-27 10:18…         44           18</span>
+<span class="co">#&gt; 10 business applica… gen       &lt;NA&gt;    2019-03-19 15:47…         32          774</span>
+<span class="co">#&gt; # … with 96 more rows</span></code></pre></div>
 </div>
 </div>
   </div>
