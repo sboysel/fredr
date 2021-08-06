@@ -30,3 +30,4 @@
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
 ^CRAN-RELEASE$
+^sonar-project\.properties$
