@@ -108,7 +108,7 @@
       <h1 data-toc-skip>FRED Series</h1>
                         <h4 class="author">Sam Boysel</h4>
             
-            <h4 class="date">2021-08-30</h4>
+            <h4 class="date">2021-09-06</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/master/vignettes/fredr-series.Rmd"><code>vignettes/fredr-series.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-series.Rmd</code></div>
@@ -139,20 +139,20 @@
   series_id <span class="op">=</span> <span class="st">"UNRATE"</span>,
   observation_start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"1990-01-01"</span><span class="op">)</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 379 × 5</span>
+<span class="co">#&gt; # A tibble: 380 × 5</span>
 <span class="co">#&gt;    date       series_id value realtime_start realtime_end</span>
 <span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;     &lt;dbl&gt; &lt;date&gt;         &lt;date&gt;      </span>
-<span class="co">#&gt;  1 1990-01-01 UNRATE      5.4 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt;  2 1990-02-01 UNRATE      5.3 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt;  3 1990-03-01 UNRATE      5.2 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt;  4 1990-04-01 UNRATE      5.4 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt;  5 1990-05-01 UNRATE      5.4 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt;  6 1990-06-01 UNRATE      5.2 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt;  7 1990-07-01 UNRATE      5.5 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt;  8 1990-08-01 UNRATE      5.7 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt;  9 1990-09-01 UNRATE      5.9 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt; 10 1990-10-01 UNRATE      5.9 2021-08-30     2021-08-30  </span>
-<span class="co">#&gt; # … with 369 more rows</span></code></pre></div>
+<span class="co">#&gt;  1 1990-01-01 UNRATE      5.4 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt;  2 1990-02-01 UNRATE      5.3 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt;  3 1990-03-01 UNRATE      5.2 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt;  4 1990-04-01 UNRATE      5.4 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt;  5 1990-05-01 UNRATE      5.4 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt;  6 1990-06-01 UNRATE      5.2 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt;  7 1990-07-01 UNRATE      5.5 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt;  8 1990-08-01 UNRATE      5.7 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt;  9 1990-09-01 UNRATE      5.9 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt; 10 1990-10-01 UNRATE      5.9 2021-09-06     2021-09-06  </span>
+<span class="co">#&gt; # … with 370 more rows</span></code></pre></div>
 </div>
 <div id="search-for-fred-series" class="section level2">
 <h2 class="hasAnchor">
@@ -166,16 +166,16 @@
 <span class="co">#&gt; # A tibble: 100 × 16</span>
 <span class="co">#&gt;    id          realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 UNRATE      2021-08-30     2021-08-30   Unem… 1948-01-01       2021-07-01     </span>
-<span class="co">#&gt;  2 UNRATENSA   2021-08-30     2021-08-30   Unem… 1948-01-01       2021-07-01     </span>
-<span class="co">#&gt;  3 NROU        2021-08-30     2021-08-30   Nonc… 1949-01-01       2031-10-01     </span>
-<span class="co">#&gt;  4 CCSA        2021-08-30     2021-08-30   Cont… 1967-01-07       2021-08-14     </span>
-<span class="co">#&gt;  5 CCNSA       2021-08-30     2021-08-30   Cont… 1967-01-07       2021-08-14     </span>
-<span class="co">#&gt;  6 UNEMPLOY    2021-08-30     2021-08-30   Unem… 1948-01-01       2021-07-01     </span>
-<span class="co">#&gt;  7 LNS14000006 2021-08-30     2021-08-30   Unem… 1972-01-01       2021-07-01     </span>
-<span class="co">#&gt;  8 LNU04000006 2021-08-30     2021-08-30   Unem… 1972-01-01       2021-07-01     </span>
-<span class="co">#&gt;  9 LNS14000031 2021-08-30     2021-08-30   Unem… 1972-01-01       2021-07-01     </span>
-<span class="co">#&gt; 10 U6RATE      2021-08-30     2021-08-30   Tota… 1994-01-01       2021-07-01     </span>
+<span class="co">#&gt;  1 UNRATE      2021-09-06     2021-09-06   Unem… 1948-01-01       2021-08-01     </span>
+<span class="co">#&gt;  2 UNRATENSA   2021-09-06     2021-09-06   Unem… 1948-01-01       2021-08-01     </span>
+<span class="co">#&gt;  3 CCSA        2021-09-06     2021-09-06   Cont… 1967-01-07       2021-08-21     </span>
+<span class="co">#&gt;  4 LNS14000006 2021-09-06     2021-09-06   Unem… 1972-01-01       2021-08-01     </span>
+<span class="co">#&gt;  5 NROU        2021-09-06     2021-09-06   Nonc… 1949-01-01       2031-10-01     </span>
+<span class="co">#&gt;  6 UNEMPLOY    2021-09-06     2021-09-06   Unem… 1948-01-01       2021-08-01     </span>
+<span class="co">#&gt;  7 CCNSA       2021-09-06     2021-09-06   Cont… 1967-01-07       2021-08-21     </span>
+<span class="co">#&gt;  8 LNU04000006 2021-09-06     2021-09-06   Unem… 1972-01-01       2021-08-01     </span>
+<span class="co">#&gt;  9 LNS14000031 2021-09-06     2021-09-06   Unem… 1972-01-01       2021-08-01     </span>
+<span class="co">#&gt; 10 U6RATE      2021-09-06     2021-09-06   Tota… 1994-01-01       2021-08-01     </span>
 <span class="co">#&gt; # … with 90 more rows, and 10 more variables: frequency &lt;chr&gt;,</span>
 <span class="co">#&gt; #   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span>
@@ -189,22 +189,22 @@
 <span class="co">#&gt; # A tibble: 16 × 16</span>
 <span class="co">#&gt;    id          realtime_start realtime_end title observation_sta… observation_end</span>
 <span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 UNRATE      2021-08-30     2021-08-30   Unem… 1948-01-01       2021-07-01     </span>
-<span class="co">#&gt;  2 UNRATECTH   2021-08-30     2021-08-30   FOMC… 2021-01-01       2023-01-01     </span>
-<span class="co">#&gt;  3 UNRATECTHLR 2021-08-30     2021-08-30   Long… 2009-02-18       2021-06-16     </span>
-<span class="co">#&gt;  4 UNRATECTL   2021-08-30     2021-08-30   FOMC… 2021-01-01       2023-01-01     </span>
-<span class="co">#&gt;  5 UNRATECTLLR 2021-08-30     2021-08-30   Long… 2009-02-18       2021-06-16     </span>
-<span class="co">#&gt;  6 UNRATECTM   2021-08-30     2021-08-30   FOMC… 2021-01-01       2023-01-01     </span>
-<span class="co">#&gt;  7 UNRATECTMLR 2021-08-30     2021-08-30   Long… 2009-02-18       2021-06-16     </span>
-<span class="co">#&gt;  8 UNRATEMD    2021-08-30     2021-08-30   FOMC… 2021-01-01       2023-01-01     </span>
-<span class="co">#&gt;  9 UNRATEMDLR  2021-08-30     2021-08-30   Long… 2015-06-17       2021-06-16     </span>
-<span class="co">#&gt; 10 UNRATENSA   2021-08-30     2021-08-30   Unem… 1948-01-01       2021-07-01     </span>
-<span class="co">#&gt; 11 UNRATERH    2021-08-30     2021-08-30   FOMC… 2021-01-01       2023-01-01     </span>
-<span class="co">#&gt; 12 UNRATERHLR  2021-08-30     2021-08-30   Long… 2009-02-18       2021-06-16     </span>
-<span class="co">#&gt; 13 UNRATERL    2021-08-30     2021-08-30   FOMC… 2021-01-01       2023-01-01     </span>
-<span class="co">#&gt; 14 UNRATERLLR  2021-08-30     2021-08-30   Long… 2009-02-18       2021-06-16     </span>
-<span class="co">#&gt; 15 UNRATERM    2021-08-30     2021-08-30   FOMC… 2021-01-01       2023-01-01     </span>
-<span class="co">#&gt; 16 UNRATERMLR  2021-08-30     2021-08-30   Long… 2009-02-18       2021-06-16     </span>
+<span class="co">#&gt;  1 UNRATE      2021-09-06     2021-09-06   Unem… 1948-01-01       2021-08-01     </span>
+<span class="co">#&gt;  2 UNRATECTH   2021-09-06     2021-09-06   FOMC… 2021-01-01       2023-01-01     </span>
+<span class="co">#&gt;  3 UNRATECTHLR 2021-09-06     2021-09-06   Long… 2009-02-18       2021-06-16     </span>
+<span class="co">#&gt;  4 UNRATECTL   2021-09-06     2021-09-06   FOMC… 2021-01-01       2023-01-01     </span>
+<span class="co">#&gt;  5 UNRATECTLLR 2021-09-06     2021-09-06   Long… 2009-02-18       2021-06-16     </span>
+<span class="co">#&gt;  6 UNRATECTM   2021-09-06     2021-09-06   FOMC… 2021-01-01       2023-01-01     </span>
+<span class="co">#&gt;  7 UNRATECTMLR 2021-09-06     2021-09-06   Long… 2009-02-18       2021-06-16     </span>
+<span class="co">#&gt;  8 UNRATEMD    2021-09-06     2021-09-06   FOMC… 2021-01-01       2023-01-01     </span>
+<span class="co">#&gt;  9 UNRATEMDLR  2021-09-06     2021-09-06   Long… 2015-06-17       2021-06-16     </span>
+<span class="co">#&gt; 10 UNRATENSA   2021-09-06     2021-09-06   Unem… 1948-01-01       2021-08-01     </span>
+<span class="co">#&gt; 11 UNRATERH    2021-09-06     2021-09-06   FOMC… 2021-01-01       2023-01-01     </span>
+<span class="co">#&gt; 12 UNRATERHLR  2021-09-06     2021-09-06   Long… 2009-02-18       2021-06-16     </span>
+<span class="co">#&gt; 13 UNRATERL    2021-09-06     2021-09-06   FOMC… 2021-01-01       2023-01-01     </span>
+<span class="co">#&gt; 14 UNRATERLLR  2021-09-06     2021-09-06   Long… 2009-02-18       2021-06-16     </span>
+<span class="co">#&gt; 15 UNRATERM    2021-09-06     2021-09-06   FOMC… 2021-01-01       2023-01-01     </span>
+<span class="co">#&gt; 16 UNRATERMLR  2021-09-06     2021-09-06   Long… 2009-02-18       2021-06-16     </span>
 <span class="co">#&gt; # … with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
@@ -222,16 +222,16 @@
 <span class="co">#&gt; # A tibble: 100 × 6</span>
 <span class="co">#&gt;    name                              group_id notes created popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;                             &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;        &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 nsa                               seas     "Not… 2012-0…        100        46834</span>
-<span class="co">#&gt;  2 usa                               geo      "Uni… 2012-0…        100        42384</span>
-<span class="co">#&gt;  3 public domain: citation requested cc        &lt;NA&gt; 2018-1…        100        40128</span>
-<span class="co">#&gt;  4 bls                               src      "Bur… 2012-0…         87        38128</span>
-<span class="co">#&gt;  5 unemployment                      gen      ""    2012-0…         78        32604</span>
-<span class="co">#&gt;  6 county                            geot     "Cou… 2012-0…         80        28428</span>
-<span class="co">#&gt;  7 annual                            freq     ""    2012-0…         90        24078</span>
-<span class="co">#&gt;  8 household survey                  gen      "Cur… 2012-0…         65        20028</span>
-<span class="co">#&gt;  9 monthly                           freq     ""    2012-0…         93        19136</span>
-<span class="co">#&gt; 10 rate                              gen      ""    2012-0…         87        14802</span>
+<span class="co">#&gt;  1 nsa                               seas     "Not… 2012-0…        100        46670</span>
+<span class="co">#&gt;  2 usa                               geo      "Uni… 2012-0…        100        42078</span>
+<span class="co">#&gt;  3 public domain: citation requested cc        &lt;NA&gt; 2018-1…        100        39832</span>
+<span class="co">#&gt;  4 bls                               src      "Bur… 2012-0…         87        37852</span>
+<span class="co">#&gt;  5 unemployment                      gen      ""    2012-0…         78        32618</span>
+<span class="co">#&gt;  6 county                            geot     "Cou… 2012-0…         80        28232</span>
+<span class="co">#&gt;  7 annual                            freq     ""    2012-0…         90        24250</span>
+<span class="co">#&gt;  8 household survey                  gen      "Cur… 2012-0…         65        19914</span>
+<span class="co">#&gt;  9 monthly                           freq     ""    2012-0…         93        18792</span>
+<span class="co">#&gt; 10 rate                              gen      ""    2012-0…         87        14828</span>
 <span class="co">#&gt; # … with 90 more rows</span></code></pre></div>
 </div>
 <div id="search-for-fred-series-by-related-tags" class="section level2">
@@ -247,16 +247,16 @@
 <span class="co">#&gt; # A tibble: 30 × 6</span>
 <span class="co">#&gt;    name                              group_id notes created popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;                             &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;        &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 nation                            geot     ""    2012-0…         99           60</span>
-<span class="co">#&gt;  2 gnp                               gen      "Gro… 2012-0…         38           48</span>
-<span class="co">#&gt;  3 public domain: citation requested cc        &lt;NA&gt; 2018-1…        100           38</span>
-<span class="co">#&gt;  4 nsa                               seas     "Not… 2012-0…        100           32</span>
-<span class="co">#&gt;  5 quarterly                         freq     ""    2012-0…         85           32</span>
-<span class="co">#&gt;  6 annual                            freq     ""    2012-0…         90           28</span>
-<span class="co">#&gt;  7 bea                               src      "Bur… 2012-0…         79           28</span>
-<span class="co">#&gt;  8 nipa                              rls      "Nat… 2012-0…         71           28</span>
-<span class="co">#&gt;  9 sa                                seas     "Sea… 2012-0…         88           28</span>
-<span class="co">#&gt; 10 copyrighted: citation required    cc        &lt;NA&gt; 2018-1…         88           22</span>
+<span class="co">#&gt;  1 nation                            geot     ""    2012-0…         99           74</span>
+<span class="co">#&gt;  2 gnp                               gen      "Gro… 2012-0…         38           64</span>
+<span class="co">#&gt;  3 public domain: citation requested cc        &lt;NA&gt; 2018-1…        100           50</span>
+<span class="co">#&gt;  4 quarterly                         freq     ""    2012-0…         85           48</span>
+<span class="co">#&gt;  5 sa                                seas     "Sea… 2012-0…         88           44</span>
+<span class="co">#&gt;  6 bea                               src      "Bur… 2012-0…         79           36</span>
+<span class="co">#&gt;  7 gdp                               gen      "Gro… 2012-0…         82           36</span>
+<span class="co">#&gt;  8 nipa                              rls      "Nat… 2012-0…         71           36</span>
+<span class="co">#&gt;  9 nsa                               seas     "Not… 2012-0…        100           30</span>
+<span class="co">#&gt; 10 annual                            freq     ""    2012-0…         90           26</span>
 <span class="co">#&gt; # … with 20 more rows</span></code></pre></div>
 </div>
 <div id="get-basic-information-for-a-fred-series" class="section level2">
@@ -268,7 +268,7 @@
 <span class="co">#&gt; # A tibble: 1 × 15</span>
 <span class="co">#&gt;   id     realtime_start realtime_end title             observation_sta… observation_end</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt; 1 UNRATE 2021-08-30     2021-08-30   Unemployment Rate 1948-01-01       2021-07-01     </span>
+<span class="co">#&gt; 1 UNRATE 2021-09-06     2021-09-06   Unemployment Rate 1948-01-01       2021-08-01     </span>
 <span class="co">#&gt; # … with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
@@ -285,7 +285,7 @@
 <span class="co">#&gt; 1 UNRATE 1960-03-15     1967-02-08   Civilian … 1948-01-01       1966-12-01     </span>
 <span class="co">#&gt; 2 UNRATE 1967-02-09     2012-02-02   Civilian … 1948-01-01       2011-12-01     </span>
 <span class="co">#&gt; 3 UNRATE 2012-02-03     2019-09-05   Civilian … 1948-01-01       2019-07-01     </span>
-<span class="co">#&gt; 4 UNRATE 2019-09-06     9999-12-31   Unemploym… 1948-01-01       2021-07-01     </span>
+<span class="co">#&gt; 4 UNRATE 2019-09-06     9999-12-31   Unemploym… 1948-01-01       2021-08-01     </span>
 <span class="co">#&gt; # … with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
@@ -311,7 +311,7 @@
 <span class="co">#&gt; # A tibble: 1 × 6</span>
 <span class="co">#&gt;      id realtime_start realtime_end name                 press_release link     </span>
 <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;                &lt;lgl&gt;         &lt;chr&gt;    </span>
-<span class="co">#&gt; 1    50 2021-08-30     2021-08-30   Employment Situation TRUE          http://w…</span></code></pre></div>
+<span class="co">#&gt; 1    50 2021-09-06     2021-09-06   Employment Situation TRUE          http://w…</span></code></pre></div>
 </div>
 <div id="get-the-tags-for-a-fred-series" class="section level2">
 <h2 class="hasAnchor">
@@ -325,20 +325,20 @@
 <span class="co">#&gt; # A tibble: 14 × 6</span>
 <span class="co">#&gt;    name                              group_id notes created popularity series_count</span>
 <span class="co">#&gt;    &lt;chr&gt;                             &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;        &lt;int&gt;        &lt;int&gt;</span>
-<span class="co">#&gt;  1 16 years +                        gen      ""    2012-0…         59         5856</span>
-<span class="co">#&gt;  2 bls                               src      "Bur… 2012-0…         87       174700</span>
-<span class="co">#&gt;  3 civilian                          gen      ""    2012-0…         55         9622</span>
-<span class="co">#&gt;  4 headline figure                   gen      ""    2013-1…         53           54</span>
-<span class="co">#&gt;  5 household survey                  gen      "Cur… 2012-0…         65        21436</span>
-<span class="co">#&gt;  6 labor                             gen      ""    2012-0…         61        33842</span>
-<span class="co">#&gt;  7 labor underutilization            gen      ""    2012-0…         37          708</span>
-<span class="co">#&gt;  8 monthly                           freq     ""    2012-0…         93       212910</span>
-<span class="co">#&gt;  9 nation                            geot     ""    2012-0…         99       259892</span>
-<span class="co">#&gt; 10 public domain: citation requested cc        &lt;NA&gt; 2018-1…        100       586122</span>
-<span class="co">#&gt; 11 rate                              gen      ""    2012-0…         87        47166</span>
-<span class="co">#&gt; 12 sa                                seas     "Sea… 2012-0…         88        82350</span>
-<span class="co">#&gt; 13 unemployment                      gen      ""    2012-0…         78        32720</span>
-<span class="co">#&gt; 14 usa                               geo      "Uni… 2012-0…        100       653188</span></code></pre></div>
+<span class="co">#&gt;  1 16 years +                        gen      ""    2012-0…         59         5810</span>
+<span class="co">#&gt;  2 bls                               src      "Bur… 2012-0…         87       175698</span>
+<span class="co">#&gt;  3 civilian                          gen      ""    2012-0…         55         9546</span>
+<span class="co">#&gt;  4 headline figure                   gen      ""    2013-1…         53           46</span>
+<span class="co">#&gt;  5 household survey                  gen      "Cur… 2012-0…         65        21502</span>
+<span class="co">#&gt;  6 labor                             gen      ""    2012-0…         61        33458</span>
+<span class="co">#&gt;  7 labor underutilization            gen      ""    2012-0…         37          744</span>
+<span class="co">#&gt;  8 monthly                           freq     ""    2012-0…         93       214196</span>
+<span class="co">#&gt;  9 nation                            geot     ""    2012-0…         99       260996</span>
+<span class="co">#&gt; 10 public domain: citation requested cc        &lt;NA&gt; 2018-1…        100       586064</span>
+<span class="co">#&gt; 11 rate                              gen      ""    2012-0…         87        46936</span>
+<span class="co">#&gt; 12 sa                                seas     "Sea… 2012-0…         88        81568</span>
+<span class="co">#&gt; 13 unemployment                      gen      ""    2012-0…         78        32570</span>
+<span class="co">#&gt; 14 usa                               geo      "Uni… 2012-0…        100       653218</span></code></pre></div>
 </div>
 <div id="get-a-set-of-recently-updated-fred-series" class="section level2">
 <h2 class="hasAnchor">
@@ -347,18 +347,18 @@
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_series_updates.html">fredr_series_updates</a></span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 10 × 15</span>
-<span class="co">#&gt;    id             realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 NASDAQCOM      2021-08-30     2021-08-30   NASD… 1971-02-05       2021-08-27     </span>
-<span class="co">#&gt;  2 NASDAQ100      2021-08-30     2021-08-30   NASD… 1986-01-02       2021-08-27     </span>
-<span class="co">#&gt;  3 NGDPRNSAXDCESQ 2021-08-30     2021-08-30   Real… 1995-01-01       2021-04-01     </span>
-<span class="co">#&gt;  4 NGDPNSAXDCESQ  2021-08-30     2021-08-30   Nomi… 1995-01-01       2021-04-01     </span>
-<span class="co">#&gt;  5 NGDPDSAIXESQ   2021-08-30     2021-08-30   Gros… 1995-01-01       2021-04-01     </span>
-<span class="co">#&gt;  6 NGDPDIXDEA     2021-08-30     2021-08-30   Gros… 1991-01-01       2020-01-01     </span>
-<span class="co">#&gt;  7 NFIXDCGBA      2021-08-30     2021-08-30   Nomi… 1995-01-01       2020-01-01     </span>
-<span class="co">#&gt;  8 NFISAXDCGBQ    2021-08-30     2021-08-30   Nomi… 1955-01-01       2021-01-01     </span>
-<span class="co">#&gt;  9 NFISAXDCESQ    2021-08-30     2021-08-30   Nomi… 1995-01-01       2021-04-01     </span>
-<span class="co">#&gt; 10 NFIRXDCGBA     2021-08-30     2021-08-30   Real… 1995-01-01       2020-01-01     </span>
+<span class="co">#&gt;    id                 realtime_start realtime_end title observation_sta… observation_end</span>
+<span class="co">#&gt;    &lt;chr&gt;              &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
+<span class="co">#&gt;  1 TRESEGKRM194N      2021-09-06     2021-09-06   Tota… 1950-12-01       2021-07-01     </span>
+<span class="co">#&gt;  2 TRESEGKRM052N      2021-09-06     2021-09-06   Tota… 1950-12-01       2021-07-01     </span>
+<span class="co">#&gt;  3 INTGSBKRM193N      2021-09-06     2021-09-06   Inte… 1973-05-01       2021-06-01     </span>
+<span class="co">#&gt;  4 INTDSRKRM193N      2021-09-06     2021-09-06   Inte… 1964-01-01       2021-06-01     </span>
+<span class="co">#&gt;  5 ICERATES1200EUR4Y  2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt;  6 ICERATES1200EUR2Y  2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt;  7 ICERATES1200EUR3Y  2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt;  8 ICERATES1200EUR30Y 2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt;  9 ICERATES1200EUR25Y 2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt; 10 ICERATES1200EUR20Y 2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
 <span class="co">#&gt; # … with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
@@ -372,18 +372,18 @@
   limit <span class="op">=</span> <span class="fl">10L</span>
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 10 × 15</span>
-<span class="co">#&gt;    id             realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
-<span class="co">#&gt;  1 NASDAQCOM      2021-08-30     2021-08-30   NASD… 1971-02-05       2021-08-27     </span>
-<span class="co">#&gt;  2 NASDAQ100      2021-08-30     2021-08-30   NASD… 1986-01-02       2021-08-27     </span>
-<span class="co">#&gt;  3 NGDPNSAXDCESQ  2021-08-30     2021-08-30   Nomi… 1995-01-01       2021-04-01     </span>
-<span class="co">#&gt;  4 NGDPRNSAXDCESQ 2021-08-30     2021-08-30   Real… 1995-01-01       2021-04-01     </span>
-<span class="co">#&gt;  5 NGDPDIXDEA     2021-08-30     2021-08-30   Gros… 1991-01-01       2020-01-01     </span>
-<span class="co">#&gt;  6 NGDPDSAIXESQ   2021-08-30     2021-08-30   Gros… 1995-01-01       2021-04-01     </span>
-<span class="co">#&gt;  7 NFISAXDCESQ    2021-08-30     2021-08-30   Nomi… 1995-01-01       2021-04-01     </span>
-<span class="co">#&gt;  8 NFISAXDCGBQ    2021-08-30     2021-08-30   Nomi… 1955-01-01       2021-01-01     </span>
-<span class="co">#&gt;  9 NFIXDCGBA      2021-08-30     2021-08-30   Nomi… 1995-01-01       2020-01-01     </span>
-<span class="co">#&gt; 10 NFIRSAXDCGBQ   2021-08-30     2021-08-30   Real… 1955-01-01       2021-01-01     </span>
+<span class="co">#&gt;    id                 realtime_start realtime_end title observation_sta… observation_end</span>
+<span class="co">#&gt;    &lt;chr&gt;              &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;          </span>
+<span class="co">#&gt;  1 TRESEGKRM194N      2021-09-06     2021-09-06   Tota… 1950-12-01       2021-07-01     </span>
+<span class="co">#&gt;  2 TRESEGKRM052N      2021-09-06     2021-09-06   Tota… 1950-12-01       2021-07-01     </span>
+<span class="co">#&gt;  3 INTGSBKRM193N      2021-09-06     2021-09-06   Inte… 1973-05-01       2021-06-01     </span>
+<span class="co">#&gt;  4 INTDSRKRM193N      2021-09-06     2021-09-06   Inte… 1964-01-01       2021-06-01     </span>
+<span class="co">#&gt;  5 ICERATES1200EUR4Y  2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt;  6 ICERATES1200EUR2Y  2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt;  7 ICERATES1200EUR3Y  2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt;  8 ICERATES1200EUR30Y 2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt;  9 ICERATES1200EUR25Y 2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
+<span class="co">#&gt; 10 ICERATES1200EUR20Y 2021-09-06     2021-09-06   ICE … 2014-08-01       2021-08-30     </span>
 <span class="co">#&gt; # … with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span>
 <span class="co">#&gt; #   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span>
 <span class="co">#&gt; #   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span>
@@ -395,7 +395,7 @@
 <p>The <code><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates()</a></code> function returns a sequence of dates in history when the series specified by <code>series_id</code> was revised or appended to. The data returned is a tibble where each row is a date. For example, to get the vintage dates for the series <code>UNRATE</code>:</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_series_vintagedates.html">fredr_series_vintagedates</a></span><span class="op">(</span>series_id <span class="op">=</span> <span class="st">"UNRATE"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 738 × 1</span>
+<span class="co">#&gt; # A tibble: 739 × 1</span>
 <span class="co">#&gt;    vintage_dates</span>
 <span class="co">#&gt;    &lt;chr&gt;        </span>
 <span class="co">#&gt;  1 1960-03-15   </span>
@@ -408,7 +408,7 @@
 <span class="co">#&gt;  8 1960-10-10   </span>
 <span class="co">#&gt;  9 1960-11-10   </span>
 <span class="co">#&gt; 10 1960-12-12   </span>
-<span class="co">#&gt; # … with 728 more rows</span></code></pre></div>
+<span class="co">#&gt; # … with 729 more rows</span></code></pre></div>
 </div>
 </div>
   </div>
