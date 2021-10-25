@@ -286,20 +286,20 @@ and additional notes.</p>
 <span class='co'># "Production &amp; Business Activity" category</span>
 <span class='fu'>fredr_category_related_tags</span><span class='op'>(</span>category_id <span class='op'>=</span> <span class='fl'>1L</span>, tag_names <span class='op'>=</span> <span class='st'>"business;monthly"</span><span class='op'>)</span>
 <span class='op'>}</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 104 × 6</span>
-#&gt;    name                              group_id notes created popularity series_count
-#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                             <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>
-#&gt; <span style='color: #BCBCBC;'> 1</span> census                            src      <span style='color: #949494;'>"</span>Cen… 2012-0…         80         <span style='text-decoration: underline;'>1</span>654
-#&gt; <span style='color: #BCBCBC;'> 2</span> public domain: citation requested cc        <span style='color: #BB0000;'>NA</span>   2018-1…        100         <span style='text-decoration: underline;'>1</span>654
-#&gt; <span style='color: #BCBCBC;'> 3</span> usa                               geo      <span style='color: #949494;'>"</span>Uni… 2012-0…        100         <span style='text-decoration: underline;'>1</span>654
-#&gt; <span style='color: #BCBCBC;'> 4</span> state                             geot     <span style='color: #949494;'>"</span>Sta… 2012-0…         75         <span style='text-decoration: underline;'>1</span>116
-#&gt; <span style='color: #BCBCBC;'> 5</span> business formations               gen       <span style='color: #BB0000;'>NA</span>   2019-0…         11          894
-#&gt; <span style='color: #BCBCBC;'> 6</span> nsa                               seas     <span style='color: #949494;'>"</span>Not… 2012-0…        100          856
-#&gt; <span style='color: #BCBCBC;'> 7</span> sa                                seas     <span style='color: #949494;'>"</span>Sea… 2012-0…         88          798
-#&gt; <span style='color: #BCBCBC;'> 8</span> business applications             gen       <span style='color: #BB0000;'>NA</span>   2019-0…         32          754
-#&gt; <span style='color: #BCBCBC;'> 9</span> nation                            geot     <span style='color: #949494;'>""</span>    2012-0…         99          458
-#&gt; <span style='color: #BCBCBC;'>10</span> projection                        gen      <span style='color: #949494;'>""</span>    2012-0…         45          306
-#&gt; <span style='color: #949494;'># … with 94 more rows</span></div></pre>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 108 × 6</span>
+#&gt;    name             group_id notes          created      popularity series_count
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>          <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>
+#&gt; <span style='color: #BCBCBC;'> 1</span> census           src      <span style='color: #949494;'>"</span>Census<span style='color: #949494;'>"</span>       2012-02-27 …         80         <span style='text-decoration: underline;'>1</span>760
+#&gt; <span style='color: #BCBCBC;'> 2</span> public domain: … cc        <span style='color: #BB0000;'>NA</span>            2018-12-17 …        100         <span style='text-decoration: underline;'>1</span>760
+#&gt; <span style='color: #BCBCBC;'> 3</span> usa              geo      <span style='color: #949494;'>"</span>United State… 2012-02-27 …        100         <span style='text-decoration: underline;'>1</span>760
+#&gt; <span style='color: #BCBCBC;'> 4</span> state            geot     <span style='color: #949494;'>"</span>State<span style='color: #949494;'>"</span>        2012-02-27 …         75         <span style='text-decoration: underline;'>1</span>176
+#&gt; <span style='color: #BCBCBC;'> 5</span> nsa              seas     <span style='color: #949494;'>"</span>Not Seasonal… 2012-02-27 …        100          972
+#&gt; <span style='color: #BCBCBC;'> 6</span> business format… gen       <span style='color: #BB0000;'>NA</span>            2019-03-19 …         11          936
+#&gt; <span style='color: #BCBCBC;'> 7</span> business applic… gen       <span style='color: #BB0000;'>NA</span>            2019-03-19 …         32          812
+#&gt; <span style='color: #BCBCBC;'> 8</span> sa               seas     <span style='color: #949494;'>"</span>Seasonally A… 2012-02-27 …         88          788
+#&gt; <span style='color: #BCBCBC;'> 9</span> nation           geot     <span style='color: #949494;'>""</span>             2012-02-27 …         99          492
+#&gt; <span style='color: #BCBCBC;'>10</span> projection       gen      <span style='color: #949494;'>""</span>             2012-02-27 …         45          308
+#&gt; <span style='color: #949494;'># … with 98 more rows</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
