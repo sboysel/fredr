@@ -2,21 +2,21 @@
   "index_name": "fredr",
   "start_urls": [
     {
-      "url": "https://sboysel.github.io/fredr//index.html",
+      "url": "https://sboysel.github.io/fredr/index.html",
       "selectors_key": "homepage",
       "tags": [
         "homepage"
       ]
     },
     {
-      "url": "https://sboysel.github.io/fredr//reference",
+      "url": "https://sboysel.github.io/fredr/reference",
       "selectors_key": "reference",
       "tags": [
         "reference"
       ]
     },
     {
-      "url": "https://sboysel.github.io/fredr//articles",
+      "url": "https://sboysel.github.io/fredr/articles",
       "selectors_key": "articles",
       "tags": [
         "articles"
@@ -30,7 +30,7 @@
     "/articles/index.html"
   ],
   "sitemap_urls": [
-    "https://sboysel.github.io/fredr//sitemap.xml"
+    "https://sboysel.github.io/fredr/sitemap.xml"
   ],
   "selectors": {
     "homepage": {

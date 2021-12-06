@@ -23,6 +23,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -35,18 +37,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">fredr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.1.0.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="articles/fredr.html">Get started</a>
 </li>
@@ -83,7 +79,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/sboysel/fredr/">
+  <a href="https://github.com/sboysel/fredr/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -106,37 +102,37 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="fredr" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#fredr" class="anchor"></a>fredr</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="fredr">fredr<a class="anchor" aria-label="anchor" href="#fredr"></a>
+</h1></div>
 <!-- badges: start -->
 
-<p>fredr provides a complete set of R bindings to the <a href="https://fred.stlouisfed.org/">Federal Reserve of Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. The functions allow the user to search for and fetch time series observations as well as associated metadata within the FRED database.</p>
-<p>The core function in this package is <code><a href="reference/fredr_series_observations.html">fredr()</a></code>, which fetches observations for a FRED series. That said, there are many other FRED endpoints exposed through fredr, such as <code><a href="reference/fredr_series_search_text.html">fredr_series_search_text()</a></code>, which allows you to search for a FRED series by text.</p>
-<p>We strongly encourage referencing the FRED API <a href="https://fred.stlouisfed.org/docs/api/fred/">documentation</a> to leverage the full power of fredr.</p>
+<p>fredr provides a complete set of R bindings to the <a href="https://fred.stlouisfed.org/" class="external-link">Federal Reserve of Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. The functions allow the user to search for and fetch time series observations as well as associated metadata within the FRED database.</p>
+<p>The core function in this package is <code><a href="reference/fredr.html">fredr()</a></code>, which fetches observations for a FRED series. That said, there are many other FRED endpoints exposed through fredr, such as <code><a href="reference/fredr_series_search.html">fredr_series_search_text()</a></code>, which allows you to search for a FRED series by text.</p>
+<p>We strongly encourage referencing the FRED API <a href="https://fred.stlouisfed.org/docs/api/fred/" class="external-link">documentation</a> to leverage the full power of fredr.</p>
 <p>You’ll also need a free API key to use fredr. See <code>?fredr_set_key()</code>.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>You can download fredr from CRAN with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"fredr"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"fredr"</span><span class="op">)</span></code></pre></div>
 <p>To get the development version of the package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"sboysel/fredr"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
-<p>You can use <code><a href="reference/fredr_series_observations.html">fredr()</a></code> to fetch series from FRED. This fetches the US unemployment rate series from 1990-2000.</p>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
+<p>You can use <code><a href="reference/fredr.html">fredr()</a></code> to fetch series from FRED. This fetches the US unemployment rate series from 1990-2000.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr">fredr</a></span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr" class="external-link">fredr</a></span><span class="op">)</span>
 
-<span class="fu"><a href="reference/fredr_series_observations.html">fredr</a></span><span class="op">(</span>
+<span class="fu"><a href="reference/fredr.html">fredr</a></span><span class="op">(</span>
   series_id <span class="op">=</span> <span class="st">"UNRATE"</span>,
-  observation_start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"1990-01-01"</span><span class="op">)</span>,
-  observation_end <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"2000-01-01"</span><span class="op">)</span>
+  observation_start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"1990-01-01"</span><span class="op">)</span>,
+  observation_end <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2000-01-01"</span><span class="op">)</span>
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 121 x 5</span>
 <span class="co">#&gt;    date       series_id value realtime_start realtime_end</span>
@@ -153,19 +149,19 @@
 <span class="co">#&gt; 10 1990-10-01 UNRATE      5.9 2021-01-29     2021-01-29  </span>
 <span class="co">#&gt; # … with 111 more rows</span></code></pre></div>
 </div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
-<p>See the <a href="http://sboysel.github.io/fredr/articles/fredr.html">Get started</a> article.</p>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
+<p>See the <a href="http://sboysel.github.io/fredr/articles/fredr.html" class="external-link">Get started</a> article.</p>
 </div>
-<div id="documentation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#documentation" class="anchor"></a>Documentation</h2>
-<p>See the <a href="http://sboysel.github.io/fredr/">documentation site</a>.</p>
+<div class="section level2">
+<h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
+</h2>
+<p>See the <a href="http://sboysel.github.io/fredr/" class="external-link">documentation site</a>.</p>
 </div>
-<div id="restrictions" class="section level2">
-<h2 class="hasAnchor">
-<a href="#restrictions" class="anchor"></a>Restrictions</h2>
+<div class="section level2">
+<h2 id="restrictions">Restrictions<a class="anchor" aria-label="anchor" href="#restrictions"></a>
+</h2>
 <p>According to the FRED team, the following data sources do not permit redistribution through the FRED API:</p>
 <ul>
 <li>ICE Libor Rates</li>
@@ -173,22 +169,22 @@
 <li>LBMA Gold Price: Daily Prices</li>
 <li>LBMA Silver Price: Daily Prices</li>
 </ul>
-<p>If you need data from any of these sources, it is recommended to download the data directly from the FRED website. The series in these sources can be found <a href="https://fred.stlouisfed.org/source?soid=62">here</a>.</p>
+<p>If you need data from any of these sources, it is recommended to download the data directly from the FRED website. The series in these sources can be found <a href="https://fred.stlouisfed.org/source?soid=62" class="external-link">here</a>.</p>
 </div>
-<div id="code-of-conduct" class="section level2">
-<h2 class="hasAnchor">
-<a href="#code-of-conduct" class="anchor"></a>Code of Conduct</h2>
-<p>Please note that the fredr project is released with a <a href="http://sboysel.github.io/fredr/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<div class="section level2">
+<h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
+</h2>
+<p>Please note that the fredr project is released with a <a href="http://sboysel.github.io/fredr/CODE_OF_CONDUCT.html" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
-<div id="see-also" class="section level2">
-<h2 class="hasAnchor">
-<a href="#see-also" class="anchor"></a>See Also</h2>
+<div class="section level2">
+<h2 id="see-also">See Also<a class="anchor" aria-label="anchor" href="#see-also"></a>
+</h2>
 <p>There are several other existing R packages designed for the FRED API:</p>
 <ul>
-<li><a href="https://github.com/business-science/tidyquant">business-science/tidyquant</a></li>
-<li><a href="https://github.com/jcizel/FredR">jcizel/FredR</a></li>
-<li><a href="https://github.com/joshuaulrich/quantmod">joshuaulrich/quantmod</a></li>
-<li><a href="https://github.com/quandl/quandl-r">quandl/quandl-r</a></li>
+<li><a href="https://github.com/business-science/tidyquant" class="external-link">business-science/tidyquant</a></li>
+<li><a href="https://github.com/jcizel/FredR" class="external-link">jcizel/FredR</a></li>
+<li><a href="https://github.com/joshuaulrich/quantmod" class="external-link">joshuaulrich/quantmod</a></li>
+<li><a href="https://github.com/quandl/quandl-r" class="external-link">quandl/quandl-r</a></li>
 </ul>
 </div>
 </div>
@@ -196,57 +192,67 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=fredr">https://​cloud.r-project.org/​package=fredr</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/sboysel/fredr/">https://​github.com/​sboysel/​fredr/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/sboysel/fredr/issues">https://​github.com/​sboysel/​fredr/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=fredr" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/sboysel/fredr/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/sboysel/fredr/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
+<a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
 </li>
 </ul>
 </div>
+
 <div class="community">
-<h2>Community</h2>
+<h2 data-toc-skip>Community</h2>
 <ul class="list-unstyled">
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing fredr</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Sam Boysel <br><small class="roles"> Author, maintainer </small>  </li>
 <li>Davis Vaughan <br><small class="roles"> Author </small>  </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://codecov.io/github/sboysel/fredr"><img src="https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg" alt="Codecov"></a></li>
-<li><a href="https://cran.r-project.org/package=fredr"><img src="https://img.shields.io/cran/v/fredr.svg" alt="CRAN"></a></li>
-<li><a href="https://cran.r-project.org/package=fredr"><img src="https://cranlogs.r-pkg.org/badges/fredr" alt="CRAN Downloads"></a></li>
-<li><a href="https://github.com/sboysel/fredr/actions"><img src="https://github.com/sboysel/fredr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://codecov.io/github/sboysel/fredr" class="external-link"><img src="https://img.shields.io/codecov/c/github/sboysel/fredr/master.svg" alt="Codecov"></a></li>
+<li><a href="https://cran.r-project.org/package=fredr" class="external-link"><img src="https://img.shields.io/cran/v/fredr.svg" alt="CRAN"></a></li>
+<li><a href="https://cran.r-project.org/package=fredr" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/fredr" alt="CRAN Downloads"></a></li>
+<li><a href="https://github.com/sboysel/fredr/actions" class="external-link"><img src="https://github.com/sboysel/fredr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Sam Boysel, Davis Vaughan.</p>
+  <p></p>
+<p>Developed by Sam Boysel, Davis Vaughan.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
