@@ -104,7 +104,7 @@
       <h1 data-toc-skip>Getting started with fredr</h1>
                         <h4 data-toc-skip class="author">Sam Boysel</h4>
             
-            <h4 data-toc-skip class="date">2022-01-10</h4>
+            <h4 data-toc-skip class="date">2022-01-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/HEAD/vignettes/fredr.Rmd" class="external-link"><code>vignettes/fredr.Rmd</code></a></small>
       <div class="hidden name"><code>fredr.Rmd</code></div>
@@ -113,17 +113,17 @@
 
     
     
-<div class="section level1">
-<h1 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h1>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr" class="external-link">fredr</a></span><span class="op">)</span></code></pre></div>
 <p>fredr provides a complete set of R bindings to the <a href="https://fred.stlouisfed.org/" class="external-link">Federal Reserve of Economic Data (FRED)</a> RESTful API, provided by the Federal Reserve Bank of St. Louis. The functions allow the user to search for and fetch time series observations as well as associated metadata within the FRED database.</p>
 <p>The core function in this package is <code><a href="../reference/fredr.html">fredr()</a></code>, which fetches observations for a FRED series. That said, there are many other FRED endpoints exposed through fredr, such as <code><a href="../reference/fredr_series_search.html">fredr_series_search_text()</a></code>, which allows you to search for a FRED series by text.</p>
 <p>We strongly encourage referencing the FRED API <a href="https://fred.stlouisfed.org/docs/api/fred/" class="external-link">documentation</a> to leverage the full power of fredr.</p>
-<div class="section level2">
-<h2 id="authentication">Authentication<a class="anchor" aria-label="anchor" href="#authentication"></a>
-</h2>
+<div class="section level3">
+<h3 id="authentication">Authentication<a class="anchor" aria-label="anchor" href="#authentication"></a>
+</h3>
 <p>To use fredr and the FRED API in general, you must first <a href="https://research.stlouisfed.org/docs/api/api_key.html" class="external-link">obtain a FRED API key</a>. It is also recommended to review the <a href="https://research.stlouisfed.org/docs/api/terms_of_use.html" class="external-link">FRED API Terms of Use</a>.</p>
 <p>Once you’ve obtained an API key, the recommended way to use it is to set the key as an environment variable: <code>FRED_API_KEY</code> . The easiest way to do that is by calling <code>usethis::edit_r_environ()</code> to open a <code>.Renviron</code> file. Once the file is open set the key as:</p>
 <pre><code><span class="va">FRED_API_KEY</span><span class="op">=</span><span class="va">abcdefghijklmnopqrstuvwxyz123456</span></code></pre>
@@ -133,9 +133,9 @@
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr-key.html">fredr_set_key</a></span><span class="op">(</span><span class="st">"abcdefghijklmnopqrstuvwxyz123456"</span><span class="op">)</span></code></pre></div>
 <p>Again, this will only set the key for the current R session, and it is recommended to use an environment variable.</p>
 </div>
-<div class="section level2">
-<h2 id="retrieve-series-observations">Retrieve series observations<a class="anchor" aria-label="anchor" href="#retrieve-series-observations"></a>
-</h2>
+<div class="section level3">
+<h3 id="retrieve-series-observations">Retrieve series observations<a class="anchor" aria-label="anchor" href="#retrieve-series-observations"></a>
+</h3>
 <p><code><a href="../reference/fredr.html">fredr()</a></code> (an alias for <code><a href="../reference/fredr.html">fredr_series_observations()</a></code>) retrieves series observations (i.e. the actual time series data) for a specified FRED series ID. The function returns a tibble with 3 columns (observation date, series ID, and value).</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr.html">fredr</a></span><span class="op">(</span>
@@ -146,16 +146,16 @@
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 121 × 5</span></span>
 <span class="co">#&gt;    date       series_id value realtime_start realtime_end</span>
 <span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>      </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1990-01-01 UNRATE      5.4 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1990-02-01 UNRATE      5.3 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1990-03-01 UNRATE      5.2 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1990-04-01 UNRATE      5.4 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1990-05-01 UNRATE      5.4 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1990-06-01 UNRATE      5.2 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1990-07-01 UNRATE      5.5 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1990-08-01 UNRATE      5.7 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1990-09-01 UNRATE      5.9 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1990-10-01 UNRATE      5.9 2022-01-10     2022-01-10  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1990-01-01 UNRATE      5.4 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1990-02-01 UNRATE      5.3 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1990-03-01 UNRATE      5.2 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1990-04-01 UNRATE      5.4 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1990-05-01 UNRATE      5.4 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1990-06-01 UNRATE      5.2 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1990-07-01 UNRATE      5.5 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1990-08-01 UNRATE      5.7 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1990-09-01 UNRATE      5.9 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1990-10-01 UNRATE      5.9 2022-01-17     2022-01-17  </span>
 <span class="co">#&gt; <span style="color: #949494;"># … with 111 more rows</span></span></code></pre></div>
 <p>Leverage the native features of the FRED API by passing additional parameters:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
@@ -169,16 +169,16 @@
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 41 × 5</span></span>
 <span class="co">#&gt;    date       series_id   value realtime_start realtime_end</span>
 <span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>      </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1990-01-01 UNRATE    -<span style="color: #BB0000;">0.066</span><span style="color: #BB0000; text-decoration: underline;">7</span> 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1990-04-01 UNRATE     0.033<span style="text-decoration: underline;">3</span> 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1990-07-01 UNRATE     0.367  2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1990-10-01 UNRATE     0.433  2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1991-01-01 UNRATE     0.467  2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1991-04-01 UNRATE     0.233  2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1991-07-01 UNRATE     0.033<span style="text-decoration: underline;">3</span> 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1991-10-01 UNRATE     0.233  2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1992-01-01 UNRATE     0.267  2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1992-04-01 UNRATE     0.233  2022-01-10     2022-01-10  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1990-01-01 UNRATE    -<span style="color: #BB0000;">0.066</span><span style="color: #BB0000; text-decoration: underline;">7</span> 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1990-04-01 UNRATE     0.033<span style="text-decoration: underline;">3</span> 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1990-07-01 UNRATE     0.367  2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1990-10-01 UNRATE     0.433  2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1991-01-01 UNRATE     0.467  2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1991-04-01 UNRATE     0.233  2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1991-07-01 UNRATE     0.033<span style="text-decoration: underline;">3</span> 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1991-10-01 UNRATE     0.233  2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1992-01-01 UNRATE     0.267  2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1992-04-01 UNRATE     0.233  2022-01-17     2022-01-17  </span>
 <span class="co">#&gt; <span style="color: #949494;"># … with 31 more rows</span></span></code></pre></div>
 <p><code>fredr</code> plays nicely with <a href="https://www.tidyverse.org/" class="external-link">tidyverse</a> packages:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -226,16 +226,16 @@
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 1,159 × 5</span></span>
 <span class="co">#&gt;    date       series_id value realtime_start realtime_end</span>
 <span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>      </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1948-01-01 UNRATE      3.4 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1948-02-01 UNRATE      3.8 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1948-03-01 UNRATE      4   2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1948-04-01 UNRATE      3.9 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1948-05-01 UNRATE      3.5 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1948-06-01 UNRATE      3.6 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1948-07-01 UNRATE      3.6 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1948-08-01 UNRATE      3.9 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1948-09-01 UNRATE      3.8 2022-01-10     2022-01-10  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1948-10-01 UNRATE      3.7 2022-01-10     2022-01-10  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1948-01-01 UNRATE      3.4 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1948-02-01 UNRATE      3.8 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1948-03-01 UNRATE      4   2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1948-04-01 UNRATE      3.9 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1948-05-01 UNRATE      3.5 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1948-06-01 UNRATE      3.6 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1948-07-01 UNRATE      3.6 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1948-08-01 UNRATE      3.9 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1948-09-01 UNRATE      3.8 2022-01-17     2022-01-17  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1948-10-01 UNRATE      3.7 2022-01-17     2022-01-17  </span>
 <span class="co">#&gt; <span style="color: #949494;"># … with 1,149 more rows</span></span></code></pre></div>
 <p>It is relatively straightforward to convert tibbles returned by fredr into other time series objects. For example:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
@@ -256,9 +256,9 @@
   <span class="fu"><a href="https://rdrr.io/r/stats/acf.html" class="external-link">acf</a></span><span class="op">(</span><span class="va">.</span>, main <span class="op">=</span> <span class="st">"ACF for First Differenced real US GNP, log"</span><span class="op">)</span></code></pre></div>
 <p><img src="fredr_files/figure-html/fredr_series_observations6-1.png" width="672"></p>
 </div>
-<div class="section level2">
-<h2 id="endpoints">Endpoints<a class="anchor" aria-label="anchor" href="#endpoints"></a>
-</h2>
+<div class="section level3">
+<h3 id="endpoints">Endpoints<a class="anchor" aria-label="anchor" href="#endpoints"></a>
+</h3>
 <p>fredr implements functions for all FRED API endpoints. For usage examples for these functions, please consult the relevant vignette:</p>
 <ul>
 <li><a href="http://sboysel.github.io/fredr/articles/fredr-categories.html" class="external-link">Categories</a></li>
@@ -285,16 +285,16 @@
 <span class="co">#&gt; <span style="color: #BCBCBC;">10</span> fred/release/dates         Releases   Get release dates for a release of eco…</span>
 <span class="co">#&gt; <span style="color: #949494;"># … with 21 more rows</span></span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="view-fred-api-documentation">View FRED API documentation<a class="anchor" aria-label="anchor" href="#view-fred-api-documentation"></a>
-</h2>
+<div class="section level3">
+<h3 id="view-fred-api-documentation">View FRED API documentation<a class="anchor" aria-label="anchor" href="#view-fred-api-documentation"></a>
+</h3>
 <p>To get the most out of the native features of the FRED API, it is highly recommended to review the <a href="https://fred.stlouisfed.org/docs/api/fred/" class="external-link">API endpoint documentation</a>. Within an R session, you can quickly access the web documentation with the convenience function <code><a href="../reference/fredr_docs.html">fredr_docs()</a></code>.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_docs.html">fredr_docs</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="general-queries">General queries<a class="anchor" aria-label="anchor" href="#general-queries"></a>
-</h2>
+<div class="section level3">
+<h3 id="general-queries">General queries<a class="anchor" aria-label="anchor" href="#general-queries"></a>
+</h3>
 <p>You can also use the low-level function <code><a href="../reference/fredr_request.html">fredr_request()</a></code> to run more general queries against <em>any</em> <a href="https://fred.stlouisfed.org/docs/api/fred/" class="external-link">FRED API endpoint</a> (e.g. Categories, Series, Sources, Releases, Tags). The required parameter is <code>endpoint</code> (see <code>fredr_endpoints</code> for a list of valid endpoints) and then all API parameters are passed through as named arguments. For example:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_request.html">fredr_request</a></span><span class="op">(</span>
@@ -305,16 +305,16 @@
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 25 × 16</span></span>
 <span class="co">#&gt;    id     realtime_start realtime_end title     observation_sta… observation_end</span>
 <span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> LFWA2… 2022-01-10     2022-01-10   Working … 2008-01-01       2020-01-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> LFWA2… 2022-01-10     2022-01-10   Working … 2008-01-01       2020-01-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> LFWA2… 2022-01-10     2022-01-10   Working … 2008-01-01       2021-04-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> LFWA2… 2022-01-10     2022-01-10   Working … 2008-01-01       2021-04-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> LFWA2… 2022-01-10     2022-01-10   Working … 2008-01-01       2020-01-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> LFWA2… 2022-01-10     2022-01-10   Working … 2008-01-01       2020-01-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> LFWA2… 2022-01-10     2022-01-10   Working … 2008-01-01       2021-04-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> LFWA2… 2022-01-10     2022-01-10   Working … 2008-01-01       2021-04-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> LFWA5… 2022-01-10     2022-01-10   Working … 2008-01-01       2020-01-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> LFWA5… 2022-01-10     2022-01-10   Working … 2008-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> LFWA2… 2022-01-17     2022-01-17   Working … 2008-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> LFWA2… 2022-01-17     2022-01-17   Working … 2008-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> LFWA2… 2022-01-17     2022-01-17   Working … 2008-01-01       2021-04-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> LFWA2… 2022-01-17     2022-01-17   Working … 2008-01-01       2021-04-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> LFWA2… 2022-01-17     2022-01-17   Working … 2008-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> LFWA2… 2022-01-17     2022-01-17   Working … 2008-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> LFWA2… 2022-01-17     2022-01-17   Working … 2008-01-01       2021-04-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> LFWA2… 2022-01-17     2022-01-17   Working … 2008-01-01       2021-04-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> LFWA5… 2022-01-17     2022-01-17   Working … 2008-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> LFWA5… 2022-01-17     2022-01-17   Working … 2008-01-01       2020-01-01     </span>
 <span class="co">#&gt; <span style="color: #949494;"># … with 15 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></span>
@@ -327,7 +327,7 @@
   to_frame <span class="op">=</span> <span class="cn">FALSE</span>
 <span class="op">)</span>
 <span class="co">#&gt; Response [https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&amp;api_key=a1dfde330d2d15991130fc103b3f7a2c&amp;file_type=json]</span>
-<span class="co">#&gt;   Date: 2022-01-10 12:14</span>
+<span class="co">#&gt;   Date: 2022-01-17 12:17</span>
 <span class="co">#&gt;   Status: 200</span>
 <span class="co">#&gt;   Content-Type: application/json; charset=UTF-8</span>
 <span class="co">#&gt;   Size: 83.8 kB</span></code></pre></div>
@@ -352,7 +352,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

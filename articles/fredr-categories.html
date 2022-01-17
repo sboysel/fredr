@@ -104,7 +104,7 @@
       <h1 data-toc-skip>FRED Categories</h1>
                         <h4 data-toc-skip class="author">Sam Boysel</h4>
             
-            <h4 data-toc-skip class="date">2022-01-10</h4>
+            <h4 data-toc-skip class="date">2022-01-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/HEAD/vignettes/fredr-categories.Rmd" class="external-link"><code>vignettes/fredr-categories.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-categories.Rmd</code></div>
@@ -113,9 +113,9 @@
 
     
     
-<div class="section level1">
-<h1 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h1>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr" class="external-link">fredr</a></span><span class="op">)</span></code></pre></div>
 <p>This vignette is intended to introduce the user to fredr functions for the <a href="https://fred.stlouisfed.org/docs/api/fred/#Categories" class="external-link">Categories endpoint</a> of the FRED API.</p>
@@ -127,9 +127,9 @@
 <li>“Housing” (<code>category_id = 97</code>)</li>
 </ul>
 <p>Categories are organized in a hierarchical structure where parent categories contain children categories. All categories are children of the root category (<code>category_id = 0</code>). The following examples illustrate usage of the Categories endpoint functions in fredr.</p>
-<div class="section level2">
-<h2 id="get-a-fred-category">Get a FRED category<a class="anchor" aria-label="anchor" href="#get-a-fred-category"></a>
-</h2>
+<div class="section level3">
+<h3 id="get-a-fred-category">Get a FRED category<a class="anchor" aria-label="anchor" href="#get-a-fred-category"></a>
+</h3>
 <p><code><a href="../reference/fredr_category.html">fredr_category()</a></code> returns minimal information for a single category specified by <code>category_id</code>. The data returned is a <code>tibble</code> in which each row represents a category.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category.html">fredr_category</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span> 
@@ -144,9 +144,9 @@
 <span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
 <span class="co">#&gt; <span style="color: #BCBCBC;">1</span>    97 Housing         1</span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="get-the-children-of-a-fred-category">Get the children of a FRED category<a class="anchor" aria-label="anchor" href="#get-the-children-of-a-fred-category"></a>
-</h2>
+<div class="section level3">
+<h3 id="get-the-children-of-a-fred-category">Get the children of a FRED category<a class="anchor" aria-label="anchor" href="#get-the-children-of-a-fred-category"></a>
+</h3>
 <p><code><a href="../reference/fredr_category_children.html">fredr_category_children()</a></code> returns minimal information (child ID, name, and parent ID) for all child categories of the parent category specified by <code>category_id</code>. The data returned is a tibble in which each row represents child category of the parent specified.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_children.html">fredr_category_children</a></span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span>
@@ -183,9 +183,9 @@
 <span class="co">#&gt; <span style="color: #BCBCBC;">15</span> <span style="text-decoration: underline;">33</span>202 Transportation                                       1</span>
 <span class="co">#&gt; <span style="color: #BCBCBC;">16</span> <span style="text-decoration: underline;">33</span>203 Wholesale Trade                                      1</span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="get-a-related-fred-category">Get a related FRED category<a class="anchor" aria-label="anchor" href="#get-a-related-fred-category"></a>
-</h2>
+<div class="section level3">
+<h3 id="get-a-related-fred-category">Get a related FRED category<a class="anchor" aria-label="anchor" href="#get-a-related-fred-category"></a>
+</h3>
 <p><code><a href="../reference/fredr_category_related.html">fredr_category_related()</a></code> returns minimal information (ID, name, and parent ID) for all related categories to the category specified by <code>category_id</code>. The data returned is a tibble in which each row represents category related to the one specified. Note that not all categories have related categories.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Nothing related to the root</span>
@@ -199,9 +199,9 @@
 <span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
 <span class="co">#&gt; <span style="color: #BCBCBC;">1</span>    10 Population, Employment, &amp; Labor Markets         0</span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="get-series-in-a-category">Get series in a category<a class="anchor" aria-label="anchor" href="#get-series-in-a-category"></a>
-</h2>
+<div class="section level3">
+<h3 id="get-series-in-a-category">Get series in a category<a class="anchor" aria-label="anchor" href="#get-series-in-a-category"></a>
+</h3>
 <p><code><a href="../reference/fredr_category_series.html">fredr_category_series()</a></code> returns detailed information for the FRED series belonging to the category specified by <code>category_id</code>. The data returned is a tibble in which each row represents a series belonging to the category specified. For example, to get the top 100 quarterly series in the “Housing” category, ordering the results so that the most recently updated series appear first:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_series.html">fredr_category_series</a></span><span class="op">(</span>
@@ -214,16 +214,16 @@
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 30 × 16</span></span>
 <span class="co">#&gt;    id     realtime_start realtime_end title     observation_sta… observation_end</span>
 <span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> RHORU… 2022-01-10     2022-01-10   Homeowne… 1965-01-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> ETOTA… 2022-01-10     2022-01-10   Housing … 2000-04-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> RRVRU… 2022-01-10     2022-01-10   Rental V… 1956-01-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> BOAAA… 2022-01-10     2022-01-10   Homeowne… 1994-01-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> EVACA… 2022-01-10     2022-01-10   Housing … 2000-04-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> RSAHO… 2022-01-10     2022-01-10   Homeowne… 1980-01-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> EOWNO… 2022-01-10     2022-01-10   Housing … 2000-04-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> ERNTO… 2022-01-10     2022-01-10   Housing … 2000-04-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> RHVRU… 2022-01-10     2022-01-10   Homeowne… 1956-01-01       2021-07-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> ESALE… 2022-01-10     2022-01-10   Housing … 2000-04-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> RHORU… 2022-01-17     2022-01-17   Homeowne… 1965-01-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> ETOTA… 2022-01-17     2022-01-17   Housing … 2000-04-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> RRVRU… 2022-01-17     2022-01-17   Rental V… 1956-01-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> BOAAA… 2022-01-17     2022-01-17   Homeowne… 1994-01-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> EVACA… 2022-01-17     2022-01-17   Housing … 2000-04-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> RSAHO… 2022-01-17     2022-01-17   Homeowne… 1980-01-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> EOWNO… 2022-01-17     2022-01-17   Housing … 2000-04-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> ERNTO… 2022-01-17     2022-01-17   Housing … 2000-04-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> RHVRU… 2022-01-17     2022-01-17   Homeowne… 1956-01-01       2021-07-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> ESALE… 2022-01-17     2022-01-17   Housing … 2000-04-01       2021-07-01     </span>
 <span class="co">#&gt; <span style="color: #949494;"># … with 20 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></span>
@@ -240,30 +240,31 @@
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 4 × 16</span></span>
 <span class="co">#&gt;   id         realtime_start realtime_end title  observation_sta… observation_end</span>
 <span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> NGMPUSMP   2022-01-10     2022-01-10   Total… 2001-01-01       2020-01-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> RGMPUSMP   2022-01-10     2022-01-10   Total… 2001-01-01       2020-01-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> PCRGMPUSMP 2022-01-10     2022-01-10   Total… 2001-01-01       2017-01-01     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">4</span> QGMPUSMP   2022-01-10     2022-01-10   Total… 2001-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> NGMPUSMP   2022-01-17     2022-01-17   Total… 2001-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> RGMPUSMP   2022-01-17     2022-01-17   Total… 2001-01-01       2020-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> PCRGMPUSMP 2022-01-17     2022-01-17   Total… 2001-01-01       2017-01-01     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">4</span> QGMPUSMP   2022-01-17     2022-01-17   Total… 2001-01-01       2020-01-01     </span>
 <span class="co">#&gt; <span style="color: #949494;"># … with 10 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   units &lt;chr&gt;, units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="get-tags-within-a-fred-category">Get tags within a FRED category<a class="anchor" aria-label="anchor" href="#get-tags-within-a-fred-category"></a>
-</h2>
+<div class="section level3">
+<h3 id="get-tags-within-a-fred-category">Get tags within a FRED category<a class="anchor" aria-label="anchor" href="#get-tags-within-a-fred-category"></a>
+</h3>
 <p><code><a href="../reference/fredr_category_tags.html">fredr_category_tags()</a></code> returns information for the FRED tags assigned to series in the category specified by <code>category_id</code>. The data returned is a tibble in which each row represents a tag assigned to a series in the category specified. For example, to get all “source” tags belonging to series in the “Retail Trade” category:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span>
   category_id <span class="op">=</span> <span class="fl">6L</span>,
   tag_group_id <span class="op">=</span> <span class="st">"src"</span>
 <span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 3 × 6</span></span>
-<span class="co">#&gt;   name    group_id notes         created                popularity series_count</span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> census  src      Census        2012-02-27 10:18:19-06         80          400</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> frb chi src      Chicago Fed   2012-02-27 10:18:19-06         35            6</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> frb stl src      St. Louis Fed 2012-02-27 10:18:19-06         68            2</span></code></pre></div>
+<span class="co">#&gt; <span style="color: #949494;"># A tibble: 4 × 6</span></span>
+<span class="co">#&gt;   name    group_id notes                       created   popularity series_count</span>
+<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> census  src      Census                      2012-02-…         80          382</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> frb chi src      Chicago Fed                 2012-02-…         35            4</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> frb stl src      St. Louis Fed               2012-02-…         68            4</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">4</span> bea     src      Bureau of Economic Analysis 2012-02-…         79            2</span></code></pre></div>
 <p>To search for tags with the words <code>"usa"</code> in the “Production &amp; Business Activity” category, ordering the results by popularity:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span>
@@ -275,13 +276,13 @@
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 3 × 6</span></span>
 <span class="co">#&gt;   name   group_id notes                    created       popularity series_count</span>
 <span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> usa    geo      United States of America 2012-02-27 1…        100         <span style="text-decoration: underline;">3</span>316</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> census src      Census                   2012-02-27 1…         80         <span style="text-decoration: underline;">3</span>316</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> usa    geo      United States of America 2012-02-27 1…        100         <span style="text-decoration: underline;">3</span>210</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> census src      Census                   2012-02-27 1…         80         <span style="text-decoration: underline;">3</span>210</span>
 <span class="co">#&gt; <span style="color: #BCBCBC;">3</span> ga     geo      Georgia (U.S. state)     2012-02-27 1…         49           50</span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="get-related-tags-within-a-fred-category">Get related tags within a FRED category<a class="anchor" aria-label="anchor" href="#get-related-tags-within-a-fred-category"></a>
-</h2>
+<div class="section level3">
+<h3 id="get-related-tags-within-a-fred-category">Get related tags within a FRED category<a class="anchor" aria-label="anchor" href="#get-related-tags-within-a-fred-category"></a>
+</h3>
 <p><code><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags()</a></code> returns a set of FRED tags assigned to series in the category specified by <code>category_id</code> that are <em>related</em> to the tags specified in the <code>tag_names</code> parameter. The data returned is a tibble in which each row represents a tag <em>related to</em> a tag assigned to a series in the specified category. For example, to get all tags <em>except</em> <code>"rate"</code> in the “Retail Trade” category related to the tags <code>"business"</code> and <code>"monthly"</code>, ordering the results alphabetically:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/fredr_category_related_tags.html">fredr_category_related_tags</a></span><span class="op">(</span>
@@ -290,20 +291,20 @@
   exclude_tag_names <span class="op">=</span> <span class="st">"rate"</span>,
   order_by <span class="op">=</span> <span class="st">"name"</span>
 <span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 104 × 6</span></span>
+<span class="co">#&gt; <span style="color: #949494;"># A tibble: 106 × 6</span></span>
 <span class="co">#&gt;    name                  group_id notes      created     popularity series_count</span>
 <span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> accommodation         gen      <span style="color: #949494;">""</span>         2012-02-27…         27           28</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> administrative        gen      <span style="color: #949494;">""</span>         2012-02-27…         18           20</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> agriculture           gen      <span style="color: #949494;">""</span>         2012-02-27…         46           10</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> ak                    geo      <span style="color: #949494;">"</span>Alaska<span style="color: #949494;">"</span>   2012-02-27…         35           30</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> al                    geo      <span style="color: #949494;">"</span>Alabama<span style="color: #949494;">"</span>  2012-02-27…         45           20</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> accommodation         gen      <span style="color: #949494;">""</span>         2012-02-27…         27           22</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> administrative        gen      <span style="color: #949494;">""</span>         2012-02-27…         18           28</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> agriculture           gen      <span style="color: #949494;">""</span>         2012-02-27…         46           28</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> ak                    geo      <span style="color: #949494;">"</span>Alaska<span style="color: #949494;">"</span>   2012-02-27…         35           16</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> al                    geo      <span style="color: #949494;">"</span>Alabama<span style="color: #949494;">"</span>  2012-02-27…         45           24</span>
 <span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> ar                    geo      <span style="color: #949494;">"</span>Arkansas<span style="color: #949494;">"</span> 2012-02-27…         47           24</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> arts                  gen      <span style="color: #949494;">""</span>         2012-02-27…         23           24</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> average               gen      <span style="color: #949494;">""</span>         2015-05-06…         50          146</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> az                    geo      <span style="color: #949494;">"</span>Arizona<span style="color: #949494;">"</span>  2012-02-27…         44           22</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> business applications gen       <span style="color: #BB0000;">NA</span>        2019-03-19…         32          714</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 94 more rows</span></span></code></pre></div>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> arts                  gen      <span style="color: #949494;">""</span>         2012-02-27…         23           18</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> average               gen      <span style="color: #949494;">""</span>         2015-05-06…         50          170</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> az                    geo      <span style="color: #949494;">"</span>Arizona<span style="color: #949494;">"</span>  2012-02-27…         44           16</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> business applications gen       <span style="color: #BB0000;">NA</span>        2019-03-19…         32          790</span>
+<span class="co">#&gt; <span style="color: #949494;"># … with 96 more rows</span></span></code></pre></div>
 </div>
 </div>
   </div>
@@ -325,7 +326,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>
