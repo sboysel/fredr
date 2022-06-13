@@ -98,32 +98,47 @@
     <h2>Arguments</h2>
     <dl><dt>...</dt>
 <dd><p>These dots only exist for future extensions and should be empty.</p></dd>
+
+
 <dt>limit</dt>
 <dd><p>An integer limit on the maximum number of results to return.
 Defaults to <code>1000</code>, the maximum.</p></dd>
+
+
 <dt>offset</dt>
 <dd><p>An integer used in conjunction with limit for long series.
 This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
 multiple calls. Defaults to <code>0</code>.</p></dd>
+
+
 <dt>order_by</dt>
 <dd><p>A string indicating which attribute should be used to order
 the results.  Possible values: <code>"source_id"</code> (default), <code>"name"</code>,
 <code>"realtime_start"</code>, <code>"realtime_end"</code>.</p></dd>
+
+
 <dt>sort_order</dt>
 <dd><p>A string representing the order of the resulting series.
 Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></dd>
+
+
 <dt>realtime_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>realtime_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>tibble</code> object.</p>
+    
+
+<p>A <code>tibble</code> object.</p>
     </div>
     <div id="api-documentation">
     <h2>API Documentation</h2>
@@ -145,26 +160,26 @@ Defaults to today's date. For more information, see
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 20 × 6</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       id realtime_start realtime_end name                            link  notes</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>     1 2022-06-06     2022-06-06   Board of Governors of the Fede… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>     3 2022-06-06     2022-06-06   Federal Reserve Bank of Philad… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>     4 2022-06-06     2022-06-06   Federal Reserve Bank of St. Lo… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>     6 2022-06-06     2022-06-06   Federal Financial Institutions… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>    11 2022-06-06     2022-06-06   Dow Jones &amp; Company             http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>    14 2022-06-06     2022-06-06   University of Michigan          http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>    15 2022-06-06     2022-06-06   Council of Economic Advisers (… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>    16 2022-06-06     2022-06-06   U.S. Office of Management and … http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>    17 2022-06-06     2022-06-06   U.S. Congressional Budget Offi… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>    18 2022-06-06     2022-06-06   U.S. Bureau of Economic Analys… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span>    19 2022-06-06     2022-06-06   U.S. Census Bureau              http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span>    21 2022-06-06     2022-06-06   U.S. Department of Housing and… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span>    22 2022-06-06     2022-06-06   U.S. Bureau of Labor Statistics http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span>    23 2022-06-06     2022-06-06   U.S. Department of the Treasur… http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span>    26 2022-06-06     2022-06-06   Haver Analytics                 http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span>    31 2022-06-06     2022-06-06   Reserve Bank of Australia       http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">17</span>    32 2022-06-06     2022-06-06   Deutsche Bundesbank             http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">18</span>    33 2022-06-06     2022-06-06   Bank of Italy                   http… Banc…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">19</span>    34 2022-06-06     2022-06-06   Swiss National Bank             http… <span style="color: #BB0000;">NA</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">20</span>    35 2022-06-06     2022-06-06   Central Bank of the Republic o… http… Türk…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>     1 2022-06-13     2022-06-13   Board of Governors of the Fede… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>     3 2022-06-13     2022-06-13   Federal Reserve Bank of Philad… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>     4 2022-06-13     2022-06-13   Federal Reserve Bank of St. Lo… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>     6 2022-06-13     2022-06-13   Federal Financial Institutions… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>    11 2022-06-13     2022-06-13   Dow Jones &amp; Company             http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>    14 2022-06-13     2022-06-13   University of Michigan          http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>    15 2022-06-13     2022-06-13   Council of Economic Advisers (… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>    16 2022-06-13     2022-06-13   U.S. Office of Management and … http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>    17 2022-06-13     2022-06-13   U.S. Congressional Budget Offi… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>    18 2022-06-13     2022-06-13   U.S. Bureau of Economic Analys… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span>    19 2022-06-13     2022-06-13   U.S. Census Bureau              http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span>    21 2022-06-13     2022-06-13   U.S. Department of Housing and… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span>    22 2022-06-13     2022-06-13   U.S. Bureau of Labor Statistics http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span>    23 2022-06-13     2022-06-13   U.S. Department of the Treasur… http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span>    26 2022-06-13     2022-06-13   Haver Analytics                 http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span>    31 2022-06-13     2022-06-13   Reserve Bank of Australia       http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">17</span>    32 2022-06-13     2022-06-13   Deutsche Bundesbank             http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">18</span>    33 2022-06-13     2022-06-13   Bank of Italy                   http… Banc…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">19</span>    34 2022-06-13     2022-06-13   Swiss National Bank             http… <span style="color: #BB0000;">NA</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">20</span>    35 2022-06-13     2022-06-13   Central Bank of the Republic o… http… Türk…</span>
 </code></pre></div>
     </div>
   </div>
@@ -179,7 +194,7 @@ Defaults to today's date. For more information, see
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

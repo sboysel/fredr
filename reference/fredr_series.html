@@ -94,20 +94,29 @@ see <code><a href="fredr.html">fredr_series_observations()</a></code>.</p>
     <h2>Arguments</h2>
     <dl><dt>series_id</dt>
 <dd><p>A string ID for the FRED series.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>These dots only exist for future extensions and should be empty.</p></dd>
+
+
 <dt>realtime_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>realtime_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>tibble</code> object (1 row) with information for the series specified by
+    
+
+<p>A <code>tibble</code> object (1 row) with information for the series specified by
 <code>series_id</code>.</p>
     </div>
     <div id="api-documentation">
@@ -135,7 +144,7 @@ Defaults to today's date. For more information, see
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 15</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   id     realtime_start realtime_end title      observation_sta… observation_end</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> UNRATE 2022-06-06     2022-06-06   Unemploym… 1948-01-01       2022-05-01     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> UNRATE 2022-06-13     2022-06-13   Unemploym… 1948-01-01       2022-05-01     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 9 more variables: frequency &lt;chr&gt;, frequency_short &lt;chr&gt;, units &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   units_short &lt;chr&gt;, seasonal_adjustment &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></span>
@@ -154,7 +163,7 @@ Defaults to today's date. For more information, see
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

@@ -108,11 +108,17 @@ search text. Related FRED tags are the tags assigned to series that match
     <h2>Arguments</h2>
     <dl><dt>tag_names</dt>
 <dd><p>A semicolon delimited string of tag names to be related to.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>These dots only exist for future extensions and should be empty.</p></dd>
+
+
 <dt>exclude_tag_names</dt>
 <dd><p>A semicolon delimited string of tag names that series
 match <em>none</em> of. No exclusions are done by default.</p></dd>
+
+
 <dt>tag_group_id</dt>
 <dd><p>A string tag group id to filter tags by type. No filtering
 by tag group by default. Possible values are:</p><ul><li><p><code>"freq"</code> = Frequency</p></li>
@@ -123,16 +129,24 @@ by tag group by default. Possible values are:</p><ul><li><p><code>"freq"</code> 
 <li><p><code>"seas"</code> = Seasonal Adjustment</p></li>
 <li><p><code>"src"</code> = Source</p></li>
 </ul></dd>
+
+
 <dt>search_text</dt>
 <dd><p>A string indicating the words to find matching tags with.
 No filtering by search words by default.</p></dd>
+
+
 <dt>limit</dt>
 <dd><p>An integer limit on the maximum number of results to return.
 Defaults to <code>1000</code>, the maximum.</p></dd>
+
+
 <dt>offset</dt>
 <dd><p>An integer used in conjunction with <code>limit</code> for long series.
 This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
 multiple calls. Defaults to <code>0</code>.</p></dd>
+
+
 <dt>order_by</dt>
 <dd><p>Order results by values of the specified attribute. Possible
 values are:</p><ul><li><p><code>"series_count"</code> (default)</p></li>
@@ -141,22 +155,31 @@ values are:</p><ul><li><p><code>"series_count"</code> (default)</p></li>
 <li><p><code>"name"</code></p></li>
 <li><p><code>"group_id"</code></p></li>
 </ul></dd>
+
+
 <dt>sort_order</dt>
 <dd><p>A string representing the order of the resulting series,
 sorted by the attribute values specified by <code>order_by</code>. Possible values
 are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></dd>
+
+
 <dt>realtime_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>realtime_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>tibble</code> containing tags related to <code>tag_names</code> and their
+    
+
+<p>A <code>tibble</code> containing tags related to <code>tag_names</code> and their
 descriptions.  Data include tag name, group ID, popularity, series count, tag
 creation date, and additional notes.</p>
     </div>
@@ -188,15 +211,16 @@ creation date, and additional notes.</p>
 <span class="r-in"> <span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"> <span class="op">}</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 6</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 7 × 6</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   name         group_id notes             created        popularity series_count</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> discontinued gen      <span style="color: #949494;">""</span>                2012-02-27 10…         66           14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> discontinued gen      <span style="color: #949494;">""</span>                2012-02-27 10…         66           12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> m3           gen      <span style="color: #949494;">"</span>M3 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10…         40            8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> m2           gen      <span style="color: #949494;">"</span>M2 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10…         44            4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> mzm          gen      <span style="color: #949494;">"</span>MZM Money Stock<span style="color: #949494;">"</span> 2012-02-27 10…         23            4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> funds        gen       <span style="color: #BB0000;">NA</span>               2020-05-11 13…         19            2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> m1           gen      <span style="color: #949494;">"</span>M1 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10…         47            2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> m1           gen      <span style="color: #949494;">"</span>M1 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10…         47            4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> currency     gen      <span style="color: #949494;">""</span>                2012-02-27 10…         62            2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> funds        gen       <span style="color: #BB0000;">NA</span>               2020-05-11 13…         24            2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> m2           gen      <span style="color: #949494;">"</span>M2 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10…         44            2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span> mzm          gen      <span style="color: #949494;">"</span>MZM Money Stock<span style="color: #949494;">"</span> 2012-02-27 10…         23            2</span>
 </code></pre></div>
     </div>
   </div>
@@ -211,7 +235,7 @@ creation date, and additional notes.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

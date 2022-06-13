@@ -99,6 +99,8 @@
     <h2>Arguments</h2>
     <dl><dt>...</dt>
 <dd><p>These dots only exist for future extensions and should be empty.</p></dd>
+
+
 <dt>filter_value</dt>
 <dd><p>Filter results by type of geographic region of economic
 the data series.  Possible values include</p><ul><li><p><code>"all"</code> (default) - no filtering</p></li>
@@ -106,31 +108,46 @@ the data series.  Possible values include</p><ul><li><p><code>"all"</code> (defa
 <li><p><code>"regional"</code> - filters results to series for regions of the United States
 such as states, counties, and Metropolitan Statistical Areas (MSA).</p></li>
 </ul></dd>
+
+
 <dt>start_time</dt>
 <dd><p>A datetime object indicating the start time to filter series
 updates results.</p></dd>
+
+
 <dt>end_time</dt>
 <dd><p>A datetime object indicating the start time to filter series
 updates results.</p></dd>
+
+
 <dt>limit</dt>
 <dd><p>An integer limit on the maximum number of results to return.
 Defaults to <code>1000</code>, the maximum.</p></dd>
+
+
 <dt>offset</dt>
 <dd><p>An integer used in conjunction with <code>limit</code> for long series.
 This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
 multiple calls. Defaults to <code>0</code>.</p></dd>
+
+
 <dt>realtime_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>realtime_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>tibble</code> object where each row represents a series. Rows are sorted
+    
+
+<p>A <code>tibble</code> object where each row represents a series. Rows are sorted
 with most recently updated series appearing first.</p>
     </div>
     <div id="api-documentation">
@@ -173,7 +190,7 @@ with most recently updated series appearing first.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

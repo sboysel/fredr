@@ -109,13 +109,21 @@ release set by the <code>release_id</code> parameter.</p>
     <h2>Arguments</h2>
     <dl><dt>release_id</dt>
 <dd><p>An integer ID of the release.</p></dd>
+
+
 <dt>tag_names</dt>
 <dd><p>A semicolon delimited string of tag names to be related to.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>These dots only exist for future extensions and should be empty.</p></dd>
+
+
 <dt>exclude_tag_names</dt>
 <dd><p>A semicolon delimited string of tag names that series
 match <em>none</em> of. No exclusions are done by default.</p></dd>
+
+
 <dt>tag_group_id</dt>
 <dd><p>A string tag group id to filter tags by type. No filtering
 by tag group by default. Possible values are:</p><ul><li><p><code>"freq"</code> = Frequency</p></li>
@@ -126,16 +134,24 @@ by tag group by default. Possible values are:</p><ul><li><p><code>"freq"</code> 
 <li><p><code>"seas"</code> = Seasonal Adjustment</p></li>
 <li><p><code>"src"</code> = Source</p></li>
 </ul></dd>
+
+
 <dt>search_text</dt>
 <dd><p>A string indicating the words to find matching tags with.
 No filtering by search words by default.</p></dd>
+
+
 <dt>limit</dt>
 <dd><p>An integer limit on the maximum number of results to return.
 Defaults to <code>1000</code>, the maximum.</p></dd>
+
+
 <dt>offset</dt>
 <dd><p>An integer used in conjunction with <code>limit</code> for long series.
 This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
 multiple calls. Defaults to <code>0</code>.</p></dd>
+
+
 <dt>order_by</dt>
 <dd><p>Order results by values of the specified attribute. Possible
 values are:</p><ul><li><p><code>"series_count"</code> (default)</p></li>
@@ -144,22 +160,31 @@ values are:</p><ul><li><p><code>"series_count"</code> (default)</p></li>
 <li><p><code>"name"</code></p></li>
 <li><p><code>"group_id"</code></p></li>
 </ul></dd>
+
+
 <dt>sort_order</dt>
 <dd><p>A string representing the order of the resulting series,
 sorted by the attribute values specified by <code>order_by</code>. Possible values
 are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></dd>
+
+
 <dt>realtime_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>realtime_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>tibble</code> object.</p>
+    
+
+<p>A <code>tibble</code> object.</p>
     </div>
     <div id="api-documentation">
     <h2>API Documentation</h2>
@@ -180,20 +205,20 @@ Defaults to today's date. For more information, see
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
 <span class="r-in"><span class="fu">fredr_release_related_tags</span><span class="op">(</span><span class="fl">10</span>, tag_names <span class="op">=</span> <span class="st">"cpi"</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 175 × 6</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 180 × 6</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    name                           group_id notes created popularity series_count</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> bls                            src      <span style="color: #949494;">"</span>Bur… 2012-0…         88         <span style="text-decoration: underline;">4</span>470</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> indexes                        gen      <span style="color: #949494;">""</span>    2012-0…         87         <span style="text-decoration: underline;">4</span>470</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> price                          gen      <span style="color: #949494;">""</span>    2013-0…         87         <span style="text-decoration: underline;">4</span>470</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> price index                    gen      <span style="color: #949494;">""</span>    2012-0…         85         <span style="text-decoration: underline;">4</span>470</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> public domain: citation reque… cc        <span style="color: #BB0000;">NA</span>   2018-1…        100         <span style="text-decoration: underline;">4</span>470</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> usa                            geo      <span style="color: #949494;">"</span>Uni… 2012-0…        100         <span style="text-decoration: underline;">4</span>470</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> urban                          gen      <span style="color: #949494;">""</span>    2012-0…         61         <span style="text-decoration: underline;">4</span>468</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> inflation                      gen      <span style="color: #949494;">""</span>    2012-0…         80         <span style="text-decoration: underline;">4</span>302</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> nsa                            seas     <span style="color: #949494;">"</span>Not… 2012-0…        100         <span style="text-decoration: underline;">4</span>302</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> consumer                       gen      <span style="color: #949494;">""</span>    2012-0…         67         <span style="text-decoration: underline;">4</span>292</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 165 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> bls                            src      <span style="color: #949494;">"</span>Bur… 2012-0…         88         <span style="text-decoration: underline;">4</span>718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> indexes                        gen      <span style="color: #949494;">""</span>    2012-0…         88         <span style="text-decoration: underline;">4</span>718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> price                          gen      <span style="color: #949494;">""</span>    2013-0…         88         <span style="text-decoration: underline;">4</span>718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> price index                    gen      <span style="color: #949494;">""</span>    2012-0…         85         <span style="text-decoration: underline;">4</span>718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> public domain: citation reque… cc        <span style="color: #BB0000;">NA</span>   2018-1…         99         <span style="text-decoration: underline;">4</span>718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> usa                            geo      <span style="color: #949494;">"</span>Uni… 2012-0…        100         <span style="text-decoration: underline;">4</span>718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> urban                          gen      <span style="color: #949494;">""</span>    2012-0…         62         <span style="text-decoration: underline;">4</span>716</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> inflation                      gen      <span style="color: #949494;">""</span>    2012-0…         80         <span style="text-decoration: underline;">4</span>528</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> nsa                            seas     <span style="color: #949494;">"</span>Not… 2012-0…        100         <span style="text-decoration: underline;">4</span>514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> consumer                       gen      <span style="color: #949494;">""</span>    2012-0…         68         <span style="text-decoration: underline;">4</span>508</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 170 more rows</span></span>
 </code></pre></div>
     </div>
   </div>
@@ -208,7 +233,7 @@ Defaults to today's date. For more information, see
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

@@ -110,11 +110,17 @@ that does not have series.</p>
     <h2>Arguments</h2>
     <dl><dt>category_id</dt>
 <dd><p>An integer ID for the category.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>These dots only exist for future extensions and should be empty.</p></dd>
+
+
 <dt>tag_names</dt>
 <dd><p>A string indicating which series tags to match.  Multiple
 tags can be delimited by a semicolon in a single string (e.g. <code>"usa;gnp"</code>).</p></dd>
+
+
 <dt>tag_group_id</dt>
 <dd><p>A string representing the tag group id to filter tags by
 type.  No filtering by default.  Possible values include:</p><ul><li><p><code>"freq"</code> - Frequency</p></li>
@@ -125,33 +131,50 @@ type.  No filtering by default.  Possible values include:</p><ul><li><p><code>"f
 <li><p><code>"seas"</code> - Seasonal Adjustment</p></li>
 <li><p><code>"src"</code> - Source</p></li>
 </ul></dd>
+
+
 <dt>search_text</dt>
 <dd><p>A string to match text of tags.  No matching by default.</p></dd>
+
+
 <dt>limit</dt>
 <dd><p>An positive integer indicating maximum number of results to return.  Possible
 values are any integer between <code>1</code> and <code>1000</code> (default), inclusive.</p></dd>
+
+
 <dt>offset</dt>
 <dd><p>An non-negative integer used in conjunction with <code>limit</code> for
 long series.  This mimics the idea of <em>pagination</em> to retrieve large amounts
 of data over multiple calls. Defaults to <code>0</code>.</p></dd>
+
+
 <dt>order_by</dt>
 <dd><p>Order results by values of the specified attribute.
 Possible values include: <code>"series_count"</code> (default), <code>"popularity"``, </code>"created"<code>, </code>"name"<code>, </code>"group_id"`.</p></dd>
+
+
 <dt>sort_order</dt>
 <dd><p>A string representing the order of the resulting series.
 Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></dd>
+
+
 <dt>realtime_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>realtime_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>tibble</code> object information on tags matching the request and their
+    
+
+<p>A <code>tibble</code> object information on tags matching the request and their
 descriptions.  Data include tag name, group ID, popularity, series count, tag
 creation date, and additional notes.</p>
     </div>
@@ -179,8 +202,8 @@ creation date, and additional notes.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 6</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   name    group_id notes created                popularity series_count</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> nation  geot     <span style="color: #949494;">""</span>    2012-02-27 10:18:19-06         99         <span style="text-decoration: underline;">1</span>924</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> monthly freq     <span style="color: #949494;">""</span>    2012-02-27 10:18:19-06         94         <span style="text-decoration: underline;">1</span>104</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> nation  geot     <span style="color: #949494;">""</span>    2012-02-27 10:18:19-06         99         <span style="text-decoration: underline;">1</span>832</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> monthly freq     <span style="color: #949494;">""</span>    2012-02-27 10:18:19-06         94         <span style="text-decoration: underline;">1</span>078</span>
 </code></pre></div>
     </div>
   </div>
@@ -195,7 +218,7 @@ creation date, and additional notes.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

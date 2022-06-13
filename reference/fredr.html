@@ -124,14 +124,22 @@ fredr() is an alias for fredr_series_observations()."><!-- mathjax --><script sr
     <h2>Arguments</h2>
     <dl><dt>series_id</dt>
 <dd><p>A string ID for the FRED series.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>These dots only exist for future extensions and should be empty.</p></dd>
+
+
 <dt>observation_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the observation period.
 Defaults to <code>1776-07-04</code>, the earliest available date.</p></dd>
+
+
 <dt>observation_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the observation period.
 Defaults to <code>9999-12-31</code>, the latest available date.</p></dd>
+
+
 <dt>frequency</dt>
 <dd><p>A string representing a lower frequency to aggregate to.
 Defaults to no frequency aggregation. Possible values are:</p><ul><li><p><code>"d"</code> - Daily</p></li>
@@ -151,6 +159,8 @@ Defaults to no frequency aggregation. Possible values are:</p><ul><li><p><code>"
 <li><p><code>"bwew"</code> - Biweekly, ending Wednesday</p></li>
 <li><p><code>"bwem"</code> - Biweekly, ending Monday</p></li>
 </ul></dd>
+
+
 <dt>aggregation_method</dt>
 <dd><p>A string representing the aggregation method
 used for frequency aggregation. This parameter has no affect is <code>frequency</code>
@@ -158,16 +168,24 @@ is not set. Possible values are:</p><ul><li><p><code>"avg"</code> for average</p
 <li><p><code>"sum"</code> for sum</p></li>
 <li><p><code>"eop"</code> for end of period value</p></li>
 </ul></dd>
+
+
 <dt>limit</dt>
 <dd><p>An integer limit on the maximum number of results to return.
 Defaults to <code>100000</code>, the maximum.</p></dd>
+
+
 <dt>offset</dt>
 <dd><p>An integer used in conjunction with <code>limit</code> for long series.
 This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
 multiple calls. Defaults to <code>0</code>.</p></dd>
+
+
 <dt>sort_order</dt>
 <dd><p>A string representing the order of the resulting series.
 Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></dd>
+
+
 <dt>units</dt>
 <dd><p>A string indicating the data value transformation.
 Defaults to <code>"lin"</code>. Possible values are:</p><ul><li><p><code>"lin"</code> - Levels (No transformation)</p></li>
@@ -180,19 +198,27 @@ Defaults to <code>"lin"</code>. Possible values are:</p><ul><li><p><code>"lin"</
 <li><p><code>"cca"</code> - Continuously compounded annual rate of change</p></li>
 <li><p><code>"log"</code> - Natural log</p></li>
 </ul></dd>
+
+
 <dt>realtime_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>realtime_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>vintage_dates</dt>
 <dd><p>A vector of <code>Date</code> objects to download data for.
 Vintage dates are used to download data as it existed on these specified
 dates in history. They can be specified instead of a real-time period using
 <code>realtime_start</code> and <code>realtime_end</code>. Defaults to no vintage dates.</p></dd>
+
+
 <dt>output_type</dt>
 <dd><p>An integer indicating the output type. Not used unless
 <code>realtime_start</code> is used. Possible values are:</p><ul><li><p><code>1</code> for Observations by Real-Time Period (default)</p></li>
@@ -200,10 +226,13 @@ dates in history. They can be specified instead of a real-time period using
 <li><p><code>3</code> for Observations by Vintage Date, New and Revised Observations Only</p></li>
 <li><p><code>4</code> for Observations, Initial Release Only.</p></li>
 </ul></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>tibble</code> object with observation dates and values.</p>
+    
+
+<p>A <code>tibble</code> object with observation dates and values.</p>
     </div>
     <div id="api-documentation">
     <h2>API Documentation</h2>
@@ -266,16 +295,16 @@ dates in history. They can be specified instead of a real-time period using
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,164 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    date       series_id value realtime_start realtime_end</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 1948-01-01 UNRATE      3.4 2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 1948-02-01 UNRATE      3.8 2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 1948-03-01 UNRATE      4   2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 1948-04-01 UNRATE      3.9 2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 1948-05-01 UNRATE      3.5 2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1948-06-01 UNRATE      3.6 2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 1948-07-01 UNRATE      3.6 2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 1948-08-01 UNRATE      3.9 2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 1948-09-01 UNRATE      3.8 2022-06-06     2022-06-06  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 1948-10-01 UNRATE      3.7 2022-06-06     2022-06-06  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 1948-01-01 UNRATE      3.4 2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 1948-02-01 UNRATE      3.8 2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 1948-03-01 UNRATE      4   2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 1948-04-01 UNRATE      3.9 2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 1948-05-01 UNRATE      3.5 2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1948-06-01 UNRATE      3.6 2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 1948-07-01 UNRATE      3.6 2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 1948-08-01 UNRATE      3.9 2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 1948-09-01 UNRATE      3.8 2022-06-13     2022-06-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 1948-10-01 UNRATE      3.7 2022-06-13     2022-06-13  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 1,154 more rows</span></span>
 </code></pre></div>
     </div>
@@ -291,7 +320,7 @@ dates in history. They can be specified instead of a real-time period using
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

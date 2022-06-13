@@ -98,32 +98,47 @@
     <h2>Arguments</h2>
     <dl><dt>...</dt>
 <dd><p>These dots only exist for future extensions and should be empty.</p></dd>
+
+
 <dt>limit</dt>
 <dd><p>An integer limit on the maximum number of results to return.
 Defaults to <code>1000</code>, the maximum.</p></dd>
+
+
 <dt>offset</dt>
 <dd><p>An integer used in conjunction with <code>limit</code> for long series.
 This mimics the idea of <em>pagination</em> to retrieve large amounts of data over
 multiple calls. Defaults to <code>0</code>.</p></dd>
+
+
 <dt>order_by</dt>
 <dd><p>Order results by values of the specified attribute.
 Possible values include: <code>'release_id'</code> (default), <code>'name'</code>, <code>'press_release'</code>,
 <code>'realtime_start'</code>, <code>'realtime_end'</code>.</p></dd>
+
+
 <dt>sort_order</dt>
 <dd><p>A string representing the order of the resulting series.
 Possible values are: <code>"asc"</code> (default), and <code>"desc"</code>.</p></dd>
+
+
 <dt>realtime_start</dt>
 <dd><p>A <code>Date</code> indicating the start of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
+
 <dt>realtime_end</dt>
 <dd><p>A <code>Date</code> indicating the end of the real-time period.
 Defaults to today's date. For more information, see
 <a href="https://fred.stlouisfed.org/docs/api/fred/realtime_period.html" class="external-link">Real-Time Periods</a>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>tibble</code> object.</p>
+    
+
+<p>A <code>tibble</code> object.</p>
     </div>
     <div id="api-documentation">
     <h2>API Documentation</h2>
@@ -147,26 +162,26 @@ Defaults to today's date. For more information, see
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 20 × 7</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       id realtime_start realtime_end name              press_release link  notes</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>     9 2022-06-06     2022-06-06   Advance Monthly … TRUE          http… <span style="color: #949494;">"</span>The…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>    10 2022-06-06     2022-06-06   Consumer Price I… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>    11 2022-06-06     2022-06-06   Employment Cost … TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>    13 2022-06-06     2022-06-06   G.17 Industrial … TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>    14 2022-06-06     2022-06-06   G.19 Consumer Cr… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>    15 2022-06-06     2022-06-06   G.5 Foreign Exch… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>    17 2022-06-06     2022-06-06   H.10 Foreign Exc… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>    18 2022-06-06     2022-06-06   H.15 Selected In… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>    19 2022-06-06     2022-06-06   H.3 Aggregate Re… TRUE          http… <span style="color: #949494;">"</span>The…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>    20 2022-06-06     2022-06-06   H.4.1 Factors Af… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span>    21 2022-06-06     2022-06-06   H.6 Money Stock … TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span>    22 2022-06-06     2022-06-06   H.8 Assets and L… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span>    25 2022-06-06     2022-06-06   Manufacturing an… TRUE          http… <span style="color: #949494;">"</span>The…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span>    27 2022-06-06     2022-06-06   New Residential … TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span>    46 2022-06-06     2022-06-06   Producer Price I… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span>    47 2022-06-06     2022-06-06   Productivity and… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">17</span>    49 2022-06-06     2022-06-06   U.S. Internation… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">18</span>    50 2022-06-06     2022-06-06   Employment Situa… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">19</span>    51 2022-06-06     2022-06-06   U.S. Internation… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">20</span>    52 2022-06-06     2022-06-06   Z.1 Financial Ac… TRUE          http… <span style="color: #949494;">"</span>The…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>     9 2022-06-13     2022-06-13   Advance Monthly … TRUE          http… <span style="color: #949494;">"</span>The…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>    10 2022-06-13     2022-06-13   Consumer Price I… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>    11 2022-06-13     2022-06-13   Employment Cost … TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>    13 2022-06-13     2022-06-13   G.17 Industrial … TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>    14 2022-06-13     2022-06-13   G.19 Consumer Cr… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>    15 2022-06-13     2022-06-13   G.5 Foreign Exch… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>    17 2022-06-13     2022-06-13   H.10 Foreign Exc… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>    18 2022-06-13     2022-06-13   H.15 Selected In… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>    19 2022-06-13     2022-06-13   H.3 Aggregate Re… TRUE          http… <span style="color: #949494;">"</span>The…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>    20 2022-06-13     2022-06-13   H.4.1 Factors Af… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span>    21 2022-06-13     2022-06-13   H.6 Money Stock … TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span>    22 2022-06-13     2022-06-13   H.8 Assets and L… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span>    25 2022-06-13     2022-06-13   Manufacturing an… TRUE          http… <span style="color: #949494;">"</span>The…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span>    27 2022-06-13     2022-06-13   New Residential … TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span>    46 2022-06-13     2022-06-13   Producer Price I… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span>    47 2022-06-13     2022-06-13   Productivity and… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">17</span>    49 2022-06-13     2022-06-13   U.S. Internation… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">18</span>    50 2022-06-13     2022-06-13   Employment Situa… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">19</span>    51 2022-06-13     2022-06-13   U.S. Internation… TRUE          http…  <span style="color: #BB0000;">NA</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">20</span>    52 2022-06-13     2022-06-13   Z.1 Financial Ac… TRUE          http… <span style="color: #949494;">"</span>The…</span>
 </code></pre></div>
     </div>
   </div>
@@ -181,7 +196,7 @@ Defaults to today's date. For more information, see
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

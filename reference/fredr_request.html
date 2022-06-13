@@ -104,27 +104,38 @@ request to a specified endpoint of the FRED API.  The result is either the
 <dd><p>A string representing the FRED API endpoint of interest. See
 <a href="fredr_endpoints.html">fredr_endpoints</a> for a list of endpoint possible values. <em>Required
 parameter.</em></p></dd>
+
+
 <dt>...</dt>
 <dd><p>A series of named parameters to be used in the query.  Must be of
 the form <code>param_key = "param_value"</code>.  Acceptable parameters are
 endpoint-specific. See the <a href="fredr_endpoints.html">fredr_endpoints</a> data frame for a list of
 endpoints and <code><a href="fredr_docs.html">fredr_docs()</a></code> to access the web documentation for each
 endpoint function.</p></dd>
+
+
 <dt>to_frame</dt>
 <dd><p>A boolean value indicating whether or not the response should
 be parsed and formatted as a data frame.  If <code>FALSE</code>, a <code>response</code> object
 is returned and further processing can be done with <code><a href="https://httr.r-lib.org/reference/content.html" class="external-link">httr::content()</a></code>.
 Default is <code>TRUE</code>.</p></dd>
+
+
 <dt>print_req</dt>
 <dd><p>A boolean value indicating whether or not the request should
 be printed as well.  Useful for debugging.  Default is <code>FALSE</code>.</p></dd>
+
+
 <dt>retry_times</dt>
 <dd><p>An integer indicating the maximum number of requests to
 attempt. Passed directly to <code><a href="https://httr.r-lib.org/reference/RETRY.html" class="external-link">httr::RETRY()</a></code>.  Default is 3.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>If <code>to_frame = TRUE</code>, a <code>tibble</code> containing the parsed response. If
+    
+
+<p>If <code>to_frame = TRUE</code>, a <code>tibble</code> containing the parsed response. If
 <code>to_frame = FALSE</code>, a <code>response</code> object returned directly from
 <code><a href="https://httr.r-lib.org/reference/GET.html" class="external-link">httr::GET()</a></code>.</p>
     </div>
@@ -169,7 +180,7 @@ attempt. Passed directly to <code><a href="https://httr.r-lib.org/reference/RETR
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer></div>

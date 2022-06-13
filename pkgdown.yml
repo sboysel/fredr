@@ -1,5 +1,5 @@
 pandoc: 2.7.3
-pkgdown: 2.0.3
+pkgdown: 2.0.4
 pkgdown_sha: ~
 articles:
   fredr-categories: fredr-categories.html
@@ -8,7 +8,7 @@ articles:
   fredr-sources: fredr-sources.html
   fredr-tags: fredr-tags.html
   fredr: fredr.html
-last_built: 2022-06-06T12:15Z
+last_built: 2022-06-13T12:17Z
 urls:
   reference: https://sboysel.github.io/fredr/reference
   article: https://sboysel.github.io/fredr/articles
