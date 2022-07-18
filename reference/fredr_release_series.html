@@ -212,22 +212,24 @@ Defaults to today's date. For more information, see
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 912 × 16</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    id        realtime_start realtime_end title  observation_sta… observation_end</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> D9WFCDA   2013-04-18     2018-07-13   Asset… 2002-12-18       2018-07-11     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> D8WALL    2011-07-07     2018-07-13   Asset… 2002-12-18       2018-07-11     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> D9WAML3L  2011-07-07     2018-07-13   Asset… 2002-12-18       2018-07-11     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> D5WAML3L  2011-07-07     2018-07-13   Asset… 2002-12-18       2018-07-11     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> D9WAML1L  2011-07-07     2018-07-13   Asset… 2002-12-18       2018-07-11     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> D8WAML1L  2011-07-07     2018-07-13   Asset… 2002-12-18       2018-07-11     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> D7WATALFL 2011-07-07     2014-11-05   Asset… 2009-11-18       2014-10-29     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> D7WATALFL 2014-11-06     2018-07-13   Asset… 2009-11-18       2014-11-05     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> D5WATALFL 2011-07-07     2014-11-05   Asset… 2009-11-18       2014-10-29     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> D5WATALFL 2014-11-06     2018-07-13   Asset… 2009-11-18       2014-11-05     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 902 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    id        realt…¹ realt…² title obser…³ obser…⁴ frequ…⁵ frequ…⁶ units units…⁷</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> D9WFCDA   2013-0… 2018-0… Asse… 2002-1… 2018-0… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> D5WGCAL   2011-0… 2018-0… Asse… 2002-1… 2018-0… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> D8WALL    2011-0… 2018-0… Asse… 2002-1… 2018-0… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> D9WAML3L  2011-0… 2018-0… Asse… 2002-1… 2018-0… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> D5WAML3L  2011-0… 2018-0… Asse… 2002-1… 2018-0… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> D9WAML1L  2011-0… 2018-0… Asse… 2002-1… 2018-0… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> D8WAML1L  2011-0… 2018-0… Asse… 2002-1… 2018-0… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> D7WATALFL 2011-0… 2014-1… Asse… 2009-1… 2014-1… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> D7WATALFL 2014-1… 2018-0… Asse… 2009-1… 2014-1… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> D5WATALFL 2011-0… 2014-1… Asse… 2009-1… 2014-1… Weekly… W       Mill… Mil. o…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 902 more rows, 6 more variables: seasonal_adjustment &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   group_popularity &lt;int&gt;, notes &lt;chr&gt;, and abbreviated variable names</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ¹​realtime_start, ²​realtime_end, ³​observation_start, ⁴​observation_end,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ⁵​frequency, ⁶​frequency_short, ⁷​units_short</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</span></span>
 </code></pre></div>
     </div>
   </div>

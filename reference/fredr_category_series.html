@@ -207,22 +207,24 @@ the category specified in <code>category_id</code>.</p>
 <span class="r-in"><span class="fu">fredr_category_series</span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">4L</span>, order_by <span class="op">=</span> <span class="st">"frequency"</span>, sort_order <span class="op">=</span> <span class="st">"desc"</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 417 × 16</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    id         realtime_start realtime_end title observation_sta… observation_end</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> ECIWAG     2022-07-11     2022-07-11   Empl… 2001-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> ECIALLCIV  2022-07-11     2022-07-11   Empl… 2001-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> CIU202321… 2022-07-11     2022-07-11   Empl… 2001-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> CIS202321… 2022-07-11     2022-07-11   Empl… 2003-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> ECICONWAG  2022-07-11     2022-07-11   Empl… 2001-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> CIU201000… 2022-07-11     2022-07-11   Empl… 2001-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> CIU201300… 2022-07-11     2022-07-11   Empl… 2001-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> CIS102000… 2022-07-11     2022-07-11   Empl… 2001-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> CIU102000… 2022-07-11     2022-07-11   Empl… 2001-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> CIS201540… 2022-07-11     2022-07-11   Empl… 2003-01-01       2022-01-01     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 407 more rows, and 10 more variables: frequency &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   frequency_short &lt;chr&gt;, units &lt;chr&gt;, units_short &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   seasonal_adjustment &lt;chr&gt;, seasonal_adjustment_short &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   last_updated &lt;chr&gt;, popularity &lt;int&gt;, group_popularity &lt;int&gt;, notes &lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    id        realt…¹ realt…² title obser…³ obser…⁴ frequ…⁵ frequ…⁶ units units…⁷</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> ECIWAG    2022-0… 2022-0… Empl… 2001-0… 2022-0… Quarte… Q       Inde… Index …</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> ECIALLCIV 2022-0… 2022-0… Empl… 2001-0… 2022-0… Quarte… Q       Inde… Index:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> CIU20232… 2022-0… 2022-0… Empl… 2001-0… 2022-0… Quarte… Q       Inde… Index:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> CIS20232… 2022-0… 2022-0… Empl… 2003-0… 2022-0… Quarte… Q       Inde… Index …</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> ECICONWAG 2022-0… 2022-0… Empl… 2001-0… 2022-0… Quarte… Q       Inde… Index:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> CIU20100… 2022-0… 2022-0… Empl… 2001-0… 2022-0… Quarte… Q       Inde… Index …</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> CIU20130… 2022-0… 2022-0… Empl… 2001-0… 2022-0… Quarte… Q       Inde… Index:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> CIS20154… 2022-0… 2022-0… Empl… 2003-0… 2022-0… Quarte… Q       Inde… Index …</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> CIU20154… 2022-0… 2022-0… Empl… 2001-0… 2022-0… Quarte… Q       Inde… Index:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> CIS10200… 2022-0… 2022-0… Empl… 2001-0… 2022-0… Quarte… Q       Inde… Index …</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 407 more rows, 6 more variables: seasonal_adjustment &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   seasonal_adjustment_short &lt;chr&gt;, last_updated &lt;chr&gt;, popularity &lt;int&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   group_popularity &lt;int&gt;, notes &lt;chr&gt;, and abbreviated variable names</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ¹​realtime_start, ²​realtime_end, ³​observation_start, ⁴​observation_end,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ⁵​frequency, ⁶​frequency_short, ⁷​units_short</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</span></span>
 </code></pre></div>
     </div>
   </div>
