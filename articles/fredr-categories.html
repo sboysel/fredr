@@ -104,7 +104,7 @@
       <h1 data-toc-skip>FRED Categories</h1>
                         <h4 data-toc-skip class="author">Sam Boysel</h4>
             
-            <h4 data-toc-skip class="date">2022-10-03</h4>
+            <h4 data-toc-skip class="date">2022-10-10</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/HEAD/vignettes/fredr-categories.Rmd" class="external-link"><code>vignettes/fredr-categories.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-categories.Rmd</code></div>
@@ -260,12 +260,13 @@
   category_id <span class="op">=</span> <span class="fl">6L</span>,
   tag_group_id <span class="op">=</span> <span class="st">"src"</span>
 <span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 3 × 6</span></span>
+<span class="co">#&gt; <span style="color: #949494;"># A tibble: 4 × 6</span></span>
 <span class="co">#&gt;   name    group_id notes                       created           popul…¹ serie…²</span>
 <span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> census  src      Census                      2012-02-27 10:18…      79     400</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> bea     src      Bureau of Economic Analysis 2012-02-27 10:18…      78       6</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> frb stl src      St. Louis Fed               2012-02-27 10:18…      68       6</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> census  src      Census                      2012-02-27 10:18…      79     366</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> bea     src      Bureau of Economic Analysis 2012-02-27 10:18…      78       4</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> frb chi src      Chicago Fed                 2012-02-27 10:18…      35       4</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">4</span> frb stl src      St. Louis Fed               2012-02-27 10:18…      68       4</span>
 <span class="co">#&gt; <span style="color: #949494;"># … with abbreviated variable names ¹​popularity, ²​series_count</span></span></code></pre></div>
 <p>To search for tags with the words <code>"usa"</code> in the “Production &amp; Business Activity” category, ordering the results by popularity:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
@@ -278,7 +279,7 @@
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 6</span></span>
 <span class="co">#&gt;   name  group_id notes                    created                popul…¹ serie…²</span>
 <span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> usa   geo      United States of America 2012-02-27 10:18:19-06     100    <span style="text-decoration: underline;">3</span>288</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> usa   geo      United States of America 2012-02-27 10:18:19-06     100    <span style="text-decoration: underline;">3</span>256</span>
 <span class="co">#&gt; <span style="color: #949494;"># … with abbreviated variable names ¹​popularity, ²​series_count</span></span></code></pre></div>
 </div>
 <div class="section level3">
@@ -292,20 +293,20 @@
   exclude_tag_names <span class="op">=</span> <span class="st">"rate"</span>,
   order_by <span class="op">=</span> <span class="st">"name"</span>
 <span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 106 × 6</span></span>
+<span class="co">#&gt; <span style="color: #949494;"># A tibble: 102 × 6</span></span>
 <span class="co">#&gt;    name                  group_id notes      created             popul…¹ serie…²</span>
 <span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> accommodation         gen      <span style="color: #949494;">""</span>         2012-02-27 10:18:1…      31      22</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> administrative        gen      <span style="color: #949494;">""</span>         2012-02-27 10:18:1…      19      26</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> agriculture           gen      <span style="color: #949494;">""</span>         2012-02-27 10:18:1…      49      26</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> ak                    geo      <span style="color: #949494;">"</span>Alaska<span style="color: #949494;">"</span>   2012-02-27 10:18:1…      33      18</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> al                    geo      <span style="color: #949494;">"</span>Alabama<span style="color: #949494;">"</span>  2012-02-27 10:18:1…      44      22</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> ar                    geo      <span style="color: #949494;">"</span>Arkansas<span style="color: #949494;">"</span> 2012-02-27 10:18:1…      41      28</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> arts                  gen      <span style="color: #949494;">""</span>         2012-02-27 10:18:1…      26      20</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> average               gen      <span style="color: #949494;">""</span>         2015-05-06 14:42:1…      53     176</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> az                    geo      <span style="color: #949494;">"</span>Arizona<span style="color: #949494;">"</span>  2012-02-27 10:18:1…      48      16</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> business applications gen       <span style="color: #BB0000;">NA</span>        2019-03-19 15:47:1…      29     818</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 96 more rows, and abbreviated variable names ¹​popularity,</span></span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> accommodation         gen      <span style="color: #949494;">""</span>         2012-02-27 10:18:1…      31      26</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> administrative        gen      <span style="color: #949494;">""</span>         2012-02-27 10:18:1…      18      22</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> agriculture           gen      <span style="color: #949494;">""</span>         2012-02-27 10:18:1…      49      12</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> ak                    geo      <span style="color: #949494;">"</span>Alaska<span style="color: #949494;">"</span>   2012-02-27 10:18:1…      35      30</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> al                    geo      <span style="color: #949494;">"</span>Alabama<span style="color: #949494;">"</span>  2012-02-27 10:18:1…      44      20</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> ar                    geo      <span style="color: #949494;">"</span>Arkansas<span style="color: #949494;">"</span> 2012-02-27 10:18:1…      41      26</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> arts                  gen      <span style="color: #949494;">""</span>         2012-02-27 10:18:1…      25      22</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> average               gen      <span style="color: #949494;">""</span>         2015-05-06 14:42:1…      54     148</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> az                    geo      <span style="color: #949494;">"</span>Arizona<span style="color: #949494;">"</span>  2012-02-27 10:18:1…      48      24</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> business applications gen       <span style="color: #BB0000;">NA</span>        2019-03-19 15:47:1…      29     722</span>
+<span class="co">#&gt; <span style="color: #949494;"># … with 92 more rows, and abbreviated variable names ¹​popularity,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   ²​series_count</span></span></code></pre></div>
 </div>
 </div>
