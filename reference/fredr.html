@@ -276,7 +276,7 @@ dates in history. They can be specified instead of a real-time period using
 <span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"purrr"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
 <span class="r-in"></span>
 <span class="r-in">  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/" class="external-link">purrr</a></span><span class="op">)</span></span>
-<span class="r-in">  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map_dfr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"UNRATE"</span>, <span class="st">"OILPRICE"</span><span class="op">)</span>, <span class="va">fredr</span><span class="op">)</span></span>
+<span class="r-in">  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map_dfr.html" class="external-link">map_dfr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"UNRATE"</span>, <span class="st">"OILPRICE"</span><span class="op">)</span>, <span class="va">fredr</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in">  <span class="co"># Using purrr::pmap_dfr() allows you to use varying optional parameters</span></span>
 <span class="r-in">  <span class="va">params</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -284,7 +284,7 @@ dates in history. They can be specified instead of a real-time period using
 <span class="r-in">    frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"m"</span>, <span class="st">"q"</span><span class="op">)</span></span>
 <span class="r-in">  <span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in">  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map2.html" class="external-link">pmap_dfr</a></span><span class="op">(</span></span>
+<span class="r-in">  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map_dfr.html" class="external-link">pmap_dfr</a></span><span class="op">(</span></span>
 <span class="r-in">    .l <span class="op">=</span> <span class="va">params</span>,</span>
 <span class="r-in">    .f <span class="op">=</span> <span class="op">~</span> <span class="fu">fredr</span><span class="op">(</span>series_id <span class="op">=</span> <span class="va">.x</span>, frequency <span class="op">=</span> <span class="va">.y</span><span class="op">)</span></span>
 <span class="r-in">  <span class="op">)</span></span>
@@ -295,16 +295,16 @@ dates in history. They can be specified instead of a real-time period using
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,170 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    date       series_id value realtime_start realtime_end</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 1948-01-01 UNRATE      3.4 2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 1948-02-01 UNRATE      3.8 2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 1948-03-01 UNRATE      4   2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 1948-04-01 UNRATE      3.9 2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 1948-05-01 UNRATE      3.5 2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1948-06-01 UNRATE      3.6 2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 1948-07-01 UNRATE      3.6 2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 1948-08-01 UNRATE      3.9 2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 1948-09-01 UNRATE      3.8 2022-12-19     2022-12-19  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 1948-10-01 UNRATE      3.7 2022-12-19     2022-12-19  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 1948-01-01 UNRATE      3.4 2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 1948-02-01 UNRATE      3.8 2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 1948-03-01 UNRATE      4   2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 1948-04-01 UNRATE      3.9 2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 1948-05-01 UNRATE      3.5 2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1948-06-01 UNRATE      3.6 2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 1948-07-01 UNRATE      3.6 2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 1948-08-01 UNRATE      3.9 2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 1948-09-01 UNRATE      3.8 2022-12-26     2022-12-26  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 1948-10-01 UNRATE      3.7 2022-12-26     2022-12-26  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 1,160 more rows</span></span>
 </code></pre></div>
     </div>
