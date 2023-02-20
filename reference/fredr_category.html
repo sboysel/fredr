@@ -83,7 +83,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fredr_category</span><span class="op">(</span><span class="va">category_id</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fredr_category</span><span class="op">(</span><span class="va">category_id</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -114,12 +114,12 @@ indicated by <code>category_id</code>.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="co"># Root category</span></span>
-<span class="r-in"><span class="fu">fredr_category</span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># "Production &amp; Business Activity" category</span></span>
-<span class="r-in"><span class="fu">fredr_category</span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">1L</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># Root category</span></span></span>
+<span class="r-in"><span><span class="fu">fredr_category</span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">0L</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># "Production &amp; Business Activity" category</span></span></span>
+<span class="r-in"><span><span class="fu">fredr_category</span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">1L</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 3</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      id name                           parent_id</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                              <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>

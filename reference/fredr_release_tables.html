@@ -87,13 +87,13 @@ element_id. You may also use a drill-down approach to start at the root
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fredr_release_tables</span><span class="op">(</span>
-  <span class="va">release_id</span>,
-  <span class="va">...</span>,
-  element_id <span class="op">=</span> <span class="cn">NULL</span>,
-  include_observation_values <span class="op">=</span> <span class="cn">NULL</span>,
-  observation_date <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fredr_release_tables</span><span class="op">(</span></span>
+<span>  <span class="va">release_id</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  element_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  include_observation_values <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  observation_date <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -143,12 +143,12 @@ with the release table.  Default is <code>9999-12-31</code> (latest date availab
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu">fredr_release_tables</span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Digging further into a release element</span></span>
-<span class="r-in"><span class="fu">fredr_release_tables</span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">53L</span>, element_id <span class="op">=</span> <span class="fl">12886</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="fu">fredr_release_tables</span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Digging further into a release element</span></span></span>
+<span class="r-in"><span><span class="fu">fredr_release_tables</span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">53L</span>, element_id <span class="op">=</span> <span class="fl">12886</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 4 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   name  value           </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>          </span>

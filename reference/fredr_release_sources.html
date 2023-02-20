@@ -83,12 +83,12 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fredr_release_sources</span><span class="op">(</span>
-  <span class="va">release_id</span>,
-  <span class="va">...</span>,
-  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_end <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fredr_release_sources</span><span class="op">(</span></span>
+<span>  <span class="va">release_id</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_end <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -135,14 +135,14 @@ Defaults to today's date. For more information, see
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="co"># Where does the data for ID 10 come from?</span></span>
-<span class="r-in"><span class="fu">fredr_release_sources</span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># Where does the data for ID 10 come from?</span></span></span>
+<span class="r-in"><span><span class="fu">fredr_release_sources</span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      id realtime_start realtime_end name                            link        </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>    22 2023-02-13     2023-02-13   U.S. Bureau of Labor Statistics https://www…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>    22 2023-02-20     2023-02-20   U.S. Bureau of Labor Statistics https://www…</span>
 </code></pre></div>
     </div>
   </div>

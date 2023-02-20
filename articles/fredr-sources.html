@@ -104,7 +104,7 @@
       <h1 data-toc-skip>FRED Sources</h1>
                         <h4 data-toc-skip class="author">Sam Boysel</h4>
             
-            <h4 data-toc-skip class="date">2023-02-13</h4>
+            <h4 data-toc-skip class="date">2023-02-20</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sboysel/fredr/blob/HEAD/vignettes/fredr-sources.Rmd" class="external-link"><code>vignettes/fredr-sources.Rmd</code></a></small>
       <div class="hidden name"><code>fredr-sources.Rmd</code></div>
@@ -117,7 +117,7 @@
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr" class="external-link">fredr</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sboysel/fredr" class="external-link">fredr</a></span><span class="op">)</span></span></code></pre></div>
 <p>This vignette is intended to introduce the user to fredr functions for the <a href="https://fred.stlouisfed.org/docs/api/fred/#Sources" class="external-link">Sources endpoint</a> of the FRED API.</p>
 <p>FRED series are derived from a specific data <strong>source</strong>. Each FRED source is assigned an integer identifier. The following examples illustrate usage of the Sources endpoint functions in fredr.</p>
 <div class="section level3">
@@ -125,65 +125,65 @@
 </h3>
 <p>The function <code><a href="../reference/fredr_sources.html">fredr_sources()</a></code> returns a list of FRED data sources. The information returned is a tibble in which each row represents a FRED source. For example, running <code><a href="../reference/fredr_sources.html">fredr_sources()</a></code> without any arguments returns the first 1000 (<code>limit</code> default) sources ordered by ascending source ID (but here we limit to just 10):</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_sources.html">fredr_sources</a></span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 5</span></span>
-<span class="co">#&gt;       id realtime_start realtime_end name                                  link </span>
-<span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>     1 2023-02-13     2023-02-13   Board of Governors of the Federal Re… http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>     3 2023-02-13     2023-02-13   Federal Reserve Bank of Philadelphia  http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>     4 2023-02-13     2023-02-13   Federal Reserve Bank of St. Louis     http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>     6 2023-02-13     2023-02-13   Federal Financial Institutions Exami… http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>    11 2023-02-13     2023-02-13   Dow Jones &amp; Company                   http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>    14 2023-02-13     2023-02-13   University of Michigan                http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>    15 2023-02-13     2023-02-13   Council of Economic Advisers (US)     http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>    16 2023-02-13     2023-02-13   U.S. Office of Management and Budget  http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>    17 2023-02-13     2023-02-13   U.S. Congressional Budget Office      http…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span>    18 2023-02-13     2023-02-13   U.S. Bureau of Economic Analysis      http…</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fredr_sources.html">fredr_sources</a></span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 5</span></span></span>
+<span><span class="co">#&gt;       id realtime_start realtime_end name                                  link </span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>     1 2023-02-20     2023-02-20   Board of Governors of the Federal Re… http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>     3 2023-02-20     2023-02-20   Federal Reserve Bank of Philadelphia  http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>     4 2023-02-20     2023-02-20   Federal Reserve Bank of St. Louis     http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>     6 2023-02-20     2023-02-20   Federal Financial Institutions Exami… http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>    11 2023-02-20     2023-02-20   Dow Jones &amp; Company                   http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>    14 2023-02-20     2023-02-20   University of Michigan                http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>    15 2023-02-20     2023-02-20   Council of Economic Advisers (US)     http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>    16 2023-02-20     2023-02-20   U.S. Office of Management and Budget  http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>    17 2023-02-20     2023-02-20   U.S. Congressional Budget Office      http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>    18 2023-02-20     2023-02-20   U.S. Bureau of Economic Analysis      http…</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="get-a-single-fred-source">Get a single FRED source<a class="anchor" aria-label="anchor" href="#get-a-single-fred-source"></a>
 </h3>
 <p>The function <code><a href="../reference/fredr_source.html">fredr_source()</a></code> returns information for a <em>single</em> source indicated by <code>source_id</code>. The data returned is a tibble in which each row represents a FRED source. For example, the Federal Financial Institutions Examination Council source ID is <code>6</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_source.html">fredr_source</a></span><span class="op">(</span>source_id <span class="op">=</span> <span class="fl">6L</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 5</span></span>
-<span class="co">#&gt;      id realtime_start realtime_end name                                   link </span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span>     6 2023-02-13     2023-02-13   Federal Financial Institutions Examin… http…</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fredr_source.html">fredr_source</a></span><span class="op">(</span>source_id <span class="op">=</span> <span class="fl">6L</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 5</span></span></span>
+<span><span class="co">#&gt;      id realtime_start realtime_end name                                   link </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>     6 2023-02-20     2023-02-20   Federal Financial Institutions Examin… http…</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="get-fred-releases-for-a-source">Get FRED releases for a source<a class="anchor" aria-label="anchor" href="#get-fred-releases-for-a-source"></a>
 </h3>
 <p>The function <code><a href="../reference/fredr_source_releases.html">fredr_source_releases()</a></code> returns FRED release information for the source indicated by <code>source_id</code>. As with the functions for the <a href="http://sboysel.github.io/fredr/reference/index.html#Releases" class="external-link">Releases endpoint</a>, the data returned is a tibble in which each row represents a FRED release for the specified source. For example, to get the first 10 releases from the Federal Reserve Board of Governors, ordered by ascending release ID:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_source_releases.html">fredr_source_releases</a></span><span class="op">(</span>
-  source_id <span class="op">=</span> <span class="fl">1L</span>,
-  limit <span class="op">=</span> <span class="fl">10L</span>
-<span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 7</span></span>
-<span class="co">#&gt;       id realtime_start realtime_end name                    press…¹ link  notes</span>
-<span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>    13 2023-02-13     2023-02-13   G.17 Industrial Produc… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>    14 2023-02-13     2023-02-13   G.19 Consumer Credit    TRUE    http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>    15 2023-02-13     2023-02-13   G.5 Foreign Exchange R… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>    17 2023-02-13     2023-02-13   H.10 Foreign Exchange … TRUE    http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>    18 2023-02-13     2023-02-13   H.15 Selected Interest… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>    19 2023-02-13     2023-02-13   H.3 Aggregate Reserves… TRUE    http… <span style="color: #949494;">"</span>The…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>    20 2023-02-13     2023-02-13   H.4.1 Factors Affectin… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>    21 2023-02-13     2023-02-13   H.6 Money Stock Measur… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>    22 2023-02-13     2023-02-13   H.8 Assets and Liabili… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span>    52 2023-02-13     2023-02-13   Z.1 Financial Accounts… TRUE    http… <span style="color: #949494;">"</span>The…</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with abbreviated variable name ¹​press_release</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fredr_source_releases.html">fredr_source_releases</a></span><span class="op">(</span></span>
+<span>  source_id <span class="op">=</span> <span class="fl">1L</span>,</span>
+<span>  limit <span class="op">=</span> <span class="fl">10L</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 7</span></span></span>
+<span><span class="co">#&gt;       id realtime_start realtime_end name                    press…¹ link  notes</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>    13 2023-02-20     2023-02-20   G.17 Industrial Produc… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>    14 2023-02-20     2023-02-20   G.19 Consumer Credit    TRUE    http…  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>    15 2023-02-20     2023-02-20   G.5 Foreign Exchange R… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>    17 2023-02-20     2023-02-20   H.10 Foreign Exchange … TRUE    http…  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>    18 2023-02-20     2023-02-20   H.15 Selected Interest… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>    19 2023-02-20     2023-02-20   H.3 Aggregate Reserves… TRUE    http… <span style="color: #949494;">"</span>The…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>    20 2023-02-20     2023-02-20   H.4.1 Factors Affectin… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>    21 2023-02-20     2023-02-20   H.6 Money Stock Measur… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>    22 2023-02-20     2023-02-20   H.8 Assets and Liabili… TRUE    http…  <span style="color: #BB0000;">NA</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>    52 2023-02-20     2023-02-20   Z.1 Financial Accounts… TRUE    http… <span style="color: #949494;">"</span>The…</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with abbreviated variable name ¹​press_release</span></span></span></code></pre></div>
 <p>To get University of Michigan releases since 1950:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fredr_source_releases.html">fredr_source_releases</a></span><span class="op">(</span>
-  source_id <span class="op">=</span> <span class="fl">14L</span>,
-  realtime_start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"1950-01-01"</span><span class="op">)</span>
-<span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 6</span></span>
-<span class="co">#&gt;      id realtime_start realtime_end name                 press_release link     </span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span>    91 1998-07-31     9999-12-31   Surveys of Consumers TRUE          http://w…</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fredr_source_releases.html">fredr_source_releases</a></span><span class="op">(</span></span>
+<span>  source_id <span class="op">=</span> <span class="fl">14L</span>,</span>
+<span>  realtime_start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"1950-01-01"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 6</span></span></span>
+<span><span class="co">#&gt;      id realtime_start realtime_end name                 press_release link     </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>    91 1998-07-31     9999-12-31   Surveys of Consumers TRUE          http://w…</span></span></code></pre></div>
 </div>
 </div>
   </div>

@@ -85,39 +85,39 @@ fredr() is an alias for fredr_series_observations()."><!-- mathjax --><script sr
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fredr_series_observations</span><span class="op">(</span>
-  <span class="va">series_id</span>,
-  <span class="va">...</span>,
-  observation_start <span class="op">=</span> <span class="cn">NULL</span>,
-  observation_end <span class="op">=</span> <span class="cn">NULL</span>,
-  frequency <span class="op">=</span> <span class="cn">NULL</span>,
-  aggregation_method <span class="op">=</span> <span class="cn">NULL</span>,
-  limit <span class="op">=</span> <span class="cn">NULL</span>,
-  offset <span class="op">=</span> <span class="cn">NULL</span>,
-  sort_order <span class="op">=</span> <span class="cn">NULL</span>,
-  units <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_end <span class="op">=</span> <span class="cn">NULL</span>,
-  vintage_dates <span class="op">=</span> <span class="cn">NULL</span>,
-  output_type <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span>
-
-<span class="fu">fredr</span><span class="op">(</span>
-  <span class="va">series_id</span>,
-  <span class="va">...</span>,
-  observation_start <span class="op">=</span> <span class="cn">NULL</span>,
-  observation_end <span class="op">=</span> <span class="cn">NULL</span>,
-  frequency <span class="op">=</span> <span class="cn">NULL</span>,
-  aggregation_method <span class="op">=</span> <span class="cn">NULL</span>,
-  limit <span class="op">=</span> <span class="cn">NULL</span>,
-  offset <span class="op">=</span> <span class="cn">NULL</span>,
-  sort_order <span class="op">=</span> <span class="cn">NULL</span>,
-  units <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_end <span class="op">=</span> <span class="cn">NULL</span>,
-  vintage_dates <span class="op">=</span> <span class="cn">NULL</span>,
-  output_type <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fredr_series_observations</span><span class="op">(</span></span>
+<span>  <span class="va">series_id</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  observation_start <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  observation_end <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  frequency <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  aggregation_method <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  limit <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  offset <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  sort_order <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  units <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_end <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  vintage_dates <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  output_type <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">fredr</span><span class="op">(</span></span>
+<span>  <span class="va">series_id</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  observation_start <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  observation_end <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  frequency <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  aggregation_method <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  limit <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  offset <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  sort_order <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  units <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_end <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  vintage_dates <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  output_type <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -252,59 +252,59 @@ dates in history. They can be specified instead of a real-time period using
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="co"># Observations for "UNRATE" series between 1980 and 2000.  Units are in terms</span></span>
-<span class="r-in"><span class="co"># of change from previous observation.</span></span>
-<span class="r-in"><span class="fu">fredr</span><span class="op">(</span></span>
-<span class="r-in">  series_id <span class="op">=</span> <span class="st">"UNRATE"</span>,</span>
-<span class="r-in">  observation_start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"1980-01-01"</span><span class="op">)</span>,</span>
-<span class="r-in">  observation_end <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2000-01-01"</span><span class="op">)</span>,</span>
-<span class="r-in">  units <span class="op">=</span> <span class="st">"chg"</span></span>
-<span class="r-in"><span class="op">)</span></span>
-<span class="r-in"><span class="co"># All observations for "OILPRICE" series.  The data is first aggregated by</span></span>
-<span class="r-in"><span class="co"># quarter by taking the average of all observations in the quarter then</span></span>
-<span class="r-in"><span class="co"># transformed by taking the natural logarithm.</span></span>
-<span class="r-in"><span class="fu">fredr</span><span class="op">(</span></span>
-<span class="r-in">  series_id <span class="op">=</span> <span class="st">"OILPRICE"</span>,</span>
-<span class="r-in">  frequency <span class="op">=</span> <span class="st">"q"</span>,</span>
-<span class="r-in">  aggregation_method <span class="op">=</span> <span class="st">"avg"</span>,</span>
-<span class="r-in">  units <span class="op">=</span> <span class="st">"log"</span></span>
-<span class="r-in"><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># To retrieve values for multiple series, use purrr's map_dfr() function.</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"purrr"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/" class="external-link">purrr</a></span><span class="op">)</span></span>
-<span class="r-in">  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map_dfr.html" class="external-link">map_dfr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"UNRATE"</span>, <span class="st">"OILPRICE"</span><span class="op">)</span>, <span class="va">fredr</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="co"># Using purrr::pmap_dfr() allows you to use varying optional parameters</span></span>
-<span class="r-in">  <span class="va">params</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span class="r-in">    series_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"UNRATE"</span>, <span class="st">"OILPRICE"</span><span class="op">)</span>,</span>
-<span class="r-in">    frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"m"</span>, <span class="st">"q"</span><span class="op">)</span></span>
-<span class="r-in">  <span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map_dfr.html" class="external-link">pmap_dfr</a></span><span class="op">(</span></span>
-<span class="r-in">    .l <span class="op">=</span> <span class="va">params</span>,</span>
-<span class="r-in">    .f <span class="op">=</span> <span class="op">~</span> <span class="fu">fredr</span><span class="op">(</span>series_id <span class="op">=</span> <span class="va">.x</span>, frequency <span class="op">=</span> <span class="va">.y</span><span class="op">)</span></span>
-<span class="r-in">  <span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="op">}</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># Observations for "UNRATE" series between 1980 and 2000.  Units are in terms</span></span></span>
+<span class="r-in"><span><span class="co"># of change from previous observation.</span></span></span>
+<span class="r-in"><span><span class="fu">fredr</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  series_id <span class="op">=</span> <span class="st">"UNRATE"</span>,</span></span>
+<span class="r-in"><span>  observation_start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"1980-01-01"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  observation_end <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2000-01-01"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  units <span class="op">=</span> <span class="st">"chg"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># All observations for "OILPRICE" series.  The data is first aggregated by</span></span></span>
+<span class="r-in"><span><span class="co"># quarter by taking the average of all observations in the quarter then</span></span></span>
+<span class="r-in"><span><span class="co"># transformed by taking the natural logarithm.</span></span></span>
+<span class="r-in"><span><span class="fu">fredr</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  series_id <span class="op">=</span> <span class="st">"OILPRICE"</span>,</span></span>
+<span class="r-in"><span>  frequency <span class="op">=</span> <span class="st">"q"</span>,</span></span>
+<span class="r-in"><span>  aggregation_method <span class="op">=</span> <span class="st">"avg"</span>,</span></span>
+<span class="r-in"><span>  units <span class="op">=</span> <span class="st">"log"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># To retrieve values for multiple series, use purrr's map_dfr() function.</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"purrr"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/" class="external-link">purrr</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map_dfr.html" class="external-link">map_dfr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"UNRATE"</span>, <span class="st">"OILPRICE"</span><span class="op">)</span>, <span class="va">fredr</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="co"># Using purrr::pmap_dfr() allows you to use varying optional parameters</span></span></span>
+<span class="r-in"><span>  <span class="va">params</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    series_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"UNRATE"</span>, <span class="st">"OILPRICE"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    frequency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"m"</span>, <span class="st">"q"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map_dfr.html" class="external-link">pmap_dfr</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    .l <span class="op">=</span> <span class="va">params</span>,</span></span>
+<span class="r-in"><span>    .f <span class="op">=</span> <span class="op">~</span> <span class="fu">fredr</span><span class="op">(</span>series_id <span class="op">=</span> <span class="va">.x</span>, frequency <span class="op">=</span> <span class="va">.y</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,172 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    date       series_id value realtime_start realtime_end</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 1948-01-01 UNRATE      3.4 2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 1948-02-01 UNRATE      3.8 2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 1948-03-01 UNRATE      4   2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 1948-04-01 UNRATE      3.9 2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 1948-05-01 UNRATE      3.5 2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1948-06-01 UNRATE      3.6 2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 1948-07-01 UNRATE      3.6 2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 1948-08-01 UNRATE      3.9 2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 1948-09-01 UNRATE      3.8 2023-02-13     2023-02-13  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 1948-10-01 UNRATE      3.7 2023-02-13     2023-02-13  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 1948-01-01 UNRATE      3.4 2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 1948-02-01 UNRATE      3.8 2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 1948-03-01 UNRATE      4   2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 1948-04-01 UNRATE      3.9 2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 1948-05-01 UNRATE      3.5 2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1948-06-01 UNRATE      3.6 2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 1948-07-01 UNRATE      3.6 2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 1948-08-01 UNRATE      3.9 2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 1948-09-01 UNRATE      3.8 2023-02-20     2023-02-20  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 1948-10-01 UNRATE      3.7 2023-02-20     2023-02-20  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 1,162 more rows</span></span>
 </code></pre></div>
     </div>

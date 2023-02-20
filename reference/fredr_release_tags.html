@@ -85,19 +85,19 @@ tag group, or search text.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fredr_release_tags</span><span class="op">(</span>
-  <span class="va">release_id</span>,
-  <span class="va">...</span>,
-  tag_names <span class="op">=</span> <span class="cn">NULL</span>,
-  tag_group_id <span class="op">=</span> <span class="cn">NULL</span>,
-  search_text <span class="op">=</span> <span class="cn">NULL</span>,
-  limit <span class="op">=</span> <span class="cn">NULL</span>,
-  offset <span class="op">=</span> <span class="cn">NULL</span>,
-  order_by <span class="op">=</span> <span class="cn">NULL</span>,
-  sort_order <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_end <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fredr_release_tags</span><span class="op">(</span></span>
+<span>  <span class="va">release_id</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  tag_names <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  tag_group_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  search_text <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  limit <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  offset <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  order_by <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  sort_order <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_end <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -194,23 +194,23 @@ Defaults to today's date. For more information, see
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu">fredr_release_tags</span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 181 × 6</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="fu">fredr_release_tags</span><span class="op">(</span>release_id <span class="op">=</span> <span class="fl">10L</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 179 × 6</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    name                              group_id notes      created popul…¹ serie…²</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> bls                               src      <span style="color: #949494;">"</span>Bureau o… 2012-0…      88    <span style="text-decoration: underline;">4</span>702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> cpi                               gen      <span style="color: #949494;">"</span>Consumer… 2012-0…      70    <span style="text-decoration: underline;">4</span>702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> indexes                           gen      <span style="color: #949494;">""</span>         2012-0…      88    <span style="text-decoration: underline;">4</span>702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> price                             gen      <span style="color: #949494;">""</span>         2013-0…      88    <span style="text-decoration: underline;">4</span>702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> price index                       gen      <span style="color: #949494;">""</span>         2012-0…      85    <span style="text-decoration: underline;">4</span>702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> public domain: citation requested cc        <span style="color: #BB0000;">NA</span>        2018-1…      99    <span style="text-decoration: underline;">4</span>702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> usa                               geo      <span style="color: #949494;">"</span>United S… 2012-0…     100    <span style="text-decoration: underline;">4</span>702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> urban                             gen      <span style="color: #949494;">""</span>         2012-0…      62    <span style="text-decoration: underline;">4</span>700</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> inflation                         gen      <span style="color: #949494;">""</span>         2012-0…      81    <span style="text-decoration: underline;">4</span>510</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> nsa                               seas     <span style="color: #949494;">"</span>Not Seas… 2012-0…      99    <span style="text-decoration: underline;">4</span>506</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 171 more rows, and abbreviated variable names ¹​popularity,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> bls                               src      <span style="color: #949494;">"</span>Bureau o… 2012-0…      88    <span style="text-decoration: underline;">4</span>514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> cpi                               gen      <span style="color: #949494;">"</span>Consumer… 2012-0…      71    <span style="text-decoration: underline;">4</span>514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> indexes                           gen      <span style="color: #949494;">""</span>         2012-0…      88    <span style="text-decoration: underline;">4</span>514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> price                             gen      <span style="color: #949494;">""</span>         2013-0…      88    <span style="text-decoration: underline;">4</span>514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> price index                       gen      <span style="color: #949494;">""</span>         2012-0…      86    <span style="text-decoration: underline;">4</span>514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> public domain: citation requested cc        <span style="color: #BB0000;">NA</span>        2018-1…      99    <span style="text-decoration: underline;">4</span>514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> usa                               geo      <span style="color: #949494;">"</span>United S… 2012-0…     100    <span style="text-decoration: underline;">4</span>514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> urban                             gen      <span style="color: #949494;">""</span>         2012-0…      63    <span style="text-decoration: underline;">4</span>512</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> consumer                          gen      <span style="color: #949494;">""</span>         2012-0…      68    <span style="text-decoration: underline;">4</span>348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> inflation                         gen      <span style="color: #949494;">""</span>         2012-0…      81    <span style="text-decoration: underline;">4</span>344</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 169 more rows, and abbreviated variable names ¹​popularity,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ²​series_count</span></span>
 </code></pre></div>
     </div>

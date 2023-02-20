@@ -97,20 +97,20 @@ that does not have series.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fredr_category_related_tags</span><span class="op">(</span>
-  <span class="va">category_id</span>,
-  <span class="va">tag_names</span>,
-  <span class="va">...</span>,
-  exclude_tag_names <span class="op">=</span> <span class="cn">NULL</span>,
-  tag_group_id <span class="op">=</span> <span class="cn">NULL</span>,
-  search_text <span class="op">=</span> <span class="cn">NULL</span>,
-  limit <span class="op">=</span> <span class="cn">NULL</span>,
-  offset <span class="op">=</span> <span class="cn">NULL</span>,
-  order_by <span class="op">=</span> <span class="cn">NULL</span>,
-  sort_order <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_end <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fredr_category_related_tags</span><span class="op">(</span></span>
+<span>  <span class="va">category_id</span>,</span>
+<span>  <span class="va">tag_names</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  exclude_tag_names <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  tag_group_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  search_text <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  limit <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  offset <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  order_by <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  sort_order <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_end <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -206,26 +206,26 @@ and additional notes.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="co"># First, get the tags for the "Production &amp; Business Activity" category</span></span>
-<span class="r-in"><span class="fu"><a href="fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span><span class="fl">1L</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># Then, get the tags related to "business" and "monthly" for the</span></span>
-<span class="r-in"><span class="co"># "Production &amp; Business Activity" category</span></span>
-<span class="r-in"><span class="fu">fredr_category_related_tags</span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">1L</span>, tag_names <span class="op">=</span> <span class="st">"business;monthly"</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># First, get the tags for the "Production &amp; Business Activity" category</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="fredr_category_tags.html">fredr_category_tags</a></span><span class="op">(</span><span class="fl">1L</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Then, get the tags related to "business" and "monthly" for the</span></span></span>
+<span class="r-in"><span><span class="co"># "Production &amp; Business Activity" category</span></span></span>
+<span class="r-in"><span><span class="fu">fredr_category_related_tags</span><span class="op">(</span>category_id <span class="op">=</span> <span class="fl">1L</span>, tag_names <span class="op">=</span> <span class="st">"business;monthly"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 107 × 6</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    name                              group_id notes      created popul…¹ serie…²</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> census                            src      <span style="color: #949494;">"</span>Census<span style="color: #949494;">"</span>   2012-0…      79    <span style="text-decoration: underline;">1</span>750</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> public domain: citation requested cc        <span style="color: #BB0000;">NA</span>        2018-1…      99    <span style="text-decoration: underline;">1</span>750</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> usa                               geo      <span style="color: #949494;">"</span>United S… 2012-0…     100    <span style="text-decoration: underline;">1</span>750</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> state                             geot     <span style="color: #949494;">"</span>State<span style="color: #949494;">"</span>    2012-0…      75    <span style="text-decoration: underline;">1</span>164</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> nsa                               seas     <span style="color: #949494;">"</span>Not Seas… 2012-0…      99     970</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> business formations               gen       <span style="color: #BB0000;">NA</span>        2019-0…      10     928</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> business applications             gen       <span style="color: #BB0000;">NA</span>        2019-0…      31     810</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> sa                                seas     <span style="color: #949494;">"</span>Seasonal… 2012-0…      88     780</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> nation                            geot     <span style="color: #949494;">""</span>         2012-0…      99     506</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> projection                        gen      <span style="color: #949494;">""</span>         2012-0…      49     312</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> census                            src      <span style="color: #949494;">"</span>Census<span style="color: #949494;">"</span>   2012-0…      79    <span style="text-decoration: underline;">1</span>674</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> public domain: citation requested cc        <span style="color: #BB0000;">NA</span>        2018-1…      99    <span style="text-decoration: underline;">1</span>674</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> usa                               geo      <span style="color: #949494;">"</span>United S… 2012-0…     100    <span style="text-decoration: underline;">1</span>674</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> state                             geot     <span style="color: #949494;">"</span>State<span style="color: #949494;">"</span>    2012-0…      75    <span style="text-decoration: underline;">1</span>114</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> nsa                               seas     <span style="color: #949494;">"</span>Not Seas… 2012-0…      99     922</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> business formations               gen       <span style="color: #BB0000;">NA</span>        2019-0…      16     870</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> business applications             gen       <span style="color: #BB0000;">NA</span>        2019-0…      31     790</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> sa                                seas     <span style="color: #949494;">"</span>Seasonal… 2012-0…      88     752</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> nation                            geot     <span style="color: #949494;">""</span>         2012-0…      99     482</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> projection                        gen      <span style="color: #949494;">""</span>         2012-0…      49     308</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 97 more rows, and abbreviated variable names ¹​popularity,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ²​series_count</span></span>
 </code></pre></div>

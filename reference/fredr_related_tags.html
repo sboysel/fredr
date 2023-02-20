@@ -89,19 +89,19 @@ search text. Related FRED tags are the tags assigned to series that match
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fredr_related_tags</span><span class="op">(</span>
-  <span class="va">tag_names</span>,
-  <span class="va">...</span>,
-  exclude_tag_names <span class="op">=</span> <span class="cn">NULL</span>,
-  tag_group_id <span class="op">=</span> <span class="cn">NULL</span>,
-  search_text <span class="op">=</span> <span class="cn">NULL</span>,
-  limit <span class="op">=</span> <span class="cn">NULL</span>,
-  offset <span class="op">=</span> <span class="cn">NULL</span>,
-  order_by <span class="op">=</span> <span class="cn">NULL</span>,
-  sort_order <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,
-  realtime_end <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fredr_related_tags</span><span class="op">(</span></span>
+<span>  <span class="va">tag_names</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  exclude_tag_names <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  tag_group_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  search_text <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  limit <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  offset <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  order_by <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  sort_order <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_start <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  realtime_end <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -200,26 +200,27 @@ creation date, and additional notes.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">fredr_related_tags</span><span class="op">(</span>tag_names <span class="op">=</span> <span class="st">"monetary aggregates;weekly"</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">fredr_related_tags</span><span class="op">(</span></span>
-<span class="r-in">   tag_names <span class="op">=</span> <span class="st">"monetary aggregates;weekly"</span>,</span>
-<span class="r-in">   tag_group_id <span class="op">=</span> <span class="st">"gen"</span></span>
-<span class="r-in"> <span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"> <span class="op">}</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 6</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="fredr-key.html">fredr_has_key</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">fredr_related_tags</span><span class="op">(</span>tag_names <span class="op">=</span> <span class="st">"monetary aggregates;weekly"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">fredr_related_tags</span><span class="op">(</span></span></span>
+<span class="r-in"><span>   tag_names <span class="op">=</span> <span class="st">"monetary aggregates;weekly"</span>,</span></span>
+<span class="r-in"><span>   tag_group_id <span class="op">=</span> <span class="st">"gen"</span></span></span>
+<span class="r-in"><span> <span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span> <span class="op">}</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 7 × 6</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   name         group_id notes             created                popul…¹ serie…²</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> discontinued gen      <span style="color: #949494;">""</span>                2012-02-27 10:18:19-06      65      14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> m3           gen      <span style="color: #949494;">"</span>M3 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10:18:19-06      39       8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> m2           gen      <span style="color: #949494;">"</span>M2 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10:18:19-06      44       4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> mzm          gen      <span style="color: #949494;">"</span>MZM Money Stock<span style="color: #949494;">"</span> 2012-02-27 10:18:19-06      24       4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> funds        gen       <span style="color: #BB0000;">NA</span>               2020-05-11 13:13:02-05      27       2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> m1           gen      <span style="color: #949494;">"</span>M1 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10:18:19-06      45       2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> discontinued gen      <span style="color: #949494;">""</span>                2012-02-27 10:18:19-06      66      18</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> m3           gen      <span style="color: #949494;">"</span>M3 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10:18:19-06      40       8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> m2           gen      <span style="color: #949494;">"</span>M2 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10:18:19-06      44       6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> m1           gen      <span style="color: #949494;">"</span>M1 Money Stock<span style="color: #949494;">"</span>  2012-02-27 10:18:19-06      45       4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> currency     gen      <span style="color: #949494;">""</span>                2012-02-27 10:18:19-06      61       2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> funds        gen       <span style="color: #BB0000;">NA</span>               2020-05-11 13:13:02-05      28       2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span> mzm          gen      <span style="color: #949494;">"</span>MZM Money Stock<span style="color: #949494;">"</span> 2012-02-27 10:18:19-06      24       2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with abbreviated variable names ¹​popularity, ²​series_count</span></span>
 </code></pre></div>
     </div>
